@@ -1,0 +1,27 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+h1 {
+    font-size: 1.8rem;
+    border-bottom: 1px solid grey;
+    margin-top: 0;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.2rem;
+}
+code {
+    background-color: #dfdfdf;
+    font-size: 1.05em;
+    padding:0 0.2rem;
+    font-family: monospace;
+}
+pre {
+    font-family: monospace;
+    background-color: #e2e2e2;
+    border:1px solid lightgrey;
+    padding: .8rem 1.2rem;
+    font-size: 1.1em;
+}

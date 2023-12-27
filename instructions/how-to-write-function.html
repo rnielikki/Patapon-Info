@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="mw-parser-output">
+        <h1>How to Write a Function</h1>
+        <h2>How to make empty spaces?</h2>
+        <h3>1. Debug string approach</h3>
+        <p>Do not change any string! Some strings can be used for loading resources (and other stuffs). Breaking them can cause infinite loading.
+        </p><p>Instead, go <code>0x8813e74</code> (<code>Print_Log_Message</code>) and see references in Ghidra. You can see a lot of functions calling this, like this
+        </p>
+        <pre>Debug::Print_Log_Message(s__level=%d_Azito__08bc3980,*(undefined4 *)(param_1 + 0x34));</pre>
+        <p>Double click the first parameter. It's one of the strings that you can edit to anything.
+        </p><p>Always check the reference before deleting/replacing the string.
+        </p>
+        <h2>2. Refactoring/Rewriting approach</h2>
+        <p><b>Before doing this, you must be 100% sure about what you are doing</b>.
+        </p><p>Sometimes, you can “compress” the code to do same thing, but make it shorter, by:
+        </p>
+        <ul><li>Removing unnecessary value reassigning</li>
+        <li>Sometimes <code>beq ... b</code> can be simplified <code>bne</code> (or from <code>bne ... b</code> to <code>beq</code>)</li>
+        <li>Get free space while removing feature you don't like</li>
+        <li>Refactoring by combining duplicated or very similar functions (like XXX attk set skill)</li>
+        <li>...and others, depending on situation</li></ul>
+        <p>Let's see the example.
+        Around <code>0x089ad3f0</code> (this function saves set skill function references to stack) you see this instruction is duplicated a lot:
+        </p>
+        <pre>lui	a1,0x8A7</pre>
+        <p>and as you see, there only bunch of loading and saving float around it (idk why it's float, they are actually address lmao). So you can remove duplicated <code>lui</code> and push the instructions up and up (this is how I changed Tondenga Class skill :D)
+        </p><p>But be careful while doing this (especially when pushing)! Check again and again if the program has bug! (I had bug with myamsar CS1 after doing this, and fixed it)
+        </p>
+        <h2>How to write functions?</h2>
+        <p>Sometimes the logic simply doesn't fit to the space. If you cannot make space to assign parameters and call <code>jal</code> instruction, move some instructions in the function to the new function.
+        </p><p>Be careful and check if the function (that calls new function) stores <code>ra</code> to stack. If the function already calls other functions, it's good to go.
+        </p><p>You can copy and edit similar function, or you can write from new. When you write from new, be careful of the function calling – if you call any function in your new function, remember saving and loading <code>ra</code> value.
+        </p>
+        <h2>How to apply functions?</h2>
+        <p>You can use Cheat Engine to copy/paste instructions as hex. In this case, it's strongly recommended to save state → pause → load state before searching and copying with cheat engine.
+        </p><p>Alternatively (better method!) you can multiple select (click start part and shift+click end part) instruction, right-click it, and select “Copy instruction (Hex)”. Remember to REVERSE each byte per 4 bytes, since they are Little Endian (you can write simple program for this). If you still don't understand, you can press tab and go to memory view to compare, and you'll know what I meant&nbsp;:)
+        </p>
+        </div> 
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <h1>How to Find some Functions</h1>
+    <p>Your journey can be short, but can be really long and may require many steps. So, prepare note with you (even default notepad app helps :D).</p>
+    <h2>1. Plan</h2>
+    <p>First, what do you want to figure out? And, what is related data with it? What kind of memory reading/writing can be involved with it? Do you want to track savedata modification, or parameter reading? Make a start point.
+    </p><p>Sometimes, you may need to make some assumption (and that can be wrong).
+    </p><p>You may need savestate to track it (Don't worry! We are doing science, we are not going to play actual game with this! The initial purpose of savestate is debugging, so we are fine), since savestate dumps the whole memory, and make easy to repeat behaviour (data saved in same address).
+    </p><p>In this example, we'll see what function defines Cannogabang laser behaviour. Go to barracks, save the state, and deploy.
+    Now, see <i>squadlineparam</i>. <code>Gyba</code> heromode ID is <code>669</code> (<code>0x29D</code>). Find "Gyba" from PPSSPP memory editor (Not Cheat Engine).
+    </p><p>Oh no, you can see multiple results! Usually in this case, the real one doesn't look like whole param file (in this case, the one that “Fath” is Not with it). If you don't know, change value to something like zero (or FFFF or whatever) and see <span style="text-decoration:underline" title="for squadlineparam, if heromode action is changed with this, you must redeploy from savestate :(">does it change behaviour</span> (if it does change, you found the target, hooray!).
+    </p><p>So in this example, find <code>0x29D</code> (<code>9D 02</code>), starting from “Gyba”, or you may know it's already in +0x12 offset, if you have <i>squadlineparam</i> document.
+    </p><p>But guess what- Gyba doesn't have <code>9D 02</code> in <code>+0x12</code> offset! What happened?
+    </p><p><br>
+    </p>
+    <h2>2. Set Breakpoint</h2>
+    <p>Copy the sus address, <code>(Gyba addresss)+0x12</code> one. Move mouse cursor to there, click right button, select “Copy address”.
+    </p><p>Load the savestate before deploying. Now, above the instruction, click “Breakpoint”. Paste the address. Our goal is figuring out what changed the behaviour, so uncheck “Read”, check “Write”. Click OK.
+    </p>
+    <h2>3. Observe</h2>
+    <p>If you see zz_sceKernelMemset 2 lines above from the breakpoint, it means the data is already written. In this case, you can see it wrote zeros. So this is not what we want. Let's pass, press “Go”.
+    </p><p>Keep skipping until you find the interest. You can press Step Into / Step Over to check if it's the function what you were looking for.
+    </p><p>Now we found a one that may do something
+    </p>
+    <pre>0x088F6E18	sh	v1,0x142(a0)</pre>
+    <p>This stores 9D 02, so now we know this loads from original <i>squadlineparam</i> (You can add comment or put function name about this :D). And according to Ghidra, only <code>Load_ClassData</code> calls this, so it's more clear this function is related with calling <i>squadlineparam</i>! (Of course, you can double check from stack frames) You can click right mouse button and copy the address.
+    </p><p>However, this isn't what we are looking for. Let's press “Go”.
+    </p>
+    <pre>088F6F14	sh	a2,0x142(a0)</pre>
+    <p>Now, we found this overwrites default behaviour! But from where the a2 comes? Press “Stack Frames” before instruction. Let's see 2nd one (<code>0x088B7D80</code>). Go two lines above (<code>0x088B7D78</code>), and you can see “<code>jal 0x088F6E90</code>”. This calls the function where we are now.
+    Below the jal, we can see <code>li a2,0x2B9</code>. It assigns value to <code>a2</code>! Which means, this is hardcoded.
+    </p><p>Copy that address, and go to Ghidra. You can see bunch of same function being called with <code>if</code> statements. Yes, this checks equipment type, and assigns ID manually.
+    </p>
+    <h2>4. Mark it</h2>
+    <p>You can name the function, or you can leave comment in Ghidra if you found new one.
+    </p>
+    <h2>Some issues</h2>
+    <h3><span id="Too_general_Function.3F"></span>Too general Function?</h3>
+    <p>Sometimes the tracked function is too general, like string reader. In this case, you can see “Stack Frames” tab (below the instructions), in Disassembler window. Note that the address you see (by doubleclicking) is not performed yet.
+    </p>
+    <h3><span id="Memcpy.3F"></span>Memcpy?</h3>
+    <p>If breakpoint result is <code>zz_sceKernelMemCpy</code>, you have to track <code>a1</code> (source address) for the <code>zz_sceKernelMemcpy</code> function. If the function is not called from anywhere else, it's easier to track (just set breakpoint to the part that calls <code>zz_sceKernelMemCpy</code>), but if the function is called too often, you have to track the a1 value by reading and tracking the function, and this is really hard and painful work. At this point, I would say it's almost not possible.
+    </p>
+    <h3><span id="Too_many_Readers.21"></span>Too many Readers!</h3>
+    <p>When you set breakpoint for reading, sometimes too many functions use it. Best practice is avoiding too general data, and minimize the chance to read, except the condition what you want.
+    </p><p>If too many functions read it, you have to be very persistent, or you need to find another target. Or, you can set condition by editing breakpoint (Breakpoints → Mouse Right Button → Edit → Condition).
+    </p>
+    <h3>Stack Data</h3>
+    <p>Often, you can see some data is loaded from stack, (red background in memory by default, the address looks like <code>0x9FF…</code>). Stack is dynamic space, so doesn't work for writing. In this case, the approach is similar as Memcpy. If data is written to stack first (and you know what writes the data), and you want to track reading, no problem! All you need is breakpoint writing function first, copy and breakpoint the address where the data is written, and go. Make sure the data is not changed yet, when the reading breakpoint is activated.
+    </p>
+</body>
+</html>

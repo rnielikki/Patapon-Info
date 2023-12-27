@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <style type="text/css">
+        body{
+            display: grid;
+            grid-template-areas: "header header" "nav main";
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 28rem 1fr;
+        }
+        header {
+            font-size: 2.2rem;
+            grid-area: header;
+            margin-bottom:1.2rem;
+            white-space: nowrap;
+            background-color: powderblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 1.2rem;
+        }
+        nav {
+            margin:0;
+            grid-area: nav;
+            align-self: stretch;
+            background-color: lightsteelblue;
+            min-height: calc(100vh - 3.4rem);
+            border-left:10px solid steelblue;
+        }
+        nav > ul {
+            margin: 0;
+            padding: 2rem 0 0 0;
+            position: sticky;
+            top:0;
+        }
+        nav > ul > li {
+            list-style-type: none;
+            margin:.2rem 0 .3rem 0;
+        }
+        nav a {
+            padding:0.4rem 0.8rem;
+            font-size: 1.4rem;
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: darkblue;
+            border:3px solid transparent;
+        }
+        nav a.selected {
+            background-color: #fff;
+            color:#000;
+        }
+        nav a:not(.selected):hover, nav a:not(.selected):active, nav a:not(.selected):focus {
+            background-color: pink;
+            border-color: hotpink;
+            color: mediumblue;
+            box-sizing: border-box;
+        }
+        main {
+            grid-area: main;
+            padding:.8rem 2.8rem;
+        }
+        @media screen and (max-width:1280px){
+            body {
+                grid-template-areas: "header" "nav" "main";
+                grid-template-rows: 4rem auto 1fr;
+                grid-template-columns: 1fr;
+            }
+            nav {
+                min-height: 0;
+            }
+            nav > ul {
+                padding-top: 0;
+                display: flex;
+                width: 100%;
+            }
+
+            nav > ul > li {
+                flex-grow: 1;
+                flex-shrink: 1;
+                margin: 0;
+            }
+        }
+    </style>
+    <script>
+        const articles = [ 'requirements.html', 'basic-of-mips-instructions-in-general.html', 'how-to-find-some-functions.html', 'how-to-write-function.html', 'replacing-set-skill-and-class-skill.html'];
+        const articleNames = [ 'Requirements', 'Basic of MIPS Instructions in General', 'How to Find some Functions', 'How to Write a Function', 'Replacing Set Skill and Class Skill'];
+        const savedArticles = new Map();
+        const menuElements = new Map();
+        let currentUrl;
+        let main;
+        const domParser = new DOMParser();
+        async function onMenuClick(e){
+            const addr = e?.target?.dataset?.link;
+            if(!main || !addr) return;
+            loadContent(addr);
+        }
+        async function loadContent(addr){
+            if(savedArticles.has(addr)) {
+                await updateContent(savedArticles.get(addr));
+            }
+            else{
+                await updateContent(await loadNewArticle(addr));
+            }
+
+            async function loadNewArticle(url) {
+                return await fetch("./"+url).then(res => res.text()).then(res=>{
+                    const shadow = document.createElement("div");
+                    const body = domParser.parseFromString(res, "text/html").getElementsByTagName("body")[0];
+                    for(const elem of [...body.children]) shadow.appendChild(elem);
+                    savedArticles.set(url,shadow);
+                    return shadow;
+                });
+            }
+            async function updateContent(element){
+                main.textContent = "";
+                main.appendChild(element);
+            }
+            if(currentUrl) {
+                menuElements.get(currentUrl).classList.remove("selected");
+            }
+            currentUrl = addr;
+            menuElements.get(currentUrl).classList.add("selected");
+        }
+        async function loadMenu(){
+        const frag = document.createDocumentFragment();
+        const ul = document.createElement("ul");
+        frag.appendChild(ul);
+            for(let i=0;i<articles.length;i++) {
+                if(!articleNames[i]) break;
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                a.href = "#"+articles[i].slice(0,-5);
+                a.dataset.link = articles[i];
+                a.textContent=articleNames[i];
+                a.onclick = onMenuClick;
+                li.appendChild(a);
+                ul.appendChild(li);
+                menuElements.set(articles[i], a);
+            }
+            return frag;
+        }
+        const menuItems = loadMenu();
+        window.addEventListener("load",async function(){
+            main = document.getElementById("main-article");
+            const nav = document.getElementById("navigation");
+            nav.appendChild(await menuItems);
+            loadFromHash();
+        })
+        function loadFromHash(){
+            let hash = window.location.hash;
+            if(!hash) return;
+            loadContent(hash.substring(1)+".html");
+        }
+    </script>
+</head>
+<body>
+    <header>Editing instructions for PPSSPP / Patapon 3</header>
+    <nav id="navigation">
+    <noscript>
+        <ul>
+            <li><a href="requirements.html">Requirements</a></li>
+            <li><a href="basic-of-mips-instructions-in-general.html">Basic of MIPS Instructions in General</a></li>
+            <li><a href="how-to-find-some-functions.html">How to Find some Functions</a></li>
+            <li><a href="how-to-write-function.html">How to Write a Function</a></li>
+            <li><a href="replacing-set-skill-and-class-skill.html">Replacing Set Skill and Class Skill</a></li> 
+        </ul>
+    </noscript>
+    </nav>
+    <main>
+        <article id="main-article"></article>
+    </main>
+</body>
+</html>

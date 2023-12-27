@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+        <h1>Replacing Set Skill and Class Skill</h1>
+        <h2>Replacing Skill/Skill trigger condition function</h2>
+        <p>Use existing function as reference. If the skill changes stat, it is very easy - You can see reference from stamina boost (<i>damageparam</i> <code>+0x24</code> is stamina) etc. You need <i>damageparam</i> documentation for this.
+        </p><p>And, this is the time to learn from existing code!
+        </p><p>Even if you can write the function completely from scratch, I strongly recommend to copy from existing simple function and edit it. Note that parameter can be changed, depending on skill triggering condition! (+0x9 in <i>skillparam</i> block, check detail in <i>skillparam</i> documentation)
+        </p><p>If you wrote new set skill function, follow this:
+        </p>
+        <ol><li>Find the function (I named Set Skills and Class Skills in the Ghidra file :D)</li>
+        <li>Find the reference list (NOT from SetSkill_List function, but the one that contains bunch of function addresses, with <code>00000000</code> and <code>FFFFFFFF</code>)</li>
+        <li>Change the address value to new function</li></ol>
+        <p>Some skills, like Tondenga class skill or Wooyari class skill are hardcoded. In this case, this method doesn't work. (You will need approach in “How to make Empty Spaces” article)
+        </p><p>LAST BUT NOT LEAST, apply your calling condition to the <i>skillparam</i>! (yes you must repack <i>skillparam</i> if the param is changed!)
+        </p><p>Test by setting breakpoint to your new function.
+        </p>
+        <h3>Manually Checking Set Skill/Class Skill</h3>
+        <p>Call “<code>Is_The_CS_or_SS</code> (<code>0x88be594</code>)”. If it returns 0, the skill is not equipped. If it returns 1, the skill is equipped. First parameter (<code>a0</code>) is the target, same as <code>SS_CS_Caller</code> 4th parameter (<code>a3</code>), also can be return value of <code>Get_Dmg_Dealer()</code> or <code>Get_Dmg_Receiver()</code>.
+        </p><p>Second parameter (a1) is the ID of desired skill. <code>(offset in skillparam-0x40)/10</code> is the skill ID. For example, if the skill definition starts in <code>0x120</code> in <i>skillparam</i>, the ID is <code>(0x120-0x40)/0x10</code> = <code>0x8</code>.
+        </p>
+        <h2>Replacing Skill Grinding Condition</h2>
+        <p>This is similar as applying set skill or class skill. You need to find list (Double click the lwc1 part in CSGrind_Condition), and you can replace the function pointer to another one.
+        </p><p>And change <code>0xb</code> if calling condition is changed. (Note that CS Grinding Condition number is different from Skill Triggering number!)
+        </p>
+        <h3>Triggering the class skill grinding condition</h3>
+        <p>Unlike the skill itself, many class skills aren't activated automatically. You may want to check CS grinding status in class skill itself (Good example is in <code>SS_Damage+</code>, <code>0x899e8e8</code>) or change the “auto-activated” class skill grinding condition in <code>0x8a71f7c</code>.
+        </p><p>About the “auto-activatd” condition, they are all int value, so you can change it to halfword. So
+        </p>
+        <pre>
+0x8993e94	li	a0, (total amount, default is 0x11)
+0x8993e98	lh	v1,0x0(a2)
+0x8993e9c	lh	v0,0x2(a2)
+
+0x8993ea4	sh	v1,0x0(a1)
+0x8993ea8	sh	v0,0x2(a1)
+0x8993eac	addiu	a2,a2,0x4
+
+0x8993eb4	addiu	a1,a1,0x4</pre>
+        <p>and remember to make all class skill ID in <code>0x8a71f7c</code> TO HALFWORD (make all halfword until zero appears)! <code>99 00 9a 00 9c 00 9d 00</code> … and so on.
+        </p><p>(You can fix DH CS Exp bug in this way :D)
+        </p>
+        <h2>Welcome bonus</h2>
+        <p>The address for pointers are in for example <code>0x08a7200c</code> (This address has pointer to the Oohoroc Welcome Bonus check).</p>
+        <p>Note that they use duplicated (shared) functions for different classes, like Yumiyacha's Welcome Bonus function (to Jamsch), Attack Power boost function etc.</p>
+        <p>Unlike Set Skill triggering condition, the Welcome bonus condition is very limited: 0 and 1 are called in barracks, 2 is called during damage dealing (while playing, Oohoroc and Pingrek etc uses this).</p>
+        <h3>Calling Conditons and Class IDs</h3>
+        <p>Starting from <code>0x8a720f4</code>, there are some blocks (the size of block is <code>0x20</code>). For each block:</p>
+        <ul>
+                <li><code>+0x0</code> contains calling condition (int), 0, 1, or 2. Both 0 and 1 are called in barracks, is called later than 0. 2 is called during damage dealing in a mission.</li>
+                <li><code>+0x4</code> contains class id (int)</li>
+        </ul>
+        <p>Do not try compress this to halfword! You can see zero in Ghidra, but it writes address and other data in runtime!</p>
+        <h3>Applying your function</h3>
+        <p>First, decide if you write new one or edit existing one. You can copy and edit from Set Skill / Class Skill function (with triggering condition <code>0x1</code>, <code>0x6</code> or <code>0x10</code>).</p>
+        <p>You can set breakpoint from the adress that I mentioned before (<code>+0x10</code> has pointer to condition check function, which is mostly <code>HasWelcomeBonus</code>, <code>+0x1C</code> has pointer to the actual boost function)</p>
+        <p>If the Welcome Bonus address has been changed, you can easily find out around the address mentioned above (since they have class ID).</p>
+        <p>Block start <code>+0x10</code> (class ID<code>+0xc</code>) has triggering condition address, which is mostly <code>HasWelcomeBonus</code> and you may not need to change.</p>
+        <p>Block start<code>+0x1C</code> (class ID<code>+0x18</code>) has ACTUAL FUNCTION POINTER.</p>
+        <p>DON'T directly try to edit from the address, they are changed every time when you load the game!</p>
+        <p>Instead, try to find the same value between <code>0x08a7200c</code>-<code>0x08a720f0</code> (They are just in above :D), and change it to desired address.</p>
+</body>
+</html>

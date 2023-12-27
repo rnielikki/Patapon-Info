@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <h1>Basic of MIPS Instructions in General</h1>
+    <p>Open the game, press Ctrl+D (or Debug → Disassembly). Press “Break”. You can see the instruction is stopped somewhere.</p>
+    <p>In here, we don't mention basic instructions, like <code>lw</code> or <code>beql</code> etc. There are many "MIPS Basic Instructions" or "MIPS Floating Point Calculations" document in internet, so find them by yourself.</p>
+    <h2>Little Endian and Big Endian</h2>
+    <p>Big Endian saves bigger part first, Little Endian saves smaller part first.</p>
+    <p>For example, if value is <code>4</code> integer, Big Endian saves as <code>00 00 00 04</code>, while Little Endian saves as <code>04 00 00 00</code>. If the value is <code>0x3F800000</code>, Big Endian saves as <code>3F 80 00 00</code>, while Little Endian saves as <code>00 00 80 3F</code>.</p>
+    <p><b>PSP/PPSSPP uses Little Endian, so does Patapon</b>, so when you apply data, remember to reverse the bytes!</p>
+    <h2>Data Type</h2>
+    <p>Now, see the list on the left. They are variables. Above the list, you can see “GPR” marked as green. GPR stores normal integer-like values, FPU stores float values (also used for float calculation). If you don’t go deep, you don’t need to care of VFPU stuff, it’s more complicated.
+    In GPR, you can see <code>DEADBEEF</code> as “No value”.
+    </p>
+    <h3>Value Type</h3>
+    <p>For GPR, there are byte (1 byte), halfword (2 byte, aka. short), and integer (4 bytes).
+    </p><p>Float value is the IEEE 754 Floating value (you can search from internet for converter, or you can make code to convert it)
+    </p><p>They are hexadecimal value, so you can use Windows Calculator (with Programmer mode) to convert decimal to hexadecimal and vice versa. However, the value type is not always number. They can be float value, but saved in GPR before conversion (you will figure out if you see enough float value as hex :D). If you see <code>08XXXXXX</code> or <code>09XXXXXX</code>, it’s highly possible that the value is address.
+    </p>
+    <h3>Reference Type</h3>
+    <p>Some resources like strings, params, images are too big to fit in a variable, so it's stored in memory, and the memory address that stores value is saved in a variable, and passed as reference. We call this as Reference type. Some constant values (int, float, function address etc) are also saved as reference value.
+    String can be 2 bytes characters (UTF chars) string, or 1 byte (ASCII) string. For resource name, 1 byte characters string is used. 2 bytes characters string are used for in-game texts, such as messages or names.
+    </p>
+    <h2>Variable names</h2>
+    <dl><dt>Non-float variable names</dt></dl>
+    <ul><li>parameters: <code>a0</code>, <code>a1</code>, <code>a2</code>, <code>a3</code>, <code>t0</code>, <code>t1</code>, …</li>
+    <li>Used for saving parameter, or for local variable: <code>s0</code>, <code>s1</code>, <code>s2</code>… (they don't change often)</li>
+    <li>Comparison result can be saved in <code>at</code>, but not always</li>
+    <li><code>v0</code> is return value</li>
+    <li>Usually <code>t9</code> is used for loading function address and jumping+linking</li>
+    <li><code>ra</code> is register. Right after <code>jr ra</code> is end of the function.</li>
+    <li><code>sp</code> is current stack memory address.</li>
+    <li><code>pc</code> is program counter, it is same as current execution address</li></ul>
+    <dl><dt>Float variable names</dt></dl>
+    <ul><li>parameters: <code>f12</code>, <code>f13</code>, <code>f14</code>…</li>
+    <li>Used for saving parameter (like <code>s0</code>): <code>f20</code>, <code>f21</code>, <code>f22</code>…</li>
+    <li><code>f0</code> is return value</li></ul>
+    <p>Non-float parameters and float parameters can be mixed.
+    </p><p>You can use <code>v0</code>, <code>v1</code> for saving temporary value, also <code>a0</code>...<code>a3</code>, <code>t0</code>... (if you are using stack), and <code>at</code> and <code>f0</code>, <code>f1</code>… for float.
+    </p>
+    <h2>Using stack</h2>
+    <p>Assembly doesn't natively support local variable, so you have to save local variables manually!
+    For example,
+    </p>
+    <pre>
+addiu sp, sp, -0x10
+sw ra, 0xc(sp)
+sw, s0, 0x8(sp)
+…
+lw ra, 0xc(sp)
+lw s0, 0x8(sp)
+jr ra
+addiu sp, sp, 0x10</pre>
+    <p>If you are not going to save additional data to stack, don't touch those parts. Otherwise the game will crash.</p>
+    <p>
+    This pattern is necessary when calling other functions (<code>jal XXX</code>) inside the function. The jal instruction changes RA value. if you don't save and restore RA value in this case, the app will jump in wrong address in <code>jr ra</code> part, resulting app crash.
+    </p>
+</body>
+</html>
