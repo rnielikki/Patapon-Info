@@ -18,7 +18,7 @@ table:not(.custom) > tbody tr:nth-child(even) {
 table:not(.custom) > tbody tr:nth-child(odd) {
     background-color: lavender;
 }
-table:not(.custom) > td {
+table:not(.custom) td {
     border:1px solid plum;
 }
 td {
@@ -26,4 +26,18 @@ td {
 }
 table:not(.custom) > thead {
     background-color:thistle; 
+}
+footer {
+    text-align: center;
+    background: whitesmoke;
+    padding: 1.5rem;
+}
+footer a {
+    font-size:1.2rem;
+    color:darkslateblue;
+    font-weight: bold;
+}
+footer a:focus, footer a:hover, footer a:active {
+    color:blueviolet;
+    background-color: aquamarine;
 }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    .highlight {
+        font-size:1.1rem;
+        background-color:yellow;
+        font-family: monospace;
+    }
+footer {
+    text-align: center;
+    background: whitesmoke;
+    padding: 1.5rem;
+}
+footer a {
+    font-size:1.2rem;
+    color:darkslateblue;
+    font-weight: bold;
+}
+footer a:focus, footer a:hover, footer a:active {
+    color:blueviolet;
+    background-color: aquamarine;
+}
+</style>
+<body>
+    
+<h1>Damage Calculator Itself</h1>
+<h2>Calculation Order </h2>
+<p>Tests if target can take damage (like hatapon immunity test)</p>
+<ul style="list-style-type:'\2192';">
+    <li>Calculate base damage</li>
+    <li>Calculate Critical</li>
+    <li>Defensive bonus (Slash, Strike...)</li>
+    <li>Defence</li>
+    <li>Attack bonuses against type (Demon, Giant...)</li>
+    <li>Calculate Level bonus</li>
+    <li>Call most dmg dealing/taking set skill</li>
+    <li><b>Saves final damage</b></li>
+    <li>Finishing last blow check</li>
+    <li>Status effect</li>
+</ul>
+
+<h1>Details</h1>
+<h2>Base Damage Calculation</h2>
+<ul>
+    <li>basically, <span class="highlight">min dmg + (max dmg - min dmg) * RNG</span></li>
+    <li>but in some cases (like when Barlag or Fenrir takes you), it calculates % of maximum health. it takes <b>5%-10% of max health</b>, depending on RNG result.</li>
+</ul>
+
+<h2>Critical Calculation</h2>
+<ol>
+    <li>Checks if attacker has crit, and check defender's critical immunity.</li>
+    <li>Gets <span class="highlight">Critical % - Critical Resistance %</span>. We'll call this "Actual Crit".</li>
+    <li>Set the Actual Crit to 5%, if the Actual Crit is less than 5%.</li>
+    <li><span class="highlight">Critical Chance = Actual Crit - (0%-100% RNG)</span></li>
+    <li>If Critical Chance is more than zero, critical is landed!</li>
+    <li>Final damage from critical is <span class="highlight">Damage*((Critical Chance) *2+1.5)</span></li>
+</ol>
+<h2>Defensive and Attack Against bonus</h2>
+<p>They are just <b>simple multipliers</b>. That's why having more types is not good for VS - People bring good 
+defensive enchants, so defensive bonus is usually less than 100% in VS.</p>
+<p>For example, if enemy has Stab and Fire, and all your multipliers are x0.85, You got x0.85 from stab and x0.85 
+from fire = You take only 72.25% of damage.</p>
+<p>This one is applied to attack type bonus (The Demon, Undead, Giant etc one) too.</p>
+<p>Also, this calculation makes Peerless Turtle worse. Since Peerless Turtle multiplies all defensive bonus to 2x, taken damage with two attack elements becomes 4x, with three elements 8x and so on.</p>
+
+<h2>Defence</h2>
+<p>Yes, it just <b>subtracts</b> from damage as raw, also works <b>only with physical attacks</b>.</p>
+<p><b>Also, just like shield evasion, defence doesn't check if the attack is melee or range</b></p>
+
+<p>Which means if you take 10000 damage, and your defence is 100, you take 9900 damage.</p>
+
+<p>So defence is useless when damage is magical, or damage amount is too big. It works best for small, frequent 
+physical attack.</p>
+
+<h2>Shield Evasion</h2>
+<p>Crush type ignores shield evasion. Otherwise, having any of Stab/Slash/Strike will trigger shield evasion.</p>
+
+<h2>Level bonus</h2>
+<p>When attacker level value is greater than zero:</p>
+<ol>
+    <li>Calculates Attacker level - Defender level, we'll call this as “Diff” value.</li>
+    <li><b>Skips if attacker level is same as defender level</b></li>
+    <li>Clamp the Diff value to -3 ~ 3</li>
+    <li>If Diff is less than 0, subtract one from Diff. If Diff is greater than 0, add one to Diff.</li>
+    <li><span class="highlight"><b>Damage = Damage + Damage*Diff*0.1</b></span></li>
+</ol>
+<p><b>Fish in Pond, Big Fish in Pond, Windmill Power, Flash Shower boosts level value</b> (boost amounts on skill detail list).</p>
+<p>If level gap is too big, they do nothing with damage (especially when your level is higher).</p>
+
+<h2>Status effect</h2>
+<p> Curiously, there are two functions for each fire and stagger. My assumption is, one of the two are used for indirect damage, like grassfire or thunder. But they work basically the same as others. The preparation of calculations is very similar to critical calculation.</p>
+<ol>
+    <li>Checks if attacker has status effect, and check defender's status effect resistance</li>
+    <li>Gets <span class="highlight">Status % - Status Resistance %</span>. Let's call this is “value”.</li>
+    <li>If the “value” above is less than 1%, set it to 1%.</li>
+    <li>The <span class="highlight">status chance = “value” - (0-100% RNG)</span></li>
+</ol>
+<h3>Durations</h3>
+<p>Those values are seconds (likely)</p>
+<ul>
+    <li>Stagger: <span class="highlight"></span>(final status chance) * 2.0 + 1.0</span></li>
+    <li>Burn: <span class="highlight"></span>(final status chance) * 8.0 + 4.0</span></li>
+    <li>Freeze: <span class="highlight"></span>(final status chance) * 12.0 + 6.0</span></li>
+    <li>Poison: <span class="highlight"></span>(final status chance) * 40.0 + 8.0</span></li>
+    <li>Sleep: <span class="highlight">(final status chance) * 16.0 + 8.0 + (additional value)</span></li>
+</ul>
+<h3>Knockback</h3>
+<p>Knockback doesn't have duration, but they have "knockback angle" (as degree) and "knockback power".</p>
+<p>Final knockback power is maximum value from followings: <span class="highlight">Knockback power + (Knockback power) * (Final kb chance) - Weight</span> or <span class="highlight">Knockback power</span></p>
+<h3>Tumble</h3>
+
+<p>Tumbling is a very special case. Tumble immunity exists, but there's <b>no stat implementation for tumble % or 
+tumble resist %</b>.</p>
+<footer><a href="pdf/damage-calc.pdf">Download PDF</a></footer>
+</body>
+</html>
