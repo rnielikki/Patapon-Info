@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <style type="text/css">
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
     .highlight {
         font-size:1.1rem;
         background-color:yellow;
@@ -25,6 +28,14 @@ footer a:focus, footer a:hover, footer a:active {
     color:blueviolet;
     background-color: aquamarine;
 }
+    table{
+        text-align:center;
+        border-collapse: collapse;
+    }
+    th, td {
+        border:1px solid silver;
+        width:8rem;
+    }
 </style>
 <body>
     
@@ -79,6 +90,7 @@ physical attack.</p>
 
 <h2>Shield Evasion</h2>
 <p>Crush type ignores shield evasion. Otherwise, having any of Stab/Slash/Strike will trigger shield evasion.</p>
+<p>For example, Incensar (Pure fire) or Raijinpon's Bow (Pure lightning) are counted as pure magic attack, so they ignore Shield Evasion and Defence.</p>
 
 <h2>Level bonus</h2>
 <p>When attacker level value is greater than zero:</p>
@@ -89,6 +101,27 @@ physical attack.</p>
     <li>If Diff is less than 0, subtract one from Diff. If Diff is greater than 0, add one to Diff.</li>
     <li><span class="highlight"><b>Damage = Damage + Damage*Diff*0.1</b></span></li>
 </ol>
+<p>This is damage dealt by <b>Attacker-Defender</b> level difference:</p>
+<table>
+    <thead>
+        <th>-3 or less</th>
+        <th>-2</th>
+        <th>-1</th>
+        <th>0</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3 or more</th>
+    </thead>
+    <tbody>
+        <td>-40%</td>
+        <td>-30%</td>
+        <td>-20%</td>
+        <td>0%</td>
+        <td>+20%</td>
+        <td>+30%</td>
+        <td>+40%</td>
+    </tbody>
+</table>
 <p><b>Fish in Pond, Big Fish in Pond, Windmill Power, Flash Shower boosts level value</b> (boost amounts on skill detail list).</p>
 <p>If level gap is too big, they do nothing with damage (especially when your level is higher).</p>
 
