@@ -1,0 +1,29 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+}
+table {
+    border-collapse: collapse;
+}
+th {
+    padding: .2rem .26rem;
+}
+table:not(.custom) th {
+    border: 1px solid cornflowerblue;
+    color:navy;
+}
+table:not(.custom) > tbody tr:nth-child(even) {
+    background-color: aliceblue;
+}
+table:not(.custom) > tbody tr:nth-child(odd) {
+    background-color: lavender;
+}
+table:not(.custom) > td {
+    border:1px solid plum;
+}
+td {
+    padding: .18rem .22rem;
+}
+table:not(.custom) > thead {
+    background-color:thistle; 
+}
