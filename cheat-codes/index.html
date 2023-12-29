@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
+    <script src="./marked.min.js"></script>
+    <link rel="stylesheet" href="../instructions/index.css" />
     <style type="text/css">
         body{
             display: grid;
@@ -13,7 +13,6 @@
             grid-template-columns: min(25%,22rem) 1fr;
         }
         header {
-            font-size: 2.2rem;
             grid-area: header;
             margin-bottom:1.2rem;
             white-space: nowrap;
@@ -21,6 +20,15 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
             margin: 0;
             padding: 1.2rem;
+        }
+        header p {
+            margin:0.1rem 0.2rem;
+        }
+        header .title {
+            font-size: 1.8rem;
+        }
+        header .sidetext {
+            font-size: 1.1rem;
         }
         nav {
             margin:0;
@@ -89,8 +97,8 @@
     </style>
     <script>
     (function(){
-        const articles = [ 'requirements.html', 'basic-of-mips-instructions-in-general.html', 'how-to-find-some-functions.html', 'how-to-write-function.html', 'replacing-set-skill-and-class-skill.html'];
-        const articleNames = [ 'Requirements', 'Basic of MIPS Instructions', 'How to Find some Functions', 'How to Write a Function', 'Replacing Set Skill/Class Skill'];
+        const articles = ["bgcolour", "fastload", "herocolor", "randombgm"];
+        const articleNames = ["Set Background Colour", "Skip when starting game", "Give Colour to Heroes", "Random BGM"];
         const savedArticles = new Map();
         const menuElements = new Map();
         let currentUrl;
@@ -117,14 +125,16 @@
                 } 
                 await updateContent(newArticle);
             }
-            async function loadNewArticle(url) {
-                return await fetch("./"+url).then(res => res.text()).then(res=>{
-                    const shadow = document.createElement("article");
-                    const body = domParser.parseFromString(res, "text/html").getElementsByTagName("body")[0];
-                    for(const elem of [...body.children]) shadow.appendChild(elem);
-                    savedArticles.set(url,shadow);
-                    return shadow;
-                });
+
+            async function loadNewArticle(md) {
+                if(!main || articles.indexOf(md)<0) return;
+                const txt = await fetch("./md/"+md+".md").then(res => res.text());
+                const frag = document.createElement("article");
+                var children = [...domParser.parseFromString(marked.parse(txt),"text/html").body.children];
+                for(var child of children) frag.appendChild(child);
+
+                main.appendChild(frag);
+                return frag;
             }
             async function updateContent(element){
                 main.textContent = "";
@@ -144,7 +154,7 @@
                 if(!articleNames[i]) break;
                 const li = document.createElement("li");
                 const a = document.createElement("a");
-                a.href = "#"+articles[i].slice(0,-5);
+                a.href = "#"+articles[i];
                 a.dataset.link = articles[i];
                 a.textContent=articleNames[i];
                 a.onclick = onMenuClick;
@@ -164,25 +174,18 @@
         function loadFromHash(){
             let hash = window.location.hash;
             if(!hash) return;
-            loadContent(hash.substring(1)+".html");
+            loadContent(hash.substring(1));
         }
-})();
+})()
     </script>
+    <title>Document</title>
 </head>
 <body>
-    <header>Editing instructions for PPSSPP / Patapon 3</header>
-    <nav id="navigation">
-    <noscript>
-        <ul>
-            <li><a href="requirements.html">Requirements</a></li>
-            <li><a href="basic-of-mips-instructions-in-general.html">Basic of MIPS Instructions</a></li>
-            <li><a href="how-to-find-some-functions.html">How to Find some Functions</a></li>
-            <li><a href="how-to-write-function.html">How to Write a Function</a></li>
-            <li><a href="replacing-set-skill-and-class-skill.html">Replacing Set Skill/Class Skill</a></li> 
-        </ul>
-    </noscript>
-    </nav>
-    <main id="main-article">
-    </main>
+    <header>
+    <p class="title">Cheat Codes</p>
+    <p class="sidetext">Those change visual of the game, and doesn't modify any savedata.</p>
+    </header>
+    <nav id="navigation"></nav>
+    <main id="main-article"></main>
 </body>
 </html>
