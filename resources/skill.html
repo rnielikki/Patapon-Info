@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="basic_tabledesign.css" />
 <style>
+/*html { -webkit-print-color-adjust: exact; }*/
 th, td { white-space:nowrap;}
     .cell-ce8 { background-color:#b4c7dc;}
     .cell-ce11{ background-color:#afd095;}
@@ -38,6 +39,8 @@ th, td { white-space:nowrap;}
     .cell-ce89{ background-color:#ffb1b1;}
     .cell-ce90{ background-color:#afa3ff; }
     .cell-ce93{ background-color:#a8d1ff;}
+    .cell-ce94{ background-color: #fac0c4;}
+    .cell-ce95{ background-color: #dadaf0; }
 
     thead th{ background-color:#650953; color:#ffffff; border:1px solid violet; }
     td {border: 1px solid grey;}
@@ -1360,7 +1363,7 @@ Bowmunk
 </td><td class="cell-ce48">
 0x38
 </td><td class="cell-ce48">
-Whlie healing
+???
 </td><td class="cell-ce48">
 -1
 </td><td class="cell-ce48">
@@ -3582,7 +3585,7 @@ Charibasa
 </td><td class="cell-ce30">
 0x39
 </td><td class="cell-ce30">
-Whlie healing
+???
 </td><td class="cell-ce30">
 -1
 </td><td class="cell-ce30">
@@ -3630,7 +3633,7 @@ Charibasa
 </td><td class="cell-ce30">
 0x39
 </td><td class="cell-ce30">
-Whlie healing
+???
 </td><td class="cell-ce30">
 -1
 </td><td class="cell-ce30">
@@ -3642,7 +3645,7 @@ Enduring Attk
 </td><td class="cell-ce93">
 Class skill
 </td><td class="cell-ce30">
-Unlike Canna, Somehow AFK grinding works
+For grinding: AFK grinding works, Taken damage must be greater than zero.
 </td><td class="cell-ce30"> </td></tr><tr><td class="cell-ce33">
 157
 </td><td class="cell-ce33">
@@ -3852,7 +3855,7 @@ Tondenga
 </td><td class="cell-ce39">
 0x39
 </td><td class="cell-ce39">
-Whlie healing
+???
 </td><td class="cell-ce39">
 18
 </td><td class="cell-ce39">
@@ -3874,7 +3877,7 @@ Tondenga
 </td><td class="cell-ce39">
 0x39
 </td><td class="cell-ce39">
-Whlie healing
+???
 </td><td class="cell-ce39">
 18
 </td><td class="cell-ce39">
@@ -3896,7 +3899,7 @@ Tondenga
 </td><td class="cell-ce39">
 0x39
 </td><td class="cell-ce39">
-Whlie healing
+???
 </td><td class="cell-ce39">
 18
 </td><td class="cell-ce39">
@@ -3918,7 +3921,7 @@ Tondenga
 </td><td class="cell-ce39">
 0x39
 </td><td class="cell-ce39">
-Whlie healing
+???
 </td><td class="cell-ce39">
 18
 </td><td class="cell-ce39">
@@ -5272,7 +5275,7 @@ Pingrek
 </td><td class="cell-ce66">
 0x39
 </td><td class="cell-ce66">
-Whlie healing
+???
 </td><td class="cell-ce66">
 -1
 </td><td class="cell-ce66">
@@ -5723,11 +5726,16 @@ Barracks and in mission (one per character)
 15
 </td><td class="cell-ce84">
 Enduring Attk
-</td><td class="cell-ce84">
+</td>
+<td class="cell-ce84">
 20
 </td><td class="cell-ce93">
 Class skill
-</td><td class="cell-ce84"> </td><td class="cell-ce84"> </td></tr><tr><td class="cell-ce84">
+</td><td class="cell-ce84">
+For grinding: AFK grinding works, Taken damage must be greater than zero.
+</td>
+<td class="cell-ce84"> </td></tr>
+<tr><td class="cell-ce84">
 246
 </td><td class="cell-ce84">
 Deep Sleep
@@ -5931,7 +5939,7 @@ Dmg Dealing
 N/A
 </td><td class="cell-ce12">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce94">
 Heromode
 </td><td class="cell-ce12">
 Applies Piek HM Dmg
@@ -5955,7 +5963,7 @@ HM Starts
 N/A
 </td><td class="cell-ce12">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce94">
 Heromode
 </td><td class="cell-ce12">
 Sets HM Dmg multiplier, Details on Buff_Amount tab
@@ -5979,7 +5987,7 @@ During Stampede
 N/A
 </td><td class="cell-ce18">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce94">
 Heromode
 </td><td class="cell-ce18"> </td><td class="cell-ce18"> </td></tr><tr><td class="cell-ce48">
 257
@@ -6001,7 +6009,7 @@ Bowmunk
 N/A
 </td><td class="cell-ce48">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce94">
 Heromode
 </td><td class="cell-ce48"> </td><td class="cell-ce48"> </td></tr><tr><td class="cell-ce54">
 258
@@ -6023,7 +6031,7 @@ Alosson
 N/A
 </td><td class="cell-ce54">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce94">
 Heromode
 </td><td class="cell-ce54">
 1.5x dmg to 2nd phase, 3x dmg to 3rd phase
@@ -6047,7 +6055,7 @@ Pingrek
 N/A
 </td><td class="cell-ce66">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce94">
 Heromode
 </td><td class="cell-ce66"> </td><td class="cell-ce66"> </td></tr><tr><td class="cell-ce33">
 260
@@ -6069,7 +6077,7 @@ Dmg Taking
 N/A
 </td><td class="cell-ce33">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce94">
 Heromode
 </td><td class="cell-ce33">
 Details on Buff_Amount tab
@@ -6093,7 +6101,7 @@ Dmg Taking, Before critical calculation
 N/A
 </td><td class="cell-ce30">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce95">
 Other
 </td><td class="cell-ce30">
 Status Resist boost (Ponchaka), Details on Buff_Amount tab
@@ -6117,7 +6125,7 @@ Dmg Dealing, After damage calculation
 N/A
 </td><td class="cell-ce30">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce95">
 Other
 </td><td class="cell-ce30">
 DMG TAKEN TRIGGERS, Defence Boost (Ponchaka~Chakachaka), Details on Buff_Amount tab
@@ -6141,7 +6149,7 @@ After every command, Including fever stop
 N/A
 </td><td class="cell-ce30">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce95">
 Other
 </td><td class="cell-ce30">
 Heal (Ponchaka~Chakachaka), Heals 2%, Self-preservation works
@@ -6165,7 +6173,7 @@ Dmg Dealing, Before critical res check
 N/A
 </td><td class="cell-ce30">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce95">
 Other
 </td><td class="cell-ce30">
 Crit Boost (Ponchaka~Ponpon), Details on Buff_Amount tab
@@ -6189,7 +6197,7 @@ Bowmunk
 N/A
 </td><td class="cell-ce48">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce95">
 Other
 </td><td class="cell-ce48"> </td><td class="cell-ce48"> </td></tr><tr><td class="cell-ce66">
 266
@@ -6211,7 +6219,7 @@ Performing action
 N/A
 </td><td class="cell-ce66">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce95">
 Other
 </td><td class="cell-ce66">
 Heal, strength affects amount, This is NOT HM
@@ -6235,7 +6243,7 @@ Performing action
 N/A
 </td><td class="cell-ce66">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce95">
 Other
 </td><td class="cell-ce66">
 Activated when starts Defending
@@ -6259,7 +6267,7 @@ Dmg Taking
 N/A
 </td><td class="cell-ce66">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce95">
 Other
 </td><td class="cell-ce66">
 While Defending. NOT affected by team aid/strength/HP, ONLY Physical attacks, Dmg reduced TO about 1/3
@@ -6283,7 +6291,7 @@ Performing action
 N/A
 </td><td class="cell-ce66">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce95">
 Other
 </td><td class="cell-ce66">
 Normalize status effects
@@ -6307,7 +6315,7 @@ Myamsar
 N/A
 </td><td class="cell-ce42">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce95">
 Other
 </td><td class="cell-ce42">
 Myamsar dark aura while attacking/defending
@@ -6331,7 +6339,7 @@ After every command, Including fever stop
 N/A
 </td><td class="cell-ce57">
 -1
-</td><td class="cell-ce93">
+</td><td class="cell-ce95">
 Other
 </td><td class="cell-ce57">
 Controls Heave Ho activation
@@ -6494,7 +6502,6 @@ Set skill → Class Skill → Certain HMs that exists in the chart
     <li>2. If Triggering Condition Order is same, called by equipped order</li>
 </ol>
 For damage skill, it’s called “Damage Dealer → Damage taker” order
-
 <footer><a href="pdf/skill-documentation.pdf">Download PDF</a></footer>
 </body>
 </html>
