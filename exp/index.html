@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>The Exp</h1> 
+   <h2>Exp Calculation</h2>
+   <h3>How to calculate</h3>
+   <details>
+    <summary>The Code</summary>
+   <pre>
+   /* max_lvlgap_for_exp is 2 */
+    int Calculate_Exp(float base_exp,int player_level,int enemy_level)
+
+    {
+      int final_exp;
+      int *final_leveldiff;
+      int level_diff;
+      
+      level_diff = enemy_level - player_level;
+      final_exp = 0;
+      if (-3 < level_diff) {
+        if (level_diff < max_lvlgap_for_exp) {
+          final_leveldiff = &level_diff;
+        }
+        else {
+          final_leveldiff = &max_lvlgap_for_exp;
+        }
+        final_exp = (int)(base_exp + base_exp * (float)*final_leveldiff * 0.35);
+      }
+      return final_exp;
+    } 
+    </pre>
+   </details>
+    <p>Which means <code>Base_Exp + Base_Exp * min(enemy_level - player_level, 2) * 0.35</code></p>
+    <ul>
+        <li>If your level is 3 or higher than enemy, you cannot get exp.</li>
+        <li>If your level is 2 or more lower than enemy, you get same max exp.</li>
+    </ul>
+</body>
+</html>
