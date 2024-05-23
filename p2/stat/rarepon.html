@@ -1,0 +1,5506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ font-family: sans-serif;}
+        table { border-collapse:collapse; border-spacing:0; font-size:1.2rem;}
+        td, th { vertical-align:top; font-size:10pt; border: 1px solid #666; color: #fff; padding:.2rem .4rem;}
+        p { white-space: nowrap; margin:0;}
+        .cell-grey { color:#aaa; opacity:0.8; }
+        .table-ta1{ writing-mode:horizontal-tb; direction:ltr; }
+        .cell-ce40{  background-color:#333333; }
+        .cell-ce41{  background-color:#111111; }
+        .cell-ce42{ background-color:#4e102d; }
+        .cell-ce43{ background-color:#224b12; }
+        .cell-ce44{ border-bottom-style:none; border-left: 1px solid #000; border-right:1px solid #000; border-top-style:none; }
+        .cell-ce45{ border-bottom:3px solid #666666; background-color:#111111; border-right:3px solid #8e86ae; }
+        .cell-ce46{ background-color:#4e102d; border-right:3px solid #8e86ae; }
+        .cell-ce47{ background-color:#224b12; border-right:3px solid #8e86ae; border-top-width:1px; }
+        .cell-ce48{  background-color:#224b12; }
+        .cell-ce49{  background-color:#2e2706; }
+        .cell-ce51{ background-color:#4e102d; border-right: 3px solid #8e86ae; }
+        .cell-ce52{ background-color:#224b12; border-right:3px solid #8e86ae;  }
+        .cell-ce54{  background-color:#813709; }
+        .cell-ce55{  background-color:#492300; }
+        .cell-ce56{  background-color:#355269; }
+        .cell-ce57{  background-color:#383d3c; }
+        .cell-ce58{  background-color:#4e102d; }
+        .cell-ce59{  background-color:#3b160e; }
+    </style>
+</head>
+<body>
+    <table class="table-ta1">
+        <thead>
+        <tr class="row-ro1"><td colspan="2" class="cell-ce40">
+        <p>Name Info</p>
+        </td><td colspan="4" class="cell-ce48">
+        <p>Basic Stat Info</p>
+        </td><td colspan="6" class="cell-ce54">
+        <p>Status</p>
+        </td><td colspan="6" class="cell-ce56">
+        <p>Status Res</p>
+        </td><td colspan="9" class="cell-ce58">
+        <p>Damage Taken</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce41">
+        <p>Name</p>
+        </td><td class="cell-ce45">
+        <p>Boss</p>
+        </td><td class="cell-ce49">
+        <p>HP</p>
+        </td><td class="cell-ce49">
+        <p>Mov.Spd</p>
+        </td><td class="cell-ce49">
+        <p>Attk.Spd</p>
+        </td><td class="cell-ce49">
+        <p>Dmg</p>
+        </td><td class="cell-ce55">
+        <p>Crit</p>
+        </td><td class="cell-ce55">
+        <p>KB</p>
+        </td><td class="cell-ce55">
+        <p>Cnc</p>
+        </td><td class="cell-ce55">
+        <p>Ignite</p>
+        </td><td class="cell-ce55">
+        <p>Sleep</p>
+        </td><td class="cell-ce55">
+        <p>Freeze</p>
+        </td><td class="cell-ce57">
+        <p>Crit Res</p>
+        </td><td class="cell-ce57">
+        <p>KB Res</p>
+        </td><td class="cell-ce57">
+        <p>Cnc Resist</p>
+        </td><td class="cell-ce57">
+        <p>Ignite Res</p>
+        </td><td class="cell-ce57">
+        <p>Sleep Res</p>
+        </td><td class="cell-ce57">
+        <p>Freeze Res</p>
+        </td><td class="cell-ce59">
+        <p>Sword/Axe/Club</p>
+        </td><td class="cell-ce59">
+        <p>Lance</p>
+        </td><td class="cell-ce59">
+        <p>Spear/Javelin</p>
+        </td><td class="cell-ce59">
+        <p>Bow</p>
+        </td><td class="cell-ce59">
+        <p>???</p>
+        </td><td class="cell-ce59">
+        <p>Crush/Magic</p>
+        </td><td class="cell-ce59">
+        <p>Fire</p>
+        </td><td class="cell-ce59">
+        <p>Ice</p>
+        </td><td class="cell-ce59">
+        <p>Lightning</p>
+        </td></tr>           
+        </thead>
+        <tbody>
+        <tr class="row-ro1"><td class="cell-ce42">
+        <p>Sutata</p>
+        </td><td class="cell-ce46">
+        <p>Centura</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>1.1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Suttata</p>
+        </td><td class="cell-ce46">
+        <p>Centura</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Sutatattan</p>
+        </td><td class="cell-ce46">
+        <p>Centura</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>1.6</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Sutatanooo</p>
+        </td><td class="cell-ce46">
+        <p>Centura</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>2</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Gashishi</p>
+        </td><td class="cell-ce47">
+        <p>Mochichichi</p>
+        </td><td class="cell-ce43">
+        <p>50</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Gasshin</p>
+        </td><td class="cell-ce47">
+        <p>Mochichichi</p>
+        </td><td class="cell-ce43">
+        <p>150</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Zugashi</p>
+        </td><td class="cell-ce47">
+        <p>Mochichichi</p>
+        </td><td class="cell-ce43">
+        <p>250</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Gasshingaa</p>
+        </td><td class="cell-ce47">
+        <p>Mochichichi</p>
+        </td><td class="cell-ce43">
+        <p>400</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Gochichi</p>
+        </td><td class="cell-ce46">
+        <p>Garuru</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51">
+        <p>2 ~ 6</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Gocchin</p>
+        </td><td class="cell-ce46">
+        <p>Garuru</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51">
+        <p>6 ~ 18</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Cocchinko</p>
+        </td><td class="cell-ce46">
+        <p>Garuru</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51">
+        <p>12 ~ 36</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Gochigachidesu</p>
+        </td><td class="cell-ce46">
+        <p>Garuru</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51">
+        <p>20 ~ 60</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Shuba</p>
+        </td><td class="cell-ce47">
+        <p>Darantula</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.95</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Shubaba</p>
+        </td><td class="cell-ce47">
+        <p>Darantula</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.8</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Shubabiya</p>
+        </td><td class="cell-ce47">
+        <p>Darantula</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Shubabassa</p>
+        </td><td class="cell-ce47">
+        <p>Darantula</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.2</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Bishiri</p>
+        </td><td class="cell-ce46">
+        <p>Cioking</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42">
+        <p>0.1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Bisharin</p>
+        </td><td class="cell-ce46">
+        <p>Cioking</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42">
+        <p>0.3</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Donpisha</p>
+        </td><td class="cell-ce46">
+        <p>Cioking</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42">
+        <p>0.6</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Dopishana</p>
+        </td><td class="cell-ce46">
+        <p>Cioking</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Gurara</p>
+        </td><td class="cell-ce47">
+        <p>Dokaknel</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Guraran</p>
+        </td><td class="cell-ce47">
+        <p>Dokaknel</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Guranguran</p>
+        </td><td class="cell-ce47">
+        <p>Dokaknel</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.6</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Gurarandaa</p>
+        </td><td class="cell-ce47">
+        <p>Dokaknel</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Ototo</p>
+        </td><td class="cell-ce46">
+        <p>Dogaeen</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Ottoto</p>
+        </td><td class="cell-ce46">
+        <p>Dogaeen</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.3</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Ottototo</p>
+        </td><td class="cell-ce46">
+        <p>Dogaeen</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.6</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Ototodokko</p>
+        </td><td class="cell-ce46">
+        <p>Dogaeen</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Merara</p>
+        </td><td class="cell-ce47">
+        <p>Fenicchi</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Meracchi</p>
+        </td><td class="cell-ce47">
+        <p>Fenicchi</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Meraachichi</p>
+        </td><td class="cell-ce47">
+        <p>Fenicchi</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.6</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Meraachiize</p>
+        </td><td class="cell-ce47">
+        <p>Fenicchi</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Kachichi</p>
+        </td><td class="cell-ce46">
+        <p>Kacchindonga</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51">
+        <p>0.1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Kachikochi</p>
+        </td><td class="cell-ce46">
+        <p>Kacchindonga</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51">
+        <p>0.3</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Kachinkon</p>
+        </td><td class="cell-ce46">
+        <p>Kacchindonga</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51">
+        <p>0.6</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Kacchikochin</p>
+        </td><td class="cell-ce46">
+        <p>Kacchindonga</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Nekoro</p>
+        </td><td class="cell-ce47">
+        <p>Shooshookle</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Nenkoro</p>
+        </td><td class="cell-ce47">
+        <p>Shooshookle</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Nenkorori</p>
+        </td><td class="cell-ce47">
+        <p>Shooshookle</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.6</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Nekororinyo</p>
+        </td><td class="cell-ce47">
+        <p>Shooshookle</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Kakin</p>
+        </td><td class="cell-ce46">
+        <p>Goruru</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Kakikoki</p>
+        </td><td class="cell-ce46">
+        <p>Goruru</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.7</p>
+        </td><td class="cell-ce42">
+        <p>0.7</p>
+        </td><td class="cell-ce42">
+        <p>0.7</p>
+        </td><td class="cell-ce42">
+        <p>0.7</p>
+        </td><td class="cell-ce42">
+        <p>0.7</p>
+        </td><td class="cell-ce42">
+        <p>0.7</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Kakkinko</p>
+        </td><td class="cell-ce46">
+        <p>Goruru</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.5</p>
+        </td><td class="cell-ce42">
+        <p>0.5</p>
+        </td><td class="cell-ce42">
+        <p>0.5</p>
+        </td><td class="cell-ce42">
+        <p>0.5</p>
+        </td><td class="cell-ce42">
+        <p>0.5</p>
+        </td><td class="cell-ce42">
+        <p>0.5</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Kakkokingu</p>
+        </td><td class="cell-ce46">
+        <p>Goruru</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.3</p>
+        </td><td class="cell-ce42">
+        <p>0.3</p>
+        </td><td class="cell-ce42">
+        <p>0.3</p>
+        </td><td class="cell-ce42">
+        <p>0.3</p>
+        </td><td class="cell-ce42">
+        <p>0.3</p>
+        </td><td class="cell-ce42">
+        <p>0.3</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Hirara</p>
+        </td><td class="cell-ce47">
+        <p>Ciokina</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Hirarin</p>
+        </td><td class="cell-ce47">
+        <p>Ciokina</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Hiraratto</p>
+        </td><td class="cell-ce47">
+        <p>Ciokina</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.6</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Hirarinmaru</p>
+        </td><td class="cell-ce47">
+        <p>Ciokina</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Biyoyo</p>
+        </td><td class="cell-ce46">
+        <p>Zaknel</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Biyoyon</p>
+        </td><td class="cell-ce46">
+        <p>Zaknel</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.3</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Byororon</p>
+        </td><td class="cell-ce46">
+        <p>Zaknel</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.6</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Babyobyon</p>
+        </td><td class="cell-ce46">
+        <p>Zaknel</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Doshishi</p>
+        </td><td class="cell-ce47">
+        <p>Gaeen</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Dosshiri</p>
+        </td><td class="cell-ce47">
+        <p>Gaeen</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Zundoshiri</p>
+        </td><td class="cell-ce47">
+        <p>Gaeen</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.6</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Doshirittan</p>
+        </td><td class="cell-ce47">
+        <p>Gaeen</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Chitoto</p>
+        </td><td class="cell-ce46">
+        <p>Majidonga</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Chitton</p>
+        </td><td class="cell-ce46">
+        <p>Majidonga</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.3</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Chittoriyo</p>
+        </td><td class="cell-ce46">
+        <p>Majidonga</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.6</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Chittoriine</p>
+        </td><td class="cell-ce46">
+        <p>Majidonga</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Meranya</p>
+        </td><td class="cell-ce47">
+        <p>Dodonga</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Nameranya</p>
+        </td><td class="cell-ce47">
+        <p>Dodonga</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.7</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Dameranya</p>
+        </td><td class="cell-ce47">
+        <p>Dodonga</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Dameranyan</p>
+        </td><td class="cell-ce47">
+        <p>Dodonga</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Popoka</p>
+        </td><td class="cell-ce46">
+        <p>Manboroth</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51">
+        <p>0.1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Pokapoka</p>
+        </td><td class="cell-ce46">
+        <p>Manboroth</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51">
+        <p>0.3</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Popopokka</p>
+        </td><td class="cell-ce46">
+        <p>Manboroth</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51">
+        <p>0.6</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Poppkaana</p>
+        </td><td class="cell-ce46">
+        <p>Manboroth</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Nonburu</p>
+        </td><td class="cell-ce47">
+        <p>Manboth</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Nonbururu</p>
+        </td><td class="cell-ce47">
+        <p>Manboth</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.7</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Nonnooburu</p>
+        </td><td class="cell-ce47">
+        <p>Manboth</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Nonburussa</p>
+        </td><td class="cell-ce47">
+        <p>Manboth</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Babiri</p>
+        </td><td class="cell-ce46">
+        <p>Pharamatara</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Babirira</p>
+        </td><td class="cell-ce46">
+        <p>Pharamatara</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.7</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Babiriino</p>
+        </td><td class="cell-ce46">
+        <p>Pharamatara</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.5</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Babinonnon</p>
+        </td><td class="cell-ce46">
+        <p>Pharamatara</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.3</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Jirin</p>
+        </td><td class="cell-ce47">
+        <p>Shookle</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Jiririn</p>
+        </td><td class="cell-ce47">
+        <p>Shookle</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Jinjirin</p>
+        </td><td class="cell-ce47">
+        <p>Shookle</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.6</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Jiririntan</p>
+        </td><td class="cell-ce47">
+        <p>Shookle</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Zubaba</p>
+        </td><td class="cell-ce46">
+        <p>Ganodias</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.95</p>
+        </td><td class="cell-ce51">
+        <p>1 ~ 3</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Zubizuba</p>
+        </td><td class="cell-ce46">
+        <p>Ganodias</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td><td class="cell-ce51">
+        <p>3 ~ 9</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Zunzunbiba</p>
+        </td><td class="cell-ce46">
+        <p>Ganodias</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.5</p>
+        </td><td class="cell-ce51">
+        <p>6 ~ 18</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Zubizubabaya</p>
+        </td><td class="cell-ce46">
+        <p>Ganodias</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.2</p>
+        </td><td class="cell-ce51">
+        <p>10 ~ 30</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.5</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td><td class="cell-ce42">
+        <p>1.3</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Kachiko</p>
+        </td><td class="cell-ce47">
+        <p>Kanogias</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>1.1</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Kachikochi</p>
+        </td><td class="cell-ce47">
+        <p>Kanogias</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>1.2</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.7</p>
+        </td><td class="cell-ce43">
+        <p>0.7</p>
+        </td><td class="cell-ce43">
+        <p>0.7</p>
+        </td><td class="cell-ce43">
+        <p>0.7</p>
+        </td><td class="cell-ce43">
+        <p>0.7</p>
+        </td><td class="cell-ce43">
+        <p>0.7</p>
+        </td><td class="cell-ce43">
+        <p>0.7</p>
+        </td><td class="cell-ce43">
+        <p>0.7</p>
+        </td><td class="cell-ce43">
+        <p>0.7</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Kacchinko</p>
+        </td><td class="cell-ce47">
+        <p>Kanogias</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>1.3</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td><td class="cell-ce43">
+        <p>0.5</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Kachinkocchi</p>
+        </td><td class="cell-ce47">
+        <p>Kanogias</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43">
+        <p>1.4</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0 ~ 0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td><td class="cell-ce43">
+        <p>0.3</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Myuu</p>
+        </td><td class="cell-ce46">
+        <p>Karmen Gate</p>
+        </td><td class="cell-ce42">
+        <p>30</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51">
+        <p>0 ~ 3</p>
+        </td><td class="cell-ce42">
+        <p>0.05</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.05</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.95</p>
+        </td><td class="cell-ce42">
+        <p>0.95</p>
+        </td><td class="cell-ce42">
+        <p>0.95</p>
+        </td><td class="cell-ce42">
+        <p>0.95</p>
+        </td><td class="cell-ce42">
+        <p>0.95</p>
+        </td><td class="cell-ce42">
+        <p>0.95</p>
+        </td><td class="cell-ce42">
+        <p>0.95</p>
+        </td><td class="cell-ce42">
+        <p>0.95</p>
+        </td><td class="cell-ce42">
+        <p>0.95</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Myuuto</p>
+        </td><td class="cell-ce46">
+        <p>Karmen Gate</p>
+        </td><td class="cell-ce42">
+        <p>60</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51">
+        <p>0 ~ 6</p>
+        </td><td class="cell-ce42">
+        <p>0.1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Myuutan</p>
+        </td><td class="cell-ce46">
+        <p>Karmen Gate</p>
+        </td><td class="cell-ce42">
+        <p>120</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51">
+        <p>0 ~ 12</p>
+        </td><td class="cell-ce42">
+        <p>0.2</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.2</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.85</p>
+        </td><td class="cell-ce42">
+        <p>0.85</p>
+        </td><td class="cell-ce42">
+        <p>0.85</p>
+        </td><td class="cell-ce42">
+        <p>0.85</p>
+        </td><td class="cell-ce42">
+        <p>0.85</p>
+        </td><td class="cell-ce42">
+        <p>0.85</p>
+        </td><td class="cell-ce42">
+        <p>0.85</p>
+        </td><td class="cell-ce42">
+        <p>0.85</p>
+        </td><td class="cell-ce42">
+        <p>0.85</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Myuutaron</p>
+        </td><td class="cell-ce46">
+        <p>Karmen Gate</p>
+        </td><td class="cell-ce42">
+        <p>240</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce51">
+        <p>0 ~ 24</p>
+        </td><td class="cell-ce42">
+        <p>0.4</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.4</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Dogyuun</p>
+        </td><td class="cell-ce47">
+        <p>Dettankarmen</p>
+        </td><td class="cell-ce43">
+        <p>40</p>
+        </td><td class="cell-ce43">
+        <p>0.95</p>
+        </td><td class="cell-ce43">
+        <p>1.1</p>
+        </td><td class="cell-ce52">
+        <p>0 ~ 30</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.95</p>
+        </td><td class="cell-ce43">
+        <p>0.95</p>
+        </td><td class="cell-ce43">
+        <p>0.95</p>
+        </td><td class="cell-ce43">
+        <p>0.95</p>
+        </td><td class="cell-ce43">
+        <p>0.95</p>
+        </td><td class="cell-ce43">
+        <p>0.95</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Dongyugyu</p>
+        </td><td class="cell-ce47">
+        <p>Dettankarmen</p>
+        </td><td class="cell-ce43">
+        <p>80</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>1.2</p>
+        </td><td class="cell-ce52">
+        <p>0 ~ 60</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.2</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43">
+        <p>0.9</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Dodongyuu</p>
+        </td><td class="cell-ce47">
+        <p>Dettankarmen</p>
+        </td><td class="cell-ce43">
+        <p>160</p>
+        </td><td class="cell-ce43">
+        <p>0.85</p>
+        </td><td class="cell-ce43">
+        <p>1.3</p>
+        </td><td class="cell-ce52">
+        <p>0 ~ 120</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.4</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.85</p>
+        </td><td class="cell-ce43">
+        <p>0.85</p>
+        </td><td class="cell-ce43">
+        <p>0.85</p>
+        </td><td class="cell-ce43">
+        <p>0.85</p>
+        </td><td class="cell-ce43">
+        <p>0.85</p>
+        </td><td class="cell-ce43">
+        <p>0.85</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce43">
+        <p>Zuddongyu</p>
+        </td><td class="cell-ce47">
+        <p>Dettankarmen</p>
+        </td><td class="cell-ce43">
+        <p>320</p>
+        </td><td class="cell-ce43">
+        <p>0.8</p>
+        </td><td class="cell-ce43">
+        <p>1.4</p>
+        </td><td class="cell-ce52">
+        <p>0 ~ 240</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.8</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce52 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce43">
+        <p>0.8</p>
+        </td><td class="cell-ce43">
+        <p>0.8</p>
+        </td><td class="cell-ce43">
+        <p>0.8</p>
+        </td><td class="cell-ce43">
+        <p>0.8</p>
+        </td><td class="cell-ce43">
+        <p>0.8</p>
+        </td><td class="cell-ce43">
+        <p>0.8</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce43 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Subasara</p>
+        </td><td class="cell-ce46">
+        <p>Zuttankarmen</p>
+        </td><td class="cell-ce42">
+        <p>10</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.9</p>
+        </td><td class="cell-ce51">
+        <p>1 ~ 3</p>
+        </td><td class="cell-ce42">
+        <p>0.2</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Rabasara</p>
+        </td><td class="cell-ce46">
+        <p>Zuttankarmen</p>
+        </td><td class="cell-ce42">
+        <p>20</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td><td class="cell-ce51">
+        <p>3 ~ 9</p>
+        </td><td class="cell-ce42">
+        <p>0.4</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Raparassa</p>
+        </td><td class="cell-ce46">
+        <p>Zuttankarmen</p>
+        </td><td class="cell-ce42">
+        <p>40</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.7</p>
+        </td><td class="cell-ce51">
+        <p>6 ~ 18</p>
+        </td><td class="cell-ce42">
+        <p>0.8</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr><tr class="row-ro1"><td class="cell-ce42">
+        <p>Rapasaraana</p>
+        </td><td class="cell-ce46">
+        <p>Zuttankarmen</p>
+        </td><td class="cell-ce42">
+        <p>80</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42">
+        <p>0.6</p>
+        </td><td class="cell-ce51">
+        <p>10 ~ 30</p>
+        </td><td class="cell-ce42">
+        <p>1.6</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce51 cell-grey">
+        <p>0</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td><td class="cell-ce42 cell-grey">
+        <p>1</p>
+        </td></tr></tbody></table>
+</body>
+</html>
