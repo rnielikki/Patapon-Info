@@ -301,7 +301,7 @@ _L 0x20100d2C 0x00000000
 **Fog removal**
 - Overhaul Compatible: `YES`
 ```
-_C0 Remove cloud
+_C0 Remove fog
 _L 0x2010730c 0x03E00008
 _L 0x2010730c 0x00000000
 ```
