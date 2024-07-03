@@ -145,7 +145,7 @@ This includes player, enemy, miniboss etc.
 ```
 _C0 Hide characters
 _L 0x200BE0A8 0x03E00008
-_L 0x088BE0AC 0x00000000
+_L 0x200BE0AC 0x00000000
 ```
 
 **All effects removal**
