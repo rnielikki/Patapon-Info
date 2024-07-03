@@ -52,7 +52,7 @@ So I use the space for saving colour. The address is `0x088F44F0`, which has an 
 - Overhaul Compatible: `YES`
 ```
 _C0 Background colour for single colour1 (abgr)
-_L 0x088F44F0 00000000
+_L 0x200F44F0 00000000
 ```
 
 ### Rhythm Colour
