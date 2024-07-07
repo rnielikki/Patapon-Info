@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment</title>
+    <script defer src="/common/common.js"></script>
+    <style type="text/css">
+        p, ul {
+            font-size: 150%;
+            font-family: sans-serif;
+        }
+        ul {
+            display: flex;
+            gap: 3.5rem;
+        }
+        li {
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 1;
+            list-style-type: none;
+            height:4rem;
+        }
+        li a {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            border: 1px solid #a0a0a0;
+            box-sizing: border-box;
+        }
+        li:first-child a {
+            background-color: #e0e0ff;
+        }
+        li:not(:first-child) a {
+            background-color: #eeccee;
+        }
+        li > a > p {
+            margin: 0;padding: 0;
+        }
+        a {
+            width: 100%; height: 100%; margin: 0; padding: 0;
+            text-decoration: none;
+            font-weight: 700;
+            color:#000
+        }
+        li a:hover, li a:active, li a:focus {
+            border:3px solid blue;
+            background-color: #a0ff00;
+            color: #1c4a1a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Equipment Stat</h1>
+    <p>Not available in web. Download as</p>
+    <ul>
+        <li><a href="equip_stat.pdf"><p>PDF</p></a></li>
+        <li><a href="equip_stat.ods"><p>ODS (Spreadsheet)</p></a></li>
+    </ul>
+</body>
+</html>
