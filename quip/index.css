@@ -7,7 +7,7 @@ main {
     gap:15px;
     position: relative;
 }
-.loading {
+.modal {
     background-color: #000000a0;
     color:#fff;
     font-size: 2.5rem;
@@ -17,6 +17,9 @@ main {
     bottom:0;
     left:0;
     right:0;
+}
+dialog {
+    font-size: 1.25rem;
 }
 .quote-collection{
     display: grid;

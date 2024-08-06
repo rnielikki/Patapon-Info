@@ -1,5 +1,5 @@
 (async function () {
-    const PICK_LIMIT = 8;
+    const PICK_LIMIT = 168;
     let pickAmount = 0;
     let [data, winLoader] = await Promise.all([
         loadMeta(),
@@ -15,7 +15,12 @@
     let searchResetBtn = searchBar.querySelector(".searchbar-btn-reset");
     let pickList = document.querySelector("div.pick-list");
     let pickLimitDisplay = document.querySelector("span.pick-limit");
-    let loadingScreen = document.querySelector(".loading");
+    let pickGenerator = document.querySelector("#pick-generator");
+    let modalScreen = document.querySelector(".modal");
+    let loadingMessage = document.querySelector(".loading-message");
+    let dialog = document.querySelector("dialog");
+    let dialogContent = dialog.querySelector("pre");
+    let dialogCloseButton = dialog.querySelector("button");
     let quotes = {};
     let quoteElements = {};
     let currentRegion = "uk";
@@ -25,6 +30,8 @@
     await initSearchBar();
     await loadRegion(currentRegion);//default
     pickLimitDisplay.textContent = `${pickAmount} / ${PICK_LIMIT}`;
+    pickGenerator.onclick = showDialog;
+    dialogCloseButton.onclick = closeDialog;
 
     async function loadMeta() {
         return (await fetch("meta.json")).json();
@@ -75,7 +82,8 @@
                 if(quoteElements[id]===undefined) {
                     let q = document.createElement("a");
                     quoteElements[id] = q;
-                    q.href = "#" + Number(id);
+                    q.href = "#";
+                    q.dataset.id = Number(id);
                     q.onclick = togglePick;
                     frag.appendChild(q);
                     changed = true;
@@ -122,7 +130,7 @@
     function searchQuote(){
         let txt = searchText.value.toLowerCase();
         for(let qId of Object.keys(quoteElements)) {
-            if(quoteElements[qId].textContent.toLowerCase().includes(txt))
+            if(quoteElements[qId].textContent.toLowerCase().includes(txt) || quoteElements[qId].hasAttribute("picked"))
             {
                 quoteElements[qId].removeAttribute("hidden");
             }
@@ -158,6 +166,24 @@
         }
         else pickLimitDisplay.classList.remove("pick-limit-full");
     }
-    function loadingOn() { loadingScreen.removeAttribute("hidden"); }
-    function loadingOff() { loadingScreen.setAttribute("hidden",""); }
+    function loadingOn() { modalScreen.removeAttribute("hidden"); }
+    function loadingOff() { modalScreen.setAttribute("hidden",""); }
+    function showDialog() {
+        loadingOn();
+        dialog.setAttribute("open","");
+        loadingMessage.setAttribute("hidden","");
+        let startOffset = 0x203BD0D0;
+        let pickedData = [...pickList.getElementsByTagName("a")];
+        let res = "_C1 Custom System Quips\n";
+        for(let i=0;i<pickedData.length;i++) {
+            let dataId = Number(pickedData[i].dataset.id);
+            res+=`_L 0x${(startOffset+4*i).toString(16)} 0x${dataId.toString(16).padStart(8,"0")}\n`;
+        }
+        dialogContent.textContent=res;
+    }
+    function closeDialog() {
+        dialog.removeAttribute("open");
+        loadingMessage.removeAttribute("hidden");
+        loadingOff();
+    }
 }());
