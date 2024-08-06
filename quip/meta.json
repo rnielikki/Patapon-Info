@@ -1,0 +1,13 @@
+{
+    "region":["au","cn","de","fr","it","jp","kr","nf","nl","np","ns","pl","pt","ru","sp","uk","us"],
+    "index": {
+        "azito":0,
+        "mission":0,
+        "itemmsg": 1,
+        "unitnamemsg": 2,
+        "systemmsg": 3,
+        "errormessage": 5,
+        "tipsmsg": 9,
+        "chatmsg": 10
+    }
+}

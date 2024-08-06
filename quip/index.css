@@ -1,0 +1,36 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+}
+nav{
+    grid-area:1 / 1 / 2 / 1;
+}
+main{
+    grid-area: 2 / 2 / 2 / 2;
+}
+aside{
+    grid-area: 2 / 1 / 2 / 1;
+}
+.quote-collection{
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-gap: 10px;
+}
+.quote-collection a {
+    background-color: lightgoldenrodyellow;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding:.4rem .6rem;
+    text-decoration: none;
+    border-radius: 5px;
+    border:1px solid goldenrod;
+}
+@media screen and (max-width:1250px) {
+    aside {
+        position: sticky;
+        bottom:0;
+        background: #ffffffc0;
+    }
+}
