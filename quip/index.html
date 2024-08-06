@@ -23,22 +23,21 @@
         </div>
     </nav>
     <main>
-        <section class="searchbar">
-            <legend>Search Text</legend>
-            <input type="text" placeholder="search for quote" class="searchbar-text">
-            <input type="button" value="search" class="searchbar-btn"/>
-            <input type="button" value="reset" class="searchbar-btn-reset"/>
-        </section>
-        <article class="quotes quote-collection">
-        </article>
-    </main>
-    <aside>
-        <section>
-            <legend>Picked Data</legend>
+        <div class="loading" hidden=""><br><br>LOADING</div>
+        <section class="pick">
+            <legend>Picked Data : <span class="pick-limit"></span></legend>
             <div class="pick-list quote-collection">
             </div>
+            <input type="button"v value="Generate!" id="pick-generator" class="pick-generator"/>
         </section>
-        <input type="button"v value="Generate!" id="pick-generator" />
-    </aside>
+        <article>
+            <section class="searchbar">
+                <input type="text" placeholder="search for quote" class="searchbar-text">
+                <input type="button" value="search" class="searchbar-btn"/>
+                <input type="button" value="reset" class="searchbar-btn-reset"/>
+            </section>
+            <section class="quotes quote-collection"></section>
+        </article>
+    </main>
 </body>
 </html>

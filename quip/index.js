@@ -1,5 +1,5 @@
 (async function () {
-    const PICK_LIMIT = 5;
+    const PICK_LIMIT = 8;
     let pickAmount = 0;
     let [data, winLoader] = await Promise.all([
         loadMeta(),
@@ -8,12 +8,14 @@
     let regions = data.region;
     let indexes = data.index;
     let fileNames = Object.keys(indexes);
-    let content = document.querySelector("article.quotes");
+    let content = document.querySelector("section.quotes");
     let searchBar = document.querySelector("section.searchbar");
     let searchText = searchBar.querySelector(".searchbar-text");
     let searchBtn = searchBar.querySelector(".searchbar-btn");
     let searchResetBtn = searchBar.querySelector(".searchbar-btn-reset");
     let pickList = document.querySelector("div.pick-list");
+    let pickLimitDisplay = document.querySelector("span.pick-limit");
+    let loadingScreen = document.querySelector(".loading");
     let quotes = {};
     let quoteElements = {};
     let currentRegion = "uk";
@@ -22,11 +24,13 @@
     await initPlaceButtons();
     await initSearchBar();
     await loadRegion(currentRegion);//default
+    pickLimitDisplay.textContent = `${pickAmount} / ${PICK_LIMIT}`;
 
     async function loadMeta() {
         return (await fetch("meta.json")).json();
     }
     async function loadRegion(region) {
+        loadingOn();
         currentRegion = region;
         if (!quotes[region]) {
             let regionData = {};
@@ -48,6 +52,7 @@
         addElements(quotes[region]);
     }
     function addElements(quoteData, isFull = true) {
+        loadingOn();
         let frag = document.createDocumentFragment();
         let changed = false;
         if(isFull){
@@ -80,6 +85,7 @@
             }
         }
         resetQuote();
+        loadingOff();
     }
     async function addLangButtons() {
         let nav = document.querySelector("div.lang");
@@ -135,7 +141,6 @@
         let element = e.target;
         if(!element.hasAttribute("picked")) {
             if(pickAmount >= PICK_LIMIT){
-                alert("OVER THE LIMIT!");
                 return;
             }
             pickList.appendChild(element);
@@ -147,5 +152,12 @@
             element.removeAttribute("picked","");
             pickAmount--;
         }
+        pickLimitDisplay.textContent = `${pickAmount} / ${PICK_LIMIT}`;
+        if(pickAmount >= PICK_LIMIT){
+            pickLimitDisplay.classList.add("pick-limit-full");
+        }
+        else pickLimitDisplay.classList.remove("pick-limit-full");
     }
+    function loadingOn() { loadingScreen.removeAttribute("hidden"); }
+    function loadingOff() { loadingScreen.setAttribute("hidden",""); }
 }());
