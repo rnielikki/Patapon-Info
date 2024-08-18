@@ -1,11 +1,22 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.root {
+    height: calc(100vh - 4rem);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+}
 main {
     display:grid;
     grid-template-columns: 20% 1fr;
     gap:15px;
     position: relative;
+    overflow: hidden;
+}
+article {
+    height: 100%;
+    overflow: auto;
 }
 .modal {
     background-color: #000000a0;
@@ -17,20 +28,34 @@ main {
     bottom:0;
     left:0;
     right:0;
+    z-index:2;
 }
 dialog {
     font-size: 1.25rem;
 }
+dialog > pre {
+    max-height: 32vh;
+    overflow: auto;
+}
 .quote-collection{
     display: grid;
     gap: 10px;
+    content-visibility: auto;
 }
 .quotes {
     grid-template-columns:repeat(5, 1fr);
 }
+.pick {
+    height: 100%;
+    overflow: auto;
+}
+.pick-quotes {
+    height: calc(100% - 1.5rem);
+}
 .pick-list {
-    grid-template-columns:1;
     margin:.4rem .8rem;
+    max-height:calc(100% - 5.5rem);
+    overflow: auto;
 }
 .pick-limit-full {
     color:red;
@@ -57,6 +82,22 @@ input {
     text-decoration: none;
     border-radius: 5px;
     border:1px solid goldenrod;
+    height:1.5rem;
+}
+a:hover, a:focus {
+    border:1px solid palevioletred;
+    background-color: lightyellow;
+}
+.pick-autochat label{
+    display: block;
+}
+.toggler {
+    font-size:1.1rem;
+    padding:.2rem .6rem;
+    background-color: lightcyan;
+}
+.toggler:hover {
+    background-color: lightskyblue;
 }
 @media screen and (max-width:1250px) {
     main {
@@ -64,12 +105,16 @@ input {
         flex-direction: column-reverse;
     }
     .pick {
-        position: sticky;
         bottom:0;
         background: #fffffff0;
-        padding:1.6rem .8rem;
+        overflow: visible;
+        height: min-content;
     }
     .pick-list {
         grid-template-columns:repeat(5, 1fr);
+        max-height: 7rem;
+    }
+    .pick-autochat label{
+        display:inline-block;
     }
 }

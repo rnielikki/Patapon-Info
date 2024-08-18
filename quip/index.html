@@ -9,6 +9,7 @@
     <script defer src="../common/common.js"></script>
 </head>
 <body>
+    <div class="root">
     <nav>
         <fieldset>
             <legend>Languages</legend>
@@ -20,7 +21,15 @@
             <label for="azito">Hideout Toggle</label>
             <input type="radio" name="place" id="mission" />
             <label for="mission">Mission Toggle</label>
-        </div>
+        </fieldset>
+        <fieldset>
+            <section class="searchbar">
+                <input type="text" placeholder="search for quote" class="searchbar-text">
+                <input type="button" value="search" class="searchbar-btn"/>
+                <input type="button" value="reset" class="searchbar-btn-reset"/>
+            </section>
+            <button id="autochat-toggle" class="toggler">QUIP ADDING MODE (Click for autochat mode)</button>
+        </fieldset>
     </nav>
     <main>
         <div class="modal" hidden="">
@@ -32,19 +41,28 @@
             </dialog>
         </div>
         <section class="pick">
-            <legend>Picked Data : <span class="pick-limit"></span></legend>
-            <div class="pick-list quote-collection">
-            </div>
-            <input type="button"v value="Generate!" id="pick-generator" class="pick-generator"/>
+            <fieldset class="pick-quotes">
+                <legend>Picked Data : <span class="pick-limit"></span></legend>
+                <div class="pick-list quote-collection">
+                </div>
+                <input type="button"v value="Generate!" id="pick-generator" class="pick-generator"/>
+                <input type="button"v value="Clear" id="pick-clear" class="pick-clear"/>
+            </fieldset>
+            <fieldset class="pick-autochat" hidden>
+                <legend>Autochat type</legend>
+                <label for="dying"><input type="radio" name="autochat" id="dying" checked/>Upon Dying</label>
+                <label for="fever"><input type="radio" name="autochat" id="fever"/>Fever Lost</label>
+                <label for="revive"><input type="radio" name="autochat" id="revive"/>Revived</label>
+                <label for="rev-soon"><input type="radio" name="autochat" id="rev-soon"/>Almost Revived</label>
+                <label for="summon"><input type="radio" name="autochat" id="summon"/>Summoned</label>
+                <label for="summon-rev"><input type="radio" name="autochat" id="summon-rev"/>Being Summoned</label>
+                <label for="idle"><input type="radio" name="autochat" id="idle"/>Idle</label>
+            </fieldset>
         </section>
         <article>
-            <section class="searchbar">
-                <input type="text" placeholder="search for quote" class="searchbar-text">
-                <input type="button" value="search" class="searchbar-btn"/>
-                <input type="button" value="reset" class="searchbar-btn-reset"/>
-            </section>
             <section class="quotes quote-collection"></section>
         </article>
     </main>
+    </div>
 </body>
 </html>

@@ -16,6 +16,7 @@
     let pickList = document.querySelector("div.pick-list");
     let pickLimitDisplay = document.querySelector("span.pick-limit");
     let pickGenerator = document.querySelector("#pick-generator");
+    let pickClear = document.querySelector("#pick-clear");
     let modalScreen = document.querySelector(".modal");
     let loadingMessage = document.querySelector(".loading-message");
     let dialog = document.querySelector("dialog");
@@ -30,8 +31,11 @@
     await initSearchBar();
     await loadRegion(currentRegion);//default
     pickLimitDisplay.textContent = `${pickAmount} / ${PICK_LIMIT}`;
-    pickGenerator.onclick = showDialog;
+    pickGenerator.onclick = showDialogQuote;
+    pickClear.onclick = clearQuoteList;
     dialogCloseButton.onclick = closeDialog;
+    //autochat declare
+    let isAutochat = false;
 
     async function loadMeta() {
         return (await fetch("meta.json")).json();
@@ -75,7 +79,7 @@
             fillElements(quoteData, 0);
         }
         if(changed) content.appendChild(frag);
-        function fillElements(qData, quoteId){
+        function fillElements(qData, quoteId) {
              for (let i = 0; i < qData.length; i++) {
                 let quote = qData[i];
                 let id = quoteId * 65536 + i;
@@ -84,7 +88,7 @@
                     quoteElements[id] = q;
                     q.href = "#";
                     q.dataset.id = Number(id);
-                    q.onclick = togglePick;
+                    q.onclick = onPicked;
                     frag.appendChild(q);
                     changed = true;
                 }
@@ -94,6 +98,16 @@
         }
         resetQuote();
         loadingOff();
+    }
+    function onPicked(e){
+        if(isAutochat) showAutochatWindow(e.target);
+        else togglePick(e.target);
+    }
+    function clearQuoteList() {
+        let quotes = [...pickList.getElementsByTagName("a")];
+        for(let q of quotes){
+            togglePick(q, 0);
+        }
     }
     async function addLangButtons() {
         let nav = document.querySelector("div.lang");
@@ -145,9 +159,13 @@
             else quoteElements[qId].setAttribute("hidden","");
         }
     }
-    function togglePick(e){
-        let element = e.target;
-        if(!element.hasAttribute("picked")) {
+    //-1 : let user choose. 0: remove from list. 1: add to list.
+    function togglePick(element, status = -1){
+        if(status < 0) {
+            status = element.hasAttribute("picked")?0:1;
+        }
+        //pick it
+        if(status!==0) {
             if(pickAmount >= PICK_LIMIT){
                 return;
             }
@@ -155,6 +173,7 @@
             element.setAttribute("picked","");
             pickAmount++;
         }
+        //delete it
         else {
             content.prepend(element);
             element.removeAttribute("picked","");
@@ -168,22 +187,66 @@
     }
     function loadingOn() { modalScreen.removeAttribute("hidden"); }
     function loadingOff() { modalScreen.setAttribute("hidden",""); }
-    function showDialog() {
+    function showDialog(title, content) {
         loadingOn();
         dialog.setAttribute("open","");
         loadingMessage.setAttribute("hidden","");
-        let startOffset = 0x203BD0D0;
-        let pickedData = [...pickList.getElementsByTagName("a")];
-        let res = "_C1 Custom System Quips\n";
-        for(let i=0;i<pickedData.length;i++) {
-            let dataId = Number(pickedData[i].dataset.id);
-            res+=`_L 0x${(startOffset+4*i).toString(16)} 0x${dataId.toString(16).padStart(8,"0")}\n`;
+        let res = `_C1 ${title}\n`;
+        for(let line of content){
+            res+=`${line}\n`
         }
         dialogContent.textContent=res;
+    }
+    function showDialogQuote(){
+        let startOffset = 0x203BD0D0;
+        let pickedData = [...pickList.getElementsByTagName("a")];
+        let data = [];
+        for(let i=0;i<pickedData.length;i++) {
+            let dataId = getId(pickedData[i]);
+            data.push(`_L 0x${(startOffset+4*i).toString(16)} 0x${dataId}`);
+        }
+        showDialog("Custom System Quips", data);
+    }
+    function getId(element) {
+        return Number(element.dataset.id).toString(16).padStart(8,"0");
     }
     function closeDialog() {
         dialog.removeAttribute("open");
         loadingMessage.removeAttribute("hidden");
         loadingOff();
+    }
+    //AUTOCHAT MODE PATCH
+    const autochatToggle = document.getElementById("autochat-toggle");
+    const pickSection = document.querySelector(".pick-quotes");
+    const pickAutochatSection = document.querySelector(".pick-autochat");
+    const dataMap = {
+        "dying":"3A4",
+        "fever":"3CC",
+        "revive":"3F4",
+        "rev-soon":"41C",
+        "summon":"444",
+        "summon-rev":"46C",
+        "idle":"494"
+    };
+    autochatToggle.onclick = function(){
+        isAutochat = !isAutochat;
+        if(isAutochat) {
+            pickSection.setAttribute("hidden", "");
+            pickAutochatSection.removeAttribute("hidden");
+            autochatToggle.textContent = "AUTOCHAT MODE (Click for quip adding mode)";
+            clearQuoteList();
+        }
+        else {
+            pickSection.removeAttribute("hidden");
+            pickAutochatSection.setAttribute("hidden", "");
+            autochatToggle.textContent = "QUIP ADDING MODE (Click for autochat mode)";
+        }
+    }
+    function showAutochatWindow(target) {
+        let chatType = pickAutochatSection.querySelector("input:checked");
+        let content = [`_L 0x602ABD94 0x${getId(target)}`,
+        `_L 0x00020002 0x00000${dataMap[chatType.id]}`,
+        "_L 0x20000048 0x00000000"];
+        showDialog(`${chatType.parentElement.textContent} Message`, content);
     }
 }());
