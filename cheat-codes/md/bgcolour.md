@@ -154,7 +154,7 @@ This also hides items on the ground.
 ```
 _C0 Hide all effects
 _L 0x200d52c8 0x03E00008
-_L 0x200d52c8 0x00000000
+_L 0x200d52cc 0x00000000
 ```
 
 #### UIs
