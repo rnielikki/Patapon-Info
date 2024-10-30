@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>About Message </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="About Message ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="about-message">About Message</h1>
+
+<h2 id="message-id">Message ID</h2>
+<p>Each message file has &quot;Message ID&quot;.</p>
+<p>Usually, &quot;Message ID&quot; means Full ID (<code>(message_file_id)*0x10000 + message_index</code>) of the message.</p>
+<p>Those are Message table IDs:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Message File Name</th>
+<th>Note</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0</td>
+<td>azito.msg</td>
+<td>Messages in Hideout</td>
+<td><code>DATA_CMN.bnd/message/azitolocal/azito_msg/</code></td>
+</tr>
+<tr>
+<td>0x0</td>
+<td>(mission_id).msg</td>
+<td>Messages during Mission</td>
+<td><code>DATA_CMN.bnd/message/azitolocal/(mission_id)_msg</code></td>
+</tr>
+<tr>
+<td>0x1</td>
+<td>itemmsg.msg</td>
+<td>Item names and descriptions</td>
+<td><code>DATA_CMN.bnd/loadinggroup/systemlocalizedata/localize/</code></td>
+</tr>
+<tr>
+<td>0x2</td>
+<td>unitnamemsg.msg</td>
+<td>Unit/Skill name and description</td>
+<td><code>DATA_CMN.bnd/loadinggroup/systemlocalizedata/localize/</code></td>
+</tr>
+<tr>
+<td>0x3</td>
+<td>systemmsg.msg</td>
+<td>Information messages</td>
+<td><code>DATA_CMN.bnd/loadinggroup/systemlocalizedata/localize/</code></td>
+</tr>
+<tr>
+<td>0x5</td>
+<td>errormessage.msg</td>
+<td>Important system notifications</td>
+<td><code>DATA_CMN.bnd/loadinggroup/systemlocalizedata/localize/</code></td>
+</tr>
+<tr>
+<td>0x9</td>
+<td>tipsmsg.msg</td>
+<td>Tip messages</td>
+<td><code>DATA_CMN.bnd/loadinggroup/systemlocalizedata/localize/</code></td>
+</tr>
+<tr>
+<td>0xA</td>
+<td>chatmsg.msg</td>
+<td>Selectable quip messages</td>
+<td><code>DATA_CMN.bnd/loadinggroup/systemlocalizedata/localize/</code></td>
+</tr>
+</tbody>
+</table>
+<p>To check each message ID, open message file and read the ID with e.g. MsgEdit tool.</p>
+<p>Or <a href="https://rnielikki.github.io/pata/quip/">this</a> might help if you can read the cheat codes.</p>
+<h2 id="message-table">Message Table</h2>
+<p>Message table is array of message IDs <strong>stored in PAC file</strong>.</p>
+<p>They are series of message IDs like <code>00 00 00 00 / 01 00 00 00 / 02 00 00 00...</code></p>
+<p>The message IDs in table is full message ID, so it is also possible to put other global messages there, like system messages.</p>
+<p>If you are using certain PAC instructions e.g. <a href="../callmessagewindow.html">callMessageWindow</a>, you must use reference from there.</p>
+<p>For example, if you want to print <code>0x26B</code> speech bubble from <code>mission_01_02.pac</code>,<br>
+search <code>6B 02 00 00</code> hex edtior to find the address (<code>0x71C24</code>), and pass the <code>0x71C24</code> as parameter.</p>
+<p>It is possible to define message table by extending PAC file.<br>
+In this case, put the message table after <a href="../cmd_end.html">cmd_end</a>.</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,536 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Intruction By Category </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Intruction By Category ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="intruction-by-category">Intruction By Category</h1>
+
+<p>Note: Not all instructions are here. Few instructions might be mentioned more than once, but it's intended.</p>
+<h2 id="cmd_xxx">cmd_XXX</h2>
+<h3 id="basic-math">Basic Math</h3>
+<ul>
+<li><a href="../cmd_mod.html">cmd_mov</a> (=, assign)</li>
+<li><a href="../cmd_add.html">cmd_add</a> (+), <a href="../cmd_sub.html">cmd_sub</a> (-) <a href="../cmd_mul.html">cmd_mul</a> (*), <a href="../cmd_div.html">cmd_div</a> (/), <a href="../cmd_mod.html">cmd_mod</a> (%)</li>
+<li><a href="../cmd_iand.html">cmd_iand</a> (&amp;), <a href="../cmd_ior.html">cmd_ior</a> (|), <a href="../cmd_ixor.html">cmd_ixor</a> (^)</li>
+<li><a href="../cmd_irol.html">cmd_irol</a> (&lt;&lt;), <a href="../cmd_iror.html">cmd_iror</a> (&gt;&gt;)</li>
+<li><a href="../cmd_abs.html">cmd_abs</a>, <a href="../cmd_sqrt.html">cmd_sqrt</a>, <a href="../cmd_sinf.html">cmd_sinf</a>, <a href="../cmd_cosf.html">cmd_cosf</a>, <a href="../cmd_atan2f.html">cmd_atan2f</a></li>
+</ul>
+<h3 id="jumping-calling">Jumping, Calling</h3>
+<ul>
+<li><a href="../cmd_end.html">cmd_end</a>, <a href="../cmd_jmp.html">cmd_jmp</a>, <a href="../cmd_call.html">cmd_call</a></li>
+</ul>
+<h4 id="if-case-jump">If case jump</h4>
+<ul>
+<li><a href="../cmd_ifeq.html">cmd_ifEQ</a> (==), <a href="../cmd_ifne.html">cmd_ifNE</a> (!=)</li>
+<li><a href="../cmd_ifls.html">cmd_ifLS</a> (&lt;), <a href="../cmd_iflse.html">cmd_ifLSE</a> (&lt;=), <a href="../cmd_iflb.html">cmd_ifLB</a> (&gt;), <a href="../cmd_iflbe.html">cmd_ifLBE</a> (&gt;=)</li>
+<li><a href="../cmd_ifand.html">cmd_ifAND</a> (&amp;), <a href="../cmd_ifor.html">cmd_ifOR</a> (|)</li>
+<li><a href="../cmd_resjmp.html">cmd_resJmp</a></li>
+<li><a href="../cmd_inxjmp.html">cmd_inxJmp</a></li>
+</ul>
+<h4 id="if-case-call">If case call</h4>
+<ul>
+<li><a href="../cmd_ifcalleq.html">cmd_ifCallEQ</a> (==), <a href="../cmd_ifcallne.html">cmd_ifCallNE</a> (!=)</li>
+<li><a href="../cmd_ifcallls.html">cmd_ifCallLS</a> (&lt;), <a href="../cmd_ifcalllse.html">cmd_ifCallLSE</a> (&lt;=), <a href="../cmd_ifcalllb.html">cmd_ifCallLB</a> (&gt;), <a href="../cmd_ifcalllbe.html">cmd_ifCallLBE</a> (&gt;=)</li>
+<li><a href="../cmd_ifcalland.html">cmd_ifCallAND</a> (&amp;), <a href="../cmd_ifcallor.html">cmd_ifCallOR</a> (|)</li>
+<li><a href="../cmd_rescall.html">cmd_resCall</a></li>
+</ul>
+<h4 id="flag-jumping">Flag Jumping</h4>
+<p>Check <a href="about-flag.html">About Flag</a>.</p>
+<ul>
+<li><a href="../cmd_flgand.html">cmd_flgAnd</a> (&amp;), <a href="../cmd_flgor.html">cmd_flgOr</a> (|), <a href="../cmd_flgzero.html">cmd_flgZero</a></li>
+<li><a href="../cmd_flgset.html">cmd_flgSet</a>, <a href="../cmd_flgmov.html">cmd_flgMov</a>, <a href="../cmd_flgclr.html">cmd_flgClr</a></li>
+<li><a href="../cmd_flgsetid.html">cmd_flgSetId</a>, <a href="../cmd_flgclrid.html">cmd_flgClrId</a></li>
+<li><a href="../cmd_flgmemcpy.html">cmd_flgMemCpy</a>, <a href="../cmd_flgmemset.html">cmd_flgMemSet</a></li>
+</ul>
+<h3 id="other-utils">Other utils</h3>
+<ul>
+<li><a href="../cmd_rand.html">cmd_rand</a>, <a href="../cmd_srand.html">cmd_srand</a></li>
+<li><a href="../cmd_waitframe.html">cmd_WaitFrame</a>, <a href="../cmd_waittime.html">cmd_WaitTime</a>, <a href="../cmd_getelapsedtime.html">cmd_getElapsedTime</a></li>
+<li><a href="../cmd_addarray.html">cmd_addArray</a>, <a href="../cmd_getarray.html">cmd_getArray</a>, <a href="../cmd_setarray.html">cmd_setArray</a></li>
+</ul>
+<h2 id="unit--gimmick">Unit / Gimmick</h2>
+<ul>
+<li><a href="../setupunit.html">setupUnit</a>, <a href="../applyunit.html">applyUnit</a></li>
+</ul>
+<h3 id="model">Model</h3>
+<ul>
+<li><a href="../addchara.html">addChara</a></li>
+<li><a href="../getmodelinfo.html">getModelInfo</a>, <a href="../getparent.html">getParent</a></li>
+<li><a href="../setmodelinfo.html">setModelInfo</a>, <a href="../setparent.html">setParent</a>, <a href="../setmodellowerheight.html">setModelLowerHeight</a>, <a href="../setmodelrotate.html">setModelRotate</a>, <a href="../setmodelcolor.html">setModelColor</a></li>
+<li><a href="../createchangemodel.html">createChangeModel</a>, <a href="../changemodel.html">changeModel</a></li>
+<li><a href="../getdirection.html">getDirection</a>, <a href="../setdirection.html">setDirection</a>, <a href="../gettroopsign_25175f00.html">getTroopSign</a></li>
+<li><a href="../ishero.html">isHero</a>, <a href="../ismyhero.html">isMyHero</a></li>
+</ul>
+<h4 id="gimmick">Gimmick</h4>
+<p>Unlike effect, gimmick has another &quot;unique ID&quot; that is not handle. Some gimmick related instructions gets or sets the ID value. The ID value is <em>manually defined</em> by giving as parameter in some instructions.</p>
+<ul>
+<li><a href="../addgimmick.html">addGimmick</a></li>
+<li><a href="../getgateinfo.html">getGateInfo</a>, <a href="../setgateinfo.html">setGateInfo</a>, <a href="../resetgateinfo.html">resetGateInfo</a></li>
+<li><a href="../registconstgimmick.html">registConstGimmick</a>, <a href="../applyconstgimmick.html">applyConstGimmick</a>, <a href="../enablecollisionconstgimmick.html">enableCollisionConstGimmick</a></li>
+<li><a href="../setactioncontroller.html">setActionController</a></li>
+<li><a href="../getchildgimmick.html">getChildGimmick</a></li>
+</ul>
+<h4 id="collision">Collision</h4>
+<ul>
+<li><a href="../getcollisionsize.html">getCollisionSize</a>, <a href="../getcollisiontype.html">getCollisionType</a></li>
+<li><a href="../addhit.html">addHit</a>, <a href="../setcollisionsize.html">setCollisionSize</a>, <a href="../enablecollision.html">enableCollision</a></li>
+</ul>
+<h3 id="effect">Effect</h3>
+<ul>
+<li><a href="../addeffect.html">addEffect</a></li>
+<li><a href="../effectgetuserid.html">effectGetUserID</a>, <a href="../effectgeteffectid.html">effectGetEffectID</a></li>
+<li><a href="../effectsetdeleteid.html">effectSetDeleteId</a>, <a href="../effectkill.html">effectKill</a></li>
+<li><a href="../seteffecttimmingscript.html">setEffectTimmingScript</a>, <a href="../effectsettimmingscript.html">effectSetTimingScript</a>, <a href="../effectsetwaittime.html">effectSetWaitTime</a></li>
+<li><a href="../playhiteffect.html">playHitEffect</a></li>
+</ul>
+<h3 id="damage">Damage</h3>
+<ul>
+<li><a href="../setdamageparam.html">setDamageParam</a></li>
+</ul>
+<h3 id="creating--handling-enemy-units">Creating / Handling Enemy Units</h3>
+<h4 id="generator-setup">Generator Setup</h4>
+<p>Related article: <a href="how-to-create-an-enemy-target.html">How to: create an Enemy Target</a></p>
+<ul>
+<li>First, make a empty generator : <a href="../create.html">create</a></li>
+<li><a href="../settrooptype.html">setTroopType</a>, <a href="../setlevel.html">setLevel</a>, <del><a href="../setmode.html">setMode</a></del>, <a href="../setmodeex.html">setModeEx</a>, <a href="../setposx.html">setPosX</a>, <a href="../setdeathcall.html">setDeathCall</a>, <a href="../setadventradius.html">setAdventRadius</a>, <a href="../setitemtable_25174900.html">setItemTable</a></li>
+<li><a href="../isactivegen.html">isActiveGen</a>, <a href="../multi_waitactivegenerator.html">multi_waitActiveGenerator</a></li>
+</ul>
+<h5 id="other-troop-instructions">Other troop instructions</h5>
+<ul>
+<li><a href="../gettrooptype_gimmickuid.html">getTroopType_gimmickUId</a></li>
+</ul>
+<h4 id="reqactors">ReqActors</h4>
+<p><code>ReqActor</code> represents a PVE Enemy or possibly a gimmick. As a PVE enemy, they can be boss, miniboss, or small enemies like AI Dark heroes or Deths.</p>
+<ul>
+<li><a href="../setreqactortype.html">setReqActorType</a>, <a href="../setreqactorcount.html">setReqActorCount</a>, <a href="../setreqactorrenderprio.html">setReqActorRenderPrio</a>, <a href="../setreqactoritemtable.html">setReqActorItemTable</a>, <a href="../setreqactoruniqueid.html">setReqActorUniqueId</a>, <a href="../setreqactorhp.html">setReqActorHp</a></li>
+<li><a href="../setreqactorpos.html">setReqActorPos</a>, <a href="../setreqactormovepos.html">setReqActorMovePos</a> <a href="../setreqactorscale.html">setReqActorScale</a>, <a href="../setreqactorfixposflag.html">setReqActorFixPosFlag</a></li>
+<li><a href="../setreqactoradventradius.html">setReqActorAdventRadius</a>, <a href="../setreqactormoveradius.html">setReqActorMoveRadius</a></li>
+<li><a href="../setreqactorweapon.html">setReqActorWeapon</a>, <a href="../setreqactorhp.html">setReqActorHp</a>, <a href="../setreqactorlevel.html">setReqActorLevel</a></li>
+<li>Control spawning: <a href="../setreqactortotal.html">setReqActorTotal</a>, <a href="../setreqactordelaytime.html">setReqActorDelayTime</a></li>
+</ul>
+<h4 id="getting-handle">Getting handle</h4>
+<p>Related article: <a href="how-to-get-a-handle.html">How To: Get a handle</a></p>
+<p>For hideout exclusive handle, check <a href="#hideout">hideout</a> section.</p>
+<ul>
+<li>Squad: <a href="../getunitsquadhandle.html">getUnitSquadHandle</a> (from reqActor ID), <a href="../unituidtosquadhandle.html">unitUidToSquadHandle</a> (from &quot;unique ID&quot; of reqActor), <a href="../getplayersquadhandle.html">getPlayerSquadHandle</a> (from player), <a href="../getunitsquadhandlefromchara.html">getUnitSquadHandleFromChara</a> (from unit handle)</li>
+<li>Unit: <a href="../getunithandle.html">getUnitHandle</a>, <a href="../gethataponhandle.html">getHataponHandle</a>, <a href="../getmultiherohandle.html">getMultiHeroHandle</a></li>
+<li>Effect/Gimmick: <a href="../addeffect.html">addEffect</a>, <a href="../gimmick_gethandle.html">gimmick_getHandle</a></li>
+<li>Generator: <a href="../gethandle.html">getHandle</a></li>
+</ul>
+<h3 id="squad">Squad</h3>
+<ul>
+<li><a href="../addsquad.html">addSquad</a></li>
+<li><a href="../getsquadbaseposition.html">getSquadBasePosition</a>, <a href="../getsquadclassid.html">getSquadClassId</a>, <a href="../getsquadhandle.html">getSquadHandle</a></li>
+<li><a href="../setsquadbaseposition.html">setSquadBasePosition</a> <a href="../setplayersquadtype.html">setPlayerSquadType</a></li>
+<li><a href="../getmultiplayersquadhandle.html">getMultiplayerSquadHandle</a></li>
+<li><a href="../getsquadclassid.html">getSquadClassId</a>, <a href="../getplayerclassid.html">getPlayerClassId</a></li>
+<li><a href="../replaceactivitytable.html">replaceActivityTable</a></li>
+<li><a href="../isfrontlineenterview.html">isFrontLineEnterView</a>, <a href="../isfrontlineenterattack.html">sFrontLineEnterAttack</a></li>
+</ul>
+<h3 id="class">Class</h3>
+<ul>
+<li><a href="../setclassdata.html">setClassData</a></li>
+<li><a href="../getclasstype.html">getClassType</a>, <a href="../setsuperhero.html">setSuperHero</a></li>
+<li><a href="../addskill.html">addSkill</a>, <a href="../isregisterskill.html">isRegisterSkill</a></li>
+<li><a href="../setclassdata.html">setClassData</a></li>
+<li><a href="../getunitparam_25161b00.html">getUnitParam</a></li>
+</ul>
+<h3 id="level">Level</h3>
+<ul>
+<li><a href="../getplayerclasslevel.html">getPlayerClassLevel</a>, <a href="../getmultiplayerlevelmax.html">getMultiPlayerLevelMax</a></li>
+<li><a href="../resultlevelupcalaclabel.html">resultLevelupCalacLabel</a>, <del><a href="../resultlevelupcalacget.html">resultLevelupCalacGet</a>, <a href="../resultlevelupcalacset.html">resultLevelupCalacSet</a></del></li>
+<li><a href="../setactorlevel.html">setActorLevel</a></li>
+</ul>
+<h3 id="equipment">Equipment</h3>
+<ul>
+<li><a href="../isplayerequipweaponcategory.html">isPlayerEquipWeaponCategory</a>, <a href="../isequipweaponintroop.html">isEquipWeaponInTroop</a></li>
+<li><a href="../addequip.html">addEquip</a>, <a href="../addequipsubmodel.html">addEquipSubModel</a></li>
+<li><a href="../getequipitemparam.html">getEquipItemParam</a></li>
+</ul>
+<h2 id="action">Action</h2>
+<ul>
+<li><a href="../isheromode.html">isHeromode</a>, <a href="../ispossibleexecheromode.html">isPossibleExecHeromode</a></li>
+</ul>
+<h3 id="position">Position</h3>
+<ul>
+<li><a href="../setadvanceenable.html">setAdvanceEnable</a>, <a href="../setadvancespeedratio.html">setAdvanceSpeedRatio</a></li>
+<li><a href="../getplayertroopbaseposition.html">getPlayerTroopBasePosition</a></li>
+<li><a href="../gettrooptopposx.html">getTroopTopPosX</a>, <a href="../gettrooptopposx_enemy.html">getTroopTopPosX_enemy</a>, <a href="../gettrooptopposy.html">getTroopPosY</a></li>
+</ul>
+<h4 id="animation">Animation</h4>
+<ul>
+<li><a href="../playmotion.html">playMotion</a>, <a href="../pushmotion.html">pushMotion</a>, <a href="../clipmotion.html">clipMotion</a>, <a href="../stopmotion.html">stopMotion</a>, <a href="../pausemotion.html">pauseMotion</a></li>
+<li><a href="../getmotioninfo.html">getMotionInfo</a>, <a href="../setMotion.html">setMotion</a></li>
+</ul>
+<h5 id="node">Node</h5>
+<ul>
+<li><a href="../getnodeindex.html">getNodeIndex</a>, <a href="../getnodepos.html">getNodePos</a>, <a href="../getcenternodeid.html">getCenterNodeId</a></li>
+<li><a href="../setlink.html">setLink</a>, <a href="../setlinkparam.html">setLinkParam</a>, <a href="../setlinkbyid.html">setLinkById</a>, <a href="../releaselink.html">releaseLink</a>, <a href="../setlinkinfo.html">setLinkInfo</a></li>
+<li><a href="../enablerenderattach.html">enableRenderAttach</a></li>
+<li>Adding an Enemy Target: <a href="../callactoreffect.html">callActorEffect</a>, <a href="../addlinkobject.html">addLinkObject</a></li>
+</ul>
+<h3 id="control">Control</h3>
+<ul>
+<li><a href="../getactive.html">getActive</a>, <a href="../setactive.html">setActive</a></li>
+<li><a href="../spawn.html">spawn</a></li>
+</ul>
+<h4 id="unit-control">Unit Control</h4>
+<p>Related article: <a href="how-to-control-a-squad.html">How To Control a Squad</a></p>
+<ul>
+<li><a href="../setunitctrlenable.html">setUnitCtrlEnable</a>, <a href="../setunitctrlmode.html">setUnitCtrlMode</a></li>
+<li><a href="../setunitctrlstartacttype.html">setUnitCtrlStartActType</a>, <a href="../setunitctrlrangeracttype.html">setUnitCtrlRangerActType</a>, <a href="../getunitctrlcurrentacttype.html">getUnitCtrlCurrentActType</a>, <a href="../setunitctrlcurrentacttype_251f2700.html">setUnitCtrlCurrentActType (Generator)</a>, <a href="../setunitctrlcurrentacttype_2516d800.html">setUnitCtrlCurrentActType (SquadHandle)</a></li>
+<li><a href="../setunitctrlwatcharea.html">setUnitCtrlWatchArea</a></li>
+<li><a href="../setunitctrltimingscript_int.html">setUnitCtrlTimingScript_Int</a>, <a href="../setunitctrlenable.html">setUnitCtrlEnable</a>, <a href="../setunitctrlmoveenable.html">setUnitCtrlMoveEnable</a></li>
+<li><a href="../getunitctrlactivity.html">getUnitCtrlActivity</a>, <a href="../setunitctrlactivity_251f1c00.html">setUnitCtrlActivity</a></li>
+</ul>
+<p>Note that squadActivity and actual march/attack/defend action can be different, and can be faked.</p>
+<h4 id="boss-control">Boss Control</h4>
+<ul>
+<li><a href="../setbossmoverange_251f2e00.html">setBossMoveRange</a>, <a href="../setbossmoverangelimit_251f2f00.html">setBossMoveRangeLimit</a></li>
+<li><a href="../getbossactionid.html">getBossActionId</a>, <a href="../setbossactionid.html">setBossActionId</a>, <a href="../enablebossmanualctrl.html">enableBossManualCtrl</a></li>
+<li><a href="../setbossnodamage.html">setBossNoDamage</a>, <a href="../setbossdisableatkmove.html">setBossDisableAtkMove</a></li>
+</ul>
+<h3 id="status">Status</h3>
+<ul>
+<li><a href="../kill.html">kill</a>, <a href="../reborntroop.html">rebornTroop</a>, <a href="../setsuperherorebornenable.html">setSuperHeroRebornEnable</a>, <a href="../getaliveunitcount.html">getAliveUnitCount</a></li>
+<li><a href="../setrebornposition.html">setRebornPosition</a>, <a href="../setappearanceposition.html">setAppearancePosition</a></li>
+<li><a href="../recoveryhp.html">recoveryHp</a>, <a href="../recoveryhpratio.html">recoveryHpRatio</a> <a href="../recoveryplayertroophp.html">recoveryPlayerTroopHp</a>, <a href="../recoveryplayertroophpratio.html">recoveryPlayerTroopHpRatio</a></li>
+<li><a href="../setmaxhitpoint.html">setMaxHitPoint</a></li>
+</ul>
+<h3 id="status-effect">Status Effect</h3>
+<ul>
+<li><a href="../addabnormalstatus.html">addAbnormalStatus</a>, <a href="../addabnormalstatusslip.html">addAbnormalStatusSlip</a>, <a href="../addabnormalstatusblowoff.html">addAbnormalStatusBlowoff</a></li>
+<li><a href="../getabnormalstatus.html">getAbnormalStatus</a></li>
+</ul>
+<h2 id="mission-information">Mission Information</h2>
+<ul>
+<li><a href="../getgamemode.html">getGameMode</a>, <a href="../setgamemode.html">setGameMode</a></li>
+<li><a href="../getmissionareaid.html">getMissionAreaId</a>, <a href="../setmaxmissionareaid.html">setMaxMissionAreaId</a>, <a href="../getmaxmissionareaid.html">getMaxMissionAreaId</a>, <a href="../setmissionareaid.html">setMissionAreaId</a>, <a href="../getmissioninfo.html">getMissionInfo</a></li>
+<li><a href="../setmissiontimmingscript.html">setMissionTimmingScript</a></li>
+<li><a href="../resultgetstate.html">resultGetState</a>, <a href="../resultsetstate.html">resultSetState</a>, <a href="../resultgetphase.html">resultGetPhase</a></li>
+<li><a href="../disableretirebox.html">disableRetireBox</a></li>
+</ul>
+<h3 id="quest-data">Quest Data</h3>
+<ul>
+<li><a href="../getquestlevelrevise.html">getQuestLevelRevise</a>, <a href="../setquestlevelrevise.html">setQuestLevelRevise</a>, <del><a href="../getquestlevel.html">getQuestLevel</a>, <a href="../setquestlevel.html">setQuestLevel</a></del></li>
+<li><a href="../getquestcompletecounter.html">getQuestComplementCounter</a>, <a href="../incquestcompletecounter.html">incQuestComplementCounter</a></li>
+<li><a href="../setquestpayexp.html">setQuestPayExp</a>, <a href="../setquestpayitem.html">setQuestPayItem</a>, <a href="../resetquestpay.html">resetQuestPay</a></li>
+</ul>
+<h3 id="waiting-until-loaded-waitgoahead">Waiting until loaded (WaitGoAhead)</h3>
+<p>This is called with pons too. For multi, check <a href="#network">network</a> section.</p>
+<ul>
+<li><a href="../multi_waitgoahead.html">multi_waitGoAhead</a>, <a href="../multi_waitgoahead1.html">multi_WaitGoAhead1</a></li>
+<li>Cutscene sync : <a href="../multi_startnosyncevent.html">multi_startNoSyncEvent</a>, <a href="../multi_endnosyncevent.html">multi_endNoSyncEvent</a> <a href="../multi_waittimesync.html">multi_waitTimeSync</a></li>
+<li><a href="../multi_waitactivegenerator.html">multi_waitActiveGenerator</a></li>
+<li><a href="../multi_battlegoahead.html">multi_battleGoAHead</a>, <a href="../startintroevent.html">startIntroEvent</a>, <a href="../start.html">start</a></li>
+<li><a href="../isgogame.html">isGoGame</a>, <a href="../startgame.html">startGame</a></li>
+</ul>
+<h2 id="mission-environment">Mission Environment</h2>
+<h3 id="stage">Stage</h3>
+<p>Related Article: <a href="how-to-setup-stages.html">How To: Setup Stages</a></p>
+<ul>
+<li><a href="../addstage_25165d00.html">addStage</a>, <a href="../setstageparam.html">setStageParam</a></li>
+<li><a href="../startsetupstage.html">startSetupStage</a>, <a href="../endsetupstage.html">endSetupStage</a>, <a href="../applystage.html">applyStage</a></li>
+</ul>
+<h4 id="dungeon">Dungeon</h4>
+<p>For door gimmick, see <a href="#gimmick">gimmick</a> section.</p>
+<ul>
+<li><a href="../setupstartdungeonwall.html">setupStartDungeonWall</a>, <a href="../setupadddungeonwall.html">setupAddDungeonWall</a>, <a href="../setupdungeoncomment.html">setupDungeonComment</a>, <a href="../setupenddungeonwall.html">setupEndDungeonWall</a></li>
+</ul>
+<h3 id="weather">Weather</h3>
+<ul>
+<li><a href="../getrainlevel.html">getRainLevel</a>, <a href="../getsnowlevel.html">getSnowLevel</a>, <a href="../getthunderlevel.html">getThunderLevel</a>, <a href="../getwindlevel.html">getWindLevel</a>, <a href="../getwinddirection.html">getWindDirection</a>, <a href="../getfoglevel.html">getFogLevel</a>, <a href="../getsandlevel.html">getSandLevel</a>, <a href="../getcloudylevel.html">getCloudyLevel</a></li>
+<li><a href="../setrainlevel.html">setRainLevel</a>, <a href="../setsnowlevel.html">setSnowLevel</a>,  <a href="../setthunderlevel.html">setThunderLevel</a>, <a href="../setwindlevel.html">setWindLevel</a>, <a href="../setwinddirection.html">setWindDirection</a>, <a href="../setfogleve.html">setFogLeve</a>, <a href="../setsandlevel.html">setSandLevel</a>, <a href="../setcloudylevel.html">setCloudyLevel</a></li>
+<li><a href="../setwindcolor.html">setWindColor</a></li>
+<li><a href="../reflectweather.html">reflectWeather</a></li>
+</ul>
+<h3 id="camera">Camera</h3>
+<ul>
+<li><a href="../cameragetpos.html">cameraGetPos</a>, <a href="../cameragetposx.html">cameraGetPosX</a>, <a href="../cameragetoffsety.html">cameraGetOffsetY</a>, <a href="../camerasetposz.html">cameraSetPosZ</a>, <a href="../camerasetbattlez.html">cameraSetBattleZ</a></li>
+<li><a href="../camerasetscriptcmaera.html">cameraSetScriptCmaera</a>, <a href="../cameraenablecontrol.html">cameraEnableControl</a>, <a href="../cameraenablecontroll.html">cameraEnabeControll</a></li>
+<li><a href="../cameramove.html">cameraMove</a>, <a href="../cameramovetype.html">cameraMoveType</a> <a href="../cameramovespeedset.html">cameraMoveSpeedSet</a>, <a href="../cameramovetimeset.html">cameraMoveTimeSet</a></li>
+<li><a href="../setcameraposition.html">setCameraPosition</a></li>
+<li><a href="../cameraactuate.html">cameraActuate</a></li>
+</ul>
+<h3 id="music--sound">Music / Sound</h3>
+<ul>
+<li>Sound: <a href="../playse_250b0100.html">playSe</a>, <a href="../playsefrompos.html">playSeFromPos</a></li>
+<li>Music: <a href="../playatrac.html">playAtrac</a>, <a href="../cancel.html">cancel</a>, <a href="../stop_250b0300.html">stop</a></li>
+<li>Bgm: <a href="../setmssionbgmid.html">setMssionBgmId</a></li>
+</ul>
+<h3 id="rhythm--command">Rhythm / Command</h3>
+<ul>
+<li><a href="../getcommandid.html">getCommandId</a>, <a href="../getcommandrate.html">getCommandRate</a>, <a href="../getcommandscore.html">getCommandScore</a>,</li>
+<li><a href="../getcombo.html">getCombo</a>, <a href="../getsoundlevel.html">getSoundLevel</a></li>
+<li>Chant turn: <a href="../isrhythm.html">isRhythm</a></li>
+<li><a href="../sendcommand.html">sendCommand</a>, <a href="../sendmiss.html">sendMiss</a></li>
+<li><a href="../clearautocommand.html">clearAutoCommand</a>, <a href="../setautocommand.html">setAutoCommand</a>, <a href="../addautocommandkey.html">addAutoCommandKey</a>, <a href="../startautocommandkey.html">startAutoCommandKey</a></li>
+<li><a href="../setdisablekey.html">setDisableKey</a></li>
+<li>Command Cancel: <a href="../isenablerhythmhit.html">isEnableRhythmHit</a> <a href="../setenablerhythmhit.html">setEnableRhythmHit</a>, <a href="../issounddisablerhtymhit.html">isSoundDisableRhtyhmHit</a>, <a href="../setsounddisablerhtymhit.html">setSoundDisableRhtyhmHit</a></li>
+<li>Drum Hit: <a href="../gethitpercussion.html">getHitPercussion</a>, <a href="../getdisablepercussionflag.html">getDisablePercussionFlag</a>, <a href="../setdisablepercussionflag.html">setDisablePercussionFlag</a>, <a href="../getdisablepercussionview.html">getDisablePercussionView</a>, <a href="../setdisablepercussionview.html">setDisablePercussionView</a>, <a href="../gethitrate.html">getHitRate</a></li>
+<li>Drum Shout: <a href="../setdisableherovoice.html">setDiableHeroVoice</a>, <a href="../cleardisableherovoice.html">clearDisableHeroVoice</a></li>
+</ul>
+<h3 id="vs">VS</h3>
+<p>PvE VS playtime is hardcoded and can't edit with this.</p>
+<ul>
+<li><a href="../getversusplayercount.html">getVersusPlayerCount</a>, <a href="../setversusrule.html">setVersusRule</a></li>
+<li><a href="../isvisibleversusstring.html">isVisibleVersusString</a>, <a href="../setversusstring.html">setVersusString</a></li>
+<li><a href="../getversuspkinfo.html">getVersusPKInfo</a></li>
+<li><a href="../setmultimapviewstate.html">setMultiMapViewState</a></li>
+<li><a href="../multisettime.html">multiSetTime</a> (Time limit), <a href="../getdeadcount.html">getDeadCount</a> (Reborn amount based VS)</li>
+<li>Scoring: <a href="../multigetscore.html">multiGetScore</a>, <a href="../multisetscore.html">multiSetScore</a>, <a href="../getbrakescore.html">getBrakeScore</a>, <a href="../setbrakescore.html">setBrakeScore</a>, <a href="../setbreakscoretroop.html">setBreakScoreTroop</a></li>
+</ul>
+<h4 id="head-on">Head-on</h4>
+<ul>
+<li><a href="../getgimmickpowergaugepoint.html">getGimmickPowerGaugePoint</a></li>
+<li><a href="../gimmickgetuseridi.html">gimmickGetUserIdI</a>, <a href="../gimmicksetuseridi.html">gimmickSetUserIdI</a>, <a href="../gimmickgetuseridf.html">gimmickGetUserIdF</a>, <a href="../gimmicksetuseridf.html">gimmickSetUserIdF</a></li>
+</ul>
+<h4 id="head-on-1">Head-on</h4>
+<h4 id="summon">Summon</h4>
+<ul>
+<li><a href="../getequipsummontype.html">getEquipSummonType</a>, <a href="../setenemysummontype.html">setEnemySummonType</a></li>
+<li><a href="../issummonmode.html">isSummonMode</a>, <a href="../startsummonmode.html">startSummonMode</a></li>
+</ul>
+<h2 id="item">Item</h2>
+<ul>
+<li>Adding items directly: <a href="../additem_25166100.html">addItem (Obtain)</a>, <a href="../additem_250a0900.html">addItem (Inventory)</a></li>
+<li><a href="../additemeffect.html">addItemEffect</a> to drop item manually.</li>
+<li><a href="../getgfpdata.html">getGfpData</a>, <a href="../serchgfpid.html">serchGfpId</a></li>
+<li><a href="../clearitem.html">clearItem</a>, <a href="../setknownitem.html">setKnownItem</a></li>
+</ul>
+<h3 id="item-drops">Item drops</h3>
+<p>Related article: <a href="how-to-set-item-drops.html">How To: Set Item Drops</a>.</p>
+<p>Called in phase 1 (2nd phase) of <code>setMissionTimmingScript</code>.</p>
+<ul>
+<li><a href="../beginappearitem.html">beginAppearItem</a>, <a href="../endappearitem.html">endAppearItem</a></li>
+<li><a href="../getappearitem.html">getAppearItem</a>, <a href="../getappearitemex.html">getAppearItemEx</a></li>
+<li><a href="../setappearitem.html">setAppearItem</a>, <a href="../setcharinappearparam.html">setCharinAppearParam</a>, <a href="../setappearitemkilltime.html">setAppearItemKillTime</a></li>
+</ul>
+<h4 id="loots">Loots</h4>
+<ul>
+<li><a href="../itemtableallclear.html">itemTableAllClear</a></li>
+<li><a href="../resultboxitemget.html">resultBoxItemGet</a>, <a href="../resultboxitemlabel.html">resultBoxItemLabel</a>, <a href="../resultboxitemset.html">resultBoxItemSet</a></li>
+</ul>
+<h2 id="input">Input</h2>
+<ul>
+<li><a href="../getdisablekey.html">getDisableKey</a>, <a href="../setdisablekey.html">setDisableKey</a></li>
+<li><a href="../getpaddirect.html">getPadDirect</a>, <a href="../getpadstand.html">getPadStand</a>, <a href="../getpadrelease.html">getPadRelease</a></li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="../readarcfile.html">readArcFile</a>, <a href="../requestactor.html">requestActor</a>, <del><a href="../syncreadarcfile.html">syncReadArcFile</a></del></li>
+</ul>
+<h2 id="graphic">Graphic</h2>
+<ul>
+<li><a href="../getrenderpriority.html">getRenderPriority</a>, <a href="../setrenderpriority_25030900.html">setRenderPriority</a></li>
+</ul>
+<h3 id="ui--display">UI / Display</h3>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Most of the UIs exist for good reason.
+Messing up with the basic UI while playing is considered as bad UX design practice (and that is what DoI curse do).
+Consider using another method for making a mission challenging.</p>
+</div>
+<ul>
+<li><a href="../setdisablehpgaugeview.html">setDisableHpGaugeView</a>, <a href="../setdisablesquadhpgaugeview.html">setDisableSqudHpGaugeView</a>, <a href="../setdisablesimplehpgaugeview.html">setDisableSimpleGaugeView</a></li>
+<li><a href="../setdisablefevergauge.html">setDisableFeverGauge</a>, <a href="../getdisablebeatguide.html">getDisableBeatGuide</a>, <a href="../setdisablebeatguide.html">setDisableBeatGuide</a>, <a href="../setdisablecommandguide.html">setDisableCommandGuide</a></li>
+<li><a href="../getfevergaugepriority.html">getFeverGaugePriority</a>, <a href="../setfevergaugepriority.html">setFeverGaugePriority</a></li>
+</ul>
+<h4 id="message--dialog">Message / Dialog</h4>
+<ul>
+<li>Dialog: <a href="../showdialogex.html">showDialogEx</a>, <a href="../closedialog.html">closeDialog</a></li>
+<li>Speech Bubble: <a href="../callmessagewindow.html">callMessageWindow</a>, <a href="../calllocalizemessagewindow.html">callLocalizeMessageWindow</a>, <a href="../setmsgwndcolor.html">setMsgWndColor</a>, <a href="../setmsgwndpriority.html">setMsgWndPriority</a>, <a href="../closemessagewindow.html">closeMessageWindow</a> <a href="../keyclosemessagewindow.html">keyCloseMessageWindow</a>
+<ul>
+<li>Related Guide: <a href="how-to-set-speech-bubble.html">How To: Set Speech Bubble</a></li>
+</ul>
+</li>
+<li>Information Message (above/below): <a href="../callsysmsglabel.html">callSysMsgLabel</a>, <del><a href="../callsysmsg.html">callSysMsg</a></del>, <a href="../clearsysmsg.html">clearSysMsg</a></li>
+<li>Chat: <a href="../setenablelogwindow.html">setEnableLogWindow</a>, <a href="../setenablechatwindow.html">setEnableChatWindow</a></li>
+<li>Debug: <a href="../setchoice.html">setChoice</a>, <a href="../doselect.html">doSelect</a></li>
+<li>Basic text on center : <a href="../sysytemmessage.html">sysytemMessage</a>, <a href="../setmessagecolor.html">setMessageColor</a>, <a href="../getlinefeedcount.html">getLineFeedCount</a></li>
+<li>Related Utils: <a href="../setreplacetextfromint.html">setReplaceTextFromInt</a>, <a href="../text_setreplacecolor.html">text_setReplaceColor</a>, <a href="../text_setreplacetext.html">text_setReplaceText</a></li>
+</ul>
+<h3 id="screen">Screen</h3>
+<ul>
+<li>View: <a href="../screenstartframe.html">screenStartFrame</a>, <a href="../screenstartspotlight.html">screenStartSpotLight</a></li>
+<li>Fade: <a href="../startfade.html">startFade</a>, <a href="../getfaderate.html">getFadeRate</a>, <a href="../getfadecolor.html">getFadeColor</a></li>
+</ul>
+<h3 id="timer">Timer</h3>
+<p><em>Timer</em> is the displayed time count on the screen (can be counter or countdown). It is used for e.g. first floor guillotine.</p>
+<ul>
+<li><a href="../starttimer.html">startTimer</a>, <a href="../settimerpos.html">setTimerPos</a>, <a href="../settimersize.html">setTimerSize</a>, <a href="../settimerenablesetype.html">setTimerEnableSeType</a>, <a href="../addtimer.html">addTimer</a></li>
+<li><a href="../gettimersec.html">getTimerSec</a>, <a href="../getcountdowntimerstatus.html">getCountdonwTimerStatus</a>, <a href="../settimerpause.html">setTimerPause</a></li>
+<li><a href="../drawtimer.html">drawTimer</a>,
+<ul>
+<li>Related Guide: <a href="how-to-add-a-timer.html">How To: Add A Timer</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="screen-world-conversion">Screen-World Conversion</h3>
+<ul>
+<li><a href="../worldtoscreenpos.html">worldToScreenPos</a></li>
+</ul>
+<h2 id="script">Script</h2>
+<ul>
+<li><a href="../getpack_25100600.html">getPack</a></li>
+<li><a href="../createscript_25100800.html">createScript</a>, <a href="../killscript.html">killScript</a>, <a href="../killchildren.html">killChildren</a></li>
+</ul>
+<h2 id="hideout">Hideout</h2>
+<ul>
+<li><a href="../getazitoinfo.html">getAzitoInfo</a>, <a href="../setazitoinfo.html">setAzitoInfo</a>, <a href="../setfacilityinfo.html">setFacilityInfo</a>, <a href="../getfacilitygimmickhandle.html">getFacilityGimmickHandle</a></li>
+<li><a href="../setenablepad.html">setEnablePad</a></li>
+<li><a href="../geteventunithandle.html">getEventUnitHandle</a>, <a href="../getmultiherohandle.html">getMultiHeroHandle</a></li>
+</ul>
+<h3 id="shop">Shop</h3>
+<ul>
+<li><a href="../unlockshopitem.html">unlockShopItem</a>, <a href="../checkshopitemunlock.html">checkShopItemUnlock</a></li>
+<li><a href="../unlockbgm.html">unlockBgm</a>, <a href="../unlockteamcard.html">unlockTeamCard</a>, <a href="../unlockteamflag.html">unlockTeamFlag</a></li>
+<li><a href="../setshopiteminfo.html">setShopItemInfo</a></li>
+<li><a href="../unlockmedenshopitem.html">unlockMedenShopItem</a>, <a href="../clearmedenshopitem.html">clearMedenShopItem</a></li>
+</ul>
+<h3 id="save">Save</h3>
+<ul>
+<li><a href="../savems.html">saveMs</a>, <a href="../getresultsavems.html">getResultSaveMs</a></li>
+<li><a href="../setiamcheater.html">setIAmCheater</a></li>
+</ul>
+<h3 id="blacksmith">Blacksmith</h3>
+<ul>
+<li><a href="../getmaterialitemid.html">getMaterialItemId</a>, <a href="../addlevelupitemparam.html">addLevelUpItemParam</a>, <a href="../getlevelupinfo.html">getLevelUpInfo</a></li>
+</ul>
+<h3 id="world-map">World Map</h3>
+<ul>
+<li><a href="../addarea.html">addArea</a>, <a href="../addquest.html">addQuest</a>, <a href="../addstage_251c1300.html">addStage (world map)</a>, <a href="../resetstageparam.html">resetStageParam</a></li>
+<li><a href="../isexistdlcquestfile.html">isExistDlcQuestFile</a></li>
+<li><a href="../setstagecursor.html">setStageCursor</a></li>
+</ul>
+<h2 id="scene">Scene</h2>
+<ul>
+<li><a href="../changescene.html">changeScene</a>, <a href="../totilte.html">toTilte</a></li>
+</ul>
+<h3 id="tip-screen-labopac">Tip screen (labo.pac)</h3>
+<ul>
+<li><a href="../cleartipsselectmask.html">clearTipSelectMask</a>, <a href="../resettips.html">resetTips</a></li>
+<li><a href="../unlocktipsimageid.html">unlockTipImageId</a>, <a href="../unlocktipsimagenosave.html">unlockTipImageNoSave</a></li>
+<li><a href="../checktipsunlock.html">checkTipsUnlock</a></li>
+</ul>
+<h2 id="system">System</h2>
+<ul>
+<li><a href="../getlaboinfo.html">getLaboInfo</a>, <a href="../setlaboinfo.html">setLaboInfo</a></li>
+</ul>
+<h3 id="network">Network</h3>
+<ul>
+<li><a href="../setconnectionicondraw.html">setConnectionIconDraw</a>, <a href="../startsyncgameflag.html">startSyncGameFlag</a>, <a href="../getsyncgameflagresult.html">getSyncGameFlagResult</a></li>
+<li><a href="../networkerrorinvoke_251c2c00.html">networkErrorInvoke (Hideout)</a>, <a href="../networkerrorinvoke_2516e800.html">networkErrorInvoke (Mission)</a></li>
+<li><a href="../multi_gettweet.html">multi_getTweet</a>, <a href="../multi_settweet.html">multi_setTweet</a>, <a href="../multi_cleartweet.html">multi_clearTweet</a></li>
+<li><a href="../multi_startgoahead.html">multi_startGoAhead</a>, <a href="../multi_isfinishgoahead.html">multi_isFinishGoAhead</a>, <a href="../multi_stopgoahead.html">multi_stopGoAhead</a></li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

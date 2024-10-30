@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>How To: Add A Timer </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="How To: Add A Timer ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="how-to-add-a-timer">How To: Add A Timer</h1>
+
+<h2 id="draw-a-timer">Draw a timer</h2>
+<ol>
+<li>Initialise the timer with <a href="../starttimer.html">startTimer</a>.</li>
+<li>Set the position with <a href="../settimerpos.html">setTimerPos</a>.</li>
+<li>Set the timer size with <a href="../settimersize.html">setTimerSize</a>.</li>
+<li>(Optional) Set countdown sound on with <a href="../settimerenablesetype.html">setTimerEnableSeType</a>.</li>
+</ol>
+<ul>
+<li>If you want to add time to the timer, use <a href="../addtimer.html">addTimer</a>.</li>
+<li><code>startTimer</code> can be <em>incremental</em> by passing 2nd paramter to <code>1</code>.</li>
+</ul>
+<h2 id="control-the-timer">Control the timer</h2>
+<ul>
+<li><a href="../settimerpause.html">setTimerPause</a> does stop, pause and resume.</li>
+<li><a href="../gettimersec.html">getTimerSec</a> gets timer as seconds.</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<p>This is the timer in first Guillotine in Demon Forudo Mission:</p>
+<pre><code class="lang-c">0005E974  25000700:cmd_mov(40:CF, 16.0)
+0005E988  25169D00:startTimer(40:CF, 2:0)
+0005E99C  25169F00:setTimerPos(240.0, 24.0)
+0005E9B0  2516A000:setTimerSize(32.0)
+0005E9BC  25160F01:setTimerEnableSeType(2:1)
+</code></pre>
+<p>This is the Defence Practice timer:</p>
+<pre><code class="lang-c">0005FF9C  25169D00:startTimer(55.0, 2:0)
+0005FFB0  25169F00:setTimerPos(240.0, 24.0)
+0005FFC4  2516A000:setTimerSize(32.0)
+</code></pre>
+<p>This is the timer in debug mode, proving changing the order of <code>startTimer</code> also works.</p>
+<pre><code class="lang-c">	2C7E4 : 25169F00:setTimerPos(240.0, 136.0)
+	2C7F8 : 2516A000:setTimerSize(21.0)
+	2C804 : 25169D00:startTimer(20.0, 2:0)
+</code></pre>
+<p>This is the timer to trigger swinging axes in &quot;Eternal Archfiend and the other vessel&quot; 1st floor.</p>
+<pre><code class="lang-c">00064200  2516A100:getTimerSec(20:0)
+0006420C  25002100:cmd_ifCallLSE(20:0, 0.0, 1:64228)
+00064224  25000100:cmd_end()
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

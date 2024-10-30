@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>setGateInfo </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="setGateInfo ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="setgateinfo">setGateInfo</h1>
+
+<p>Binds an gate opening action object to another object. This can be dungeon or field structure.</p>
+<p>This can control e.g. door open and limiting camera turn.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>setGateInfo</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 16 bd 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x8923bc8</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(bool)bind_type</code> <em>(8 bytes)</em> : 0 has many types of binds, 1 will be connected to only with the ID (<code>param_idex</code> 2)</li>
+<li><code>(int)bind_identifier</code> <em>(8 bytes)</em> : <code>bind_identifier</code> from <a href="setupadddungeonwall.html">setupAddDungeonWall</a>, if it's non-dungeon, set it manually.</li>
+<li><code>(int)param_index</code> <em>(8 bytes)</em> : Index of the parameter, see below for the detail.</li>
+<li><code>(int/index)param</code> <em>(8 bytes)</em> : If 1st parameter is 0, this is ID related. otherwise it is address.</li>
+</ul>
+<p>If <code>bind_type</code> is 0, setup only 2 of <code>param_index</code> (in this case, the <code>param</code> is address).</p>
+<h3 id="about-param_index">About <code>param_index</code></h3>
+<ul>
+<li>If <code>param_index</code> is 0, <code>param</code> is identifier of the object, obtained from <a href="setupadddungeonwall.html">setupAddDungeonWall</a>, less than 0 for non-dungeon object.</li>
+<li>If <code>param_index</code> is 1, <code>param</code> decides action type.
+<ul>
+<li>0 does nothing, 1 blocks camera sight</li>
+<li>door moving direction with lever: <code>4</code> is from up to down, <code>8</code> is from up to down. <code>0</code> does not move.</li>
+</ul>
+</li>
+<li>If <code>param_index</code> is 2, <code>param</code> is address (offset from PAC file) to call (when being opened). The address can be address of <a href="cmd_end.html">cmd_end</a>.</li>
+<li>If <code>param_index</code> is 3, <code>param</code> can be 0, 1, 2 - 1 opens door from very start.</li>
+<li>if <code>param_index</code> is 4, <code>param</code> is <a href="setreqactoruniqueid.html">&quot;reqActor ID&quot;</a> 3rd parameter of the lever gimmick.
+<ul>
+<li>The reqActor can be created later.</li>
+</ul>
+</li>
+<li>if <code>param_index</code> is 5, <code>param</code> is <em>another</em> <a href="setreqactoruniqueid.html">&quot;reqActor ID&quot;</a> 3rd parameter of the lever gimmick.
+<ul>
+<li>The reqActor can be created later.</li>
+<li>If there is no 2nd lever, <strong>keep -1</strong>. Multi dungeon has this because the door is activated with two levers.</li>
+</ul>
+</li>
+<li>if <code>param_index</code> is 6, <code>param</code> decides will the door closed <em>after</em> activating the lever. 0 does not close after once opened, 1 closes after few turns.</li>
+</ul>
+<p>Please describe other <code>param</code> data following with <code>param_index</code>.</p>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 16 bd 00 / 02 00 00 00 / 00 00 00 00 / 08 00 00 00 / 46 00 00 00 / 02 00 00 00 / 00 00 00 00 / 08 00 00 00 / 48 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">setGateInfo((int)0, ((global)int *)giVar70, (int)0, ((global)int *)giVar72)
+</code></pre>
+<p>This is how the <code>setGateInfo</code> is used in a field.</p>
+<pre><code class="lang-c">00004AEC  25000700:cmd_mov(8:46, 0.0)
+00004B00  25000700:cmd_mov(8:48, -1.0)
+00004B14  2516BD00:setGateInfo(2:0, 8:46, 2:0, 8:48)
+00004B38  2516BD00:setGateInfo(2:0, 8:46, 2:1, 2:0)
+00004B5C  2516BD00:setGateInfo(2:0, 8:46, 2:2, 1:368)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_08923bc8(int param_1,undefined4 param_2)
+
+{
+  int *piVar1;
+  undefined4 *puVar2;
+  int *piVar3;
+  undefined4 *puVar4;
+  int iVar5;
+  undefined4 uVar6;
+  
+  piVar1 = (int *)Pac_Get_Param(param_2,0,1,4);
+  puVar2 = (undefined4 *)Pac_Get_Param(param_2,1,1,4);
+  piVar3 = (int *)Pac_Get_Param(param_2,2,1,4);
+  puVar4 = (undefined4 *)Pac_Get_Param(param_2,3,1,4);
+  uVar6 = *(undefined4 *)(*(int *)(param_1 + 0x10) + 0x118);
+  if (*piVar1 == 0) {
+    iVar5 = FUN_088b25fc(uVar6,*puVar2);
+    if (iVar5 == 0) {
+      iVar5 = FUN_088b24c4(uVar6,*puVar2);
+    }
+  }
+  else {
+    iVar5 = FUN_088b2648(uVar6,*puVar2);
+  }
+  if (iVar5 != 0) {
+    *(undefined4 *)(iVar5 + *piVar3 * 4) = *puVar4;
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

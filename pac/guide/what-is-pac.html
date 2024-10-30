@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>What is PAC? </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="What is PAC? ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="what-is-pac">What is PAC?</h1>
+
+<p>PAC is special script owned by Pyramid Inc. The company is dead, so currently there is no learning material for this.</p>
+<p>Patapon series is their only famous game, so you can see PAC as Patapon specific instructions (even though few other unfamous games use it).</p>
+<p>Each PAC instruction has their Assembly function. Though, you will reach the limit with pure Assembly without PAC instruction.</p>
+<h2 id="where-are-the-pac">Where are the PAC?</h2>
+<p>They are in many places. For example, <code>missionXXXXXX.pac</code> in <code>DATA_CMN</code> is PAC (they are gzipped).</p>
+<p><code>loadinggroupscript</code> in <code>DATA_CMN</code> is another place for PAC instructions.</p>
+<ul>
+<li><code>Azito.pac</code> : Hideout logic, loaded when hideout is loaded.</li>
+<li><code>labo.pac</code> : Loaded <strong>between hideout and mission</strong>. Decides e.g. tip loading logic.</li>
+<li><code>Mission_??_??.pac</code> : In-game logic, loaded in tip screen.</li>
+<li><code>mission_99_00.pac</code> : <strong>Story cutscenes</strong>.</li>
+<li><code>effect.pac</code> : Global effect logic, loaded once when Patapon 3 is launched.</li>
+<li><code>monster.pac</code> : Global enemy behaviour logic, loaded when hideout or a mission is loaded.</li>
+</ul>
+<p>For custom mission, either <code>Mission_??_??.pac</code></p>
+<h2 id="how-do-i-know-it-is-pac">How do I know it is PAC?</h2>
+<p>PAC commands are always <code>25 XX XX XX</code>. So if you see bunch of <code>%</code> in memory, it is probably PAC instructions.</p>
+<p>(But be careful, DxD validates PAC in end of the Mission, so editing them in Mission might cause crashing!)</p>
+<h2 id="how-to-read-the-pac">How to read the PAC?</h2>
+<blockquote>
+<p>Related article: <a href="reading-pac.html">Reading PAC</a>.</p>
+</blockquote>
+<h2 id="how-to-write-the-pac">How to write the PAC?</h2>
+<p>I am assuming you are asking about modifying. Writing from the bottom is terrifying and extremely unreliable.</p>
+<p>You need Hex editor. Unfortunately, there is no intuitive graphical magic editor for writing PAC.</p>
+<p>(Modders really don't try to make it because they even can't read lol)</p>
+<p>While modders doing their work, you can check <a href="writing-pac.html">writing PAC</a> meantime.</p>
+<h2 id="can-i-define-a-new-pac-function">Can I define a new PAC function?</h2>
+<p>Nuh uh that's very hard and I don't know even if it is possible. And why would you?</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

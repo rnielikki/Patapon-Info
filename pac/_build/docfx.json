@@ -1,0 +1,43 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**"
+        ],
+        "exclude": [
+          "guide/images/**",
+          "guide/resources/**"
+        ],
+        "src":"md",
+        "dest": ".",
+        "rootTocPath": "nav/toc.html"
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "guide/images/**",
+          "guide/resources/**"
+        ],
+        "src":"md",
+        "dest": "."
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "postProcessors": [ "ExtractSearchIndex" ],
+    "_enableSearch": true,
+    "keepFileLink": false,
+    "disableGitFeatures": false,
+    "globalMetadata": {
+      "_gitContribute": {
+        "branch": "pac-contribution",
+        "path": "pac"
+      }
+    }
+  }
+}

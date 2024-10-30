@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>sendMessage </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="sendMessage ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="sendmessage">sendMessage</h1>
+
+<p><strong>Description</strong> goes here.</p>
+<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>sendMessage</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 16 11 01</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x892920c</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(int)Var0</code> <em>(8 bytes)</em></li>
+<li><code>(int)Var1</code> <em>(8 bytes)</em></li>
+<li><code>(int)Var2</code> <em>(8 bytes)</em></li>
+<li><code>(int)Var3</code> <em>(8 bytes)</em></li>
+<li><code>(int)Var4</code> <em>(8 bytes)</em></li>
+<li><code>(int)Var5</code> <em>(8 bytes)</em></li>
+</ul>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 16 11 01 / 04 00 00 00 / 01 00 00 00 / 02 00 00 00 / 02 00 00 00 / 02 00 00 00 / 00 00 00 00 / 02 00 00 00 / 01 00 00 00 / 02 00 00 00 / ff ff ff ff / 01 00 00 00 / 80 14 07 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">sendMessage((int *)iVar1, (int)2, (int)0, (int)1, (int)-1, (index)464000)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_0892920c(int param_1,undefined4 param_2)
+
+{
+  bool bVar1;
+  char cVar2;
+  int *piVar3;
+  int *piVar4;
+  undefined4 uVar5;
+  int iVar6;
+  int iVar7;
+  int iVar8;
+  int iVar9;
+  int iVar10;
+  int iVar11;
+  int iVar12;
+  undefined local_3c;
+  undefined local_3b;
+  undefined2 local_3a;
+  undefined2 local_38;
+  undefined2 local_36;
+  undefined local_34;
+  undefined local_33;
+  undefined4 local_30;
+  undefined auStack44 [40];
+  undefined4 local_4;
+  
+  piVar3 = (int *)Pac_Get_Param(param_2,0,1,4);
+  iVar8 = *piVar3;
+  piVar3 = (int *)Pac_Get_Param(param_2,1,1,4);
+  iVar10 = *piVar3;
+  piVar3 = (int *)Pac_Get_Param(param_2,2,1,4);
+  iVar9 = *piVar3;
+  piVar3 = (int *)Pac_Get_Param(param_2,3,1,4);
+  iVar12 = *piVar3;
+  piVar3 = (int *)Pac_Get_Param(param_2,4,1,4);
+  piVar4 = (int *)Pac_Get_Param(param_2,5,1,4);
+  uVar5 = Save::Get_Save_BaseAddr(1);
+  iVar6 = Save::Get_BaseAddr__0x78(uVar5,1);
+  iVar11 = *(int *)(iVar6 + 100);
+  iVar6 = Get_Some_Flag(1);
+  iVar6 = *(int *)(iVar6 + 0x44);
+  if (((iVar11 == 0) || (iVar6 == 0)) || (iVar7 = Is_Multi(iVar11), iVar7 == 0))
+  goto LAB_089294f4;
+  iVar7 = Is_Multi(iVar11);
+  if (iVar7 == 0) {
+    cVar2 = '\0';
+  }
+  else {
+    cVar2 = FUN_08986d3c(iVar11);
+  }
+  if (((cVar2 == '\0') &amp;&amp; (iVar9 == 0)) || (iVar6 == -0x528)) goto LAB_089294f4;
+  iVar11 = *(int *)(iVar6 + 0x54c);
+  if (iVar11 == 4) {
+    iVar11 = *(int *)(param_1 + 0x10);
+  }
+  else {
+    if (((iVar11 != 3) &amp;&amp; (iVar11 != 2)) &amp;&amp; (iVar11 != 1)) goto LAB_089294f4;
+    iVar11 = *(int *)(param_1 + 0x10);
+  }
+  iVar11 = *(int *)(*(int *)(iVar11 + 0x2d8) + 0x18);
+  if (iVar11 == 0) goto LAB_089294f4;
+  local_3c = 0x3c;
+  local_36 = 0xcd1;
+  local_3b = 0;
+  local_3a = 0;
+  local_38 = 0;
+  Init_Space(auStack44);
+  local_34 = 0xff;
+  local_33 = 1;
+  local_30 = 0;
+  FUN_089fe4a4(auStack44);
+  local_4 = 0xffffffff;
+  local_34 = (undefined)iVar8;
+  if (iVar10 == 3) {
+    local_30 = 3;
+  }
+  else if (iVar10 == 2) {
+    local_30 = 2;
+  }
+  else if (iVar10 == 1) {
+    local_30 = 1;
+  }
+  else {
+    local_30 = 0;
+  }
+  if (iVar8 &lt; 0) {
+    iVar6 = *piVar3;
+LAB_08929470:
+    if (iVar6 &lt; 1) {
+      Copy_MessageAddr(auStack44,0xffffffff);
+    }
+    else {
+      iVar6 = FUN_0883bc1c(param_2);
+      Copy_MessageAddr(auStack44,*(undefined4 *)(iVar6 + *piVar3));
+    }
+  }
+  else {
+    if (7 &lt; iVar8) {
+      iVar6 = *piVar3;
+      goto LAB_08929470;
+    }
+    bVar1 = 3 &lt; iVar8;
+    if (bVar1) {
+      iVar8 = iVar8 + -4;
+    }
+    iVar6 = FUN_089880e8(iVar6 + 0x850,bVar1,iVar8);
+    if (iVar6 != 0) {
+      Message::Quip::Save_Quip_Message(auStack44,iVar6 + 0xb8);
+    }
+  }
+  iVar6 = FUN_0883bc1c(param_2);
+  local_4 = *(undefined4 *)(iVar6 + *piVar4);
+  local_33 = iVar12 != 0;
+  if (iVar9 == 0) {
+    FUN_089c4f5c(iVar11,&amp;local_3c);
+  }
+  else {
+    FUN_089c4fb0(iVar11,&amp;local_3c);
+  }
+LAB_089294f4:
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

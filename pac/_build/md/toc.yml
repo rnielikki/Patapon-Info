@@ -1,0 +1,1847 @@
+- name: Home
+  href: index.md
+- name: Guide
+  href: guide/
+- name: API Docs
+  items:
+  - name: 25 00 XX XX
+    dropdown: false
+    items:
+    - name: 01. cmd_end
+      href: cmd_end.md
+    - name: 02. cmd_jmp
+      href: cmd_jmp.md
+    - name: 03. cmd_call
+      href: cmd_call.md
+    - name: 04. cmd_result
+      href: cmd_result.md
+    - name: 05. cmd_resJmp
+      href: cmd_resjmp.md
+    - name: 06. cmd_resCall
+      href: cmd_rescall.md
+    - name: 07. cmd_mov
+      href: cmd_mov.md
+    - name: 08. cmd_add
+      href: cmd_add.md
+    - name: 09. cmd_sub
+      href: cmd_sub.md
+    - name: 0a. cmd_mul
+      href: cmd_mul.md
+    - name: 0b. cmd_div
+      href: cmd_div.md
+    - name: 0c. cmd_inc
+      href: cmd_inc.md
+    - name: 0d. cmd_dec
+      href: cmd_dec.md
+    - name: 0e. cmd_loop
+      href: cmd_loop.md
+    - name: 0f. cmd_waitFrame
+      href: cmd_waitframe.md
+    - name: 10. cmd_waitTime
+      href: cmd_waittime.md
+    - name: 11. cmd_rand
+      href: cmd_rand.md
+    - name: 12. cmd_iand
+      href: cmd_iand.md
+    - name: 13. cmd_ior
+      href: cmd_ior.md
+    - name: 14. cmd_ixor
+      href: cmd_ixor.md
+    - name: 15. cmd_irol
+      href: cmd_irol.md
+    - name: 16. cmd_iror
+      href: cmd_iror.md
+    - name: 17. cmd_ifEQ
+      href: cmd_ifeq.md
+    - name: 18. cmd_ifNE
+      href: cmd_ifne.md
+    - name: 19. cmd_ifLSE
+      href: cmd_iflse.md
+    - name: 1a. cmd_ifLBE
+      href: cmd_iflbe.md
+    - name: 1b. cmd_ifLS
+      href: cmd_ifls.md
+    - name: 1c. cmd_ifLB
+      href: cmd_iflb.md
+    - name: 1d. cmd_ifAND
+      href: cmd_ifand.md
+    - name: 1e. cmd_ifOR
+      href: cmd_ifor.md
+    - name: 1f. cmd_ifCallEQ
+      href: cmd_ifcalleq.md
+    - name: 20. cmd_ifCallNE
+      href: cmd_ifcallne.md
+    - name: 21. cmd_ifCallLSE
+      href: cmd_ifcalllse.md
+    - name: 22. cmd_ifCallLBE
+      href: cmd_ifcalllbe.md
+    - name: 23. cmd_ifCallLS
+      href: cmd_ifcallls.md
+    - name: 24. cmd_ifCallLB
+      href: cmd_ifcalllb.md
+    - name: 25. cmd_ifCallAND
+      href: cmd_ifcalland.md
+    - name: 26. cmd_ifCallOR
+      href: cmd_ifcallor.md
+    - name: 27. cmd_flgSet
+      href: cmd_flgset.md
+    - name: 28. cmd_flgClr
+      href: cmd_flgclr.md
+    - name: 29. cmd_flgSetId
+      href: cmd_flgsetid.md
+    - name: 2a. cmd_flgClrId
+      href: cmd_flgclrid.md
+    - name: 2b. cmd_flgMov
+      href: cmd_flgmov.md
+    - name: 2c. cmd_flgAND
+      href: cmd_flgand.md
+    - name: 2d. cmd_flgOR
+      href: cmd_flgor.md
+    - name: 2e. cmd_flgZERO
+      href: cmd_flgzero.md
+    - name: 2f. cmd_inxJmp
+      href: cmd_inxjmp.md
+    - name: 30. cmd_stkDec
+      href: cmd_stkdec.md
+    - name: 31. cmd_stkClr
+      href: cmd_stkclr.md
+    - name: 32. cmd_break
+      href: cmd_break.md
+    - name: 33. cmd_string (25003300)
+      href: cmd_string_25003300.md
+    - name: 34. cmd_print (25003400)
+      href: cmd_print_25003400.md
+    - name: 35. cmd_textOut
+      href: cmd_textout.md
+    - name: 36. cmd_setSleep
+      href: cmd_setsleep.md
+    - name: 37. cmd_sinf
+      href: cmd_sinf.md
+    - name: 38. cmd_cosf
+      href: cmd_cosf.md
+    - name: 39. cmd_atan2f
+      href: cmd_atan2f.md
+    - name: 3a. cmd_abs
+      href: cmd_abs.md
+    - name: 3b. cmd_sqrt
+      href: cmd_sqrt.md
+    - name: 3c. cmd_setLabelId
+      href: cmd_setlabelid.md
+    - name: 3d. cmd_callLabelId
+      href: cmd_calllabelid.md
+    - name: 3e. cmd_jmpLabelId
+      href: cmd_jmplabelid.md
+    - name: 3f. cmd_callLabel
+      href: cmd_calllabel.md
+    - name: 40. cmd_jmpLabel
+      href: cmd_jmplabel.md
+    - name: 41. cmd_mod
+      href: cmd_mod.md
+    - name: 42. cmd_memset
+      href: cmd_memset.md
+    - name: 43. cmd_memcpy
+      href: cmd_memcpy.md
+    - name: 44. cmd_flgMemset
+      href: cmd_flgmemset.md
+    - name: 45. cmd_flgMemcpy
+      href: cmd_flgmemcpy.md
+    - name: 46. cmd_stringEnable
+      href: cmd_stringenable.md
+    - name: 47. cmd_srand
+      href: cmd_srand.md
+    - name: 48. cmd_initArray
+      href: cmd_initarray.md
+    - name: 49. cmd_addArray
+      href: cmd_addarray.md
+    - name: 4a. cmd_setArray
+      href: cmd_setarray.md
+    - name: 4b. cmd_getArray
+      href: cmd_getarray.md
+    - name: 4c. cmd_F32toF16
+      href: cmd_f32tof16.md
+    - name: 4d. cmd_F16toF32
+      href: cmd_f16tof32.md
+    - name: 4e. cmd_getElapsedTime
+      href: cmd_getelapsedtime.md
+  - name: 25 03 XX XX
+    items:
+    - name: 01. setChoice
+      href: setchoice.md
+    - name: 02. doSelect
+      href: doselect.md
+    - name: 03. createWindow
+      href: createwindow.md
+    - name: 04. sysytemMessage
+      href: sysytemmessage.md
+    - name: 05. sysytemMessageDirectLocalizeCategory
+      href: sysytemmessagedirectlocalizecategory.md
+    - name: 06. messageClose
+      href: messageclose.md
+    - name: 07. setMessageColor
+      href: setmessagecolor.md
+    - name: 08. doSelectCursor
+      href: doselectcursor.md
+    - name: 09. setRenderPriority (25030900)
+      href: setrenderpriority_25030900.md
+    - name: 0a. colorKeywordClear
+      href: colorkeywordclear.md
+    - name: 0b. colorKeywordAdd
+      href: colorkeywordadd.md
+    - name: 0c. colorKeywordDis
+      href: colorkeyworddis.md
+    - name: 0d. showDialogEx
+      href: showdialogex.md
+    - name: 0e. closeDialog
+      href: closedialog.md
+    - name: 0f. setDialogInformationEx
+      href: setdialoginformationex.md
+    - name: 10. setPosition
+      href: setposition.md
+    - name: 11. getLinefeedCount
+      href: getlinefeedcount.md
+  - name: 25 08 XX XX
+    items:
+    - name: 02. beginAppearItem
+      href: beginappearitem.md
+    - name: 03. setAppearItem
+      href: setappearitem.md
+    - name: 04. endAppearItem
+      href: endappearitem.md
+    - name: 05. getAppearItem
+      href: getappearitem.md
+    - name: 06. getAppearItemEx
+      href: getappearitemex.md
+    - name: 07. itemTableAllClear
+      href: itemtableallclear.md
+    - name: 08. setCharinAppearParam
+      href: setcharinappearparam.md
+    - name: 09. setAppearItemKillTime
+      href: setappearitemkilltime.md
+  - name: 25 09 XX XX
+    items:
+    - name: 02. getPadDirect
+      href: getpaddirect.md
+    - name: 03. getPadStand
+      href: getpadstand.md
+    - name: 04. getPadRelease
+      href: getpadrelease.md
+    - name: 05. cmd_string (25090500)
+      href: cmd_string_25090500.md
+    - name: 06. cmd_print (25090600)
+      href: cmd_print_25090600.md
+    - name: 07. dsp_string
+      href: dsp_string.md
+    - name: 08. dsp_print
+      href: dsp_print.md
+    - name: 09. readArcFile
+      href: readarcfile.md
+    - name: 0a. syncReadArcFile
+      href: syncreadarcfile.md
+    - name: 0b. isReading
+      href: isreading.md
+    - name: 0c. clearLoadingGroup
+      href: clearloadinggroup.md
+    - name: 0d. setDisableBacklightOff
+      href: setdisablebacklightoff.md
+    - name: 0e. setCpuClockMode
+      href: setcpuclockmode.md
+    - name: 0f. readCacheFile
+      href: readcachefile.md
+    - name: 10. getArray
+      href: getarray.md
+    - name: 11. waitReading
+      href: waitreading.md
+  - name: 25 0a XX XX
+    items:
+    - name: 01. callScript
+      href: callscript.md
+    - name: 02. changeScene
+      href: changescene.md
+    - name: 03. exitOrder
+      href: exitorder.md
+    - name: 04. changeLanguage
+      href: changelanguage.md
+    - name: 05. getLaboInfo
+      href: getlaboinfo.md
+    - name: 06. setLaboInfo
+      href: setlaboinfo.md
+    - name: 07. getGfpData
+      href: getgfpdata.md
+    - name: 08. serchGfpId
+      href: serchgfpid.md
+    - name: 09. addItem (250a0900)
+      href: additem_250a0900.md
+    - name: 0a. addCharin
+      href: addcharin.md
+    - name: 0b. getItem (250a0b00)
+      href: getitem_250a0b00.md
+    - name: 0c. clearItem
+      href: clearitem.md
+    - name: 0d. clearIsFirst
+      href: clearisfirst.md
+    - name: 0e. getMaterialItemId
+      href: getmaterialitemid.md
+    - name: 0f. setSquadData
+      href: setsquaddata.md
+    - name: 10. setClassData
+      href: setclassdata.md
+    - name: 11. setUnitData
+      href: setunitdata.md
+    - name: 12. getPlayerData
+      href: getplayerdata.md
+    - name: 13. setPlayerData
+      href: setplayerdata.md
+    - name: 14. setAccessoryIdFileIndex
+      href: setaccessoryidfileindex.md
+    - name: 15. checkEqualHeroName
+      href: checkequalheroname.md
+    - name: 16. checkUnkoName
+      href: checkunkoname.md
+    - name: 17. requestActor
+      href: requestactor.md
+    - name: 18. requestExpandParam
+      href: requestexpandparam.md
+    - name: 19. addQuestCompensationData
+      href: addquestcompensationdata.md
+    - name: 1a. setTimmingScript (250a1a00)
+      href: settimmingscript_250a1a00.md
+    - name: 1b. setMssionBgmId
+      href: setmssionbgmid.md
+    - name: 1c. getGameMode
+      href: getgamemode.md
+    - name: 1d. setGameMode
+      href: setgamemode.md
+    - name: 1e. gotoMission
+      href: gotomission.md
+    - name: 1f. resetTips
+      href: resettips.md
+    - name: 20. getMissionInfo
+      href: getmissioninfo.md
+    - name: 21. callSysMsg
+      href: callsysmsg.md
+    - name: 22. callSysMsgLabel
+      href: callsysmsglabel.md
+    - name: 23. clearSysMsg
+      href: clearsysmsg.md
+    - name: 24. setSoundDisableRhtymHit
+      href: setsounddisablerhtymhit.md
+    - name: 25. setSoundFixBeat
+      href: setsoundfixbeat.md
+    - name: 26. isSoundDisableRhtymHit
+      href: issounddisablerhtymhit.md
+    - name: 27. isSoundFixBeat
+      href: issoundfixbeat.md
+    - name: 28. setTipsImageId
+      href: settipsimageid.md
+    - name: 29. checkTipsUnlock
+      href: checktipsunlock.md
+    - name: 2a. unlockTipsImageId
+      href: unlocktipsimageid.md
+    - name: 2b. unlockTipsImageNoSave
+      href: unlocktipsimagenosave.md
+    - name: 2c. clearTipsSelectMask
+      href: cleartipsselectmask.md
+    - name: 2d. fillTipsSelectMask
+      href: filltipsselectmask.md
+    - name: 2e. setTipsSelectMask
+      href: settipsselectmask.md
+    - name: 2f. setTipsSelectMaskMulti
+      href: settipsselectmaskmulti.md
+    - name: 30. saveFlag
+      href: saveflag.md
+    - name: 31. loadFlag
+      href: loadflag.md
+    - name: 32. multi_clearTweet
+      href: multi_cleartweet.md
+    - name: 33. multi_setTweet
+      href: multi_settweet.md
+    - name: 34. multi_getTweet
+      href: multi_gettweet.md
+    - name: 35. multi_getRoundTripTime
+      href: multi_getroundtriptime.md
+    - name: 36. text_setReplaceText
+      href: text_setreplacetext.md
+    - name: 37. text_setReplaceColor
+      href: text_setreplacecolor.md
+    - name: 38. debugSoundPan
+      href: debugsoundpan.md
+    - name: 39. saveQuestCompleteCounter
+      href: savequestcompletecounter.md
+    - name: 3a. loadQuestCompleteCounter
+      href: loadquestcompletecounter.md
+    - name: 3b. getQuestCompleteCounter
+      href: getquestcompletecounter.md
+    - name: 3c. incQuestCompleteCounter
+      href: incquestcompletecounter.md
+    - name: 3d. unlockShopItem
+      href: unlockshopitem.md
+    - name: 3e. checkShopItemUnlock
+      href: checkshopitemunlock.md
+    - name: 3f. unlockTeamCard
+      href: unlockteamcard.md
+    - name: 40. unlockTeamFlag
+      href: unlockteamflag.md
+    - name: 41. unlockBGM
+      href: unlockbgm.md
+    - name: 42. getTalkFlag
+      href: gettalkflag.md
+    - name: 43. unlockMedenShopItem
+      href: unlockmedenshopitem.md
+    - name: 44. clearMedenShopItem
+      href: clearmedenshopitem.md
+    - name: 45. setReplaceTextFromInt
+      href: setreplacetextfromint.md
+    - name: 46. setKnownItem
+      href: setknownitem.md
+    - name: 47. getUnitParam (250a4700)
+      href: getunitparam_250a4700.md
+    - name: 48. enumEquipItem
+      href: enumequipitem.md
+    - name: 49. getEquipItemParam
+      href: getequipitemparam.md
+  - name: 25 0b XX XX
+    items:
+    - name: 01. playSe (250b0100)
+      href: playse_250b0100.md
+    - name: 02. playAtrac
+      href: playatrac.md
+    - name: 03. stop (250b0300)
+      href: stop_250b0300.md
+    - name: 04. cancel
+      href: cancel.md
+    - name: 05. volume
+      href: volume.md
+    - name: 06. pan
+      href: pan.md
+    - name: 07. allReset
+      href: allreset.md
+    - name: 08. playSeFromPos
+      href: playsefrompos.md
+    - name: 09. calcVolumeRate
+      href: calcvolumerate.md
+  - name: 25 0c XX XX
+    items:
+    - name: 01. getCommandId
+      href: getcommandid.md
+    - name: 02. getHitRate
+      href: gethitrate.md
+    - name: 03. getCommandRate
+      href: getcommandrate.md
+    - name: 04. getHitPercussion
+      href: gethitpercussion.md
+    - name: 05. isRhythm
+      href: isrhythm.md
+    - name: 06. getPos
+      href: getpos.md
+    - name: 07. setDisableKey
+      href: setdisablekey.md
+    - name: 08. sendMiss
+      href: sendmiss.md
+    - name: 09. getDisableKey
+      href: getdisablekey.md
+    - name: 0a. setDisableBeatGuide
+      href: setdisablebeatguide.md
+    - name: 0b. getDisableBeatGuide
+      href: getdisablebeatguide.md
+    - name: 0c. sendCommand
+      href: sendcommand.md
+    - name: 0d. setAutoCommand
+      href: setautocommand.md
+    - name: 0e. clearAutoCommand
+      href: clearautocommand.md
+    - name: 0f. addAutoCommandKey
+      href: addautocommandkey.md
+    - name: 10. startAutoCommandKey
+      href: startautocommandkey.md
+    - name: 11. getSynchroPoint
+      href: getsynchropoint.md
+    - name: 12. getCombo
+      href: getcombo.md
+    - name: 13. getCommandScore
+      href: getcommandscore.md
+    - name: 14. getHeroCount
+      href: getherocount.md
+    - name: 15. getSoundLevel
+      href: getsoundlevel.md
+    - name: 16. isHeroMode
+      href: isheromode.md
+    - name: 17. isSummonMode
+      href: issummonmode.md
+    - name: 18. setDisablePercussionFlag
+      href: setdisablepercussionflag.md
+    - name: 19. clearDisablePercussionFlag
+      href: cleardisablepercussionflag.md
+    - name: 1a. getDisablePercussionFlag
+      href: getdisablepercussionflag.md
+    - name: 1b. setDisablePercussionView
+      href: setdisablepercussionview.md
+    - name: 1c. clearDisablePercussionView
+      href: cleardisablepercussionview.md
+    - name: 1d. getDisablePercussionView
+      href: getdisablepercussionview.md
+    - name: 1e. start
+      href: start.md
+    - name: 1f. stop (250c1f00)
+      href: stop_250c1f00.md
+    - name: 20. setDisableCommandGuide
+      href: setdisablecommandguide.md
+    - name: 21. getDisableGuide
+      href: getdisableguide.md
+    - name: 22. setImitationSoundPosition
+      href: setimitationsoundposition.md
+    - name: 23. setDisableHeroVoice
+      href: setdisableherovoice.md
+    - name: 24. clearDisableHeroVoice
+      href: cleardisableherovoice.md
+    - name: 25. setEnableRhythmHit
+      href: setenablerhythmhit.md
+    - name: 26. isEnableRhythmHit
+      href: isenablerhythmhit.md
+    - name: 27. setEnemySummonType
+      href: setenemysummontype.md
+    - name: 28. startSummonMode
+      href: startsummonmode.md
+    - name: 29. setDisableFeverGauge
+      href: setdisablefevergauge.md
+    - name: 2a. setFeverGaugePriority
+      href: setfevergaugepriority.md
+    - name: 2b. getFeverGaugePriority
+      href: getfevergaugepriority.md
+    - name: 2c. getEquipSummonType
+      href: getequipsummontype.md
+  - name: 25 10 XX XX
+    items:
+    - name: 02. setScriptLabelTable
+      href: setscriptlabeltable.md
+    - name: 03. callScriptLabel
+      href: callscriptlabel.md
+    - name: 04. callScriptLabelId
+      href: callscriptlabelid.md
+    - name: 05. setCommandMonitor
+      href: setcommandmonitor.md
+    - name: 06. getPack (25100600)
+      href: getpack_25100600.md
+    - name: 07. labelToInt
+      href: labeltoint.md
+    - name: 08. createScript (25100800)
+      href: createscript_25100800.md
+    - name: 09. setGroupId (25100900)
+      href: setgroupid_25100900.md
+    - name: 0a. getGroupId
+      href: getgroupid.md
+    - name: 0b. getParentGroupId
+      href: getparentgroupid.md
+    - name: 0c. killChildren
+      href: killchildren.md
+    - name: 0d. killScript
+      href: killscript.md
+    - name: 0e. setAddress
+      href: setaddress.md
+    - name: 0f. setLocalValue
+      href: setlocalvalue.md
+    - name: 10. getLocalValue
+      href: getlocalvalue.md
+  - name: 25 12 XX XX
+    items:
+    - name: 02. setMissionTimmingScript
+      href: setmissiontimmingscript.md
+    - name: 03. setMaxMissionAreaId
+      href: setmaxmissionareaid.md
+    - name: 04. getMaxMissionAreaId
+      href: getmaxmissionareaid.md
+    - name: 05. restartMission
+      href: restartmission.md
+    - name: 06. getMissionAreaId
+      href: getmissionareaid.md
+    - name: 07. setMissionAreaId
+      href: setmissionareaid.md
+    - name: 08. getQuestId
+      href: getquestid.md
+    - name: 09. getWeatherInfo
+      href: getweatherinfo.md
+    - name: 0a. createScript (25120a00)
+      href: createscript_25120a00.md
+  - name: 25 13 XX XX
+    items:
+    - name: 02. setTitleTimmingScript
+      href: settitletimmingscript.md
+  - name: 25 16 XX XX
+    items:
+    - name: 02. getPack (25160200)
+      href: getpack_25160200.md
+    - name: 03. callActorScript (25160300)
+      href: callactorscript_25160300.md
+    - name: 04. getWorldInfo
+      href: getworldinfo.md
+    - name: 05. setWorldInfo
+      href: setworldinfo.md
+    - name: 06. addGimmick
+      href: addgimmick.md
+    - name: 07. addGimmickModelName
+      href: addgimmickmodelname.md
+    - name: 08. addEffect
+      href: addeffect.md
+    - name: 09. setEffectTimmingScript
+      href: seteffecttimmingscript.md
+    - name: 0a. setGimmickTimmingScript
+      href: setgimmicktimmingscript.md
+    - name: 0b. setMotionEventTimmingScript
+      href: setmotioneventtimmingscript.md
+    - name: 0c. setHitEffectScript
+      href: sethiteffectscript.md
+    - name: 0d. multiSetMultiParam
+      href: multisetmultiparam.md
+    - name: 0e. multiAddMapIcon
+      href: multiaddmapicon.md
+    - name: 0f. multiAddMapUnit
+      href: multiaddmapunit.md
+    - name: 10. multiSetScore
+      href: multisetscore.md
+    - name: 11. multiGetScore
+      href: multigetscore.md
+    - name: 12. addGimmickPowerGauge
+      href: addgimmickpowergauge.md
+    - name: 13. getGimmickPowerGaugePoint
+      href: getgimmickpowergaugepoint.md
+    - name: 14. multiSetTime
+      href: multisettime.md
+    - name: 15. multiGetTime
+      href: multigettime.md
+    - name: 16. multiPauseTime
+      href: multipausetime.md
+    - name: 17. resultGetState
+      href: resultgetstate.md
+    - name: 18. resultGetChangeParam
+      href: resultgetchangeparam.md
+    - name: 19. resultSetState
+      href: resultsetstate.md
+    - name: 1a. resultGetChange
+      href: resultgetchange.md
+    - name: 1b. getUnitParam (25161b00)
+      href: getunitparam_25161b00.md
+    - name: 1c. setVersusRule
+      href: setversusrule.md
+    - name: 1d. getStageRuleParam
+      href: getstageruleparam.md
+    - name: 1e. getStageGimmickParam
+      href: getstagegimmickparam.md
+    - name: 1f. addTroop
+      href: addtroop.md
+    - name: 20. setAppearancePosition
+      href: setappearanceposition.md
+    - name: 21. setRebornPosition
+      href: setrebornposition.md
+    - name: 22. addSquad
+      href: addsquad.md
+    - name: 23. setSquadActivity
+      href: setsquadactivity.md
+    - name: 24. addChara
+      href: addchara.md
+    - name: 25. setClassMaskId
+      href: setclassmaskid.md
+    - name: 26. getUnitMotionIndex
+      href: getunitmotionindex.md
+    - name: 27. setUnitMotionIndex
+      href: setunitmotionindex.md
+    - name: 28. clearUnit
+      href: clearunit.md
+    - name: 29. setAttackSoundResponse
+      href: setattacksoundresponse.md
+    - name: 2a. addEquip
+      href: addequip.md
+    - name: 2b. addEquipSubModel
+      href: addequipsubmodel.md
+    - name: 2c. isEquipWeaponInTroop
+      href: isequipweaponintroop.md
+    - name: 2d. addSkill
+      href: addskill.md
+    - name: 2e. isRegisterSkill
+      href: isregisterskill.md
+    - name: 2f. setSuperHero
+      href: setsuperhero.md
+    - name: 30. setPlayerId
+      href: setplayerid.md
+    - name: 31. applyUnit
+      href: applyunit.md
+    - name: 32. readFileUnit
+      href: readfileunit.md
+    - name: 33. setupUnit
+      href: setupunit.md
+    - name: 34. getTroopTopPosX
+      href: gettrooptopposx.md
+    - name: 35. getHataPonHandle
+      href: gethataponhandle.md
+    - name: 36. getAliveUnitCount
+      href: getaliveunitcount.md
+    - name: 37. getUnitSquadHandle
+      href: getunitsquadhandle.md
+    - name: 38. getUnitSquadHandleFromChara
+      href: getunitsquadhandlefromchara.md
+    - name: 39. getPlayerSquadHandle
+      href: getplayersquadhandle.md
+    - name: 3a. getMultiPlayerSquadHandle
+      href: getmultiplayersquadhandle.md
+    - name: 3b. getMultiPlayerSquadHandle_PID
+      href: getmultiplayersquadhandle_pid.md
+    - name: 3c. setSquadRenderPriority
+      href: setsquadrenderpriority.md
+    - name: 3d. getUnitHandle
+      href: getunithandle.md
+    - name: 3e. setUnitCtrlEnable
+      href: setunitctrlenable.md
+    - name: 3f. getEthnicId
+      href: getethnicid.md
+    - name: 40. getPlayerTroopBasePosition
+      href: getplayertroopbaseposition.md
+    - name: 41. setSquadBasePosition
+      href: setsquadbaseposition.md
+    - name: 42. getSquadBasePosition
+      href: getsquadbaseposition.md
+    - name: 43. setFlagUnitBasePosition
+      href: setflagunitbaseposition.md
+    - name: 44. setPlayerSquadType
+      href: setplayersquadtype.md
+    - name: 45. calcCommonParam
+      href: calccommonparam.md
+    - name: 46. eraseSquad
+      href: erasesquad.md
+    - name: 47. setAdvanceEnable
+      href: setadvanceenable.md
+    - name: 48. setAdvanceSpeedRatio
+      href: setadvancespeedratio.md
+    - name: 49. setMoveSpeedRatio (25164900)
+      href: setmovespeedratio_25164900.md
+    - name: 4a. getMoveSpeedRatio
+      href: getmovespeedratio.md
+    - name: 4b. setMagic
+      href: setmagic.md
+    - name: 4c. recoveryPlayerTroopHP
+      href: recoveryplayertroophp.md
+    - name: 4d. recoveryPlayerTroopHPRatio
+      href: recoveryplayertroophpratio.md
+    - name: 4e. recoveryHP
+      href: recoveryhp.md
+    - name: 4f. recoveryHPRatio
+      href: recoveryhpratio.md
+    - name: 50. rebornTroop
+      href: reborntroop.md
+    - name: 51. getPlayerClassId
+      href: getplayerclassid.md
+    - name: 52. getPlayerSuperHeroClassMaskId
+      href: getplayersuperheroclassmaskid.md
+    - name: 53. getPlayerClassLevel
+      href: getplayerclasslevel.md
+    - name: 54. setSuperHeroRebornEnable
+      href: setsuperherorebornenable.md
+    - name: 55. isInsideRange
+      href: isinsiderange.md
+    - name: 56. createChangeModel
+      href: createchangemodel.md
+    - name: 57. changeModel
+      href: changemodel.md
+    - name: 58. setCameraPosition
+      href: setcameraposition.md
+    - name: 59. addItemEffect
+      href: additemeffect.md
+    - name: 5a. addCharinEffect
+      href: addcharineffect.md
+    - name: 5b. startSetupStage
+      href: startsetupstage.md
+    - name: 5c. endSetupStage
+      href: endsetupstage.md
+    - name: 5d. addStage (25165d00)
+      href: addstage_25165d00.md
+    - name: 5e. setStageParam
+      href: setstageparam.md
+    - name: 5f. applyStage
+      href: applystage.md
+    - name: 60. disableRetireBox
+      href: disableretirebox.md
+    - name: 61. addItem (25166100)
+      href: additem_25166100.md
+    - name: 62. decItem
+      href: decitem.md
+    - name: 63. getItem (25166300)
+      href: getitem_25166300.md
+    - name: 64. setMarchWayTypeReverce
+      href: setmarchwaytypereverce.md
+    - name: 65. setupStartDungeonWall
+      href: setupstartdungeonwall.md
+    - name: 66. setupAddDungeonWall
+      href: setupadddungeonwall.md
+    - name: 67. setupEndDungeonWall
+      href: setupenddungeonwall.md
+    - name: 68. resultBoxItemLabel
+      href: resultboxitemlabel.md
+    - name: 69. resultBoxItemGet
+      href: resultboxitemget.md
+    - name: 6a. resultBoxItemSet
+      href: resultboxitemset.md
+    - name: 6b. startGame
+      href: startgame.md
+    - name: 6c. endGame
+      href: endgame.md
+    - name: 6d. isStartBattle
+      href: isstartbattle.md
+    - name: 6e. isGoGame
+      href: isgogame.md
+    - name: 6f. isLoadEnd
+      href: isloadend.md
+    - name: 70. setWindDirection
+      href: setwinddirection.md
+    - name: 71. setWindLevel
+      href: setwindlevel.md
+    - name: 72. setRainLevel
+      href: setrainlevel.md
+    - name: 73. setSnowLevel
+      href: setsnowlevel.md
+    - name: 74. setCloudyLevel
+      href: setcloudylevel.md
+    - name: 75. setThunderLevel
+      href: setthunderlevel.md
+    - name: 76. setFogLeve
+      href: setfogleve.md
+    - name: 77. setSandLevel
+      href: setsandlevel.md
+    - name: 78. reflectWeather
+      href: reflectweather.md
+    - name: 79. setFogAlphaParam
+      href: setfogalphaparam.md
+    - name: 7a. clearWeather
+      href: clearweather.md
+    - name: 7b. getWindDirection
+      href: getwinddirection.md
+    - name: 7c. getWindLevel
+      href: getwindlevel.md
+    - name: 7d. getRainLevel
+      href: getrainlevel.md
+    - name: 7e. getSnowLevel
+      href: getsnowlevel.md
+    - name: 7f. getCloudyLevel
+      href: getcloudylevel.md
+    - name: 80. getThunderLevel
+      href: getthunderlevel.md
+    - name: 81. getFogLevel
+      href: getfoglevel.md
+    - name: 82. getSandLevel
+      href: getsandlevel.md
+    - name: 83. setCameraSight
+      href: setcamerasight.md
+    - name: 84. getCameraSightParam
+      href: getcamerasightparam.md
+    - name: 85. setStagePriority
+      href: setstagepriority.md
+    - name: 86. startFade
+      href: startfade.md
+    - name: 87. getFadeRate
+      href: getfaderate.md
+    - name: 88. getFadeColor
+      href: getfadecolor.md
+    - name: 89. cameraSetScriptCmaera
+      href: camerasetscriptcmaera.md
+    - name: 8a. cameraEnableControll
+      href: cameraenablecontroll.md
+    - name: 8b. cameraMoveType
+      href: cameramovetype.md
+    - name: 8c. cameraMoveTimeSet
+      href: cameramovetimeset.md
+    - name: 8d. cameraMoveSpeedSet
+      href: cameramovespeedset.md
+    - name: 8e. cameraMove
+      href: cameramove.md
+    - name: 8f. cameraGetPos
+      href: cameragetpos.md
+    - name: 90. cameraGetPosX
+      href: cameragetposx.md
+    - name: 91. cameraSetOffsetY
+      href: camerasetoffsety.md
+    - name: 92. cameraGetOffsetY
+      href: cameragetoffsety.md
+    - name: 93. cameraActuate
+      href: cameraactuate.md
+    - name: 94. cameraSetDefaultBattle
+      href: camerasetdefaultbattle.md
+    - name: 95. cameraSetBattleZ
+      href: camerasetbattlez.md
+    - name: 96. cameraSetBattleAngle
+      href: camerasetbattleangle.md
+    - name: 97. setDisableSquadHpgaugeView
+      href: setdisablesquadhpgaugeview.md
+    - name: 98. setDisableSimpleHpgaugeView
+      href: setdisablesimplehpgaugeview.md
+    - name: 99. setDisableHpgaugeView
+      href: setdisablehpgaugeview.md
+    - name: 9a. getDisableHpgaugeView
+      href: getdisablehpgaugeview.md
+    - name: 9b. setEnableLogWindow
+      href: setenablelogwindow.md
+    - name: 9c. setEnableChatWindow
+      href: setenablechatwindow.md
+    - name: 9d. startTimer
+      href: starttimer.md
+    - name: 9e. addTimer
+      href: addtimer.md
+    - name: 9f. setTimerPos
+      href: settimerpos.md
+    - name: a0. setTimerSize
+      href: settimersize.md
+    - name: a1. getTimerSec
+      href: gettimersec.md
+    - name: a2. setTimerPause
+      href: settimerpause.md
+    - name: a3. setMsgWndRender
+      href: setmsgwndrender.md
+    - name: a4. setQuestLevel
+      href: setquestlevel.md
+    - name: a5. getQuestLevel
+      href: getquestlevel.md
+    - name: a6. setQuestLevelRevise
+      href: setquestlevelrevise.md
+    - name: a7. getQuestLevelRevise
+      href: getquestlevelrevise.md
+    - name: a8. getPlayerSight
+      href: getplayersight.md
+    - name: a9. screenStartFrame
+      href: screenstartframe.md
+    - name: aa. screenStartSpotLight
+      href: screenstartspotlight.md
+    - name: ab. resultLevelupCalacLabel
+      href: resultlevelupcalaclabel.md
+    - name: ac. resultLevelupCalacGet
+      href: resultlevelupcalacget.md
+    - name: ad. resultLevelupCalacSet
+      href: resultlevelupcalacset.md
+    - name: ae. setGroundOffset
+      href: setgroundoffset.md
+    - name: af. setSoundLevelCalacCallback
+      href: setsoundlevelcalaccallback.md
+    - name: b0. multi_waitTimeSync
+      href: multi_waittimesync.md
+    - name: b1. multi_waitGoAhead
+      href: multi_waitgoahead.md
+    - name: b2. multi_waitGoAhead1
+      href: multi_waitgoahead1.md
+    - name: b3. multi_waitGoAhead2
+      href: multi_waitgoahead2.md
+    - name: b4. multi_waitGoAhead3
+      href: multi_waitgoahead3.md
+    - name: b5. multi_waitActiveGenerator
+      href: multi_waitactivegenerator.md
+    - name: b6. multi_battleGoAHead
+      href: multi_battlegoahead.md
+    - name: b7. multi_isWaitSync
+      href: multi_iswaitsync.md
+    - name: b8. getSquadClassId
+      href: getsquadclassid.md
+    - name: b9. isPlayerEquipWeaponCategory
+      href: isplayerequipweaponcategory.md
+    - name: ba. cameraSetControlLimit
+      href: camerasetcontrollimit.md
+    - name: bb. cameraEnableControl
+      href: cameraenablecontrol.md
+    - name: bc. resetGateInfo
+      href: resetgateinfo.md
+    - name: bd. setGateInfo
+      href: setgateinfo.md
+    - name: be. getGateInfo
+      href: getgateinfo.md
+    - name: bf. registConstGimmick
+      href: registconstgimmick.md
+    - name: c0. applyConstGimmick
+      href: applyconstgimmick.md
+    - name: c1. enableCollisionConstGimmick
+      href: enablecollisionconstgimmick.md
+    - name: c2. sendVersusGoal
+      href: sendversusgoal.md
+    - name: c3. isUpdateVersusGoal
+      href: isupdateversusgoal.md
+    - name: c4. getPlayerVersusGoal
+      href: getplayerversusgoal.md
+    - name: c5. sendVersus03EnemyCtrl
+      href: sendversus03enemyctrl.md
+    - name: c6. receiveVersus03EnemyCtrl
+      href: receiveversus03enemyctrl.md
+    - name: c7. sendVersus03LastOneGoal
+      href: sendversus03lastonegoal.md
+    - name: c8. receiveVersus03LastOneGoal
+      href: receiveversus03lastonegoal.md
+    - name: c9. sendVersus02MissileInfo
+      href: sendversus02missileinfo.md
+    - name: ca. receiveVersus02MissileInfo
+      href: receiveversus02missileinfo.md
+    - name: cb. sendVersus02EnemyCtrl
+      href: sendversus02enemyctrl.md
+    - name: cc. receiveVersus02EnemyCtrl
+      href: receiveversus02enemyctrl.md
+    - name: cd. getPlayerId
+      href: getplayerid.md
+    - name: ce. getTroopTopPosX_Enemy
+      href: gettrooptopposx_enemy.md
+    - name: cf. getSquad_playerId
+      href: getsquad_playerid.md
+    - name: d0. getTroopType_GimmickUID
+      href: gettrooptype_gimmickuid.md
+    - name: d1. setEffectTargetMask
+      href: seteffecttargetmask.md
+    - name: d2. getDamageCount_GimmickUID
+      href: getdamagecount_gimmickuid.md
+    - name: d3. changePhase_GimmickUID
+      href: changephase_gimmickuid.md
+    - name: d4. resetQuestPay
+      href: resetquestpay.md
+    - name: d5. setQuestPayItem
+      href: setquestpayitem.md
+    - name: d6. setQuestPayExp
+      href: setquestpayexp.md
+    - name: d7. setUnitCtrlActivity (2516d700)
+      href: setunitctrlactivity_2516d700.md
+    - name: d8. setUnitCtrlCurrentActType (2516d800)
+      href: setunitctrlcurrentacttype_2516d800.md
+    - name: d9. setMultimapViewState
+      href: setmultimapviewstate.md
+    - name: da. setUnitDeadMotion
+      href: setunitdeadmotion.md
+    - name: db. getGeneratorInfo
+      href: getgeneratorinfo.md
+    - name: dc. setNoTrespassing
+      href: setnotrespassing.md
+    - name: dd. setDisableInvalidNoTrespassing
+      href: setdisableinvalidnotrespassing.md
+    - name: de. setFrontLineDetectForce
+      href: setfrontlinedetectforce.md
+    - name: df. getSymbolMarkId
+      href: getsymbolmarkid.md
+    - name: e0. readSymbolMarkFile
+      href: readsymbolmarkfile.md
+    - name: e1. addSybolMarkGimmick
+      href: addsybolmarkgimmick.md
+    - name: e2. setWindColor
+      href: setwindcolor.md
+    - name: e3. multi_startNosyncEvent
+      href: multi_startnosyncevent.md
+    - name: e4. multi_endNosyncEvent
+      href: multi_endnosyncevent.md
+    - name: e5. multi_startGoAhead
+      href: multi_startgoahead.md
+    - name: e6. multi_stopGoAhead
+      href: multi_stopgoahead.md
+    - name: e7. multi_isFinishGoAhead
+      href: multi_isfinishgoahead.md
+    - name: e8. networkErrorInvoke (2516e800)
+      href: networkerrorinvoke_2516e800.md
+    - name: e9. sendVersus04KnockOutInfo
+      href: sendversus04knockoutinfo.md
+    - name: ea. receiveVersus04KnockOutInfo
+      href: receiveversus04knockoutinfo.md
+    - name: eb. resultGetPhase
+      href: resultgetphase.md
+    - name: ec. setupDungeonComment
+      href: setupdungeoncomment.md
+    - name: ed. getUnitInfo_UnitUID
+      href: getunitinfo_unituid.md
+    - name: ee. setVersusStatusFlag
+      href: setversusstatusflag.md
+    - name: ef. getVersusRandIndex
+      href: getversusrandindex.md
+    - name: f0. getUnitHandle_TroopTopPos
+      href: getunithandle_trooptoppos.md
+    - name: f1. isFrontLineEnterAttack
+      href: isfrontlineenterattack.md
+    - name: f2. isFrontLineEnterView
+      href: isfrontlineenterview.md
+    - name: f3. isPossibleExecHeroMode
+      href: ispossibleexecheromode.md
+    - name: f4. getFrontLinePosition
+      href: getfrontlineposition.md
+    - name: f5. setUnitCtrlMoveEnable
+      href: setunitctrlmoveenable.md
+    - name: f6. setVersusString
+      href: setversusstring.md
+    - name: f7. dispSetVersusString
+      href: dispsetversusstring.md
+    - name: f8. isVisibleVersusString
+      href: isvisibleversusstring.md
+    - name: f9. sendVersus04PanelAction
+      href: sendversus04panelaction.md
+    - name: fa. receiveVersus04PanelAction
+      href: receiveversus04panelaction.md
+    - name: fb. getVersus04PanelActionCount
+      href: getversus04panelactioncount.md
+    - name: fc. clearVersus04PanelActionCount
+      href: clearversus04panelactioncount.md
+    - name: fd. sendVersus04PanelSwapRandom
+      href: sendversus04panelswaprandom.md
+    - name: fe. receiveVersus04PanelSwap
+      href: receiveversus04panelswap.md
+    - name: ff. isUpdateVersus04PanelSwap
+      href: isupdateversus04panelswap.md
+    - name: 100. getQuestType
+      href: getquesttype.md
+    - name: 101. setUpdateDefaultCamera
+      href: setupdatedefaultcamera.md
+    - name: 102. resultReadyGo
+      href: resultreadygo.md
+    - name: 103. getDeadCount
+      href: getdeadcount.md
+    - name: 104. getTroopTopPosY
+      href: gettrooptopposy.md
+    - name: 105. setMotionDirect
+      href: setmotiondirect.md
+    - name: 106. setDefaultStageSize
+      href: setdefaultstagesize.md
+    - name: 107. sendPlayMotion
+      href: sendplaymotion.md
+    - name: 108. getRetireFlag
+      href: getretireflag.md
+    - name: 109. setHeroAppearPosition
+      href: setheroappearposition.md
+    - name: 10a. setNetworkLogOutputType
+      href: setnetworklogoutputtype.md
+    - name: 10b. multi_disableScore
+      href: multi_disablescore.md
+    - name: 10c. getMyselfPlayerId
+      href: getmyselfplayerid.md
+    - name: 10d. loadVersusDisplayCommon
+      href: loadversusdisplaycommon.md
+    - name: 10e. checkNetworkLost
+      href: checknetworklost.md
+    - name: 10f. setTimerEnableSeType
+      href: settimerenablesetype.md
+    - name: 110. setScoreDispType
+      href: setscoredisptype.md
+    - name: 111. sendMessage
+      href: sendmessage.md
+    - name: 112. playHitEffect
+      href: playhiteffect.md
+    - name: 113. getSummonPlayerId
+      href: getsummonplayerid.md
+    - name: 114. getVersusPKInfo
+      href: getversuspkinfo.md
+    - name: 115. getUnitWeight
+      href: getunitweight.md
+    - name: 116. addLockdGimmick
+      href: addlockdgimmick.md
+    - name: 117. getForwardMissile
+      href: getforwardmissile.md
+    - name: 118. startScreenFog
+      href: startscreenfog.md
+    - name: 119. getMsgWndUseNum
+      href: getmsgwndusenum.md
+    - name: 11a. rebornSquad
+      href: rebornsquad.md
+    - name: 11b. drawTimer
+      href: drawtimer.md
+    - name: 11c. getCountDownTimerStatus
+      href: getcountdowntimerstatus.md
+    - name: 11d. sendVersus04RequestWave
+      href: sendversus04requestwave.md
+    - name: 11e. receiveVersus04RequestWave
+      href: receiveversus04requestwave.md
+    - name: 11f. lockNotifyError
+      href: locknotifyerror.md
+    - name: 120. getUnit_gamePlayerId
+      href: getunit_gameplayerid.md
+    - name: 121. checkRangePriority_setPos
+      href: checkrangepriority_setpos.md
+    - name: 122. checkRangePriority_isInside
+      href: checkrangepriority_isinside.md
+    - name: 123. checkRangePriority_isInsideH
+      href: checkrangepriority_isinsideh.md
+    - name: 124. worldToScreenPos
+      href: worldtoscreenpos.md
+    - name: 125. replaceActivityTable
+      href: replaceactivitytable.md
+    - name: 126. getVersus02shootingMissileCount
+      href: getversus02shootingmissilecount.md
+    - name: 127. sendVersus02CommonData
+      href: sendversus02commondata.md
+    - name: 128. receiveVersus02CommonData
+      href: receiveversus02commondata.md
+    - name: 129. initVersus02CommonData
+      href: initversus02commondata.md
+    - name: 12a. getMultiPlayerLevelMax
+      href: getmultiplayerlevelmax.md
+    - name: 12b. sendVersus04CommonData
+      href: sendversus04commondata.md
+    - name: 12c. receiveVersus04CommonData
+      href: receiveversus04commondata.md
+    - name: 12d. initVersus04CommonData
+      href: initversus04commondata.md
+    - name: 12e. getCharaBaseParamIndexId
+      href: getcharabaseparamindexid.md
+    - name: 12f. setRetrogradeLimit
+      href: setretrogradelimit.md
+    - name: 130. setVersusStringTypeScore
+      href: setversusstringtypescore.md
+    - name: 131. getVersusPlayerCount
+      href: getversusplayercount.md
+    - name: 132. setVersus03Rank
+      href: setversus03rank.md
+    - name: 133. getVersus03Rank
+      href: getversus03rank.md
+    - name: 134. setVersus03RankForce
+      href: setversus03rankforce.md
+    - name: 135. getVersus04PanelCenter
+      href: getversus04panelcenter.md
+    - name: 136. getVersus04PanelIndexFromPos
+      href: getversus04panelindexfrompos.md
+    - name: 137. setAppearMissileInfo
+      href: setappearmissileinfo.md
+    - name: 138. getAppearMissileType
+      href: getappearmissiletype.md
+    - name: 139. nextAppearMissile
+      href: nextappearmissile.md
+    - name: 13a. cmdAppearMissilePoint
+      href: cmdappearmissilepoint.md
+    - name: 13b. cmdAppearMissileDeadUnitCnt
+      href: cmdappearmissiledeadunitcnt.md
+    - name: 13c. isForceShootMissile
+      href: isforceshootmissile.md
+    - name: 13d. shootMissile
+      href: shootmissile.md
+    - name: 13e. setDisableVersusStringRender
+      href: setdisableversusstringrender.md
+    - name: 13f. startIntroEvent
+      href: startintroevent.md
+    - name: 140. getTroopHeroType
+      href: gettroopherotype.md
+    - name: 141. getTroopSign (25164101)
+      href: gettroopsign_25164101.md
+    - name: 142. disableEquipBigShield
+      href: disableequipbigshield.md
+  - name: 25 17 XX XX
+    items:
+    - name: 02. isEnable
+      href: isenable.md
+    - name: 03. getActorBaseInfo
+      href: getactorbaseinfo.md
+    - name: 04. getActorInfo
+      href: getactorinfo.md
+    - name: 05. setActorInfo
+      href: setactorinfo.md
+    - name: 06. setActive
+      href: setactive.md
+    - name: 07. getActive
+      href: getactive.md
+    - name: 08. setBrakeScore
+      href: setbrakescore.md
+    - name: 09. getBrakeScore
+      href: getbrakescore.md
+    - name: 0a. getModelInfo
+      href: getmodelinfo.md
+    - name: 0b. setModelInfo
+      href: setmodelinfo.md
+    - name: 0c. getMotionInfo
+      href: getmotioninfo.md
+    - name: 0d. setGroupId (25170d00)
+      href: setgroupid_25170d00.md
+    - name: 0e. flipEnable
+      href: flipenable.md
+    - name: 0f. getFlipEnable
+      href: getflipenable.md
+    - name: 10. setFixMoveEnable
+      href: setfixmoveenable.md
+    - name: 11. setMotion (25171100)
+      href: setmotion_25171100.md
+    - name: 12. setMoveSpeedRatio (25171200)
+      href: setmovespeedratio_25171200.md
+    - name: 13. setVector
+      href: setvector.md
+    - name: 14. addVector
+      href: addvector.md
+    - name: 15. setVectorFluctuationAngle
+      href: setvectorfluctuationangle.md
+    - name: 16. setFloating
+      href: setfloating.md
+    - name: 17. setDecay
+      href: setdecay.md
+    - name: 18. setRenderPriority (25171800)
+      href: setrenderpriority_25171800.md
+    - name: 19. resetAttackUniqueId
+      href: resetattackuniqueid.md
+    - name: 1a. setLink
+      href: setlink.md
+    - name: 1b. setLinkParam
+      href: setlinkparam.md
+    - name: 1c. addLinkObject
+      href: addlinkobject.md
+    - name: 1d. releaseLink
+      href: releaselink.md
+    - name: 1e. setMotionFrameRatio
+      href: setmotionframeratio.md
+    - name: 1f. getMotionFrameRate
+      href: getmotionframerate.md
+    - name: 20. getNodeIndex
+      href: getnodeindex.md
+    - name: 21. getNodePos
+      href: getnodepos.md
+    - name: 22. getNodeDisp
+      href: getnodedisp.md
+    - name: 23. setNodeDisp
+      href: setnodedisp.md
+    - name: 24. getStatusInfo
+      href: getstatusinfo.md
+    - name: 25. disableKillTimer
+      href: disablekilltimer.md
+    - name: 26. kill
+      href: kill.md
+    - name: 27. killGroup
+      href: killgroup.md
+    - name: 28. del
+      href: del.md
+    - name: 29. setMaxHitPoint
+      href: setmaxhitpoint.md
+    - name: 2a. setHitPoint
+      href: sethitpoint.md
+    - name: 2b. callActorScript (25172b00)
+      href: callactorscript_25172b00.md
+    - name: 2c. callActorEffect
+      href: callactoreffect.md
+    - name: 2d. callMessageWindow
+      href: callmessagewindow.md
+    - name: 2e. closeMessageWindow
+      href: closemessagewindow.md
+    - name: 2f. keyCloseMessageWindow
+      href: keyclosemessagewindow.md
+    - name: 30. setMsgWndApproachOnScreen
+      href: setmsgwndapproachonscreen.md
+    - name: 31. setMsgWndPriority
+      href: setmsgwndpriority.md
+    - name: 32. setMsgWndColor
+      href: setmsgwndcolor.md
+    - name: 33. setMsgWndMsgType
+      href: setmsgwndmsgtype.md
+    - name: 34. setTimmingScript_Int
+      href: settimmingscript_int.md
+    - name: 35. setFogView
+      href: setfogview.md
+    - name: 36. setModelColor
+      href: setmodelcolor.md
+    - name: 37. playMotion
+      href: playmotion.md
+    - name: 38. pushMotion
+      href: pushmotion.md
+    - name: 39. clipMotion
+      href: clipmotion.md
+    - name: 3a. stopMotion
+      href: stopmotion.md
+    - name: 3b. pauseMotion
+      href: pausemotion.md
+    - name: 3c. movePosition
+      href: moveposition.md
+    - name: 3d. stopMove
+      href: stopmove.md
+    - name: 3e. enableCollision
+      href: enablecollision.md
+    - name: 3f. addHit
+      href: addhit.md
+    - name: 40. isDamaged
+      href: isdamaged.md
+    - name: 41. enableCollisionFlag
+      href: enablecollisionflag.md
+    - name: 42. setCollisionSize
+      href: setcollisionsize.md
+    - name: 43. getCollisionSize
+      href: getcollisionsize.md
+    - name: 44. setDamageParam
+      href: setdamageparam.md
+    - name: 45. setPushParam
+      href: setpushparam.md
+    - name: 46. appearItem
+      href: appearitem.md
+    - name: 47. setActorLevel
+      href: setactorlevel.md
+    - name: 48. getActorLevel
+      href: getactorlevel.md
+    - name: 49. setItemTable (25174900)
+      href: setitemtable_25174900.md
+    - name: 4a. setLinkInfo
+      href: setlinkinfo.md
+    - name: 4b. setScale
+      href: setscale.md
+    - name: 4c. getScale
+      href: getscale.md
+    - name: 4d. clearAbnormalStatus
+      href: clearabnormalstatus.md
+    - name: 4e. getAbnormalStatus
+      href: getabnormalstatus.md
+    - name: 4f. addAbnormalStatus
+      href: addabnormalstatus.md
+    - name: 50. addAbnormalStatusSlip
+      href: addabnormalstatusslip.md
+    - name: 51. addAbnormalStatusBlowOff
+      href: addabnormalstatusblowoff.md
+    - name: 52. getChildGimmick
+      href: getchildgimmick.md
+    - name: 53. getClassType
+      href: getclasstype.md
+    - name: 54. getParent
+      href: getparent.md
+    - name: 55. getCollisionType
+      href: getcollisiontype.md
+    - name: 56. isHero
+      href: ishero.md
+    - name: 57. isFlag
+      href: isflag.md
+    - name: 58. getCenterNodeId
+      href: getcenternodeid.md
+    - name: 59. getKillOrderFlag
+      href: getkillorderflag.md
+    - name: 5a. getMotionEndFrame
+      href: getmotionendframe.md
+    - name: 5b. addDamage
+      href: adddamage.md
+    - name: 5c. getDamageDeadFlag
+      href: getdamagedeadflag.md
+    - name: 5d. getDirection
+      href: getdirection.md
+    - name: 5e. setDirection
+      href: setdirection.md
+    - name: 5f. getTroopSign (25175f00)
+      href: gettroopsign_25175f00.md
+    - name: 60. catLink
+      href: catlink.md
+    - name: 61. allClearActorWindow
+      href: allclearactorwindow.md
+    - name: 62. callLocalizeMessageWindow
+      href: calllocalizemessagewindow.md
+    - name: 63. setUserFogAlpha
+      href: setuserfogalpha.md
+    - name: 64. enableForeverRun
+      href: enableforeverrun.md
+    - name: 65. setLinkById
+      href: setlinkbyid.md
+    - name: 66. setModelLowerHeight
+      href: setmodellowerheight.md
+    - name: 67. setBreakScoreTroop
+      href: setbreakscoretroop.md
+    - name: 68. isMyHero
+      href: ismyhero.md
+    - name: 69. setCanCaptureItem
+      href: setcancaptureitem.md
+    - name: 6a. extinctionFire
+      href: extinctionfire.md
+    - name: 6b. getSubjectHandle
+      href: getsubjecthandle.md
+    - name: 6c. getSubjectPlayerId
+      href: getsubjectplayerid.md
+    - name: 6d. enableDamageFlag
+      href: enabledamageflag.md
+    - name: 6e. setParent
+      href: setparent.md
+    - name: 6f. playSe (25176f00)
+      href: playse_25176f00.md
+    - name: 70. getRenderPriority
+      href: getrenderpriority.md
+    - name: 71. enableRenderAttach
+      href: enablerenderattach.md
+  - name: 25 19 XX XX
+    items:
+    - name: 01. gimmick_getHandle
+      href: gimmick_gethandle.md
+    - name: 02. setActionController
+      href: setactioncontroller.md
+    - name: 03. effectGetUserId
+      href: effectgetuserid.md
+    - name: 04. effectSetUserId
+      href: effectsetuserid.md
+    - name: 05. effectSetWaitTime
+      href: effectsetwaittime.md
+    - name: 06. gimmickGetUserIdF
+      href: gimmickgetuseridf.md
+    - name: 07. gimmickSetUserIdF
+      href: gimmicksetuseridf.md
+    - name: 08. gimmickGetUserIdI
+      href: gimmickgetuseridi.md
+    - name: 09. gimmickSetUserIdI
+      href: gimmicksetuseridi.md
+    - name: 0a. effectsetCommonStatusParam
+      href: effectsetcommonstatusparam.md
+    - name: 0b. effectSetTimmingScript
+      href: effectsettimmingscript.md
+    - name: 0c. effectHitEffectCallback
+      href: effecthiteffectcallback.md
+    - name: 0d. setWorkValue
+      href: setworkvalue.md
+    - name: 0e. getWorkValue
+      href: getworkvalue.md
+    - name: 0f. setUserScript
+      href: setuserscript.md
+    - name: 10. setDrawMode
+      href: setdrawmode.md
+    - name: 11. effectsetDeleteId
+      href: effectsetdeleteid.md
+    - name: 12. effectkill
+      href: effectkill.md
+    - name: 13. effectgetEffectId
+      href: effectgeteffectid.md
+    - name: 14. getActorPhase
+      href: getactorphase.md
+    - name: 15. setModelRotate
+      href: setmodelrotate.md
+    - name: 16. getGimmickId
+      href: getgimmickid.md
+    - name: 17. killGeneratorGroup
+      href: killgeneratorgroup.md
+    - name: 18. setChangeAUIDTimming
+      href: setchangeauidtimming.md
+    - name: 19. setEnableNetwork
+      href: setenablenetwork.md
+    - name: 1a. getSwitchWaitTime
+      href: getswitchwaittime.md
+    - name: 1b. setDisableThroughAttack
+      href: setdisablethroughattack.md
+    - name: 1c. setIsNotHitDungeon
+      href: setisnothitdungeon.md
+    - name: 1d. setPhaseWait
+      href: setphasewait.md
+    - name: 1e. gimmickgetUnique
+      href: gimmickgetunique.md
+    - name: 1f. gimmickgetFreeUnique
+      href: gimmickgetfreeunique.md
+    - name: 20. effectSetDisableGimmickThrough
+      href: effectsetdisablegimmickthrough.md
+    - name: 21. setRenderNoFlip
+      href: setrendernoflip.md
+  - name: 25 1c XX XX
+    items:
+    - name: 02. getPack (251c0200)
+      href: getpack_251c0200.md
+    - name: 03. callActorScript (251c0300)
+      href: callactorscript_251c0300.md
+    - name: 04. setTimmingScript (251c0400)
+      href: settimmingscript_251c0400.md
+    - name: 05. setEnablePad
+      href: setenablepad.md
+    - name: 06. getAzitoInfo
+      href: getazitoinfo.md
+    - name: 07. setAzitoInfo
+      href: setazitoinfo.md
+    - name: 08. getFacilityHandle
+      href: getfacilityhandle.md
+    - name: 09. getFacilityGimmickHandle
+      href: getfacilitygimmickhandle.md
+    - name: 0a. setFacilityActive
+      href: setfacilityactive.md
+    - name: 0b. setFacilityEnableSelect
+      href: setfacilityenableselect.md
+    - name: 0c. getFacilityInfo
+      href: getfacilityinfo.md
+    - name: 0d. setFacilityInfo
+      href: setfacilityinfo.md
+    - name: 0e. getEventUnitHandle
+      href: geteventunithandle.md
+    - name: 0f. getMultiEventUnitHandle
+      href: getmultieventunithandle.md
+    - name: 10. getMultiHeroHandle
+      href: getmultiherohandle.md
+    - name: 11. setEnableSeatLight
+      href: setenableseatlight.md
+    - name: 12. addArea
+      href: addarea.md
+    - name: 13. addStage (251c1300)
+      href: addstage_251c1300.md
+    - name: 14. addQuest
+      href: addquest.md
+    - name: 15. resetStageParam
+      href: resetstageparam.md
+    - name: 16. resetQuestParam
+      href: resetquestparam.md
+    - name: 17. reflectQCompDataToCompData
+      href: reflectqcompdatatocompdata.md
+    - name: 18. setAsqEnable
+      href: setasqenable.md
+    - name: 19. setStageCursor
+      href: setstagecursor.md
+    - name: 1a. addLevelUpItemParam
+      href: addlevelupitemparam.md
+    - name: 1b. getLevelUpScriptParam
+      href: getlevelupscriptparam.md
+    - name: 1c. getLevelUpInfo
+      href: getlevelupinfo.md
+    - name: 1d. saveMS
+      href: savems.md
+    - name: 1e. getResultSaveMS
+      href: getresultsavems.md
+    - name: 1f. saveActorInfo
+      href: saveactorinfo.md
+    - name: 20. loadActorInfo
+      href: loadactorinfo.md
+    - name: 21. saveFacilityInfo
+      href: savefacilityinfo.md
+    - name: 22. loadFacilityInfo
+      href: loadfacilityinfo.md
+    - name: 23. masterGateNextState
+      href: mastergatenextstate.md
+    - name: 24. cameraSetPosZ
+      href: camerasetposz.md
+    - name: 25. getEnablePad
+      href: getenablepad.md
+    - name: 26. startSyncGameFlag
+      href: startsyncgameflag.md
+    - name: 27. getSyncGameFlagResult
+      href: getsyncgameflagresult.md
+    - name: 28. toTilte
+      href: totilte.md
+    - name: 29. setShopItemInfo
+      href: setshopiteminfo.md
+    - name: 2a. getShopItemInfo
+      href: getshopiteminfo.md
+    - name: 2b. openAllTips
+      href: openalltips.md
+    - name: 2c. networkErrorInvoke (251c2c00)
+      href: networkerrorinvoke_251c2c00.md
+    - name: 2d. clearVersusInfo
+      href: clearversusinfo.md
+    - name: 2e. setChatBalloonOffset
+      href: setchatballoonoffset.md
+    - name: 2f. setConnectionIconDraw
+      href: setconnectionicondraw.md
+    - name: 30. makeGameCompleteSaveData
+      href: makegamecompletesavedata.md
+    - name: 31. notifyErrorUnknownDLCQuest
+      href: notifyerrorunknowndlcquest.md
+    - name: 32. getEventUnitDefaultPriority
+      href: geteventunitdefaultpriority.md
+    - name: 33. getEventUnitCharaBaseParamIndexId
+      href: geteventunitcharabaseparamindexid.md
+    - name: 34. setEnableReload
+      href: setenablereload.md
+    - name: 35. isExistDLCQuestFile
+      href: isexistdlcquestfile.md
+    - name: 36. setIamCheater
+      href: setiamcheater.md
+  - name: 25 1d XX XX
+    items:
+    - name: 02. setBasesTimmingScript
+      href: setbasestimmingscript.md
+  - name: 25 1f XX XX
+    items:
+    - name: 02. create
+      href: create.md
+    - name: 03. setMode
+      href: setmode.md
+    - name: 04. setLevel
+      href: setlevel.md
+    - name: 05. setPosX
+      href: setposx.md
+    - name: 06. setAdventRadius
+      href: setadventradius.md
+    - name: 07. setItemTable (251f0700)
+      href: setitemtable_251f0700.md
+    - name: 08. setDeathCall
+      href: setdeathcall.md
+    - name: 09. setReqActorType
+      href: setreqactortype.md
+    - name: 0a. setReqActorCount
+      href: setreqactorcount.md
+    - name: 0b. setReqActorTotal
+      href: setreqactortotal.md
+    - name: 0c. setReqActorLevel
+      href: setreqactorlevel.md
+    - name: 0d. setReqActorScale
+      href: setreqactorscale.md
+    - name: 0e. setReqActorPos
+      href: setreqactorpos.md
+    - name: 0f. setReqActorAdventRadius
+      href: setreqactoradventradius.md
+    - name: 10. setReqActorMovePos
+      href: setreqactormovepos.md
+    - name: 11. setReqActorMoveRadius
+      href: setreqactormoveradius.md
+    - name: 12. setReqActorDelayTime
+      href: setreqactordelaytime.md
+    - name: 13. spawn
+      href: spawn.md
+    - name: 14. getActorHandle
+      href: getactorhandle.md
+    - name: 15. getHandle
+      href: gethandle.md
+    - name: 16. getActReqActCount
+      href: getactreqactcount.md
+    - name: 17. setUnitCtrlMode
+      href: setunitctrlmode.md
+    - name: 18. setReqActorUniqueId
+      href: setreqactoruniqueid.md
+    - name: 19. setTroopType
+      href: settrooptype.md
+    - name: 1a. setReqActorFixPosFlag
+      href: setreqactorfixposflag.md
+    - name: 1b. setModeEx
+      href: setmodeex.md
+    - name: 1c. setUnitCtrlActivity (251f1c00)
+      href: setunitctrlactivity_251f1c00.md
+    - name: 1d. setReqActorRenderPrio
+      href: setreqactorrenderprio.md
+    - name: 1e. setUnitCtrlWatchArea
+      href: setunitctrlwatcharea.md
+    - name: 1f. setReqActorItemTable
+      href: setreqactoritemtable.md
+    - name: 20. setReqActorWeapon
+      href: setreqactorweapon.md
+    - name: 21. setUnitCtrlRangerActType
+      href: setunitctrlrangeracttype.md
+    - name: 22. setUnitCtrlAttackMoveAddParam
+      href: setunitctrlattackmoveaddparam.md
+    - name: 23. setUnitCtrlStartActType
+      href: setunitctrlstartacttype.md
+    - name: 24. setUnitCtrlGimmick
+      href: setunitctrlgimmick.md
+    - name: 25. setGimmickFlag
+      href: setgimmickflag.md
+    - name: 26. setUnitCtrlTimingScript_Int
+      href: setunitctrltimingscript_int.md
+    - name: 27. setUnitCtrlCurrentActType (251f2700)
+      href: setunitctrlcurrentacttype_251f2700.md
+    - name: 28. setReqActorHp
+      href: setreqactorhp.md
+    - name: 29. setBossCtrlStaggerItem
+      href: setbossctrlstaggeritem.md
+    - name: 2a. setUnitCtrlAdventPosX
+      href: setunitctrladventposx.md
+    - name: 2b. getUnitCtrlActivity
+      href: getunitctrlactivity.md
+    - name: 2c. getUnitCtrlCurrentActType
+      href: getunitctrlcurrentacttype.md
+    - name: 2d. setUnitCtrlSpring
+      href: setunitctrlspring.md
+    - name: 2e. setBossMoveRange (251f2e00)
+      href: setbossmoverange_251f2e00.md
+    - name: 2f. setBossMoveRangeLimit (251f2f00)
+      href: setbossmoverangelimit_251f2f00.md
+    - name: 30. getSquadHandle
+      href: getsquadhandle.md
+    - name: 31. setUnitCtrlSkill
+      href: setunitctrlskill.md
+    - name: 32. isActiveGen
+      href: isactivegen.md
+    - name: 33. setMonsterCollisionType
+      href: setmonstercollisiontype.md
+  - name: 25 20 XX XX
+    items:
+    - name: 02. reset
+      href: reset.md
+    - name: 03. setPoint
+      href: setpoint.md
+    - name: 04. addPoint
+      href: addpoint.md
+    - name: 05. getId
+      href: getid.md
+  - name: 25 21 XX XX
+    items:
+    - name: 02. decidedBossAction
+      href: decidedbossaction.md
+    - name: 03. enableBossManualCtrl
+      href: enablebossmanualctrl.md
+    - name: 04. setBossActionId
+      href: setbossactionid.md
+    - name: 05. getBossActionId
+      href: getbossactionid.md
+    - name: 06. setBossState
+      href: setbossstate.md
+    - name: 07. setBossStatePhase
+      href: setbossstatephase.md
+    - name: 08. setBossTargetPos
+      href: setbosstargetpos.md
+    - name: 09. setBossDisableAtkMove
+      href: setbossdisableatkmove.md
+    - name: 0a. setBossMoveRange (25210a00)
+      href: setbossmoverange_25210a00.md
+    - name: 0b. getBossMoveRange
+      href: getbossmoverange.md
+    - name: 0c. setBossMoveRangeLimit (25210c00)
+      href: setbossmoverangelimit_25210c00.md
+    - name: 0d. getBossMoveRangeLimit
+      href: getbossmoverangelimit.md
+    - name: 0e. setBossRetreatPos
+      href: setbossretreatpos.md
+    - name: 0f. setBossNoDamage
+      href: setbossnodamage.md
+    - name: 10. getBossInfo
+      href: getbossinfo.md
+    - name: 11. getBossInfo2
+      href: getbossinfo2.md
+    - name: 12. setBossInfo
+      href: setbossinfo.md
+    - name: 13. getBossIsCreate
+      href: getbossiscreate.md
+    - name: 14. callBossRetreatEndInit
+      href: callbossretreatendinit.md
+    - name: 15. getBossAttackMoveRange
+      href: getbossattackmoverange.md
+    - name: 16. getBossDisableAtkMove
+      href: getbossdisableatkmove.md
+    - name: 17. setCollisionNotHitTroopP
+      href: setcollisionnothittroopp.md
+    - name: 18. setCapture
+      href: setcapture.md
+    - name: 19. addVecTroopP
+      href: addvectroopp.md
+    - name: 1a. addAbnormalTroopP
+      href: addabnormaltroopp.md
+    - name: 1b. setMotion (25211b00)
+      href: setmotion_25211b00.md
+    - name: 1c. setSyncValue
+      href: setsyncvalue.md
+    - name: 1d. getSyncValue
+      href: getsyncvalue.md
+    - name: 1e. appearStaggerItems
+      href: appearstaggeritems.md
+    - name: 1f. appearDeadItems
+      href: appeardeaditems.md
+    - name: 20. resetAbnormal
+      href: resetabnormal.md
+    - name: 21. resetObject
+      href: resetobject.md
+    - name: 22. setDead
+      href: setdead.md
+    - name: 23. deadExit
+      href: deadexit.md
+    - name: 24. setEnableAbnormalWhole
+      href: setenableabnormalwhole.md
+    - name: 25. setDisableAbnormal
+      href: setdisableabnormal.md
+    - name: 26. resetCollisionShapeBox
+      href: resetcollisionshapebox.md
+    - name: 27. getSoundCommandID
+      href: getsoundcommandid.md
+    - name: 28. setEnableQuickMotionMode
+      href: setenablequickmotionmode.md
+    - name: 29. addCancelMotion
+      href: addcancelmotion.md
+    - name: 2a. setDelete
+      href: setdelete.md
+    - name: 2b. sendMonsterInfoAction
+      href: sendmonsterinfoaction.md
+    - name: 2c. recvMonsterInfoAction
+      href: recvmonsterinfoaction.md
+    - name: 2d. sendMonsterInfoState
+      href: sendmonsterinfostate.md
+    - name: 2e. recvMonsterInfoState
+      href: recvmonsterinfostate.md
+    - name: 2f. unitUidToSquadHandle
+      href: unituidtosquadhandle.md
+    - name: 30. squadHandleToUnitUid
+      href: squadhandletounituid.md
+    - name: 31. setSBossGimmickCheck
+      href: setsbossgimmickcheck.md
+    - name: 32. setSBossMoveRangeCheck
+      href: setsbossmoverangecheck.md
+    - name: 33. setActivityParam
+      href: setactivityparam.md
+    - name: 34. obstacleClear
+      href: obstacleclear.md
+    - name: 35. obstacleCreateEffect
+      href: obstaclecreateeffect.md
+    - name: 36. obstacleCheckEndMove
+      href: obstaclecheckendmove.md
+    - name: 37. obstacleGetMoveRatio
+      href: obstaclegetmoveratio.md
+    - name: 38. setWakeUpType
+      href: setwakeuptype.md
+    - name: 39. wakeUpForce
+      href: wakeupforce.md
+    - name: 3a. setDisableSelectAction
+      href: setdisableselectaction.md
+    - name: 3b. getBossState
+      href: getbossstate.md

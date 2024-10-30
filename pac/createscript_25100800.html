@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>createScript (25100800) </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="createScript (25100800) ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="createscript-25100800">createScript (25100800)</h1>
+
+<blockquote>
+<p><em>Other functions have the same name. Check the <a href="createScript.html">Disambiguation page</a> to find them.</em></p>
+</blockquote>
+<p>Creates new PAC instruction. Unlike <a href="cmd_call.html">cmd_call</a>, this doesn't block the current instruction flow.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>createScript</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 10 08 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x890a044</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(MemoryAddress)pac_address_in_memory</code> <em>(8 bytes)</em> : Obtained from <a href="getpack_25100600.html">getPack</a>. The memory address where the whole PAC instructions start.</li>
+<li><code>(int)address</code> <em>(8 bytes)</em> : Address in the PAC file <em>as int</em> to execute.</li>
+<li><code>(int)script_id</code> <em>(8 bytes)</em> : Script ID to set, can be used as reference to <a href="killscript.html">killScript</a>.</li>
+<li><code>(undefined4)Var3</code> <em>(8 bytes)</em> : Keep 0.</li>
+<li><code>(undefined4)Var4</code> <em>(8 bytes)</em> : Keep 0.</li>
+<li><code>(int *)Var5</code> <em>(8 bytes)</em> : Pointer to save something. Can keep 0.</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 10 08 00 / 08 00 00 00 / 5b 00 00 00 / 08 00 00 00 / 5c 00 00 00 / 02 00 00 00 / 01 00 00 00 / 02 00 00 00 / 00 00 00 00 / 02 00 00 00 / 00 00 00 00 / 02 00 00 00 / 00 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">createScript(((global)int *)giVar91, ((global)int *)giVar92, (int)1, (int)0, (int)0, (int)0)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_0890a044(int param_1,undefined4 param_2)
+
+{
+  undefined4 *puVar1;
+  undefined4 *puVar2;
+  int *piVar3;
+  undefined4 *puVar4;
+  undefined4 *puVar5;
+  int **ppiVar6;
+  uint uVar7;
+  int iVar8;
+  int *piVar9;
+  
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  puVar2 = (undefined4 *)Pac_Get_Param(param_2,1,1,4);
+  piVar3 = (int *)Pac_Get_Param(param_2,2,1,4);
+  puVar4 = (undefined4 *)Pac_Get_Param(param_2,3,1,4);
+  puVar5 = (undefined4 *)Pac_Get_Param(param_2,4,1,4);
+  ppiVar6 = (int **)Pac_Get_Param(param_2,5,1,4);
+  uVar7 = Pac_Get_ParamType(param_2,5);
+  if (((*(int *)(param_1 + 0x10) != 0) &amp;&amp;
+      (piVar9 = *(int **)(*(int *)(param_1 + 0x10) + 0x4dc), piVar9 != (int *)0x0)) &amp;&amp;
+     (piVar9 = (int *)(**(code **)(*piVar9 + 0xc))(piVar9,*puVar1,*puVar2,1,0,*puVar4,*puVar5),
+     piVar9 != (int *)0x0)) {
+    piVar9[0x13f] = *piVar3;
+    iVar8 = FUN_08909cf0(*(undefined4 *)(param_1 + 0x10));
+    piVar9[0x138] = iVar8;
+    (**(code **)(*piVar9 + 0x10))(piVar9,1);
+    if ((uVar7 &amp; 0xc) != 0) {
+      *ppiVar6 = piVar9;
+    }
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

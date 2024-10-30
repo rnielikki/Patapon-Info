@@ -1,0 +1,48 @@
+- name: Home
+  href: index.md
+- name: Code of Conduct
+  href: code-of-conduct.md
+- name: Tutorial
+  items:
+  - name: What is PAC?
+    href: what-is-pac.md
+  - name: Getting Started
+    href: getting-started.md
+  - name: Reading PAC
+    href: reading-pac.md
+  - name: Writing PAC
+    href: writing-pac.md
+- name: About
+  items:
+  - name: Parameters
+    href: about-parameters.md
+  - name: Flag
+    href: about-flag.md
+  - name: Units
+    href: about-units.md
+  - name: Levels
+    href: about-levels.md
+  - name: Message
+    href: about-message.md
+  - name: Nodes
+    href: about-nodes.md
+- name: How To
+  items:
+  - name: "How To: Define A Mission"
+    href: how-to-define-a-mission.md
+  - name: "How To: Setup Stages"
+    href: how-to-setup-stages.md
+  - name: "How To: Create An Enemy Target"
+    href: how-to-create-an-enemy-target.md
+  - name: "How To: Get A Handle"
+    href: how-to-get-a-handle.md
+  - name: "How To: Control A Squad"
+    href: how-to-control-a-squad.md
+  - name: "How To: Set Item Drops"
+    href: how-to-set-item-drops.md
+  - name: "How To: Set Speech Bubble"
+    href: how-to-set-speech-bubble.md
+  - name: "How To: Add A Timer"
+    href: how-to-add-a-timer.md
+- name: Instructions by Category
+  href: category.md

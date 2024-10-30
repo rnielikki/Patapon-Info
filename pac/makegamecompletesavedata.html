@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>makeGameCompleteSaveData </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="makeGameCompleteSaveData ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="makegamecompletesavedata">makeGameCompleteSaveData</h1>
+
+<p>Marks game save data complete <strong>for debugging purpose</strong>. This only allows to make the dark hero with the save.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>makeGameCompleteSaveData</code></li>
+<li><strong>Scope</strong>: Azito</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 1c 30 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x8b50248</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<p>This function is parameterless.</p>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 1c 30 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">makeGameCompleteSaveData()
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_Azito__08b50248(int param_1,undefined4 param_2)
+
+{
+  short sVar1;
+  int iVar2;
+  int iVar3;
+  undefined4 uVar4;
+  undefined auStack48 [16];
+  undefined auStack32 [16];
+  undefined4 local_10;
+  int *local_c;
+  int local_8;
+  short *local_4;
+  
+  if (*(int *)(param_1 + 0x10) == 0) {
+    PAC::PAC_setCmdId(param_2,0);
+  }
+  else {
+    if (DAT_08bc63d8 == '\0') {
+      _DAT_08bc63f0 = 0;
+      _DAT_08bc63f4 = 0;
+      _DAT_08bc63f8 = 0;
+      _DAT_08bc63fc = 0;
+      FUN_088044cc(&amp;DAT_08bc63f0,FUN_Azito__08abb590,0x8bc63e0);
+      DAT_08bc63d8 = '\x01';
+    }
+    iVar2 = Get_Execution_Pause_Phase(param_2);
+    if (iVar2 == 3) {
+      uVar4 = *(undefined4 *)(*(int *)(param_1 + 0x10) + 0x204);
+      iVar2 = FUN_Azito__08b51148(uVar4);
+      if ((iVar2 == 4) || (iVar2 = FUN_Azito__08b51148(uVar4), iVar2 == 2)) {
+        PAC::PAC_setCmdId(param_2,0);
+      }
+    }
+    else if (iVar2 == 2) {
+      iVar2 = FUN_08877b6c(1);
+      iVar2 = FUN_08836f88(iVar2 + 0x10);
+      *(byte *)(*(int *)(iVar2 + 4) + 0x75) = *(byte *)(*(int *)(iVar2 + 4) + 0x75) | 0x40;
+      uVar4 = *(undefined4 *)(*(int *)(param_1 + 0x10) + 0x204);
+      FUN_Azito__08b50db0(uVar4,1);
+      FUN_Azito__08b51158(uVar4,1);
+      Pause_Execution(param_2,3);
+    }
+    else if (iVar2 == 1) {
+      iVar2 = *(int *)(param_1 + 0x10);
+      iVar3 = FUN_08a2182c(*(undefined4 *)(iVar2 + 0x224));
+      if (iVar3 == 0) {
+        FUN_Azito__08b504e0(auStack48);
+        FUN_Azito__08b504f8(auStack48,iVar2 + 0x21c);
+        FUN_Azito__08abb590(auStack48,0xffffffff);
+        Pause_Execution(param_2,2);
+      }
+    }
+    else if (iVar2 == 0) {
+      iVar2 = *(int *)(param_1 + 0x10);
+      uVar4 = Save::Get_Save_BaseAddr();
+      FUN_088505c4(&amp;local_10,uVar4,0);
+      FUN_Azito__08b50540(auStack32,&amp;local_10);
+      FUN_Azito__08b504f8(auStack32,iVar2 + 0x21c);
+      FUN_Azito__08abb590(auStack32,0xffffffff);
+      if (local_8 != 0) {
+        *local_4 = *local_4 + -1;
+        if (local_4 == (short *)0x0) {
+          sVar1 = 0;
+        }
+        else {
+          sVar1 = *local_4;
+        }
+        if (sVar1 == 0) {
+          (**(code **)(*local_c + 0xc))(local_c,local_8,local_4,local_10);
+          FUN_Azito__08abead0(local_8,local_10);
+        }
+      }
+      iVar3 = Save::Get_Save_BaseAddr(1);
+      *(undefined4 *)(*(int *)(iVar3 + 0x48) + 0xc9c) = 1;
+      FUN_08a216b0(*(undefined4 *)(iVar2 + 0x224),3,0);
+      Pause_Execution(param_2,1);
+    }
+  }
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

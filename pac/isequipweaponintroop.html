@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>isEquipWeaponInTroop </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="isEquipWeaponInTroop ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="isequipweaponintroop">isEquipWeaponInTroop</h1>
+
+<p>Checks if a specific weapon is equippped in the troop. Used for effect loading.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>isEquipWeaponInTroop</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 16 2c 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x891c214</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(int)troop_index</code> <em>(8 bytes)</em> : Troop side, either 0 or 1 (0 for player/blue side, 1 for enemy/red side).</li>
+<li><code>(int)weaponparam_id</code> <em>(8 bytes)</em> : Equipment ID from <a href="guide/reference-table.html#item-id--weaponparam-id-indexes"><code>weaponparam</code></a>.</li>
+<li><code>(int *)result</code> <em>(8 bytes)</em> : Variable to <em>store</em> the result, 1 if the equipment is equipped, otherwise 0.</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 16 2c 00 / 04 00 00 00 / 01 00 00 00 / 02 00 00 00 / 4a 00 00 00 / 04 00 00 00 / 00 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">isEquipWeaponInTroop((int *)iVar1, (int)74, (int *)iVar0)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_0891c214(undefined4 param_1,undefined4 param_2)
+
+{
+  char cVar1;
+  int *piVar2;
+  int *piVar3;
+  int *piVar4;
+  undefined4 uVar5;
+  int iVar6;
+  int iVar7;
+  undefined4 uVar8;
+  int *piVar9;
+  int iVar10;
+  uint uVar11;
+  int iVar12;
+  short *psVar13;
+  int iVar14;
+  int iVar15;
+  int local_3c;
+  int local_38;
+  undefined auStack48 [4];
+  char local_2c;
+  int local_24;
+  
+  piVar2 = (int *)Pac_Get_Param(param_2,0,1,4);
+  piVar3 = (int *)Pac_Get_Param(param_2,1,1,4);
+  piVar4 = (int *)Pac_Get_Param(param_2,2,1,4);
+  *piVar4 = 0;
+  uVar5 = Save::Get_Save_BaseAddr(1);
+  iVar6 = Save::Get_BaseAddr__0x78(uVar5,1);
+  iVar10 = *(int *)(iVar6 + 0x44);
+  cVar1 = *(char *)(iVar10 + 0x24);
+  iVar6 = Get_Some_Flag(1);
+  uVar5 = *(undefined4 *)(iVar6 + 0x34);
+  iVar6 = 0;
+  local_38 = iVar10 + *piVar2 * 0x58a4 + 0x2550;
+  do {
+    if ((3 &lt; iVar6) || (*piVar4 != 0)) {
+      PAC::PAC_setCmdId(param_2,0);
+      return;
+    }
+    if (*(int *)(local_38 + 4) != 0) {
+      FUN_08960154(local_38 + 4);
+      iVar12 = 0;
+      local_3c = local_38 + 4 + *(int *)(local_38 + 8) * 0x84 + 0x14;
+      do {
+        iVar14 = local_3c + 0x18;
+        if (*(int *)(local_3c + 0x18) != 0) {
+          uVar11 = 0;
+          do {
+            if (uVar11 &lt; 6) {
+              piVar9 = (int *)(iVar14 + 4);
+            }
+            else {
+              piVar9 = (int *)0x0;
+            }
+            if ((int)*(char *)piVar9 &lt;&lt; 0x1f &lt; 0) {
+              iVar7 = *piVar9;
+              iVar15 = -1;
+              if ((cVar1 == '\0') || (iVar7 &gt;&gt; 1 != -2)) {
+                FUN_08a15694(auStack48);
+                Equipment::Get_Equipment_Name_Save_Validity(auStack48,iVar7 &gt;&gt; 1,uVar5);
+                if (local_2c == '\0') goto LAB_0891c478;
+                if (-1 &lt; local_24) {
+                  iVar15 = local_24;
+                }
+              }
+              else {
+                iVar7 = FUN_089880e8(iVar10 + 0x850,*piVar2,iVar6);
+                if (iVar7 != 0) {
+                  psVar13 = (short *)(iVar7 + 0x58 + (iVar12 + uVar11) * 0xc);
+                  iVar15 = (int)*psVar13;
+                  if (iVar15 &lt; 0) goto LAB_0891c478;
+                  uVar8 = Save::Get_Save_BaseAddr(1);
+                  iVar7 = Save::Get_BaseAddr__0x78(uVar8,1);
+                  uVar8 = Param::Get_Data_Addr(*(undefined4 *)(iVar7 + 0xa4),9);
+                  Param::Get_Line_Addr(uVar8,0,iVar15,1);
+                  iVar15 = *(int *)(psVar13 + 2);
+                }
+              }
+              if ((-1 &lt; iVar15) &amp;&amp; (iVar15 == *piVar3)) {
+                *piVar4 = 1;
+                PAC::PAC_setCmdId(param_2,0);
+                return;
+              }
+            }
+LAB_0891c478:
+            uVar11 = uVar11 + 1;
+            iVar14 = iVar14 + 4;
+          } while ((int)uVar11 &lt; 6);
+        }
+        iVar12 = iVar12 + 1;
+        local_3c = local_3c + 0x34;
+      } while (iVar12 &lt; 1);
+    }
+    iVar6 = iVar6 + 1;
+    local_38 = local_38 + 0x1620;
+  } while( true );
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

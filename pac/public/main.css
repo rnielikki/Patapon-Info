@@ -1,0 +1,22 @@
+.collapsed-header {
+    margin-bottom:1.24rem;
+    padding:.4rem 0rem;
+}
+.collapsed-header:hover, .collapsed-header:focus {
+    background-color: #8e8e9f33;
+}
+.collapsed-header:hover {
+    cursor:pointer;
+}
+.collapsed-header:not(.collapsed-header-expanded)::after {
+    content: "[ + ]";
+    margin-left:1.6rem;
+    color:skyblue;
+    font-weight: bold;
+}
+.collapsed-header-expanded::after {
+    content: "[ - ]";
+    margin-left:1.6rem;
+    color:pink;
+    font-weight: bold;
+}

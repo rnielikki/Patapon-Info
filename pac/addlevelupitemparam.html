@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>addLevelUpItemParam </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="addLevelUpItemParam ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="addlevelupitemparam">addLevelUpItemParam</h1>
+
+<p>Loads level-up requirement Ka-chings and materials of an equipment for Blacksmith.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>addLevelUpItemParam</code></li>
+<li><strong>Scope</strong>: Azito</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 1c 1a 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x8b4f308</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(int)item_id</code> <em>(8 bytes)</em> : <a href="guide/reference-table.html#item-id--weaponparam-id-indexes">ID of the item</a>, possibly obtained from <a href="getmaterialitemid.html">getMaterialItemId</a>, or <code>0x32</code> for Ka-ching.</li>
+<li><code>(int)amount</code> <em>(8 bytes)</em> : Amount of requirement to set.</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 1c 1a 00 / 04 00 00 00 / 0f 00 00 00 / 04 00 00 00 / 0b 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">addLevelUpItemParam((int *)iVar15, (int *)iVar11)
+</code></pre>
+<p>In blacksmith, this is used with <a href="getmaterialitemid.html">getMaterialItemId</a>:</p>
+<pre><code class="lang-c">00041264  25001B00:cmd_ifLS(4:B, 5.0, 1:412E4) //Level &lt; 5 requirement
+  000412E4  250A0E00:getMaterialItemId(4:F, 4:D, 2:0) //tier 1 material
+  00041300  251C1A00:addLevelUpItemParam(4:F, 2:1) //requires 1 of it
+  00041314  25000100:cmd_end()
+0004127C  25001B00:cmd_ifLS(4:B, 10.0, 1:41318) //Level &lt; 10 requirement
+  ...
+00041294  25001B00:cmd_ifLS(4:B, 15.0, 1:4134C) //Level &lt; 15 requirement
+  ...
+000412AC  25001B00:cmd_ifLS(4:B, 20.0, 1:413B0) //Level &lt; 20 requirement
+  ...
+000412C4  25001B00:cmd_ifLS(4:B, 30.0, 1:41444) //Level &lt; 30 requirement
+  ...
+000412DC  25000200:cmd_jmp(1:41508)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_Azito__08b4f308(int param_1,undefined4 param_2)
+
+{
+  undefined4 *puVar1;
+  int *piVar2;
+  int iVar3;
+  int amount;
+  undefined4 item_id;
+  
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  item_id = *puVar1;
+  piVar2 = (int *)Pac_Get_Param(param_2,1,1,4);
+  amount = *piVar2;
+  if ((*(int *)(param_1 + 0x10) != 0) &amp;&amp; (0 &lt; amount)) {
+    iVar3 = Get_Some_Flag(1);
+    BS::Write_Request_Amount(*(int *)(iVar3 + 0x34) + 0x2c,item_id,amount);
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

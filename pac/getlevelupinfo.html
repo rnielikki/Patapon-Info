@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>getLevelUpInfo </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="getLevelUpInfo ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="getlevelupinfo">getLevelUpInfo</h1>
+
+<p>Gets blacksmith level-up related data from <strong>currently selected</strong> equipment.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>getLevelUpInfo</code></li>
+<li><strong>Scope</strong>: Azito</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 1c 1c 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x8b4f4e8</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(int)unknown</code> <em>(8 bytes)</em> : Unused, can keep 0.</li>
+<li><code>(int *)item_id</code> <em>(8 bytes)</em> : Variable to <em>store</em> the item ID.</li>
+<li><code>(int *)level</code> <em>(8 bytes)</em> : Variable to <em>store</em> the equipment level, used for requirement calculation</li>
+<li><code>(int *)section_id</code> <em>(8 bytes)</em> : Variable to <em>store</em> the Section ID of the <code>levelupparam</code>. 0 is equipment section and 1 is material section.</li>
+<li><code>(int *)equipment_type</code> <em>(8 bytes)</em> : Variable to <em>store</em> the <a href="guide/reference-table.html#equipment-group-id-indexes">equipment group</a>, from <code>levelupparam</code>+0x40, works only with individual equipment section.</li>
+<li><code>(int *)Var4</code> <em>(8 bytes)</em> :  Variable to <em>store</em> the result, Please explain, from <code>levelupparam</code>+0x44.</li>
+<li><code>(int *)Var5</code> <em>(8 bytes)</em> :  Variable to <em>store</em> the result, Proper data has zero, from <code>levelupparam</code>+0x48.</li>
+<li><code>(int *)Var6</code> <em>(8 bytes)</em> :  Variable to <em>store</em> the result, Proper data has zero, from <code>levelupparam</code>+0x4c.</li>
+<li><code>(int *)data_type</code> <em>(8 bytes)</em> :  Variable to <em>store</em> the result, in range of 0~3. from <code>levelupparam</code>+0x70, Affects blacksmith Ka-ching calculation.
+<ul>
+<li>0 is material, 2 is equipment, unknown -1 also observed.</li>
+</ul>
+</li>
+<li><code>(int *)material_id</code> <em>(8 bytes)</em> :  Variable to <em>store</em> the <a href="getmaterialitemid.html">material id</a>, from <code>levelupparam</code>+0x74. 2nd section (Material info) only.</li>
+<li><code>(int *)kaching</code> <em>(8 bytes)</em> :  <del>Variable to <em>store</em> the ka-ching amount, the amount is in from <code>levelupparam</code> 2nd section+0x68</del>
+<ul>
+<li>Do not use this. <strong>Use <code>itemparam</code> from <a href="getgfpdata.html">getGfpData</a></strong> instead.</li>
+</ul>
+</li>
+<li><code>(float *)Var11</code> <em>(8 bytes)</em> :  Variable to <em>store</em> the result, from <code>levelupparam</code>+0x6C</li>
+</ul>
+<p>There are some data that aren't useful, so can put same variable to the parameter to discard it.</p>
+<h2 id="remarks">Remarks</h2>
+<p>Ka-ching calculation logic follows this (from PAC instructions), but only the type 1 is used:</p>
+<pre><code class="lang-javascript">//returns Ka-ching amount
+function calculate_kaching(level, baseRequirement, type) {
+    let nextLvl = level+1;
+    let val = (((nextLvl+1)*nextLvl)/2)*baseRequirement;
+    switch(type){
+      case 1:
+        return val*0.75 + baseRequirement*0.25;
+      case 2:
+        return val*0.25 + baseRequirement*0.75
+      default:
+        return 0;
+    }
+}
+</code></pre>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 1c 1c 00 / 02 00 00 00 / 00 00 00 00 / 04 00 00 00 / 10 00 00 00 / 04 00 00 00 / 0b 00 00 00 / 04 00 00 00 / 05 00 00 00 / 04 00 00 00 / 05 00 00 00 / 04 00 00 00 / 05 00 00 00 / 04 00 00 00 / 05 00 00 00 / 04 00 00 00 / 05 00 00 00 / 04 00 00 00 / 0e 00 00 00 / 04 00 00 00 / 0d 00 00 00 / 04 00 00 00 / 0c 00 00 00 / 20 00 00 00 / 04 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">getLevelUpInfo((int)0, (int *)iVar16, (int *)iVar11, (int *)iVar5, (int *)iVar5, (int *)iVar5, (int *)iVar5, (int *)iVar5, (int *)iVar14, (int *)iVar13, (int *)iVar12, (float *)fVar4)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_Azito__08b4f4e8(int param_1,undefined4 param_2)
+
+{
+  int *piVar1;
+  undefined4 *puVar2;
+  undefined4 *puVar3;
+  undefined4 *puVar4;
+  undefined4 *puVar5;
+  undefined4 *puVar6;
+  undefined4 *puVar7;
+  undefined4 *puVar8;
+  undefined4 *puVar9;
+  undefined4 *puVar10;
+  undefined4 *puVar11;
+  int iVar12;
+  int iVar13;
+  undefined4 uVar14;
+  int *piVar15;
+  
+  Pac_Get_Param(param_2,0,1,4);
+  piVar1 = (int *)Pac_Get_Param(param_2,1,1,4);
+  puVar2 = (undefined4 *)Pac_Get_Param(param_2,2,1,4);
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,3,1,4);
+  puVar4 = (undefined4 *)Pac_Get_Param(param_2,4,1,4);
+  puVar5 = (undefined4 *)Pac_Get_Param(param_2,5,1,4);
+  puVar6 = (undefined4 *)Pac_Get_Param(param_2,6,1,4);
+  puVar7 = (undefined4 *)Pac_Get_Param(param_2,7,1,4);
+  puVar8 = (undefined4 *)Pac_Get_Param(param_2,8,1,4);
+  puVar9 = (undefined4 *)Pac_Get_Param(param_2,9,1,4);
+  puVar10 = (undefined4 *)Pac_Get_Param(param_2,10,1,4);
+  puVar11 = (undefined4 *)Pac_Get_Param(param_2,0xb,1,4);
+  *piVar1 = 0;
+  *puVar2 = 0;
+  *puVar3 = 0;
+  *puVar4 = 0;
+  *puVar5 = 0;
+  *puVar6 = 0;
+  *puVar7 = 0;
+  *puVar8 = 0;
+  *puVar9 = 0;
+  *puVar10 = 0;
+  *puVar11 = 0;
+  if (*(int *)(param_1 + 0x10) != 0) {
+    iVar12 = Get_Some_Flag(1);
+    iVar12 = *(int *)(iVar12 + 0x34);
+    piVar15 = (int *)(iVar12 + 0x25c);
+    if (piVar15 != (int *)0x0) {
+      if (*piVar15 == 0) {
+        iVar13 = *(int *)(iVar12 + 0x268);
+      }
+      else {
+        iVar13 = *(int *)(*piVar15 + 0x20);
+        if (iVar13 != 0) {
+          *piVar1 = (int)*(short *)(iVar13 + 2);
+          uVar14 = Equip::Return_Eq_Level(*(undefined4 *)(*piVar15 + 0x20));
+          *puVar2 = uVar14;
+        }
+        iVar13 = *(int *)(iVar12 + 0x268);
+      }
+      if (iVar13 == 0) {
+        puVar2 = *(undefined4 **)(iVar12 + 0x264);
+      }
+      else {
+        *puVar3 = *(undefined4 *)(iVar12 + 0x260);
+        *puVar4 = *(undefined4 *)(*(int *)(iVar12 + 0x268) + 0x40);
+        *puVar5 = *(undefined4 *)(*(int *)(iVar12 + 0x268) + 0x44);
+        *puVar6 = *(undefined4 *)(*(int *)(iVar12 + 0x268) + 0x48);
+        *puVar7 = *(undefined4 *)(*(int *)(iVar12 + 0x268) + 0x4c);
+        puVar2 = *(undefined4 **)(iVar12 + 0x264);
+      }
+      if (puVar2 != (undefined4 *)0x0) {
+        *puVar8 = *puVar2;
+        *puVar9 = *(undefined4 *)(*(int *)(iVar12 + 0x264) + 4);
+        *puVar10 = *(undefined4 *)(*(int *)(iVar12 + 0x264) + 8);
+        *puVar11 = *(undefined4 *)(*(int *)(iVar12 + 0x264) + 0xc);
+      }
+    }
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

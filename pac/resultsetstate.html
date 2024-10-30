@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>resultSetState </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="resultSetState ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="resultsetstate">resultSetState</h1>
+
+<p>Defines mission state, e.g. success or failure.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>resultSetState</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 16 19 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x891a720</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(int)mission_status</code> <em>(8 bytes)</em> : See the table below</li>
+<li><code>(int)result_state</code> <em>(8 bytes)</em> : 5 is Hideout, 7 is Mission success, 8 is Defeat.
+<ul>
+<li>7 and 8 requires mission end flag (2) in <code>mission_status</code>, otherwise it is always back to hideout.</li>
+</ul>
+</li>
+<li><code>(bool)load_next</code> <em>(8 bytes)</em> : Decides if next PAC instruction file should be loaded, but <em>keep this as 0</em>.</li>
+<li><code>(undefined4)Var3</code> <em>(8 bytes)</em> : Keep this as 0.</li>
+<li><code>(undefined4)Var4</code> <em>(8 bytes)</em> : Keep this as 0.</li>
+<li><code>(String)next_pac_file</code>: Next PAC file name to load. If the story PAC file is <a href="readarcfile.html">already preloaded</a>, or the next scene is not called, can leave as empty string.</li>
+</ul>
+<p><strong>Only first and second parameters do their work.</strong> Keep others 0 or empty string.</p>
+<p>For <code>mission_status</code>:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>???</td>
+</tr>
+<tr>
+<td>1</td>
+<td>During Mission</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mission End</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Back to hideout</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Dungeon floor clear, selecting</td>
+</tr>
+<tr>
+<td>6</td>
+<td><em>Instantly</em> go to hideout</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Celebrating and go to hideout (no result screen)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Loads next floor</td>
+</tr>
+<tr>
+<td>9+</td>
+<td>Defeat</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remarks">Remarks</h2>
+<p>For cutscene after the mission, use this method instead.</p>
+<pre><code>cmd_mov(8:4D, 293.0)
+</code></pre>
+<p>293.0 here is scene ID. (If the scene ID is invalid, the game will be crashed.)</p>
+<p>The scene range is 292~322, observed in <code>mission_99_00.pac</code>.</p>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 16 19 00 / 02 00 00 00 / 02 00 00 00 / 02 00 00 00 / 08 00 00 00 / 02 00 00 00 / 00 00 00 00 / 02 00 00 00 / 00 00 00 00 / 02 00 00 00 / 00 00 00 00 / 00 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">resultSetState((int)2, (int)8, (int)0, (int)0, (int)0, &quot;&quot;)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_0891a720(int param_1,undefined4 param_2)
+
+{
+  undefined *puVar1;
+  undefined4 *puVar2;
+  undefined2 *puVar3;
+  int *piVar4;
+  undefined4 *puVar5;
+  undefined4 *puVar6;
+  undefined *puVar7;
+  int iVar8;
+  undefined *puVar9;
+  int iVar10;
+  undefined2 local_164;
+  undefined local_162;
+  undefined local_161;
+  undefined2 local_160;
+  undefined2 local_15e;
+  undefined2 local_15c;
+  undefined2 local_15a;
+  undefined2 local_158;
+  undefined2 local_156;
+  undefined auStack340 [16];
+  undefined auStack324 [8];
+  undefined auStack316 [8];
+  undefined auStack308 [8];
+  undefined auStack300 [8];
+  undefined auStack292 [8];
+  undefined auStack284 [8];
+  undefined auStack276 [8];
+  undefined4 local_10c;
+  undefined4 local_108;
+  undefined4 local_104;
+  undefined local_100 [256];
+  
+  puVar2 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+                    // 0: Mission fail
+                    // 1: Infinite march lmao
+                    // 2: Finished all levels
+                    // 5: Still in dungeon, asking what will do next
+                    // 6: Going to hideout (Doesn't add loot)
+                    // 7: mission success?
+                    // 8: Loads next floor
+                    // 9+: Defeat
+  puVar3 = (undefined2 *)Pac_Get_Param(param_2,1,1,4);
+                    // 5: Hideout / 7 : Mission success / 8 : Defeat
+                    // 7 and 8 requires other flag to state &quot;this is mission end&quot;
+                    // otherwise it's always back to hideout
+  piVar4 = (int *)Pac_Get_Param(param_2,2,1,4);
+  puVar5 = (undefined4 *)Pac_Get_Param(param_2,3,1,4);
+  puVar6 = (undefined4 *)Pac_Get_Param(param_2,4,1,4);
+  puVar7 = &amp;DAT_00000100;
+  puVar9 = local_100;
+  puVar1 = puVar9;
+  while (puVar1 != (undefined *)0x0) {
+    *puVar9 = 0;
+    puVar9 = puVar9 + 1;
+    puVar7 = puVar7 + -1;
+    puVar1 = puVar7;
+  }
+  Pac_Get_StringParam(param_2,local_100);
+  local_104 = 0;
+  local_108 = 0;
+  if (*piVar4 != 0) {
+    FUN_088154c0(local_100,s_Mission__d__d_pac_08a5fcd4,&amp;local_104,&amp;local_108);
+  }
+  iVar8 = Get_Some_Flag(1);
+  iVar10 = *(int *)(iVar8 + 0x44);
+  iVar8 = *(int *)(*(int *)(*(int *)(param_1 + 0x10) + 0x2b8) + 0x3c);
+  local_164 = 0;
+  local_162 = 0;
+  local_161 = 0;
+  local_160 = 0;
+  local_15e = 0;
+  local_15c = 0;
+  local_15a = 0;
+  Syscall::Kernel::Kernel_Memset(auStack340,0,0x10);
+  Syscall::Kernel::Kernel_Memset(auStack324,0,8);
+  Syscall::Kernel::Kernel_Memset(auStack316,0,8);
+  Syscall::Kernel::Kernel_Memset(auStack308,0,8);
+  Syscall::Kernel::Kernel_Memset(auStack300,0,8);
+  Syscall::Kernel::Kernel_Memset(auStack292,0,8);
+  Syscall::Kernel::Kernel_Memset(auStack284,0,8);
+  Syscall::Kernel::Kernel_Memset(auStack276,0,8);
+  local_10c = *(undefined4 *)(iVar10 + 0x28);
+                    // get mission status 1
+                    // get mission status 2
+  local_164 = (undefined2)*puVar2;
+  local_162 = (undefined)*puVar3;
+  local_161 = (undefined)*(undefined2 *)piVar4;
+  local_160 = (undefined2)*puVar5;
+  local_15e = (undefined2)*puVar6;
+  local_15c = (undefined2)local_104;
+  local_15a = (undefined2)local_108;
+  local_158 = 0xffff;
+  local_156 = 0xffff;
+  (**(code **)(*(int *)(iVar8 + 4) + 0x24))(iVar8,&amp;local_164);
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

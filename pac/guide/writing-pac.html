@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>How to (over)write a PAC instruction </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="How to (over)write a PAC instruction ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="how-to-overwrite-a-pac-instruction">How to (over)write a PAC instruction</h1>
+
+<p>As I said &quot;I am assuming you are asking about modifying. Writing from the bottom is terrifying.&quot;<br>
+This is about modifying existing PAC instruction.</p>
+<p>Since there are bunch of common condition checking and resource/effect loading, writing from bottom is very very discouraged and you couldn't do it anyway.</p>
+<p>Also, always <strong>check if parameter is already used</strong> before assigning any parameter. Otherwise it might cause potential disaster.</p>
+<h2 id="case-1-your-code-occupies-less-space">Case 1: Your code occupies less space</h2>
+<p>Easy, you can just fill <code>00</code> in empty spaces.</p>
+<p>Just try to fill zero <strong>just BEFORE <code>25</code></strong>, which is next PAC instruction.</p>
+<h2 id="case-2-your-code-occupies-same-space">Case 2: Your code occupies same space</h2>
+<p>You don't need to care of it.</p>
+<h2 id="case-3-your-code-occupies-more-space">Case 3: Your code occupies more space</h2>
+<p>PAC file size can be changed, so do not have fear of extending it.</p>
+<h3 id="1-using-cmd_jmp">1. Using cmd_jmp</h3>
+<ol>
+<li>Pick the instruction <em>after</em> the position you want to insert. If the one instruction is only 4 bytes, pick two instructions.</li>
+<li>Replace it to <a href="../cmd_jmp.html">cmd_jmp</a> that goes to <strong>end of the file</strong>.</li>
+<li>Insert your code <strong>in end of the file</strong>.</li>
+<li>Put the <em>original instruction(s) from step 1</em> to the end of the file.</li>
+<li><strong>Put the <code>cmd_jmp</code></strong> to the end of the file!</li>
+</ol>
+<h3 id="2-using-cmd_call">2. Using cmd_call</h3>
+<ol>
+<li>Pick the instruction <em>after</em> the position you want to insert. If the one instruction is only 4 bytes, pick two instructions.</li>
+<li>Replace it to <a href="../cmd_call.html">cmd_call</a> that goes to <strong>end of the file</strong>.</li>
+<li>Insert your code <strong>in end of the file</strong>.</li>
+<li>Put the <em>original instruction(s) from step 1</em> to the end of the file.</li>
+<li><strong>Put <code>[cmd_end](../cmd_end.md)</code></strong> to the end of the file!</li>
+</ol>
+<p><strong>DO NOT extend from the middle of the file</strong>!<br>
+It will mess up a lot of jump and call condition (reminder they use offset from PAC file).</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>loadFlag </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="loadFlag ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="loadflag">loadFlag</h1>
+
+<p><strong>Description</strong> goes here.</p>
+<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>loadFlag</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 0a 31 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x894bfc4</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<p>This function is parameterless.</p>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 0a 31 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">loadFlag()
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_0894bfc4(undefined4 param_1,undefined4 param_2)
+
+{
+  int iVar1;
+  int iVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  
+  iVar1 = FUN_08877b6c(1);
+  iVar1 = FUN_08836f88(iVar1 + 0x10);
+  iVar2 = FUN_08877b6c(1);
+  uVar3 = FUN_08836f90(iVar2 + 0x10);
+  iVar2 = Save::Get_Save_BaseAddr(1);
+  iVar2 = *(int *)(iVar2 + 0x50);
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1cd) &lt;&lt; 0x1a) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d5) = *(byte *)(iVar2 + 0x2b1d5) | 0x20;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d5) = *(byte *)(iVar2 + 0x2b1d5) &amp; 0xdf;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1cd) &lt;&lt; 0x19) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d5) = *(byte *)(iVar2 + 0x2b1d5) | 0x40;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d5) = *(byte *)(iVar2 + 0x2b1d5) &amp; 0xbf;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1cd) &lt;&lt; 0x18) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d5) = *(byte *)(iVar2 + 0x2b1d5) | 0x80;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d5) = *(byte *)(iVar2 + 0x2b1d5) &amp; 0x7f;
+  }
+  if ((*(byte *)(*(int *)(iVar1 + 4) + 0x1ce) &amp; 1) == 0) {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) &amp; 0xfe;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) | 1;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1ce) &lt;&lt; 0x1e) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) | 2;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) &amp; 0xfd;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1ce) &lt;&lt; 0x1d) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) | 4;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) &amp; 0xfb;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1ce) &lt;&lt; 0x1c) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) | 8;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) &amp; 0xf7;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1ce) &lt;&lt; 0x1b) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) | 0x10;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) &amp; 0xef;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1ce) &lt;&lt; 0x1a) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) | 0x20;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) &amp; 0xdf;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1ce) &lt;&lt; 0x19) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) | 0x40;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) &amp; 0xbf;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1ce) &lt;&lt; 0x18) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) | 0x80;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d6) = *(byte *)(iVar2 + 0x2b1d6) &amp; 0x7f;
+  }
+  if ((*(byte *)(*(int *)(iVar1 + 4) + 0x1cf) &amp; 1) == 0) {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) &amp; 0xfe;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) | 1;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1cf) &lt;&lt; 0x1e) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) | 2;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) &amp; 0xfd;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1cf) &lt;&lt; 0x1d) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) | 4;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) &amp; 0xfb;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1cf) &lt;&lt; 0x1c) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) | 8;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) &amp; 0xf7;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1cf) &lt;&lt; 0x1b) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) | 0x10;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) &amp; 0xef;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1cf) &lt;&lt; 0x1a) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) | 0x20;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) &amp; 0xdf;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1cf) &lt;&lt; 0x19) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) | 0x40;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) &amp; 0xbf;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1cf) &lt;&lt; 0x18) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) | 0x80;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d7) = *(byte *)(iVar2 + 0x2b1d7) &amp; 0x7f;
+  }
+  if ((*(byte *)(*(int *)(iVar1 + 4) + 0x1d0) &amp; 1) == 0) {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) &amp; 0xfe;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) | 1;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1d0) &lt;&lt; 0x1e) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) | 2;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) &amp; 0xfd;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1d0) &lt;&lt; 0x1d) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) | 4;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) &amp; 0xfb;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1d0) &lt;&lt; 0x1c) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) | 8;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) &amp; 0xf7;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1d0) &lt;&lt; 0x1b) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) | 0x10;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) &amp; 0xef;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1d0) &lt;&lt; 0x1a) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) | 0x20;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) &amp; 0xdf;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1d0) &lt;&lt; 0x19) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) | 0x40;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) &amp; 0xbf;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1d0) &lt;&lt; 0x18) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) | 0x80;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d8) = *(byte *)(iVar2 + 0x2b1d8) &amp; 0x7f;
+  }
+  if ((*(byte *)(*(int *)(iVar1 + 4) + 0x1d1) &amp; 1) == 0) {
+    *(byte *)(iVar2 + 0x2b1d9) = *(byte *)(iVar2 + 0x2b1d9) &amp; 0xfe;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d9) = *(byte *)(iVar2 + 0x2b1d9) | 1;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1d1) &lt;&lt; 0x1e) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d9) = *(byte *)(iVar2 + 0x2b1d9) | 2;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d9) = *(byte *)(iVar2 + 0x2b1d9) &amp; 0xfd;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1d1) &lt;&lt; 0x1d) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d9) = *(byte *)(iVar2 + 0x2b1d9) | 4;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d9) = *(byte *)(iVar2 + 0x2b1d9) &amp; 0xfb;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1d1) &lt;&lt; 0x1c) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d9) = *(byte *)(iVar2 + 0x2b1d9) | 8;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d9) = *(byte *)(iVar2 + 0x2b1d9) &amp; 0xf7;
+  }
+  if ((int)((uint)*(byte *)(*(int *)(iVar1 + 4) + 0x1d1) &lt;&lt; 0x1b) &lt; 0) {
+    *(byte *)(iVar2 + 0x2b1d9) = *(byte *)(iVar2 + 0x2b1d9) | 0x10;
+  }
+  else {
+    *(byte *)(iVar2 + 0x2b1d9) = *(byte *)(iVar2 + 0x2b1d9) &amp; 0xef;
+  }
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x3b);
+  *(undefined4 *)(iVar2 + 0x2a0f4) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x3c);
+  *(undefined4 *)(iVar2 + 0x2a0f8) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x3d);
+  *(undefined4 *)(iVar2 + 0x2a0fc) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x3e);
+  *(undefined4 *)(iVar2 + 0x2a100) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x3f);
+  *(undefined4 *)(iVar2 + 0x2a104) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x40);
+  *(undefined4 *)(iVar2 + 0x2a108) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x42);
+  *(undefined4 *)(iVar2 + 0x2a110) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x43);
+  *(undefined4 *)(iVar2 + 0x2a114) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x44);
+  *(undefined4 *)(iVar2 + 0x2a118) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0xc2);
+  *(undefined4 *)(iVar2 + 0x2a310) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0xfa);
+  *(undefined4 *)(iVar2 + 0x2a3f0) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0xfb);
+  *(undefined4 *)(iVar2 + 0x2a3f4) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0xfc);
+  *(undefined4 *)(iVar2 + 0x2a3f8) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0xfd);
+  *(undefined4 *)(iVar2 + 0x2a3fc) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0xfe);
+  *(undefined4 *)(iVar2 + 0x2a400) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0xff);
+  *(undefined4 *)(iVar2 + 0x2a404) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x100);
+  *(undefined4 *)(iVar2 + 0x2a408) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x101);
+  *(undefined4 *)(iVar2 + 0x2a40c) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x102);
+  *(undefined4 *)(iVar2 + 0x2a410) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x103);
+  *(undefined4 *)(iVar2 + 0x2a414) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x104);
+  *(undefined4 *)(iVar2 + 0x2a418) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x105);
+  *(undefined4 *)(iVar2 + 0x2a41c) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x106);
+  *(undefined4 *)(iVar2 + 0x2a420) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x107);
+  *(undefined4 *)(iVar2 + 0x2a424) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x108);
+  *(undefined4 *)(iVar2 + 0x2a428) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x109);
+  *(undefined4 *)(iVar2 + 0x2a42c) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x10a);
+  *(undefined4 *)(iVar2 + 0x2a430) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x10b);
+  *(undefined4 *)(iVar2 + 0x2a434) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x10c);
+  *(undefined4 *)(iVar2 + 0x2a438) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x10d);
+  *(undefined4 *)(iVar2 + 0x2a43c) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x10e);
+  *(undefined4 *)(iVar2 + 0x2a440) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x10f);
+  *(undefined4 *)(iVar2 + 0x2a444) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x110);
+  *(undefined4 *)(iVar2 + 0x2a448) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x111);
+  *(undefined4 *)(iVar2 + 0x2a44c) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x112);
+  *(undefined4 *)(iVar2 + 0x2a450) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x113);
+  *(undefined4 *)(iVar2 + 0x2a454) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1a7);
+  *(undefined4 *)(iVar2 + 0x2a6a4) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1a8);
+  *(undefined4 *)(iVar2 + 0x2a6a8) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1a9);
+  *(undefined4 *)(iVar2 + 0x2a6ac) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1aa);
+  *(undefined4 *)(iVar2 + 0x2a6b0) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1ab);
+  *(undefined4 *)(iVar2 + 0x2a6b4) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1ac);
+  *(undefined4 *)(iVar2 + 0x2a6b8) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1ad);
+  *(undefined4 *)(iVar2 + 0x2a6bc) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1ae);
+  *(undefined4 *)(iVar2 + 0x2a6c0) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1af);
+  *(undefined4 *)(iVar2 + 0x2a6c4) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1b0);
+  *(undefined4 *)(iVar2 + 0x2a6c8) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1b1);
+  *(undefined4 *)(iVar2 + 0x2a6cc) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1b2);
+  *(undefined4 *)(iVar2 + 0x2a6d0) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1b3);
+  *(undefined4 *)(iVar2 + 0x2a6d4) = uVar4;
+  uVar4 = Get_Certain_Stored_Value(uVar3,0x1b4);
+  *(undefined4 *)(iVar2 + 0x2a6d8) = uVar4;
+  uVar4 = FUN_0883752c(uVar3,0x96);
+  *(undefined4 *)(iVar2 + 0x2aa60) = uVar4;
+  uVar4 = FUN_0883752c(uVar3,0x97);
+  *(undefined4 *)(iVar2 + 0x2aa64) = uVar4;
+  uVar4 = FUN_0883752c(uVar3,0x98);
+  *(undefined4 *)(iVar2 + 0x2aa68) = uVar4;
+  uVar4 = FUN_0883752c(uVar3,0x99);
+  *(undefined4 *)(iVar2 + 0x2aa6c) = uVar4;
+  uVar4 = FUN_0883752c(uVar3,0x9a);
+  *(undefined4 *)(iVar2 + 0x2aa70) = uVar4;
+  uVar4 = FUN_0883752c(uVar3,0x9b);
+  *(undefined4 *)(iVar2 + 0x2aa74) = uVar4;
+  uVar4 = FUN_0883752c(uVar3,0x9c);
+  *(undefined4 *)(iVar2 + 0x2aa78) = uVar4;
+  uVar4 = FUN_0883752c(uVar3,0x9d);
+  *(undefined4 *)(iVar2 + 0x2aa7c) = uVar4;
+  uVar4 = FUN_0883752c(uVar3,0x9e);
+  *(undefined4 *)(iVar2 + 0x2aa80) = uVar4;
+  uVar3 = FUN_0883752c(uVar3,0x9f);
+  *(undefined4 *)(iVar2 + 0x2aa84) = uVar3;
+  uVar3 = FUN_08877b6c(1);
+  FUN_08877d10(uVar3,2000);
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>setBrakeScore </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="setBrakeScore ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="setbrakescore">setBrakeScore</h1>
+
+<p>Sets VS scoring logic when a squad or gimmick is being killed.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>setBrakeScore</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 17 08 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x89111b8</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(int *)handle</code> <em>(8 bytes)</em> : The target <em>to be killed</em> to get the score. Can be squad or gimmick.</li>
+<li><code>(int)point</code> <em>(8 bytes)</em> : Points to give to the side who killed the squad/gimmick.</li>
+<li><code>(int)break_type</code> <em>(8 bytes)</em> : Expected 0~6. <strong>Does nothing with fort occupation</strong>.</li>
+</ul>
+<p>|<code>break_type</code>|Action with <strong>killing</strong> enemy|
+|0|Gives score to blue team troop|
+|1|Gives score to red team troop|
+|2|Nothing|
+|3|Nothing|
+|4|(<strong>Normal</strong>) Gives score to the opposite side when being killed|
+|5|When Missile is ready (missile VS only)|
+|6|<em>unused</em>, Score based on troop side flag|</p>
+<h2 id="remarks">Remarks</h2>
+<p>For settling the <em>fort occupation</em> score, set <code>break_type</code> 2 or 3, and then <strong>settle the score with PAC instructions</strong>.</p>
+<p>This is checked every time during mission.</p>
+<ol>
+<li>Set <code>break_type</code> to 2 or 3 in <code>setBrakeScore</code>.</li>
+<li>Get gimmick status with <a href="getgimmickpowergaugepoint.html">getGimmickPowerGaugePoint</a>.</li>
+<li>Check with <a href="cmd_iflbe.html">cmd_ifLBE</a>, if the occupation gauge is full.</li>
+<li>Obtain the score with <a href="getbrakescore.html">getBrakeScore</a>.</li>
+<li>Settle the score with <a href="multisetscore.html">multiSetScore</a>.</li>
+<li>Deactivate the &quot;unoccupied&quot; gimmick object with <a href="gimmickgetuseridi.html">gimmickGetUserIdI</a>, <a href="gimmicksetuseridi.html">gimmickSetUserIdI</a> and <a href="setactive.html">setActive</a>.</li>
+<li>Get the occupied gimmick handle with <a href="gimmick_gethandle.html">gimmick_getHandle</a> and activate it with <code>setActive</code>.</li>
+</ol>
+<pre><code class="lang-c">0005DC7C  25000300:cmd_call(1:37454)
+  ...
+  00037468  25170700:getActive(8:7F, 4:0)
+  0003747C  25001700:cmd_ifEQ(4:0, 0.0, 1:32F84) //cmd_end()
+  00037494  25172900:setMaxHitPoint(8:7F, 2:186A0)
+  /* Checks red team gauge */
+  000374A8  25161300:getGimmickPowerGaugePoint(8:7F, 2:1, 20:0, 4:2)
+  000374CC  25001A00:cmd_ifLBE(20:0, 1.0, 1:3768C)
+    0003768C  25000700:cmd_mov(8:7F, 8:84)
+    /* settles score */
+    000376A0  25170900:getBrakeScore(8:7F, 4:0, 4:1)
+    000376BC  25161000:multiSetScore(2:1, 2:2, 4:0, 4:2)
+    /* Mark gimmick as &quot;red team occupied&quot; (2:1) */
+    000376E0  25190800:gimmickGetUserIdI(8:7F, 2:3, 4:3)
+    000376FC  25190900:gimmickSetUserIdI(8:7F, 2:2, 2:1)
+    /* Hide &quot;unoccupied&quot; gimmick structure */
+    00037718  25170600:setActive(8:7F, 2:0)
+    0003772C  25190800:gimmickGetUserIdI(8:7F, 2:0, 4:0)
+    00037748  25190800:gimmickGetUserIdI(8:7F, 2:1, 4:1)
+    /* Show &quot;occupied&quot; gimmick structure */
+    00037764  25190100:gimmick_getHandle(4:1, 8:7F)
+    00037778  25170600:setActive(8:7F, 2:1)
+    ...
+    000377F0  25000100:cmd_end()
+  /* Checks blue team gauge */
+  000374E4  25161300:getGimmickPowerGaugePoint(8:7F, 2:0, 20:0, 4:2)
+  00037508  25001A00:cmd_ifLBE(20:0, 1.0, 1:37524)
+    00037524  25000700:cmd_mov(8:7F, 8:84)
+    00037538  25170900:getBrakeScore(8:7F, 4:0, 4:1)
+    00037554  25161000:multiSetScore(2:0, 2:2, 4:0, 4:2)
+    /* almost same as red side, excpet the user side is (2:0) */
+    ...
+    00037688  25000100:cmd_end()
+  00037520  25000100:cmd_end() 
+</code></pre>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 17 08 00 / 04 00 00 00 / 36 00 00 00 / 02 00 00 00 / 03 00 00 00 / 02 00 00 00 / 04 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">setBrakeScore((int *)iVar54, (int)3, (int)4)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_089111b8(int param_1,undefined4 param_2)
+
+{
+  undefined4 *puVar1;
+  undefined4 *puVar2;
+  undefined4 *puVar3;
+  int iVar4;
+  int iVar5;
+  uint uVar6;
+  uint *puVar7;
+  
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  puVar2 = (undefined4 *)Pac_Get_Param(param_2,1,1,4);
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,2,1,4);
+  iVar4 = Find_Target_By_HandleID(*(undefined4 *)(param_1 + 0x14),*puVar1,1);
+  if (iVar4 == 0) {
+    iVar4 = 0;
+  }
+  if (iVar4 != 0) {
+    *(short *)(iVar4 + 0x86) = (short)*puVar2;
+    *(short *)(iVar4 + 0x88) = (short)*puVar3;
+    iVar5 = (**(code **)(*(int *)(iVar4 + 4) + 0x34))(iVar4);
+    if (iVar5 == 3) { //squad
+      puVar7 = *(uint **)(iVar4 + 0x5c);
+      if ((puVar7[2] ^ *(uint *)(iVar4 + 0x60) |
+          *puVar7 ^ *(uint *)(iVar4 + 0x58) | puVar7[1] ^ *(uint *)(iVar4 + 0x5c)) != 0) {
+        uVar6 = puVar7[2];
+        while( true ) {
+          if ((uVar6 != 0) &amp;&amp; (iVar5 = (**(code **)(*(int *)(uVar6 + 4) + 0x34))(uVar6), iVar5 == 9)
+             ) {
+            *(short *)(uVar6 + 0x86) = (short)*puVar2;
+            *(short *)(uVar6 + 0x88) = (short)*puVar3;
+          }
+          uVar6 = _DAT_00000004;
+          if (puVar7 != (uint *)0x0) {
+            puVar7 = (uint *)puVar7[1];
+            uVar6 = puVar7[1];
+          }
+          if ((puVar7[2] ^ *(uint *)(iVar4 + 0x60) |
+              *puVar7 ^ *(uint *)(iVar4 + 0x58) | uVar6 ^ *(uint *)(iVar4 + 0x5c)) == 0) break;
+          uVar6 = puVar7[2];
+        }
+      }
+    }
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

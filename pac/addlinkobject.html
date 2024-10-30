@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>addLinkObject </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="addLinkObject ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="addlinkobject">addLinkObject</h1>
+
+<p>Connects a new gimmick to an existing object. The <a href="readarcfile.html">resource</a> of the new object must be <a href="requestactor.html">preloaded</a>.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>addLinkObject</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 17 1c 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x8912a00</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<p>no pos data?</p>
+<ul>
+<li><code>(int *)handle_id</code> <em>(8 bytes)</em> : Variable to <em>store</em> the attached object handle.</li>
+<li><code>(int)gimmickparam_id</code> <em>(8 bytes)</em> : The <code>gimmickparam</code> id of the new gimmick to create.</li>
+<li><code>(int)parent_handle</code> <em>(8 bytes)</em> : The parent handle.</li>
+<li><code>(int)unique_id</code> <em>(8 bytes)</em> : Unique ID of the new gimmick to give.</li>
+<li><code>(String)node</code> : The parent handle node name to attach the object.</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 17 1c 00 / 04 00 00 00 / 0a 00 00 00 / 02 00 00 00 / 44 02 00 00 / 04 00 00 00 / 0f 00 00 00 / 02 00 00 00 / 15 00 00 00 / 61 74 74 61 / 63 68 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">addLinkObject((int *)iVar10, (int)580, (int *)iVar15, (int)21, &quot;attach&quot;)
+</code></pre>
+<p>This is how to apply the VS turret when the fortress is occupied:</p>
+<pre><code class="lang-c">0005B56C  25170600:setActive(8:8B, 2:1)
+0005B580  25171C00:addLinkObject(8:7F, 2:244, 8:8B, 2:8, &quot;attach&quot;)
+0005B5AC  25173600:setModelColor(8:7F, 0.0, 2:67, 2:84, 2:FF, 2:FF)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_08912a00(int param_1,undefined4 param_2)
+
+{
+  undefined *puVar1;
+  undefined4 *puVar2;
+  undefined4 *puVar3;
+  undefined4 *puVar4;
+  undefined4 *puVar5;
+  undefined *puVar6;
+  int iVar7;
+  undefined4 uVar8;
+  undefined *puVar9;
+  undefined local_100 [256];
+  
+  puVar2 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,1,1,4);
+  puVar4 = (undefined4 *)Pac_Get_Param(param_2,2,1,4);
+  puVar5 = (undefined4 *)Pac_Get_Param(param_2,3,1,4);
+  puVar6 = &amp;DAT_00000100;
+  puVar9 = local_100;
+  puVar1 = puVar9;
+  while (puVar1 != (undefined *)0x0) {
+    *puVar9 = 0;
+    puVar9 = puVar9 + 1;
+    puVar6 = puVar6 + -1;
+    puVar1 = puVar6;
+  }
+  Pac_Get_StringParam(param_2,local_100);
+  *puVar2 = 0xffffffff;
+  iVar7 = Find_Target_By_HandleID(*(undefined4 *)(param_1 + 0x14),*puVar4,1);
+  if (iVar7 == 0) {
+    iVar7 = 0;
+  }
+  if (iVar7 != 0) {
+    uVar8 = (**(code **)(*(int *)(iVar7 + 4) + 0xac))(iVar7,*puVar3,local_100,*puVar5);
+    *puVar2 = uVar8;
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

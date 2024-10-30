@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>How To: Create an Enemy Target </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="How To: Create an Enemy Target ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="how-to-create-an-enemy-target">How To: Create an Enemy Target</h1>
+
+<h2 id="how-does-it-work">How does it work</h2>
+<p>There is &quot;generator&quot; that contains object definitions.</p>
+<h2 id="1-create-a-generator-with-create">1. Create a generator with <code>create</code></h2>
+<blockquote>
+<p>This is done in <a href="../setmissiontimmingscript.html">setMissionTimmingScript</a> 1st phase.</p>
+</blockquote>
+<p>Related article: <a href="../create.html">create</a>.</p>
+<h2 id="2-setup-generator">2. Setup generator</h2>
+<blockquote>
+<p>This is done in <a href="../setmissiontimmingscript.html">setMissionTimmingScript</a> 1st phase, right after step above</p>
+</blockquote>
+<p>Related instructions: <a href="category.html#generator-setup">Generator setup</a></p>
+<p>Use 1st parameter from <code>create</code> to define the detail of the generator.</p>
+<ul>
+<li><a href="../setmodeex.html">setModeEx</a>: Defines hitbox layer (is player side or enemy side)</li>
+<li><a href="../setposx.html">setPosX</a>: Defines position</li>
+<li><a href="../setdeathcall.html">setDeathCall</a>: Defines instruction set to call after the unit is dead.</li>
+</ul>
+<h2 id="3-setup-individual-unit-in-the-generator">3. Setup individual unit in the generator.</h2>
+<blockquote>
+<p>This is done in <a href="../setmissiontimmingscript.html">setMissionTimmingScript</a> 1st phase, right after step above</p>
+</blockquote>
+<ul>
+<li><a href="../setreqactortype.html">setReqActorTye</a>:</li>
+<li><a href="../setreqactorcount.html">setReqActorCount</a>: How many actors will you define.</li>
+</ul>
+<h3 id="example-result-as-visualised-table">Example result as visualised table</h3>
+<p>Each table represents generator.</p>
+<p><em>~ Generator (with <code>create</code>) table 1 ~</em></p>
+<ul>
+<li>X position 3200</li>
+<li>Calls address to <code>cmd_end()</code> after death</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>ReqActor0</th>
+<th>ReqActor1</th>
+<th>ReqActor2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yarideth</td>
+<td>Tatedeth</td>
+<td>Yumideth</td>
+</tr>
+<tr>
+<td>2 units</td>
+<td>1 unit</td>
+<td>3 units</td>
+</tr>
+</tbody>
+</table>
+<p><em>~ Generator (with <code>create</code>) table 2 ~</em></p>
+<ul>
+<li>X position 2400</li>
+<li>Calls address <code>0x2099C</code> after death</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>ReqActor0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cyclops</td>
+</tr>
+<tr>
+<td>1 unit</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-spawn-the-generator">4. Spawn the generator</h2>
+<blockquote>
+<p>This is done in <a href="../setmissiontimmingscript.html">setMissionTimmingScript</a> <strong>2nd phase</strong>.</p>
+</blockquote>
+<p>Related instruction: <a href="../spawn.html">Spawn</a></p>
+<p>Spawn delay can be set with <a href="../setreqactordelaytime.html">setReqActorDelayTime</a>.</p>
+<h2 id="bringing-together-example">Bringing together (example)</h2>
+<p>This is <em>spawning motiti in runtime</em> function in debug mode.</p>
+<pre><code class="lang-c">0002B514  25100600:getPack(4:0)
+0002B520  251F0200:create(4:1, 2:1)
+0002B534  251F1B00:setModeEx(4:1, 2:0, 2:FFFFFFFF, 2:FFFFFFFF)
+0002B558  251F0500:setPosX(4:1, 150.0)
+0002B56C  251F0600:setAdventRadius(4:1, 0.0)
+0002B580  251F0800:setDeathCall(4:1, 4:0, 1:248CC)
+0002B59C  251F0900:setReqActorType(4:1, 2:0, 24)
+0002B5B8  251F0A00:setReqActorCount(4:1, 2:0, 2:1)
+0002B5D4  251F0E00:setReqActorPos(4:1, 2:0, 0.0, 0.0)
+0002B5F8  251F1300:spawn(4:1)
+0002B604  25000100:cmd_end()
+</code></pre>
+<h2 id="for-structure">For structure</h2>
+<ol>
+<li>Use <a href="../registconstgimmick.html">registConstGimmick</a> (MissionTimming phase 1).</li>
+<li>Set the gimmick with <a href="../applyconstgimmick.html">applyConstGimmick</a> (MissionTimming phase 2).</li>
+<li>Use <a href="../setgateinfo.html">setGateInfo</a> (last parameter with 1st param 0) to setup the gimmick (<code>registerConstGimmick</code> last parameter).</li>
+<li>Control collision status with <a href="../enablecollisionconstgimmick.html">enableCollisionConstGimmick</a>.</li>
+</ol>
+<h2 id="for-dungeon">For dungeon</h2>
+<ol>
+<li>Use <a href="../setupstartdungeonwall.html">setupStartDungeonWall</a>.</li>
+<li>Call <a href="../setupadddungeonwall.html">setupAddDungeonWall</a>.</li>
+<li>Set detail information of it with <a href="../setgateinfo.html">setGateInfo</a>.</li>
+</ol>
+<ul>
+<li>If there is any lever, <a href="../setreqactortype.html">create the levers</a> first and <a href="../setreqactoruniqueid.html">get thd ID of them</a>.</li>
+</ul>
+<ol start="4">
+<li>Finish with <a href="../setupenddungeonwall.html">setupEndDungeonWall</a></li>
+</ol>
+<h2 id="spawning-units-from-a-structure">Spawning units from a structure</h2>
+<ol>
+<li><a href="how-to-create-an-enemy-target.html#for-structure">Create the tower</a> using <a href="../registconstgimmick.html">registConstGimmick</a>.</li>
+<li>Use generator and connect with <a href="../setmodeex.html">SetModeEx</a> last parameter  (to <code>registeConstGimmick</code> last parameter).</li>
+<li><strong>Set the <a href="../setreqactordelaytime.html">time between respawn</a> and <a href="../setreqactortotal.html">total respawn count</a></strong>.</li>
+<li>Use <a href="../spawn.html">spawn</a> to spawn units.</li>
+</ol>
+<pre><code class="lang-c">/* 1. register const gimmick */
+0005DED8  2516BF00:registConstGimmick(2:118, 8:32, 2:1, 2:2BC, 2:0, 2:0, 2:0, 2:1, 2:1, 2:12C, 2:6E)
+...
+/* 2. define a generator and set &quot;setModeEx&quot; */
+0005EAF8  251F0200:create(8:1A, 2:44C)
+...
+0005EB34  251F1B00:setModeEx(8:1A, 2:1, 2:FFFFFFFF, 2:6E)
+...
+0005EB78  251F0800:setDeathCall(8:1A, 4:0, 1:5F39C)
+0005EB94  251F0900:setReqActorType(8:1A, 2:1, 16)
+...
+/* 3. limit the spawn amount and spawn time */
+0005EF0C  251F1200:setReqActorDelayTime(8:1A, 2:1, 2.0)
+0005EF28  251F0B00:setReqActorTotal(8:1A, 2:1, 2:3)
+</code></pre>
+<h2 id="next-step">Next step</h2>
+<ul>
+<li><a href="how-to-get-a-handle.html">How To: Get a Handle</a></li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

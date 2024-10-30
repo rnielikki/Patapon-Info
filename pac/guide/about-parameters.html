@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>PAC Parameters </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="PAC Parameters ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="pac-parameters">PAC Parameters</h1>
+
+<blockquote>
+<p>This requires background knowledge from <a href="reading-pac.html">Reading PAC#Basics</a>.</p>
+</blockquote>
+<p>PAC Parameters, followed right after the instruction ID, are 4~8 bytes. As 8 bytes, first one is data type.</p>
+<p><code>25 00 17 00 / 04 00 00 00 / 01 00 00 00 / 10 00 00 00 / 00 00 00 00 / 54 0E 00 00</code></p>
+<p>First <code>25 00 17 00</code> is the instruction ID.</p>
+<p>Then, <code>04 00 00 00</code> <strong>here</strong> is type, and the following <code>01 00 00 00</code> here is the value (in this context it is local int parameter ID).</p>
+<p>But at last part, <code>54 0E 00 00</code> (<code>0xE54</code>), is 4-bytes parameter, because it is address.</p>
+<p>Sometimes, for flexible amount of parameters with same type doesn't repeat the type (best seen in e.g. <a href="../cmd_flgand.html">cmd_flgAND</a>).</p>
+<p>So, how do you know if it is 4 bytes or 8 bytes? That's why you have to check the document.</p>
+<p><strong>If you see certain defined type like <code>Int</code>, <code>Float</code>, <code>Int/Float</code> in docs, it should be 8 bytes, if you see <code>Address</code> in docs, it should be 4 bytes.</strong></p>
+<p><strong>Beware of <code>...</code> types in docs, they are multiple parameters, and the type is defined only once.</strong></p>
+<h2 id="parameter-types">Parameter types</h2>
+<h3 id="type-reference-table">Type reference table</h3>
+<p>&quot;Immediate&quot; means it is not variable, but a fixed value.</p>
+<table>
+<thead>
+<tr>
+<th>Type ID</th>
+<th>As HEX</th>
+<th>Var/Imm</th>
+<th>Type</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x0</code></td>
+<td><code>00 00 00 00</code></td>
+<td></td>
+<td><em>none</em></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x1</code></td>
+<td><code>01 00 00 00</code></td>
+<td></td>
+<td><code>index</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x2</code></td>
+<td><code>02 00 00 00</code></td>
+<td>Immediate</td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x4</code></td>
+<td><code>04 00 00 00</code></td>
+<td>Variable</td>
+<td><code>int</code></td>
+<td>local</td>
+</tr>
+<tr>
+<td><code>0x8</code></td>
+<td><code>08 00 00 00</code></td>
+<td>Variable</td>
+<td><code>int</code></td>
+<td>global</td>
+</tr>
+<tr>
+<td><code>0x10</code></td>
+<td><code>10 00 00 00</code></td>
+<td>Immediate</td>
+<td><code>float</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0x20</code></td>
+<td><code>20 00 00 00</code></td>
+<td>Variable</td>
+<td><code>float</code></td>
+<td>local</td>
+</tr>
+<tr>
+<td><code>0x40</code></td>
+<td><code>40 00 00 00</code></td>
+<td>Variable</td>
+<td><code>float</code></td>
+<td>global</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<h4 id="example-1-variable">Example 1. Variable</h4>
+<p><code>25 10 06 00 / 04 00 00 00 / 10 00 00 00</code></p>
+<p>This is <a href="../getpack_25100600.html">getPack (25100600)</a>, which takes 1 parameter.</p>
+<p>So, the 8-bytes of <code>04 00 00 00 / 10 00 00 00</code> is the parameter.</p>
+<p>Based on the reference table, the <code>04 00 00 00</code> (<code>0x4</code>) means <em>local int variable</em>.</p>
+<p>And since this is <strong>variable</strong>, the next value is <code>0x10</code> can be considered as integer variable name.</p>
+<p>So it can be represented as <code>iVar16</code> (or <code>iVar0x10</code>).</p>
+<h4 id="example-2-address">Example 2. Address</h4>
+<p><code>25 00 03 00 / E8 B4 00 00</code></p>
+<p>This is <a href="../cmd_call.html">cmd_call</a>, which takes 1 parameter as address.</p>
+<p>For the address value, you don't need to find it from the table.</p>
+<h4 id="example-3-data-type">Example 3. Data Type</h4>
+<p><code>25 00 17 00 / 08 00 00 00 / 17 00 00 00 / 10 00 00 00 / 00 00 80 3F / 30 18 01 00</code></p>
+<p>This is <a href="../cmd_ifeq.html">cmd_ifEQ</a>, which takes two 8-bytes types, and one 4-bytes type as address as last part.</p>
+<p><code>25 00 17 00 // 08 00 00 00 / 17 00 00 00 // 10 00 00 00 / 00 00 80 3F // 30 18 01 00</code></p>
+<ul>
+<li>For first one, <code>08 00 00 00</code> (<code>0x8</code>) is global int variable</li>
+<li>For second one, <code>10 00 00 00</code> (<code>0x10</code>) is float immediate</li>
+<li>For third one, it is 4-bytes type address, so doesn't need to look up from the table.</li>
+</ul>
+<h4 id="example-4-advanced-simplifying-duplicated-types">Example 4. Advanced: Simplifying Duplicated Types</h4>
+<p><code>25 00 2c 00 / 6C 24 01 00 / 02 00 00 00 / 69 0E 00 00 / 6A 0E 00 00</code></p>
+<p>This is an example from <a href="../cmd_flgand.html">cmd_flgAND</a>.</p>
+<p>In the docs, there is <em>flexible amount of</em> variable(<code>(uint...)Var1</code>), as seen in <code>...</code>.</p>
+<p>So, takes first parameter as address, and second one as the variable, it will look like this:</p>
+<p><code>25 00 2c 00 // 6C 24 01 00 // 02 00 00 00 / 69 0E 00 00 / 6A 0E 00 00</code></p>
+<p>Now, <strong>ONLY the first <code>02 00 00 00</code></strong> here defines the type.</p>
+<ul>
+<li>For first one, it is 4-bytes type address, so doesn't need to look up from the table.</li>
+<li>For second one, <code>02 00 00 00</code> (<code>0x2</code>) is int immediate</li>
+</ul>
+<p>So it is interpreted as <code>cmd_flgAND(0x1246C, (int)0xE69, (int)0xE6A)</code>.</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

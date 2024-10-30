@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>setAzitoInfo </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="setAzitoInfo ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="setazitoinfo">setAzitoInfo</h1>
+
+<p>Sets certain hideout related information. The information depends on <code>info_type</code> parameter.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>setAzitoInfo</code></li>
+<li><strong>Scope</strong>: Azito</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 1c 07 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x8b4d7e0</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(int)info_type</code> <em>(8 bytes)</em> : Type to get the info. It is limited to 0x1, 0x2, 0x3, 0x7, 0x8, 0x9, 0xA, 0x12.</li>
+<li><code>(uint *)value</code> <em>(8 bytes)</em> : Value to set. Depends on the <code>info_type</code>, this can be either boolean or int.</li>
+</ul>
+<p>For more information about <code>info_type</code>, check <a href="getazitoinfo.html">getAzitoInfo</a>.</p>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 1c 07 00 / 02 00 00 00 / 0a 00 00 00 / 02 00 00 00 / 01 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">setAzitoInfo((int)10, (int)1)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_Azito__08b4d7e0(int param_1,undefined4 param_2)
+
+{
+  int *piVar1;
+  int iVar2;
+  undefined4 uVar3;
+  int iVar4;
+  
+  piVar1 = (int *)Pac_Get_Param(param_2,0,1,4);
+  iVar4 = *piVar1;
+  piVar1 = (int *)Pac_Get_Param(param_2,1,1,4);
+  if (*(int *)(param_1 + 0x10) != 0) {
+    iVar2 = Save::Get_Save_BaseAddr(1);
+    return__0x1c(*(undefined4 *)(iVar2 + 0x50));
+    Save::Get_Save_BaseAddr(1);
+    uVar3 = Save::Get_Save_BaseAddr(1);
+    iVar2 = Save::Get_BaseAddr__0x78(uVar3,1);
+    if (iVar4 == 0x12) {
+      *(bool *)(*(int *)(*(int *)(param_1 + 0x10) + 0x1c4) + 0x28) = *piVar1 != 0;
+    }
+    else if (iVar4 == 10) {
+      *(bool *)(*(int *)(*(int *)(param_1 + 0x10) + 0x1c4) + 0x21) = *piVar1 != 0;
+    }
+    else if (iVar4 == 9) {
+      iVar4 = FUN_Azito__08ad37f0(*(undefined4 *)(*(int *)(param_1 + 0x10) + 0x1c4));
+      if (iVar4 != 0) {
+        *(bool *)(iVar4 + 0x361) = *piVar1 != 0;
+      }
+    }
+    else if (iVar4 == 8) {
+      FUN_0884f334(*(undefined4 *)(*(int *)(*(int *)(param_1 + 0x10) + 0x10) + 0x14),*piVar1,3);
+    }
+    else if (iVar4 == 7) {
+      FUN_Azito__08ad35f0(*(undefined4 *)(*(int *)(param_1 + 0x10) + 0x1c4),*piVar1);
+    }
+    else if (iVar4 == 3) {
+      *(bool *)(*(int *)(*(int *)(param_1 + 0x10) + 0x1c4) + 0x20) = *piVar1 != 0;
+    }
+    else if (iVar4 == 2) {
+      *(int *)(*(int *)(iVar2 + 0x44) + 0x550) = *piVar1;
+    }
+    else if (iVar4 == 1) {
+      *(int *)(*(int *)(iVar2 + 0x44) + 0x534) = *piVar1;
+    }
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

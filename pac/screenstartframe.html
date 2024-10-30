@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>screenStartFrame </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="screenStartFrame ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="screenstartframe">screenStartFrame</h1>
+
+<p>Limits screen view as rectangle shape.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>screenStartFrame</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 16 a9 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x8922e24</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(int)z_priority</code> <em>(8 bytes)</em> : z-index (render priority), higher goes more top.</li>
+<li><code>(float)x_position</code> <em>(8 bytes)</em> : X position, as PSP screen pixels.</li>
+<li><code>(float)y_position</code> <em>(8 bytes)</em> : Y position, as PSP screen pixels.</li>
+<li><code>(float)red</code> <em>(8 bytes)</em> : Red value of the blind area, 0~1.</li>
+<li><code>(float)green</code> <em>(8 bytes)</em> : Green value of the blind area, 0~1.</li>
+<li><code>(float)blue</code> <em>(8 bytes)</em> : Blue value of the blind area, 0~1.</li>
+<li><code>(float)alpha</code> <em>(8 bytes)</em> : Alpha value of the blind area, 0~1.</li>
+<li><code>(float)box_size</code> <em>(8 bytes)</em> : Box size, as PSP screen pixels. The bigger, the more sight.</li>
+<li><code>(float)box_size_y</code> <em>(8 bytes)</em> : Y size, setting -1 fits to screen ratio.</li>
+<li><code>(float)animation_time</code> <em>(8 bytes)</em> : Animation time as seconds, 0 for no animation.</li>
+</ul>
+<p>The pivot is center and offset starts from top.</p>
+<p>Note that <strong>PSP screen size is 480 x 272</strong> and the <strong>size pivot is on the middle, offset starts from top left</strong>.  240 x 136 will move the rectangle to the center.</p>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 16 a9 00 / 02 00 00 00 / ac bb 0d 00 / 10 00 00 00 / 00 00 70 43 / 10 00 00 00 / 00 00 08 43 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 80 3f / 10 00 00 00 / 00 00 c8 42 / 10 00 00 00 / 00 00 80 bf / 10 00 00 00 / 00 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">screenStartFrame((int)900012, (float)240.0, (float)136.0, (float)0.0, (float)0.0, (float)0.0, (float)1.0, (float)100.0, (float)-1.0, (float)0.0)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_08922e24(int param_1,undefined4 param_2)
+
+{
+  undefined4 *puVar1;
+  int *piVar2;
+  undefined4 *puVar3;
+  int iVar4;
+  undefined4 *puVar5;
+  int iVar6;
+  int iVar7;
+  undefined4 uVar8;
+  undefined4 uVar9;
+  undefined4 uVar10;
+  undefined4 uVar11;
+  undefined4 uVar12;
+  undefined4 uVar13;
+  undefined4 uVar14;
+  undefined4 uVar15;
+  undefined4 uVar16;
+  undefined4 local_20;
+  undefined4 local_1c;
+  undefined4 local_18;
+  undefined4 local_14;
+  undefined4 local_10;
+  undefined4 local_c;
+  undefined4 local_8;
+  undefined4 local_4;
+  
+  piVar2 = (int *)Pac_Get_Param(param_2,0,1,4);
+  iVar7 = *piVar2;
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  uVar16 = *puVar3;
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  uVar14 = *puVar3;
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  uVar15 = *puVar3;
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  uVar12 = *puVar3;
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  uVar13 = *puVar3;
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  uVar10 = *puVar3;
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  uVar11 = *puVar3;
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  uVar8 = *puVar3;
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  uVar9 = *puVar3;
+  if ((*(int *)(param_1 + 0x10) != 0) &amp;&amp;
+     (iVar4 = *(int *)(*(int *)(param_1 + 0x10) + 0x2b8), iVar4 != 0)) {
+    iVar6 = *(int *)(*(int *)(iVar4 + 0x2c) + 0x60);
+    iVar4 = (**(code **)(*(int *)(iVar6 + 0xa8) + 0x10))(iVar6 + 0x8c);
+    if (iVar7 != iVar4) {
+      (**(code **)(*(int *)(iVar6 + 0xa8) + 0x14))(iVar6 + 0x8c,iVar7);
+    }
+    puVar3 = (undefined4 *)&amp;DAT_00000010;
+    puVar5 = &amp;local_20;
+    puVar1 = puVar5;
+    while (puVar1 != (undefined4 *)0x0) {
+      *(undefined *)puVar5 = 0;
+      puVar5 = (undefined4 *)((int)puVar5 + 1);
+      puVar3 = (undefined4 *)((int)puVar3 + -1);
+      puVar1 = puVar3;
+    }
+    local_20 = uVar15;
+    local_1c = uVar12;
+    local_18 = uVar13;
+    local_14 = uVar10;
+    local_10 = uVar11;
+    local_c = uVar8;
+    local_8 = uVar16;
+    local_4 = uVar14;
+    func_0x08b33630(uVar9,iVar6,&amp;local_8,&amp;local_20,&amp;local_10);
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>addAbnormalStatus </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="addAbnormalStatus ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="addabnormalstatus">addAbnormalStatus</h1>
+
+<p>Sets status effect as <strong>status ID</strong>.</p>
+<p>Check <a href="guide/reference-table.html#as-non-flag">status ID table</a> for the status effect.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>addAbnormalStatus</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 17 4f 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x8916778</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(int *)handle_id</code> <em>(8 bytes)</em> : Unit or squad handle, obtained from <a href="getunithandle.html">getUnitHandle</a> or <a href="getsquadhandle.html">getSquadHandle</a>.
+<ul>
+<li>If the handle is squad, this is applied to the whole squad.</li>
+</ul>
+</li>
+<li><code>(int)status_ID</code> <em>(8 bytes)</em> : The <a href="guide/reference-table.html#as-non-flag">status effedt ID</a> to apply to the unit.</li>
+<li><code>(float)duration</code> <em>(8 bytes)</em> : Duration of the status as <em>seconds</em>.</li>
+<li><code>(bool)is_apply_effect</code> <em>(8 bytes)</em> : If this is zero, applies actual status effect to the unit. Otherwise, set status flag only.</li>
+</ul>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li><strong>For tumble, use <a href="addabnormalstatusslip.html">addAbnormalStatusSlip</a></strong> instead!</li>
+<li><strong>For knockback, use <a href="addabnormalstatusblowoff.html">addAbnormalStatusBlowOff</a></strong> instead!</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 17 4f 00 / 04 00 00 00 / 19 00 00 00 / 02 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 20 41 / 02 00 00 00 / 01 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">addAbnormalStatus((int *)iVar25, (int)0, (float)10, (int)1)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_08916778(int param_1,undefined4 param_2)
+
+{
+  int *piVar1;
+  undefined4 *puVar2;
+  undefined4 *puVar3;
+  int *piVar4;
+  int iVar5;
+  int iVar6;
+  undefined uStack64;
+  byte local_3f;
+  undefined4 local_38;
+  undefined4 local_10;
+  undefined4 local_c;
+  undefined4 local_8;
+  undefined4 local_4;
+  
+  piVar1 = (int *)Pac_Get_Param(param_2,0,1,4);
+  puVar2 = (undefined4 *)Pac_Get_Param(param_2,1,1,4);
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,2,1,4);
+  piVar4 = (int *)Pac_Get_Param(param_2,3,1,4);
+  if (*piVar1 != -1) {
+    iVar5 = Find_Target_By_HandleID(*(undefined4 *)(param_1 + 0x14),*piVar1,1);
+    if (iVar5 == 0) {
+      iVar5 = 0;
+    }
+    if (iVar5 != 0) {
+      iVar6 = (**(code **)(*(int *)(iVar5 + 4) + 0x34))(iVar5);
+      if (iVar6 == 9) {
+        iVar5 = iVar5 + 0x180;
+        local_10 = 0;
+        local_c = 0;
+        local_8 = 0;
+        local_4 = 0;
+        Syscall::Kernel::Kernel_Memset(&amp;uStack64,0,0x40);
+        local_38 = 0xffffffff;
+        local_3f = local_3f &amp; 0xf6 | 9;
+        switch(*puVar2) {
+        case 0:
+          Damage::Status::Apply_Status_Effect(*puVar3,iVar5,0,1,&amp;uStack64,*piVar4 != 0);
+          break;
+        case 1:
+          Damage::Status::Apply_Status_Effect(*puVar3,iVar5,1,1,&amp;uStack64,*piVar4 != 0);
+          break;
+        case 2:
+          Damage::Status::Apply_Status_Effect(*puVar3,iVar5,2,1,&amp;uStack64,*piVar4 != 0);
+          break;
+        case 3:
+          Damage::Status::Apply_Status_Effect(*puVar3,iVar5,3,1,&amp;uStack64,*piVar4 != 0);
+          break;
+        case 4:
+          Damage::Status::Apply_Status_Effect(*puVar3,iVar5,4,1,&amp;uStack64,*piVar4 != 0);
+          break;
+        case 6:
+          Damage::Status::Apply_Status_Effect(*puVar3,iVar5,6,1,&amp;uStack64,*piVar4 != 0);
+        }
+      }
+      else {
+        iVar6 = (**(code **)(*(int *)(iVar5 + 4) + 0x34))(iVar5);
+        if (iVar6 == 3) {
+          switch(*puVar2) {
+          case 0:
+            FUN_088c6cdc(*puVar3,iVar5,0,*piVar4 != 0);
+            break;
+          case 1:
+            FUN_088c6cdc(*puVar3,iVar5,1,*piVar4 != 0);
+            break;
+          case 2:
+            FUN_088c6cdc(*puVar3,iVar5,2,*piVar4 != 0);
+            break;
+          case 3:
+            FUN_088c6cdc(*puVar3,iVar5,3,*piVar4 != 0);
+            break;
+          case 4:
+            FUN_088c6cdc(*puVar3,iVar5,4,*piVar4 != 0);
+            break;
+          case 6:
+            FUN_088c6cdc(*puVar3,iVar5,6,*piVar4 != 0);
+          }
+        }
+        else {
+          iVar6 = (**(code **)(*(int *)(iVar5 + 4) + 0x34))(iVar5);
+          if (iVar6 == 2) {
+            switch(*puVar2) {
+            case 0:
+              FUN_088e361c(*puVar3,iVar5,0,*piVar4 != 0);
+              break;
+            case 1:
+              FUN_088e361c(*puVar3,iVar5,1,*piVar4 != 0);
+              break;
+            case 2:
+              FUN_088e361c(*puVar3,iVar5,2,*piVar4 != 0);
+              break;
+            case 3:
+              FUN_088e361c(*puVar3,iVar5,3,*piVar4 != 0);
+              break;
+            case 4:
+              FUN_088e361c(*puVar3,iVar5,4,*piVar4 != 0);
+              break;
+            case 6:
+              FUN_088e361c(*puVar3,iVar5,6,*piVar4 != 0);
+            }
+          }
+        }
+      }
+    }
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

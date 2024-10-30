@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>How To: Control a Squad </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="How To: Control a Squad ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="how-to-control-a-squad">How To: Control a Squad</h1>
+
+<p>Article Before: <a href="how-to-control-a-squad.html">How To: Control a Squad</a></p>
+<h2 id="controlling-bosses">Controlling Bosses</h2>
+<p>All minibosses' and bosses' action are <strong>automatic</strong>, controlled by Assembly or <code>monster.pac</code>, which doesn't need to touch.</p>
+<p>Though, if you want to control the boss manually, consider <a href="../enablebossmanualctrl.html">enableBossManualCtrl</a>.</p>
+<p>Related instructions: <a href="category.html#boss-control">Boss Control</a></p>
+<h2 id="small-units">Small units</h2>
+<p>Related instructions: <a href="category.html#unit-control">Unit Control</a></p>
+<p>Unlike boss, small units like deths or dark heroes are controlled by separately defined PAC instructions.</p>
+<h3 id="auto-controlled-units">Auto controlled units</h3>
+<p>The &quot;auto control&quot; here means simple march and attack, like regular bonedeth units do.</p>
+<ol>
+<li>Set <a href="../setunitctrlmode.html">setUnitCtrlMode</a> with <em>zero <code>mode_id</code></em> so can perform regular march-attack.</li>
+<li>Set <a href="../setunitctrlstartacttype.html">setUnitCtrlStartActType</a> with <em>zero <code>command_id</code></em> so march by default.</li>
+<li>Use <a href="../setunitctrlactivity_251f1c00.html">setUnitCtrlActivity</a> to connect <a href="reference-table.html#squadactivityparam-ids-pve-only">the squadparam ID</a>.</li>
+<li>Set <a href="../setreqactorfixposflag.html">setReqActorFixPosFlag</a> with <em>zero <code>can_float</code></em>.</li>
+</ol>
+<p>Note the units can do only march, attack and defend.</p>
+<pre><code class="lang-c">0005AF34  25100600:getPack(8:5B)
+0005AF40  251F2600:setUnitCtrlTimingScript_Int(8:1A, 2:7, 8:5B, 1:1C010)
+0005AF64  251F1700:setUnitCtrlMode(8:1A, 2:5, 2:0)
+0005AF80  251F2300:setUnitCtrlStartActType(8:1A, 2:5, 2:2)
+0005AF9C  251F1C00:setUnitCtrlActivity(8:1A, 2:5, 2:0, 2:5C3)
+0005AFC0  251F1C00:setUnitCtrlActivity(8:1A, 2:5, 2:1, 2:5C5)
+0005AFE4  251F1C00:setUnitCtrlActivity(8:1A, 2:5, 2:2, 2:5C9)
+0005B008  251F1A00:setReqActorFixPosFlag(8:1A, 2:5, 2:0)
+</code></pre>
+<h3 id="maunally-controlling-units">Maunally controlling units</h3>
+<p>Some dark heroes' actions are manually controlled for story mission balance.</p>
+<p>(If they perform heromode all the times, the gameplay will be harder).</p>
+<ol>
+<li>Connect to the unit activity with the <a href="../setunitctrlactivity_251f1c00.html">setUnitCtrlActivity</a>.</li>
+<li>Set/Change <a href="../setunitctrlcurrentacttype_2516d800.html">setUnitCtrlCurrentActType</a>.</li>
+</ol>
+<p>This is Ragewolf action in his first encounter (Ragewolf and the Mysterious Birch Grove):</p>
+<pre><code class="lang-c">/*setting up the actions */
+00062778  25004B00:cmd_getArray(4:40, 8:11B, 4:2B)
+00062794  25004B00:cmd_getArray(4:40, 8:11A, 4:2A)
+000627B0  251F1C00:setUnitCtrlActivity(4:2B, 4:2A, 2:0, 2:3BA)
+000627D4  25004B00:cmd_getArray(4:40, 8:11B, 4:2B)
+000627F0  25004B00:cmd_getArray(4:40, 8:11A, 4:2A)
+0006280C  251F1C00:setUnitCtrlActivity(4:2B, 4:2A, 2:1, 2:3B2) //connects to defend squadlineparam
+00062830  25004B00:cmd_getArray(4:40, 8:11B, 4:2B)
+0006284C  25004B00:cmd_getArray(4:40, 8:11A, 4:2A)
+00062868  251F1C00:setUnitCtrlActivity(4:2B, 4:2A, 2:2, 2:3C4) //connects to heromode squadlineparam
+0006288C  25000C00:cmd_inc(8:CA)
+...
+/* sets heromode action */
+0006289C  25004B00:cmd_getArray(4:40, 8:11B, 4:2B)
+000628B8  25004B00:cmd_getArray(4:40, 8:11A, 4:2A)
+000628D4  251F2700:setUnitCtrlCurrentActType(4:2B, 4:2A, 2:2) //&lt;&lt;- THIS
+000628F0  25004A00:cmd_setArray(4:40, 8:121, -1.0)
+0006290C  25000700:cmd_mov(8:5B, 4:40)
+...
+/* sets defending action */
+000629F8  25000500:cmd_resJmp(2:0, 1:284)
+00062A08  25004B00:cmd_getArray(4:40, 8:11B, 4:2B)
+00062A24  25004B00:cmd_getArray(4:40, 8:11A, 4:2A)
+00062A40  251F2700:setUnitCtrlCurrentActType(4:2B, 4:2A, 2:1) //&lt;&lt;- THIS
+00062A5C  25004A00:cmd_setArray(4:40, 8:121, -1.0)
+</code></pre>
+<h3 id="units-on-a-structure">Units on a structure</h3>
+<p>For bonedeth dying with their tower:</p>
+<ol>
+<li><a href="how-to-create-an-enemy-target.html#for-structure">Create the tower</a> using <a href="../registconstgimmick.html">registConstGimmick</a>.</li>
+<li>Use <a href="../create.html">generator</a> and connect with <a href="../setmodeex.html">SetModeEx</a> last parameter  (to <code>registeConstGimmick</code> last parameter).</li>
+<li>Use <a href="../setdeathcall.html">setDeathCall</a> to call <em>specific instructions</em>.</li>
+<li>Apply <a href="../setreqactorpos.html">position</a>, <a href="../setunitctrlactivity_251f1c00.html">unit activity</a>, <a href="../setreqactorfixposflag.html">fix position</a> etc to the unit.</li>
+<li>In <em>the spcific instructions</em>, get that enemy squad with <a href="../getunitsquadhandle.html">getUnitSquadHandle</a>.</li>
+<li>Kill the squad with <a href="../kill.html">kill</a>.</li>
+</ol>
+<pre><code class="lang-c">/* 1. register constgimmick */
+00064900  2516BF00:registConstGimmick(2:E4, 8:32, 2:1, 2:5DC, 2:0, 2:0, 2:0, 2:1, 2:1, 2:190, 2:82)
+/* 2~3. set an generator with setModeEx, use setDeathCall to call when the gimmick is destroyed */
+00065E64  251F0200:create(8:1A, 2:514)
+...
+00065EA0  251F1B00:setModeEx(8:1A, 2:1, 2:FFFFFFFF, 2:82) //calls setDeathCall() when ID &quot;0x82&quot; structure is destroyed
+...
+00065ED8  25100600:getPack(4:0)
+00065EE4  251F0800:setDeathCall(8:1A, 4:0, 1:66B88) //When gimmick is destroyed call 66B88
+00065F00  251F0900:setReqActorType(8:1A, 2:1, 15) //NOTE THIS STARTS FROM 1, sets deth squad
+00065F1C  251F0A00:setReqActorCount(8:1A, 2:1, 2:1) //one yumideth
+00065F38  251F0E00:setReqActorPos(8:1A, 2:1, -44.0, 83.0) //note there is Y position
+...
+00065F9C  251F1800:setReqActorUniqueId(8:1A, 2:1, 2:83) //ID 83
+...
+00065FE8  251F0900:setReqActorType(8:1A, 2:2, 15)
+00066004  251F0A00:setReqActorCount(8:1A, 2:2, 2:4) //4 yumideths
+00066020  251F0E00:setReqActorPos(8:1A, 2:2, -5.0, 140.0)//note there is Y position
+...
+00066084  251F1800:setReqActorUniqueId(8:1A, 2:2, 2:84) //ID 84
+/* 4. Set position to the unit. */
+000663AC  251F1700:setUnitCtrlMode(8:1A, 2:1, 2:0) //normal control mode (0) somehow works.
+000663C8  251F2300:setUnitCtrlStartActType(8:1A, 2:1, 2:1) //defend as default.
+000663E4  251F1C00:setUnitCtrlActivity(8:1A, 2:1, 2:0, 2:5D4) //march (none)
+00066408  251F1C00:setUnitCtrlActivity(8:1A, 2:1, 2:1, 2:5D6) //defend
+0006642C  251F1C00:setUnitCtrlActivity(8:1A, 2:1, 2:2, 2:5D9) //attack
+00066450  251F1A00:setReqActorFixPosFlag(8:1A, 2:1, 2:1) //So the units do not fall from the structure.
+
+/* 5~6. The part that is called by setDeathCall() */
+00066B88  25163700:getUnitSquadHandle(8:1A, 2:83)
+00066B9C  25172600:kill(8:1A, -1.0, -1.0) //Kill all from squad ID 83.
+00066BB8  25163700:getUnitSquadHandle(8:1A, 2:84)
+00066BCC  25172600:kill(8:1A, -1.0, -1.0) //Kill all from squad ID 84.
+</code></pre>
+<h3 id="units-riding-a-gimmick-or-monster">Units riding a gimmick or monster</h3>
+<p>The key point is using <a href="category.html#node">nodes</a> to set the unit position.</p>
+<h4 id="example">Example</h4>
+<p>This example is how Ravenous rides on the dragon in <em>Ravenous: Duel of the Fate</em></p>
+<p>First, set up the unit.</p>
+<pre><code class="lang-c">/* Setting up riding unit (Ravenous) */
+...
+0005C8C4  25163D00:getUnitHandle(8:CB, 4:18, 2:0)
+0005C8E0  25163E00:setUnitCtrlEnable(8:CB, 2:0) //The model shouldn't do anything, let the dragon attack
+0005C8F4  25173E00:enableCollision(8:CB, 2:0, 2:0) //Delete collision so can't kill the unit only
+0005C910  25170B00:setModelInfo(8:CB, 1367.0, 167.0, 0.0, 0.0, 0.0)
+0005C944  25173700:playMotion(8:CB, 2:1, 2:1, 0.0, 0.0)
+0005C970  25171000:setFixMoveEnable(8:CB, 2:1) //Fix the unit Y position so doesn't affect by gravity
+0005C998  25163700:getUnitSquadHandle(4:2C, 2:CA)
+0005C9AC  25163D00:getUnitHandle(4:2D, 4:2C, 2:0)
+...
+</code></pre>
+<p>Next, ride to the unit.</p>
+<pre><code class="lang-c">0005CBA4  25210300:enableBossManualCtrl(8:CA, 2:1) //PAC instructioni will move the dragon
+...
+/* Attach the unit */
+0005D414  25171A00:setLink(8:CC, 8:CB, &quot;kubi_bone5&quot;)
+0005D434  25171B00:setLinkParam(8:CB, 2:1, 2:0, 2:0, 0.0, 18.0, 0.0)
+0005D470  25174A00:setLinkInfo(8:CB, 2:1, 2:5)
+0005D48C  25177100:enableRenderAttach(8:CB, 2:0)
+0005D4A0  25173700:playMotion(8:CB, 2:A, 2:0, 0.0, 0.0)
+0005D4CC  25213900:wakeUpForce(8:CA) //wake up the dragon
+...
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

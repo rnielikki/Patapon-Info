@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>setActionController </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="setActionController ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="setactioncontroller">setActionController</h1>
+
+<p><strong>Description</strong> goes here.</p>
+<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>setActionController</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 19 02 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x8940f00</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(int)gimmick_handle</code> <em>(8 bytes)</em> : Gimmick handle, other kinds of handle won't work.</li>
+<li><code>(int)type</code> <em>(8 bytes)</em> : Control Type, expected 0~4.</li>
+<li><code>(float)time</code> <em>(8 bytes)</em> : Delay time (cooltime) between actions, as seconds.</li>
+<li><code>(float)Var3</code> <em>(8 bytes)</em> : Can keep zero. Works only <code>type</code> is 3 or 4.</li>
+<li><code>(float)Var4</code> <em>(8 bytes)</em> : Can keep zero. Works only <code>type</code> is 3 or 4.</li>
+<li><code>(Undefined)Var5</code> <em>(8 bytes)</em> : Unused, can keep zero.</li>
+<li><code>(Undefined)Var6</code> <em>(8 bytes)</em> : Unused, can keep zero.</li>
+<li><code>(Undefined)Var7</code> <em>(8 bytes)</em> : Unused, can keep zero.</li>
+</ul>
+<p>To properly use this, do not use 'In sync' (thus avoid 4).</p>
+<p>|<code>type</code>|In sync|
+|0x0|No|
+|0x1|No|
+|0x2|No|
+|0x3|No|
+|0x4|Yes (Does not work well)|</p>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 19 02 00 / 04 00 00 00 / 0a 00 00 00 / 02 00 00 00 / 01 00 00 00 / 10 00 00 00 / 00 00 a0 40 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">setActionController((int *)iVar10, (int)1, (float)5, (float)0, (float)0, (float)0, (float)0, (float)0)
+</code></pre>
+<p>This activates turret control:</p>
+<pre><code class="lang-c">0005B56C  25170600:setActive(8:8B, 2:1)
+0005B580  25171C00:addLinkObject(8:7F, 2:244, 8:8B, 2:8, &quot;attach&quot;)
+0005B5AC  25173600:setModelColor(8:7F, 0.0, 2:67, 2:84, 2:FF, 2:FF)
+0005B5E0  25190200:setActionController(8:7F, 2:1, 5.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_08940f00(int param_1,undefined4 param_2)
+
+{
+  undefined4 *puVar1;
+  int *piVar2;
+  undefined4 *puVar3;
+  undefined4 *puVar4;
+  undefined4 *puVar5;
+  int iVar6;
+  int iVar7;
+  
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  piVar2 = (int *)Pac_Get_Param(param_2,1,1,4);
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,2,1,4);
+  puVar4 = (undefined4 *)Pac_Get_Param(param_2,3,1,4);
+  puVar5 = (undefined4 *)Pac_Get_Param(param_2,4,1,4);
+  Pac_Get_Param(param_2,5,1,4);
+  Pac_Get_Param(param_2,6,1,4);
+  Pac_Get_Param(param_2,7,1,4);
+  iVar6 = Find_Target_By_HandleID(*(undefined4 *)(*(int *)(param_1 + 0x10) + 0xe8),*puVar1,1);
+  if ((iVar6 != 0) &amp;&amp; (iVar7 = (**(code **)(*(int *)(iVar6 + 4) + 0x34))(iVar6), iVar7 == 10)) {
+    iVar7 = *piVar2;
+    if (iVar7 == 4) {
+      FUN_0894db68(*puVar3,*puVar4,*puVar5,*(int *)(*(int *)(param_1 + 0x10) + 0x108) + 0x16a4,iVar6
+                   ,1);
+    }
+    else if (iVar7 == 3) {
+      FUN_0894db68(*puVar3,*puVar4,*puVar5,*(int *)(*(int *)(param_1 + 0x10) + 0x108) + 0x16a4,iVar6
+                   ,0);
+    }
+    else if (iVar7 == 2) {
+      FUN_0894db68(*puVar3,0,0,*(int *)(*(int *)(param_1 + 0x10) + 0x108) + 0x16a4,iVar6,0);
+    }
+    else if (iVar7 == 1) {
+      FUN_0894db68(*puVar3,0,0,*(int *)(*(int *)(param_1 + 0x10) + 0x108) + 0x16a4,iVar6,0);
+    }
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

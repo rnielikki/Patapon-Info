@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>addQuest </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="addQuest ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="addquest">addQuest</h1>
+
+<p>Adds a quest on a map. <strong>Called in a world map</strong>.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>addQuest</code></li>
+<li><strong>Scope</strong>: Azito</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 1c 14 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x8b4e958</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(int)mission_id</code> <em>(8 bytes)</em> : ID of the mission, the id is <em>unique in the map</em>.
+<ul>
+<li>The mission ID can be duplicated in different world map.</li>
+</ul>
+</li>
+<li><code>(int)group_id</code> <em>(8 bytes)</em> : Group of the mission. Same group ID will be placed in same category in the world map. See details below.
+<ul>
+<li>Note this is different from given ID in <a href="addarea.html">addArea</a>, and this considers &quot;depths&quot; dungeon as separated group.</li>
+</ul>
+</li>
+<li><code>(int)name_msg</code> <em>(8 bytes)</em> : Message ID of the mission name.</li>
+<li><code>(int)description_msg</code> <em>(8 bytes)</em> : Message ID of the description.
+<ul>
+<li>The message IDs are ID in <code>loadinggroup/azitolocal/localize/(language)/worldmapdata/scriptlist</code>(non-dlc) or inside <code>98D1E9D2</code> (dlc), the message IDs are NOT defined in the PAC file.</li>
+</ul>
+</li>
+<li><code>(int)theme_id</code> <em>(8 bytes)</em> : Default <a href="guide/reference-table.html#theme-ids">theme ID</a>. Custom (selected) theme or <a href="setmssionbgmid.html">setMssionBgmId</a> overwrites this.</li>
+<li><code>(int)vs_type</code> <em>(8 bytes)</em> : Affects VS rule screen. 0: PVE Mission, 1: Head-on, 2: Missile, 3:Racing, 4: Hellgate (unused).</li>
+<li><code>(bool)optional_mission</code> <em>(8 bytes)</em> : If this is 0, it means this is necessary story mission for story progress.</li>
+<li><code>(bool)Var7</code> <em>(8 bytes)</em> : Keep this as 1. Please describe what this actually does.</li>
+<li><code>(bool)new_mission</code> <em>(8 bytes)</em> : Mark the mission as new mission.</li>
+<li><code>(bool)is_replayable</code> <em>(8 bytes)</em> : If this is not zero, the mission can be played again after finishing it.</li>
+<li><code>(String)Pac_file_name</code> : Name of the PAC file.</li>
+</ul>
+<h3 id="group_id-index"><code>group_id</code> index</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Group Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x1</td>
+<td>Pataon training ground</td>
+</tr>
+<tr>
+<td>0x2</td>
+<td>Field of Angry Giants</td>
+</tr>
+<tr>
+<td>0x3</td>
+<td>Arena of Valour</td>
+</tr>
+<tr>
+<td>0x4</td>
+<td>Cave of Valour</td>
+</tr>
+<tr>
+<td>0x5</td>
+<td>Depths of Rage</td>
+</tr>
+<tr>
+<td>0x6</td>
+<td>Snow Field of Sullid Tears</td>
+</tr>
+<tr>
+<td>0x7</td>
+<td>Racing Alley of Purity</td>
+</tr>
+<tr>
+<td>0x8</td>
+<td>Tower of Purity</td>
+</tr>
+<tr>
+<td>0x9</td>
+<td>Heights of Lust</td>
+</tr>
+<tr>
+<td>0xA</td>
+<td>Plateau of Popmous Wings</td>
+</tr>
+<tr>
+<td>0xB</td>
+<td>Range of Justice</td>
+</tr>
+<tr>
+<td>0xC</td>
+<td>Castle of Justice</td>
+</tr>
+<tr>
+<td>0xD</td>
+<td>Dungeon of Pride</td>
+</tr>
+<tr>
+<td>0xE</td>
+<td>Greedy Mask Jungle</td>
+</tr>
+<tr>
+<td>0xF</td>
+<td>Arena of Earnestness</td>
+</tr>
+<tr>
+<td>0x10</td>
+<td>Estate of Earnestness</td>
+</tr>
+<tr>
+<td>0x11</td>
+<td>Basement of Greed</td>
+</tr>
+<tr>
+<td>0x12</td>
+<td>Bottomless Stomach Desert</td>
+</tr>
+<tr>
+<td>0x13</td>
+<td>Racing Alley of Restraint</td>
+</tr>
+<tr>
+<td>0x14</td>
+<td>Labyrinth of Restraint</td>
+</tr>
+<tr>
+<td>0x15</td>
+<td>Depths of Gluttony</td>
+</tr>
+<tr>
+<td>0x16</td>
+<td>Volcano Zone of the Lazy Demon</td>
+</tr>
+<tr>
+<td>0x17</td>
+<td>Range of Adamance</td>
+</tr>
+<tr>
+<td>0x18</td>
+<td>Evilmass of Adamance</td>
+</tr>
+<tr>
+<td>0x19</td>
+<td>Heights of Indolence</td>
+</tr>
+<tr>
+<td>0x1A</td>
+<td>Savannah of Envious Eyes</td>
+</tr>
+<tr>
+<td>0x1B</td>
+<td>Arena of Tolerance</td>
+</tr>
+<tr>
+<td>0x1C</td>
+<td>Tomb of Tolerance</td>
+</tr>
+<tr>
+<td>0x1D</td>
+<td>Depths of Jealousy</td>
+</tr>
+<tr>
+<td>0x3E</td>
+<td>DLC Mission selector</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 1c 14 00 / 02 00 00 00 / 01 00 00 00 / 02 00 00 00 / 01 00 00 00 / 02 00 00 00 / 3c 00 00 00 / 02 00 00 00 / 3d 00 00 00 / 02 00 00 00 / 01 00 00 00 / 02 00 00 00 / 00 00 00 00 / 02 00 00 00 / 01 00 00 00 / 02 00 00 00 / 01 00 00 00 / 08 00 00 00 / 39 00 00 00 / 08 00 00 00 / 3a 00 00 00 / 4d 69 73 73 / 69 6f 6e 5f / 30 31 5f 30 / 30 2e 70 61 / 63 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">addQuest((int)1, (int)1, (int)60, (int)61, (int)1, (int)0, (int)1, (int)1, ((global)int *)giVar57, ((global)int *)giVar58, &quot;Mission_01_00.pac&quot;)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_Azito__08b4e958(int param_1,undefined4 param_2)
+
+{
+  undefined4 *puVar1;
+  undefined4 uVar2;
+  undefined4 uVar3;
+  undefined4 uVar4;
+  undefined4 uVar5;
+  int *piVar6;
+  int iVar7;
+  int iVar8;
+  undefined4 uVar9;
+  int iVar10;
+  int iVar11;
+  undefined4 uVar12;
+  undefined4 uVar13;
+  undefined4 uVar14;
+  undefined4 uVar15;
+  undefined4 uVar16;
+  undefined auStack256 [256];
+  
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  uVar14 = *puVar1;
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,1,1,4);
+  uVar13 = *puVar1;
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,2,1,4);
+  uVar16 = *puVar1;
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,3,1,4);
+  uVar15 = *puVar1;
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,4,1,4);
+  uVar2 = *puVar1;
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,5,1,4);
+  uVar3 = *puVar1;
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,6,1,4);
+  uVar4 = *puVar1;
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,7,1,4);
+  uVar5 = *puVar1;
+  piVar6 = (int *)Pac_Get_Param(param_2,8,1,4);
+  iVar7 = *piVar6;
+  piVar6 = (int *)Pac_Get_Param(param_2,9,1,4);
+  iVar8 = *piVar6;
+  uVar9 = FUN_0883bc34(param_2);
+  Pac_Get_StringParam(param_2,auStack256);
+  if (((*(int *)(param_1 + 0x10) != 0) &amp;&amp;
+      (iVar10 = *(int *)(*(int *)(*(int *)(*(int *)(param_1 + 0x10) + 0x10) + 0x30) + 0x14),
+      iVar10 != 0)) &amp;&amp;
+     (iVar10 = FUN_Azito__08b5a738(*(undefined4 *)(iVar10 + 0x38),2,uVar14,uVar13), iVar10 != 0)) {
+    iVar11 = Save::Get_Save_BaseAddr(1);
+    *(undefined4 *)(iVar10 + 0x98) = 2;
+    *(undefined *)(iVar10 + 0x94) = 1;
+    uVar12 = FUN_Azito__08b50680(param_1);
+    uVar15 = Message::Get_Message(iVar11 + 0x98,uVar12,uVar15);
+    uVar12 = FUN_Azito__08b50680(param_1);
+    uVar16 = Message::Get_Message(iVar11 + 0x98,uVar12,uVar16);
+    *(undefined4 *)(iVar10 + 0x9c) = 0xffffffff;
+    *(undefined4 *)(iVar10 + 0xa0) = 0xffffffff;
+    *(undefined4 *)(iVar10 + 0xa4) = 1;
+    *(undefined4 *)(iVar10 + 0xa8) = 0;
+    *(undefined4 *)(iVar10 + 0xac) = 0;
+    *(undefined4 *)(iVar10 + 0xb0) = 0;
+    *(undefined4 *)(iVar10 + 0xb4) = 0;
+    *(undefined4 *)(iVar10 + 0xb8) = 0;
+    *(undefined4 *)(iVar10 + 0xbc) = 0xffffffff;
+    *(undefined4 *)(iVar10 + 0xc0) = 0;
+    *(undefined4 *)(iVar10 + 0xc4) = 0;
+    *(undefined4 *)(iVar10 + 200) = 1;
+    *(undefined *)(iVar10 + 0xcc) = 0;
+    *(undefined *)(iVar10 + 0xcd) = 1;
+    *(undefined4 *)(iVar10 + 0x9c) = uVar14;
+    *(undefined4 *)(iVar10 + 0xa0) = uVar13;
+    *(undefined4 *)(iVar10 + 0xa4) = uVar2;
+    *(undefined4 *)(iVar10 + 0xa8) = uVar3;
+    *(undefined4 *)(iVar10 + 0xac) = uVar9;
+    *(undefined4 *)(iVar10 + 0xb0) = uVar16;
+    *(undefined4 *)(iVar10 + 0xb4) = uVar15;
+    *(undefined4 *)(iVar10 + 0xb8) = 0;
+    *(undefined4 *)(iVar10 + 0xbc) = 0xffffffff;
+    *(undefined4 *)(iVar10 + 0xc0) = 0;
+                    // story or non-story mission? 0x1: non-story
+    *(undefined4 *)(iVar10 + 0xc4) = uVar4;
+    *(undefined4 *)(iVar10 + 200) = uVar5;
+                    // &quot;new mission&quot;
+    *(bool *)(iVar10 + 0xcc) = iVar7 != 0;
+                    // &quot;if Mission finished&quot; flag
+    *(bool *)(iVar10 + 0xcd) = iVar8 != 0;
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

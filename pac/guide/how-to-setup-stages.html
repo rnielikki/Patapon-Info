@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>How To: Setup Stages </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="How To: Setup Stages ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="how-to-setup-stages">How To: Setup Stages</h1>
+
+<p>The &quot;stage&quot; means a background environment of the scene.</p>
+<h2 id="understanding-the-stage-layers">Understanding the Stage Layers</h2>
+<p>There are some layers of stages background.</p>
+<p>(In here, &quot;uncontrollable&quot; means cannot change index or camera sensitivity)</p>
+<p><img src="images/scene-layer.png" alt="Scene layers, 1 is topmost, 2 is middle objects, 3 is back objects, 4 is background (sky in this image)"></p>
+<ol>
+<li><strong>Topmost Layer</strong> is rendered on top of the stage background, e.g. grass, stone.</li>
+<li><strong>Middle Object Layer</strong> is rendered back of the topmost layer. This might contain structure in index 1.</li>
+<li><strong>Back Object Layer</strong> is far-away looking objects in the stage, but still stays front of the sky layer.</li>
+<li><strong>Background Layer</strong> is <em>uncontrollable</em> layer that decides the sky colour, and some white smooth cloud.</li>
+<li>Not in the image, but some maps might have some uncontrollable objects (especially in dungeon).</li>
+</ol>
+<p>Note that some stages might have more complicated background, especially in dungeon (e.g. pillars).</p>
+<h2 id="first-decide-what-stages-will-appear-and-when-they-will-appear">First, Decide what stages will appear, and when they will appear</h2>
+<p>If the field has more than one stage:</p>
+<ul>
+<li>If the stage will change after certain distance, declaring the start is unnecessary.</li>
+<li>If the stage will change in certain condition (e.g. Pondora), multiple stagae must be defined, thus it needs <a href="../startsetupstage.html">startSetupStage</a>.</li>
+</ul>
+<p>If the field has only one stage, <code>startSetupStage</code> is not necessary.</p>
+<p>For stage IDs, check <a href="reference-table.html#stage-ids">the reference</a>.</p>
+<h2 id="second-read-the-resources">Second, Read the resources</h2>
+<p>Call <a href="../readarcfile.html">readArcFile</a> to load the stage resources.</p>
+<pre><code class="lang-c">0000008C  25100600:getPack(4:0)
+00000098  25120200:setMissionTimmingScript(2:0, 4:0, 1:F0) //phase 0
+    ...
+    000000F8  25090900:readArcFile(2:2, &quot;Actor/Stage/stg041.bnd&quot;)
+    0000011C  25090900:readArcFile(2:2, &quot;Actor/Stage/stg042.bnd&quot;)
+    00000140  25000100:cmd_end()
+</code></pre>
+<h2 id="third-set-the-stageparam">Third, set the stageparam</h2>
+<p>When setting <a href="../setstageparam.html">the stageparam</a>, <strong>call the existing one</strong>.</p>
+<p>The camera sensitivity is pre-adjusted smoothly, so it is not necessary to define a new one.</p>
+<pre><code class="lang-c">000000D0  25120200:setMissionTimmingScript(2:2, 4:0, 1:DD4) //phase 2
+    ...
+    00000DE4  25000300:cmd_call(1:E80)
+        00000E80  25000300:cmd_call(1:69AC)
+            000069AC  25165E00:setStageParam(1.0, 0.800000011920929, 0.699999988079071, 2:0, &quot;stg041&quot;)
+            000069D8  25000100:cmd_end()
+        00000E88  25000300:cmd_call(1:69DC)
+            000069DC  25165E00:setStageParam(1.0, 0.800000011920929, 0.6000000238418579, 2:0, &quot;stg042&quot;)
+            00006A08  25000100:cmd_end()
+</code></pre>
+<h2 id="finally-add-and-apply-the-stage">Finally, add and apply the stage.</h2>
+<h3 id="simple-stage-change-by-the-position">Simple stage change by the position</h3>
+<p>For stage change after few marching, defining multiple stage will do the job.</p>
+<p>In multiple stages, one <code>addStage</code> defines stage after 5~6 march (with pons).</p>
+<p>So for example, if the new stage should be appeared after 10~12 march, define two same stage with <code>addStage</code> and change the stage in the third call.</p>
+<pre><code class="lang-c">00000E90  25000300:cmd_call(1:10E4)
+    000010E4  25165D00:addStage(2:0, 2:0, 2:0, 2:1, 2:0, &quot;stg041&quot;)
+    00001118  25165D00:addStage(2:0, 2:0, 2:0, 2:1, 2:0, &quot;stg041&quot;)
+    0000114C  25165D00:addStage(2:0, 2:0, 2:0, 2:1, 2:0, &quot;stg041&quot;)
+    00001180  25165D00:addStage(2:0, 2:0, 2:0, 2:0, 2:0, &quot;stg042&quot;)
+    000011B4  25165D00:addStage(2:0, 2:0, 2:0, 2:0, 2:0, &quot;stg042&quot;)
+    000011E8  25165D00:addStage(2:0, 2:0, 2:0, 2:0, 2:0, &quot;stg042&quot;)
+    0000121C  25000100:cmd_end()
+00000E98  25165C00:endSetupStage()
+00000E9C  25165F00:applyStage(2:0)
+</code></pre>
+<p>Do not forget to call <strong><a href="../applystage.html">applyStage</a></strong> after the setting is done.</p>
+<p><em>The <code>applyStage</code> parameter is zero</em> in this case, because no stage group(with <code>startSetupStage</code>) is defined.</p>
+<h3 id="stage-change-under-certain-condition">Stage change under certain condition</h3>
+<p>For calling manual scene change, multiple stage <em>groups</em> are required.</p>
+<p>The <em>group</em> starts with <a href="../startsetupstage.html">startSetupStage</a>, which has stage ID as parameter.</p>
+<pre><code class="lang-c">00000CC0  25165B00:startSetupStage(2:0)
+00000CCC  25165D00:addStage(2:0, 2:0, 2:0, 2:0, 2:0, &quot;stg074&quot;)
+00000D00  25165C00:endSetupStage()          //For closing *startSetupStage*
+00000D04  25165B00:startSetupStage(2:1)
+00000D10  25165D00:addStage(2:0, 2:0, 2:0, 2:0, 2:0, &quot;stg076&quot;)
+00000D44  25165C00:endSetupStage()          //For closing *startSetupStage*
+00000D48  25165B00:startSetupStage(2:2)
+00000D54  25165D00:addStage(2:0, 2:0, 2:0, 2:0, 2:0, &quot;stg077&quot;)
+00000D88  25165C00:endSetupStage()          //For closing *startSetupStage*
+00000D8C  25165C00:endSetupStage()          //! DONE DEFINING ALL STAGES !
+00000D90  25165F00:applyStage(2:0)          // call the stage
+</code></pre>
+<p><strong>Note that one <a href="../endsetupstage.html">endSetupStage</a> in the end is not paired</strong>.</p>
+<p>Unlike other <code>endSetupStage</code> closing <code>startSetupStage</code>, the last one means <em>done defining the whole stage setup</em> in the mission.</p>
+<h4 id="changing-the-stage">Changing the stage</h4>
+<p>Give the stage group ID (defined with <a href="../startsetupstage.html">startSetupStage</a>) to the <a href="../applystage.html">applyStage</a>.</p>
+<pre><code class="lang-c">0002EDEC  25165F00:applyStage(2:1)
+0002EDF8  25000100:cmd_end()
+0002EDFC  25165F00:applyStage(2:2)
+0002EE08  25000100:cmd_end()
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

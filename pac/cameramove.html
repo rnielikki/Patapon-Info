@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>cameraMove </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="cameraMove ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="cameramove">cameraMove</h1>
+
+<p>Move the camera to the certain position in the world.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>cameraMove</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 16 8e 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x8921bc4</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(float)pos_x</code> <em>(8 bytes)</em> : X Position to move the camera in the world, as <em>PSP pixels</em>.</li>
+<li><code>(float)pos_y</code> <em>(8 bytes)</em> : Y Position to move the camera in the world, as <em>PSP pixels</em>. 0 is normal position.</li>
+<li><code>(float)pos_z</code> <em>(8 bytes)</em> : Z Position (Camera distance) in the world. For refrence, around 150~200 looks natural.</li>
+<li><code>(bool)enable_anim_x</code> <em>(8 bytes)</em> : Decides if the camera animates in X direction or not. 0 moves to the position immediately, otherwise it will be animated in X direction.</li>
+<li><code>(bool)enable_anim_y</code> <em>(8 bytes)</em> : Decides if the camera animates in Y direction or not. 0 moves to the position immediately, otherwise it will be animated in Y direction.</li>
+<li><code>(bool)enable_anim_z</code> <em>(8 bytes)</em> : Decides if the camera animates in Z direction or not. 0 moves to the position immediately, otherwise it will be animated in Z direction.</li>
+</ul>
+<h2 id="remarks">Remarks</h2>
+<p>For determining the speed of the camera, see description in <a href="cameramovetype.html">camerMoveType</a>.</p>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 16 8e 00 / 20 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00 / 02 00 00 00 / 01 00 00 00 / 02 00 00 00 / 00 00 00 00 / 02 00 00 00 / 00 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">cameraMove((float *)fVar0, (float)0, (float)0, (int)1, (int)0, (int)0)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_08921bc4(int param_1,undefined4 param_2)
+
+{
+  undefined4 *puVar1;
+  undefined4 *puVar2;
+  undefined4 *puVar3;
+  int *piVar4;
+  int *piVar5;
+  int *piVar6;
+  int iVar7;
+  undefined4 local_c;
+  undefined4 local_8;
+  undefined4 local_4;
+  
+  puVar1 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  puVar2 = (undefined4 *)Pac_Get_Param(param_2,1,1,4);
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,2,1,4);
+  piVar4 = (int *)Pac_Get_Param(param_2,3,1,4);
+  piVar5 = (int *)Pac_Get_Param(param_2,4,1,4);
+  piVar6 = (int *)Pac_Get_Param(param_2,5,1,4);
+  iVar7 = *(int *)(*(int *)(param_1 + 0x10) + 0xd8);
+  if (iVar7 != 0) {
+    if (*piVar6 == 0) {
+      local_4 = *(undefined4 *)(iVar7 + 0x4b8);
+    }
+    else {
+      local_4 = *puVar3;
+    }
+    if (*piVar5 == 0) {
+      local_8 = *(undefined4 *)(iVar7 + 0x4b4);
+    }
+    else {
+      local_8 = *puVar2;
+    }
+    if (*piVar4 == 0) {
+      local_c = *(undefined4 *)(iVar7 + 0x4b0);
+    }
+    else {
+      local_c = *puVar1;
+    }
+    /* use time or speed? 0 for time 1 for speed */
+    if (*(int *)(param_1 + 0x1c) == 1) {
+      FUN_0890ece0(*(undefined4 *)(param_1 + 0x24),*(undefined4 *)(param_1 + 0x28),
+                   *(undefined4 *)(param_1 + 0x2c),iVar7 + 0x30,&amp;local_c);
+    }
+    else {
+      FUN_0890ea24(*(undefined4 *)(param_1 + 0x20),iVar7 + 0x30,&amp;local_c,0,0);
+    }
+  }
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>setStageParam </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="setStageParam ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="setstageparam">setStageParam</h1>
+
+<p>Sets background move sensitivity with the camera move.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>setStageParam</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 16 5e 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x891ff20</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Not all layers are controllable. There is one layer that has fixed camera sensitivity.</p>
+</div>
+<ul>
+<li><code>(float)sky_sensitivity</code> <em>(8 bytes)</em>: Sky move sensitivity for field.</li>
+<li><code>(float)backobject_sensitivity</code> <em>(8 bytes)</em>: background object move sensitivity.</li>
+<li><code>(float)middleobject_sensitivity</code> <em>(8 bytes)</em>: 2nd frontmost background (e.g. stone/tree in bg) move sensitivity.</li>
+<li><code>(bool)skip_specific_bg</code> <em>(8 bytes)</em> : Skip some types of background, keep 0 to render all.</li>
+<li><code>(String)stage_name</code>: Name of stage to set the values.</li>
+</ul>
+<h2 id="remarks">Remarks</h2>
+<p>They are predefined in each mission's PAC instructions like this.</p>
+<p><strong>Use the existing one</strong> with <a href="cmd_call.html">cmd_call</a> for smooth experience.</p>
+<p>For more information, check <a href="guide/how-to-setup-stages.html#third-set-the-stageparam">the related article</a>.</p>
+<pre><code class="lang-c">00006D14  25165E00:setStageParam(0.800000011920929, 0.6000000238418579, 0.4000000059604645, 2:0, &quot;stg001&quot;)
+00006D40  25000100:cmd_end()
+00006D44  25165E00:setStageParam(0.8999999761581421, 0.6000000238418579, 0.4000000059604645, 2:0, &quot;stg008&quot;)
+00006D70  25000100:cmd_end()
+00006D74  25165E00:setStageParam(1.0, 0.800000011920929, 0.6000000238418579, 2:0, &quot;stg038&quot;)
+00006DA0  25000100:cmd_end()
+...
+</code></pre>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 16 5e 00 / 10 00 00 00 / cd cc 4c 3f / 10 00 00 00 / 9a 99 19 3f / 10 00 00 00 / cd cc cc 3e / 02 00 00 00 / 00 00 00 00 / 73 74 67 30 / 30 31 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">setStageParam((float)0.8, (float)0.6, (float)0.4, (int)0, &quot;stg001&quot;)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_0891ff20(int param_1,undefined4 param_2)
+
+{
+  undefined *puVar1;
+  undefined4 *puVar2;
+  undefined4 *puVar3;
+  undefined4 *puVar4;
+  undefined *puVar5;
+  int iVar6;
+  undefined *puVar7;
+  undefined4 local_184;
+  undefined auStack384 [32];
+  undefined4 local_160;
+  undefined local_15c;
+  undefined4 local_158 [4];
+  undefined4 local_148;
+  undefined4 local_144;
+  undefined local_100 [4];
+  undefined auStack252 [252];
+  
+  puVar2 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
+  puVar3 = (undefined4 *)Pac_Get_Param(param_2,1,1,4);
+  puVar4 = (undefined4 *)Pac_Get_Param(param_2,2,1,4);
+  Pac_Get_Param(param_2,3,1,4);
+  puVar5 = &amp;DAT_00000100;
+  puVar7 = local_100;
+  puVar1 = puVar7;
+  while (puVar1 != (undefined *)0x0) {
+    *puVar7 = 0;
+    puVar7 = puVar7 + 1;
+    puVar5 = puVar5 + -1;
+    puVar1 = puVar5;
+  }
+  Pac_Get_StringParam(param_2,local_100);
+  local_160 = 0;
+  local_184 = 0;
+  local_15c = 0;
+  Syscall::Kernel::Kernel_Memset(local_158,0,0x58);
+  local_158[0] = 0x3e99999a;
+  local_148 = 0x3e4ccccd;
+  local_144 = 0x3dcccccd;
+  Syscall::strcpy(auStack384,local_100);
+  local_158[0] = *puVar2;
+  local_148 = *puVar3;
+  local_144 = *puVar4;
+  iVar6 = Message::Char::Magicword_Number_Parser(auStack252);
+  local_15c = iVar6 &lt; 0x24;
+  FUN_088b0514(*(undefined4 *)(*(int *)(param_1 + 0x10) + 0x118),&amp;local_184);
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

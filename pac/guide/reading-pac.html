@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Reading a PAC file </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Reading a PAC file ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="reading-a-pac-file">Reading a PAC file</h1>
+
+<p>They are pure binary, so you can open as hex editor and read it.</p>
+<p>For disassembled PAC, there is disassembled version of PAC as text somewhere.</p>
+<h2 id="basics">Basics</h2>
+<h3 id="reading-order">Reading order</h3>
+<p>The bytes are <strong>Little Endian</strong>. This means, you have to cut 4-bytes and read it as reversed order.</p>
+<p>For example,</p>
+<p><code>25 16 2B 00 04 00 00 00 36 00 00 00 02 00 00 00 22 01 00 00 02 00 00 00 00 00 00 00</code></p>
+<p>Cut to 4 bytes,</p>
+<p><code>25 16 2B 00 / 04 00 00 00 / 36 00 00 00 / 02 00 00 00 / 22 01 00 00 / 02 00 00 00 / 00 00 00 00</code></p>
+<p>And reverse each block and they are the value.</p>
+<p><code>00 2b 16 25 / 00 00 00 04 / 00 00 00 36 / 00 00 00 02 / 00 00 01 22 / 00 00 00 02 / 00 00 00 00</code></p>
+<p>So the values are</p>
+<p><code>0x2b1625 / 0x4 / 0x36 / 0x2 / 0x122 / 0x2 / 0x0 </code></p>
+<h3 id="local-and-global">local and global</h3>
+<p>There are two kinds of variables:</p>
+<ul>
+<li>&quot;local&quot; means variable inside one file.</li>
+<li>&quot;global&quot; means variable across multiple PAC files.</li>
+</ul>
+<p><strong>Avoid using global</strong>, unless you want to use the variable for multiple PAC files. If you really have to use it, check carefully if the global variables used in any of other PAC file.</p>
+<h2 id="immediate-and-variable">Immediate and Variable</h2>
+<p>So, always <strong>check example</strong> first.</p>
+<h2 id="reading-as-hex">Reading as Hex</h2>
+<p>You can open hex editor to read PAC instructions. And then, follow this:</p>
+<ol>
+<li>Slice them into 4 bytes.</li>
+<li>Slice if next block starts with <code>25</code>.</li>
+<li>Check every block starts with <code>25</code>, they are instructions.</li>
+<li>Slice parameters to 4~8 bytes.</li>
+</ol>
+<ul>
+<li>starting with <code>1</code> <code>2</code>, <code>4</code>, <code>8</code>, <code>10</code>, <code>20</code>, <code>40</code>, <code>80</code>, are potentially 8-bye parameters, but DO NOT RELY on this!</li>
+</ul>
+<p>You can do it inside you hread, or with help of a hex editor (e.g. ImHex).</p>
+<p>Though, the method is rough (especially in 3, or rarely, even parameter value can be <code>0x25</code> etc), that is why checking document is important.</p>
+<h3 id="example">Example</h3>
+<pre><code>25 00 08 00 08 00 00 00 62 00 00 00 10 00 00 00 00 00 20 41 25 00 01 00 25 0A 05 00 02 00 00 00 02 00 00 00 04 00 00 00 01 00 00 00 25 00 17 00 04 00 00 00 01 00 00 00 10 00 00 00 00 00 00 00 54 0E 00 00 25 00 12 00 08 00 00 00 EE 01 00 00 02 00 00 00 F0 FF 00 00 25 00 12 00 04 00 00 00 00 00 00 00 02 00 00 00 0F 00 00 00 25 00 13 00 08 00 00 00 EE 01 00 00 04 00 00 00 00 00 00 00 25 00 01 00
+</code></pre>
+<p>First, cut off them as 4 bytes for easier understanding.</p>
+<pre><code>25 00 08 00 / 08 00 00 00 / 62 00 00 00 / 10 00 00 00 / 00 00 20 41 / 25 00 01 00 / 25 0A 05 00 / 02 00 00 00 / 02 00 00 00 / 04 00 00 00 / 01 00 00 00 / 25 00 17 00 / 04 00 00 00 / 01 00 00 00 / 10 00 00 00 / 00 00 00 00 / 54 0E 00 00 / 25 00 12 00 / 08 00 00 00 / EE 01 00 00 / 02 00 00 00 / F0 FF 00 00 / 25 00 12 00 / 04 00 00 00 / 00 00 00 00 / 02 00 00 00 / 0F 00 00 00 / 25 00 13 00 / 08 00 00 00 / EE 01 00 00 / 04 00 00 00 / 00 00 00 00 / 25 00 01 00
+</code></pre>
+<p>Second, Cut just before 25 XX XX XX.</p>
+<pre><code>25 00 08 00 / 08 00 00 00 / 62 00 00 00 / 10 00 00 00 / 00 00 20 41
+25 00 01 00
+25 0A 05 00 / 02 00 00 00 / 02 00 00 00 / 04 00 00 00 / 01 00 00 00
+25 00 17 00 / 04 00 00 00 / 01 00 00 00 / 10 00 00 00 / 00 00 00 00 / 54 0E 00 00
+25 00 12 00 / 08 00 00 00 / EE 01 00 00 / 02 00 00 00 / F0 FF 00 00 
+25 00 12 00 / 04 00 00 00 / 00 00 00 00 / 02 00 00 00 / 0F 00 00 00
+25 00 13 00 / 08 00 00 00 / EE 01 00 00 / 04 00 00 00 / 00 00 00 00
+25 00 01 00
+</code></pre>
+<p>Third, Check the corresponding instructions.</p>
+<blockquote>
+<p><strong>25 00 08 00</strong> / 08 00 00 00 / 62 00 00 00 / 10 00 00 00 / 00 00 20 41
+<code>cmd_add((int/float *)target, (int/float)value)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 01 00</strong>
+<code>cmd_end()</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 0A 05 00</strong> / 02 00 00 00 / 02 00 00 00 / 04 00 00 00 / 01 00 00 00
+<code>getLaboInfo((int)Var0, (uint)Var1)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 17 00</strong> / 04 00 00 00 / 01 00 00 00 / 10 00 00 00 / 00 00 00 00 / 54 0E 00 00
+<code>cmd_ifEQ((int/float)value1, (int/float)value2, (Address)address)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 12 00</strong> / 08 00 00 00 / EE 01 00 00 / 02 00 00 00 / F0 FF 00 00
+<code>cmd_iand((uint *)target, (uint)value)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 12 00</strong> / 04 00 00 00 / 00 00 00 00 / 02 00 00 00 / 0F 00 00 00
+<code>cmd_iand((uint *)target, (uint)value)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 13 00</strong> / 08 00 00 00 / EE 01 00 00 / 04 00 00 00 / 00 00 00 00
+<code>cmd_ior((uint *)target, (uint)value)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 01 00</strong>
+<code>cmd_end()</code></p>
+</blockquote>
+<p>And then, fill the parameters. (Check <a href="about-parameters.html">About Parameters</a> for this)<br>
+<strong>Note the value is Little Endian</strong> so you have to read 4 bytes in reverse order.</p>
+<blockquote>
+<p><strong>25 00 08 00</strong> / ((08 00 00 00) 62 00 00 00) , ((10 00 00 00)00 00 20 41 )
+<code>cmd_add((global)int iVar0x62, (float)10.0)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 01 00</strong>
+<code>cmd_end()</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 0A 05 00</strong> ((02 00 00 00) 02 00 00 00) , ((04 00 00 00)01 00 00 00)
+<code>getLaboInfo((int)0x2, int iVar0x1)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 17 00</strong> / ((04 00 00 00)01 00 00 00) , ((10 00 00 00)00 00 00 00) , (54 0E 00 00)
+<code>cmd_ifEQ((int)iVar0x1, (float)0.0, (Address)0xE54)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 12 00</strong> / ((08 00 00 00)EE 01 00 00) , ((02 00 00 00 )F0 FF 00 00)
+<code>cmd_iand((global)int gVar0x1EE, (uint)0xFFF0)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 12 00</strong> / ((04 00 00 00)00 00 00 00) , ((02 00 00 00)0F 00 00 00)
+<code>cmd_iand(int iVar0x0, (uint)0xF)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 13 00</strong> / ((08 00 00 00)EE 01 00 00) , ((04 00 00 00) , 00 00 00 00)
+<code>cmd_ior((global)uint gVar0x1EE, uint 0x0)</code></p>
+</blockquote>
+<blockquote>
+<p><strong>25 00 01 00</strong>
+<code>cmd_end()</code></p>
+</blockquote>
+<p>This could be hard for first time, but if you do this enough, you will get gut to read them.</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

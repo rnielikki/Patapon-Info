@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>doSelect </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="doSelect ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="doselect">doSelect</h1>
+
+<p>This comes <strong>end of the debug menu</strong>, following the <a href="setchoice.html">setChoice</a>s.</p>
+<h2 id="code-information">Code Information</h2>
+<ul>
+<li><strong>Name</strong>: <code>doSelect</code></li>
+<li><strong>Scope</strong>: Global</li>
+<li><strong>PAC Instruction (Binary)</strong>: <code>25 03 02 00</code></li>
+<li><strong>Assembly Address in Memory</strong> : <code>0x892cb68</code></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>(Address)close_callback</code> <em>(4 bytes)</em> : Address to call when the debug is being closed. Usually expected to <strong>redirect to <a href="cmd_end.html">cmd_end</a> only</strong>.</li>
+<li><code>(int)iVar0</code> <em>(4 bytes)</em> : Expected to be 1.</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>Here is one example in hex:</p>
+<p><code>25 03 02 00 / dc d7 02 00 / 01 00 00 00</code></p>
+<p>Which is interpreted as:</p>
+<pre><code class="lang-c">doSelect(0x2d7dc, 0x1)
+</code></pre>
+<h2 id="code">Code</h2>
+<p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
+<pre><code class="lang-c">void FUN_0892cb68(int param_1,undefined4 param_2)
+
+{
+  bool bVar1;
+  short sVar2;
+  int iVar3;
+  int *piVar4;
+  int *piVar5;
+  undefined4 *puVar6;
+  int iVar7;
+  undefined4 *puVar8;
+  int iVar9;
+  undefined4 uVar10;
+  int iVar11;
+  int iVar12;
+  undefined4 local_20;
+  int *local_1c;
+  int local_18;
+  short *local_14;
+  undefined4 local_10;
+  int *local_c;
+  int local_8;
+  short *local_4;
+  
+  iVar3 = Get_Execution_Pause_Phase(param_2);
+  if (iVar3 == 0) {
+    piVar4 = (int *)Pac_Get_Param(param_2,0,0,4);
+    piVar5 = (int *)Pac_Get_Param(param_2,1,0,4);
+    iVar7 = *piVar4;
+    *(int *)(param_1 + 0x30) = iVar7;
+    iVar3 = *piVar5;
+    iVar11 = *(int *)(param_1 + 0x10);
+    if (*(int *)(iVar11 + 0x798) == 0) {
+      bVar1 = false;
+    }
+    else {
+      piVar4 = (int *)(iVar11 + 0x7a4);
+      FUN_0885da7c(*(undefined4 *)(iVar11 + 0x7a4),iVar11 + 0x7ac);
+      FUN_0885d70c(*piVar4);
+      iVar9 = *(int *)(iVar11 + 0x794);
+      iVar12 = iVar9 + *(int *)(iVar11 + 0x798) * 0x30;
+      if (iVar9 == iVar12) {
+        iVar11 = *piVar4;
+      }
+      else {
+        uVar10 = *(undefined4 *)(iVar11 + 0x7a4);
+        while( true ) {
+          FUN_0885d8ec(uVar10,*(undefined4 *)(iVar9 + 4),*(undefined4 *)(iVar9 + 8),iVar9,
+                       iVar9 + 0xc);
+          iVar9 = iVar9 + 0x30;
+          if (iVar9 == iVar12) break;
+          uVar10 = *(undefined4 *)(iVar11 + 0x7a4);
+        }
+        iVar11 = *piVar4;
+      }
+      *(undefined *)(iVar11 + 0x931) = 0;
+      *(undefined *)(iVar11 + 0x932) = 0;
+      *(undefined *)(iVar11 + 0x930) = 0;
+      *(bool *)(iVar11 + 0x933) = iVar7 != 0;
+      FUN_0885c4f4(iVar11,-(uint)(iVar3 == 0));
+      bVar1 = true;
+    }
+    if (!bVar1) {
+      FUN_0885c34c(*(undefined4 *)(*(int *)(param_1 + 0x10) + 0x7a4));
+      PAC::PAC_setCmdId(param_2,0);
+      return;
+    }
+    FUN_0892d014(&amp;local_10,*(undefined4 *)(param_1 + 0x10));
+    *(undefined *)(local_8 + 0x8e8) = 0;
+    if (local_8 == 0) {
+      uVar10 = *(undefined4 *)(param_1 + 0x10);
+    }
+    else {
+      *local_4 = *local_4 + -1;
+      if (local_4 == (short *)0x0) {
+        sVar2 = 0;
+      }
+      else {
+        sVar2 = *local_4;
+      }
+      if (sVar2 == 0) {
+        (**(code **)(*local_c + 0xc))(local_c,local_8,local_4,local_10);
+        FUN_0892e358(local_8,local_10);
+      }
+      uVar10 = *(undefined4 *)(param_1 + 0x10);
+    }
+    FUN_0892d014(&amp;local_20,uVar10);
+    *(undefined *)(local_18 + 0x9c2) = 1;
+    *(undefined *)(local_18 + 0x9c9) = 0;
+    if (local_18 == 0) {
+      iVar3 = *(int *)(param_1 + 0x10);
+    }
+    else {
+      *local_14 = *local_14 + -1;
+      if (local_14 == (short *)0x0) {
+        sVar2 = 0;
+      }
+      else {
+        sVar2 = *local_14;
+      }
+      if (sVar2 == 0) {
+        (**(code **)(*local_1c + 0xc))(local_1c,local_18,local_14,local_20);
+        FUN_0892e358(local_18,local_20);
+      }
+      iVar3 = *(int *)(param_1 + 0x10);
+    }
+    iVar3 = *(int *)(iVar3 + 0x7a4);
+    if (_DAT_08aabdd4 == iVar3) {
+      *(undefined *)(iVar3 + 0x931) = 0;
+    }
+    else {
+      *(int *)(iVar3 + 0x9b4) = _DAT_08aabdd4;
+      _DAT_08aabdd4 = iVar3;
+      *(undefined *)(iVar3 + 0x931) = 0;
+    }
+    *(undefined *)(iVar3 + 0x932) = 0;
+    *(undefined *)(iVar3 + 0x930) = 0;
+    Pause_Execution(param_2,1);
+    puVar8 = *(undefined4 **)(param_1 + 0x10);
+  }
+  else {
+    puVar8 = *(undefined4 **)(param_1 + 0x10);
+  }
+  iVar3 = puVar8[0x1e9];
+  if (*(char *)(iVar3 + 0x931) == '\0') {
+    return;
+  }
+  if (*(char *)(iVar3 + 0x932) == '\0' || *(char *)(iVar3 + 0x931) == '\0') {
+    if (*(char *)(iVar3 + 0x931) == '\0') {
+      puVar6 = (undefined4 *)0x0;
+    }
+    else if (*(int *)(iVar3 + 0x8f0) &lt; 0) {
+      puVar6 = (undefined4 *)0x0;
+    }
+    else {
+      puVar6 = (undefined4 *)(puVar8[0x1e5] + *(int *)(iVar3 + 0x8f0) * 0x30);
+    }
+    uVar10 = *puVar6;
+  }
+  else {
+    uVar10 = *(undefined4 *)(param_1 + 0x30);
+  }
+  iVar3 = puVar8[0x1e9];
+  if (*(int *)(iVar3 + 0x9b4) == 0) {
+    bVar1 = _DAT_08aabdd4 == iVar3;
+    if (bVar1) {
+      bVar1 = *(char *)(iVar3 + 0x931) == '\0';
+    }
+    if (!bVar1) {
+      iVar3 = puVar8[0x1e6];
+      goto LAB_0892cea0;
+    }
+    _DAT_08aabdd4 = 0;
+  }
+  else {
+    _DAT_08aabdd4 = *(int *)(iVar3 + 0x9b4);
+    *(undefined4 *)(iVar3 + 0x9b4) = 0;
+  }
+  iVar3 = puVar8[0x1e6];
+LAB_0892cea0:
+  iVar7 = puVar8[0x1e5];
+  if (iVar7 != iVar7 + iVar3 * 0x30) {
+    do {
+      iVar7 = iVar7 + 0x30;
+    } while (iVar7 != puVar8[0x1e5] + iVar3 * 0x30);
+  }
+  puVar8[0x1e6] = 0;
+  if (puVar8[0x1e9] != 0) {
+    FUN_0885d70c(puVar8[0x1e9]);
+  }
+  Syscall::Kernel::Kernel_Memset(puVar8 + 1,0,0x300);
+  *puVar8 = 0;
+  FUN_0885c34c(*(undefined4 *)(*(int *)(param_1 + 0x10) + 0x7a4));
+  PAC::Cmd_Jump_Or_Call(param_2,uVar10,0);
+  PAC::PAC_setCmdId(param_2,0);
+  return;
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
