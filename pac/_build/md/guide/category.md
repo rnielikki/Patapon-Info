@@ -120,6 +120,7 @@ For hideout exclusive handle, check [hideout](#hideout) section.
 - Squad: [getUnitSquadHandle](../getunitsquadhandle.md) (from reqActor unique ID), [getSquadHandle](../getsquadhandle.md) (from generator + reqIndex), [getPlayerSquadHandle](../getplayersquadhandle.md) (from player), [getUnitSquadHandleFromChara](../getunitsquadhandlefromchara.md) (from unit handle)
 - Unit: [getUnitHandle](../getunithandle.md), [getHataponHandle](../gethataponhandle.md), [getMultiHeroHandle](../getmultiherohandle.md)
 - Effect/Gimmick: [addEffect](../addeffect.md), [gimmick_getHandle](../gimmick_gethandle.md)
+- Any Actor : [getActorHandle](../getactorhandle.md)
 - Generator: [getHandle](../gethandle.md)
 
 ### Squad

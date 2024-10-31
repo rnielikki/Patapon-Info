@@ -1,8 +1,6 @@
 # getActorHandle
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Gets an handle of any kind of *reqActor*.
 
 ## Code Information
 
@@ -13,9 +11,9 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(int)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
-- `(undefined4)Var2` *(8 bytes)*
+- `(int *)generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
+- `(int *)destination` *(8 bytes)* : Variable to *store* the handle.
 
 ## Example
 

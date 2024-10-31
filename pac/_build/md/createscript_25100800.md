@@ -14,11 +14,11 @@ Creates new PAC instruction. Unlike [cmd_call](./cmd_call.md), this doesn't bloc
 ## Parameters
 
 - `(MemoryAddress)pac_address_in_memory` *(8 bytes)* : Obtained from [getPack](./getpack_25100600.md). The memory address where the whole PAC instructions start.
-- `(int)address` *(8 bytes)* : Address in the PAC file *as int* to execute.
+- `(Address)address` *(8 bytes)* : Address in the PAC file *as int* to execute.
 - `(int)script_id` *(8 bytes)* : Script ID to set, can be used as reference to [killScript](./killscript.md).
 - `(undefined4)Var3` *(8 bytes)* : Keep 0.
 - `(undefined4)Var4` *(8 bytes)* : Keep 0.
-- `(int *)Var5` *(8 bytes)* : Pointer to save something. Can keep 0.
+- `(int)Var5` *(8 bytes)* : Can be pointer to save something, but can be ignored by keeping 0.
 
 ## Example
 

@@ -1,5 +1,8 @@
 # About Units
 
+> [!CAUTION]
+> NOT ALL reqActors are unit squads. ReqActors/Actors can be gimmick, as been observed in [`generatorparam`](./reference-table.md#generatorparam).
+
 ![A diagram about reqActor unit creation. `create()` makes a *generator*, `setTroopType()` moves it to troop, *generator* has *reqActors*, the *reqActors* become *squad* by calling `spawn()`, and the squads contain one or more *units* for each. Each *troop*, *squad*, and *unit* has their own "handle".](./images/unit.png)
 
 - **An unit** is an *individual* target that has run-time information, like stamina percentage or status effect.

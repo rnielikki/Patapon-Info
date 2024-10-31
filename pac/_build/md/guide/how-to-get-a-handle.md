@@ -19,7 +19,7 @@ Check [getting handle category](./category.md#getting-handle).
 
 Few PAC instructions allow handle as parameter, but this doesn't happen often.
 
-### reqActor (created) unit
+#### reqActor (created) unit
 
 In the [prior article](./how-to-create-an-enemy-target.md), there was part to [set unique ID](../setreqactoruniqueid.md).
 
@@ -38,7 +38,7 @@ Now the **`4:A`** contains the [unit handle](../getunithandle.md).
 
 Note the [reqActor](../setreqactortype.md) can be either an unit or a gimmick.
 
-### Player unit
+#### Player unit
 
 Use [getPlayerSquadHandle](../getplayersquadhandle.md) and [getUnitHandle](../getunithandle.md).
 
@@ -60,6 +60,7 @@ For Hatapon, [getHataPonHandle](../gethataponhandle.md) gives **unit handle** wi
 1. First, get gimmick ID
    - For [getGateInfo](../getgateinfo.md) or [setGateInfo](../setgateinfo.md), it is `destination` or `param` *with* `param_index` 0.
    - For [registConstGimmick](../registconstgimmick.md), it is last parameter of the instruction (user-defined ID).
+   - For *reqActor* gimmick, [getActorHandle](../getactorhandle.md) does the job.
 2. [gimmick_getHandle](../gimmick_gethandle.md) to get a handle of it.
 
 ### Hideout
