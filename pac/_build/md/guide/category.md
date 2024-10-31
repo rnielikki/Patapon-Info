@@ -68,6 +68,7 @@ Unlike effect, gimmick has another "unique ID" that is not handle. Some gimmick 
 - [registConstGimmick](../registconstgimmick.md), [applyConstGimmick](../applyconstgimmick.md), [enableCollisionConstGimmick](../enablecollisionconstgimmick.md)
 - [setActionController](../setactioncontroller.md)
 - [getChildGimmick](../getchildgimmick.md)
+- [setGimmickTimmingScript](../setgimmicktimmingscript.md)
 
 #### Collision
 

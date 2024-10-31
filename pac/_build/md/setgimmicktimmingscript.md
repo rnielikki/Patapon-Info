@@ -1,8 +1,6 @@
 # setGimmickTimmingScript
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+When the gimmick is created, *call*s the specific address.
 
 ## Code Information
 
@@ -13,10 +11,11 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
-- `(undefined4)Var2` *(8 bytes)*
-- `(undefined4)Var3` *(8 bytes)*
+
+- `(int)gimmickID` *(8 bytes)* : Effect ID from `gimmickparam`.
+- `(int)Var1` *(8 bytes)* : Expected 0~4.
+- `(MemoryAddress)pac_address` *(8 bytes)* : Memory address that contains start of the PAC, obtained from [getPack](./getpack_25100600.md).
+- `(address)Address` *(8 bytes)* : Does not call anything if the value is `-1` (`ff ff ff ff`).
 
 ## Example
 

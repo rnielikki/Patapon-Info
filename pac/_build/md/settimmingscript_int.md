@@ -15,7 +15,7 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 - `(int)Var0` *(8 bytes)*
 - `(undefined4)Var1` *(8 bytes)*
-- `(undefined4)Var2` *(4 bytes)*
+- `(Address)address` *(4 bytes)*
 
 ## Example
 
