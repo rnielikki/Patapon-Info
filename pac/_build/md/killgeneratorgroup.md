@@ -67,7 +67,7 @@ void FUN_089424f4(int param_1,undefined4 param_2)
     iVar8 = *(uint *)(iVar5 + 0x194) - (*(uint *)(iVar5 + 0x194) / 100000) % 10;
     iVar5 = *(int *)(param_1 + 0x10);
     while( true ) {
-      iVar5 = FUN_088b4f2c(*(undefined4 *)(iVar5 + 0x108),iVar8);
+      iVar5 = Get_Gimmick(*(undefined4 *)(iVar5 + 0x108),iVar8);
       if (iVar5 != 0) {
         if (iVar6 == 0) {
           (**(code **)(*(int *)(iVar5 + 4) + 0x88))(*puVar2,*puVar3,iVar5);

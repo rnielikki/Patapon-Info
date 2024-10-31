@@ -79,7 +79,7 @@ void FUN_08927778(int param_1,undefined4 param_2)
       if (0 < iVar9) {
         iVar8 = *piVar2;
         while( true ) {
-          iVar8 = FUN_088b4f2c(iVar6,iVar7 + iVar8);
+          iVar8 = Get_Gimmick(iVar6,iVar7 + iVar8);
           if (((iVar8 != 0) && (*(char *)(iVar8 + 0x9c) != '\0')) &&
              (iVar8 = FUN_088ce294(iVar8,0), iVar8 == 1)) {
             iVar10 = iVar10 + 1;
@@ -94,7 +94,7 @@ void FUN_08927778(int param_1,undefined4 param_2)
     if ((iVar7 != 0) && (iVar7 = 0, 0 < iVar9)) {
       iVar8 = *piVar3;
       while( true ) {
-        iVar8 = FUN_088b4f2c(iVar6,iVar7 + iVar8);
+        iVar8 = Get_Gimmick(iVar6,iVar7 + iVar8);
         if (((iVar8 != 0) && (*(char *)(iVar8 + 0x9c) != '\0')) &&
            (iVar8 = FUN_088ce294(iVar8,0), iVar8 == 1)) {
           iVar10 = iVar10 + 1;

@@ -35,7 +35,7 @@ void FUN_08925c5c(int param_1,undefined4 param_2)
   puVar1 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
   puVar2 = (uint *)Pac_Get_Param(param_2,1,1,4);
   iVar3 = *(int *)(*(int *)(param_1 + 0x10) + 0x108);
-  if ((iVar3 != 0) && (iVar3 = FUN_088b4f2c(iVar3,*puVar1), iVar3 != 0)) {
+  if ((iVar3 != 0) && (iVar3 = Get_Gimmick(iVar3,*puVar1), iVar3 != 0)) {
     *puVar2 = (uint)*(ushort *)(iVar3 + 0x19a);
   }
   PAC::PAC_setCmdId(param_2,0);

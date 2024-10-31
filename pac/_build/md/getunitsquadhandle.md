@@ -1,6 +1,6 @@
 # getUnitSquadHandle
 
-Gets handle by the [unique ID of the reqactor](./setreqactoruniqueid.md).
+Gets handle by the [unique ID of the reqactor](./setreqactoruniqueid.md). **Might not work well gimmick reqActor**.
 
 ## Code Information
 

@@ -23,6 +23,7 @@ Sets an action (e.g. cannon attack) to a gimmick.
 To properly use this, do not use 'In sync' (thus avoid 4).
 
 |`type`|In sync|
+|---|---|
 |0x0|No|
 |0x1|No|
 |0x2|No|
