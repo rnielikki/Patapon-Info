@@ -1,8 +1,6 @@
 # setActionController
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Sets an action (e.g. cannon attack) to a gimmick.
 
 ## Code Information
 
