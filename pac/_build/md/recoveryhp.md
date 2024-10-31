@@ -11,7 +11,7 @@ Fully recovers stamina of a given target.
 
 ## Parameters
 
-- `(int *)handle_id` *(8 bytes)* : Unit/Squad/troop handle, obtained from e.g. [getUnitHandle](./getunithandle.md) or [getSquadHandle](./getsquadhandle.md).
+- `(int *)handle_id` *(8 bytes)* : Unit/Squad/troop handle, obtained from e.g. [getUnitHandle](./getunithandle.md) or [getUnitSquadHandle](./getunitsquadhandle.md).
 
 ## Example
 

@@ -11,7 +11,7 @@ Sets squad activity from `squadactivityparam` to given squad.
 
 ## Parameters
 
-- `(int *)handle_id` *(8 bytes)* : **Squad handle**, obtained from [getSquadHandle](./getsquadhandle.md).
+- `(int *)handle_id` *(8 bytes)* : **Squad handle**, obtained from [getUnitSquadHandle](./getunitsquadhandle.md).
 - `(int)command_action` *(8 bytes)* : expected 0~2. 0 is marching, 1 is defending, 2 is attacking.
 - `(short)squadactivityparam_id` *(8 bytes)* : `squadactivityparam` ID to set.
 

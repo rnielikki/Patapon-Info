@@ -11,7 +11,7 @@ Kills an unit (instadeath). Used for e.g. killing bonedeths after the structure 
 
 ## Parameters
 
-- `(int *)handle_id` *(8 bytes)* : Unit or squad handle, obtained from e.g. [getUnitHandle](./getunithandle.md) or [getSquadHandle](./getsquadhandle.md).
+- `(int *)handle_id` *(8 bytes)* : Unit or squad handle, obtained from e.g. [getUnitHandle](./getunithandle.md) or [getUnitSquadHandle](./getunitsquadhandle.md).
 - `(float)delay` *(8 bytes)* : Delay before dying, as seconds.
 - `(float)Var2` *(8 bytes)* : Can keep as 0.
 

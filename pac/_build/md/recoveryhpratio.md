@@ -11,7 +11,7 @@ Recovers stamina of a given target for a given percentage of amount.
 
 ## Parameters
 
-- `(int *)handle_id` *(8 bytes)* : Unit/Squad/Troop handle, obtained from e.g. [getUnitHandle](./getunithandle.md) or [getSquadHandle](./getsquadhandle.md).
+- `(int *)handle_id` *(8 bytes)* : Unit/Squad/Troop handle, obtained from e.g. [getUnitHandle](./getunithandle.md) or [getUnitSquadHandle](./getunitsquadhandle.md).
 - `(float)amount_percentage` *(8 bytes)* : Recovery amount as percentage, in range of 0~1.
 
 ## Example

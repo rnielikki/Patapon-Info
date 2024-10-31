@@ -2,7 +2,7 @@
 
 Adds squad to a troop. Shouldn't be used much except adding player team.
 
-For adding enemy units, consider [reqActor](./guide/how-to-create-an-enemy-target.md) with [getSquadHandle](./getsquadhandle.md).
+For adding enemy units, consider [reqActor](./guide/how-to-create-an-enemy-target.md) with [getUnitSquadHandle](./getunitsquadhandle.md).
 
 ## Code Information
 

@@ -1,6 +1,6 @@
 # unitUidToSquadHandle
 
-Gets squad handle from an [reqActor *unique* ID](./setreqactoruniqueid.md).
+**Use [getUnitSquadHandle](./getunitsquadhandle.md)** for stability.
 
 ## Code Information
 

@@ -13,7 +13,7 @@ Check [status ID table](./guide/reference-table.md#as-non-flag) for the status e
 
 ## Parameters
 
-- `(int *)handle_id` *(8 bytes)* : Unit or squad handle, obtained from [getUnitHandle](./getunithandle.md) or [getSquadHandle](./getsquadhandle.md).
+- `(int *)handle_id` *(8 bytes)* : Unit or squad handle, obtained from [getUnitHandle](./getunithandle.md) or [getUnitSquadHandle](./getunitsquadhandle.md).
   - If the handle is squad, this is applied to the whole squad.
 - `(int)status_ID` *(8 bytes)* : The [status effedt ID](./guide/reference-table.md#as-non-flag) to apply to the unit.
 - `(float)duration` *(8 bytes)* : Duration of the status as *seconds*.

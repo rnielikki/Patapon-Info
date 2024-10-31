@@ -2,6 +2,8 @@
 
 Gets squad handle by given generator and ID in the generator.
 
+[getUnitSquadHandle](./getunitsquadhandle.md) is more frequently used.
+
 ## Code Information
 
 - **Name**: `getSquadHandle`

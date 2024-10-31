@@ -116,7 +116,7 @@ Related article: [How To: Get a handle](./how-to-get-a-handle.md)
 
 For hideout exclusive handle, check [hideout](#hideout) section.
 
-- Squad: [getUnitSquadHandle](../getunitsquadhandle.md) (from reqActor ID), [unitUidToSquadHandle](../unituidtosquadhandle.md) (from "unique ID" of reqActor), [getPlayerSquadHandle](../getplayersquadhandle.md) (from player), [getUnitSquadHandleFromChara](../getunitsquadhandlefromchara.md) (from unit handle)
+- Squad: [getUnitSquadHandle](../getunitsquadhandle.md) (from reqActor unique ID), [getSquadHandle](../getsquadhandle.md) (from generator + reqIndex), [getPlayerSquadHandle](../getplayersquadhandle.md) (from player), [getUnitSquadHandleFromChara](../getunitsquadhandlefromchara.md) (from unit handle)
 - Unit: [getUnitHandle](../getunithandle.md), [getHataponHandle](../gethataponhandle.md), [getMultiHeroHandle](../getmultiherohandle.md)
 - Effect/Gimmick: [addEffect](../addeffect.md), [gimmick_getHandle](../gimmick_gethandle.md)
 - Generator: [getHandle](../gethandle.md)
@@ -124,7 +124,7 @@ For hideout exclusive handle, check [hideout](#hideout) section.
 ### Squad
 
 - [addSquad](../addsquad.md)
-- [getSquadBasePosition](../getsquadbaseposition.md), [getSquadClassId](../getsquadclassid.md), [getSquadHandle](../getsquadhandle.md)
+- [getSquadBasePosition](../getsquadbaseposition.md), [getSquadClassId](../getsquadclassid.md)
 - [setSquadBasePosition](../setsquadbaseposition.md) [setPlayerSquadType](../setplayersquadtype.md)
 - [getMultiplayerSquadHandle](../getmultiplayersquadhandle.md)
 - [getSquadClassId](../getsquadclassid.md), [getPlayerClassId](../getplayerclassid.md)

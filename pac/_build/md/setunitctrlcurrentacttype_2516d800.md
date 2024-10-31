@@ -13,7 +13,7 @@ Sets what the unit is currently doing *by Squad Handle*.
 
 ## Parameters
 
-- `(int *)handle_id` *(8 bytes)* : **Squad handle**, obtained from [getSquadHandle](./getsquadhandle.md).
+- `(int *)handle_id` *(8 bytes)* : **Squad handle**, obtained from e.g. [getUnitSquadHandle](./getunitsquadhandle.md).
 - `(int)command_id` *(8 bytes)* : [Command ID](./guide/reference-table.md#command-ids) to perform now. **The action is limited to march/defend/attack** or nothing (-1).
 
 ## Example
