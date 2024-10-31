@@ -11,7 +11,7 @@ Gets squad position *without* additional attack movement.
 
 ## Parameters
 
-- `(int)squad_handle` *(8 bytes)* : The [squad handle](./guide/how-to-get-a-handle.md) of the squad to get the position.
+- `(int *)squad_handle` *(8 bytes)* : The [squad handle](./guide/how-to-get-a-handle.md) of the squad to get the position.
 - `(float *)position` *(8 bytes)* : Variable to *store* the current X position of the squad.
 
 ## Example

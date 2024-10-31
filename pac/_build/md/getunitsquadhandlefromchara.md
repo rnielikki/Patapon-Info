@@ -12,7 +12,7 @@ Gets squad handle of an unit.
 ## Parameters
 
 - `(int *)destination` *(8 bytes)* : Variable to *store* the squad handle.
-- `(int)unit_handle` *(8 bytes)* : Unit handle, obtained from e.g. [getUnitHandle](./getunithandle.md).
+- `(int *)unit_handle` *(8 bytes)* : Unit handle, obtained from e.g. [getUnitHandle](./getunithandle.md).
 
 ## Example
 

@@ -11,7 +11,7 @@ Disarms the greatshield, if the target unit has it. Used in ending cutscene (asc
 
 ## Parameters
 
-- `(int)unit_handle` *(8 bytes)* : Handle of the unit to disarm the greatshield.
+- `(int *)unit_handle` *(8 bytes)* : Handle of the unit to disarm the greatshield.
 
 ## Example
 

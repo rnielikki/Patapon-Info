@@ -14,7 +14,7 @@ For adding enemy units, consider [reqActor](./guide/how-to-create-an-enemy-targe
 ## Parameters
 
 - `(int *)destination` *(8 bytes)* : Variable to *store* the squad handle.
-- `(int)troop_handle` *(8 bytes)* : The [troop handle](./addtroop.md).
+- `(int *)troop_handle` *(8 bytes)* : The [troop handle](./addtroop.md).
 
 ## Example
 

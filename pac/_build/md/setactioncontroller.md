@@ -11,7 +11,7 @@ Sets an action (e.g. cannon attack) to a gimmick.
 
 ## Parameters
 
-- `(int)gimmick_handle` *(8 bytes)* : Gimmick handle, other kinds of handle won't work.
+- `(int *)gimmick_handle` *(8 bytes)* : Gimmick handle, other kinds of handle won't work.
 - `(int)type` *(8 bytes)* : Control Type, expected 0~4.
 - `(float)time` *(8 bytes)* : Delay time (cooltime) between actions, as seconds.
 - `(float)Var3` *(8 bytes)* : Can keep zero. Works only `type` is 3 or 4.

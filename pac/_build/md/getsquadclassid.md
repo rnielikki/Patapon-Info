@@ -11,7 +11,7 @@ Gets [class ID](./guide/reference-table.md#class-ids) of the given squad.
 
 ## Parameters
 
-- `(int)squad_handle` *(8 bytes)* : The squad handle to get the class ID.
+- `(int *)squad_handle` *(8 bytes)* : The squad handle to get the class ID.
 - `(int *)destination` *(8 bytes)* : Variable to *store* the [class ID](./guide/reference-table.md#class-ids). -1 if the class is invalid.
 
 ## Example

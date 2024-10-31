@@ -11,7 +11,7 @@ Sets ID of the player.
 
 ## Parameters
 
-- `(int)squad_handle` *(8 bytes)* : Squad handle, obtained from e.g. [getPlayerSquadHandle](./getplayersquadhandle.md), [getMultiPlayerSquadHandle](./getmultiplayersquadhandle.md) or [addSquad](./addsquad.md).
+- `(int *)squad_handle` *(8 bytes)* : Squad handle, obtained from e.g. [getPlayerSquadHandle](./getplayersquadhandle.md), [getMultiPlayerSquadHandle](./getmultiplayersquadhandle.md) or [addSquad](./addsquad.md).
 - `(int)player_id` *(8 bytes)* : Player ID to set.
 
 ## Example

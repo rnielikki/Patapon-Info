@@ -14,7 +14,7 @@ The ID can be used for getting the unit status, or controlling the unit through 
 ## Parameters
 
 - `(int *)destination` *(8 bytes)* : Destination to save the unit handle.
-- `(int)squad_handle_id` *(8 bytes)* : Value obtained from [getUnitSquadHandle](./getunitsquadhandle.md) or [getPlayerSquadHandle](./getplayersquadhandle.md).
+- `(int *)squad_handle_id` *(8 bytes)* : Value obtained from [getUnitSquadHandle](./getunitsquadhandle.md) or [getPlayerSquadHandle](./getplayersquadhandle.md).
 - `(int)index` *(8 bytes)* : Index in squad, Usually this is zero.
 
 ## Example

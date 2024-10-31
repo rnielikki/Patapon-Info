@@ -11,7 +11,7 @@ Connects a model to a node **by ID**.
 
 ## Parameters
 
-- `(int)parent_handle` *(8 bytes)* : The parent [handle](./guide/how-to-get-a-handle.md) to contain the child handle.
+- `(int *)parent_handle` *(8 bytes)* : The parent [handle](./guide/how-to-get-a-handle.md) to contain the child handle.
 - `(int *)child_handle` *(8 bytes)* : Handle of the model, e.g. effect, from [addEffect](./addeffect.md).
 - `(int)node_id` : The node ID from the GXX file.
 

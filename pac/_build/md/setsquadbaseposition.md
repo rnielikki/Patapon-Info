@@ -11,7 +11,7 @@ Gets squad base position *without* additional attack movement.
 
 ## Parameters
 
-- `(int)squad_handle` *(8 bytes)* : The [squad handle](./guide/how-to-get-a-handle.md) of the squad to set the position.
+- `(int *)squad_handle` *(8 bytes)* : The [squad handle](./guide/how-to-get-a-handle.md) of the squad to set the position.
 - `(float)position` *(8 bytes)* : X Position as PSP Pixel in the world, to set the squad base position.
 
 ## Example

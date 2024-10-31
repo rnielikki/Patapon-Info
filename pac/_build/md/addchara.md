@@ -12,7 +12,7 @@ Adds a character to a squad. Used for adding hatapon. Requires [readArcFile](./r
 ## Parameters
 
 - `(int *)destination` *(8 bytes)* : Variable to *store* the character handle.
-- `(int)squad_handle` *(8 bytes)* : Handle of the squad.
+- `(int *)squad_handle` *(8 bytes)* : Handle of the squad.
 - `(int)charaparam_id` *(8 bytes)* : Character ID in `charaparam`.
 
 ## Example

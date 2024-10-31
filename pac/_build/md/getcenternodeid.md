@@ -11,7 +11,7 @@ Gets center (root) of node of **an unit**.
 
 ## Parameters
 
-- `(int)unit_handle` *(8 bytes)* : Unit handle, obtained from e.g. [getUnitHandle](./getunithandle.md).
+- `(int *)unit_handle` *(8 bytes)* : Unit handle, obtained from e.g. [getUnitHandle](./getunithandle.md).
 - `(int *)destination` *(8 bytes)* : Vairable to *store* the root node.
 
 ## Example
