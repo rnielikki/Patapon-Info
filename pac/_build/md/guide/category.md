@@ -174,6 +174,7 @@ For hideout exclusive handle, check [hideout](#hideout) section.
 - [getNodeIndex](../getnodeindex.md), [getNodePos](../getnodepos.md), [getCenterNodeId](../getcenternodeid.md)
 - [setLink](../setlink.md), [setLinkParam](../setlinkparam.md), [setLinkById](../setlinkbyid.md), [releaseLink](../releaselink.md), [setLinkInfo](../setlinkinfo.md)
 - [enableRenderAttach](../enablerenderattach.md)
+- [getNodeDisp](../getnodedisp.md), [setNodeDisp](../setnodedisp.md)
 - Adding an Enemy Target: [callActorEffect](../callactoreffect.md), [addLinkObject](../addlinkobject.md)
 
 ### Control

@@ -1,8 +1,6 @@
 # getNodeDisp
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Gets the node display status, if it is shown or hidden.
 
 ## Code Information
 
@@ -13,9 +11,9 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
-- `(uint)Var2` *(8 bytes)*
+- `(int *)handle_id` *(8 bytes)* : The target [handle](./guide/how-to-get-a-handle.md).
+- `(int *)node_index` *(8 bytes)* : Node index, obtained from [getNodeIndex](./getnodeindex.md).
+- `(int *)display_node` *(8 bytes)* : Variable to *store* the node display status, 1 displayed and 0 hidden.
 
 ## Example
 

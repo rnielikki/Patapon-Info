@@ -13,10 +13,10 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(int)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
-- `(undefined4)Var2` *(8 bytes)*
-- `(undefined4)Var3` *(8 bytes)*
+- `(int *)gimmick_handle` *(8 bytes)* : Variable to *store* the gimmick handle.
+- `(int)gimmick_id` *(8 bytes)* : ID of the gimmick in `gimmickparam`.
+- `(int)hitbox_layer` *(8 bytes)* : [Hitbox layer](./guide/reference-table.md#hitbox-layers) of the gimmick.
+- `(int)gimmick_identifier` *(8 bytes)* : User defined any gimmick identifier. Keep 0 if this will not used. Can be used in [gimmick_getHandle](./gimmick_gethandle.md).
 - `(String)Var4`
 
 ## Example

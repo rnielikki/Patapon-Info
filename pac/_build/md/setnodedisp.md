@@ -1,8 +1,6 @@
 # setNodeDisp
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Shows or hides the node in the object.
 
 ## Code Information
 
@@ -13,9 +11,9 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
-- `(int)Var2` *(8 bytes)*
+- `(int *)handle_id` *(8 bytes)* : The target [handle](./guide/how-to-get-a-handle.md).
+- `(int *)node_index` *(8 bytes)* : Node index, obtained from [getNodeIndex](./getnodeindex.md).
+- `(bool)display_node` *(8 bytes)* : 1 shows the object in the node, 0 hides the node objects.
 
 ## Example
 
