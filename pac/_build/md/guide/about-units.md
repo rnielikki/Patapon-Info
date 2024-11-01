@@ -10,4 +10,7 @@
 - **A reqActor** is *object definitions* in scope of *squad*, but not spawned yet.
 - **A generator** is an **[object pool](https://en.wikipedia.org/wiki/Object_pool_pattern)** that contains definition of the *reqActors*.
 
+
+One generator can contain **max 8 types of reqActors**, so reqActor index in generator is expected 0~7.
+
 Next Article: [How To: Create an Enemy Target](./how-to-create-an-enemy-target.md)

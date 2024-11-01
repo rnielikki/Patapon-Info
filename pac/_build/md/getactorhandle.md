@@ -1,6 +1,6 @@
 # getActorHandle
 
-Gets an handle of any kind of *reqActor*.
+Gets an handle of any kind of *reqActor*. Must be called **after the target is [being spawned](./spawn.md)**.
 
 ## Code Information
 
