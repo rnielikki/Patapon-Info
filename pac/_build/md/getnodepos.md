@@ -12,9 +12,9 @@ Retrives position of the given node.
 ## Parameters
 
 - `(int *)handle_id` *(8 bytes)* : The target [handle](./guide/how-to-get-a-handle.md).
-- `(int *)node` *(8 bytes)* : Variable to *store* the node index.
-- `(float)x` *(8 bytes)* : X poisiton of the node.
-- `(float)y` *(8 bytes)* : Y position of the node.
+- `(int *)node` *(8 bytes)* : ID of the node, obtained from [getNodeIndex](./getnodeindex.md)
+- `(float *)x` *(8 bytes)* : Variable to *store* the X poisiton of the node.
+- `(float *)y` *(8 bytes)* : Variable to *store* the Y position of the node.
 
 ## Example
 

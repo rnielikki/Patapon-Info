@@ -2,6 +2,8 @@
 
 Gets specific node ID from the model by given node name.
 
+Useful for e.g. [getNodePos](./getnodepos.md), [getNodeDisp](./getnodedisp.md), or [setNodeDisp](./setnodedisp.md), but can be used for e.g. [callMessageWindow](./callmessagewindow.md).
+
 ## Code Information
 
 - **Name**: `getNodeIndex`

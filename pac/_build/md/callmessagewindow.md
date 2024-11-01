@@ -19,7 +19,7 @@ See also [How To: Set Speech Bubble](./guide/how-to-set-speech-bubble.md)
 - `(float)position_y` *(8 bytes)* : Y offset to move the bubble, as *PSP screen pixels*.
 - `(float)duratoin` *(8 bytes)* : Time as *seconds* to show the message.
   - If this is smaller than zero, this functions like [keyCloseMessageWindow](./keyclosemessagewindow.md), except the window can't be closed without [closeMessageWindow](./closemessagewindow.md).
-- `(int)Var5` *(8 bytes)* : **Keep -1**. Wrong parameter might cause wrong positioning.
+- `(int)node_id` *(8 bytes)* : [Node ID](./guide/about-nodes.md) to put the speech bubble, **keep -1 for root (default) node**.
 - `(int)Var6` *(8 bytes)* : Seems like it does not do anything, but *keep this as 0*.
 - `(Address)message_address` *(4 bytes)* : Message ID from **message address table in the PAC file**. Details on: [about message table](./guide/about-message.md#message-table).
 - `(int)hide_long_message` *(8 bytes)* : The value is **is 1 or not**. If this is 1, *Long message will be invisible*.
