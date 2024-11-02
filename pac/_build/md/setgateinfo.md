@@ -26,7 +26,7 @@ If `bind_type` is 0, setup only 2 of `param_index` (in this case, the `param` is
 - If `param_index` is 0, `param` is identifier of the object, obtained from [setupAddDungeonWall](./setupadddungeonwall.md), less than 0 for non-dungeon object.
 - If `param_index` is 1, `param` decides action type.
    - 0 does nothing, 1 blocks camera sight
-   - door moving direction with lever: `4` is from up to down, `8` is from up to down. `0` does not move.
+   - door moving direction with lever: `4` is from up to down, `8` is from down to up. `0` does not move.
 - If `param_index` is 2, `param` is address (offset from PAC file) to call (when being opened). The address can be address of [cmd_end](./cmd_end.md).
 - If `param_index` is 3, `param` can be 0, 1, 2 - 1 opens door from very start.
 - if `param_index` is 4, `param` is ["reqActor ID"](./setreqactoruniqueid.md) 3rd parameter of the lever gimmick.
