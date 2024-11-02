@@ -1,8 +1,8 @@
 # sendMessage
 
-**Description** goes here.
+Sends a system message to the **chat window**.
 
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Used for showing current VS status to the chat window.
 
 ## Code Information
 
@@ -13,12 +13,14 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(int)Var0` *(8 bytes)*
-- `(int)Var1` *(8 bytes)*
-- `(int)Var2` *(8 bytes)*
-- `(int)Var3` *(8 bytes)*
-- `(int)Var4` *(8 bytes)*
-- `(int)Var5` *(8 bytes)*
+- `(int)player_id` *(8 bytes)* : Sender player ID to set, expected -1~3. -1 means nobody.
+   - Please describe if this does actually something.
+- `(int)quip_colour` *(8 bytes)* : System quip colour in system settings, expected -1~3. -1 uses default colour.
+   - The colour cannot be adjusted normally in options page.
+- `(bool)Var2` *(8 bytes)* : 1 always sends the message regardless of the target validity or multi status.
+- `(bool)Var3` *(8 bytes)* : Quip rendring related, but unused.
+- `(Address)sender_name` *(8 bytes)* : Address of the sender name messag in the PAC file. Keep -1 to hide this.
+- `(Address)message_address` *(8 bytes)* : Address of the display message in the PAC file.
 
 ## Example
 

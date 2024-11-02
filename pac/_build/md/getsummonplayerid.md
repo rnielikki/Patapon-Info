@@ -1,8 +1,6 @@
 # getSummonPlayerId
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Gets the player ID who is currently summoning.
 
 ## Code Information
 
@@ -13,8 +11,8 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
+- `(int)summon_side` *(8 bytes)* : Summoning side. 0 is blue, 1 is red side.
+- `(int *)summon_player_id` *(8 bytes)* : -1 if nobody is summoning.
 
 ## Example
 

@@ -303,7 +303,7 @@ PvE VS playtime is hardcoded and can't edit with this.
 
 #### Summon
 - [getEquipSummonType](../getequipsummontype.md), [setEnemySummonType](../setenemysummontype.md)
-- [isSummonMode](../issummonmode.md), [startSummonMode](../startsummonmode.md)
+- [isSummonMode](../issummonmode.md), [startSummonMode](../startsummonmode.md), [getSummonPlayerId](../getsummonplayerid.md)
 
 ## Item
 
@@ -356,7 +356,7 @@ Called in phase 1 (2nd phase) of `setMissionTimmingScript`.
 - Speech Bubble: [callMessageWindow](../callmessagewindow.md), [callLocalizeMessageWindow](../calllocalizemessagewindow.md), [setMsgWndColor](../setmsgwndcolor.md), [setMsgWndPriority](../setmsgwndpriority.md), [closeMessageWindow](../closemessagewindow.md) [keyCloseMessageWindow](../keyclosemessagewindow.md)
   - Related Guide: [How To: Set Speech Bubble](./how-to-set-speech-bubble.md)
 - Information Message (above/below): [callSysMsgLabel](../callsysmsglabel.md), ~~[callSysMsg](../callsysmsg.md)~~, [clearSysMsg](../clearsysmsg.md)
-- Chat: [setEnableLogWindow](../setenablelogwindow.md), [setEnableChatWindow](../setenablechatwindow.md)
+- Chat: [setEnableLogWindow](../setenablelogwindow.md), [setEnableChatWindow](../setenablechatwindow.md), [sendMessage](../sendmessage.md)
 - Debug: [setChoice](../setchoice.md), [doSelect](../doselect.md)
 - Basic text on center : [sysytemMessage](../sysytemmessage.md), [setMessageColor](../setmessagecolor.md), [getLineFeedCount](../getlinefeedcount.md)
 - Related Utils: [setReplaceTextFromInt](../setreplacetextfromint.md), [text_setReplaceColor](../text_setreplacecolor.md), [text_setReplaceText](../text_setreplacetext.md)
