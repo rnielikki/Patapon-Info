@@ -2,6 +2,8 @@
 
 Places PVE enemy *or* gimmick (anything in `generatorparam`) to a [generator](./create.md).
 
+This does *not* require resource preloading.
+
 ## Code Information
 
 - **Name**: `setReqActorType`

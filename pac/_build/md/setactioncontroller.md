@@ -1,6 +1,8 @@
 # setActionController
 
-Sets an action (e.g. cannon attack) to a gimmick.
+Sets an action (e.g. cannon attack) to a gimmick. Used in VS turrets.
+
+For actual effect to the turret, check [How To: Add A Turret](./guide/how-to-add-a-turret.md).
 
 ## Code Information
 

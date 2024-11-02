@@ -1,6 +1,6 @@
 # setDamageParam
 
-Applies damageparam to a handle, results granting damage inflicting.
+Matches stat of an object to the another one. Used for connecting parent stat to the child.
 
 ## Code Information
 
@@ -11,8 +11,8 @@ Applies damageparam to a handle, results granting damage inflicting.
 
 ## Parameters
 
-- `(int *)handle_id` *(8 bytes)* : [Handle](./guide/category.md#getting-handle) to apply the damageparam.
-- `(int)damageparam_id` *(8 bytes)* : Damage ID in the `damageparam` *2nd section*.
+- `(int *)dest_handle_id` *(8 bytes)* : The [handle](./guide/category.md#getting-handle) of the destination stat.
+- `(int *)source_handle_id` *(8 bytes)* : The [handle](./guide/category.md#getting-handle) of the source stat.
 
 ## Example
 
