@@ -1,8 +1,6 @@
 # movePosition
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Moves a target by given handle.
 
 ## Code Information
 
@@ -13,12 +11,12 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(int)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
-- `(undefined4)Var2` *(8 bytes)*
-- `(undefined4)Var3` *(8 bytes)*
-- `(undefined4)Var4` *(8 bytes)*
-- `(int)Var5` *(8 bytes)*
+- `(int *)handle_id` *(8 bytes)* : ID of the handle.
+- `(float)x_position` *(8 bytes)* : X position to move.
+- `(float)y_position` *(8 bytes)* : Y position to move.
+- `(float)delay` *(8 bytes)* : Delay before moving.
+- `(float)speed` *(8 bytes)* : Speed to move. 0 moves the target immediately. The bigger the value is, the faster the target moves.
+- `(int)Var5` *(8 bytes)* : Please describe, can be related to the subtle animation adjustment.
 
 ## Example
 

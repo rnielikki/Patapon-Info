@@ -2,7 +2,7 @@
 
 > *Other functions have the same name. Check the [Disambiguation page](./getUnitParam.md) to find them.*
 
-Gets unit information by troop and index. Useful for loading effects adn gimmicks.
+Gets unit information by troop and index. Useful for checking if certain effects or gimmicks should be loaded.
 
 ## Code Information
 

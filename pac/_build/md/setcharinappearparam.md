@@ -1,8 +1,8 @@
 # setCharinAppearParam
 
-Define Ka-ching drop information.
+Defines Ka-ching drop information.
 
-(Ka-ching is *Charing* in Japanese version)
+Ka-ching is *Charing* in Japanese version.
 
 ## Code Information
 
