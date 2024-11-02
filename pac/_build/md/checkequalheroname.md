@@ -1,8 +1,6 @@
 # checkEqualHeroName
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Checks if the hero name is same as certain name. This is used for special hairstyle.
 
 ## Code Information
 
@@ -13,8 +11,8 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(String)Var1`
+- `(int *)result` *(8 bytes)* : Variable to *store* if the hero name is identical to the given value. 1 if the hero name is same as `hero_name`, otherwise 0.
+- `(String)hero_name` : Name of the hero to compare.
 
 ## Example
 
@@ -26,6 +24,13 @@ Which is interpreted as:
 
 ```c
 checkEqualHeroName((int *)iVar1, "Rolito")
+```
+
+
+```c
+00000514  250A1500:checkEqualHeroName(4:1, "AAA")
+00000524  25001700:cmd_ifEQ(4:1, 1.0, 1:56C)
+  0000056C  250A1400:setAccessoryIdFileIndex(2:3, 4:0)
 ```
 
 ## Code

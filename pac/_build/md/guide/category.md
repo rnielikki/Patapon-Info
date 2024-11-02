@@ -49,6 +49,7 @@ Check [About Flag](./about-flag.md).
 ## Unit / Gimmick
 
 - [setupUnit](../setupunit.md), [applyUnit](../applyunit.md)
+- [checkEqualHeroName](../checkequalheroname.md)
 
 ### Model
 
@@ -160,6 +161,7 @@ For hideout exclusive handle, check [hideout](#hideout) section.
 ### Position
 
 - [setAdvanceEnable](../setadvanceenable.md), [setAdvanceSpeedRatio](../setadvancespeedratio.md)
+- [movePosition](../moveposition.md)
 - [getPlayerTroopBasePosition](../getplayertroopbaseposition.md)
 - [getTroopTopPosX](../gettrooptopposx.md), [getTroopTopPosX_enemy](../gettrooptopposx_enemy.md), [getTroopPosY](../gettrooptopposy.md)
 
