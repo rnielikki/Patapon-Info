@@ -107,6 +107,11 @@ This are used e.g. [getAbnormalStatus](../getabnormalstatus.md).
 
 ## Units
 
+### Generatorparam
+
+- [Generatorparam info (html)](./resources/generatorparam.html)
+- [Generatorparam info (CSV)](./resources/generatorparam.csv)
+
 ### Class IDs
 
 |ID|ID Hex|Unit|
@@ -337,16 +342,12 @@ The ID has **same order as selist.slt** (in `DATA_CMN\loadinggroup\systemdata\so
 
 ## Data
 
-### Generatorparam
-
-- [Generatorparam info (html)](./resources/generatorparam.html)
-- [Generatorparam info (CSV)](./resources/generatorparam.csv)
-
 ## Magic word list
 
 This means `\<NX>` type of the text.
 
 |ID|Text|Highlight|Other player sees same value|
+|---|---|---|---|
 |`0x0`|Own almighty name|No|No|
 |`0x1`|Player 1 hero|Yes|Yes|
 |`0x2`|Player 1 hero|No|Yes|
