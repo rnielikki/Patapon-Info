@@ -1,6 +1,6 @@
 # setBossNoDamage
 
-Set the boss invincible or not.
+Marks the boss as invincible or not. The damage amount is still displayed, but does not take actual damage.
 
 ## Code Information
 
