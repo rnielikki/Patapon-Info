@@ -336,7 +336,7 @@
 "0x14E"	"DarkMedenDummy"	"Gimmick"	"Mecha Hoshipon"	
 "0x14F"	"DarkMachanFlag"	"Gimmick"	"Sukopon flag"	
 "0x150"	"CAGE_000"	"Gimmick"	"Cage (Rect)"	
-"0x151"	"CAGE_001"	"Gimmick"	"Cage (Round, P2)"	"Appears on P2 Once upon a time mission"
+"0x151"	"CAGE_001"	"Gimmick"	"Cage (Round)"	""
 "0x152"	"P_ROCKFACE_LOW_000"	"Gimmick"		
 "0x153"	"P_ROCKFACE_HI_000"	"Gimmick"		
 "0x154"	"ED3_TON"	"Gimmick"	"Ton excited"	"Might be for ending scene"
