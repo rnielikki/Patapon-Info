@@ -16,6 +16,7 @@ Sets VS scoring logic when a squad or gimmick is being killed.
 - `(int)break_type` *(8 bytes)* : Expected 0~6. **Does nothing with fort occupation**.
 
 |`break_type`|Action with **killing** enemy|
+|---|---|
 |0|Gives score to blue team troop|
 |1|Gives score to red team troop|
 |2|Nothing|

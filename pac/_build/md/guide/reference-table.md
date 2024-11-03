@@ -214,6 +214,7 @@ This varies depending on the model. For detali, see [Tayo's table](./resources/C
 ### Facility IDs
 
 |ID|Type|
+|---|---|
 |0x0|Silver Hoshipon|
 |0x1|Blacksmith|
 |0x2|Herogate|
@@ -272,6 +273,7 @@ This varies depending on the model. For detali, see [Tayo's table](./resources/C
 ### Enchant IDs
 
 |`enchant_id`|Enchant|
+|---|---|
 |0|None|
 |1|St|
 |2|G|

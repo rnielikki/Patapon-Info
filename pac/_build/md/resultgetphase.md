@@ -14,6 +14,7 @@ Gets current phase of the step when the mission is ended. The mission end status
 - `(int *)destination` *(8 bytes)* : Variable to *store* the result phase.
 
 |ID|Meaning|
+|---|---|
 |1|Mission status determined|
 |3|Decided what to do, performing animation|
 |4|After headline (Quest complete/Defeat etc) message appeared|
