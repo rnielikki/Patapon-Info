@@ -1,6 +1,6 @@
 # getMotionInfo
 
-Gets current [action ID](./guide/reference-table.md#action-ids) of the motion.
+Gets current [action ID](./guide/reference-table.md#action-ids) and animation status of the motion.
 
 ## Code Information
 
@@ -13,7 +13,7 @@ Gets current [action ID](./guide/reference-table.md#action-ids) of the motion.
 
 - `(int *)handle` *(8 bytes)* : Handle to get the motion.
 - `(int *)motion_id` *(8 bytes)* : Variable to *store* the [current ID](./guide/reference-table.md#action-ids) of the motion.
-- `(uint)Var2` *(8 bytes)*
+- `(int *)is_anim_ended` *(8 bytes)* : 1 if animation has been ended, 0 if it is still animating.
 - `(undefined4)Var3` *(8 bytes)*
 
 ## Example
