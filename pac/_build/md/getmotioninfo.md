@@ -1,8 +1,6 @@
 # getMotionInfo
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Gets current [action ID](./guide/reference-table.md#action-ids) of the motion.
 
 ## Code Information
 
@@ -13,8 +11,8 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(uint)Var1` *(8 bytes)*
+- `(int *)handle` *(8 bytes)* : Handle to get the motion.
+- `(int *)motion_id` *(8 bytes)* : Variable to *store* the [current ID](./guide/reference-table.md#action-ids) of the motion.
 - `(uint)Var2` *(8 bytes)*
 - `(undefined4)Var3` *(8 bytes)*
 
