@@ -1,6 +1,6 @@
 # getAbnormalStatus
 
-Gets status effect as **flags**.
+Gets status effect as **flags**. Works only with unit.
 
 Check [status ID table](./guide/reference-table.md#as-flag) for the status effect flag.
 

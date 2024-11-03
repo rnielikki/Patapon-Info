@@ -170,6 +170,7 @@ For hideout exclusive handle, check [hideout](#hideout) section.
 
 - [playMotion](../playmotion.md), [pushMotion](../pushmotion.md), [clipMotion](../clipmotion.md), [stopMotion](../stopmotion.md), [pauseMotion](../pausemotion.md)
 - [getMotionInfo](../getmotioninfo.md), [setMotion](../setMotion.md)
+- [setUnitDeadMotion](../setunitdeadmotion.md)
 
 ##### Node
 
@@ -208,7 +209,7 @@ Note that squadActivity and actual march/attack/defend action can be different, 
 - [del](../del.md), [getKillOrDerFlag](../getkillorderflag.md)
 - [setRebornPosition](../setrebornposition.md), [setAppearancePosition](../setappearanceposition.md)
 - [recoveryHp](../recoveryhp.md), [recoveryHpRatio](../recoveryhpratio.md) [recoveryPlayerTroopHp](../recoveryplayertroophp.md), [recoveryPlayerTroopHpRatio](../recoveryplayertroophpratio.md)
-- [setMaxHitPoint](../setmaxhitpoint.md)
+- [setHitPoint](../sethitpoint.md), [setMaxHitPoint](../setmaxhitpoint.md), [getStatusInfo](../getstatusinfo.md) (hp status and hp rate)
 
 ### Status Effect
 - [addAbnormalStatus](../addabnormalstatus.md), [addAbnormalStatusSlip](../addabnormalstatusslip.md), [addAbnormalStatusBlowoff](../addabnormalstatusblowOff.md)

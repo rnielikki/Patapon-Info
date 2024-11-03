@@ -1,8 +1,6 @@
 # getStatusInfo
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Gets stamina information of a target.
 
 ## Code Information
 
@@ -13,9 +11,9 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(int)Var1` *(8 bytes)*
-- `(float)Var2` *(8 bytes)*
+- `(int *)handle` *(8 bytes)* : Handle of the target to get the stamina information.
+- `(int *)data_type` *(8 bytes)* : Expected 0~2. 0 gives max stamina (int), 1 gives current stamina (int), 2 gives stamina rate (float).
+- `(int/float *)destination` *(8 bytes)* : Variable to *store* the stamina information. If `data_type` is 2, float is expected.
 
 ## Example
 
@@ -67,13 +65,13 @@ void FUN_08913178(int param_1,undefined4 param_2)
   if (pfVar5 != (float *)0x0) {
     iVar4 = *piVar2;
     if (iVar4 == 0) {
-      *pfVar3 = *pfVar5;
+      *pfVar3 = *pfVar5; //max stamina
     }
     else if (iVar4 == 1) {
-      *pfVar3 = pfVar5[1];
+      *pfVar3 = pfVar5[1]; //current stamina
     }
     else if (iVar4 == 2) {
-      *pfVar3 = (float)(int)pfVar5[1] / (float)(int)*pfVar5;
+      *pfVar3 = (float)(int)pfVar5[1] / (float)(int)*pfVar5; //stamina percentage
     }
   }
   PAC::PAC_setCmdId(param_2,0);

@@ -11,7 +11,7 @@ Sets maximum stamina of an object.
 
 ## Parameters
 
-- `(int *)handle` *(8 bytes)* : [Handle of the object](./guide/how-to-get-a-handle.md) to set max stamina.
+- `(int *)handle` *(8 bytes)* : [Handle of the object](./guide/how-to-get-a-handle.md) to set the max stamina.
 - `(int)stamina` *(8 bytes)* : Amount of stamina to set.
 
 ## Example

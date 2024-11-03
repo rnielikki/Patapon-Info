@@ -67,7 +67,7 @@ They are *flags*, since multiple buttons can be pressed at same time.
 
 #### As flag
 
-Those values are bitshifted from non-flag IDs. (`1 << (flagID)`)
+Those values are bitshifted from non-flag IDs. (`1 << (nonflagID)`)
 
 This are used e.g. [getAbnormalStatus](../getabnormalstatus.md).
 

@@ -1,8 +1,6 @@
 # setHitPoint
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Sets current stamina of an object.
 
 ## Code Information
 
@@ -13,8 +11,8 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
+- `(int *)handle` *(8 bytes)* : [Handle of the object](./guide/how-to-get-a-handle.md) to set the current stamina.
+- `(int)stamina` *(8 bytes)* : Amount of stamina to set.
 
 ## Example
 

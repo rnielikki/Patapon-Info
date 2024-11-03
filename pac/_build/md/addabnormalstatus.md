@@ -1,6 +1,6 @@
 # addAbnormalStatus
 
-Sets status effect as **status ID**.
+Sets status effect as **status ID**. Works with unit, squad or troop.
 
 Check [status ID table](./guide/reference-table.md#as-non-flag) for the status effect.
 
@@ -42,7 +42,6 @@ Ths PAC instruction calls this function (Decompiled by Ghidra):
 
 ```c
 void FUN_08916778(int param_1,undefined4 param_2)
-
 {
   int *piVar1;
   undefined4 *puVar2;
@@ -152,4 +151,3 @@ void FUN_08916778(int param_1,undefined4 param_2)
   return;
 }
 ```
-

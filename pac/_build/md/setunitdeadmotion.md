@@ -1,8 +1,6 @@
 # setUnitDeadMotion
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Sets the motion when an unit is dead. Works only with an unit.
 
 ## Code Information
 
@@ -13,8 +11,8 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
+- `(int *)unit_handle` *(8 bytes)* : Handle of the unit to set the motion when being dead.
+- `(int)action_id` *(8 bytes)* : [ID of the action](./guide/reference-table.md#action-ids) for the unit to perform when the unit is dead.
 
 ## Example
 

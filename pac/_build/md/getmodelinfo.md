@@ -2,6 +2,8 @@
 
 Gets position and movement information of the given handle.
 
+Before performing this, wait until the model is fully loaded.
+
 ## Code Information
 
 - **Name**: `getModelInfo`

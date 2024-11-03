@@ -1,6 +1,6 @@
 # setModelLowerHeight
 
-Moves model's Y position.
+Moves unit, squad or troop model's Y position.
 
 ## Code Information
 
