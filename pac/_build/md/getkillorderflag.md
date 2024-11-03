@@ -1,8 +1,6 @@
 # getKillOrderFlag
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Checks if a target is dead.
 
 ## Code Information
 
@@ -13,8 +11,8 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(uint)Var1` *(8 bytes)*
+- `(int *)handle` *(8 bytes)* : Handle of the target to check if it is dead.
+- `(int *)is_alive` *(8 bytes)* : 0 if the target is killed or deleted, otherwise it is 1.
 
 ## Example
 

@@ -1,8 +1,6 @@
 # del
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Deletes any target by given handle.
 
 ## Code Information
 
@@ -13,8 +11,8 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
+- `(int *)handle` *(8 bytes)* : target handle to delete.
+- `(bool)Var1` *(8 bytes)*
 
 ## Example
 
@@ -50,13 +48,13 @@ void FUN_089134b4(int param_1,undefined4 param_2)
   }
   if ((iVar3 != 0) && (iVar5 = *(int *)(iVar3 + 0xcc), iVar5 != 0)) {
     iVar4 = (**(code **)(*(int *)(iVar3 + 4) + 0x34))(iVar3);
-    if (iVar4 == 0xb) {
+    if (iVar4 == 0xb) { //effect
       (**(code **)(*(int *)(iVar3 + 4) + 0x88))(*puVar2,0,iVar3);
     }
-    else if (iVar4 == 10) {
+    else if (iVar4 == 10) { //gimmick
       (**(code **)(*(int *)(iVar3 + 4) + 0x8c))(*puVar2,0,iVar3);
     }
-    else if (iVar4 == 9) {
+    else if (iVar4 == 9) { //unit
       (**(code **)(*(int *)(iVar3 + 4) + 0x8c))(*puVar2,0,iVar3);
     }
     else {

@@ -1,8 +1,6 @@
 # getUnitWeight
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Gets weight of the unit by given handle. Works on unit only.
 
 ## Code Information
 
@@ -13,8 +11,8 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(int)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
+- `(int *)unit_handle` *(8 bytes)* : Handle of an unit.
+- `(float *)destination` *(8 bytes)* : Varible to *store* the weight of the unit.
 
 ## Example
 
@@ -48,7 +46,7 @@ void FUN_089298e0(int param_1,undefined4 param_2)
        (iVar3 = Find_Target_By_HandleID(*(undefined4 *)(*(int *)(param_1 + 0x10) + 0xe8),*piVar1,1), iVar3 != 0
        )) && (iVar4 = (**(code **)(*(int *)(iVar3 + 4) + 0x34))(iVar3), iVar4 == 9)) &&
      (*(int *)(iVar3 + 0xcc) != 0)) {
-    *puVar2 = *(undefined4 *)(*(int *)(*(int *)(iVar3 + 0xcc) + 0x1c) + 0xb0);
+    *puVar2 = *(undefined4 *)(*(int *)(*(int *)(iVar3 + 0xcc) + 0x1c) + 0xb0); // 0xb0 is weight
   }
   PAC::PAC_setCmdId(param_2,0);
   return;

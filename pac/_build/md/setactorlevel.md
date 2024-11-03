@@ -1,6 +1,6 @@
 # setActorLevel
 
-Sets level of an object (unit, gimmick etc) by the given handle.
+Sets level of an any object (unit, gimmick etc) by the given handle.
 
 ## Code Information
 

@@ -1,8 +1,6 @@
 # getActorLevel
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Gets level of an any object (unit, gimmick etc) by the given handle.
 
 ## Code Information
 
@@ -13,8 +11,8 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(int)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
+- `(int *)handle` *(8 bytes)* : Any kind of actor handle.
+- `(int *)level` *(8 bytes)* : Variable to *store* the level of an actor.
 
 ## Example
 

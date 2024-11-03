@@ -146,7 +146,7 @@ For hideout exclusive handle, check [hideout](#hideout) section.
 
 - [getPlayerClassLevel](../getplayerclasslevel.md), [getMultiPlayerLevelMax](../getmultiplayerlevelmax.md)
 - [resultLevelupCalacLabel](../resultlevelupcalaclabel.md), ~~[resultLevelupCalacGet](../resultlevelupcalacget.md), [resultLevelupCalacSet](../resultlevelupcalacset.md)~~
-- [setActorLevel](../setactorlevel.md)
+- [getActorLevel](../getactorlevel.md), [setActorLevel](../setactorlevel.md)
 
 ### Equipment
 
@@ -205,6 +205,7 @@ Note that squadActivity and actual march/attack/defend action can be different, 
 ### Status
 
 - [kill](../kill.md), [rebornTroop](../reborntroop.md), [setSuperHeroRebornEnable](../setsuperherorebornenable.md), [getAliveUnitCount](../getaliveunitcount.md)
+- [del](../del.md), [getKillOrDerFlag](../getkillorderflag.md)
 - [setRebornPosition](../setrebornposition.md), [setAppearancePosition](../setappearanceposition.md)
 - [recoveryHp](../recoveryhp.md), [recoveryHpRatio](../recoveryhpratio.md) [recoveryPlayerTroopHp](../recoveryplayertroophp.md), [recoveryPlayerTroopHpRatio](../recoveryplayertroophpratio.md)
 - [setMaxHitPoint](../setmaxhitpoint.md)

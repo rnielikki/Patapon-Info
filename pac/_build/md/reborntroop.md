@@ -1,6 +1,6 @@
 # rebornTroop
 
-Make the player team reborn. This *does not* recover the stamina for the alive units.
+Makes the player team reborn. This recovers only dead units and *does not* recover the stamina for the alive units.
 
 ## Code Information
 
@@ -11,7 +11,7 @@ Make the player team reborn. This *does not* recover the stamina for the alive u
 
 ## Parameters
 
-- `(int *)unit_handle` *(8 bytes)* : Unit handle of the target to reborn. **-1 reborns all player troops**.
+- `(int *)troop_handle` *(8 bytes)* : Troop handle of the target to reborn. **-1 reborns all player troops**.
 - `(float)stamina_amount` *(8 bytes)* : % amount of stamina to set when the unit is reborn. Expected *0~1*. 0 will give 1 stamina.
 - `(bool)always_reborn` *(8 bytes)* : Reborn even if the player is blocked from performing any command. Since the "block command" happens rarely, this can be kept 0.
    - Note that the "cannot perform command" flag is different from disabling input, there is separate flag for the command performing.
