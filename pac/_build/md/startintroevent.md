@@ -1,6 +1,8 @@
 # startIntroEvent
 
-Mark the countdown as performable. This sets only flag, and [multi_battleGoAHead](./multi_battlegoahead.md) after this is required for countdown.
+Mark the countdown as performable between story. This sets only flag, and [multi_battleGoAHead](./multi_battlegoahead.md) after this is required for countdown.
+
+This does nothing with real multi countdown.
 
 ## Code Information
 

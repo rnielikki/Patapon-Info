@@ -12,9 +12,11 @@ It is named `BATTERY_000` (`gimc1210`), and `BATTERY_VS` for VS Mission.
 
 ## 2. Get timing.
 
-Simple and rough method to find cannon timing is comparing 3rd and 4th parameter of [getModelInfo](../getmodelinfo.md) during animation.
+Simple and rough method to find cannon timing is comparing 3rd and 4th parameter of [getMotionInfo](../getmotioninfo.md) during animation.
 
 (The animation can be set easily with [setActionController](../setactioncontroller.md)).
+
+The problem of this approach is, the turret shoots too many bullets with pons. This can be fixed with checking action type (do not shoot if it is less than 2).
 
 In this case, if the both value are same, go to the next phase.
 

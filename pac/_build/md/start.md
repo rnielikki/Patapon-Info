@@ -2,6 +2,8 @@
 
 Starts the gameplay. Follows after [multi_battleGoAHead](./multi_battlegoahead.md).
 
+**They are defined separately for single play and multiplay**.
+
 ## Code Information
 
 - **Name**: `start`
