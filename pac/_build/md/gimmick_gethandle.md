@@ -11,7 +11,7 @@ Gets handle with the given gimmick ID.
 
 ## Parameters
 
-- `(int)gimmick_id` *(8 bytes)* : Gimmick ID from various place, e.g. [addGimmick](./addgimmick.md), [getGateInfo](./getgateinfo.md) or [registConstGimmick](./registconstgimmick.md). Seems like the ID from [setReqActorUniqueId](./setreqactoruniqueid.md) works too.
+- `(int)gimmick_identifier` *(8 bytes)* : Gimmick identifier from various place, e.g. [addGimmick](./addgimmick.md), [getGateInfo](./getgateinfo.md) or [registConstGimmick](./registconstgimmick.md). Seems like the ID from [setReqActorUniqueId](./setreqactoruniqueid.md) works too.
 - `(int *)gimmick_handle` *(8 bytes)* : Varaible to *store* the gimmick handle.
 
 ## Example

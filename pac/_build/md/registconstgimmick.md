@@ -22,7 +22,7 @@ Defines a structure gimmick. This also can be a spawn point.
 - `(undefined4)Var7` *(8 bytes)* : Boolean, please describe what this does.
 - `(undefined4)Var8` *(8 bytes)* : Boolean, please describe what this does.
 - `(int)itemtable_id` *(8 bytes)* : [Item table ID](./beginappearitem.md) to give as reward, when gimmick is destroyed.
-- `(int)constgimmick_id` *(8 bytes)* : Id to register. Can be used with [setModeEx](./setmodeex.md). Can get handle with [gimmick_getHandle](./gimmick_gethandle.md).
+- `(int)gimmick_identifier` *(8 bytes)* : Id to register. Can be used with e.g. [setModeEx](./setmodeex.md), [gimmick_getHandle](./gimmick_gethandle.md).
 
 ## Example
 

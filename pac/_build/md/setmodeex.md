@@ -14,7 +14,7 @@ Please describe what this does.
 - `(int *)generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
 - `(int)use_constgimmick` *(8 bytes)* : If this is 1, this occupies one *reqActor* slot (reqActor index starts from 1 instead of 0).
 - `(int)Var2` *(8 bytes)* : If doubt, set it to -1.
-- `(int)constgimmick_id` *(8 bytes)* : Const Gimmick to connect, from last parameter of [registConstGimmick](./registconstgimmick.md). Set -1 if there is none.
+- `(int)gimmick_identifier` *(8 bytes)* : Identifier from various place, e.g. [addGimmick](./addgimmick.md), [getGateInfo](./getgateinfo.md) or [registConstGimmick](./registconstgimmick.md). Seems like the ID from [setReqActorUniqueId](./setreqactoruniqueid.md) works too.
 
 ## Example
 
