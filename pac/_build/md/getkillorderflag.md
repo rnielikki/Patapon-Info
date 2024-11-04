@@ -1,6 +1,6 @@
 # getKillOrderFlag
 
-Checks in which order to be killed. Please describe this more.
+Please describe this more.
 
 ## Code Information
 
@@ -12,7 +12,7 @@ Checks in which order to be killed. Please describe this more.
 ## Parameters
 
 - `(int *)handle` *(8 bytes)* : Handle of the target.
-- `(int *)kill_order` *(8 bytes)* : Variable to *store* the kill order.
+- `(int *)kill_order` *(8 bytes)* : Variable to *store* the result.
 
 ## Example
 
