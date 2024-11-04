@@ -2,7 +2,7 @@
 
 > [!CAUTION]
 > DO NOT SPEED UP IN MULTI even if this is called. It still causes desync (best seen in custcene).
-> The real 'sppedup allowed' part (e.g. chest open scene) doesn't call this.
+> The real 'speedup allowed' part (e.g. chest open scene) doesn't call this.
 
 Indicates this event is not synced, e.g. tips and event scenes. This state will continue until [multi_endOfSyncEvent](./multi_endnosyncevent.md) is called.
 

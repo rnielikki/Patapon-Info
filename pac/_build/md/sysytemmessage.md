@@ -15,7 +15,7 @@ Displays a message on the center of the screen, e.g. "Time's up!" in tutorial.
 - `(float)position_x` *(8 bytes)* : X Position of the text as PSP pixels. **0 is leftmost of the screen**.
 - `(float)position_y` *(8 bytes)* : Y Position of the text as PSP pixels. **0 is topmost of the screen**.
 - `(float)scale` *(8 bytes)* : Scale the text as PSP pixels.
-- `(float)appear_time` *(8 bytes)* : Spped of the appear animation, *as seconds*.
+- `(float)appear_time` *(8 bytes)* : Speed of the appear animation, *as seconds*.
 - `(float)display_time` *(8 bytes)* : Time to show the text, *as seconds*.
    - The display time includs animation time. For example, if animation is 2 seconds and display is 1.5 seconds, the text will disappear before the animation is done.
 - `(float)disappear_time` *(8 bytes)* : Supposed to be, but doesn't work.
