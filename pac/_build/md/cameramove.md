@@ -14,9 +14,9 @@ Move the camera to the certain position in the world.
 - `(float)pos_x` *(8 bytes)* : X Position to move the camera in the world, as *PSP pixels*.
 - `(float)pos_y` *(8 bytes)* : Y Position to move the camera in the world, as *PSP pixels*. 0 is normal position.
 - `(float)pos_z` *(8 bytes)* : Z Position (Camera distance) in the world. For refrence, around 150~200 looks natural.
-- `(bool)enable_anim_x` *(8 bytes)* : Decides if the camera animates in X direction or not. 0 moves to the position immediately, otherwise it will be animated in X direction.
-- `(bool)enable_anim_y` *(8 bytes)* : Decides if the camera animates in Y direction or not. 0 moves to the position immediately, otherwise it will be animated in Y direction.
-- `(bool)enable_anim_z` *(8 bytes)* : Decides if the camera animates in Z direction or not. 0 moves to the position immediately, otherwise it will be animated in Z direction.
+- `(bool)enable_x` *(8 bytes)* : Decides if the camera moves in X direction or not. In speed based, 0 does not move.
+- `(bool)enable_y` *(8 bytes)* : Decides if the camera moves in Y direction or not. In speed based, 0 does not move.
+- `(bool)enable_z` *(8 bytes)* : Decides if the camera moves in Z direction or not. In speed based, 0 does not move.
 
 ## Remarks
 

@@ -13,7 +13,7 @@ Check [about flag](./guide/about-flag.md) to learn about the flag.
 
 ## Parameters
 
-- `(uint...)flagID` *(>= 8 bytes)* : **Immediate** value that stores flag ID. This parameter can be multiple.
+- `(index...)flagID` *(>= 8 bytes)* : **Immediate** flag ID value. This parameter can be multiple.
 
 ## Example
 

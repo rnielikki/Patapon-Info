@@ -14,7 +14,7 @@ Check [about flag](./guide/about-flag.md) to learn about the flag.
 ## Parameters
 
 - `(Address)address` *(4 bytes)* : Address to jump if the result is `true`.
-- `(uint...)Var1` *(>= 8 bytes)* : This can be one or more. If this parameter is only one, it is just about `true` or `false` for the one parameter.
+- `(index...)Var1` *(>= 8 bytes)* : This can be one or more. If this parameter is only one, it is just about `true` or `false` for the one parameter.
 
 ## Example
 
