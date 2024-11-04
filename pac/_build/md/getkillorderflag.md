@@ -1,6 +1,6 @@
 # getKillOrderFlag
 
-Please describe this more.
+Gets if the unit is force killed, such as [kill](./kill.md) (not by taking normally damage).
 
 ## Code Information
 
