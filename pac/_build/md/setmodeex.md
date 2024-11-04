@@ -1,6 +1,6 @@
 # setModeEx
 
-Please describe what this does.
+Connects or initialises the connection to the other pool and/or reqActor. Not known wha the "connection" actually does.
 
 ## Code Information
 
@@ -12,9 +12,9 @@ Please describe what this does.
 ## Parameters
 
 - `(int *)generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
-- `(int)use_constgimmick` *(8 bytes)* : If this is 1, this occupies one *reqActor* slot (reqActor index starts from 1 instead of 0).
-- `(int)Var2` *(8 bytes)* : If doubt, set it to -1.
-- `(int)gimmick_identifier` *(8 bytes)* : Identifier from various place, e.g. [addGimmick](./addgimmick.md), [getGateInfo](./getgateinfo.md) or [registConstGimmick](./registconstgimmick.md). Seems like the ID from [setReqActorUniqueId](./setreqactoruniqueid.md) works too.
+- `(int)unknown` *(8 bytes)* : If doubt, set to 0. Please describe what this does. Seems like this connects to a behaviour.
+- `(int)generator_identifier` *(8 bytes)* : If doubt, set it to -1. Generator identifier to connect, from e.g.from [create](./create.md).
+- `(int)unique_identifier` *(8 bytes)* : Identifier from various place, e.g. [setReqActorUniqueId](./setreqactoruniqueid.md), [addGimmick](./addgimmick.md), [getGateInfo](./getgateinfo.md) or [registConstGimmick](./registconstgimmick.md).
 
 ## Example
 
@@ -68,17 +68,17 @@ void FUN_Mission__08b5bf98(int param_1,undefined4 param_2)
         FUN_Mission__08b56760(iVar5,*puVar2,0,0);
       }
       else {
-        FUN_Mission__08b56760(iVar5,*puVar2,0);
+        FUN_Mission__08b56760(iVar5,*puVar2,0,*piVar4);
         if (*piVar3 == -1) {
           *(undefined *)(iVar5 + 0x26) = 1;
         }
       }
     }
     else {
-      uVar6 = FUN_Mission__08b5ac20(iVar5, *piVar3);
+      uVar6 = Get_Generator_HandleID(iVar5, *piVar3);
       uVar6 = Get_BaseAddr_From_Generator(iVar5,uVar6);
       uVar7 = Get_BaseAddr_From_Generator(iVar5,*puVar1);
-      uVar6 = FUN_Mission__08b58d60(uVar6,(int)*(char *)piVar4);
+      uVar6 = Get_ReqActor_Addr(uVar6,(int)*(char *)piVar4);
       FUN_Mission__08b56760(uVar7,*puVar2,uVar6,0);
     }
   }

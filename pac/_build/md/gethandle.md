@@ -58,7 +58,7 @@ void FUN_Mission__08b5d9c8(int param_1,undefined4 param_2)
     *puVar2 = 0xffffffff;
   }
   else {
-    uVar4 = FUN_Mission__08b5ac20(iVar3,*puVar1);
+    uVar4 = Get_Generator_HandleID(iVar3,*puVar1);
     *puVar2 = uVar4;
   }
   PAC::PAC_setCmdId(param_2,0);

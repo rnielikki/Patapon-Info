@@ -62,7 +62,7 @@ void FUN_Mission__08b5da88(int param_1,undefined4 param_2)
     }
   }
   if (iVar4 != 0) {
-    iVar4 = FUN_Mission__08b58d60(iVar4,(int)*pcVar2);
+    iVar4 = Get_ReqActor_Addr(iVar4,(int)*pcVar2);
     *piVar3 = (int)*(char *)(iVar4 + 9);
   }
   PAC::PAC_setCmdId(param_2,0);
