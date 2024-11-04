@@ -1,6 +1,6 @@
 # setModeEx
 
-Connects or initialises the connection to the other pool and/or reqActor. Not known wha the "connection" actually does.
+Connects the generator to e.g. status effect or [death call](./setdeathcall.md) to the other generator and/or reqActor (possibly "parent" structure of the unit etc).
 
 ## Code Information
 

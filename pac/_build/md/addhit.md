@@ -12,7 +12,7 @@ Adds a hitbox to a node.
 ## Parameters
 
 - `(int *)handle_id` *(8 bytes)* : The target [handle](./guide/how-to-get-a-handle.md).
-- `(int *)destination` *(8 bytes)* : Variable to *store* the hitbox ID. Stores 0 if the target to add is invalid.
+- `(int *)destination` *(8 bytes)* : Variable to *store* the hitbox ID. -1 if failed to add the hitbox. If the handle is invalid, this is zero.
 - `(float)x_offset` *(8 bytes)* : X Offset from the node.
 - `(float)y_offset` *(8 bytes)* : Y Offset from the node.
 - `(float)x_size` *(8 bytes)* : X Size of the hitbox.

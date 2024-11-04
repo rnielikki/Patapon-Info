@@ -1,6 +1,6 @@
 # getKillOrderFlag
 
-Checks if a target is dead.
+Checks in which order to be killed. Please describe this more.
 
 ## Code Information
 
@@ -11,8 +11,8 @@ Checks if a target is dead.
 
 ## Parameters
 
-- `(int *)handle` *(8 bytes)* : Handle of the target to check if it is dead.
-- `(int *)is_alive` *(8 bytes)* : 0 if the target is killed or deleted, otherwise it is 1.
+- `(int *)handle` *(8 bytes)* : Handle of the target.
+- `(int *)kill_order` *(8 bytes)* : Variable to *store* the kill order.
 
 ## Example
 
