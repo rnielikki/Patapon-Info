@@ -1,8 +1,6 @@
 # stopMove
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Stops the movement from the [movePosition](./moveposition.md)
 
 ## Code Information
 
@@ -13,8 +11,8 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(int)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
+- `(int *)handle` *(8 bytes)* : Handle value to stop the moving.
+- `(float)delay` *(8 bytes)* : Delay time as seconds before stopping.
 
 ## Example
 

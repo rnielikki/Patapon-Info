@@ -161,7 +161,7 @@ For hideout exclusive handle, check [hideout](#hideout) section.
 ### Position
 
 - [setAdvanceEnable](../setadvanceenable.md), [setAdvanceSpeedRatio](../setadvancespeedratio.md)
-- [movePosition](../moveposition.md)
+- [movePosition](../moveposition.md), [stopMove](../stopmove.md)
 - [getPlayerTroopBasePosition](../getplayertroopbaseposition.md)
 - [getTroopTopPosX](../gettrooptopposx.md), [getTroopTopPosX_enemy](../gettrooptopposx_enemy.md), [getTroopPosY](../gettrooptopposy.md)
 
