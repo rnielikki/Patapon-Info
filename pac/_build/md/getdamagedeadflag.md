@@ -1,6 +1,6 @@
 # getDamageDeadFlag
 
-Checks if the target is dead.
+Checks if the target is dead, either direct damage taking or not.
 
 ## Code Information
 
@@ -12,7 +12,7 @@ Checks if the target is dead.
 ## Parameters
 
 - `(int *)handle` *(8 bytes)* : The handle ID to check if the target is dead.
-- `(int *)is_dead` *(8 bytes)* : 1 if the target is dead. 0 if the unit is alive.
+- `(int *)is_dead` *(8 bytes)* : 0 if the unit is alive. Otherwise target is dead. For checking if the target is dead, please check if this is **zero or not**.
 
 ## Example
 

@@ -1,6 +1,6 @@
 # getKillOrderFlag
 
-Gets if the unit is force killed, such as [kill](./kill.md) (not by taking normally damage).
+Gets if the unit is killed without taking direct damage, such as [kill](./kill.md) or child node kill (not from direct damage calculation).
 
 ## Code Information
 
@@ -12,7 +12,7 @@ Gets if the unit is force killed, such as [kill](./kill.md) (not by taking norma
 ## Parameters
 
 - `(int *)handle` *(8 bytes)* : Handle of the target.
-- `(int *)kill_order` *(8 bytes)* : Variable to *store* the result.
+- `(int *)kill_order` *(8 bytes)* : Variable to *store* the result. For checking if the target is dead indirectly, please check if this is **zero or not**.
 
 ## Example
 

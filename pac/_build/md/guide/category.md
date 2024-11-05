@@ -206,7 +206,7 @@ Note that squadActivity and actual march/attack/defend action can be different, 
 ### Status
 
 - [kill](../kill.md), [rebornTroop](../reborntroop.md), [setSuperHeroRebornEnable](../setsuperherorebornenable.md), [getAliveUnitCount](../getaliveunitcount.md)
-- [getDamageDeadFlag](../getdamagedeadflag.md)
+- [getDamageDeadFlag](../getdamagedeadflag.md), [getKillOrderFlag](../getkillorderflag.md)
 - [setRebornPosition](../setrebornposition.md), [setAppearancePosition](../setappearanceposition.md)
 - [recoveryHp](../recoveryhp.md), [recoveryHpRatio](../recoveryhpratio.md) [recoveryPlayerTroopHp](../recoveryplayertroophp.md), [recoveryPlayerTroopHpRatio](../recoveryplayertroophpratio.md)
 - [setHitPoint](../sethitpoint.md), [setMaxHitPoint](../setmaxhitpoint.md), [getStatusInfo](../getstatusinfo.md) (hp status and hp rate)
