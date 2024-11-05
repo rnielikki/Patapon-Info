@@ -1,6 +1,8 @@
 # setUnitCtrlTimingScript_Int
 
-Calls an script when an unit is killed. Though, [setDeathCall](./setdeathcall.md) is preferred for most cases.
+Calls an script when an unit is just killed (and was not deleted yet).
+
+If things must be happened after object is completely deleted, use [setDeathCall](./setdeathcall.md).
 
 The address tends to start with [getEthnicID](./getethnicid.md) and compare the values.
 

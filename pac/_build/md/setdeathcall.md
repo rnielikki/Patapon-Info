@@ -6,7 +6,7 @@ This can be used for checkpoint to load entities (e.g. Bonedeth sturctures in th
 
 ## Code Information
 
-- **Name**: `setDeathCall`k
+- **Name**: `setDeathCall`
 - **Scope**: Mission
 - **PAC Instruction (Binary)**: `25 1f 08 00`
 - **Assembly Address in Memory** : `0x8b5c548`
@@ -20,6 +20,8 @@ This can be used for checkpoint to load entities (e.g. Bonedeth sturctures in th
 ## Remarks
 
 **The dead object handles are already deleted when this is called**.
+
+Use [setUnitCtrlTimmingScript_Int](./setunitctrltimingscript_int.md) if the object information is needed.
 
 ## Example
 
@@ -75,4 +77,3 @@ void FUN_Mission__08b5c548(int param_1,undefined4 param_2)
   return;
 }
 ```
-
