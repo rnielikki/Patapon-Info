@@ -1,8 +1,6 @@
 # getRetireFlag
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Checks if the player decided to retire.
 
 ## Code Information
 
@@ -13,7 +11,7 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(uint)Var0` *(8 bytes)*
+- `(uint *)destination` *(8 bytes)* : Variable to *store* if the player is retired. 0 if player did not retire, 1 if they did.
 
 ## Example
 

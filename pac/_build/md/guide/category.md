@@ -221,7 +221,7 @@ Note that squadActivity and actual march/attack/defend action can be different, 
 - [getMissionAreaId](../getmissionareaid.md), [setMaxMissionAreaId](../setmaxmissionareaid.md), [getMaxMissionAreaId](../getmaxmissionareaid.md), [setMissionAreaId](../setmissionareaid.md), [getMissionInfo](../getmissioninfo.md)
 - [setMissionTimmingScript](../setmissiontimmingscript.md)
 - [resultGetState](../resultgetstate.md), [resultSetState](../resultsetstate.md), [resultGetPhase](../resultgetphase.md)
-- [disableRetireBox](../disableretirebox.md)
+- [getRetireFlag](../getretireflag.md), [disableRetireBox](../disableretirebox.md)
 
 ### Quest Data
 
