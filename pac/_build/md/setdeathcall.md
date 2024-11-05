@@ -17,6 +17,10 @@ This can be used for checkpoint to load entities (e.g. Bonedeth sturctures in th
 - `(MemoryAddress)pac_address_in_memory` *(8 bytes)* : Obtained from [getPack](./getpack_25100600.md). The memory address where the whole PAC instructions start.
 - `(Address)address` *(8 bytes)* : Address, offset from PAC file, to call when an enemy is dead. If does nothing, put an address where is [cmd_end](./cmd_end.md).
 
+## Remarks
+
+**The dead object handles are already deleted when this is called**.
+
 ## Example
 
 Here is one example in hex:
