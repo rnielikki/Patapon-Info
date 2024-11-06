@@ -1,6 +1,7 @@
 # How To: Set Speech Bubble
 
-## Warmup
+## Preparation
+
 1. Get **the handle** to speak. Check e.g. [How To: Create an Enemy Target](./how-to-create-an-enemy-target.md) and/or [How To: Get a Handle](./how-to-get-a-handle.md)
 2. Check **[Message ID table](./about-message.md#message-table)** of the PAC file, and get the address of it.
 
