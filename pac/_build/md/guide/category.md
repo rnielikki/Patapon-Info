@@ -241,6 +241,8 @@ This is called with pons too. For multi, check [network](#network) section.
 
 ## Mission Environment
 
+- [setGroundOffset](../setgroundoffset.md)
+
 ### Stage
 
 Related Article: [How To: Setup Stages](./how-to-setup-stages.md)

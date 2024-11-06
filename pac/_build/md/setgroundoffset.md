@@ -1,8 +1,8 @@
 # setGroundOffset
 
-**Description** goes here.
+Moves the Y position of the ground.
 
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Used in Missile battle for displaying bridge under the units.
 
 ## Code Information
 
@@ -13,7 +13,7 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
+- `(float)ground_offset` *(8 bytes)*: offset of the ground from the bottom. Higher value moves ground to up. Default is 0.
 
 ## Example
 
