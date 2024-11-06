@@ -16,8 +16,8 @@ Before performing this, wait until the model is fully loaded.
 - `(int *)handle_id` *(8 bytes)* : [Handle](./guide/category.md#getting-handle) to get the model info.
 - `(float *)position_x` *(8 bytes)* : Variable to *store* the X Position of the model, as *PSP pixel in the world*.
 - `(float *)position_y` *(8 bytes)* : Variable to *store* the Y position of the model, as *PSP pixel in the world*. 0 is the center.
-- `(float *)velocity_x` *(8 bytes)* : Variable to *store* how much (and in which direction as + or -) it moves in X direction during lifetime.
-- `(float *)velocity_y` *(8 bytes)* : Variable to *store* how much (and in which direction as + or -) it moves in Y direction during lifetime.
+- `(float *)dest_x` *(8 bytes)* : Variable to *store* the destination X position.
+- `(float *)dest_y` *(8 bytes)* : Variable to *store* the destination Y position.
 
 Note that **PSP screen size is 480 x 272**.
 

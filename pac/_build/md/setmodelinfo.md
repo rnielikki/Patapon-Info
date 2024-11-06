@@ -16,8 +16,8 @@ Before performing this, wait until the model is fully loaded.
 - `(int *)handle_id` *(8 bytes)* : [Handle](./guide/category.md#getting-handle) to set the model info.
 - `(float)position_x` *(8 bytes)* : X Position of the model, as *PSP pixels in the world*.
 - `(float)position_y` *(8 bytes)* : Y position of the model, as *PSP pixels in the world*. 0 is the center.
-- `(float)velocity_x` *(8 bytes)* : How much (and in which direction as + or -) it will move in X direction during lifetime.
-- `(float)velocity_y` *(8 bytes)* : How much (and in which direction as + or -) it will move in Y direction during lifetime.
+- `(float)dest_x` *(8 bytes)* : To where it will move, as X position.
+- `(float)dest_y` *(8 bytes)* : To where it will move, as Y position.
 - `(float)random_start_offset` *(8 bytes)* : Random offset from the position to be started. **Works only when velocity value exists**.
 
 Note that **PSP screen size is 480 x 272**.

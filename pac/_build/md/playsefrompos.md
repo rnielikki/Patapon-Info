@@ -16,7 +16,7 @@ Starts playing Se (sound effect) from specific pan (position). The sound files a
 - `(int)se_id` *(8 bytes)* : [ID](./guide/reference-table.md#musicsound-list-for-playatrac-etc) of the Sound effect.
 - `(float)delay` *(8 bytes)* : Delay before playing the sound, as seconds.
 - `(float)volume_multiplier` *(8 bytes)*: Tell more about this, if you found something. Until then keep this to 1.
-- `(float)volume` *(8 bytes)* : The sound volume, 1 is 100%.
+- `(float)volume` *(8 bytes)*
 - `(float)pan` *(8 bytes)*: -1 is whole left, +1 is whole right. The value will be clamped to -1 ~ 1.
 - `(float)speed` *(8 bytes)* : The sound speed (with pitch change).
 

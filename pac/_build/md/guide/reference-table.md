@@ -306,6 +306,9 @@ This varies depending on the model. For detali, see [Tayo's table](./resources/C
 
 ### Music/Sound List (For [playAtrac](../playatrac.md) etc.)
 
+> [!WARNING]
+> This list is incomplete. Please describe how to get the correct sound index from a file.
+
 The ID has **same order as selist.slt** (in `DATA_CMN\loadinggroup\systemdata\sound`). Here are few examples:
 
 - title

@@ -1,6 +1,6 @@
 # movePosition
 
-Moves a target by given handle.
+Moves a target by given handle. **The moving stops when the model/motion is changed**.
 
 ## Code Information
 
@@ -16,7 +16,7 @@ Moves a target by given handle.
 - `(float)y_position` *(8 bytes)* : Y position to move.
 - `(float)delay` *(8 bytes)* : Delay before moving.
 - `(float)speed` *(8 bytes)* : Speed to move. 0 moves the target immediately. The bigger the value is, the faster the target moves.
-- `(int)Var5` *(8 bytes)* : Please describe, can be related to the subtle animation adjustment.
+- `(bool)Var5` *(8 bytes)* : Please describe, can be related to the subtle animation adjustment.
 
 ## Example
 

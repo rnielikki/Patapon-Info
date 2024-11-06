@@ -1,6 +1,8 @@
 # addVector
 
-Adds vector direction to the model, please describe what this vector actually does.
+Adds **force** to the model.
+
+For consistent velocity, consider using another method.
 
 ## Code Information
 

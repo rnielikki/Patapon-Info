@@ -14,7 +14,7 @@ Plays certain motion of a given object. Please describe difference from [playMot
 - `(int *)handle_id` *(8 bytes)* : The target [handle](./guide/how-to-get-a-handle.md).
 - `(int)action_id` *(8 bytes)* : The [Action ID](./guide/reference-table.md#action-ids) to perform.
 - `(int)loop` *(8 bytes)* : If it is 0, animation is played once and character is paused. Otherwise the animation loops.
-- `(bool)offset` *(8 bytes)* : Start offset of the animation. (*Maybe* 1.0 represents around 0.2sec)
+- `(float)offset` *(8 bytes)* : Start offset of the animation. (*Maybe* 1.0 represents around 0.2sec)
    - Usual hero animation offset length seems like around 6~10. Please tell more about this parameter.
 - `(float)delay` *(8 bytes)* : Delay before starting the animation. This can be -1.
 

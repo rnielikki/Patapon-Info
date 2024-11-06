@@ -1,8 +1,6 @@
 # changeLanguage
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Changes current language and goes to EULA and title page.
 
 ## Code Information
 
@@ -13,7 +11,7 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
+- `(int)language_code` *(8 bytes)* : Language code to change.
 
 ## Example
 

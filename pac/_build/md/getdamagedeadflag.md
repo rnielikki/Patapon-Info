@@ -1,6 +1,6 @@
 # getDamageDeadFlag
 
-Checks if the target is dead, either direct damage taking or not.
+Checks if the target is dead (by direct damage *and* passive death like childe node death).
 
 ## Code Information
 
