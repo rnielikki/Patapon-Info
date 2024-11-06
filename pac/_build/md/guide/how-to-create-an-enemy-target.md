@@ -26,8 +26,10 @@ Use 1st parameter from `create` to define the detail of the generator.
 
 > This is done in [setMissionTimmingScript](../setmissiontimmingscript.md) 1st phase, right after step above
 
-- [setReqActorTye](../setreqactortype.md):
-- [setReqActorCount](../setreqactorcount.md): How many actors will you define.
+- [setReqActorType](../setreqactortype.md): Sets actor type from [generatorparam](./reference-table.md#generatorparam).
+  - If the target is not in the list, another method like [addGimmick](../addgimmick.md) etc are required.
+- [setReqActorCount](../setreqactorcount.md): Sets the spawn limit.
+- [setReqActorDelayTime](../setreqactordelaytime.md): Spawn delay between next spawn.
 
 ### Example result as visualised table
 
@@ -57,9 +59,14 @@ Each table represents generator.
 
 > This is done in [setMissionTimmingScript](../setmissiontimmingscript.md) **2nd phase**.
 
-Related instruction: [Spawn](../spawn.md)
+First, use [getHandle](../gethandle.md) to load the unit, and then [Spawn](../spawn.md).
 
-Spawn delay can be set with [setReqActorDelayTime](../setreqactordelaytime.md).
+```c
+0005C7FC  251F1500:getHandle(2:898, 8:1A)
+0005C810  251F1300:spawn(8:1A)
+```
+
+If there are many entities on the way, consider using [setDeathCall](../setdeathcall.md) to spawn the next targets.
 
 ## Bringing together (example)
 
@@ -78,6 +85,9 @@ This is *spawning motiti in runtime* function in debug mode.
 0002B5F8  251F1300:spawn(4:1)
 0002B604  25000100:cmd_end()
 ```
+
+Note that in non-debug mode, `getHandle` and `spawn` method is preferred.
+
 ## For structure
 
 1. Use [registConstGimmick](../registconstgimmick.md) (MissionTimming phase 1).

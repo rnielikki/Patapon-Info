@@ -1,8 +1,6 @@
 # spawn
 
-Creates all enemies from the certain generator.
-
-Can be used after [getHandle](./gethandle.md), or just after creating and setting up actors.
+Creates all enemies from the certain generator. Used after [getHandle](./gethandle.md).
 
 ## Code Information
 
@@ -13,7 +11,7 @@ Can be used after [getHandle](./gethandle.md), or just after creating and settin
 
 ## Parameters
 
-- `(int *)generator_index` *(8 bytes)* : The [generator index](./create.md) to instantiate.
+- `(int *)handle` *(8 bytes)* : The [handle of the generator](./gethandle.md) to instantiate.
 
 ## Example
 

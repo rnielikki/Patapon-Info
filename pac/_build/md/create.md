@@ -16,7 +16,7 @@ More information on [How To: Create on Enemy Target](./guide/how-to-create-an-en
 ## Parameters
 
 - `(int *)generator_index` *(8 bytes)* : Variable to *store* the generator index.
-- `(int)generator_identifier` *(8 bytes)* : Identifier of the generator. Not used much, but e.g. [getHandle](./gethandle.md) uses this.
+- `(int)generator_identifier` *(8 bytes)* : Identifier of the generator. e.g. [getHandle](./gethandle.md) uses this.
 
 The `generator_size` can be 1 or 1000, depends on the action.
 
