@@ -19,8 +19,8 @@ Defines a structure gimmick. This also can be a spawn point.
 - `(int)y_pos` *(8 bytes)* : Y position of the gimmick, as PSP pixels.
 - `(int)z_index` *(8 bytes)* : Render priority, the higher the value is, the more top the gimmick is. usually 0~1 is normal value.
 - `(bool)Var6` *(8 bytes)* : Boolean, please describe what this does. Might be visual related.
-- `(undefined4)Var7` *(8 bytes)* : Boolean, please describe what this does.
-- `(undefined4)Var8` *(8 bytes)* : Boolean, please describe what this does.
+- `(bool)Var7` *(8 bytes)* : Boolean, please describe what this does.
+- `(bool)Var8` *(8 bytes)* : Boolean, please describe what this does.
 - `(int)itemtable_id` *(8 bytes)* : [Item table ID](./beginappearitem.md) to give as reward, when gimmick is destroyed.
 - `(int)gimmick_identifier` *(8 bytes)* : Id to register. Can be used with e.g. [setModeEx](./setmodeex.md), [gimmick_getHandle](./gimmick_gethandle.md).
 

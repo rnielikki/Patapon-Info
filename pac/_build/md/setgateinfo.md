@@ -24,15 +24,15 @@ If `bind_type` is 0, setup only 2 of `param_index` (in this case, the `param` is
 
 
 - If `param_index` is 0, `param` is identifier of the object, obtained from [setupAddDungeonWall](./setupadddungeonwall.md)
-   - For non-dungeon object, indexes tends to be less than 0, or very big (like 100000).
+   - For non-dungeon object, it's `gimmick_identifier` from [registConstGimmick](./registconstgimmick.md).
 - If `param_index` is 1, `param` decides action type.
    - 0 does nothing, 1 blocks camera sight
    - door moving direction with lever: `4` is from up to down, `8` is from down to up. `0` does not move.
 - If `param_index` is 2, `param` is address (offset from PAC file) to call (when being opened or destroyed). The address can be address of [cmd_end](./cmd_end.md).
 - If `param_index` is 3, `param` can be 0, 1, 2. 1 opens door from very start.
-- if `param_index` is 4, `param` is ["reqActor ID"](./setreqactoruniqueid.md) 3rd parameter of the lever gimmick.
+- if `param_index` is 4, `param` is ["reqActor ID"](./setreqactoruniqueid.md) 3rd parameter of the **lever** gimmick.
    - The reqActor can be created later.
-- if `param_index` is 5, `param` is *another* ["reqActor ID"](./setreqactoruniqueid.md) 3rd parameter of the lever gimmick.
+- if `param_index` is 5, `param` is *another* ["reqActor ID"](./setreqactoruniqueid.md) 3rd parameter of the **lever** gimmick.
    - The reqActor can be created later.
    - If there is no 2nd lever, **keep -1**. Multi dungeon has this because the door is activated with two levers.
 - if `param_index` is 6, `param` decides whether the door closed *after* activating the lever. 0 does not close after once opened, 1 closes after few turns.

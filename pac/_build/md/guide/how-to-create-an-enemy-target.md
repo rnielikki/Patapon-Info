@@ -107,7 +107,7 @@ Note that in non-debug mode, `getHandle` and `spawn` method is preferred.
     0005A6D0  25000100:cmd_end()
 ```
 
-2~5:
+2~4:
 
 ```c
 0005A9F0  25120200:setMissionTimmingScript(2:2, 4:0, 1:5D4AC)
@@ -122,12 +122,12 @@ Note that in non-debug mode, `getHandle` and `spawn` method is preferred.
     0005A6D4  2516BC00:resetGateInfo()
   /* 4. setup the gates */
     0005A6D8  25000700:cmd_mov(8:46, 0.0) //8:46 index
-    0005A6EC  25000700:cmd_mov(8:48, -1.0) //gate index, -1 because this is non-dungeon
+    0005A6EC  25000700:cmd_mov(8:48, -1.0) //object identifier
     0005A700  2516BD00:setGateInfo(2:0, 8:46, 2:0, 8:48)
     0005A724  2516BD00:setGateInfo(2:0, 8:46, 2:1, 2:0)
     0005A748  2516BD00:setGateInfo(2:0, 8:46, 2:2, 1:5D5F8)
     0005A76C  25000C00:cmd_inc(8:46) //increases the index
-    0005A778  25000700:cmd_mov(8:48, 100000.0)
+    0005A778  25000700:cmd_mov(8:48, 100000.0) //identifier 0x186a0 from constgimmick
     0005A78C  2516BD00:setGateInfo(2:0, 8:46, 2:0, 8:48)
     0005A7B0  2516BD00:setGateInfo(2:0, 8:46, 2:1, 2:5)
     0005A7D4  2516BD00:setGateInfo(2:0, 8:46, 2:2, 1:5D6A8)
