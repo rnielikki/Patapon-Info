@@ -13,6 +13,7 @@ Here are some basic guides about the PAC instructions.
 - [Reading PAC](./guide/writing-pac.md)
 - [Writing PAC](./guide/writing-pac.md)
 - [Instructions by Category](./guide/category.md)
+- [Reference Table](./guide/reference-table.md)
 
 # Disclaimer
 
