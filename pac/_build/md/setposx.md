@@ -11,7 +11,7 @@ Sets X position of the given generator.
 
 ## Parameters
 
-- `(int *)generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int *)generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(float)position` *(8 bytes)* : X Position of the unit, as *PSP pixels in the world*.
 
 Note that **PSP screen size is 480 x 272**.

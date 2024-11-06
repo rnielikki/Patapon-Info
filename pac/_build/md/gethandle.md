@@ -12,7 +12,7 @@ Gets handle of the whole generator.
 ## Parameters
 
 - `(int)generator_identifier` *(8 bytes)* : Identifier of the generator, 2nd parameter of [create](./create.md).
-- `(int *)destination` *(8 bytes)* : Variable to *store* the handle.
+- `(int *)destination` *(8 bytes)* : Variable to *store* the generator handle.
 
 ## Example
 

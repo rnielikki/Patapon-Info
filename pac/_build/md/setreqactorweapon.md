@@ -13,7 +13,7 @@ The default equipment is defined in [`generatorparam`](./guide/reference-table.m
 
 ## Parameters
 
-- `(int *)generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int *)generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator* to set in thoe whole mission.
 - `(int)slot` *(8 bytes)* : Which equipment slot to replace, like helm, weapon or shield slot etc.
 - `(int)equipment_id` *(8 bytes)* : Equpiment ID [**from `weaponparam`**](./guide/reference-table.md#item-id--weaponparam-id-indexes).

@@ -11,7 +11,7 @@ Please describe how this does work. Somehow this is used for only fixing positio
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(float)x` *(8 bytes)* : X movement radius, as PSP pixels.
 - `(float)y` *(8 bytes)* : Y movement radius, as PSP pixels.

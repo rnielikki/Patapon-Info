@@ -11,7 +11,7 @@ Sets z-position (render priority) of the actor. The higher the value is, the mor
 
 ## Parameters
 
-- `(int *)generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int *)generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator* to set in thoe whole mission.
 - `(int *)priority` *(8 bytes)* : The render priority value to set to the target.
 - `(bool)bVar2` *(8 bytes)* : Please describe what this does. Might do something with +10000 render priority in certain condition.

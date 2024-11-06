@@ -13,7 +13,7 @@ This can be used for checkpoint to load entities (e.g. Bonedeth sturctures in th
 
 ## Parameters
 
-- `(int *)generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int *)generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(MemoryAddress)pac_address_in_memory` *(8 bytes)* : Obtained from [getPack](./getpack_25100600.md). The memory address where the whole PAC instructions start.
 - `(Address)address` *(8 bytes)* : Address, offset from PAC file, to call when an enemy is dead. If does nothing, put an address where is [cmd_end](./cmd_end.md).
 

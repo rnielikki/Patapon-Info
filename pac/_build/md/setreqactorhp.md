@@ -11,7 +11,7 @@ Sets current and maximum stamina of the actor manually.
 
 ## Parameters
 
-- `(int *)generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int *)generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(int)stamina` *(8 bytes)* : Amount of the stamina. This also becomes maximum stamina.
 

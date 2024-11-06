@@ -12,7 +12,7 @@ Sets unique actor ID of the actor for the whole mission scope.
 ## Parameters
 
 - `(int *)destination` *(8 bytes)* :  Variable to *store* the Mission-level unique ID.
-- `(int)generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int)generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 
 ## Example

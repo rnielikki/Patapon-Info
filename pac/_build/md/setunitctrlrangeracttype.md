@@ -11,7 +11,7 @@ Sets automatic enemy unit action when the unit sees a target. This is used for P
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(int)command_id` *(8 bytes)* : [Command ID](./guide/reference-table.md#command-ids) to perform after being spawned. **The action is limited to march/defend/attack** or nothing (-1).
 

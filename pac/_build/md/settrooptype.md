@@ -11,7 +11,7 @@ Sets the hitbox layer for the interaction.
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)hitbox_layer` *(8 bytes)* : The [hitbox layer](./guide/reference-table.md#hitbox-layers) to set.
 
 ## Example

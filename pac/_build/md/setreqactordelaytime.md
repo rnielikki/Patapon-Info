@@ -11,7 +11,7 @@ Sets respawn delay time of an actor. First spawn is not affected with this.
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(float)delay_time` *(8 bytes)* : Delay time between previous spawn and next spawn, as seconds.
 

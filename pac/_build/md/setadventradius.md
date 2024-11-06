@@ -13,7 +13,7 @@ See also: [setReqActorAdventRadius](./setreqactoradventradius.md)
 
 ## Parameters
 
-- `(int *)generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int *)generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(float)advent_radius` *(8 bytes)* : The speed to approach, bigger is slower.
 
 About 2nd parameters, the cyclopses appeared around 1:36 when the value is 1800.0 and appeared around 00:42 with default value (0).

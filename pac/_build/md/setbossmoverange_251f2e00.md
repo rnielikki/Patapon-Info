@@ -15,7 +15,7 @@ For retreating, use [setBossRetreatPos](./setbossretreatpos.md).
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* :  *ID in the generator*.
 - `(float)max_range` *(8 bytes)* : Maximum  move range **relative to the world** to move, as PSP pixels in world.
 - `(float)min_range` *(8 bytes)* : Minimum move range **relative to the world** to move, as PSP pixels in world. *Note that max goes first*.

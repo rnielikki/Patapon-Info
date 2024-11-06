@@ -11,7 +11,7 @@ Defines position of a unit as "reqActor".
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(float)x` *(8 bytes)* : X position of the unit, as PSP pixels, **relative to the generator**
 - `(float)y` *(8 bytes)* : Y position of the unit, as PSP pixels, **relative to the generator**

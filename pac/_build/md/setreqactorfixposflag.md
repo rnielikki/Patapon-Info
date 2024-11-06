@@ -11,7 +11,7 @@ Determines if the actor is affected by gravity or not.
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(bool)can_float` *(8 bytes)* : 0 makes the actor affected by gravity. For units on the structure, set this to 1.
 

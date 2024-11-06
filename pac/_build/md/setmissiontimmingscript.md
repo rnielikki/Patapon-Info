@@ -18,7 +18,7 @@ More information in [How To: Define a Mission](./guide/how-to-define-a-mission.m
 - `(int)phase` *(8 bytes)* : Loading phase, usually 0~2. *Must be smaller than 4*.
    - Phase 0: [Load resources](./readarcfile.md).
    - Phase 1: Create and define entities.
-      - Define Items (such as [beginAppearItem](./beginappearitem.md)), Create Entities ([create](./create.md)....)
+      - Define Items (such as [beginAppearItem](./beginappearitem.md)), Create Entities ([create](./create.md)...)
    - Phase 2: *Late setup*, setup more information of the entities, also loads [stages](./addstage_25165d00.md).
       - Setup some UI flags, [setupUnit](./setupunit.md), [applyUnit](./applyunit.md), [appearance](./setappearanceposition.md)/[reborn](./setrebornposition.md) position etc.
 - `(MemoryAddress)pac_address` *(8 bytes)* : Memory address that contains start of the PAC, obtained from [getPack](./getpack_25100600.md).

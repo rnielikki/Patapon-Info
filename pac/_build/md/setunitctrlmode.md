@@ -11,7 +11,7 @@ Decides controlling type specifically for non-boss enemies.
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(int)mode_id` *(8 bytes)* : Expected *0~7*. Other values crash.
 

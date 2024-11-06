@@ -13,7 +13,7 @@ Without this, [spawn](./spawn.md) spawns unit only once without respawning.
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(int)maximum_amount` *(8 bytes)* : Maximum times to be **re**spawned. This does not count first spawn.
 

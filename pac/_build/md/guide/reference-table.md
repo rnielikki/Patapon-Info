@@ -83,6 +83,8 @@ This are used e.g. [getAbnormalStatus](../getabnormalstatus.md).
 
 ### Hitbox Layers
 
+This is also called *troop type*.
+
 |ID|Layer|Hits Player|Hits Enemy|Example|
 |---|---|---|---|---|
 |0|Player|No|Yes|Catapult, Ziggerzank|

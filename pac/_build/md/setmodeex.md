@@ -11,7 +11,7 @@ Connects the generator to e.g. status effect or [death call](./setdeathcall.md) 
 
 ## Parameters
 
-- `(int *)generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int *)generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)unknown` *(8 bytes)* : If doubt, set to 0. Please describe what this does. Seems like this connects to a behaviour.
 - `(int)generator_identifier` *(8 bytes)* : If doubt, set it to -1. Generator identifier to connect, from e.g.from [create](./create.md).
 - `(int)unique_identifier` *(8 bytes)* : Identifier from various place, e.g. [setReqActorUniqueId](./setreqactoruniqueid.md), [addGimmick](./addgimmick.md), [getGateInfo](./getgateinfo.md) or [registConstGimmick](./registconstgimmick.md).

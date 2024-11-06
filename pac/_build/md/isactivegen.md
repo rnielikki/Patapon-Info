@@ -11,7 +11,7 @@ check if the generator is loaded and active.
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(uint *)is_active` *(8 bytes)* : Variable to *store* if the generator is active.
 
 ## Example

@@ -11,7 +11,7 @@ Sets item drop from the specific actor.
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(int)item_table_id` *(8 bytes)* : ID of the Item table, defined from [beginAppearItem](./beginappearitem.md)
 

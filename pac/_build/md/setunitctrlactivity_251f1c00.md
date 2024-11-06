@@ -15,7 +15,7 @@ Unit attack works with [actual action type](./setunitctrlcurrentacttype_251f2700
 
 ## Parameters
 
-- `(int* )generator_index` *(8 bytes)* : Generator Index, obtained from [create](./create.md).
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(int)command_id` *(8 bytes)* : [Command ID](./guide/reference-table.md#command-ids) of it, but **range of 0~2 (march, defend, attack)** or nothing (-1).
 - `(int)sqaudactivity_id` *(8 bytes)* : ID from `squadActivityParam`.

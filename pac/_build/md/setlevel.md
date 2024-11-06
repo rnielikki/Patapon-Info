@@ -13,7 +13,7 @@ See also: [About Levels](./guide/about-levels.md).
 
 ## Parameters
 
-- `(int *)generator_index` *(8 bytes)* : The generator to set level, obtained from [create](./create.md).
+- `(int *)generator_handle` *(8 bytes)* : Handle of the generator to set level, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)level` *(8 bytes)* : Individual level to assign to the unit(s). More information in [here](./guide/about-levels.md).
 
 ## Example
