@@ -1,8 +1,6 @@
 # getHeroCount
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Gets how many heroes are in the player troop.
 
 ## Code Information
 
@@ -13,7 +11,7 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
+- `(int *)destination` *(8 bytes)* : Variable to *store* how many heroes are in the player troop.
 
 ## Example
 

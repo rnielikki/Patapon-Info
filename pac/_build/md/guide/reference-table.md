@@ -81,9 +81,9 @@ This are used e.g. [getAbnormalStatus](../getabnormalstatus.md).
 |0x20|Knockback|
 |0x40|Burn|
 
-### Hitbox Layers
+### Troop types
 
-This is also called *troop type*.
+**Setting enemies to player troop might cause unwanted positioning**.
 
 |ID|Layer|Hits Player|Hits Enemy|Example|
 |---|---|---|---|---|

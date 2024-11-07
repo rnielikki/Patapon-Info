@@ -18,7 +18,7 @@ Related instructions: [Generator setup](./category.md#generator-setup)
 
 Use 1st parameter from `create` to define the detail of the generator.
 
-- [setTroopType](../settrooptype.md): Defines hitbox layer (is player side or enemy side)
+- [setTroopType](../settrooptype.md): Defines troop type (is player side or enemy side)
 - [setPosX](../setposx.md): Defines position
 - [setDeathCall](../setdeathcall.md): Defines instruction set to call after the unit is dead.
 

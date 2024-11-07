@@ -11,7 +11,7 @@ Sets a const gimmick collidable.
 
 ## Parameters
 
-- `(int)gate_id` *(8 bytes)* : Obtained from [getGateInfo](./getgateinfo.md) with `param_index` 0.
+- `(int)gate_id` *(8 bytes)* : Obtained from [getGateInfo](./getgateinfo.md) with `param_index` 0. **-1 to enable every constgimmick collision**.
 
 ## Example
 

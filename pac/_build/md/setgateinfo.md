@@ -16,7 +16,7 @@ This can control e.g. door open and limiting camera turn.
 - `(bool)bind_type` *(8 bytes)* : 0 has many types of binds, 1 will be connected to only `param_index` 2
 - `(int)bind_identifier` *(8 bytes)* : `bind_identifier` from [setupAddDungeonWall](./setupadddungeonwall.md), if it's non-dungeon, set it manually.
 - `(int)param_index` *(8 bytes)* : Index of the parameter, see below for the detail.
-- `(int/index)param` *(8 bytes)* : If 1st parameter is 0, this is ID related. otherwise it is address.
+- `(int/index)param` *(8 bytes)* : The value depends on the `param_index`, see below.
    
 If `bind_type` is 0, setup only 2 of `param_index` (in this case, the `param` is address).
 

@@ -1,6 +1,6 @@
 # setTroopType
 
-Sets the hitbox layer for the interaction.
+Sets the troop type for the interaction.
 
 ## Code Information
 
@@ -12,7 +12,7 @@ Sets the hitbox layer for the interaction.
 ## Parameters
 
 - `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
-- `(int)hitbox_layer` *(8 bytes)* : The [hitbox layer](./guide/reference-table.md#hitbox-layers) to set.
+- `(int)troop_type` *(8 bytes)* : The [troop type](./guide/reference-table.md#hitbox-layers) to set.
 
 ## Example
 

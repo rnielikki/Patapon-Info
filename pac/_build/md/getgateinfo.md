@@ -15,7 +15,7 @@ Gets detail gate information given by [setGateInfo](./setgateinfo.md).
 - `(bool)bind_type` *(8 bytes)* : 0 has many types of binds, 1 will be connected to only `param_index` 2
 - `(int)bind_identifier` *(8 bytes)* : `bind_identifier` from [setupAddDungeonWall](./setupadddungeonwall.md).
 - `(int)param_index` *(8 bytes)* : Index of the parameter, see below for the detail.
-- `(int *)destination` *(8 bytes)* : *Variable to store* the result. If 1st parameter is 0, this is ID related.
+- `(int *)destination` *(8 bytes)* : *Variable to store* the result. The result depends on `param_index`, see below.
 
 For detail of each parameter, see [setGateInfo](./setgateinfo.md).
 

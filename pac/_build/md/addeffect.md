@@ -15,7 +15,7 @@ After this, use [setModelInfo](./setmodelinfo.md) to set position.
 
 - `(int *)destination` *(8 bytes)* : Variable to **store the  [Handle](./guide/category.md#getting-handle)**. -1 if failed to create the effect.
 - `(int)effect_id` *(8 bytes)* : ID of the effect in `effectparam`.
-- `(int)hitbox_layer` *(8 bytes)* : The [hitbox layer](./guide/reference-table.md#hitbox-layers) to set.
+- `(int)troop_type` *(8 bytes)* : The [troop type](./guide/reference-table.md#hitbox-layers) to set.
 - `(float)scale` *(8 bytes)* : Scale multiplier for the effect. Usually this is 1.
 - `(bool)Var4` *(8 bytes)* : Please describe what this does. Mostly 0 or 1, this can be kept as 0.
 

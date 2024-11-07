@@ -15,7 +15,7 @@ Creates an obtainable item in a specific position.
 - `(int)gravity_status` *(8 bytes)* : If this is set to 2, the object doesn't fall to the ground.
 - `(int)item_id` *(8 bytes)* : [ID of the item](./guide/reference-table.md#item-id--weaponparam-id-indexes).
 - `(int)item_level` *(8 bytes)* : Level of the item.
-- `(int)hitbox_layer` *(8 bytes)* : [The hitbox layer](./guide/reference-table.md#hitbox-layers) of the item.
+- `(int)troop_type` *(8 bytes)* : [The troop type](./guide/reference-table.md#hitbox-layers) of the item.
 - `(float)pos_x` *(8 bytes)* : X position of the item as PSP pixels.
 - `(float)pos_y` *(8 bytes)* : Y position of the item as PSP pixels.
 

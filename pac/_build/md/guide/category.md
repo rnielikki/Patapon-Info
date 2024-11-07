@@ -50,6 +50,7 @@ Check [About Flag](./about-flag.md).
 
 - [setupUnit](../setupunit.md), [applyUnit](../applyunit.md)
 - [checkEqualHeroName](../checkequalheroname.md)
+- [getHeroCount](../getherocount.md)
 
 ### Model
 
