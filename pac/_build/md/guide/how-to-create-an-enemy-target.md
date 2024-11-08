@@ -204,10 +204,35 @@ This is how to setup the gate in phase 3 and 4:
 
 ### ReqActor Method
 
-1. Define a structure as reqActor gimmick.
-2. Put the units together to the **same generator as the structure**.
-3. **Set the [time between respawn](../setreqactordelaytime.md) and [total respawn count](../setreqactortotal.md)**.
-4. Use [spawn](../spawn.md) to spawn units.
+1. Use generator and set `mode_type` (2nd parameter) in [SetModeEx](../setmodeex.md) to **4**.
+2. Define a structure in the generator, as reqActor gimmick, as index 0.
+3. Put the units together to the **same generator as the structure**.
+4. Set the [time between respawn](../setreqactordelaytime.md) and [total respawn count](../setreqactortotal.md).
+5. Use [spawn](../spawn.md) to spawn units.
+
+```c
+
+0005B7D4  251F0200:create(8:1A, 2:44C)
+0005B7E8  251F1900:setTroopType(8:1A, 2:1)
+0005B7FC  251F0400:setLevel(8:1A, 8:32)
+/* NOTE THE SECOND PARAM IS 4 */
+0005B810  251F1B00:setModeEx(8:1A, 2:4, 2:FFFFFFFF, 2:FFFFFFFF)
+...
+/* Make the spawn point structure in index 0 */
+0005B870  251F0900:setReqActorType(8:1A, 2:0, 118)
+...
+0005B974  251F0900:setReqActorType(8:1A, 2:1, 4F)
+0005B990  251F0A00:setReqActorCount(8:1A, 2:1, 2:1)
+...
+/* Add other units */
+0005BAB0  251F1200:setReqActorDelayTime(8:1A, 2:1, 4.0)
+0005BACC  251F0B00:setReqActorTotal(8:1A, 2:1, 2:9)
+0005BAE8  251F0900:setReqActorType(8:1A, 2:4, 15)
+0005BB04  251F0A00:setReqActorCount(8:1A, 2:4, 2:3)
+...
+0005BC90  251F1200:setReqActorDelayTime(8:1A, 2:4, 4.0)
+0005BCAC  251F0B00:setReqActorTotal(8:1A, 2:4, 2:9)
+```
 
 ## Next step
 

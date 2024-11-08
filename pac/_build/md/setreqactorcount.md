@@ -2,6 +2,8 @@
 
 Sets amount of the given unit or gimmick, see also [setReqActorParam](./setreqactortype.md).
 
+**Do not set more than 1 for boss enemies** or will cause unintended side effect.
+
 ## Code Information
 
 - **Name**: `setReqActorCount`

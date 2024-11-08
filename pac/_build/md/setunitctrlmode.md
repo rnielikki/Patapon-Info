@@ -1,6 +1,6 @@
 # setUnitCtrlMode
 
-Decides controlling type specifically for non-boss enemies.
+Decides controlling type.
 
 ## Code Information
 
@@ -16,14 +16,14 @@ Decides controlling type specifically for non-boss enemies.
 - `(int)mode_id` *(8 bytes)* : Expected *0~7*. Other values crash.
 
 
-|`mode_id`|Spawned from far away|March (or [initial acttype](./setunitctrlstartacttype.md))|Attack|
-|---|---|---|---|
-|0|Yes|Yes|Yes|
-|1, 3, 5|Yes|No|Yes|
-|2|Yes|No|Yes|
-|4|Yes|No|No|
-|6|Yes|Yes|No|
-|7|No|No|Yes|
+|`mode_id`|Spawned from far away|March (or [initial acttype](./setunitctrlstartacttype.md))|Auto Attack|Usage|
+|---|---|---|---|---|
+|0|Yes|Yes|Yes|Non-boss enemies|
+|1, 3, 5|Yes|No|Yes||
+|2|Yes|No|Yes||
+|4|Yes|No|No||
+|6|Yes|Yes|If in [watchArea](./setunitctrlwatcharea.md)|Spawned minibosses|
+|7|No|No|Yes||
 
 ## Example
 

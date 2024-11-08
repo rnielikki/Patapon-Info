@@ -6,6 +6,8 @@ If things must be happened after object is completely deleted, use [setDeathCall
 
 The address tends to start with [getEthnicID](./getethnicid.md) and compare the values.
 
+Used for small units dying message (bo-bo-bone, kaaarmen etc.).
+
 ## Code Information
 
 - **Name**: `setUnitCtrlTimingScript_Int`

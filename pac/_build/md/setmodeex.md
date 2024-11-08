@@ -12,7 +12,7 @@ Connects the generator to e.g. [death call](./setdeathcall.md) to the other gene
 ## Parameters
 
 - `(int *)generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
-- `(int)unknown` *(8 bytes)* : If doubt, set to 0. Please describe what this does. Seems like this connects to a behaviour.
+- `(int)mode_type` *(8 bytes)* : Spawn point type. **0 if no spawn point, 1 for spawning from constgimmick, 4 for spawning from first entity.**
 - `(int)generator_identifier` *(8 bytes)* : If doubt, set it to -1. Generator identifier to connect, from e.g.from [create](./create.md).
 - `(int)unique_identifier` *(8 bytes)* : Identifier from various place, e.g. [setReqActorUniqueId](./setreqactoruniqueid.md), [addGimmick](./addgimmick.md), [getGateInfo](./getgateinfo.md) or [registConstGimmick](./registconstgimmick.md).
 

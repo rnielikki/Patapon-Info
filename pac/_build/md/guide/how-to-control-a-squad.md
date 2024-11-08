@@ -4,11 +4,18 @@ Article Before: [How To: Get a Handle](./how-to-get-a-handle.md)
 
 ## Controlling Bosses
 
-All minibosses' and bosses' action are **automatic**, controlled by Assembly or `monster.pac`, which doesn't need to touch.
+### Marching before attacking
+
+Set `mode_id` of [setUnitCtrlMode](../setunitctrlmode.md) to 6, and [setUnitCtrlWatchArea](../setunitctrlwatcharea.md) to set march distance from player position.
+
+### Attacking
+
+All minibosses' and bosses' attack action are **automatic**, controlled by Assembly or `monster.pac`, which doesn't need to touch.
 
 Though, if you want to control the boss manually, consider [enableBossManualCtrl](../enablebossmanualctrl.md).
 
 Related instructions: [Boss Control](./category.md#boss-control)
+
 
 ## Small units
 
