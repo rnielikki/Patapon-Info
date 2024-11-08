@@ -1,6 +1,8 @@
 # setReqActorAdventRadius
 
-Decides approach speed of an enemy, as [reqActor](./setreqactortype.md) scope.
+Decides the distance of the units in same squad, as [reqActor](./setreqactortype.md) scope. **The spreading distance is random**.
+
+Used for planting grass.
 
 See also: [setAdventRadius](./setadventradius.md)
 
@@ -15,8 +17,8 @@ See also: [setAdventRadius](./setadventradius.md)
 
 - `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
-- `(float)x` *(8 bytes)* : X position of the "radius" to advent, as PSP pixels in the world, bigger is slower
-- `(float)y` *(8 bytes)* : Y position of the "radius" to advent, as PSP pixels in the world, bigger is slower
+- `(float)max_x_spread` *(8 bytes)* : X position of the "radius" to spread.
+- `(float)max_y_spread` *(8 bytes)* : Y position of the "radius" to spread.
 
 Note that **PSP screen size is 480 x 272**.
 

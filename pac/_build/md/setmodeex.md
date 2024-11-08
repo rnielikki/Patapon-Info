@@ -12,9 +12,17 @@ Connects the generator to e.g. [death call](./setdeathcall.md) to the other gene
 ## Parameters
 
 - `(int *)generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
-- `(int)mode_type` *(8 bytes)* : Spawn point type. **0 if no spawn point, 1 for spawning from constgimmick, 4 for spawning from first entity.**
+- `(int)mode_type` *(8 bytes)* : Spawn point type. See below.
 - `(int)generator_identifier` *(8 bytes)* : If doubt, set it to -1. Generator identifier to connect, from e.g.from [create](./create.md).
 - `(int)unique_identifier` *(8 bytes)* : Identifier from various place, e.g. [setReqActorUniqueId](./setreqactoruniqueid.md), [addGimmick](./addgimmick.md), [getGateInfo](./getgateinfo.md) or [registConstGimmick](./registconstgimmick.md).
+
+|`mode_type`|type|
+|---|---|
+|0|None|
+|1|Constgimmick Keeper (e.g. bonedeth on their fortress)|
+|2|???|
+|3|Spawned from Constgimmick|
+|4|Spawned from [index 0 of same generator entity](./guide/how-to-create-an-enemy-target.md#reqactor-method)|
 
 ## Example
 

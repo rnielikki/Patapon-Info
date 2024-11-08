@@ -16,14 +16,14 @@ Decides controlling type.
 - `(int)mode_id` *(8 bytes)* : Expected *0~7*. Other values crash.
 
 
-|`mode_id`|Spawned from far away|March (or [initial acttype](./setunitctrlstartacttype.md))|Auto Attack|Usage|
+|`mode_id`|Spawned from far away|March (or [initial acttype](./setunitctrlstartacttype.md))|Auto Attack|
 |---|---|---|---|---|
-|0|Yes|Yes|Yes|Non-boss enemies|
-|1, 3, 5|Yes|No|Yes||
-|2|Yes|No|Yes||
-|4|Yes|No|No||
-|6|Yes|Yes|If in [watchArea](./setunitctrlwatcharea.md)|Spawned minibosses|
-|7|No|No|Yes||
+|0|Yes|Yes|Yes|
+|1, 3, 5|Yes|No|Yes|
+|2|Yes|No|Yes|
+|4|Yes|No|No|
+|6|Yes|Yes|If in [watchArea](./setunitctrlwatcharea.md)|
+|7|No|No|Yes|
 
 ## Example
 

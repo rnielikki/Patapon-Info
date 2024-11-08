@@ -168,7 +168,7 @@ This is how to setup the gate in phase 3 and 4:
 00004AFC  25000100:cmd_end()
 ```
 
-## For dungeon
+### For dungeon
 
 1. Use [setupStartDungeonWall](../setupstartdungeonwall.md).
 2. Call [setupAddDungeonWall](../setupadddungeonwall.md).
@@ -176,12 +176,19 @@ This is how to setup the gate in phase 3 and 4:
   - If there is any lever, [create the levers](../setreqactortype.md) first and [get thd ID of them](../setreqactoruniqueid.md).
 4. Finish with [setupEndDungeonWall](../setupenddungeonwall.md)
 
+## Grass / Obstacle
+
+Same as creating unit entities. They also have `generatorparam` entities, and can use them. Those are main differences from the unit creation:
+
+- **For grass, use hitbox layer 3 in [setTroopType](../settrooptype.md)**.
+- Use [setAdventRadius](../setadventradius.md) or [setReqActorAdventRadius](../setreqactoradventradius.md) for setting distance between grasses.
+
 ## Spawning units from a structure
 
 ### ConstGimmick Method
 
 1. [Create the tower](./how-to-create-an-enemy-target.md#for-structure) using [registConstGimmick](../registconstgimmick.md).
-2. Use generator and connect with [SetModeEx](../setmodeex.md) last parameter  (to `registeConstGimmick` last parameter).
+2. Use generator and connect with [SetModeEx](../setmodeex.md) last parameter  (to `registeConstGimmick` last parameter), and set `mode_type` to 3.
 3. **Set the [time between respawn](../setreqactordelaytime.md) and [total respawn count](../setreqactortotal.md)**.
 4. Use [spawn](../spawn.md) to spawn units.
 

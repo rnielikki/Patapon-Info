@@ -1,6 +1,6 @@
 # setAdventRadius
 
-Decides the enemies approach speed, as [generator](./create.md) level.
+Decides the distance of the units in same squad, as [generator](./create.md) level. **The spreading distance is random**.
 
 See also: [setReqActorAdventRadius](./setreqactoradventradius.md)
 
@@ -14,7 +14,7 @@ See also: [setReqActorAdventRadius](./setreqactoradventradius.md)
 ## Parameters
 
 - `(int *)generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
-- `(float)advent_radius` *(8 bytes)* : The speed to approach, bigger is slower.
+- `(float)max_x_spread` *(8 bytes)* : The amount to spread in x direction.
 
 About 2nd parameters, the cyclopses appeared around 1:36 when the value is 1800.0 and appeared around 00:42 with default value (0).
 
