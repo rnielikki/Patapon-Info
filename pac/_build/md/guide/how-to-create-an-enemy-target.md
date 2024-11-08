@@ -82,13 +82,25 @@ This is *spawning motiti in runtime* function in debug mode.
 0002B59C  251F0900:setReqActorType(4:1, 2:0, 24)
 0002B5B8  251F0A00:setReqActorCount(4:1, 2:0, 2:1)
 0002B5D4  251F0E00:setReqActorPos(4:1, 2:0, 0.0, 0.0)
-0002B5F8  251F1300:spawn(4:1)
+...
+//0002B5F8  251F1300:spawn(4:1)
 0002B604  25000100:cmd_end()
 ```
 
-Note that in non-debug mode, `getHandle` and `spawn` method is preferred.
+**Do not call `spawn` until [mission timming](./how-to-define-a-mission.md) is reached to 2nd phase**. Mind that is debug mode and everything is already fully loaded.
 
-## For structure
+In normal mission, use [getHandle](../gethandle.md) and [spawn](../spawn.md) **later**.
+
+```c
+00000310  251F1500:getHandle(2:0, 8:1A)
+00000324  251F1300:spawn(8:1A)
+```
+
+## For const structure
+
+Note that **constGimmick object is loaded from very first**, and *can't be lazy loaded*.
+
+If the structure is spawned after some point (e.g. when other structure destroyed), the structure must be called using reqActor (like above).
 
 1. Use [registConstGimmick](../registconstgimmick.md) (MissionTimming phase 1).
 2. Set the gimmick with [applyConstGimmick](../applyconstgimmick.md) (MissionTimming phase 2).
@@ -137,9 +149,6 @@ Note that in non-debug mode, `getHandle` and `spawn` method is preferred.
     0005A9A8  25000100:cmd_end()
 ```
 
-
-
-
 This is how to setup the gate in phase 3 and 4:
 
 ```c
@@ -169,6 +178,8 @@ This is how to setup the gate in phase 3 and 4:
 
 ## Spawning units from a structure
 
+### ConstGimmick Method
+
 1. [Create the tower](./how-to-create-an-enemy-target.md#for-structure) using [registConstGimmick](../registconstgimmick.md).
 2. Use generator and connect with [SetModeEx](../setmodeex.md) last parameter  (to `registeConstGimmick` last parameter).
 3. **Set the [time between respawn](../setreqactordelaytime.md) and [total respawn count](../setreqactortotal.md)**.
@@ -190,6 +201,13 @@ This is how to setup the gate in phase 3 and 4:
 0005EF0C  251F1200:setReqActorDelayTime(8:1A, 2:1, 2.0)
 0005EF28  251F0B00:setReqActorTotal(8:1A, 2:1, 2:3)
 ```
+
+### ReqActor Method
+
+1. Define a structure as reqActor gimmick.
+2. Put the units together to the **same generator as the structure**.
+3. **Set the [time between respawn](../setreqactordelaytime.md) and [total respawn count](../setreqactortotal.md)**.
+4. Use [spawn](../spawn.md) to spawn units.
 
 ## Next step
 

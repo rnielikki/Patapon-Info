@@ -1,6 +1,6 @@
 # How To: Control a Squad
 
-Article Before: [How To: Control a Squad](./how-to-control-a-squad.md)
+Article Before: [How To: Get a Handle](./how-to-get-a-handle.md)
 
 ## Controlling Bosses
 
