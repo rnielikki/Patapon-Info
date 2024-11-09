@@ -44,7 +44,7 @@ This logic drops potion from an enemy:
 
 > [!CAUTION]
 > - For loot drop, consider every scenario for every item drop. Always **set default drop that makes sense**.
-> - Make sure dropped item is fair or not much rewarding (the missin is for fun anyway!).
+> - Make sure dropped item is fair or not much rewarding (the mission is for fun anyway!).
 
 1. Call [itemTableAllClear](../itemtableallclear.md) so it doesn't mix up with already defined item tables.
 2. Define table just like [above](#during-mission), but only step 1~3.

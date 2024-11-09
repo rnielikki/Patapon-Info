@@ -1,12 +1,12 @@
 # setUnitCtrlTimingScript_Int
 
-Calls an script when an unit is just killed (and was not deleted yet).
+Calls a script when an unit is in certain condition (e.g. enemy on sight or being killed).
 
 If things must be happened after object is completely deleted, use [setDeathCall](./setdeathcall.md).
 
 The address tends to start with [getEthnicID](./getethnicid.md) and compare the values.
 
-Used for small units dying message (bo-bo-bone, kaaarmen etc.).
+Used for small enemy units' bubble speech (bo-bo-bone, karmen great pataponponpon etc.).
 
 ## Code Information
 

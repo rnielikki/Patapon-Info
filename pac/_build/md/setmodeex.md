@@ -19,9 +19,9 @@ Connects the generator to e.g. [death call](./setdeathcall.md) to the other gene
 |`mode_type`|type|
 |---|---|
 |0|None|
-|1|Constgimmick Keeper (e.g. bonedeth on their fortress)|
+|1|Constgimmick Destroying stops spawning|
 |2|???|
-|3|Spawned from Constgimmick|
+|3|Manually sets Constgimmick destroyable (e.g. fifty cyclopses)|
 |4|Spawned from [index 0 of same generator entity](./guide/how-to-create-an-enemy-target.md#reqactor-method)|
 
 ## Example
