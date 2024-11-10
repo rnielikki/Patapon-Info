@@ -1,8 +1,6 @@
 # setStagePriority
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+**This is not functional**. Do not use this.
 
 ## Code Information
 
