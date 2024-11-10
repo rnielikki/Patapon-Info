@@ -1,6 +1,6 @@
 # replaceActivityTable
 
-Overwrites `squadline` action.
+Overwrites `squadactivityparam` ID in `squadlineparam`.
 
 ## Code Information
 
@@ -11,9 +11,9 @@ Overwrites `squadline` action.
 
 ## Parameters
 
-- `(int *)squad_handle` *(8 bytes)* : The squad handle to get the class ID.
-- `(int)from_id` *(8 bytes)* : The target `squadline` ID that will be changed.
-- `(int)to_id` *(8 bytes)* : The desired `squadline` ID.
+- `(int *)squad_handle` *(8 bytes)* : The squad handle to change the action.
+- `(int)from_id` *(8 bytes)* : The target `squadactivityparam` ID that will be changed.
+- `(int)to_id` *(8 bytes)* : The desired `squadactivityparam` ID.
 
 ## Example
 

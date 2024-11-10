@@ -1,6 +1,6 @@
 # setSuperHero
 
-Apply hero squad action to an unit. This does not change model, and can't perform heromode.
+Apply hero squad action to an unit. This does not change model, and **does not affect to actual heromode**.
 
 When this is applied to pon Mymamsar, the size also increases.
 
