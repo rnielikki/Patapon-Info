@@ -270,7 +270,7 @@ For door gimmick, see [gimmick](#gimmick) section.
 - [cameraGetPos](../cameragetpos.md), [cameraGetPosX](../cameragetposx.md), [cameraGetOffsetY](../cameragetoffsety.md), [cameraSetPosZ](../camerasetposz.md), [cameraSetBattleZ](../camerasetbattlez.md)
 - [cameraSetScriptCmaera](../camerasetscriptcmaera.md), [cameraEnableControl](../cameraenablecontrol.md), [cameraEnabeControll](../cameraenablecontroll.md)
 - [cameraMove](../cameramove.md), [cameraMoveType](../cameramovetype.md) [cameraMoveSpeedSet](../cameramovespeedset.md), [cameraMoveTimeSet](../cameramovetimeset.md)
-- [setCameraPosition](../setcameraposition.md)
+- [setCameraPosition](../setcameraposition.md), [cameraSetOffsetY](../camerasetoffsety.md)
 - [cameraActuate](../cameraactuate.md)
 
 ### Music / Sound

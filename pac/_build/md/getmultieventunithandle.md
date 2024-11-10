@@ -1,8 +1,6 @@
 # getMultiEventUnitHandle
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Gets handle of the other players in the hideout for event. In normal hideout unit placing, **[getMultiHeroHandle](./getmultiherohandle.md)** is preferred.
 
 ## Code Information
 
@@ -13,9 +11,9 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(int)Var0` *(8 bytes)*
-- `(int)Var1` *(8 bytes)*
-- `(uint)Var2` *(8 bytes)*
+- `(int *)destination` *(8 bytes)* : Destination to save the unit handle.
+- `(int)Var1` *(8 bytes)* : Player index in multi.
+- `(uint *)destination2` *(8 bytes)
 
 ## Example
 

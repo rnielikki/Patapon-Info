@@ -1,8 +1,6 @@
 # cameraSetOffsetY
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Defines Y offset of the camera position immediately.
 
 ## Code Information
 
@@ -13,7 +11,7 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
+- `(float)position` *(8 bytes)* : Y offset value of the camera.
 
 ## Example
 

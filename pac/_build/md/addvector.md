@@ -13,10 +13,10 @@ For consistent velocity, consider using another method.
 
 ## Parameters
 
-- `(float)handle_id` *(8 bytes)* : Handle
-- `(float)Var1` *(8 bytes)* : Scale
-- `(float)direction_x` *(8 bytes)* : Vector direction X
-- `(float)direction_y` *(8 bytes)* : Vector direction Y
+- `(int *)handle_id` *(8 bytes)* : The target handle to give the force.
+- `(float)scale` *(8 bytes)* : The power, how much force will give to the target.
+- `(float)direction_x` *(8 bytes)* : X direction of the force.
+- `(float)direction_y` *(8 bytes)* : Y Direction of the force.
 
 ## Example
 

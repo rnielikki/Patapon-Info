@@ -1,8 +1,6 @@
 # appearStaggerItems
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Force drop the [staggered item](./setbossctrlstaggeritem.md) from a boss.
 
 ## Code Information
 
@@ -13,7 +11,7 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
+- `(int *)squad_handle` *(8 bytes)*: Squad Handle ID of the boss.
 
 ## Example
 

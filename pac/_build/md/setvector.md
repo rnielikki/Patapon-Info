@@ -1,8 +1,8 @@
 # setVector
 
-**Description** goes here.
+Sets **force direction** to the model. This *does not* change the force.
 
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+For consistent velocity, consider using another method.
 
 ## Code Information
 
@@ -13,9 +13,9 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
-- `(undefined4)Var2` *(8 bytes)*
+- `(int *)handle_id` *(8 bytes)* : The target handle to give the force.
+- `(float)direction_x` *(8 bytes)* : X direction of the force.
+- `(float)direction_y` *(8 bytes)* : Y Direction of the force.
 
 ## Example
 

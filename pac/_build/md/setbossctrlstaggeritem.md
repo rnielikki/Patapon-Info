@@ -1,8 +1,6 @@
 # setBossCtrlStaggerItem
 
-**Description** goes here.
-
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Defines what item will be dropped when the boss is being staggered. Meant for Patapon 2 boss item drop.
 
 ## Code Information
 
@@ -13,9 +11,9 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(int)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
-- `(undefined4)Var2` *(8 bytes)*
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
+- `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
+- `(int)item_table_id` *(8 bytes)* : [Item table ID](./beginappearitem.md) to drop when being staggered.
 
 ## Example
 
