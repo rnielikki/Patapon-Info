@@ -13,7 +13,7 @@ Available in debug menu.
 
 ## Parameters
 
-- `(float)duration` *(8 bytes)* : *As seconds*, how long the march speed change will be applied.
+- `(float)duration` *(8 bytes)* : *As seconds*, how long the march speed change will be applied. -1 for no time limit.
 - `(float)multiplier` *(8 bytes)* : Value to multiply to the base march speed. Set to 1 for default march speed.
 
 ## Example

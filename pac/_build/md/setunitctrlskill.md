@@ -1,8 +1,8 @@
 # setUnitCtrlSkill
 
-**Description** goes here.
+Adds a set skill or class skill to a reqActor PVE unit.
 
-This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
+Note this does not automatically load the skill effect and the skill effect must be loaded manually.
 
 ## Code Information
 
@@ -13,9 +13,9 @@ This page is automatically generated and not reviewed yet.<br>Remove this text i
 
 ## Parameters
 
-- `(int)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
-- `(undefined4)Var2` *(8 bytes)*
+- `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
+- `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
+- `(int)skill_id` *(8 bytes)* : [ID](https://rnielikki.github.io/pata/resources/skill.html) of the class skill or set skill to give to the unit.
 
 ## Example
 

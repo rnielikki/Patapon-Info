@@ -11,7 +11,7 @@ Checks if player squad have specific set skill or class skill. This can be used 
 
 ## Parameters
 
-- `(int)Var0` *(8 bytes)* : *Keep this 0*, seems this also can be 1, please describe.
+- `(int)unit_type` *(8 bytes)* : Type of the unit, 0 for hero. This is usually 0, or sometimes 1.
 - `(int)skill_id` *(8 bytes)* : [Set skill or Class skill ID](https://rnielikki.github.io/pata/resources/skill.html) to check if the player has the skill.
 - `(int *)destination` *(8 bytes)* : Variable to *store* the result, either 0 (doesn't have) or 1 (do have).
 

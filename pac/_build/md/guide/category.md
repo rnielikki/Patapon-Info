@@ -133,7 +133,7 @@ For hideout exclusive handle, check [hideout](#hideout) section.
 - [getMultiplayerSquadHandle](../getmultiplayersquadhandle.md)
 - [getSquadClassId](../getsquadclassid.md), [getPlayerClassId](../getplayerclassid.md)
 - [replaceActivityTable](../replaceactivitytable.md)
-- [isFrontLineEnterView](../isfrontlineenterview.md), [sFrontLineEnterAttack](../isfrontlineenterattack.md)
+- [isFrontLineEnterView](../isfrontlineenterview.md), [isFrontLineEnterAttack](../isfrontlineenterattack.md)
 
 ### Class
 
@@ -196,6 +196,7 @@ Related article: [How To Control a Squad](./how-to-control-a-squad.md)
 - [setUnitCtrlWatchArea](../setunitctrlwatcharea.md)
 - [setUnitCtrlTimingScript_Int](../setunitctrltimingscript_int.md), [setUnitCtrlEnable](../setunitctrlenable.md), [setUnitCtrlMoveEnable](../setunitctrlmoveenable.md)
 - [getUnitCtrlActivity](../getunitctrlactivity.md), [setUnitCtrlActivity](../setunitctrlactivity_251f1c00.md)
+- [setUnitCtrlSkill](../setunitctrlskill.md)
 
 Note that squadActivity and actual march/attack/defend action can be different, and can be faked.
 

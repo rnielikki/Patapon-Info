@@ -2,7 +2,7 @@
 
 Apply hero squad action to an unit. This does not change model, and **does not affect to actual heromode**.
 
-When this is applied to pon Mymamsar, the size also increases.
+This affects unit size and camera zooming during heromode.
 
 ## Code Information
 
