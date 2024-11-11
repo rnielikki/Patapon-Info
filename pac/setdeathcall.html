@@ -93,17 +93,20 @@
 <p>This can be used for checkpoint to load entities (e.g. Bonedeth sturctures in the middle of the mission).</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
-<li><strong>Name</strong>: <code>setDeathCall</code>k</li>
+<li><strong>Name</strong>: <code>setDeathCall</code></li>
 <li><strong>Scope</strong>: Mission</li>
 <li><strong>PAC Instruction (Binary)</strong>: <code>25 1f 08 00</code></li>
 <li><strong>Assembly Address in Memory</strong> : <code>0x8b5c548</code></li>
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int *)generator_index</code> <em>(8 bytes)</em> : Generator Index, obtained from <a href="create.html">create</a>.</li>
+<li><code>(int *)generator_handle</code> <em>(8 bytes)</em> : Handle of the generator, obtained from <a href="create.html">create</a> or <a href="gethandle.html">getHandle</a>.</li>
 <li><code>(MemoryAddress)pac_address_in_memory</code> <em>(8 bytes)</em> : Obtained from <a href="getpack_25100600.html">getPack</a>. The memory address where the whole PAC instructions start.</li>
 <li><code>(Address)address</code> <em>(8 bytes)</em> : Address, offset from PAC file, to call when an enemy is dead. If does nothing, put an address where is <a href="cmd_end.html">cmd_end</a>.</li>
 </ul>
+<h2 id="remarks">Remarks</h2>
+<p><strong>The dead object handles are already deleted when this is called</strong>.</p>
+<p>Use <a href="setunitctrltimingscript_int.html">setUnitCtrlTimmingScript_Int</a> if the object information is needed.</p>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>
 <p><code>25 1f 08 00 / 08 00 00 00 / 1a 00 00 00 / 04 00 00 00 / 00 00 00 00 / 01 00 00 00 / 80 38 00 00</code></p>

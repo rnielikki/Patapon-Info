@@ -92,14 +92,18 @@
 <p>As I said &quot;I am assuming you are asking about modifying. Writing from the bottom is terrifying.&quot;<br>
 This is about modifying existing PAC instruction.</p>
 <p>Since there are bunch of common condition checking and resource/effect loading, writing from bottom is very very discouraged and you couldn't do it anyway.</p>
-<p>Also, always <strong>check if parameter is already used</strong> before assigning any parameter. Otherwise it might cause potential disaster.</p>
+<p>Also, always <strong>check context of the parameter</strong> before assigning any parameter. Otherwise it might cause potential disaster.</p>
+<p>small local parameter indexes like 0, 1, 2, 3 (e.g. <code>04 00 00 00 01 00 00 00</code>) are potentially temporary parameters that can be changed at any time.</p>
 <h2 id="case-1-your-code-occupies-less-space">Case 1: Your code occupies less space</h2>
 <p>Easy, you can just fill <code>00</code> in empty spaces.</p>
-<p>Just try to fill zero <strong>just BEFORE <code>25</code></strong>, which is next PAC instruction.</p>
+<p>Just try to fill zero <strong>just BEFORE <code>25 XX XX XX</code></strong>, which is next PAC instruction.</p>
 <h2 id="case-2-your-code-occupies-same-space">Case 2: Your code occupies same space</h2>
-<p>You don't need to care of it.</p>
+<p>Just overwrite them.</p>
 <h2 id="case-3-your-code-occupies-more-space">Case 3: Your code occupies more space</h2>
-<p>PAC file size can be changed, so do not have fear of extending it.</p>
+<p><strong>Do not insert from the middle</strong>. Always <strong>append</strong> at the end of the file.</p>
+<p>The edited PAC file size can be bigger than original, and there is no issue with the size.<br>
+(Unless the file size is very big so doesn't fit to the memory, which is not ordinary)</p>
+<p>Another approach is replacing unused part like debug mode code (be sure to make debug mode inaccessible in this case).</p>
 <h3 id="1-using-cmd_jmp">1. Using cmd_jmp</h3>
 <ol>
 <li>Pick the instruction <em>after</em> the position you want to insert. If the one instruction is only 4 bytes, pick two instructions.</li>
@@ -108,7 +112,7 @@ This is about modifying existing PAC instruction.</p>
 <li>Put the <em>original instruction(s) from step 1</em> to the end of the file.</li>
 <li><strong>Put the <code>cmd_jmp</code></strong> to the end of the file!</li>
 </ol>
-<h3 id="2-using-cmd_call">2. Using cmd_call</h3>
+<h3 id="2-using-cmd_call-recommended">2. Using cmd_call (Recommended)</h3>
 <ol>
 <li>Pick the instruction <em>after</em> the position you want to insert. If the one instruction is only 4 bytes, pick two instructions.</li>
 <li>Replace it to <a href="../cmd_call.html">cmd_call</a> that goes to <strong>end of the file</strong>.</li>

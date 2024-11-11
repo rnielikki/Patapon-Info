@@ -12,7 +12,7 @@ Overwrites `squadactivityparam` ID in `squadlineparam`.
 ## Parameters
 
 - `(int *)squad_handle` *(8 bytes)* : The squad handle to change the action.
-- `(int)from_id` *(8 bytes)* : The target `squadactivityparam` ID that will be changed.
+- `(int)from_id` *(8 bytes)* : The target [`squadactivityparam` ID](./guide/reference-table.md#squadactivityparam-ids) that will be changed.
 - `(int)to_id` *(8 bytes)* : The desired `squadactivityparam` ID.
 
 ## Example

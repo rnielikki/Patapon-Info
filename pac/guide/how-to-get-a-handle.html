@@ -101,7 +101,7 @@
 <li>Get Unit handle from the squad handle.</li>
 </ol>
 <p>Few PAC instructions allow handle as parameter, but this doesn't happen often.</p>
-<h3 id="reqactor-created-unit">reqActor (created) unit</h3>
+<h4 id="reqactor-created-unit">reqActor (created) unit</h4>
 <p>In the <a href="how-to-create-an-enemy-target.html">prior article</a>, there was part to <a href="../setreqactoruniqueid.html">set unique ID</a>.</p>
 <pre><code class="lang-c">00067B00  251F1800:setReqActorUniqueId(8:1A, 2:1, 2:65)
 </code></pre>
@@ -111,7 +111,7 @@
 </code></pre>
 <p>Now the <strong><code>4:A</code></strong> contains the <a href="../getunithandle.html">unit handle</a>.</p>
 <p>Note the <a href="../setreqactortype.html">reqActor</a> can be either an unit or a gimmick.</p>
-<h3 id="player-unit">Player unit</h3>
+<h4 id="player-unit">Player unit</h4>
 <p>Use <a href="../getplayersquadhandle.html">getPlayerSquadHandle</a> and <a href="../getunithandle.html">getUnitHandle</a>.</p>
 <pre><code class="lang-c">0002A83C  25163900:getPlayerSquadHandle(4:A, 2:0)   //squadHandle 4:A
 0002A850  25163D00:getUnitHandle(4:B, 4:A, 2:0)     //unitHandle 4:B
@@ -126,6 +126,7 @@
 <ul>
 <li>For <a href="../getgateinfo.html">getGateInfo</a> or <a href="../setgateinfo.html">setGateInfo</a>, it is <code>destination</code> or <code>param</code> <em>with</em> <code>param_index</code> 0.</li>
 <li>For <a href="../registconstgimmick.html">registConstGimmick</a>, it is last parameter of the instruction (user-defined ID).</li>
+<li>For <em>reqActor</em> gimmick, <a href="../getactorhandle.html">getActorHandle</a> does the job.</li>
 </ul>
 </li>
 <li><a href="../gimmick_gethandle.html">gimmick_getHandle</a> to get a handle of it.</li>

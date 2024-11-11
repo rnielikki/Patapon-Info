@@ -198,7 +198,7 @@ Related article: [How To Control a Squad](./how-to-control-a-squad.md)
 - [getUnitCtrlActivity](../getunitctrlactivity.md), [setUnitCtrlActivity](../setunitctrlactivity_251f1c00.md)
 - [setUnitCtrlSkill](../setunitctrlskill.md)
 
-Note that squadActivity and actual march/attack/defend action can be different, and can be faked.
+Note that squadActivity and actual march/attack/defend action can be different.
 
 #### Boss Control
 

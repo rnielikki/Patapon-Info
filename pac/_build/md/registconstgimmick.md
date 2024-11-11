@@ -14,7 +14,7 @@ Defines a structure gimmick. This also can be a spawn point.
 - `(int)gimmick_id` *(8 bytes)* : ID of the gimmick, from [`generatorparam`](./guide/reference-table.md#generatorparam).
    - **If it is not a gimmick, the game will crash**
 - `(int)level` *(8 bytes)* : Level of the gimmick.
-- `(int)troop_type` *(8 bytes)* : [Troop type](./guide/reference-table.md#hitbox-layers) of the gimmick.
+- `(int)troop_type` *(8 bytes)* : [Troop type](./guide/reference-table.md#troop-types) of the gimmick.
 - `(int)x_pos` *(8 bytes)* : X position of the gimmick, as PSP pixels.
 - `(int)y_pos` *(8 bytes)* : Y position of the gimmick, as PSP pixels.
 - `(int)z_index` *(8 bytes)* : Render priority, the higher the value is, the more top the gimmick is. usually 0~1 is normal value.

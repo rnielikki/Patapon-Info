@@ -99,7 +99,7 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int)gimmick_id</code> <em>(8 bytes)</em> : Gimmick ID from various place, e.g. <a href="addgimmick.html">addGimmick</a>, <a href="getgateinfo.html">getGateInfo</a> or <a href="registconstgimmick.html">registConstGimmick</a>.</li>
+<li><code>(int)gimmick_identifier</code> <em>(8 bytes)</em> : Gimmick identifier from various place, e.g. <a href="addgimmick.html">addGimmick</a>, <a href="getgateinfo.html">getGateInfo</a> or <a href="registconstgimmick.html">registConstGimmick</a>. Seems like the ID from <a href="setreqactoruniqueid.html">setReqActorUniqueId</a> works too.</li>
 <li><code>(int *)gimmick_handle</code> <em>(8 bytes)</em> : Varaible to <em>store</em> the gimmick handle.</li>
 </ul>
 <h2 id="example">Example</h2>
@@ -119,7 +119,7 @@
   
   puVar1 = (undefined4 *)Pac_Get_Param(param_2,0,1,4);
   piVar2 = (int *)Pac_Get_Param(param_2,1,1,4);
-  iVar3 = FUN_088b4f2c(*(undefined4 *)(*(int *)(param_1 + 0x10) + 0x108),*puVar1);
+  iVar3 = Get_Gimmick(*(undefined4 *)(*(int *)(param_1 + 0x10) + 0x108),*puVar1);
   if (iVar3 == 0) {
     *piVar2 = -1;
   }

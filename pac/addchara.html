@@ -89,7 +89,7 @@
         <article data-uid="">
 <h1 id="addchara">addChara</h1>
 
-<p>Adds a character to a squad. Used for adding hatapon. Requires <a href="readarcfile.html">readArcFile</a> <strong>and</strong> <a href="requestactor.html">requestActor</a> to load the character.</p>
+<p>Adds a character (unit) to a squad. Used for adding hatapon. Requires <a href="readarcfile.html">readArcFile</a> <strong>and</strong> <a href="requestactor.html">requestActor</a> to load the character.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>addChara</code></li>
@@ -100,7 +100,7 @@
 <h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>(int *)destination</code> <em>(8 bytes)</em> : Variable to <em>store</em> the character handle.</li>
-<li><code>(int)squad_handle</code> <em>(8 bytes)</em> : Handle of the squad.</li>
+<li><code>(int *)squad_handle</code> <em>(8 bytes)</em> : Handle of the squad.</li>
 <li><code>(int)charaparam_id</code> <em>(8 bytes)</em> : Character ID in <code>charaparam</code>.</li>
 </ul>
 <h2 id="example">Example</h2>

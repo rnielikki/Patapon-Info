@@ -105,15 +105,19 @@
 </ul>
 </li>
 <li><code>(int)level</code> <em>(8 bytes)</em> : Level of the gimmick.</li>
-<li><code>(int)hitbox_layer</code> <em>(8 bytes)</em> : <a href="guide/reference-table.html#hitbox-layers">Hitbox layer</a> of the gimmick.</li>
+<li><code>(int)troop_type</code> <em>(8 bytes)</em> : <a href="guide/reference-table.html#troop-types">Troop type</a> of the gimmick.</li>
 <li><code>(int)x_pos</code> <em>(8 bytes)</em> : X position of the gimmick, as PSP pixels.</li>
 <li><code>(int)y_pos</code> <em>(8 bytes)</em> : Y position of the gimmick, as PSP pixels.</li>
 <li><code>(int)z_index</code> <em>(8 bytes)</em> : Render priority, the higher the value is, the more top the gimmick is. usually 0~1 is normal value.</li>
 <li><code>(bool)Var6</code> <em>(8 bytes)</em> : Boolean, please describe what this does. Might be visual related.</li>
-<li><code>(undefined4)Var7</code> <em>(8 bytes)</em> : Boolean, please describe what this does.</li>
-<li><code>(undefined4)Var8</code> <em>(8 bytes)</em> : Boolean, please describe what this does.</li>
+<li><code>(bool)Var7</code> <em>(8 bytes)</em> : Boolean, please describe what this does.</li>
+<li><code>(bool)Var8</code> <em>(8 bytes)</em> : Boolean, please describe what this does.</li>
 <li><code>(int)itemtable_id</code> <em>(8 bytes)</em> : <a href="beginappearitem.html">Item table ID</a> to give as reward, when gimmick is destroyed.</li>
-<li><code>(int)constgimmick_id</code> <em>(8 bytes)</em> : Id to register. Can be used with <a href="setmodeex.html">setModeEx</a>. Can get handle with <a href="gimmick_gethandle.html">gimmick_getHandle</a>.</li>
+<li><code>(int)gimmick_identifier</code> <em>(8 bytes)</em> : Unique Id to register. If this is not used, keep -1.
+<ul>
+<li>Can be used with e.g. <a href="setmodeex.html">setModeEx</a>, <a href="gimmick_gethandle.html">gimmick_getHandle</a>.</li>
+</ul>
+</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

@@ -286,7 +286,7 @@
 </tbody>
 </table>
 <h4 id="as-flag">As flag</h4>
-<p>Those values are bitshifted from non-flag IDs. (<code>1 &lt;&lt; (flagID)</code>)</p>
+<p>Those values are bitshifted from non-flag IDs. (<code>1 &lt;&lt; (nonflagID)</code>)</p>
 <p>This are used e.g. <a href="../getabnormalstatus.html">getAbnormalStatus</a>.</p>
 <table>
 <thead>
@@ -326,7 +326,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="hitbox-layers">Hitbox Layers</h3>
+<h3 id="troop-types">Troop types</h3>
+<p><strong>Setting enemies to player troop might cause unwanted positioning</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -355,9 +356,9 @@
 <tr>
 <td>2</td>
 <td>Unused</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Unused</td>
 </tr>
 <tr>
 <td>3</td>
@@ -423,6 +424,11 @@
 </tbody>
 </table>
 <h2 id="units">Units</h2>
+<h3 id="generatorparam">Generatorparam</h3>
+<ul>
+<li><a href="resources/generatorparam.html">Generatorparam info (html)</a></li>
+<li><a href="resources/generatorparam.csv">Generatorparam info (CSV)</a></li>
+</ul>
 <h3 id="class-ids">Class IDs</h3>
 <table>
 <thead>
@@ -614,7 +620,12 @@
 <h3 id="action-ids">Action IDs</h3>
 <p>This varies depending on the model. For detali, see <a href="resources/Char_Actions_(by-Tayo-Fox).zip">Tayo's table</a>.</p>
 <p>(Credit to <em>Tayo Fox</em> for documenting this)</p>
-<h3 id="squadactivityparam-ids-pve-only">SquadActivityParam IDs (PvE Only)</h3>
+<h3 id="squadactivityparam-ids">SquadActivityParam IDs</h3>
+<p>The squadactivity Id must be applied to the correct class/unit, otherwise it won't work.</p>
+<ul>
+<li><a href="resources/squadactivity.html">SquadActivityparam IDs (html)</a></li>
+<li><a href="resources/squadactivity.csv">SquadActivityparam IDs (CSV)</a></li>
+</ul>
 <h2 id="mission">Mission</h2>
 <h3 id="mission-ids">Mission IDs</h3>
 <ul>
@@ -760,18 +771,60 @@
 </table>
 <h2 id="hideout">Hideout</h2>
 <h3 id="facility-ids">Facility IDs</h3>
-<p>|ID|Type|
-|0x0|Silver Hoshipon|
-|0x1|Blacksmith|
-|0x2|Herogate|
-|0x3|Armoury|
-|0x4|Team Totem|
-|0x5|Barracks|
-|0x6|sukopon|
-|0x7|Mission Obelisk|
-|0x8|Battle Gate|
-|0x9|Meden|
-|0xA|Festival|</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0</td>
+<td>Silver Hoshipon</td>
+</tr>
+<tr>
+<td>0x1</td>
+<td>Blacksmith</td>
+</tr>
+<tr>
+<td>0x2</td>
+<td>Herogate</td>
+</tr>
+<tr>
+<td>0x3</td>
+<td>Armoury</td>
+</tr>
+<tr>
+<td>0x4</td>
+<td>Team Totem</td>
+</tr>
+<tr>
+<td>0x5</td>
+<td>Barracks</td>
+</tr>
+<tr>
+<td>0x6</td>
+<td>sukopon</td>
+</tr>
+<tr>
+<td>0x7</td>
+<td>Mission Obelisk</td>
+</tr>
+<tr>
+<td>0x8</td>
+<td>Battle Gate</td>
+</tr>
+<tr>
+<td>0x9</td>
+<td>Meden</td>
+</tr>
+<tr>
+<td>0xA</td>
+<td>Festival</td>
+</tr>
+</tbody>
+</table>
 <h2 id="item-indexes">Item indexes</h2>
 <h3 id="equipment-group-id-indexes">Equipment Group ID indexes</h3>
 <table>
@@ -929,22 +982,76 @@
 </tbody>
 </table>
 <h3 id="enchant-ids">Enchant IDs</h3>
-<p>|<code>enchant_id</code>|Enchant|
-|0|None|
-|1|St|
-|2|G|
-|3|De|
-|4|H|
-|5|Sl|
-|6|Fl|
-|7|Po|
-|8|Hp|
-|9|Me|
-|10|Ar|
-|11|W|
-|12|En|
-|13|Ic|
-|14|Cu</p>
+<table>
+<thead>
+<tr>
+<th><code>enchant_id</code></th>
+<th>Enchant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>1</td>
+<td>St</td>
+</tr>
+<tr>
+<td>2</td>
+<td>G</td>
+</tr>
+<tr>
+<td>3</td>
+<td>De</td>
+</tr>
+<tr>
+<td>4</td>
+<td>H</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sl</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Fl</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Po</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Hp</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Me</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Ar</td>
+</tr>
+<tr>
+<td>11</td>
+<td>W</td>
+</tr>
+<tr>
+<td>12</td>
+<td>En</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Ic</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Cu</td>
+</tr>
+</tbody>
+</table>
 <h3 id="item-id--weaponparam-id-indexes">Item ID + Weaponparam ID Indexes</h3>
 <ul>
 <li><a href="resources/itemparam.html">Itemparam table, with weaponparam ID (html)</a></li>
@@ -957,6 +1064,10 @@
 <li><a href="resources/theme.csv">Theme ID list (CSV)</a></li>
 </ul>
 <h3 id="musicsound-list-for-playatrac-etc">Music/Sound List (For <a href="../playatrac.html">playAtrac</a> etc.)</h3>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This list is incomplete. Please describe how to get the correct sound index from a file.</p>
+</div>
 <p>The ID has <strong>same order as selist.slt</strong> (in <code>DATA_CMN\loadinggroup\systemdata\sound</code>). Here are few examples:</p>
 <ul>
 <li><p>title</p>
@@ -1013,27 +1124,98 @@
 <li>Divide to 4 from the result of 4. So <code>0x3d8/4</code> is <code>0xf6</code>, which proves it is the ID of <code>azito.sgd</code>.</li>
 </ol>
 <h2 id="data">Data</h2>
-<h3 id="generatorparam">Generatorparam</h3>
-<ul>
-<li><a href="resources/generatorparam.html">Generatorparam info (html)</a></li>
-<li><a href="resources/generatorparam.csv">Generatorparam info (CSV)</a></li>
-</ul>
 <h2 id="magic-word-list">Magic word list</h2>
 <p>This means <code>\&lt;NX&gt;</code> type of the text.</p>
-<p>|ID|Text|Highlight|Other player sees same value|
-|<code>0x0</code>|Own almighty name|No|No|
-|<code>0x1</code>|Player 1 hero|Yes|Yes|
-|<code>0x2</code>|Player 1 hero|No|Yes|
-|<code>0x3</code>|Player 2 hero|No|Yes|
-|<code>0x4</code>|Player 3 hero|No|Yes|
-|<code>0x5</code>|Player 4 hero|No|Yes|
-|<code>0x6</code>|Player 1 Almighty|No|Yes|
-|<code>0x7</code>|Unused|No|N/A|
-|<code>0x8</code>|Unused|No|N/A|
-|<code>0x9</code>|Unused|No|N/A|
-|<code>0xA</code>|Own ka-ching value|No|No|
-|<code>0xB</code>|Player 1 hero|Yes|Yes|
-|<code>0xC``~</code>0xF`|<strong>Dynamic data region</strong>|No|No, Maybe|</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Text</th>
+<th>Highlight</th>
+<th>Other player sees same value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x0</code></td>
+<td>Own almighty name</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>0x1</code></td>
+<td>Player 1 hero</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>0x2</code></td>
+<td>Player 1 hero</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>0x3</code></td>
+<td>Player 2 hero</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>0x4</code></td>
+<td>Player 3 hero</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>0x5</code></td>
+<td>Player 4 hero</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>0x6</code></td>
+<td>Player 1 Almighty</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>0x7</code></td>
+<td>Unused</td>
+<td>No</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>0x8</code></td>
+<td>Unused</td>
+<td>No</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>0x9</code></td>
+<td>Unused</td>
+<td>No</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>0xA</code></td>
+<td>Own ka-ching value</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>0xB</code></td>
+<td>Player 1 hero</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>0xC``~</code>0xF`</td>
+<td><strong>Dynamic data region</strong></td>
+<td>No</td>
+<td>No, Maybe</td>
+</tr>
+</tbody>
+</table>
 <p>The dynamic region often can be replaced by PAC instructions.</p>
 <h2 id="tips-id">Tips ID</h2>
 <table>

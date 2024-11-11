@@ -89,7 +89,8 @@
         <article data-uid="">
 <h1 id="setreqactoradventradius">setReqActorAdventRadius</h1>
 
-<p>Decides approach speed of an enemy, as <a href="setreqactortype.html">reqActor</a> scope.</p>
+<p>Decides the distance of the units in same squad, as <a href="setreqactortype.html">reqActor</a> scope. <strong>The spreading distance is random</strong>.</p>
+<p>Used for planting grass.</p>
 <p>See also: <a href="setadventradius.html">setAdventRadius</a></p>
 <h2 id="code-information">Code Information</h2>
 <ul>
@@ -100,10 +101,10 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int* )generator_index</code> <em>(8 bytes)</em> : Generator Index, obtained from <a href="create.html">create</a>.</li>
+<li><code>(int* )generator_handle</code> <em>(8 bytes)</em> : Handle of the generator, obtained from <a href="create.html">create</a> or <a href="gethandle.html">getHandle</a>.</li>
 <li><code>(int)in_generator_id</code> <em>(8 bytes)</em> : <em>ID in the generator</em>.</li>
-<li><code>(float)x</code> <em>(8 bytes)</em> : X position of the &quot;radius&quot; to advent, as PSP pixels in the world, bigger is slower</li>
-<li><code>(float)y</code> <em>(8 bytes)</em> : Y position of the &quot;radius&quot; to advent, as PSP pixels in the world, bigger is slower</li>
+<li><code>(float)max_x_spread</code> <em>(8 bytes)</em> : X position of the &quot;radius&quot; to spread.</li>
+<li><code>(float)max_y_spread</code> <em>(8 bytes)</em> : Y position of the &quot;radius&quot; to spread.</li>
 </ul>
 <p>Note that <strong>PSP screen size is 480 x 272</strong>.</p>
 <h2 id="example">Example</h2>

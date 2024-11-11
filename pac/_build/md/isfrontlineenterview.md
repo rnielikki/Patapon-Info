@@ -12,7 +12,7 @@ Check if the front of the squad got the sight.
 ## Parameters
 
 - `(int *)squad_handle` *(8 bytes)* : The target squad handle.
-- `(int)squadactivityparam_id` *(8 bytes)* : `squadActivityParam` id that contains the sight, -1 for default sight.
+- `(int)squadactivityparam_id` *(8 bytes)* : [`squadActivityParam` id](./guide/reference-table.md#squadactivityparam-ids) that contains the sight, -1 for default sight.
 - `(int *)result` *(8 bytes)* : 1 if there is something on their sight, otherwise 0.
 
 ## Example

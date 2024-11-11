@@ -89,9 +89,12 @@
         <article data-uid="">
 <h1 id="how-to-control-a-squad">How To: Control a Squad</h1>
 
-<p>Article Before: <a href="how-to-control-a-squad.html">How To: Control a Squad</a></p>
+<p>Article Before: <a href="how-to-get-a-handle.html">How To: Get a Handle</a></p>
 <h2 id="controlling-bosses">Controlling Bosses</h2>
-<p>All minibosses' and bosses' action are <strong>automatic</strong>, controlled by Assembly or <code>monster.pac</code>, which doesn't need to touch.</p>
+<h3 id="marching-before-attacking">Marching before attacking</h3>
+<p>Set <code>mode_id</code> of <a href="../setunitctrlmode.html">setUnitCtrlMode</a> to 6, and <a href="../setunitctrlwatcharea.html">setUnitCtrlWatchArea</a> to set march distance from player position.</p>
+<h3 id="attacking">Attacking</h3>
+<p>All minibosses' and bosses' attack action are <strong>automatic</strong>, controlled by Assembly or <code>monster.pac</code>, which doesn't need to touch.</p>
 <p>Though, if you want to control the boss manually, consider <a href="../enablebossmanualctrl.html">enableBossManualCtrl</a>.</p>
 <p>Related instructions: <a href="category.html#boss-control">Boss Control</a></p>
 <h2 id="small-units">Small units</h2>
@@ -102,7 +105,7 @@
 <ol>
 <li>Set <a href="../setunitctrlmode.html">setUnitCtrlMode</a> with <em>zero <code>mode_id</code></em> so can perform regular march-attack.</li>
 <li>Set <a href="../setunitctrlstartacttype.html">setUnitCtrlStartActType</a> with <em>zero <code>command_id</code></em> so march by default.</li>
-<li>Use <a href="../setunitctrlactivity_251f1c00.html">setUnitCtrlActivity</a> to connect <a href="reference-table.html#squadactivityparam-ids-pve-only">the squadparam ID</a>.</li>
+<li>Use <a href="../setunitctrlactivity_251f1c00.html">setUnitCtrlActivity</a> to connect <a href="reference-table.html#squadactivityparam-ids">the squadparam ID</a>.</li>
 <li>Set <a href="../setreqactorfixposflag.html">setReqActorFixPosFlag</a> with <em>zero <code>can_float</code></em>.</li>
 </ol>
 <p>Note the units can do only march, attack and defend.</p>
@@ -152,7 +155,7 @@
 <h3 id="units-on-a-structure">Units on a structure</h3>
 <p>For bonedeth dying with their tower:</p>
 <ol>
-<li><a href="how-to-create-an-enemy-target.html#for-structure">Create the tower</a> using <a href="../registconstgimmick.html">registConstGimmick</a>.</li>
+<li><a href="how-to-create-an-enemy-target.html#for-const-structure">Create the tower</a> using <a href="../registconstgimmick.html">registConstGimmick</a>.</li>
 <li>Use <a href="../create.html">generator</a> and connect with <a href="../setmodeex.html">SetModeEx</a> last parameter  (to <code>registeConstGimmick</code> last parameter).</li>
 <li>Use <a href="../setdeathcall.html">setDeathCall</a> to call <em>specific instructions</em>.</li>
 <li>Apply <a href="../setreqactorpos.html">position</a>, <a href="../setunitctrlactivity_251f1c00.html">unit activity</a>, <a href="../setreqactorfixposflag.html">fix position</a> etc to the unit.</li>

@@ -90,6 +90,7 @@
 <h1 id="getmodelinfo">getModelInfo</h1>
 
 <p>Gets position and movement information of the given handle.</p>
+<p>Before performing this, wait until the model is fully loaded.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>getModelInfo</code></li>
@@ -102,8 +103,8 @@
 <li><code>(int *)handle_id</code> <em>(8 bytes)</em> : <a href="guide/category.html#getting-handle">Handle</a> to get the model info.</li>
 <li><code>(float *)position_x</code> <em>(8 bytes)</em> : Variable to <em>store</em> the X Position of the model, as <em>PSP pixel in the world</em>.</li>
 <li><code>(float *)position_y</code> <em>(8 bytes)</em> : Variable to <em>store</em> the Y position of the model, as <em>PSP pixel in the world</em>. 0 is the center.</li>
-<li><code>(float *)velocity_x</code> <em>(8 bytes)</em> : Variable to <em>store</em> how much (and in which direction as + or -) it moves in X direction during lifetime.</li>
-<li><code>(float *)velocity_y</code> <em>(8 bytes)</em> : Variable to <em>store</em> how much (and in which direction as + or -) it moves in Y direction during lifetime.</li>
+<li><code>(float *)dest_x</code> <em>(8 bytes)</em> : Variable to <em>store</em> the destination X position.</li>
+<li><code>(float *)dest_y</code> <em>(8 bytes)</em> : Variable to <em>store</em> the destination Y position.</li>
 </ul>
 <p>Note that <strong>PSP screen size is 480 x 272</strong>.</p>
 <h2 id="example">Example</h2>

@@ -135,6 +135,8 @@
 <h2 id="unit--gimmick">Unit / Gimmick</h2>
 <ul>
 <li><a href="../setupunit.html">setupUnit</a>, <a href="../applyunit.html">applyUnit</a></li>
+<li><a href="../checkequalheroname.html">checkEqualHeroName</a></li>
+<li><a href="../getherocount.html">getHeroCount</a></li>
 </ul>
 <h3 id="model">Model</h3>
 <ul>
@@ -153,6 +155,7 @@
 <li><a href="../registconstgimmick.html">registConstGimmick</a>, <a href="../applyconstgimmick.html">applyConstGimmick</a>, <a href="../enablecollisionconstgimmick.html">enableCollisionConstGimmick</a></li>
 <li><a href="../setactioncontroller.html">setActionController</a></li>
 <li><a href="../getchildgimmick.html">getChildGimmick</a></li>
+<li><a href="../setgimmicktimmingscript.html">setGimmickTimmingScript</a></li>
 </ul>
 <h4 id="collision">Collision</h4>
 <ul>
@@ -196,25 +199,26 @@
 <p>Related article: <a href="how-to-get-a-handle.html">How To: Get a handle</a></p>
 <p>For hideout exclusive handle, check <a href="#hideout">hideout</a> section.</p>
 <ul>
-<li>Squad: <a href="../getunitsquadhandle.html">getUnitSquadHandle</a> (from reqActor ID), <a href="../unituidtosquadhandle.html">unitUidToSquadHandle</a> (from &quot;unique ID&quot; of reqActor), <a href="../getplayersquadhandle.html">getPlayerSquadHandle</a> (from player), <a href="../getunitsquadhandlefromchara.html">getUnitSquadHandleFromChara</a> (from unit handle)</li>
+<li>Squad: <a href="../getunitsquadhandle.html">getUnitSquadHandle</a> (from reqActor unique ID), <a href="../getsquadhandle.html">getSquadHandle</a> (from generator + reqIndex), <a href="../getplayersquadhandle.html">getPlayerSquadHandle</a> (from player), <a href="../getunitsquadhandlefromchara.html">getUnitSquadHandleFromChara</a> (from unit handle)</li>
 <li>Unit: <a href="../getunithandle.html">getUnitHandle</a>, <a href="../gethataponhandle.html">getHataponHandle</a>, <a href="../getmultiherohandle.html">getMultiHeroHandle</a></li>
 <li>Effect/Gimmick: <a href="../addeffect.html">addEffect</a>, <a href="../gimmick_gethandle.html">gimmick_getHandle</a></li>
+<li>Any Actor : <a href="../getactorhandle.html">getActorHandle</a></li>
 <li>Generator: <a href="../gethandle.html">getHandle</a></li>
 </ul>
 <h3 id="squad">Squad</h3>
 <ul>
 <li><a href="../addsquad.html">addSquad</a></li>
-<li><a href="../getsquadbaseposition.html">getSquadBasePosition</a>, <a href="../getsquadclassid.html">getSquadClassId</a>, <a href="../getsquadhandle.html">getSquadHandle</a></li>
+<li><a href="../getsquadbaseposition.html">getSquadBasePosition</a>, <a href="../getsquadclassid.html">getSquadClassId</a></li>
 <li><a href="../setsquadbaseposition.html">setSquadBasePosition</a> <a href="../setplayersquadtype.html">setPlayerSquadType</a></li>
 <li><a href="../getmultiplayersquadhandle.html">getMultiplayerSquadHandle</a></li>
 <li><a href="../getsquadclassid.html">getSquadClassId</a>, <a href="../getplayerclassid.html">getPlayerClassId</a></li>
 <li><a href="../replaceactivitytable.html">replaceActivityTable</a></li>
-<li><a href="../isfrontlineenterview.html">isFrontLineEnterView</a>, <a href="../isfrontlineenterattack.html">sFrontLineEnterAttack</a></li>
+<li><a href="../isfrontlineenterview.html">isFrontLineEnterView</a>, <a href="../isfrontlineenterattack.html">isFrontLineEnterAttack</a></li>
 </ul>
 <h3 id="class">Class</h3>
 <ul>
 <li><a href="../setclassdata.html">setClassData</a></li>
-<li><a href="../getclasstype.html">getClassType</a>, <a href="../setsuperhero.html">setSuperHero</a></li>
+<li><a href="../setsuperhero.html">setSuperHero</a></li>
 <li><a href="../addskill.html">addSkill</a>, <a href="../isregisterskill.html">isRegisterSkill</a></li>
 <li><a href="../setclassdata.html">setClassData</a></li>
 <li><a href="../getunitparam_25161b00.html">getUnitParam</a></li>
@@ -223,7 +227,7 @@
 <ul>
 <li><a href="../getplayerclasslevel.html">getPlayerClassLevel</a>, <a href="../getmultiplayerlevelmax.html">getMultiPlayerLevelMax</a></li>
 <li><a href="../resultlevelupcalaclabel.html">resultLevelupCalacLabel</a>, <del><a href="../resultlevelupcalacget.html">resultLevelupCalacGet</a>, <a href="../resultlevelupcalacset.html">resultLevelupCalacSet</a></del></li>
-<li><a href="../setactorlevel.html">setActorLevel</a></li>
+<li><a href="../getactorlevel.html">getActorLevel</a>, <a href="../setactorlevel.html">setActorLevel</a></li>
 </ul>
 <h3 id="equipment">Equipment</h3>
 <ul>
@@ -238,6 +242,8 @@
 <h3 id="position">Position</h3>
 <ul>
 <li><a href="../setadvanceenable.html">setAdvanceEnable</a>, <a href="../setadvancespeedratio.html">setAdvanceSpeedRatio</a></li>
+<li><a href="../moveposition.html">movePosition</a>, <a href="../stopmove.html">stopMove</a> (changing model affects)</li>
+<li>Force: <a href="../addvector.html">addVector</a>, <a href="../setvector.html">setVector</a></li>
 <li><a href="../getplayertroopbaseposition.html">getPlayerTroopBasePosition</a></li>
 <li><a href="../gettrooptopposx.html">getTroopTopPosX</a>, <a href="../gettrooptopposx_enemy.html">getTroopTopPosX_enemy</a>, <a href="../gettrooptopposy.html">getTroopPosY</a></li>
 </ul>
@@ -245,12 +251,14 @@
 <ul>
 <li><a href="../playmotion.html">playMotion</a>, <a href="../pushmotion.html">pushMotion</a>, <a href="../clipmotion.html">clipMotion</a>, <a href="../stopmotion.html">stopMotion</a>, <a href="../pausemotion.html">pauseMotion</a></li>
 <li><a href="../getmotioninfo.html">getMotionInfo</a>, <a href="../setMotion.html">setMotion</a></li>
+<li><a href="../setunitdeadmotion.html">setUnitDeadMotion</a></li>
 </ul>
 <h5 id="node">Node</h5>
 <ul>
 <li><a href="../getnodeindex.html">getNodeIndex</a>, <a href="../getnodepos.html">getNodePos</a>, <a href="../getcenternodeid.html">getCenterNodeId</a></li>
 <li><a href="../setlink.html">setLink</a>, <a href="../setlinkparam.html">setLinkParam</a>, <a href="../setlinkbyid.html">setLinkById</a>, <a href="../releaselink.html">releaseLink</a>, <a href="../setlinkinfo.html">setLinkInfo</a></li>
 <li><a href="../enablerenderattach.html">enableRenderAttach</a></li>
+<li><a href="../getnodedisp.html">getNodeDisp</a>, <a href="../setnodedisp.html">setNodeDisp</a></li>
 <li>Adding an Enemy Target: <a href="../callactoreffect.html">callActorEffect</a>, <a href="../addlinkobject.html">addLinkObject</a></li>
 </ul>
 <h3 id="control">Control</h3>
@@ -266,8 +274,9 @@
 <li><a href="../setunitctrlwatcharea.html">setUnitCtrlWatchArea</a></li>
 <li><a href="../setunitctrltimingscript_int.html">setUnitCtrlTimingScript_Int</a>, <a href="../setunitctrlenable.html">setUnitCtrlEnable</a>, <a href="../setunitctrlmoveenable.html">setUnitCtrlMoveEnable</a></li>
 <li><a href="../getunitctrlactivity.html">getUnitCtrlActivity</a>, <a href="../setunitctrlactivity_251f1c00.html">setUnitCtrlActivity</a></li>
+<li><a href="../setunitctrlskill.html">setUnitCtrlSkill</a></li>
 </ul>
-<p>Note that squadActivity and actual march/attack/defend action can be different, and can be faked.</p>
+<p>Note that squadActivity and actual march/attack/defend action can be different.</p>
 <h4 id="boss-control">Boss Control</h4>
 <ul>
 <li><a href="../setbossmoverange_251f2e00.html">setBossMoveRange</a>, <a href="../setbossmoverangelimit_251f2f00.html">setBossMoveRangeLimit</a></li>
@@ -277,9 +286,10 @@
 <h3 id="status">Status</h3>
 <ul>
 <li><a href="../kill.html">kill</a>, <a href="../reborntroop.html">rebornTroop</a>, <a href="../setsuperherorebornenable.html">setSuperHeroRebornEnable</a>, <a href="../getaliveunitcount.html">getAliveUnitCount</a></li>
+<li><a href="../getdamagedeadflag.html">getDamageDeadFlag</a>, <a href="../getkillorderflag.html">getKillOrderFlag</a></li>
 <li><a href="../setrebornposition.html">setRebornPosition</a>, <a href="../setappearanceposition.html">setAppearancePosition</a></li>
 <li><a href="../recoveryhp.html">recoveryHp</a>, <a href="../recoveryhpratio.html">recoveryHpRatio</a> <a href="../recoveryplayertroophp.html">recoveryPlayerTroopHp</a>, <a href="../recoveryplayertroophpratio.html">recoveryPlayerTroopHpRatio</a></li>
-<li><a href="../setmaxhitpoint.html">setMaxHitPoint</a></li>
+<li><a href="../sethitpoint.html">setHitPoint</a>, <a href="../setmaxhitpoint.html">setMaxHitPoint</a>, <a href="../getstatusinfo.html">getStatusInfo</a> (hp status and hp rate)</li>
 </ul>
 <h3 id="status-effect">Status Effect</h3>
 <ul>
@@ -292,7 +302,7 @@
 <li><a href="../getmissionareaid.html">getMissionAreaId</a>, <a href="../setmaxmissionareaid.html">setMaxMissionAreaId</a>, <a href="../getmaxmissionareaid.html">getMaxMissionAreaId</a>, <a href="../setmissionareaid.html">setMissionAreaId</a>, <a href="../getmissioninfo.html">getMissionInfo</a></li>
 <li><a href="../setmissiontimmingscript.html">setMissionTimmingScript</a></li>
 <li><a href="../resultgetstate.html">resultGetState</a>, <a href="../resultsetstate.html">resultSetState</a>, <a href="../resultgetphase.html">resultGetPhase</a></li>
-<li><a href="../disableretirebox.html">disableRetireBox</a></li>
+<li><a href="../getretireflag.html">getRetireFlag</a>, <a href="../disableretirebox.html">disableRetireBox</a></li>
 </ul>
 <h3 id="quest-data">Quest Data</h3>
 <ul>
@@ -310,6 +320,9 @@
 <li><a href="../isgogame.html">isGoGame</a>, <a href="../startgame.html">startGame</a></li>
 </ul>
 <h2 id="mission-environment">Mission Environment</h2>
+<ul>
+<li><a href="../setgroundoffset.html">setGroundOffset</a></li>
+</ul>
 <h3 id="stage">Stage</h3>
 <p>Related Article: <a href="how-to-setup-stages.html">How To: Setup Stages</a></p>
 <ul>
@@ -333,7 +346,7 @@
 <li><a href="../cameragetpos.html">cameraGetPos</a>, <a href="../cameragetposx.html">cameraGetPosX</a>, <a href="../cameragetoffsety.html">cameraGetOffsetY</a>, <a href="../camerasetposz.html">cameraSetPosZ</a>, <a href="../camerasetbattlez.html">cameraSetBattleZ</a></li>
 <li><a href="../camerasetscriptcmaera.html">cameraSetScriptCmaera</a>, <a href="../cameraenablecontrol.html">cameraEnableControl</a>, <a href="../cameraenablecontroll.html">cameraEnabeControll</a></li>
 <li><a href="../cameramove.html">cameraMove</a>, <a href="../cameramovetype.html">cameraMoveType</a> <a href="../cameramovespeedset.html">cameraMoveSpeedSet</a>, <a href="../cameramovetimeset.html">cameraMoveTimeSet</a></li>
-<li><a href="../setcameraposition.html">setCameraPosition</a></li>
+<li><a href="../setcameraposition.html">setCameraPosition</a>, <a href="../camerasetoffsety.html">cameraSetOffsetY</a></li>
 <li><a href="../cameraactuate.html">cameraActuate</a></li>
 </ul>
 <h3 id="music--sound">Music / Sound</h3>
@@ -373,7 +386,7 @@
 <h4 id="summon">Summon</h4>
 <ul>
 <li><a href="../getequipsummontype.html">getEquipSummonType</a>, <a href="../setenemysummontype.html">setEnemySummonType</a></li>
-<li><a href="../issummonmode.html">isSummonMode</a>, <a href="../startsummonmode.html">startSummonMode</a></li>
+<li><a href="../issummonmode.html">isSummonMode</a>, <a href="../startsummonmode.html">startSummonMode</a>, <a href="../getsummonplayerid.html">getSummonPlayerId</a></li>
 </ul>
 <h2 id="item">Item</h2>
 <ul>
@@ -429,7 +442,7 @@ Consider using another method for making a mission challenging.</p>
 </ul>
 </li>
 <li>Information Message (above/below): <a href="../callsysmsglabel.html">callSysMsgLabel</a>, <del><a href="../callsysmsg.html">callSysMsg</a></del>, <a href="../clearsysmsg.html">clearSysMsg</a></li>
-<li>Chat: <a href="../setenablelogwindow.html">setEnableLogWindow</a>, <a href="../setenablechatwindow.html">setEnableChatWindow</a></li>
+<li>Chat: <a href="../setenablelogwindow.html">setEnableLogWindow</a>, <a href="../setenablechatwindow.html">setEnableChatWindow</a>, <a href="../sendmessage.html">sendMessage</a></li>
 <li>Debug: <a href="../setchoice.html">setChoice</a>, <a href="../doselect.html">doSelect</a></li>
 <li>Basic text on center : <a href="../sysytemmessage.html">sysytemMessage</a>, <a href="../setmessagecolor.html">setMessageColor</a>, <a href="../getlinefeedcount.html">getLineFeedCount</a></li>
 <li>Related Utils: <a href="../setreplacetextfromint.html">setReplaceTextFromInt</a>, <a href="../text_setreplacecolor.html">text_setReplaceColor</a>, <a href="../text_setreplacetext.html">text_setReplaceText</a></li>
@@ -500,6 +513,7 @@ Consider using another method for making a mission challenging.</p>
 <h2 id="system">System</h2>
 <ul>
 <li><a href="../getlaboinfo.html">getLaboInfo</a>, <a href="../setlaboinfo.html">setLaboInfo</a></li>
+<li><a href="../changelanguage.html">changeLanguage</a></li>
 </ul>
 <h3 id="network">Network</h3>
 <ul>

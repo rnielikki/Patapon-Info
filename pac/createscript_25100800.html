@@ -103,11 +103,11 @@
 <h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>(MemoryAddress)pac_address_in_memory</code> <em>(8 bytes)</em> : Obtained from <a href="getpack_25100600.html">getPack</a>. The memory address where the whole PAC instructions start.</li>
-<li><code>(int)address</code> <em>(8 bytes)</em> : Address in the PAC file <em>as int</em> to execute.</li>
+<li><code>(Address)address</code> <em>(8 bytes)</em> : Address in the PAC file <em>as int</em> to execute.</li>
 <li><code>(int)script_id</code> <em>(8 bytes)</em> : Script ID to set, can be used as reference to <a href="killscript.html">killScript</a>.</li>
 <li><code>(undefined4)Var3</code> <em>(8 bytes)</em> : Keep 0.</li>
 <li><code>(undefined4)Var4</code> <em>(8 bytes)</em> : Keep 0.</li>
-<li><code>(int *)Var5</code> <em>(8 bytes)</em> : Pointer to save something. Can keep 0.</li>
+<li><code>(int)Var5</code> <em>(8 bytes)</em> : Can be pointer to save something, but can be ignored by keeping 0.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

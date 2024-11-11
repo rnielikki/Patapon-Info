@@ -89,8 +89,7 @@
         <article data-uid="">
 <h1 id="setbossctrlstaggeritem">setBossCtrlStaggerItem</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Defines what item will be dropped when the boss is being staggered. Meant for Patapon 2 boss item drop.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>setBossCtrlStaggerItem</code></li>
@@ -100,9 +99,9 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(undefined4)Var1</code> <em>(8 bytes)</em></li>
-<li><code>(undefined4)Var2</code> <em>(8 bytes)</em></li>
+<li><code>(int* )generator_handle</code> <em>(8 bytes)</em> : Handle of the generator, obtained from <a href="create.html">create</a> or <a href="gethandle.html">getHandle</a>.</li>
+<li><code>(int)in_generator_id</code> <em>(8 bytes)</em> : <em>ID in the generator</em>.</li>
+<li><code>(int)item_table_id</code> <em>(8 bytes)</em> : <a href="beginappearitem.html">Item table ID</a> to drop when being staggered.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

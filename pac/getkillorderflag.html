@@ -89,8 +89,7 @@
         <article data-uid="">
 <h1 id="getkillorderflag">getKillOrderFlag</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Gets if the unit is killed without taking direct damage, such as <a href="kill.html">kill</a> or child node kill (not from direct damage calculation).</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>getKillOrderFlag</code></li>
@@ -100,8 +99,8 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(undefined4)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(uint)Var1</code> <em>(8 bytes)</em></li>
+<li><code>(int *)handle</code> <em>(8 bytes)</em> : Handle of the target.</li>
+<li><code>(int *)kill_order</code> <em>(8 bytes)</em> : Variable to <em>store</em> the result. For checking if the target is dead indirectly, please check if this is <strong>zero or not</strong>.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Usage not found for this function.</p>

@@ -89,7 +89,7 @@
         <article data-uid="">
 <h1 id="setmodeex">setModeEx</h1>
 
-<p>Please describe what this does.</p>
+<p>Connects the generator to e.g. <a href="setdeathcall.html">death call</a> to the other generator and/or reqActor (possibly &quot;parent&quot; structure of the unit etc).</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>setModeEx</code></li>
@@ -99,11 +99,41 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int *)generator_index</code> <em>(8 bytes)</em> : Generator Index, obtained from <a href="create.html">create</a>.</li>
-<li><code>(int)use_constgimmick</code> <em>(8 bytes)</em> : If this is 1, this occupies one <em>reqActor</em> slot (reqActor index starts from 1 instead of 0).</li>
-<li><code>(int)Var2</code> <em>(8 bytes)</em> : If doubt, set it to -1.</li>
-<li><code>(int)constgimmick_id</code> <em>(8 bytes)</em> : Const Gimmick to connect, from last parameter of <a href="registconstgimmick.html">registConstGimmick</a>. Set -1 if there is none.</li>
+<li><code>(int *)generator_handle</code> <em>(8 bytes)</em> : Handle of the generator, obtained from <a href="create.html">create</a> or <a href="gethandle.html">getHandle</a>.</li>
+<li><code>(int)mode_type</code> <em>(8 bytes)</em> : Spawn point type. See below.</li>
+<li><code>(int)generator_identifier</code> <em>(8 bytes)</em> : If doubt, set it to -1. Generator identifier to connect, from e.g.from <a href="create.html">create</a>.</li>
+<li><code>(int)unique_identifier</code> <em>(8 bytes)</em> : Identifier from various place, e.g. <a href="setreqactoruniqueid.html">setReqActorUniqueId</a>, <a href="addgimmick.html">addGimmick</a>, <a href="getgateinfo.html">getGateInfo</a> or <a href="registconstgimmick.html">registConstGimmick</a>.</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th><code>mode_type</code></th>
+<th>type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>None</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Constgimmick Destroying stops spawning</td>
+</tr>
+<tr>
+<td>2</td>
+<td>???</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Constgimmick can be destroyed after all spawned enemies are killed (e.g. Fifty Cyclopses)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Spawned from <a href="guide/how-to-create-an-enemy-target.html#reqactor-method">index 0 of same generator entity</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>
 <p><code>25 1f 1b 00 / 08 00 00 00 / 1a 00 00 00 / 02 00 00 00 / 00 00 00 00 / 02 00 00 00 / ff ff ff ff / 02 00 00 00 / ff ff ff ff</code></p>
@@ -147,17 +177,17 @@
         FUN_Mission__08b56760(iVar5,*puVar2,0,0);
       }
       else {
-        FUN_Mission__08b56760(iVar5,*puVar2,0);
+        FUN_Mission__08b56760(iVar5,*puVar2,0,*piVar4);
         if (*piVar3 == -1) {
           *(undefined *)(iVar5 + 0x26) = 1;
         }
       }
     }
     else {
-      uVar6 = FUN_Mission__08b5ac20(iVar5, *piVar3);
+      uVar6 = Get_Generator_HandleID(iVar5, *piVar3);
       uVar6 = Get_BaseAddr_From_Generator(iVar5,uVar6);
       uVar7 = Get_BaseAddr_From_Generator(iVar5,*puVar1);
-      uVar6 = FUN_Mission__08b58d60(uVar6,(int)*(char *)piVar4);
+      uVar6 = Get_ReqActor_Addr(uVar6,(int)*(char *)piVar4);
       FUN_Mission__08b56760(uVar7,*puVar2,uVar6,0);
     }
   }

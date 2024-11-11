@@ -1,0 +1,1336 @@
+SquadActivity ID	SquadActivity Name	DmgParam Name	Unit	Other Condition	Status
+0	0：ジャンプ	SAP_G_Jump	Everyone		Jump
+1	1：騒ぐ	SAP_G_ActUp	Everyone		Party
+2	2：待機	SAP_OBJ_01	Everyone		Idle
+3	3：※予備	SAP_OBJ_02	Everyone		?
+4	4：進軍	SAP_HATA_00	Hatapon		March
+5	5：進軍Ｆ	SAP_HATA_01	Hatapon		Fever March
+6	6：進軍Ｐ	SAP_HATA_02	Hatapon		Fever Perfect March
+7	7：攻撃	SAP_HATA_20	Hatapon		Attack
+8	8：退避	SAP_HATA_60	Hatapon		Dodge
+9	9：後退	SAP_HATA_90	Hatapon		Chakapata
+10	10：進軍	SAP_YARI_00	Yarida		March
+11	11：進軍Ｆ	SAP_YARI_01	Yarida		Fever March
+12	12：進軍Ｐ	SAP_YARI_02	Yarida		Fever Perfect March
+13	13：防御	SAP_YARI_10	Yarida		Defend
+14	14：防御Ｆ	SAP_YARI_11	Yarida		Fever Defend
+15	15：防御Ｐ	SAP_YARI_12	Yarida		Fever Perfect Defend
+16	16：攻撃	SAP_YARI_20	Yarida		Attack
+17	17：攻撃Ｆ	SAP_YARI_21	Yarida		Fever Attack
+18	18：攻撃Ｐ	SAP_YARI_22	Yarida		Fever Perfect Attack
+19	19：タメ	SAP_YARI_30	Yarida		Charge
+20	20：タメＦ	SAP_YARI_31	Yarida		Fever Charge
+21	21：タメＰ	SAP_YARI_32	Yarida		Fever Perfect Charge
+22	22：タメ～防御	SAP_YARI_40	Yarida		Charge Defend
+23	23：タメ～防御Ｆ	SAP_YARI_41	Yarida		Fever Charge Defend
+24	24：タメ～防御Ｐ	SAP_YARI_42	Yarida		Fever Perfect Charge Defend
+25	25：タメ～攻撃	SAP_YARI_50	Yarida		Charge Attack
+26	26：タメ～攻撃Ｆ	SAP_YARI_51	Yarida		Fever Charge Attack
+27	27：タメ～攻撃Ｐ	SAP_YARI_52	Yarida		Fever Perfect Charge Attack
+28	28：退避	SAP_YARI_60	Yarida		Dodge
+29	29：ジャンプ	SAP_YARI_70	Yarida		Jump
+30	30：騒ぐ	SAP_YARI_80	Yarida		Party
+31	31：後退	SAP_YARI_90	Yarida		Chakapata
+32	32：ヒーローモード	SAP_YARI_HM	Yarida		Heromode
+33	33：ヒーローモード	SAP_YARI_HM_1	Yarida		Heromode
+34	34：防御Ｆ	SAP_YARI_S11	Yarida	Leaping Spear	Fever Defend
+35	35：防御Ｐ	SAP_YARI_S12	Yarida	Leaping Spear	Fever Perfect Defend
+36	36：攻撃Ｆ	SAP_YARI_S21	Yarida	Leaping Spear	Fever Attack
+37	37：攻撃Ｐ	SAP_YARI_S22	Yarida	Leaping Spear	Fever Perfect Attack
+38	38：タメ～防御	SAP_YARI_S40	Yarida	Leaping Spear	Charge Defend
+39	39：タメ～防御Ｆ	SAP_YARI_S41	Yarida	Leaping Spear	Fever Charge Defend
+40	40：タメ～防御Ｐ	SAP_YARI_S42	Yarida	Leaping Spear	Fever Perfect Charge Defend
+41	41：タメ～攻撃	SAP_YARI_S50	Yarida	Leaping Spear	Charge Attack
+42	42：タメ～攻撃Ｆ	SAP_YARI_S51	Yarida	Leaping Spear	Fever Charge Attack
+43	43：タメ～攻撃Ｐ	SAP_YARI_S52	Yarida	Leaping Spear	Fever Perfect Charge Attack
+44	44：進軍	SAP_TATE_00	Taterazay		March
+45	45：進軍Ｆ	SAP_TATE_01	Taterazay		Fever March
+46	46：進軍Ｐ	SAP_TATE_02	Taterazay		Fever Perfect March
+47	47：防御	SAP_TATE_10	Taterazay		Defend
+48	48：防御Ｆ	SAP_TATE_11	Taterazay		Fever Defend
+49	49：防御Ｐ	SAP_TATE_12	Taterazay		Fever Perfect Defend
+50	50：攻撃	SAP_TATE_20	Taterazay		Attack
+51	51：攻撃Ｆ	SAP_TATE_21	Taterazay		Fever Attack
+52	52：攻撃Ｐ	SAP_TATE_22	Taterazay		Fever Perfect Attack
+53	53：タメ	SAP_TATE_30	Taterazay		Charge
+54	54：タメＦ	SAP_TATE_31	Taterazay		Fever Charge
+55	55：タメＰ	SAP_TATE_32	Taterazay		Fever Perfect Charge
+56	56：タメ～防御	SAP_TATE_40	Taterazay		Charge Defend
+57	57：タメ～防御Ｆ	SAP_TATE_41	Taterazay		Fever Charge Defend
+58	58：タメ～防御Ｐ	SAP_TATE_42	Taterazay		Fever Perfect Charge Defend
+59	59：タメ～攻撃	SAP_TATE_50	Taterazay		Charge Attack
+60	60：タメ～攻撃Ｆ	SAP_TATE_51	Taterazay		Fever Charge Attack
+61	61：タメ～攻撃Ｐ	SAP_TATE_52	Taterazay		Fever Perfect Charge Attack
+62	62：退避	SAP_TATE_60	Taterazay		Dodge
+63	63：ジャンプ	SAP_TATE_70	Taterazay		Jump
+64	64：騒ぐ	SAP_TATE_80	Taterazay		Party
+65	65：後退	SAP_TATE_90	Taterazay		Chakapata
+66	66：ヒーローモード	SAP_TATE_HM	Taterazay		Heromode
+67	67：ヒーローモード	SAP_TATE_HM_1	Taterazay		Heromode
+68	68：進軍	SAP_YUMI_00	Yumiyacha		March
+69	69：進軍Ｆ	SAP_YUMI_01	Yumiyacha		Fever March
+70	70：進軍Ｐ	SAP_YUMI_02	Yumiyacha		Fever Perfect March
+71	71：防御	SAP_YUMI_10	Yumiyacha		Defend
+72	72：防御Ｆ	SAP_YUMI_11	Yumiyacha		Fever Defend
+73	73：防御Ｐ	SAP_YUMI_12	Yumiyacha		Fever Perfect Defend
+74	74：攻撃	SAP_YUMI_20	Yumiyacha		Attack
+75	75：攻撃Ｆ	SAP_YUMI_21	Yumiyacha		Fever Attack
+76	76：攻撃Ｐ	SAP_YUMI_22	Yumiyacha		Fever Perfect Attack
+77	77：タメ	SAP_YUMI_30	Yumiyacha		Charge
+78	78：タメＦ	SAP_YUMI_31	Yumiyacha		Fever Charge
+79	79：タメＰ	SAP_YUMI_32	Yumiyacha		Fever Perfect Charge
+80	80：タメ～防御	SAP_YUMI_40	Yumiyacha		Charge Defend
+81	81：タメ～防御Ｆ	SAP_YUMI_41	Yumiyacha		Fever Charge Defend
+82	82：タメ～防御Ｐ	SAP_YUMI_42	Yumiyacha		Fever Perfect Charge Defend
+83	83：タメ～攻撃	SAP_YUMI_50	Yumiyacha		Charge Attack
+84	84：タメ～攻撃Ｆ	SAP_YUMI_51	Yumiyacha		Fever Charge Attack
+85	85：タメ～攻撃Ｐ	SAP_YUMI_52	Yumiyacha		Fever Perfect Charge Attack
+86	86：退避	SAP_YUMI_60	Yumiyacha		Dodge
+87	87：ジャンプ	SAP_YUMI_70	Yumiyacha		Jump
+88	88：騒ぐ	SAP_YUMI_80	Yumiyacha		Party
+89	89：後退	SAP_YUMI_90	Yumiyacha		Chakapata
+90	90：ヒーローモード	SAP_YUMI_HM	Yumiyacha		Heromode
+91	91：ヒーローモード	SAP_YUMI_HM_1	Yumiyacha		Heromode
+92	92：攻撃Ｆ	SAP_YUMI_S21	Yumiyacha	No Crossbow, CS	Fever Attack
+93	93：攻撃Ｐ	SAP_YUMI_S22	Yumiyacha	No Crossbow, CS	Fever Perfect Attack
+94	94：タメ～攻撃	SAP_YUMI_S50	Yumiyacha	No Crossbow, CS	Charge Attack
+95	95：タメ～攻撃Ｆ	SAP_YUMI_S51	Yumiyacha	No Crossbow, CS	Fever Charge Attack
+96	96：タメ～攻撃Ｐ	SAP_YUMI_S52	Yumiyacha	No Crossbow, CS	Fever Perfect Charge Attack
+97	97：防御Ｐ	SAP_YUMI_SS12	Yumiyacha	Crossbow	Fever Perfect Defend
+98	98：攻撃	SAP_YUMI_SS20	Yumiyacha	Crossbow	Attack
+99	99：攻撃Ｆ	SAP_YUMI_SS21	Yumiyacha	Crossbow No CS	Fever Attack
+100	100：攻撃Ｐ	SAP_YUMI_SS22	Yumiyacha	Crossbow No CS	Fever Perfect Attack
+101	101：タメ～防御Ｐ	SAP_YUMI_SS42	Yumiyacha	Crossbow	Fever Perfect Charge Defend
+102	102：タメ～攻撃	SAP_YUMI_SS50	Yumiyacha	Crossbow No CS	Charge Attack
+103	103：タメ～攻撃Ｆ	SAP_YUMI_SS51	Yumiyacha	Crossbow No CS	Fever Charge Attack
+104	104：タメ～攻撃Ｐ	SAP_YUMI_SS52	Yumiyacha	Crossbow No CS	Fever Perfect Charge Attack
+105	105：ヒーローモード	SAP_YUMI_SSHM	Yumiyacha	Crossbow	Heromode
+106	106：ヒーローモード	SAP_YUMI_SSHM_1	Yumiyacha	Crossbow	Heromode
+107	107：攻撃Ｆ	SAP_YUMI_SSS21	Yumiyacha	Crossbow, CS	Fever Attack
+108	108：攻撃Ｐ	SAP_YUMI_SSS22	Yumiyacha	Crossbow, CS	Fever Perfect Attack
+109	109：タメ～攻撃	SAP_YUMI_SSS50	Yumiyacha	Crossbow, CS	Charge Attack
+110	110：タメ～攻撃Ｆ	SAP_YUMI_SSS51	Yumiyacha	Crossbow, CS	Fever Charge Attack
+111	111：タメ～攻撃Ｐ	SAP_YUMI_SSS52	Yumiyacha	Crossbow, CS	Fever Perfect Charge Attack
+112	112：進軍	SAP_KIBA_00	Kibadda		March
+113	113：進軍Ｆ	SAP_KIBA_01	Kibadda		Fever March
+114	114：進軍Ｐ	SAP_KIBA_02	Kibadda		Fever Perfect March
+115	115：防御	SAP_KIBA_10	Kibadda		Defend
+116	116：防御Ｆ	SAP_KIBA_11	Kibadda		Fever Defend
+117	117：防御Ｐ	SAP_KIBA_12	Kibadda		Fever Perfect Defend
+118	118：攻撃	SAP_KIBA_20	Kibadda		Attack
+119	119：攻撃Ｆ	SAP_KIBA_21	Kibadda		Fever Attack
+120	120：攻撃Ｐ	SAP_KIBA_22	Kibadda		Fever Perfect Attack
+121	121：タメ	SAP_KIBA_30	Kibadda		Charge
+122	122：タメＦ	SAP_KIBA_31	Kibadda		Fever Charge
+123	123：タメＰ	SAP_KIBA_32	Kibadda		Fever Perfect Charge
+124	124：タメ～防御	SAP_KIBA_40	Kibadda		Charge Defend
+125	125：タメ～防御Ｆ	SAP_KIBA_41	Kibadda		Fever Charge Defend
+126	126：タメ～防御Ｐ	SAP_KIBA_42	Kibadda		Fever Perfect Charge Defend
+127	127：タメ～攻撃	SAP_KIBA_50	Kibadda		Charge Attack
+128	128：タメ～攻撃Ｆ	SAP_KIBA_51	Kibadda		Fever Charge Attack
+129	129：タメ～攻撃Ｐ	SAP_KIBA_52	Kibadda		Fever Perfect Charge Attack
+130	130：退避	SAP_KIBA_60	Kibadda		Dodge
+131	131：ジャンプ	SAP_KIBA_70	Kibadda		Jump
+132	132：騒ぐ	SAP_KIBA_80	Kibadda		Party
+133	133：後退	SAP_KIBA_90	Kibadda		Chakapata
+134	134：ヒーローモード	SAP_KIBA_HM	Kibadda		Heromode
+135	135：ヒーローモード	SAP_KIBA_HM_1	Kibadda		Heromode
+136	136：進軍	SAP_DEKA_00	Dekapon		March
+137	137：進軍Ｆ	SAP_DEKA_01	Dekapon		Fever March
+138	138：進軍Ｐ	SAP_DEKA_02	Dekapon		Fever Perfect March
+139	139：防御	SAP_DEKA_10	Dekapon		Defend
+140	140：防御Ｆ	SAP_DEKA_11	Dekapon		Fever Defend
+141	141：防御Ｐ	SAP_DEKA_12	Dekapon		Fever Perfect Defend
+142	142：攻撃	SAP_DEKA_20	Dekapon		Attack
+143	143：攻撃Ｆ	SAP_DEKA_21	Dekapon		Fever Attack
+144	144：攻撃Ｐ	SAP_DEKA_22	Dekapon		Fever Perfect Attack
+145	145：タメ	SAP_DEKA_30	Dekapon		Charge
+146	146：タメＦ	SAP_DEKA_31	Dekapon		Fever Charge
+147	147：タメＰ	SAP_DEKA_32	Dekapon		Fever Perfect Charge
+148	148：タメ～防御	SAP_DEKA_40	Dekapon		Charge Defend
+149	149：タメ～防御Ｆ	SAP_DEKA_41	Dekapon		Fever Charge Defend
+150	150：タメ～防御Ｐ	SAP_DEKA_42	Dekapon		Fever Perfect Charge Defend
+151	151：タメ～攻撃	SAP_DEKA_50	Dekapon		Charge Attack
+152	152：タメ～攻撃Ｆ	SAP_DEKA_51	Dekapon		Fever Charge Attack
+153	153：タメ～攻撃Ｐ	SAP_DEKA_52	Dekapon		Fever Perfect Charge Attack
+154	154：退避	SAP_DEKA_60	Dekapon		Dodge
+155	155：ジャンプ	SAP_DEKA_70	Dekapon		Jump
+156	156：騒ぐ	SAP_DEKA_80	Dekapon		Party
+157	157：後退	SAP_DEKA_90	Dekapon		Chakapata
+158	158：ヒーローモード	SAP_DEKA_HM	Dekapon		Heromode
+159	159：進軍	SAP_MEGA_00	Megapon		March
+160	160：進軍Ｆ	SAP_MEGA_01	Megapon		Fever March
+161	161：進軍Ｐ	SAP_MEGA_02	Megapon		Fever Perfect March
+162	162：防御	SAP_MEGA_10	Megapon		Defend
+163	163：防御Ｆ	SAP_MEGA_11	Megapon		Fever Defend
+164	164：防御Ｐ	SAP_MEGA_12	Megapon		Fever Perfect Defend
+165	165：攻撃	SAP_MEGA_20	Megapon		Attack
+166	166：攻撃Ｆ	SAP_MEGA_21	Megapon		Fever Attack
+167	167：攻撃Ｐ	SAP_MEGA_22	Megapon		Fever Perfect Attack
+168	168：タメ	SAP_MEGA_30	Megapon		Charge
+169	169：タメＦ	SAP_MEGA_31	Megapon		Fever Charge
+170	170：タメＰ	SAP_MEGA_32	Megapon		Fever Perfect Charge
+171	171：タメ～防御	SAP_MEGA_40	Megapon		Charge Defend
+172	172：タメ～防御Ｆ	SAP_MEGA_41	Megapon		Fever Charge Defend
+173	173：タメ～防御Ｐ	SAP_MEGA_42	Megapon		Fever Perfect Charge Defend
+174	174：タメ～攻撃	SAP_MEGA_50	Megapon		Charge Attack
+175	175：タメ～攻撃Ｆ	SAP_MEGA_51	Megapon		Fever Charge Attack
+176	176：タメ～攻撃Ｐ	SAP_MEGA_52	Megapon		Fever Perfect Charge Attack
+177	177：退避	SAP_MEGA_60	Megapon		Dodge
+178	178：ジャンプ	SAP_MEGA_70	Megapon		Jump
+179	179：騒ぐ	SAP_MEGA_80	Megapon		Party
+180	180：後退	SAP_MEGA_90	Megapon		Chakapata
+181	181：ヒーローモード	SAP_MEGA_HM	Megapon		Heromode
+182	182：進軍	SAP_MAHO_00	Mahopon		March
+183	183：進軍Ｆ	SAP_MAHO_01	Mahopon		Fever March
+184	184：進軍Ｐ	SAP_MAHO_02	Mahopon		Fever Perfect March
+185	185：防御	SAP_MAHO_10	Mahopon		Defend
+186	186：防御Ｆ	SAP_MAHO_11	Mahopon		Fever Defend
+187	187：防御Ｐ	SAP_MAHO_12	Mahopon		Fever Perfect Defend
+188	188：攻撃	SAP_MAHO_20	Mahopon		Attack
+189	189：攻撃Ｆ	SAP_MAHO_21	Mahopon		Fever Attack
+190	190：攻撃Ｐ	SAP_MAHO_22	Mahopon		Fever Perfect Attack
+191	191：タメ	SAP_MAHO_30	Mahopon		Charge
+192	192：タメＦ	SAP_MAHO_31	Mahopon		Fever Charge
+193	193：タメＰ	SAP_MAHO_32	Mahopon		Fever Perfect Charge
+194	194：タメ～防御	SAP_MAHO_40	Mahopon		Charge Defend
+195	195：タメ～防御Ｆ	SAP_MAHO_41	Mahopon		Fever Charge Defend
+196	196：タメ～防御Ｐ	SAP_MAHO_42	Mahopon		Fever Perfect Charge Defend
+197	197：タメ～攻撃	SAP_MAHO_50	Mahopon		Charge Attack
+198	198：タメ～攻撃Ｆ	SAP_MAHO_51	Mahopon		Fever Charge Attack
+199	199：タメ～攻撃Ｐ	SAP_MAHO_52	Mahopon		Fever Perfect Charge Attack
+200	200：退避	SAP_MAHO_60	Mahopon		Dodge
+201	201：ジャンプ	SAP_MAHO_70	Mahopon		Jump
+202	202：騒ぐ	SAP_MAHO_80	Mahopon		Party
+203	203：後退	SAP_MAHO_90	Mahopon		Chakapata
+204	204：ヒーローモード	SAP_MAHO_HM	Mahopon		Heromode
+205	205：進軍	SAP_ROBO_00	Destrobo		March
+206	206：進軍Ｆ	SAP_ROBO_01	Destrobo		Fever March
+207	207：進軍Ｐ	SAP_ROBO_02	Destrobo		Fever Perfect March
+208	208：防御	SAP_ROBO_10	Destrobo		Defend
+209	209：防御Ｆ	SAP_ROBO_11	Destrobo		Fever Defend
+210	210：防御Ｐ	SAP_ROBO_12	Destrobo		Fever Perfect Defend
+211	211：攻撃	SAP_ROBO_20	Destrobo		Attack
+212	212：攻撃Ｆ	SAP_ROBO_21	Destrobo		Fever Attack
+213	213：攻撃Ｐ	SAP_ROBO_22	Destrobo		Fever Perfect Attack
+214	214：タメ	SAP_ROBO_30	Destrobo		Charge
+215	215：タメＦ	SAP_ROBO_31	Destrobo		Fever Charge
+216	216：タメＰ	SAP_ROBO_32	Destrobo		Fever Perfect Charge
+217	217：タメ～防御	SAP_ROBO_40	Destrobo		Charge Defend
+218	218：タメ～防御Ｆ	SAP_ROBO_41	Destrobo		Fever Charge Defend
+219	219：タメ～防御Ｐ	SAP_ROBO_42	Destrobo		Fever Perfect Charge Defend
+220	220：タメ～攻撃	SAP_ROBO_50	Destrobo		Charge Attack
+221	221：タメ～攻撃Ｆ	SAP_ROBO_51	Destrobo		Fever Charge Attack
+222	222：タメ～攻撃Ｐ	SAP_ROBO_52	Destrobo		Fever Perfect Charge Attack
+223	223：退避	SAP_ROBO_60	Destrobo		Dodge
+224	224：ジャンプ	SAP_ROBO_70	Destrobo		Jump
+225	225：騒ぐ	SAP_ROBO_80	Destrobo		Party
+226	226：後退	SAP_ROBO_90	Destrobo		Chakapata
+227	227：ヒーローモード	SAP_ROBO_HM	Destrobo		Heromode
+228	228：ヒーローモード	SAP_ROBO_HM_1	Destrobo		Heromode
+229	229：攻撃Ｆ	SAP_ROBO_S21	Destrobo		Fever Attack
+230	230：攻撃Ｐ	SAP_ROBO_S22	Destrobo		Fever Perfect Attack
+231	231：進軍	SAP_NTMA_00	Piekron		March
+232	232：進軍Ｆ	SAP_NTMA_01	Piekron		Fever March
+233	233：進軍Ｐ	SAP_NTMA_02	Piekron		Fever Perfect March
+234	234：防御	SAP_NTMA_10	Piekron		Defend
+235	235：防御Ｆ	SAP_NTMA_11	Piekron		Fever Defend
+236	236：防御Ｐ	SAP_NTMA_12	Piekron		Fever Perfect Defend
+237	237：攻撃	SAP_NTMA_20	Piekron		Attack
+238	238：攻撃Ｆ	SAP_NTMA_21	Piekron		Fever Attack
+239	239：攻撃Ｐ	SAP_NTMA_22	Piekron		Fever Perfect Attack
+240	240：タメ	SAP_NTMA_30	Piekron		Charge
+241	241：タメＦ	SAP_NTMA_31	Piekron		Fever Charge
+242	242：タメＰ	SAP_NTMA_32	Piekron		Fever Perfect Charge
+243	243：タメ～防御	SAP_NTMA_40	Piekron		Charge Defend
+244	244：タメ～防御Ｆ	SAP_NTMA_41	Piekron		Fever Charge Defend
+245	245：タメ～防御Ｐ	SAP_NTMA_42	Piekron		Fever Perfect Charge Defend
+246	246：タメ～攻撃	SAP_NTMA_50	Piekron		Charge Attack
+247	247：タメ～攻撃Ｆ	SAP_NTMA_51	Piekron		Fever Charge Attack
+248	248：タメ～攻撃Ｐ	SAP_NTMA_52	Piekron		Fever Perfect Charge Attack
+249	249：退避	SAP_NTMA_60	Piekron		Dodge
+250	250：ジャンプ	SAP_NTMA_70	Piekron		Jump
+251	251：騒ぐ	SAP_NTMA_80	Piekron		Party
+252	252：後退	SAP_NTMA_90	Piekron		Chakapata
+253	253：ヒーローモード	SAP_NTMA_HM	Piekron		Heromode
+254	254：ヒーローモード	SAP_NTMA_HM_1	Piekron		Heromode
+255	255：防御Ｆ	SAP_NTMA_S11	Piekron	Leaping Spear	Fever Defend
+256	256：防御Ｐ	SAP_NTMA_S12	Piekron	Leaping Spear	Fever Perfect Defend
+257	257：攻撃Ｆ	SAP_NTMA_S21	Piekron	Leaping Spear	Fever Attack
+258	258：攻撃Ｐ	SAP_NTMA_S22	Piekron	Leaping Spear	Fever Perfect Attack
+259	259：タメ～防御	SAP_NTMA_S40	Piekron	Leaping Spear	Charge Defend
+260	260：タメ～防御Ｆ	SAP_NTMA_S41	Piekron	Leaping Spear	Fever Charge Defend
+261	261：タメ～防御Ｐ	SAP_NTMA_S42	Piekron	Leaping Spear	Fever Perfect Charge Defend
+262	262：タメ～攻撃	SAP_NTMA_S50	Piekron	Leaping Spear	Charge Attack
+263	263：タメ～攻撃Ｆ	SAP_NTMA_S51	Piekron	Leaping Spear	Fever Charge Attack
+264	264：タメ～攻撃Ｐ	SAP_NTMA_S52	Piekron	Leaping Spear	Fever Perfect Charge Attack
+265	265：進軍	SAP_TGYB_00	Wooyari		March
+266	266：進軍Ｆ	SAP_TGYB_01	Wooyari		Fever March
+267	267：進軍Ｐ	SAP_TGYB_02	Wooyari		Fever Perfect March
+268	268：防御	SAP_TGYB_10	Wooyari		Defend
+269	269：防御Ｆ	SAP_TGYB_11	Wooyari		Fever Defend
+270	270：防御Ｐ	SAP_TGYB_12	Wooyari		Fever Perfect Defend
+271	271：攻撃	SAP_TGYB_20	Wooyari		Attack
+272	272：攻撃Ｆ	SAP_TGYB_21	Wooyari		Fever Attack
+273	273：攻撃Ｐ	SAP_TGYB_22	Wooyari		Fever Perfect Attack
+274	274：タメ	SAP_TGYB_30	Wooyari		Charge
+275	275：タメＦ	SAP_TGYB_31	Wooyari		Fever Charge
+276	276：タメＰ	SAP_TGYB_32	Wooyari		Fever Perfect Charge
+277	277：タメ～防御	SAP_TGYB_40	Wooyari		Charge Defend
+278	278：タメ～防御Ｆ	SAP_TGYB_41	Wooyari		Fever Charge Defend
+279	279：タメ～防御Ｐ	SAP_TGYB_42	Wooyari		Fever Perfect Charge Defend
+280	280：タメ～攻撃	SAP_TGYB_50	Wooyari		Charge Attack
+281	281：タメ～攻撃Ｆ	SAP_TGYB_51	Wooyari		Fever Charge Attack
+282	282：タメ～攻撃Ｐ	SAP_TGYB_52	Wooyari		Fever Perfect Charge Attack
+283	283：退避	SAP_TGYB_60	Wooyari		Dodge
+284	284：ジャンプ	SAP_TGYB_70	Wooyari		Jump
+285	285：騒ぐ	SAP_TGYB_80	Wooyari		Party
+286	286：後退	SAP_TGYB_90	Wooyari		Chakapata
+287	287：ヒーローモード	SAP_TGYB_HM	Wooyari		Heromode
+288	288：ヒーローモード	SAP_TGYB_HM_1	Wooyari		Heromode
+289	289：ヒーローモード	SAP_TGYB_1_HM	Wooyari	Ice	Heromode
+290	290：ヒーローモード	SAP_TGYB_1_HM_1	Wooyari	Ice	Heromode
+291	291：攻撃Ｆ	SAP_TGYB_S21	Wooyari	CS2	Fever Attack
+292	292：攻撃Ｐ	SAP_TGYB_S22	Wooyari	CS2	Fever Perfect Attack
+293	293：タメ～攻撃	SAP_TGYB_S50	Wooyari	CS2	Charge Attack
+294	294：タメ～攻撃Ｆ	SAP_TGYB_S51	Wooyari	CS2	Fever Charge Attack
+295	295：タメ～攻撃Ｐ	SAP_TGYB_S52	Wooyari	CS2	Fever Perfect Charge Attack
+296	296：攻撃Ｆ	SAP_TGYB_SS21	Wooyari	CS3	Fever Attack
+297	297：攻撃Ｐ	SAP_TGYB_SS22	Wooyari	CS3	Fever Perfect Attack
+298	298：タメ～攻撃	SAP_TGYB_SS50	Wooyari	CS3	Charge Attack
+299	299：タメ～攻撃Ｆ	SAP_TGYB_SS51	Wooyari	CS3	Fever Charge Attack
+300	300：タメ～攻撃Ｐ	SAP_TGYB_SS52	Wooyari	CS3	Fever Perfect Charge Attack
+301	301：攻撃Ｆ	SAP_TGYB_SSS21	Wooyari	CS4	Fever Attack
+302	302：攻撃Ｐ	SAP_TGYB_SSS22	Wooyari	CS4	Fever Perfect Attack
+303	303：タメ～攻撃	SAP_TGYB_SSS50	Wooyari	CS4	Charge Attack
+304	304：タメ～攻撃Ｆ	SAP_TGYB_SSS51	Wooyari	CS4	Fever Charge Attack
+305	305：タメ～攻撃Ｐ	SAP_TGYB_SSS52	Wooyari	CS4	Fever Perfect Charge Attack
+306	306：攻撃Ｆ	SAP_TGYB_SSSS21	Wooyari	CS5	Fever Attack
+307	307：攻撃Ｐ	SAP_TGYB_SSSS22	Wooyari	CS5	Fever Perfect Attack
+308	308：タメ～攻撃	SAP_TGYB_SSSS50	Wooyari	CS5	Charge Attack
+309	309：タメ～攻撃Ｆ	SAP_TGYB_SSSS51	Wooyari	CS5	Fever Charge Attack
+310	310：タメ～攻撃Ｐ	SAP_TGYB_SSSS52	Wooyari	CS5	Fever Perfect Charge Attack
+311	311：進軍	SAP_PIYO_00	Pyokorider		March
+312	312：進軍Ｆ	SAP_PIYO_01	Pyokorider		Fever March
+313	313：進軍Ｐ	SAP_PIYO_02	Pyokorider		Fever Perfect March
+314	314：防御	SAP_PIYO_10	Pyokorider		Defend
+315	315：防御Ｆ	SAP_PIYO_11	Pyokorider		Fever Defend
+316	316：防御Ｐ	SAP_PIYO_12	Pyokorider		Fever Perfect Defend
+317	317：攻撃	SAP_PIYO_20	Pyokorider		Attack
+318	318：攻撃Ｆ	SAP_PIYO_21	Pyokorider		Fever Attack
+319	319：攻撃Ｐ	SAP_PIYO_22	Pyokorider		Fever Perfect Attack
+320	320：タメ	SAP_PIYO_30	Pyokorider		Charge
+321	321：タメＦ	SAP_PIYO_31	Pyokorider		Fever Charge
+322	322：タメＰ	SAP_PIYO_32	Pyokorider		Fever Perfect Charge
+323	323：タメ～防御	SAP_PIYO_40	Pyokorider		Charge Defend
+324	324：タメ～防御Ｆ	SAP_PIYO_41	Pyokorider		Fever Charge Defend
+325	325：タメ～防御Ｐ	SAP_PIYO_42	Pyokorider		Fever Perfect Charge Defend
+326	326：タメ～攻撃	SAP_PIYO_50	Pyokorider		Charge Attack
+327	327：タメ～攻撃Ｆ	SAP_PIYO_51	Pyokorider		Fever Charge Attack
+328	328：タメ～攻撃Ｐ	SAP_PIYO_52	Pyokorider		Fever Perfect Charge Attack
+329	329：退避	SAP_PIYO_60	Pyokorider		Dodge
+330	330：ジャンプ	SAP_PIYO_70	Pyokorider		Jump
+331	331：騒ぐ	SAP_PIYO_80	Pyokorider		Party
+332	332：後退	SAP_PIYO_90	Pyokorider		Chakapata
+333	333：ヒーローモード	SAP_PIYO_HM	Pyokorider		Heromode
+334	334：ヒーローモード	SAP_PIYO_HM_1	Pyokorider		Heromode
+335	335：進軍	SAP_KNKO_00	Cannassault		March
+336	336：進軍Ｆ	SAP_KNKO_01	Cannassault		Fever March
+337	337：進軍Ｐ	SAP_KNKO_02	Cannassault		Fever Perfect March
+338	338：防御	SAP_KNKO_10	Cannassault		Defend
+339	339：防御Ｆ	SAP_KNKO_11	Cannassault		Fever Defend
+340	340：防御Ｐ	SAP_KNKO_12	Cannassault		Fever Perfect Defend
+341	341：攻撃	SAP_KNKO_20	Cannassault		Attack
+342	342：攻撃Ｆ	SAP_KNKO_21	Cannassault		Fever Attack
+343	343：攻撃Ｐ	SAP_KNKO_22	Cannassault		Fever Perfect Attack
+344	344：タメ	SAP_KNKO_30	Cannassault		Charge
+345	345：タメＦ	SAP_KNKO_31	Cannassault		Fever Charge
+346	346：タメＰ	SAP_KNKO_32	Cannassault		Fever Perfect Charge
+347	347：タメ～防御	SAP_KNKO_40	Cannassault		Charge Defend
+348	348：タメ～防御Ｆ	SAP_KNKO_41	Cannassault		Fever Charge Defend
+349	349：タメ～防御Ｐ	SAP_KNKO_42	Cannassault		Fever Perfect Charge Defend
+350	350：タメ～攻撃	SAP_KNKO_50	Cannassault		Charge Attack
+351	351：タメ～攻撃Ｆ	SAP_KNKO_51	Cannassault		Fever Charge Attack
+352	352：タメ～攻撃Ｐ	SAP_KNKO_52	Cannassault		Fever Perfect Charge Attack
+353	353：退避	SAP_KNKO_60	Cannassault		Dodge
+354	354：ジャンプ	SAP_KNKO_70	Cannassault		Jump
+355	355：騒ぐ	SAP_KNKO_80	Cannassault		Party
+356	356：後退	SAP_KNKO_90	Cannassault		Chakapata
+357	357：ヒーローモード	SAP_KNKO_HM	Cannassault		Heromode
+358	358：ヒーローモード	SAP_KNKO_HM_1	Cannassault		Heromode
+359	359：進軍	SAP_SBRA_00	Charibasa		March
+360	360：進軍Ｆ	SAP_SBRA_01	Charibasa		Fever March
+361	361：進軍Ｐ	SAP_SBRA_02	Charibasa		Fever Perfect March
+362	362：防御	SAP_SBRA_10	Charibasa		Defend
+363	363：防御Ｆ	SAP_SBRA_11	Charibasa		Fever Defend
+364	364：防御Ｐ	SAP_SBRA_12	Charibasa		Fever Perfect Defend
+365	365：攻撃	SAP_SBRA_20	Charibasa		Attack
+366	366：攻撃Ｆ	SAP_SBRA_21	Charibasa		Fever Attack
+367	367：攻撃Ｐ	SAP_SBRA_22	Charibasa		Fever Perfect Attack
+368	368：タメ	SAP_SBRA_30	Charibasa		Charge
+369	369：タメＦ	SAP_SBRA_31	Charibasa		Fever Charge
+370	370：タメＰ	SAP_SBRA_32	Charibasa		Fever Perfect Charge
+371	371：タメ～防御	SAP_SBRA_40	Charibasa		Charge Defend
+372	372：タメ～防御Ｆ	SAP_SBRA_41	Charibasa		Fever Charge Defend
+373	373：タメ～防御Ｐ	SAP_SBRA_42	Charibasa		Fever Perfect Charge Defend
+374	374：タメ～攻撃	SAP_SBRA_50	Charibasa		Charge Attack
+375	375：タメ～攻撃Ｆ	SAP_SBRA_51	Charibasa		Fever Charge Attack
+376	376：タメ～攻撃Ｐ	SAP_SBRA_52	Charibasa		Fever Perfect Charge Attack
+377	377：退避	SAP_SBRA_60	Charibasa		Dodge
+378	378：ジャンプ	SAP_SBRA_70	Charibasa		Jump
+379	379：騒ぐ	SAP_SBRA_80	Charibasa		Party
+380	380：後退	SAP_SBRA_90	Charibasa		Chakapata
+381	381：ヒーローモード	SAP_SBRA_HM	Charibasa		Heromode
+382	382：ヒーローモード	SAP_SBRA_HM_1	Charibasa		Heromode
+383	383：進軍	SAP_MOFU_00	Guardira		March
+384	384：進軍Ｆ	SAP_MOFU_01	Guardira		Fever March
+385	385：進軍Ｐ	SAP_MOFU_02	Guardira		Fever Perfect March
+386	386：防御	SAP_MOFU_10	Guardira		Defend
+387	387：防御Ｆ	SAP_MOFU_11	Guardira		Fever Defend
+388	388：防御Ｐ	SAP_MOFU_12	Guardira		Fever Perfect Defend
+389	389：攻撃	SAP_MOFU_20	Guardira		Attack
+390	390：攻撃Ｆ	SAP_MOFU_21	Guardira		Fever Attack
+391	391：攻撃Ｐ	SAP_MOFU_22	Guardira		Fever Perfect Attack
+392	392：タメ	SAP_MOFU_30	Guardira		Charge
+393	393：タメＦ	SAP_MOFU_31	Guardira		Fever Charge
+394	394：タメＰ	SAP_MOFU_32	Guardira		Fever Perfect Charge
+395	395：タメ～防御	SAP_MOFU_40	Guardira		Charge Defend
+396	396：タメ～防御Ｆ	SAP_MOFU_41	Guardira		Fever Charge Defend
+397	397：タメ～防御Ｐ	SAP_MOFU_42	Guardira		Fever Perfect Charge Defend
+398	398：タメ～攻撃	SAP_MOFU_50	Guardira		Charge Attack
+399	399：タメ～攻撃Ｆ	SAP_MOFU_51	Guardira		Fever Charge Attack
+400	400：タメ～攻撃Ｐ	SAP_MOFU_52	Guardira		Fever Perfect Charge Attack
+401	401：退避	SAP_MOFU_60	Guardira		Dodge
+402	402：ジャンプ	SAP_MOFU_70	Guardira		Jump
+403	403：騒ぐ	SAP_MOFU_80	Guardira		Party
+404	404：後退	SAP_MOFU_90	Guardira		Chakapata
+405	405：ヒーローモード	SAP_MOFU_HM	Guardira		Heromode
+406	406：ヒーローモード	SAP_MOFU_HM_1	Guardira		Heromode
+407	407：攻撃	SAP_MOFU_S20	Guardira	Greatshield	Attack
+408	408：攻撃Ｆ	SAP_MOFU_S21	Guardira	Greatshield	Fever Attack
+409	409：攻撃Ｐ	SAP_MOFU_S22	Guardira	Greatshield	Fever Perfect Attack
+410	410：タメ～攻撃	SAP_MOFU_S50	Guardira	Greatshield	Charge Attack
+411	411：タメ～攻撃Ｆ	SAP_MOFU_S51	Guardira	Greatshield	Fever Charge Attack
+412	412：タメ～攻撃Ｐ	SAP_MOFU_S52	Guardira	Greatshield	Fever Perfect Charge Attack
+413	413：進軍	SAP_BHYK_00	Tondenga		March
+414	414：進軍Ｆ	SAP_BHYK_01	Tondenga		Fever March
+415	415：進軍Ｐ	SAP_BHYK_02	Tondenga		Fever Perfect March
+416	416：防御	SAP_BHYK_10	Tondenga		Defend
+417	417：防御Ｆ	SAP_BHYK_11	Tondenga		Fever Defend
+418	418：防御Ｐ	SAP_BHYK_12	Tondenga		Fever Perfect Defend
+419	419：攻撃	SAP_BHYK_20	Tondenga		Attack
+420	420：攻撃Ｆ	SAP_BHYK_21	Tondenga		Fever Attack
+421	421：攻撃Ｐ	SAP_BHYK_22	Tondenga		Fever Perfect Attack
+422	422：タメ	SAP_BHYK_30	Tondenga		Charge
+423	423：タメＦ	SAP_BHYK_31	Tondenga		Fever Charge
+424	424：タメＰ	SAP_BHYK_32	Tondenga		Fever Perfect Charge
+425	425：タメ～防御	SAP_BHYK_40	Tondenga		Charge Defend
+426	426：タメ～防御Ｆ	SAP_BHYK_41	Tondenga		Fever Charge Defend
+427	427：タメ～防御Ｐ	SAP_BHYK_42	Tondenga		Fever Perfect Charge Defend
+428	428：タメ～攻撃	SAP_BHYK_50	Tondenga		Charge Attack
+429	429：タメ～攻撃Ｆ	SAP_BHYK_51	Tondenga		Fever Charge Attack
+430	430：タメ～攻撃Ｐ	SAP_BHYK_52	Tondenga		Fever Perfect Charge Attack
+431	431：退避	SAP_BHYK_60	Tondenga		Dodge
+432	432：ジャンプ	SAP_BHYK_70	Tondenga		Jump
+433	433：騒ぐ	SAP_BHYK_80	Tondenga		Party
+434	434：後退	SAP_BHYK_90	Tondenga		Chakapata
+435	435：ヒーローモード	SAP_BHYK_HM	Tondenga		Heromode
+436	436：ヒーローモード	SAP_BHYK_HM_1	Tondenga		Heromode
+437	437：進軍	SAP_FMYA_00	Myamsar		March
+438	438：進軍Ｆ	SAP_FMYA_01	Myamsar		Fever March
+439	439：進軍Ｐ	SAP_FMYA_02	Myamsar		Fever Perfect March
+440	440：防御	SAP_FMYA_10	Myamsar		Defend
+441	441：防御Ｆ	SAP_FMYA_11	Myamsar		Fever Defend
+442	442：防御Ｐ	SAP_FMYA_12	Myamsar		Fever Perfect Defend
+443	443：攻撃	SAP_FMYA_20	Myamsar		Attack
+444	444：攻撃Ｆ	SAP_FMYA_21	Myamsar		Fever Attack
+445	445：攻撃Ｐ	SAP_FMYA_22	Myamsar		Fever Perfect Attack
+446	446：タメ	SAP_FMYA_30	Myamsar		Charge
+447	447：タメＦ	SAP_FMYA_31	Myamsar		Fever Charge
+448	448：タメＰ	SAP_FMYA_32	Myamsar		Fever Perfect Charge
+449	449：タメ～防御	SAP_FMYA_40	Myamsar		Charge Defend
+450	450：タメ～防御Ｆ	SAP_FMYA_41	Myamsar		Fever Charge Defend
+451	451：タメ～防御Ｐ	SAP_FMYA_42	Myamsar		Fever Perfect Charge Defend
+452	452：タメ～攻撃	SAP_FMYA_50	Myamsar		Charge Attack
+453	453：タメ～攻撃Ｆ	SAP_FMYA_51	Myamsar		Fever Charge Attack
+454	454：タメ～攻撃Ｐ	SAP_FMYA_52	Myamsar		Fever Perfect Charge Attack
+455	455：退避	SAP_FMYA_60	Myamsar		Dodge
+456	456：ジャンプ	SAP_FMYA_70	Myamsar		Jump
+457	457：騒ぐ	SAP_FMYA_80	Myamsar		Party
+458	458：後退	SAP_FMYA_90	Myamsar		Chakapata
+459	459：ヒーローモード	SAP_FMYA_HM	Myamsar		Heromode
+460	460：ヒーローモード	SAP_FMYA_HM_1	Myamsar		Heromode
+461	461：進軍	SAP_MNKI_00	Bowmunk		March
+462	462：進軍Ｆ	SAP_MNKI_01	Bowmunk		Fever March
+463	463：進軍Ｐ	SAP_MNKI_02	Bowmunk		Fever Perfect March
+464	464：防御	SAP_MNKI_10	Bowmunk		Defend
+465	465：防御Ｆ	SAP_MNKI_11	Bowmunk		Fever Defend
+466	466：防御Ｐ	SAP_MNKI_12	Bowmunk		Fever Perfect Defend
+467	467：攻撃	SAP_MNKI_20	Bowmunk		Attack
+468	468：攻撃Ｆ	SAP_MNKI_21	Bowmunk		Fever Attack
+469	469：攻撃Ｐ	SAP_MNKI_22	Bowmunk		Fever Perfect Attack
+470	470：タメ	SAP_MNKI_30	Bowmunk		Charge
+471	471：タメＦ	SAP_MNKI_31	Bowmunk		Fever Charge
+472	472：タメＰ	SAP_MNKI_32	Bowmunk		Fever Perfect Charge
+473	473：タメ～防御	SAP_MNKI_40	Bowmunk		Charge Defend
+474	474：タメ～防御Ｆ	SAP_MNKI_41	Bowmunk		Fever Charge Defend
+475	475：タメ～防御Ｐ	SAP_MNKI_42	Bowmunk		Fever Perfect Charge Defend
+476	476：タメ～攻撃	SAP_MNKI_50	Bowmunk		Charge Attack
+477	477：タメ～攻撃Ｆ	SAP_MNKI_51	Bowmunk		Fever Charge Attack
+478	478：タメ～攻撃Ｐ	SAP_MNKI_52	Bowmunk		Fever Perfect Charge Attack
+479	479：退避	SAP_MNKI_60	Bowmunk		Dodge
+480	480：ジャンプ	SAP_MNKI_70	Bowmunk		Jump
+481	481：騒ぐ	SAP_MNKI_80	Bowmunk		Party
+482	482：後退	SAP_MNKI_90	Bowmunk		Chakapata
+483	483：ヒーローモード	SAP_MNKI_HM	Bowmunk		Heromode
+484	484：ヒーローモード	SAP_MNKI_HM_1	Bowmunk		Heromode
+485	485：進軍	SAP_MGYU_00	Grenburr		March
+486	486：進軍Ｆ	SAP_MGYU_01	Grenburr		Fever March
+487	487：進軍Ｐ	SAP_MGYU_02	Grenburr		Fever Perfect March
+488	488：防御	SAP_MGYU_10	Grenburr		Defend
+489	489：防御Ｆ	SAP_MGYU_11	Grenburr		Fever Defend
+490	490：防御Ｐ	SAP_MGYU_12	Grenburr		Fever Perfect Defend
+491	491：攻撃	SAP_MGYU_20	Grenburr		Attack
+492	492：攻撃Ｆ	SAP_MGYU_21	Grenburr		Fever Attack
+493	493：攻撃Ｐ	SAP_MGYU_22	Grenburr		Fever Perfect Attack
+494	494：タメ	SAP_MGYU_30	Grenburr		Charge
+495	495：タメＦ	SAP_MGYU_31	Grenburr		Fever Charge
+496	496：タメＰ	SAP_MGYU_32	Grenburr		Fever Perfect Charge
+497	497：タメ～防御	SAP_MGYU_40	Grenburr		Charge Defend
+498	498：タメ～防御Ｆ	SAP_MGYU_41	Grenburr		Fever Charge Defend
+499	499：タメ～防御Ｐ	SAP_MGYU_42	Grenburr		Fever Perfect Charge Defend
+500	500：タメ～攻撃	SAP_MGYU_50	Grenburr		Charge Attack
+501	501：タメ～攻撃Ｆ	SAP_MGYU_51	Grenburr		Fever Charge Attack
+502	502：タメ～攻撃Ｐ	SAP_MGYU_52	Grenburr		Fever Perfect Charge Attack
+503	503：退避	SAP_MGYU_60	Grenburr		Dodge
+504	504：ジャンプ	SAP_MGYU_70	Grenburr		Jump
+505	505：騒ぐ	SAP_MGYU_80	Grenburr		Party
+506	506：後退	SAP_MGYU_90	Grenburr		Chakapata
+507	507：ヒーローモード	SAP_MGYU_HM	Grenburr		Heromode
+508	508：ヒーローモード	SAP_MGYU_HM_1	Grenburr		Heromode
+509	509：進軍	SAP_TIKU_00	Alosson		March
+510	510：進軍Ｆ	SAP_TIKU_01	Alosson		Fever March
+511	511：進軍Ｐ	SAP_TIKU_02	Alosson		Fever Perfect March
+512	512：防御	SAP_TIKU_10	Alosson		Defend
+513	513：防御Ｆ	SAP_TIKU_11	Alosson		Fever Defend
+514	514：防御Ｐ	SAP_TIKU_12	Alosson		Fever Perfect Defend
+515	515：攻撃	SAP_TIKU_20	Alosson		Attack
+516	516：攻撃Ｆ	SAP_TIKU_21	Alosson		Fever Attack
+517	517：攻撃Ｐ	SAP_TIKU_22	Alosson		Fever Perfect Attack
+518	518：タメ	SAP_TIKU_30	Alosson		Charge
+519	519：タメＦ	SAP_TIKU_31	Alosson		Fever Charge
+520	520：タメＰ	SAP_TIKU_32	Alosson		Fever Perfect Charge
+521	521：タメ～防御	SAP_TIKU_40	Alosson		Charge Defend
+522	522：タメ～防御Ｆ	SAP_TIKU_41	Alosson		Fever Charge Defend
+523	523：タメ～防御Ｐ	SAP_TIKU_42	Alosson		Fever Perfect Charge Defend
+524	524：タメ～攻撃	SAP_TIKU_50	Alosson		Charge Attack
+525	525：タメ～攻撃Ｆ	SAP_TIKU_51	Alosson		Fever Charge Attack
+526	526：タメ～攻撃Ｐ	SAP_TIKU_52	Alosson		Fever Perfect Charge Attack
+527	527：退避	SAP_TIKU_60	Alosson		Dodge
+528	528：ジャンプ	SAP_TIKU_70	Alosson		Jump
+529	529：騒ぐ	SAP_TIKU_80	Alosson		Party
+530	530：後退	SAP_TIKU_90	Alosson		Chakapata
+531	531：ヒーローモード	SAP_TIKU_HM	Alosson		Heromode
+532	532：ヒーローモード	SAP_TIKU_HM_1	Alosson		Heromode
+533	533：防御	SAP_TIKU_1_10	Alosson	Longbow	Defend
+534	534：防御Ｆ	SAP_TIKU_1_11	Alosson	Longbow	Fever Defend
+535	535：防御Ｐ	SAP_TIKU_1_12	Alosson	Longbow	Fever Perfect Defend
+536	536：攻撃	SAP_TIKU_1_20	Alosson	Longbow	Attack
+537	537：攻撃Ｆ	SAP_TIKU_1_21	Alosson	Longbow	Fever Attack
+538	538：攻撃Ｐ	SAP_TIKU_1_22	Alosson	Longbow	Fever Perfect Attack
+539	539：タメ～防御	SAP_TIKU_1_40	Alosson	Longbow	Charge Defend
+540	540：タメ～防御Ｆ	SAP_TIKU_1_41	Alosson	Longbow	Fever Charge Defend
+541	541：タメ～防御Ｐ	SAP_TIKU_1_42	Alosson	Longbow	Fever Perfect Charge Defend
+542	542：タメ～攻撃	SAP_TIKU_1_50	Alosson	Longbow	Charge Attack
+543	543：タメ～攻撃Ｆ	SAP_TIKU_1_51	Alosson	Longbow	Fever Charge Attack
+544	544：タメ～攻撃Ｐ	SAP_TIKU_1_52	Alosson	Longbow	Fever Perfect Charge Attack
+545	545：ヒーローモード	SAP_TIKU_1_HM	Alosson	Longbow	Heromode
+546	546：ヒーローモード	SAP_TIKU_1_HM_1	Alosson	Longbow	Heromode
+547	547：進軍	SAP_WAND_00	Wondabarappa		March
+548	548：進軍Ｆ	SAP_WAND_01	Wondabarappa		Fever March
+549	549：進軍Ｐ	SAP_WAND_02	Wondabarappa		Fever Perfect March
+550	550：防御	SAP_WAND_10	Wondabarappa		Defend
+551	551：防御Ｆ	SAP_WAND_11	Wondabarappa		Fever Defend
+552	552：防御Ｐ	SAP_WAND_12	Wondabarappa		Fever Perfect Defend
+553	553：攻撃	SAP_WAND_20	Wondabarappa		Attack
+554	554：攻撃Ｆ	SAP_WAND_21	Wondabarappa		Fever Attack
+555	555：攻撃Ｐ	SAP_WAND_22	Wondabarappa		Fever Perfect Attack
+556	556：タメ	SAP_WAND_30	Wondabarappa		Charge
+557	557：タメＦ	SAP_WAND_31	Wondabarappa		Fever Charge
+558	558：タメＰ	SAP_WAND_32	Wondabarappa		Fever Perfect Charge
+559	559：タメ～防御	SAP_WAND_40	Wondabarappa		Charge Defend
+560	560：タメ～防御Ｆ	SAP_WAND_41	Wondabarappa		Fever Charge Defend
+561	561：タメ～防御Ｐ	SAP_WAND_42	Wondabarappa		Fever Perfect Charge Defend
+562	562：タメ～攻撃	SAP_WAND_50	Wondabarappa		Charge Attack
+563	563：タメ～攻撃Ｆ	SAP_WAND_51	Wondabarappa		Fever Charge Attack
+564	564：タメ～攻撃Ｐ	SAP_WAND_52	Wondabarappa		Fever Perfect Charge Attack
+565	565：退避	SAP_WAND_60	Wondabarappa		Dodge
+566	566：ジャンプ	SAP_WAND_70	Wondabarappa		Jump
+567	567：騒ぐ	SAP_WAND_80	Wondabarappa		Party
+568	568：後退	SAP_WAND_90	Wondabarappa		Chakapata
+569	569：ヒーローモード	SAP_WAND_HM	Wondabarappa		Heromode
+570	570：ヒーローモード	SAP_WAND_HM_1	Wondabarappa		Heromode
+571	571：進軍	SAP_MASH_00	Jamsch		March
+572	572：進軍Ｆ	SAP_MASH_01	Jamsch		Fever March
+573	573：進軍Ｐ	SAP_MASH_02	Jamsch		Fever Perfect March
+574	574：防御	SAP_MASH_10	Jamsch		Defend
+575	575：防御Ｆ	SAP_MASH_11	Jamsch		Fever Defend
+576	576：防御Ｐ	SAP_MASH_12	Jamsch		Fever Perfect Defend
+577	577：攻撃	SAP_MASH_20	Jamsch		Attack
+578	578：攻撃Ｆ	SAP_MASH_21	Jamsch		Fever Attack
+579	579：攻撃Ｐ	SAP_MASH_22	Jamsch		Fever Perfect Attack
+580	580：タメ	SAP_MASH_30	Jamsch		Charge
+581	581：タメＦ	SAP_MASH_31	Jamsch		Fever Charge
+582	582：タメＰ	SAP_MASH_32	Jamsch		Fever Perfect Charge
+583	583：タメ～防御	SAP_MASH_40	Jamsch		Charge Defend
+584	584：タメ～防御Ｆ	SAP_MASH_41	Jamsch		Fever Charge Defend
+585	585：タメ～防御Ｐ	SAP_MASH_42	Jamsch		Fever Perfect Charge Defend
+586	586：タメ～攻撃	SAP_MASH_50	Jamsch		Charge Attack
+587	587：タメ～攻撃Ｆ	SAP_MASH_51	Jamsch		Fever Charge Attack
+588	588：タメ～攻撃Ｐ	SAP_MASH_52	Jamsch		Fever Perfect Charge Attack
+589	589：タメ～攻撃	SAP_MASH_50_ICE	Jamsch	High Freeze Rate*	Charge Attack
+590	590：タメ～攻撃Ｆ	SAP_MASH_51_ICE	Jamsch	High Freeze Rate*	Fever Charge Attack
+591	591：タメ～攻撃Ｐ	SAP_MASH_52_ICE	Jamsch	High Freeze Rate*	Fever Perfect Charge Attack
+592	592：退避	SAP_MASH_60	Jamsch		Dodge
+593	593：ジャンプ	SAP_MASH_70	Jamsch		Jump
+594	594：騒ぐ	SAP_MASH_80	Jamsch		Party
+595	595：後退	SAP_MASH_90	Jamsch		Chakapata
+596	596：ヒーローモード	SAP_MASH_HM	Jamsch		Heromode
+597	597：ヒーローモード	SAP_MASH_HM_1	Jamsch		Heromode
+598	598：進軍	SAP_UHOH_00	Oohoroc		March
+599	599：進軍Ｆ	SAP_UHOH_01	Oohoroc		Fever March
+600	600：進軍Ｐ	SAP_UHOH_02	Oohoroc		Fever Perfect March
+601	601：防御	SAP_UHOH_10	Oohoroc		Defend
+602	602：防御Ｆ	SAP_UHOH_11	Oohoroc		Fever Defend
+603	603：防御Ｐ	SAP_UHOH_12	Oohoroc		Fever Perfect Defend
+604	604：攻撃	SAP_UHOH_20	Oohoroc		Attack
+605	605：攻撃Ｆ	SAP_UHOH_21	Oohoroc		Fever Attack
+606	606：攻撃Ｐ	SAP_UHOH_22	Oohoroc		Fever Perfect Attack
+607	607：タメ	SAP_UHOH_30	Oohoroc		Charge
+608	608：タメＦ	SAP_UHOH_31	Oohoroc		Fever Charge
+609	609：タメＰ	SAP_UHOH_32	Oohoroc		Fever Perfect Charge
+610	610：タメ～防御	SAP_UHOH_40	Oohoroc		Charge Defend
+611	611：タメ～防御Ｆ	SAP_UHOH_41	Oohoroc		Fever Charge Defend
+612	612：タメ～防御Ｐ	SAP_UHOH_42	Oohoroc		Fever Perfect Charge Defend
+613	613：タメ～攻撃	SAP_UHOH_50	Oohoroc		Charge Attack
+614	614：タメ～攻撃Ｆ	SAP_UHOH_51	Oohoroc		Fever Charge Attack
+615	615：タメ～攻撃Ｐ	SAP_UHOH_52	Oohoroc		Fever Perfect Charge Attack
+616	616：退避	SAP_UHOH_60	Oohoroc		Dodge
+617	617：ジャンプ	SAP_UHOH_70	Oohoroc		Jump
+618	618：騒ぐ	SAP_UHOH_80	Oohoroc		Party
+619	619：後退	SAP_UHOH_90	Oohoroc		Chakapata
+620	620：ヒーローモード	SAP_UHOH_HM	Oohoroc		Heromode
+621	621：ヒーローモード	SAP_UHOH_HM_1	Oohoroc		Heromode
+622	622：進軍	SAP_KPEN_00	Pingrek		March
+623	623：進軍Ｆ	SAP_KPEN_01	Pingrek		Fever March
+624	624：進軍Ｐ	SAP_KPEN_02	Pingrek		Fever Perfect March
+625	625：防御	SAP_KPEN_10	Pingrek		Defend
+626	626：防御Ｆ	SAP_KPEN_11	Pingrek		Fever Defend
+627	627：防御Ｐ	SAP_KPEN_12	Pingrek		Fever Perfect Defend
+628	628：攻撃	SAP_KPEN_20	Pingrek		Attack
+629	629：攻撃Ｆ	SAP_KPEN_21	Pingrek		Fever Attack
+630	630：攻撃Ｐ	SAP_KPEN_22	Pingrek		Fever Perfect Attack
+631	631：タメ	SAP_KPEN_30	Pingrek		Charge
+632	632：タメＦ	SAP_KPEN_31	Pingrek		Fever Charge
+633	633：タメＰ	SAP_KPEN_32	Pingrek		Fever Perfect Charge
+634	634：タメ～防御	SAP_KPEN_40	Pingrek		Charge Defend
+635	635：タメ～防御Ｆ	SAP_KPEN_41	Pingrek		Fever Charge Defend
+636	636：タメ～防御Ｐ	SAP_KPEN_42	Pingrek		Fever Perfect Charge Defend
+637	637：タメ～攻撃	SAP_KPEN_50	Pingrek		Charge Attack
+638	638：タメ～攻撃Ｆ	SAP_KPEN_51	Pingrek		Fever Charge Attack
+639	639：タメ～攻撃Ｐ	SAP_KPEN_52	Pingrek		Fever Perfect Charge Attack
+640	640：退避	SAP_KPEN_60	Pingrek		Dodge
+641	641：ジャンプ	SAP_KPEN_70	Pingrek		Jump
+642	642：騒ぐ	SAP_KPEN_80	Pingrek		Party
+643	643：後退	SAP_KPEN_90	Pingrek		Chakapata
+644	644：ヒーローモード	SAP_KPEN_HM	Pingrek		Heromode
+645	645：ヒーローモード	SAP_KPEN_HM_1	Pingrek		Heromode
+646	646：進軍	SAP_GYBA_00	Cannogabang		March
+647	647：進軍Ｆ	SAP_GYBA_01	Cannogabang		Fever March
+648	648：進軍Ｐ	SAP_GYBA_02	Cannogabang		Fever Perfect March
+649	649：防御	SAP_GYBA_10	Cannogabang	Cannon	Defend
+650	650：防御Ｆ	SAP_GYBA_11	Cannogabang	Cannon	Fever Defend
+651	651：防御Ｐ	SAP_GYBA_12	Cannogabang	Cannon	Fever Perfect Defend
+652	652：攻撃	SAP_GYBA_20	Cannogabang	Cannon	Attack
+653	653：攻撃Ｆ	SAP_GYBA_21	Cannogabang	Cannon	Fever Attack
+654	654：攻撃Ｐ	SAP_GYBA_22	Cannogabang	Cannon	Fever Perfect Attack
+655	655：タメ	SAP_GYBA_30	Cannogabang	Cannon	Charge
+656	656：タメＦ	SAP_GYBA_31	Cannogabang	Cannon	Fever Charge
+657	657：タメＰ	SAP_GYBA_32	Cannogabang	Cannon	Fever Perfect Charge
+658	658：タメ～防御	SAP_GYBA_40	Cannogabang	Cannon	Charge Defend
+659	659：タメ～防御Ｆ	SAP_GYBA_41	Cannogabang	Cannon	Fever Charge Defend
+660	660：タメ～防御Ｐ	SAP_GYBA_42	Cannogabang	Cannon	Fever Perfect Charge Defend
+661	661：タメ～攻撃	SAP_GYBA_50	Cannogabang	Cannon	Charge Attack
+662	662：タメ～攻撃Ｆ	SAP_GYBA_51	Cannogabang	Cannon	Fever Charge Attack
+663	663：タメ～攻撃Ｐ	SAP_GYBA_52	Cannogabang	Cannon	Fever Perfect Charge Attack
+664	664：退避	SAP_GYBA_60	Cannogabang		Dodge
+665	665：ジャンプ	SAP_GYBA_70	Cannogabang		Jump
+666	666：騒ぐ	SAP_GYBA_80	Cannogabang		Party
+667	667：後退	SAP_GYBA_90	Cannogabang		Chakapata
+668	668：ヒーローモード	SAP_GYBA_HM	Cannogabang	Cannon	Heromode
+669	669：ヒーローモード	SAP_GYBA_HM_1	Cannogabang	Cannon	Heromode
+670	670：防御	SAP_GYBA_1_10	Cannogabang	Blunderbuss	Defend
+671	671：防御Ｆ	SAP_GYBA_1_11	Cannogabang	Blunderbuss	Fever Defend
+672	672：防御Ｐ	SAP_GYBA_1_12	Cannogabang	Blunderbuss	Fever Perfect Defend
+673	673：攻撃	SAP_GYBA_1_20	Cannogabang	Blunderbuss	Attack
+674	674：攻撃Ｆ	SAP_GYBA_1_21	Cannogabang	Blunderbuss	Fever Attack
+675	675：攻撃Ｐ	SAP_GYBA_1_22	Cannogabang	Blunderbuss	Fever Perfect Attack
+676	676：タメ～防御	SAP_GYBA_1_40	Cannogabang	Blunderbuss	Charge Defend
+677	677：タメ～防御Ｆ	SAP_GYBA_1_41	Cannogabang	Blunderbuss	Fever Charge Defend
+678	678：タメ～防御Ｐ	SAP_GYBA_1_42	Cannogabang	Blunderbuss	Fever Perfect Charge Defend
+679	679：タメ～攻撃	SAP_GYBA_1_50	Cannogabang	Blunderbuss	Charge Attack
+680	680：タメ～攻撃Ｆ	SAP_GYBA_1_51	Cannogabang	Blunderbuss	Fever Charge Attack
+681	681：タメ～攻撃Ｐ	SAP_GYBA_1_52	Cannogabang	Blunderbuss	Fever Perfect Charge Attack
+682	682：ヒーローモード	SAP_GYBA_1_HM	Cannogabang	Blunderbuss	Heromode
+683	683：ヒーローモード	SAP_GYBA_1_HM_1	Cannogabang	Blunderbuss	Heromode
+684	684：防御	SAP_GYBA_2_10	Cannogabang	Laser	Defend
+685	685：防御Ｆ	SAP_GYBA_2_11	Cannogabang	Laser	Fever Defend
+686	686：防御Ｐ	SAP_GYBA_2_12	Cannogabang	Laser	Fever Perfect Defend
+687	687：攻撃	SAP_GYBA_2_20	Cannogabang	Laser	Attack
+688	688：攻撃Ｆ	SAP_GYBA_2_21	Cannogabang	Laser	Fever Attack
+689	689：攻撃Ｐ	SAP_GYBA_2_22	Cannogabang	Laser	Fever Perfect Attack
+690	690：タメ～防御	SAP_GYBA_2_40	Cannogabang	Laser	Charge Defend
+691	691：タメ～防御Ｆ	SAP_GYBA_2_41	Cannogabang	Laser	Fever Charge Defend
+692	692：タメ～防御Ｐ	SAP_GYBA_2_42	Cannogabang	Laser	Fever Perfect Charge Defend
+693	693：タメ～攻撃	SAP_GYBA_2_50	Cannogabang	Laser	Charge Attack
+694	694：タメ～攻撃Ｆ	SAP_GYBA_2_51	Cannogabang	Laser	Fever Charge Attack
+695	695：タメ～攻撃Ｐ	SAP_GYBA_2_52	Cannogabang	Laser	Fever Perfect Charge Attack
+696	696：ヒーローモード	SAP_GYBA_2_HM	Cannogabang	Laser	Heromode
+697	697：ヒーローモード	SAP_GYBA_2_HM_1	Cannogabang	Laser	Heromode
+698	698：進軍	SAP_FATH_00	Ravenous		March
+699	699：進軍Ｆ	SAP_FATH_01	Ravenous		Fever March
+700	700：進軍Ｐ	SAP_FATH_02	Ravenous		Fever Perfect March
+701	701：防御	SAP_FATH_10	Ravenous		Defend
+702	702：防御Ｆ	SAP_FATH_11	Ravenous		Fever Defend
+703	703：防御Ｐ	SAP_FATH_12	Ravenous		Fever Perfect Defend
+704	704：攻撃	SAP_FATH_20	Ravenous		Attack
+705	705：攻撃Ｆ	SAP_FATH_21	Ravenous		Fever Attack
+706	706：攻撃Ｐ	SAP_FATH_22	Ravenous		Fever Perfect Attack
+707	707：タメ	SAP_FATH_30	Ravenous		Charge
+708	708：タメＦ	SAP_FATH_31	Ravenous		Fever Charge
+709	709：タメＰ	SAP_FATH_32	Ravenous		Fever Perfect Charge
+710	710：タメ～防御	SAP_FATH_40	Ravenous		Charge Defend
+711	711：タメ～防御Ｆ	SAP_FATH_41	Ravenous		Fever Charge Defend
+712	712：タメ～防御Ｐ	SAP_FATH_42	Ravenous		Fever Perfect Charge Defend
+713	713：タメ～攻撃	SAP_FATH_50	Ravenous		Charge Attack
+714	714：タメ～攻撃Ｆ	SAP_FATH_51	Ravenous		Fever Charge Attack
+715	715：タメ～攻撃Ｐ	SAP_FATH_52	Ravenous		Fever Perfect Charge Attack
+716	716：退避	SAP_FATH_60	Ravenous		Dodge
+717	717：ジャンプ	SAP_FATH_70	Ravenous		Jump
+718	718：騒ぐ	SAP_FATH_80	Ravenous		Party
+719	719：後退	SAP_FATH_90	Ravenous		Chakapata
+720	720：ヒーローモード	SAP_FATH_HM	Ravenous		Heromode
+721	721：ヒーローモード	SAP_FATH_HM_1	Ravenous		Heromode
+722	722：進軍	SAP_JSTY_00	Sonarchy		March
+723	723：進軍Ｆ	SAP_JSTY_01	Sonarchy		Fever March
+724	724：進軍Ｐ	SAP_JSTY_02	Sonarchy		Fever Perfect March
+725	725：防御	SAP_JSTY_10	Sonarchy		Defend
+726	726：防御Ｆ	SAP_JSTY_11	Sonarchy		Fever Defend
+727	727：防御Ｐ	SAP_JSTY_12	Sonarchy		Fever Perfect Defend
+728	728：攻撃	SAP_JSTY_20	Sonarchy		Attack
+729	729：攻撃Ｆ	SAP_JSTY_21	Sonarchy		Fever Attack
+730	730：攻撃Ｐ	SAP_JSTY_22	Sonarchy		Fever Perfect Attack
+731	731：タメ	SAP_JSTY_30	Sonarchy		Charge
+732	732：タメＦ	SAP_JSTY_31	Sonarchy		Fever Charge
+733	733：タメＰ	SAP_JSTY_32	Sonarchy		Fever Perfect Charge
+734	734：タメ～防御	SAP_JSTY_40	Sonarchy		Charge Defend
+735	735：タメ～防御Ｆ	SAP_JSTY_41	Sonarchy		Fever Charge Defend
+736	736：タメ～防御Ｐ	SAP_JSTY_42	Sonarchy		Fever Perfect Charge Defend
+737	737：タメ～防御	SAP_JSTY_40_ICE	Sonarchy	High Freeze Rate*	Charge Defend
+738	738：タメ～防御Ｆ	SAP_JSTY_41_ICE	Sonarchy	High Freeze Rate*	Fever Charge Defend
+739	739：タメ～防御Ｐ	SAP_JSTY_42_ICE	Sonarchy	High Freeze Rate*	Fever Perfect Charge Defend
+740	740：タメ～攻撃	SAP_JSTY_50	Sonarchy		Charge Attack
+741	741：タメ～攻撃Ｆ	SAP_JSTY_51	Sonarchy		Fever Charge Attack
+742	742：タメ～攻撃Ｐ	SAP_JSTY_52	Sonarchy		Fever Perfect Charge Attack
+743	743：退避	SAP_JSTY_60	Sonarchy		Dodge
+744	744：ジャンプ	SAP_JSTY_70	Sonarchy		Jump
+745	745：騒ぐ	SAP_JSTY_80	Sonarchy		Party
+746	746：後退	SAP_JSTY_90	Sonarchy		Chakapata
+747	747：ヒーローモード	SAP_JSTY_HM	Sonarchy		Heromode
+748	748：ヒーローモード	SAP_JSTY_HM_1	Sonarchy		Heromode
+749	749：進軍	SAP_VARO_00	Ragewolf		March
+750	750：進軍Ｆ	SAP_VARO_01	Ragewolf		Fever March
+751	751：進軍Ｐ	SAP_VARO_02	Ragewolf		Fever Perfect March
+752	752：防御	SAP_VARO_10	Ragewolf		Defend
+753	753：防御Ｆ	SAP_VARO_11	Ragewolf		Fever Defend
+754	754：防御Ｐ	SAP_VARO_12	Ragewolf		Fever Perfect Defend
+755	755：攻撃	SAP_VARO_20	Ragewolf		Attack
+756	756：攻撃Ｆ	SAP_VARO_21	Ragewolf		Fever Attack
+757	757：攻撃Ｐ	SAP_VARO_22	Ragewolf		Fever Perfect Attack
+758	758：タメ	SAP_VARO_30	Ragewolf		Charge
+759	759：タメＦ	SAP_VARO_31	Ragewolf		Fever Charge
+760	760：タメＰ	SAP_VARO_32	Ragewolf		Fever Perfect Charge
+761	761：タメ～防御	SAP_VARO_40	Ragewolf		Charge Defend
+762	762：タメ～防御Ｆ	SAP_VARO_41	Ragewolf		Fever Charge Defend
+763	763：タメ～防御Ｐ	SAP_VARO_42	Ragewolf		Fever Perfect Charge Defend
+764	764：タメ～攻撃	SAP_VARO_50	Ragewolf		Charge Attack
+765	765：タメ～攻撃Ｆ	SAP_VARO_51	Ragewolf		Fever Charge Attack
+766	766：タメ～攻撃Ｐ	SAP_VARO_52	Ragewolf		Fever Perfect Charge Attack
+767	767：退避	SAP_VARO_60	Ragewolf		Dodge
+768	768：ジャンプ	SAP_VARO_70	Ragewolf		Jump
+769	769：騒ぐ	SAP_VARO_80	Ragewolf		Party
+770	770：後退	SAP_VARO_90	Ragewolf		Chakapata
+771	771：ヒーローモード	SAP_VARO_HM	Ragewolf		Heromode
+772	772：ヒーローモード	SAP_VARO_HM_1	Ragewolf		Heromode
+773	773：進軍	SAP_INSN_00	Naughtyfins		March
+774	774：進軍Ｆ	SAP_INSN_01	Naughtyfins		Fever March
+775	775：進軍Ｐ	SAP_INSN_02	Naughtyfins		Fever Perfect March
+776	776：防御	SAP_INSN_10	Naughtyfins		Defend
+777	777：防御Ｆ	SAP_INSN_11	Naughtyfins		Fever Defend
+778	778：防御Ｐ	SAP_INSN_12	Naughtyfins		Fever Perfect Defend
+779	779：攻撃	SAP_INSN_20	Naughtyfins		Attack
+780	780：攻撃Ｆ	SAP_INSN_21	Naughtyfins		Fever Attack
+781	781：攻撃Ｐ	SAP_INSN_22	Naughtyfins		Fever Perfect Attack
+782	782：タメ	SAP_INSN_30	Naughtyfins		Charge
+783	783：タメＦ	SAP_INSN_31	Naughtyfins		Fever Charge
+784	784：タメＰ	SAP_INSN_32	Naughtyfins		Fever Perfect Charge
+785	785：タメ～防御	SAP_INSN_40	Naughtyfins		Charge Defend
+786	786：タメ～防御Ｆ	SAP_INSN_41	Naughtyfins		Fever Charge Defend
+787	787：タメ～防御Ｐ	SAP_INSN_42	Naughtyfins		Fever Perfect Charge Defend
+788	788：タメ～攻撃	SAP_INSN_50	Naughtyfins		Charge Attack
+789	789：タメ～攻撃Ｆ	SAP_INSN_51	Naughtyfins		Fever Charge Attack
+790	790：タメ～攻撃Ｐ	SAP_INSN_52	Naughtyfins		Fever Perfect Charge Attack
+791	791：退避	SAP_INSN_60	Naughtyfins		Dodge
+792	792：ジャンプ	SAP_INSN_70	Naughtyfins		Jump
+793	793：騒ぐ	SAP_INSN_80	Naughtyfins		Party
+794	794：後退	SAP_INSN_90	Naughtyfins		Chakapata
+795	795：ヒーローモード	SAP_INSN_HM	Naughtyfins		Heromode
+796	796：ヒーローモード	SAP_INSN_HM_1	Naughtyfins		Heromode
+797	797：進軍	SAP_FORD_00	Slogturtle		March
+798	798：進軍Ｆ	SAP_FORD_01	Slogturtle		Fever March
+799	799：進軍Ｐ	SAP_FORD_02	Slogturtle		Fever Perfect March
+800	800：防御	SAP_FORD_10	Slogturtle		Defend
+801	801：防御Ｆ	SAP_FORD_11	Slogturtle		Fever Defend
+802	802：防御Ｐ	SAP_FORD_12	Slogturtle		Fever Perfect Defend
+803	803：攻撃	SAP_FORD_20	Slogturtle		Attack
+804	804：攻撃Ｆ	SAP_FORD_21	Slogturtle		Fever Attack
+805	805：攻撃Ｐ	SAP_FORD_22	Slogturtle		Fever Perfect Attack
+806	806：タメ	SAP_FORD_30	Slogturtle		Charge
+807	807：タメＦ	SAP_FORD_31	Slogturtle		Fever Charge
+808	808：タメＰ	SAP_FORD_32	Slogturtle		Fever Perfect Charge
+809	809：タメ～防御	SAP_FORD_40	Slogturtle		Charge Defend
+810	810：タメ～防御Ｆ	SAP_FORD_41	Slogturtle		Fever Charge Defend
+811	811：タメ～防御Ｐ	SAP_FORD_42	Slogturtle		Fever Perfect Charge Defend
+812	812：タメ～攻撃	SAP_FORD_50	Slogturtle		Charge Attack
+813	813：タメ～攻撃Ｆ	SAP_FORD_51	Slogturtle		Fever Charge Attack
+814	814：タメ～攻撃Ｐ	SAP_FORD_52	Slogturtle		Fever Perfect Charge Attack
+815	815：退避	SAP_FORD_60	Slogturtle		Dodge
+816	816：ジャンプ	SAP_FORD_70	Slogturtle		Jump
+817	817：騒ぐ	SAP_FORD_80	Slogturtle		Party
+818	818：後退	SAP_FORD_90	Slogturtle		Chakapata
+819	819：ヒーローモード	SAP_FORD_HM	Slogturtle		Heromode
+820	820：ヒーローモード	SAP_FORD_HM_1	Slogturtle		Heromode
+821	821：進軍	SAP_RBRA_00	Covet-Hiss		March
+822	822：進軍Ｆ	SAP_RBRA_01	Covet-Hiss		Fever March
+823	823：進軍Ｐ	SAP_RBRA_02	Covet-Hiss		Fever Perfect March
+824	824：防御	SAP_RBRA_10	Covet-Hiss	Cannon	Defend
+825	825：防御Ｆ	SAP_RBRA_11	Covet-Hiss	Cannon	Fever Defend
+826	826：防御Ｐ	SAP_RBRA_12	Covet-Hiss	Cannon	Fever Perfect Defend
+827	827：攻撃	SAP_RBRA_20	Covet-Hiss	Cannon	Attack
+828	828：攻撃Ｆ	SAP_RBRA_21	Covet-Hiss	Cannon	Fever Attack
+829	829：攻撃Ｐ	SAP_RBRA_22	Covet-Hiss	Cannon	Fever Perfect Attack
+830	830：タメ	SAP_RBRA_30	Covet-Hiss	Cannon	Charge
+831	831：タメＦ	SAP_RBRA_31	Covet-Hiss	Cannon	Fever Charge
+832	832：タメＰ	SAP_RBRA_32	Covet-Hiss	Cannon	Fever Perfect Charge
+833	833：タメ～防御	SAP_RBRA_40	Covet-Hiss	Cannon	Charge Defend
+834	834：タメ～防御Ｆ	SAP_RBRA_41	Covet-Hiss	Cannon	Fever Charge Defend
+835	835：タメ～防御Ｐ	SAP_RBRA_42	Covet-Hiss	Cannon	Fever Perfect Charge Defend
+836	836：タメ～攻撃	SAP_RBRA_50	Covet-Hiss	Cannon	Charge Attack
+837	837：タメ～攻撃Ｆ	SAP_RBRA_51	Covet-Hiss	Cannon	Fever Charge Attack
+838	838：タメ～攻撃Ｐ	SAP_RBRA_52	Covet-Hiss	Cannon	Fever Perfect Charge Attack
+839	839：退避	SAP_RBRA_60	Covet-Hiss		Dodge
+840	840：ジャンプ	SAP_RBRA_70	Covet-Hiss		Jump
+841	841：騒ぐ	SAP_RBRA_80	Covet-Hiss		Party
+842	842：後退	SAP_RBRA_90	Covet-Hiss		Chakapata
+843	843：ヒーローモード	SAP_RBRA_HM	Covet-Hiss	Cannon	Heromode
+844	844：ヒーローモード	SAP_RBRA_HM_1	Covet-Hiss	Cannon	Heromode
+845	845：防御	SAP_RBRA_1_10	Covet-Hiss	Blunderbuss	Defend
+846	846：防御Ｆ	SAP_RBRA_1_11	Covet-Hiss	Blunderbuss	Fever Defend
+847	847：防御Ｐ	SAP_RBRA_1_12	Covet-Hiss	Blunderbuss	Fever Perfect Defend
+848	848：攻撃	SAP_RBRA_1_20	Covet-Hiss	Blunderbuss	Attack
+849	849：攻撃Ｆ	SAP_RBRA_1_21	Covet-Hiss	Blunderbuss	Fever Attack
+850	850：攻撃Ｐ	SAP_RBRA_1_22	Covet-Hiss	Blunderbuss	Fever Perfect Attack
+851	851：タメ～防御	SAP_RBRA_1_40	Covet-Hiss	Blunderbuss	Charge Defend
+852	852：タメ～防御Ｆ	SAP_RBRA_1_41	Covet-Hiss	Blunderbuss	Fever Charge Defend
+853	853：タメ～防御Ｐ	SAP_RBRA_1_42	Covet-Hiss	Blunderbuss	Fever Perfect Charge Defend
+854	854：タメ～攻撃	SAP_RBRA_1_50	Covet-Hiss	Blunderbuss	Charge Attack
+855	855：タメ～攻撃Ｆ	SAP_RBRA_1_51	Covet-Hiss	Blunderbuss	Fever Charge Attack
+856	856：タメ～攻撃Ｐ	SAP_RBRA_1_52	Covet-Hiss	Blunderbuss	Fever Perfect Charge Attack
+857	857：ヒーローモード	SAP_RBRA_1_HM	Covet-Hiss	Blunderbuss	Heromode
+858	858：ヒーローモード	SAP_RBRA_1_HM_1	Covet-Hiss	Blunderbuss	Heromode
+859	859：防御	SAP_RBRA_2_10	Covet-Hiss	Laser	Defend
+860	860：防御Ｆ	SAP_RBRA_2_11	Covet-Hiss	Laser	Fever Defend
+861	861：防御Ｐ	SAP_RBRA_2_12	Covet-Hiss	Laser	Fever Perfect Defend
+862	862：攻撃	SAP_RBRA_2_20	Covet-Hiss	Laser	Attack
+863	863：攻撃Ｆ	SAP_RBRA_2_21	Covet-Hiss	Laser	Fever Attack
+864	864：攻撃Ｐ	SAP_RBRA_2_22	Covet-Hiss	Laser	Fever Perfect Attack
+865	865：タメ～防御	SAP_RBRA_2_40	Covet-Hiss	Laser	Charge Defend
+866	866：タメ～防御Ｆ	SAP_RBRA_2_41	Covet-Hiss	Laser	Fever Charge Defend
+867	867：タメ～防御Ｐ	SAP_RBRA_2_42	Covet-Hiss	Laser	Fever Perfect Charge Defend
+868	868：タメ～攻撃	SAP_RBRA_2_50	Covet-Hiss	Laser	Charge Attack
+869	869：タメ～攻撃Ｆ	SAP_RBRA_2_51	Covet-Hiss	Laser	Fever Charge Attack
+870	870：タメ～攻撃Ｐ	SAP_RBRA_2_52	Covet-Hiss	Laser	Fever Perfect Charge Attack
+871	871：ヒーローモード	SAP_RBRA_2_HM	Covet-Hiss	Laser	Heromode
+872	872：ヒーローモード	SAP_RBRA_2_HM_1	Covet-Hiss	Laser	Heromode
+873	873：進軍	SAP_HWMT_00	Buzzcrave		March
+874	874：進軍Ｆ	SAP_HWMT_01	Buzzcrave		Fever March
+875	875：進軍Ｐ	SAP_HWMT_02	Buzzcrave		Fever Perfect March
+876	876：防御	SAP_HWMT_10	Buzzcrave		Defend
+877	877：防御Ｆ	SAP_HWMT_11	Buzzcrave		Fever Defend
+878	878：防御Ｐ	SAP_HWMT_12	Buzzcrave		Fever Perfect Defend
+879	879：攻撃	SAP_HWMT_20	Buzzcrave		Attack
+880	880：攻撃Ｆ	SAP_HWMT_21	Buzzcrave		Fever Attack
+881	881：攻撃Ｐ	SAP_HWMT_22	Buzzcrave		Fever Perfect Attack
+882	882：タメ	SAP_HWMT_30	Buzzcrave		Charge
+883	883：タメＦ	SAP_HWMT_31	Buzzcrave		Fever Charge
+884	884：タメＰ	SAP_HWMT_32	Buzzcrave		Fever Perfect Charge
+885	885：タメ～防御	SAP_HWMT_40	Buzzcrave		Charge Defend
+886	886：タメ～防御Ｆ	SAP_HWMT_41	Buzzcrave		Fever Charge Defend
+887	887：タメ～防御Ｐ	SAP_HWMT_42	Buzzcrave		Fever Perfect Charge Defend
+888	888：タメ～攻撃	SAP_HWMT_50	Buzzcrave		Charge Attack
+889	889：タメ～攻撃Ｆ	SAP_HWMT_51	Buzzcrave		Fever Charge Attack
+890	890：タメ～攻撃Ｐ	SAP_HWMT_52	Buzzcrave		Fever Perfect Charge Attack
+891	891：退避	SAP_HWMT_60	Buzzcrave		Dodge
+892	892：ジャンプ	SAP_HWMT_70	Buzzcrave		Jump
+893	893：騒ぐ	SAP_HWMT_80	Buzzcrave		Party
+894	894：後退	SAP_HWMT_90	Buzzcrave		Chakapata
+895	895：ヒーローモード	SAP_HWMT_HM	Buzzcrave		Heromode
+896	896：ヒーローモード	SAP_HWMT_HM_1	Buzzcrave		Heromode
+897	897：進軍	SAP_ENEMY_FATH_00	AI Ravenous		March
+898	898：進軍Ｆ	SAP_ENEMY_FATH_01	AI Ravenous		Fever March
+899	899：進軍Ｐ	SAP_ENEMY_FATH_02	AI Ravenous		Fever Perfect March
+900	900：防御	SAP_ENEMY_FATH_10	AI Ravenous		Defend
+901	901：防御Ｆ	SAP_ENEMY_FATH_11	AI Ravenous		Fever Defend
+902	902：防御Ｐ	SAP_ENEMY_FATH_12	AI Ravenous		Fever Perfect Defend
+903	903：攻撃	SAP_ENEMY_FATH_20	AI Ravenous		Attack
+904	904：攻撃Ｆ	SAP_ENEMY_FATH_21	AI Ravenous		Fever Attack
+905	905：攻撃Ｐ	SAP_ENEMY_FATH_22	AI Ravenous		Fever Perfect Attack
+906	906：タメ	SAP_ENEMY_FATH_30	AI Ravenous		Charge
+907	907：タメＦ	SAP_ENEMY_FATH_31	AI Ravenous		Fever Charge
+908	908：タメＰ	SAP_ENEMY_FATH_32	AI Ravenous		Fever Perfect Charge
+909	909：タメ～防御	SAP_ENEMY_FATH_40	AI Ravenous		Charge Defend
+910	910：タメ～防御Ｆ	SAP_ENEMY_FATH_41	AI Ravenous		Fever Charge Defend
+911	911：タメ～防御Ｐ	SAP_ENEMY_FATH_42	AI Ravenous		Fever Perfect Charge Defend
+912	912：タメ～攻撃	SAP_ENEMY_FATH_50	AI Ravenous		Charge Attack
+913	913：タメ～攻撃Ｆ	SAP_ENEMY_FATH_51	AI Ravenous		Fever Charge Attack
+914	914：タメ～攻撃Ｐ	SAP_ENEMY_FATH_52	AI Ravenous		Fever Perfect Charge Attack
+915	915：退避	SAP_ENEMY_FATH_60	AI Ravenous		Dodge
+916	916：ジャンプ	SAP_ENEMY_FATH_70	AI Ravenous		Jump
+917	917：騒ぐ	SAP_ENEMY_FATH_80	AI Ravenous		Party
+918	918：ヒーローモード	SAP_ENEMY_FATH_HM	AI Ravenous		Heromode
+919	919：ヒーローモード	SAP_ENEMY_FATH_HM_1	AI Ravenous		Heromode
+920	920：進軍	SAP_ENEMY_JSTY_00	AI Sonarchy		March
+921	921：進軍Ｆ	SAP_ENEMY_JSTY_01	AI Sonarchy		Fever March
+922	922：進軍Ｐ	SAP_ENEMY_JSTY_02	AI Sonarchy		Fever Perfect March
+923	923：防御	SAP_ENEMY_JSTY_10	AI Sonarchy		Defend
+924	924：防御Ｆ	SAP_ENEMY_JSTY_11	AI Sonarchy		Fever Defend
+925	925：防御Ｐ	SAP_ENEMY_JSTY_12	AI Sonarchy		Fever Perfect Defend
+926	926：攻撃	SAP_ENEMY_JSTY_20	AI Sonarchy		Attack
+927	927：攻撃Ｆ	SAP_ENEMY_JSTY_21	AI Sonarchy		Fever Attack
+928	928：攻撃Ｐ	SAP_ENEMY_JSTY_22	AI Sonarchy		Fever Perfect Attack
+929	929：タメ	SAP_ENEMY_JSTY_30	AI Sonarchy		Charge
+930	930：タメＦ	SAP_ENEMY_JSTY_31	AI Sonarchy		Fever Charge
+931	931：タメＰ	SAP_ENEMY_JSTY_32	AI Sonarchy		Fever Perfect Charge
+932	932：タメ～防御	SAP_ENEMY_JSTY_40	AI Sonarchy		Charge Defend
+933	933：タメ～防御Ｆ	SAP_ENEMY_JSTY_41	AI Sonarchy		Fever Charge Defend
+934	934：タメ～防御Ｐ	SAP_ENEMY_JSTY_42	AI Sonarchy		Fever Perfect Charge Defend
+935	935：タメ～攻撃	SAP_ENEMY_JSTY_50	AI Sonarchy		Charge Attack
+936	936：タメ～攻撃Ｆ	SAP_ENEMY_JSTY_51	AI Sonarchy		Fever Charge Attack
+937	937：タメ～攻撃Ｐ	SAP_ENEMY_JSTY_52	AI Sonarchy		Fever Perfect Charge Attack
+938	938：退避	SAP_ENEMY_JSTY_60	AI Sonarchy		Dodge
+939	939：ジャンプ	SAP_ENEMY_JSTY_70	AI Sonarchy		Jump
+940	940：騒ぐ	SAP_ENEMY_JSTY_80	AI Sonarchy		Party
+941	941：ヒーローモード	SAP_ENEMY_JSTY_HM	AI Sonarchy		Heromode
+942	942：ヒーローモード	SAP_ENEMY_JSTY_HM_1	AI Sonarchy		Heromode
+943	943：進軍	SAP_ENEMY_VARO_00	AI Ragewolf		March
+944	944：進軍Ｆ	SAP_ENEMY_VARO_01	AI Ragewolf		Fever March
+945	945：進軍Ｐ	SAP_ENEMY_VARO_02	AI Ragewolf		Fever Perfect March
+946	946：防御	SAP_ENEMY_VARO_10	AI Ragewolf		Defend
+947	947：防御Ｆ	SAP_ENEMY_VARO_11	AI Ragewolf		Fever Defend
+948	948：防御Ｐ	SAP_ENEMY_VARO_12	AI Ragewolf		Fever Perfect Defend
+949	949：攻撃	SAP_ENEMY_VARO_20	AI Ragewolf		Attack
+950	950：攻撃Ｆ	SAP_ENEMY_VARO_21	AI Ragewolf		Fever Attack
+951	951：攻撃Ｐ	SAP_ENEMY_VARO_22	AI Ragewolf		Fever Perfect Attack
+952	952：タメ	SAP_ENEMY_VARO_30	AI Ragewolf		Charge
+953	953：タメＦ	SAP_ENEMY_VARO_31	AI Ragewolf		Fever Charge
+954	954：タメＰ	SAP_ENEMY_VARO_32	AI Ragewolf		Fever Perfect Charge
+955	955：タメ～防御	SAP_ENEMY_VARO_40	AI Ragewolf		Charge Defend
+956	956：タメ～防御Ｆ	SAP_ENEMY_VARO_41	AI Ragewolf		Fever Charge Defend
+957	957：タメ～防御Ｐ	SAP_ENEMY_VARO_42	AI Ragewolf		Fever Perfect Charge Defend
+958	958：タメ～攻撃	SAP_ENEMY_VARO_50	AI Ragewolf		Charge Attack
+959	959：タメ～攻撃Ｆ	SAP_ENEMY_VARO_51	AI Ragewolf		Fever Charge Attack
+960	960：タメ～攻撃Ｐ	SAP_ENEMY_VARO_52	AI Ragewolf		Fever Perfect Charge Attack
+961	961：退避	SAP_ENEMY_VARO_60	AI Ragewolf		Dodge
+962	962：ジャンプ	SAP_ENEMY_VARO_70	AI Ragewolf		Jump
+963	963：騒ぐ	SAP_ENEMY_VARO_80	AI Ragewolf		Party
+964	964：ヒーローモード	SAP_ENEMY_VARO_HM	AI Ragewolf		Heromode
+965	965：ヒーローモード	SAP_ENEMY_VARO_HM_1	AI Ragewolf		Heromode
+966	966：進軍	SAP_ENEMY_INSN_00	AI Naughtyfins		March
+967	967：進軍Ｆ	SAP_ENEMY_INSN_01	AI Naughtyfins		Fever March
+968	968：進軍Ｐ	SAP_ENEMY_INSN_02	AI Naughtyfins		Fever Perfect March
+969	969：防御	SAP_ENEMY_INSN_10	AI Naughtyfins		Defend
+970	970：防御Ｆ	SAP_ENEMY_INSN_11	AI Naughtyfins		Fever Defend
+971	971：防御Ｐ	SAP_ENEMY_INSN_12	AI Naughtyfins		Fever Perfect Defend
+972	972：攻撃	SAP_ENEMY_INSN_20	AI Naughtyfins		Attack
+973	973：攻撃Ｆ	SAP_ENEMY_INSN_21	AI Naughtyfins		Fever Attack
+974	974：攻撃Ｐ	SAP_ENEMY_INSN_22	AI Naughtyfins		Fever Perfect Attack
+975	975：タメ	SAP_ENEMY_INSN_30	AI Naughtyfins		Charge
+976	976：タメＦ	SAP_ENEMY_INSN_31	AI Naughtyfins		Fever Charge
+977	977：タメＰ	SAP_ENEMY_INSN_32	AI Naughtyfins		Fever Perfect Charge
+978	978：タメ～防御	SAP_ENEMY_INSN_40	AI Naughtyfins		Charge Defend
+979	979：タメ～防御Ｆ	SAP_ENEMY_INSN_41	AI Naughtyfins		Fever Charge Defend
+980	980：タメ～防御Ｐ	SAP_ENEMY_INSN_42	AI Naughtyfins		Fever Perfect Charge Defend
+981	981：タメ～攻撃	SAP_ENEMY_INSN_50	AI Naughtyfins		Charge Attack
+982	982：タメ～攻撃Ｆ	SAP_ENEMY_INSN_51	AI Naughtyfins		Fever Charge Attack
+983	983：タメ～攻撃Ｐ	SAP_ENEMY_INSN_52	AI Naughtyfins		Fever Perfect Charge Attack
+984	984：退避	SAP_ENEMY_INSN_60	AI Naughtyfins		Dodge
+985	985：ジャンプ	SAP_ENEMY_INSN_70	AI Naughtyfins		Jump
+986	986：騒ぐ	SAP_ENEMY_INSN_80	AI Naughtyfins		Party
+987	987：ヒーローモード	SAP_ENEMY_INSN_HM	AI Naughtyfins		Heromode
+988	988：ヒーローモード	SAP_ENEMY_INSN_HM_1	AI Naughtyfins		Heromode
+989	989：進軍	SAP_ENEMY_FORD_00	AI Slogturtle		March
+990	990：進軍Ｆ	SAP_ENEMY_FORD_01	AI Slogturtle		Fever March
+991	991：進軍Ｐ	SAP_ENEMY_FORD_02	AI Slogturtle		Fever Perfect March
+992	992：防御	SAP_ENEMY_FORD_10	AI Slogturtle		Defend
+993	993：防御Ｆ	SAP_ENEMY_FORD_11	AI Slogturtle		Fever Defend
+994	994：防御Ｐ	SAP_ENEMY_FORD_12	AI Slogturtle		Fever Perfect Defend
+995	995：攻撃	SAP_ENEMY_FORD_20	AI Slogturtle		Attack
+996	996：攻撃Ｆ	SAP_ENEMY_FORD_21	AI Slogturtle		Fever Attack
+997	997：攻撃Ｐ	SAP_ENEMY_FORD_22	AI Slogturtle		Fever Perfect Attack
+998	998：タメ	SAP_ENEMY_FORD_30	AI Slogturtle		Charge
+999	999：タメＦ	SAP_ENEMY_FORD_31	AI Slogturtle		Fever Charge
+1000	1000：タメＰ	SAP_ENEMY_FORD_32	AI Slogturtle		Fever Perfect Charge
+1001	1001：タメ～防御	SAP_ENEMY_FORD_40	AI Slogturtle		Charge Defend
+1002	1002：タメ～防御Ｆ	SAP_ENEMY_FORD_41	AI Slogturtle		Fever Charge Defend
+1003	1003：タメ～防御Ｐ	SAP_ENEMY_FORD_42	AI Slogturtle		Fever Perfect Charge Defend
+1004	1004：タメ～攻撃	SAP_ENEMY_FORD_50	AI Slogturtle		Charge Attack
+1005	1005：タメ～攻撃Ｆ	SAP_ENEMY_FORD_51	AI Slogturtle		Fever Charge Attack
+1006	1006：タメ～攻撃Ｐ	SAP_ENEMY_FORD_52	AI Slogturtle		Fever Perfect Charge Attack
+1007	1007：退避	SAP_ENEMY_FORD_60	AI Slogturtle		Dodge
+1008	1008：ジャンプ	SAP_ENEMY_FORD_70	AI Slogturtle		Jump
+1009	1009：騒ぐ	SAP_ENEMY_FORD_80	AI Slogturtle		Party
+1010	1010：ヒーローモード	SAP_ENEMY_FORD_HM	AI Slogturtle		Heromode
+1011	1011：ヒーローモード	SAP_ENEMY_FORD_HM_1	AI Slogturtle		Heromode
+1012	1012：ヒーローモード	SAP_ENEMY_FORD_HM	AI Slogturtle	Missile VS slog	Heromode
+1013	1013：ヒーローモード	SAP_ENEMY_FORD_HM_1	AI Slogturtle	Missile VS slog	Heromode
+1014	1014：進軍	SAP_ENEMY_RBRA_00	AI Covet-Hiss		March
+1015	1015：進軍Ｆ	SAP_ENEMY_RBRA_01	AI Covet-Hiss		Fever March
+1016	1016：進軍Ｐ	SAP_ENEMY_RBRA_02	AI Covet-Hiss		Fever Perfect March
+1017	1017：防御	SAP_ENEMY_RBRA_10	AI Covet-Hiss	Cannon	Defend
+1018	1018：防御Ｆ	SAP_ENEMY_RBRA_11	AI Covet-Hiss	Cannon	Fever Defend
+1019	1019：防御Ｐ	SAP_ENEMY_RBRA_12	AI Covet-Hiss	Cannon	Fever Perfect Defend
+1020	1020：攻撃	SAP_ENEMY_RBRA_20	AI Covet-Hiss	Cannon	Attack
+1021	1021：攻撃Ｆ	SAP_ENEMY_RBRA_21	AI Covet-Hiss	Cannon	Fever Attack
+1022	1022：攻撃Ｐ	SAP_ENEMY_RBRA_22	AI Covet-Hiss	Cannon	Fever Perfect Attack
+1023	1023：タメ	SAP_ENEMY_RBRA_30	AI Covet-Hiss	Cannon	Charge
+1024	1024：タメＦ	SAP_ENEMY_RBRA_31	AI Covet-Hiss	Cannon	Fever Charge
+1025	1025：タメＰ	SAP_ENEMY_RBRA_32	AI Covet-Hiss	Cannon	Fever Perfect Charge
+1026	1026：タメ～防御	SAP_ENEMY_RBRA_40	AI Covet-Hiss	Cannon	Charge Defend
+1027	1027：タメ～防御Ｆ	SAP_ENEMY_RBRA_41	AI Covet-Hiss	Cannon	Fever Charge Defend
+1028	1028：タメ～防御Ｐ	SAP_ENEMY_RBRA_42	AI Covet-Hiss	Cannon	Fever Perfect Charge Defend
+1029	1029：タメ～攻撃	SAP_ENEMY_RBRA_50	AI Covet-Hiss	Cannon	Charge Attack
+1030	1030：タメ～攻撃Ｆ	SAP_ENEMY_RBRA_51	AI Covet-Hiss	Cannon	Fever Charge Attack
+1031	1031：タメ～攻撃Ｐ	SAP_ENEMY_RBRA_52	AI Covet-Hiss	Cannon	Fever Perfect Charge Attack
+1032	1032：退避	SAP_ENEMY_RBRA_60	AI Covet-Hiss		Dodge
+1033	1033：ジャンプ	SAP_ENEMY_RBRA_70	AI Covet-Hiss		Jump
+1034	1034：騒ぐ	SAP_ENEMY_RBRA_80	AI Covet-Hiss		Party
+1035	1035：ヒーローモード	SAP_ENEMY_RBRA_HM	AI Covet-Hiss	Cannon	Heromode
+1036	1036：ヒーローモード	SAP_ENEMY_RBRA_HM_1	AI Covet-Hiss	Cannon	Heromode
+1037	1037：防御	SAP_ENEMY_RBRA_1_10	AI Covet-Hiss	Blunderbuss	Defend
+1038	1038：防御Ｆ	SAP_ENEMY_RBRA_1_11	AI Covet-Hiss	Blunderbuss	Fever Defend
+1039	1039：防御Ｐ	SAP_ENEMY_RBRA_1_12	AI Covet-Hiss	Blunderbuss	Fever Perfect Defend
+1040	1040：攻撃	SAP_ENEMY_RBRA_1_20	AI Covet-Hiss	Blunderbuss	Attack
+1041	1041：攻撃Ｆ	SAP_ENEMY_RBRA_1_21	AI Covet-Hiss	Blunderbuss	Fever Attack
+1042	1042：攻撃Ｐ	SAP_ENEMY_RBRA_1_22	AI Covet-Hiss	Blunderbuss	Fever Perfect Attack
+1043	1043：タメ～防御	SAP_ENEMY_RBRA_1_40	AI Covet-Hiss	Blunderbuss	Charge Defend
+1044	1044：タメ～防御Ｆ	SAP_ENEMY_RBRA_1_41	AI Covet-Hiss	Blunderbuss	Fever Charge Defend
+1045	1045：タメ～防御Ｐ	SAP_ENEMY_RBRA_1_42	AI Covet-Hiss	Blunderbuss	Fever Perfect Charge Defend
+1046	1046：タメ～攻撃	SAP_ENEMY_RBRA_1_50	AI Covet-Hiss	Blunderbuss	Charge Attack
+1047	1047：タメ～攻撃Ｆ	SAP_ENEMY_RBRA_1_51	AI Covet-Hiss	Blunderbuss	Fever Charge Attack
+1048	1048：タメ～攻撃Ｐ	SAP_ENEMY_RBRA_1_52	AI Covet-Hiss	Blunderbuss	Fever Perfect Charge Attack
+1049	1049：ヒーローモード	SAP_ENEMY_RBRA_1_HM	AI Covet-Hiss	Blunderbuss	Heromode
+1050	1050：ヒーローモード	SAP_ENEMY_RBRA_1_HM_1	AI Covet-Hiss	Blunderbuss	Heromode
+1051	1051：防御	SAP_ENEMY_RBRA_2_10	AI Covet-Hiss	Laser	Defend
+1052	1052：防御Ｆ	SAP_ENEMY_RBRA_2_11	AI Covet-Hiss	Laser	Fever Defend
+1053	1053：防御Ｐ	SAP_ENEMY_RBRA_2_12	AI Covet-Hiss	Laser	Fever Perfect Defend
+1054	1054：攻撃	SAP_ENEMY_RBRA_2_20	AI Covet-Hiss	Laser	Attack
+1055	1055：攻撃Ｆ	SAP_ENEMY_RBRA_2_21	AI Covet-Hiss	Laser	Fever Attack
+1056	1056：攻撃Ｐ	SAP_ENEMY_RBRA_2_22	AI Covet-Hiss	Laser	Fever Perfect Attack
+1057	1057：タメ～防御	SAP_ENEMY_RBRA_2_40	AI Covet-Hiss	Laser	Charge Defend
+1058	1058：タメ～防御Ｆ	SAP_ENEMY_RBRA_2_41	AI Covet-Hiss	Laser	Fever Charge Defend
+1059	1059：タメ～防御Ｐ	SAP_ENEMY_RBRA_2_42	AI Covet-Hiss	Laser	Fever Perfect Charge Defend
+1060	1060：タメ～攻撃	SAP_ENEMY_RBRA_2_50	AI Covet-Hiss	Laser	Charge Attack
+1061	1061：タメ～攻撃Ｆ	SAP_ENEMY_RBRA_2_51	AI Covet-Hiss	Laser	Fever Charge Attack
+1062	1062：タメ～攻撃Ｐ	SAP_ENEMY_RBRA_2_52	AI Covet-Hiss	Laser	Fever Perfect Charge Attack
+1063	1063：ヒーローモード	SAP_ENEMY_RBRA_2_HM	AI Covet-Hiss	Laser	Heromode
+1064	1064：ヒーローモード	SAP_ENEMY_RBRA_2_HM_1	AI Covet-Hiss	Laser	Heromode
+1065	1065：進軍	SAP_ENEMY_HWMT_00	AI Buzzcrave		March
+1066	1066：進軍Ｆ	SAP_ENEMY_HWMT_01	AI Buzzcrave		Fever March
+1067	1067：進軍Ｐ	SAP_ENEMY_HWMT_02	AI Buzzcrave		Fever Perfect March
+1068	1068：防御	SAP_ENEMY_HWMT_10	AI Buzzcrave		Defend
+1069	1069：防御Ｆ	SAP_ENEMY_HWMT_11	AI Buzzcrave		Fever Defend
+1070	1070：防御Ｐ	SAP_ENEMY_HWMT_12	AI Buzzcrave		Fever Perfect Defend
+1071	1071：攻撃	SAP_ENEMY_HWMT_20	AI Buzzcrave		Attack
+1072	1072：攻撃Ｆ	SAP_ENEMY_HWMT_21	AI Buzzcrave		Fever Attack
+1073	1073：攻撃Ｐ	SAP_ENEMY_HWMT_22	AI Buzzcrave		Fever Perfect Attack
+1074	1074：タメ	SAP_ENEMY_HWMT_30	AI Buzzcrave		Charge
+1075	1075：タメＦ	SAP_ENEMY_HWMT_31	AI Buzzcrave		Fever Charge
+1076	1076：タメＰ	SAP_ENEMY_HWMT_32	AI Buzzcrave		Fever Perfect Charge
+1077	1077：タメ～防御	SAP_ENEMY_HWMT_40	AI Buzzcrave		Charge Defend
+1078	1078：タメ～防御Ｆ	SAP_ENEMY_HWMT_41	AI Buzzcrave		Fever Charge Defend
+1079	1079：タメ～防御Ｐ	SAP_ENEMY_HWMT_42	AI Buzzcrave		Fever Perfect Charge Defend
+1080	1080：タメ～攻撃	SAP_ENEMY_HWMT_50	AI Buzzcrave		Charge Attack
+1081	1081：タメ～攻撃Ｆ	SAP_ENEMY_HWMT_51	AI Buzzcrave		Fever Charge Attack
+1082	1082：タメ～攻撃Ｐ	SAP_ENEMY_HWMT_52	AI Buzzcrave		Fever Perfect Charge Attack
+1083	1083：退避	SAP_ENEMY_HWMT_60	AI Buzzcrave		Dodge
+1084	1084：ジャンプ	SAP_ENEMY_HWMT_70	AI Buzzcrave		Jump
+1085	1085：騒ぐ	SAP_ENEMY_HWMT_80	AI Buzzcrave		Party
+1086	1086：ヒーローモード	SAP_ENEMY_HWMT_HM	AI Buzzcrave		Heromode
+1087	1087：ヒーローモード	SAP_ENEMY_HWMT_HM_1	AI Buzzcrave		Heromode
+1305	1305：前進	SAP_GONE_01	Gong		March
+1306	1306：前進	SAP_GONE_02	Gong		March
+1307	1307：※予備	SAP_GONE_03	Gong		?
+1308	1308：ゴーン攻撃	SAP_GONE_21	Gong		Attack
+1309	1309：※予備	SAP_GONE_22	Gong		?
+1310	1310：ゴーン攻撃	SAP_GONE_61	Gong		Gong Special Attack
+1311	1311：ゴーン特殊攻撃１	SAP_GONE_62	Gong		Gong Special Attack 1
+1312	1312：ゴーン特殊攻撃２	SAP_GONE_63	Gong		Gong Special Attack 2
+1313	1313：ゴーン特殊攻撃３	SAP_GONE_64	Gong		Gong Special Attack 3
+1314	1314：※予備	SAP_GONE_65	Gong		?
+1315	1315：進軍１	SAP_JGTN_YARI_00	Yariton		March
+1316	1316：進軍２	SAP_JGTN_YARI_01	Yariton		March2
+1317	1317：近攻１	SAP_JGTN_YARI_10	Yariton		Defend
+1318	1318：近攻２	SAP_JGTN_YARI_11	Yariton		Fever Defend
+1319	1319：近攻３	SAP_JGTN_YARI_12	Yariton		Charge Defend
+1320	1320：遠攻１	SAP_JGTN_YARI_20	Yariton		Attack
+1321	1321：遠攻２	SAP_JGTN_YARI_21	Yariton		Fever Attack
+1322	1322：遠攻３	SAP_JGTN_YARI_22	Yariton		Fever Charge Attack
+1323	1323：進軍１	SAP_JGTN_TATE_00	Tateton		March
+1324	1324：進軍２	SAP_JGTN_TATE_01	Tateton		March2
+1325	1325：近攻１	SAP_JGTN_TATE_10	Tateton		Defend
+1326	1326：近攻２	SAP_JGTN_TATE_11	Tateton		Fever Defend
+1327	1327：近攻３	SAP_JGTN_TATE_12	Tateton		Charge Defend
+1328	1328：遠攻１	SAP_JGTN_TATE_20	Tateton		Attack
+1329	1329：遠攻２	SAP_JGTN_TATE_21	Tateton		Fever Attack
+1330	1330：遠攻３	SAP_JGTN_TATE_22	Tateton		Fever Charge Attack
+1331	1331：進軍１	SAP_JGTN_YUMI_00	Yumiton		March
+1332	1332：進軍２	SAP_JGTN_YUMI_01	Yumiton		March2
+1333	1333：近攻１	SAP_JGTN_YUMI_10	Yumiton		Defend
+1334	1334：近攻２	SAP_JGTN_YUMI_11	Yumiton		Fever Defend
+1335	1335：近攻３	SAP_JGTN_YUMI_12	Yumiton		Charge Defend
+1336	1336：遠攻１	SAP_JGTN_YUMI_20	Yumiton		Attack
+1337	1337：遠攻２	SAP_JGTN_YUMI_21	Yumiton		Fever Attack
+1338	1338：遠攻３	SAP_JGTN_YUMI_22	Yumiton		Fever Charge Attack
+1339	1339：進軍１	SAP_JGTN_KIBA_00	Kibaton		March
+1340	1340：進軍２	SAP_JGTN_KIBA_01	Kibaton		March2
+1341	1341：近攻１	SAP_JGTN_KIBA_10	Kibaton		Defend
+1342	1342：近攻２	SAP_JGTN_KIBA_11	Kibaton		Fever Defend
+1343	1343：近攻３	SAP_JGTN_KIBA_12	Kibaton		Charge Defend
+1344	1344：遠攻１	SAP_JGTN_KIBA_20	Kibaton		Attack
+1345	1345：遠攻２	SAP_JGTN_KIBA_21	Kibaton		Fever Attack
+1346	1346：遠攻３	SAP_JGTN_KIBA_22	Kibaton		Fever Charge Attack
+1347	1347：進軍１	SAP_JGTN_DEKA_00	Dekaton		March
+1348	1348：進軍２	SAP_JGTN_DEKA_01	Dekaton		March2
+1349	1349：近攻１	SAP_JGTN_DEKA_10	Dekaton		Defend
+1350	1350：近攻２	SAP_JGTN_DEKA_11	Dekaton		Fever Defend
+1351	1351：近攻３	SAP_JGTN_DEKA_12	Dekaton		Charge Defend
+1352	1352：遠攻１	SAP_JGTN_DEKA_20	Dekaton		Attack
+1353	1353：遠攻２	SAP_JGTN_DEKA_21	Dekaton		Fever Attack
+1354	1354：遠攻３	SAP_JGTN_DEKA_22	Dekaton		Fever Charge Attack
+1355	1355：進軍１	SAP_JGTN_MEGA_00	Megaton		March
+1356	1356：進軍２	SAP_JGTN_MEGA_01	Megaton		March2
+1357	1357：近攻１	SAP_JGTN_MEGA_10	Megaton		Defend
+1358	1358：近攻２	SAP_JGTN_MEGA_11	Megaton		Fever Defend
+1359	1359：近攻３	SAP_JGTN_MEGA_12	Megaton		Charge Defend
+1360	1360：遠攻１	SAP_JGTN_MEGA_20	Megaton		Attack
+1361	1361：遠攻２	SAP_JGTN_MEGA_21	Megaton		Fever Attack
+1362	1362：遠攻３	SAP_JGTN_MEGA_22	Megaton		Fever Charge Attack
+1363	1363：進軍１	SAP_KAMN_YARI_00	Yarimen		March
+1364	1364：進軍２	SAP_KAMN_YARI_01	Yarimen		March2
+1365	1365：近攻１	SAP_KAMN_YARI_10	Yarimen		Defend
+1366	1366：近攻２	SAP_KAMN_YARI_11	Yarimen		Fever Defend
+1367	1367：近攻３	SAP_KAMN_YARI_12	Yarimen		Charge Defend
+1368	1368：遠攻１	SAP_KAMN_YARI_20	Yarimen		Attack
+1369	1369：遠攻２	SAP_KAMN_YARI_21	Yarimen		Fever Attack
+1370	1370：遠攻３	SAP_KAMN_YARI_22	Yarimen		Fever Charge Attack
+1371	1371：進軍１	SAP_KAMN_TATE_00	Tatemen		March
+1372	1372：進軍２	SAP_KAMN_TATE_01	Tatemen		March2
+1373	1373：近攻１	SAP_KAMN_TATE_10	Tatemen		Defend
+1374	1374：近攻２	SAP_KAMN_TATE_11	Tatemen		Fever Defend
+1375	1375：近攻３	SAP_KAMN_TATE_12	Tatemen		Charge Defend
+1376	1376：遠攻１	SAP_KAMN_TATE_20	Tatemen		Attack
+1377	1377：遠攻２	SAP_KAMN_TATE_21	Tatemen		Fever Attack
+1378	1378：遠攻３	SAP_KAMN_TATE_22	Tatemen		Fever Charge Attack
+1379	1379：進軍１	SAP_KAMN_YUMI_00	Yumimen		March
+1380	1380：進軍２	SAP_KAMN_YUMI_01	Yumimen		March2
+1381	1381：近攻１	SAP_KAMN_YUMI_10	Yumimen		Defend
+1382	1382：近攻２	SAP_KAMN_YUMI_11	Yumimen		Fever Defend
+1383	1383：近攻３	SAP_KAMN_YUMI_12	Yumimen		Charge Defend
+1384	1384：遠攻１	SAP_KAMN_YUMI_20	Yumimen		Attack
+1385	1385：遠攻２	SAP_KAMN_YUMI_21	Yumimen		Fever Attack
+1386	1386：遠攻３	SAP_KAMN_YUMI_22	Yumimen		Fever Charge Attack
+1387	1387：進軍１	SAP_KAMN_KIBA_00	Kibamen		March
+1388	1388：進軍２	SAP_KAMN_KIBA_01	Kibamen		March2
+1389	1389：近攻１	SAP_KAMN_KIBA_10	Kibamen		Defend
+1390	1390：近攻２	SAP_KAMN_KIBA_11	Kibamen		Fever Defend
+1391	1391：近攻３	SAP_KAMN_KIBA_12	Kibamen		Charge Defend
+1392	1392：遠攻１	SAP_KAMN_KIBA_20	Kibamen		Attack
+1393	1393：遠攻２	SAP_KAMN_KIBA_21	Kibamen		Fever Attack
+1394	1394：遠攻３	SAP_KAMN_KIBA_22	Kibamen		Fever Charge Attack
+1395	1395：進軍１	SAP_KAMN_DEKA_00	Dekamen		March
+1396	1396：進軍２	SAP_KAMN_DEKA_01	Dekamen		March2
+1397	1397：近攻１	SAP_KAMN_DEKA_10	Dekamen		Defend
+1398	1398：近攻２	SAP_KAMN_DEKA_11	Dekamen		Fever Defend
+1399	1399：近攻３	SAP_KAMN_DEKA_12	Dekamen		Charge Defend
+1400	1400：遠攻１	SAP_KAMN_DEKA_20	Dekamen		Attack
+1401	1401：遠攻２	SAP_KAMN_DEKA_21	Dekamen		Fever Attack
+1402	1402：遠攻３	SAP_KAMN_DEKA_22	Dekamen		Fever Charge Attack
+1403	1403：進軍１	SAP_KAMN_MEGA_00	Megamen		March
+1404	1404：進軍２	SAP_KAMN_MEGA_01	Megamen		March2
+1405	1405：近攻１	SAP_KAMN_MEGA_10	Megamen		Defend
+1406	1406：近攻２	SAP_KAMN_MEGA_11	Megamen		Fever Defend
+1407	1407：近攻３	SAP_KAMN_MEGA_12	Megamen		Charge Defend
+1408	1408：遠攻１	SAP_KAMN_MEGA_20	Megamen		Attack
+1409	1409：遠攻２	SAP_KAMN_MEGA_21	Megamen		Fever Attack
+1410	1410：遠攻３	SAP_KAMN_MEGA_22	Megamen		Fever Charge Attack
+1411	1411：進軍１	SAP_KAMN_MAHO_00	Mahomen		March
+1412	1412：進軍２	SAP_KAMN_MAHO_01	Mahomen		March2
+1413	1413：近攻１	SAP_KAMN_MAHO_10	Mahomen		Defend
+1414	1414：近攻２	SAP_KAMN_MAHO_11	Mahomen		Fever Defend
+1415	1415：近攻３	SAP_KAMN_MAHO_12	Mahomen		Charge Defend
+1416	1416：遠攻１	SAP_KAMN_MAHO_20	Mahomen		Attack
+1417	1417：遠攻２	SAP_KAMN_MAHO_21	Mahomen		Fever Attack
+1418	1418：遠攻３	SAP_KAMN_MAHO_22	Mahomen		Fever Charge Attack
+1419	1419：進軍１	SAP_KAMN_ROBO_00	Robomen		March
+1420	1420：進軍２	SAP_KAMN_ROBO_01	Robomen		March2
+1421	1421：近攻１	SAP_KAMN_ROBO_10	Robomen		Defend
+1422	1422：近攻２	SAP_KAMN_ROBO_11	Robomen		Fever Defend
+1423	1423：近攻３	SAP_KAMN_ROBO_12	Robomen		Charge Defend
+1424	1424：遠攻１	SAP_KAMN_ROBO_20	Robomen		Attack
+1425	1425：遠攻２	SAP_KAMN_ROBO_21	Robomen		Fever Attack
+1426	1426：遠攻３	SAP_KAMN_ROBO_22	Robomen		Fever Charge Attack
+1427	1427：進軍１	SAP_MKHI_YARI_00	Akumayari		March
+1428	1428：進軍２	SAP_MKHI_YARI_01	Akumayari		March2
+1429	1429：近攻１	SAP_MKHI_YARI_10	Akumayari		Defend
+1430	1430：近攻２	SAP_MKHI_YARI_11	Akumayari		Fever Defend
+1431	1431：近攻３	SAP_MKHI_YARI_12	Akumayari		Charge Defend
+1432	1432：遠攻１	SAP_MKHI_YARI_20	Akumayari		Attack
+1433	1433：遠攻２	SAP_MKHI_YARI_21	Akumayari		Fever Attack
+1434	1434：遠攻３	SAP_MKHI_YARI_22	Akumayari		Fever Charge Attack
+1435	1435：進軍１	SAP_MKHI_TATE_00	Akumatate		March
+1436	1436：進軍２	SAP_MKHI_TATE_01	Akumatate		March2
+1437	1437：近攻１	SAP_MKHI_TATE_10	Akumatate		Defend
+1438	1438：近攻２	SAP_MKHI_TATE_11	Akumatate		Fever Defend
+1439	1439：近攻３	SAP_MKHI_TATE_12	Akumatate		Charge Defend
+1440	1440：遠攻１	SAP_MKHI_TATE_20	Akumatate		Attack
+1441	1441：遠攻２	SAP_MKHI_TATE_21	Akumatate		Fever Attack
+1442	1442：遠攻３	SAP_MKHI_TATE_22	Akumatate		Fever Charge Attack
+1443	1443：進軍１	SAP_MKHI_YUMI_00	Akumayumi		March
+1444	1444：進軍２	SAP_MKHI_YUMI_01	Akumayumi		March2
+1445	1445：近攻１	SAP_MKHI_YUMI_10	Akumayumi		Defend
+1446	1446：近攻２	SAP_MKHI_YUMI_11	Akumayumi		Fever Defend
+1447	1447：近攻３	SAP_MKHI_YUMI_12	Akumayumi		Charge Defend
+1448	1448：遠攻１	SAP_MKHI_YUMI_20	Akumayumi		Attack
+1449	1449：遠攻２	SAP_MKHI_YUMI_21	Akumayumi		Fever Attack
+1450	1450：遠攻３	SAP_MKHI_YUMI_22	Akumayumi		Fever Charge Attack
+1451	1451：進軍１	SAP_MKHI_KIBA_00	Akumakiba		March
+1452	1452：進軍２	SAP_MKHI_KIBA_01	Akumakiba		March2
+1453	1453：近攻１	SAP_MKHI_KIBA_10	Akumakiba		Defend
+1454	1454：近攻２	SAP_MKHI_KIBA_11	Akumakiba		Fever Defend
+1455	1455：近攻３	SAP_MKHI_KIBA_12	Akumakiba		Charge Defend
+1456	1456：遠攻１	SAP_MKHI_KIBA_20	Akumakiba		Attack
+1457	1457：遠攻２	SAP_MKHI_KIBA_21	Akumakiba		Fever Attack
+1458	1458：遠攻３	SAP_MKHI_KIBA_22	Akumakiba		Fever Charge Attack
+1459	1459：進軍１	SAP_MKHI_DEKA_00	Akumadeka		March
+1460	1460：進軍２	SAP_MKHI_DEKA_01	Akumadeka		March2
+1461	1461：近攻１	SAP_MKHI_DEKA_10	Akumadeka		Defend
+1462	1462：近攻２	SAP_MKHI_DEKA_11	Akumadeka		Fever Defend
+1463	1463：近攻３	SAP_MKHI_DEKA_12	Akumadeka		Charge Defend
+1464	1464：遠攻１	SAP_MKHI_DEKA_20	Akumadeka		Attack
+1465	1465：遠攻２	SAP_MKHI_DEKA_21	Akumadeka		Fever Attack
+1466	1466：遠攻３	SAP_MKHI_DEKA_22	Akumadeka		Fever Charge Attack
+1467	1467：進軍１	SAP_MKHI_MEGA_00	Akumamega		March
+1468	1468：進軍２	SAP_MKHI_MEGA_01	Akumamega		March2
+1469	1469：近攻１	SAP_MKHI_MEGA_10	Akumamega		Defend
+1470	1470：近攻２	SAP_MKHI_MEGA_11	Akumamega		Fever Defend
+1471	1471：近攻３	SAP_MKHI_MEGA_12	Akumamega		Charge Defend
+1472	1472：遠攻１	SAP_MKHI_MEGA_20	Akumamega		Attack
+1473	1473：遠攻２	SAP_MKHI_MEGA_21	Akumamega		Fever Attack
+1474	1474：遠攻３	SAP_MKHI_MEGA_22	Akumamega		Fever Charge Attack
+1475	1475：進軍１	SAP_HNDS_YARI_00	Yarideth		March
+1476	1476：進軍２	SAP_HNDS_YARI_01	Yarideth		March2
+1477	1477：近攻１	SAP_HNDS_YARI_10	Yarideth		Defend
+1478	1478：近攻２	SAP_HNDS_YARI_11	Yarideth		Fever Defend
+1479	1479：近攻３	SAP_HNDS_YARI_12	Yarideth		Charge Defend
+1480	1480：近攻４	SAP_HNDS_YARI_13	Yarideth		
+1481	1481：遠攻１	SAP_HNDS_YARI_20	Yarideth		Attack
+1482	1482：遠攻２	SAP_HNDS_YARI_21	Yarideth		Fever Attack
+1483	1483：遠攻３	SAP_HNDS_YARI_22	Yarideth		Fever Charge Attack
+1484	1484：進軍１	SAP_HNDS_TATE_00	Tatedeth		March
+1485	1485：進軍２	SAP_HNDS_TATE_01	Tatedeth		March2
+1486	1486：近攻１	SAP_HNDS_TATE_10	Tatedeth		Defend
+1487	1487：近攻２	SAP_HNDS_TATE_11	Tatedeth		Fever Defend
+1488	1488：近攻３	SAP_HNDS_TATE_12	Tatedeth		Charge Defend
+1489	1489：遠攻１	SAP_HNDS_TATE_20	Tatedeth		Attack
+1490	1490：遠攻２	SAP_HNDS_TATE_21	Tatedeth		Fever Attack
+1491	1491：遠攻３	SAP_HNDS_TATE_22	Tatedeth		Fever Charge Attack
+1492	1492：進軍１	SAP_HNDS_YUMI_00	Yumideth		March
+1493	1493：進軍２	SAP_HNDS_YUMI_01	Yumideth		March2
+1494	1494：近攻１	SAP_HNDS_YUMI_10	Yumideth		Defend
+1495	1495：近攻２	SAP_HNDS_YUMI_11	Yumideth		Fever Defend
+1496	1496：近攻３	SAP_HNDS_YUMI_12	Yumideth		Charge Defend
+1497	1497：遠攻１	SAP_HNDS_YUMI_20	Yumideth		Attack
+1498	1498：遠攻２	SAP_HNDS_YUMI_21	Yumideth		Fever Attack
+1499	1499：遠攻３	SAP_HNDS_YUMI_22	Yumideth		Fever Charge Attack
+1500	1500：近攻１	SAP_HNDS_YUMI_S10	Yumideth		Defend
+1501	1501：近攻２	SAP_HNDS_YUMI_S11	Yumideth		Fever Defend
+1502	1502：近攻３	SAP_HNDS_YUMI_S12	Yumideth		Charge Defend
+1503	1503：遠攻１	SAP_HNDS_YUMI_S20	Yumideth		Attack
+1504	1504：遠攻２	SAP_HNDS_YUMI_S21	Yumideth		Fever Attack
+1505	1505：遠攻３	SAP_HNDS_YUMI_S22	Yumideth		Fever Charge Attack
+1506	1506：進軍１	SAP_HNDS_KIBA_00	Kibadeth		March
+1507	1507：進軍２	SAP_HNDS_KIBA_01	Kibadeth		March2
+1508	1508：近攻１	SAP_HNDS_KIBA_10	Kibadeth		Defend
+1509	1509：近攻２	SAP_HNDS_KIBA_11	Kibadeth		Fever Defend
+1510	1510：近攻３	SAP_HNDS_KIBA_12	Kibadeth		Charge Defend
+1511	1511：遠攻１	SAP_HNDS_KIBA_20	Kibadeth		Attack
+1512	1512：遠攻２	SAP_HNDS_KIBA_21	Kibadeth		Fever Attack
+1513	1513：遠攻３	SAP_HNDS_KIBA_22	Kibadeth		Fever Charge Attack
+1514	1514：進軍１	SAP_HNDS_DEKA_00	Dekadeth		March
+1515	1515：進軍２	SAP_HNDS_DEKA_01	Dekadeth		March2
+1516	1516：近攻１	SAP_HNDS_DEKA_10	Dekadeth		Defend
+1517	1517：近攻２	SAP_HNDS_DEKA_11	Dekadeth		Fever Defend
+1518	1518：近攻３	SAP_HNDS_DEKA_12	Dekadeth		Charge Defend
+1519	1519：遠攻１	SAP_HNDS_DEKA_20	Dekadeth		Attack
+1520	1520：遠攻２	SAP_HNDS_DEKA_21	Dekadeth		Fever Attack
+1521	1521：遠攻３	SAP_HNDS_DEKA_22	Dekadeth		Fever Charge Attack
+1522	1522：進軍１	SAP_HNDS_MEGA_00	Megadeth		March
+1523	1523：進軍２	SAP_HNDS_MEGA_01	Megadeth		March2
+1524	1524：近攻１	SAP_HNDS_MEGA_10	Megadeth		Defend
+1525	1525：近攻２	SAP_HNDS_MEGA_11	Megadeth		Fever Defend
+1526	1526：近攻３	SAP_HNDS_MEGA_12	Megadeth		Charge Defend
+1527	1527：遠攻１	SAP_HNDS_MEGA_20	Megadeth		Attack
+1528	1528：遠攻２	SAP_HNDS_MEGA_21	Megadeth		Fever Attack
+1529	1529：遠攻３	SAP_HNDS_MEGA_22	Megadeth		Fever Charge Attack
+1530	1530：近攻１	SAP_HNDS_MEGA_S10	Megadeth		Defend
+1531	1531：近攻２	SAP_HNDS_MEGA_S11	Megadeth		Fever Defend
+1532	1532：近攻３	SAP_HNDS_MEGA_S12	Megadeth		Charge Defend
+1533	1533：遠攻１	SAP_HNDS_MEGA_S20	Megadeth		Attack
+1534	1534：遠攻２	SAP_HNDS_MEGA_S21	Megadeth		Fever Attack
+1535	1535：遠攻３	SAP_HNDS_MEGA_S22	Megadeth		Fever Charge Attack
+1536	1536：進軍１	SAP_HNDS_MAHO_00	Mahodeth		March
+1537	1537：進軍２	SAP_HNDS_MAHO_01	Mahodeth		March2
+1538	1538：近攻１	SAP_HNDS_MAHO_10	Mahodeth		Defend
+1539	1539：近攻２	SAP_HNDS_MAHO_11	Mahodeth		Fever Defend
+1540	1540：近攻３	SAP_HNDS_MAHO_12	Mahodeth		Charge Defend
+1541	1541：遠攻１	SAP_HNDS_MAHO_20	Mahodeth		Attack
+1542	1542：遠攻２	SAP_HNDS_MAHO_21	Mahodeth		Fever Attack
+1543	1543：遠攻３	SAP_HNDS_MAHO_22	Mahodeth		Fever Charge Attack
+1544	1544：進軍１	SAP_HNDS_ROBO_00	Robodeth		March
+1545	1545：進軍２	SAP_HNDS_ROBO_01	Robodeth		March2
+1546	1546：近攻１	SAP_HNDS_ROBO_10	Robodeth		Defend
+1547	1547：近攻２	SAP_HNDS_ROBO_11	Robodeth		Fever Defend
+1548	1548：近攻３	SAP_HNDS_ROBO_12	Robodeth		Charge Defend
+1549	1549：遠攻１	SAP_HNDS_ROBO_20	Robodeth		Attack
+1550	1550：遠攻２	SAP_HNDS_ROBO_21	Robodeth		Fever Attack
+1551	1551：遠攻３	SAP_HNDS_ROBO_22	Robodeth		Fever Charge Attack

@@ -89,8 +89,7 @@
         <article data-uid="">
 <h1 id="getstatusinfo">getStatusInfo</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Gets stamina information of a target.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>getStatusInfo</code></li>
@@ -100,9 +99,9 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(undefined4)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(int)Var1</code> <em>(8 bytes)</em></li>
-<li><code>(float)Var2</code> <em>(8 bytes)</em></li>
+<li><code>(int *)handle</code> <em>(8 bytes)</em> : Handle of the target to get the stamina information.</li>
+<li><code>(int *)data_type</code> <em>(8 bytes)</em> : Expected 0~2. 0 gives max stamina (int), 1 gives current stamina (int), 2 gives stamina rate (float).</li>
+<li><code>(int/float *)destination</code> <em>(8 bytes)</em> : Variable to <em>store</em> the stamina information. If <code>data_type</code> is 2, float is expected.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>
@@ -145,13 +144,13 @@
   if (pfVar5 != (float *)0x0) {
     iVar4 = *piVar2;
     if (iVar4 == 0) {
-      *pfVar3 = *pfVar5;
+      *pfVar3 = *pfVar5; //max stamina
     }
     else if (iVar4 == 1) {
-      *pfVar3 = pfVar5[1];
+      *pfVar3 = pfVar5[1]; //current stamina
     }
     else if (iVar4 == 2) {
-      *pfVar3 = (float)(int)pfVar5[1] / (float)(int)*pfVar5;
+      *pfVar3 = (float)(int)pfVar5[1] / (float)(int)*pfVar5; //stamina percentage
     }
   }
   PAC::PAC_setCmdId(param_2,0);

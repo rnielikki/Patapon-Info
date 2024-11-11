@@ -89,8 +89,7 @@
         <article data-uid="">
 <h1 id="del">del</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Deletes any target by given handle.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>del</code></li>
@@ -100,8 +99,8 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(undefined4)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(undefined4)Var1</code> <em>(8 bytes)</em></li>
+<li><code>(int *)handle</code> <em>(8 bytes)</em> : target handle to delete.</li>
+<li><code>(bool)Var1</code> <em>(8 bytes)</em></li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>
@@ -128,13 +127,13 @@
   }
   if ((iVar3 != 0) &amp;&amp; (iVar5 = *(int *)(iVar3 + 0xcc), iVar5 != 0)) {
     iVar4 = (**(code **)(*(int *)(iVar3 + 4) + 0x34))(iVar3);
-    if (iVar4 == 0xb) {
+    if (iVar4 == 0xb) { //effect
       (**(code **)(*(int *)(iVar3 + 4) + 0x88))(*puVar2,0,iVar3);
     }
-    else if (iVar4 == 10) {
+    else if (iVar4 == 10) { //gimmick
       (**(code **)(*(int *)(iVar3 + 4) + 0x8c))(*puVar2,0,iVar3);
     }
-    else if (iVar4 == 9) {
+    else if (iVar4 == 9) { //unit
       (**(code **)(*(int *)(iVar3 + 4) + 0x8c))(*puVar2,0,iVar3);
     }
     else {

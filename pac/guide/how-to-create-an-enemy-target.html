@@ -103,7 +103,7 @@
 <p>Related instructions: <a href="category.html#generator-setup">Generator setup</a></p>
 <p>Use 1st parameter from <code>create</code> to define the detail of the generator.</p>
 <ul>
-<li><a href="../setmodeex.html">setModeEx</a>: Defines hitbox layer (is player side or enemy side)</li>
+<li><a href="../settrooptype.html">setTroopType</a>: Defines troop type (is player side or enemy side)</li>
 <li><a href="../setposx.html">setPosX</a>: Defines position</li>
 <li><a href="../setdeathcall.html">setDeathCall</a>: Defines instruction set to call after the unit is dead.</li>
 </ul>
@@ -112,8 +112,13 @@
 <p>This is done in <a href="../setmissiontimmingscript.html">setMissionTimmingScript</a> 1st phase, right after step above</p>
 </blockquote>
 <ul>
-<li><a href="../setreqactortype.html">setReqActorTye</a>:</li>
-<li><a href="../setreqactorcount.html">setReqActorCount</a>: How many actors will you define.</li>
+<li><a href="../setreqactortype.html">setReqActorType</a>: Sets actor type from <a href="reference-table.html#generatorparam">generatorparam</a>.
+<ul>
+<li>If the target is not in the list, another method like <a href="../addgimmick.html">addGimmick</a> etc are required.</li>
+</ul>
+</li>
+<li><a href="../setreqactorcount.html">setReqActorCount</a>: Sets the spawn limit.</li>
+<li><a href="../setreqactordelaytime.html">setReqActorDelayTime</a>: Spawn delay between next spawn.</li>
 </ul>
 <h3 id="example-result-as-visualised-table">Example result as visualised table</h3>
 <p>Each table represents generator.</p>
@@ -167,8 +172,11 @@
 <blockquote>
 <p>This is done in <a href="../setmissiontimmingscript.html">setMissionTimmingScript</a> <strong>2nd phase</strong>.</p>
 </blockquote>
-<p>Related instruction: <a href="../spawn.html">Spawn</a></p>
-<p>Spawn delay can be set with <a href="../setreqactordelaytime.html">setReqActorDelayTime</a>.</p>
+<p>First, use <a href="../gethandle.html">getHandle</a> to load the unit, and then <a href="../spawn.html">Spawn</a>.</p>
+<pre><code class="lang-c">0005C7FC  251F1500:getHandle(2:898, 8:1A)
+0005C810  251F1300:spawn(8:1A)
+</code></pre>
+<p>If there are many entities on the way, consider using <a href="../setdeathcall.html">setDeathCall</a> to spawn the next targets.</p>
 <h2 id="bringing-together-example">Bringing together (example)</h2>
 <p>This is <em>spawning motiti in runtime</em> function in debug mode.</p>
 <pre><code class="lang-c">0002B514  25100600:getPack(4:0)
@@ -180,17 +188,77 @@
 0002B59C  251F0900:setReqActorType(4:1, 2:0, 24)
 0002B5B8  251F0A00:setReqActorCount(4:1, 2:0, 2:1)
 0002B5D4  251F0E00:setReqActorPos(4:1, 2:0, 0.0, 0.0)
-0002B5F8  251F1300:spawn(4:1)
+...
+//0002B5F8  251F1300:spawn(4:1)
 0002B604  25000100:cmd_end()
 </code></pre>
-<h2 id="for-structure">For structure</h2>
+<p><strong>Do not call <code>spawn</code> until <a href="how-to-define-a-mission.html">mission timming</a> is reached to 2nd phase</strong>. Mind that is debug mode and everything is already fully loaded.</p>
+<p>In normal mission, use <a href="../gethandle.html">getHandle</a> and <a href="../spawn.html">spawn</a> <strong>later</strong>.</p>
+<pre><code class="lang-c">00000310  251F1500:getHandle(2:0, 8:1A)
+00000324  251F1300:spawn(8:1A)
+</code></pre>
+<h2 id="for-const-structure">For const structure</h2>
+<p>Note that <strong>constGimmick object is loaded from very first</strong>, and <em>can't be lazy loaded</em>.</p>
+<p>If the structure is spawned after some point (e.g. when other structure destroyed), the structure must be called using reqActor (like above).</p>
 <ol>
 <li>Use <a href="../registconstgimmick.html">registConstGimmick</a> (MissionTimming phase 1).</li>
 <li>Set the gimmick with <a href="../applyconstgimmick.html">applyConstGimmick</a> (MissionTimming phase 2).</li>
+<li>Call <a href="../resetgateinfo.html">resetGateInfo</a> right before setting gate information.</li>
 <li>Use <a href="../setgateinfo.html">setGateInfo</a> (last parameter with 1st param 0) to setup the gimmick (<code>registerConstGimmick</code> last parameter).</li>
 <li>Control collision status with <a href="../enablecollisionconstgimmick.html">enableCollisionConstGimmick</a>.</li>
 </ol>
-<h2 id="for-dungeon">For dungeon</h2>
+<p>1st:</p>
+<pre><code class="lang-c">0005A9D4  25120200:setMissionTimmingScript(2:1, 4:0, 1:5AAA8)
+  0005AAA8  25000300:cmd_call(1:5A3F0)
+    0005A3F0  2516BF00:registConstGimmick(2:103, 8:32, 2:1, 2:12C, 2:0, 2:0, 2:1, 2:1, 2:1, 2:384, 2:186A0)
+    ...
+    0005A674  2516BF00:registConstGimmick(2:117, 8:32, 2:1, 2:A8C, 2:0, 2:0, 2:1, 2:1, 2:1, 2:12C, 2:186A9)
+    0005A6D0  25000100:cmd_end()
+</code></pre>
+<p>2~4:</p>
+<pre><code class="lang-c">0005A9F0  25120200:setMissionTimmingScript(2:2, 4:0, 1:5D4AC)
+  0005D4AC  25000300:cmd_call(1:5D4E4)
+  0005D4B4  25000300:cmd_call(1:5D4F0)
+  /* 2. apply const gimmicks */
+    0005D4F0  2516C000:applyConstGimmick()
+    0005D4F4  25000100:cmd_end()
+  ...
+  0005D4D4  25000300:cmd_call(1:5A6D4)
+  /* 3. reset the gate information */
+    0005A6D4  2516BC00:resetGateInfo()
+  /* 4. setup the gates */
+    0005A6D8  25000700:cmd_mov(8:46, 0.0) //8:46 index
+    0005A6EC  25000700:cmd_mov(8:48, -1.0) //object identifier
+    0005A700  2516BD00:setGateInfo(2:0, 8:46, 2:0, 8:48)
+    0005A724  2516BD00:setGateInfo(2:0, 8:46, 2:1, 2:0)
+    0005A748  2516BD00:setGateInfo(2:0, 8:46, 2:2, 1:5D5F8)
+    0005A76C  25000C00:cmd_inc(8:46) //increases the index
+    0005A778  25000700:cmd_mov(8:48, 100000.0) //identifier 0x186a0 from constgimmick
+    0005A78C  2516BD00:setGateInfo(2:0, 8:46, 2:0, 8:48)
+    0005A7B0  2516BD00:setGateInfo(2:0, 8:46, 2:1, 2:5)
+    0005A7D4  2516BD00:setGateInfo(2:0, 8:46, 2:2, 1:5D6A8)
+    0005A7F8  25000C00:cmd_inc(8:46)
+    0005A804  25000700:cmd_mov(8:48, 100001.0)
+    ...
+    0005A9A8  25000100:cmd_end()
+</code></pre>
+<p>This is how to setup the gate in phase 3 and 4:</p>
+<pre><code class="lang-c">000049CC  2516BC00:resetGateInfo()
+000049D0  25000700:cmd_mov(8:46, 0.0)
+000049E4  25000700:cmd_mov(8:48, -1.0)
+000049F8  2516BD00:setGateInfo(2:0, 8:46,
+000049F8  2516BD00:setGateInfo(2:0, 8:46, 2:0, 8:48)
+00004A1C  2516BD00:setGateInfo(2:0, 8:46, 2:1, 2:0)
+00004A40  2516BD00:setGateInfo(2:0, 8:46, 2:2, 1:24C)
+00004A64  25000C00:cmd_inc(8:46)
+00004A70  25000700:cmd_mov(8:48, -2.0)
+00004A84  2516BD00:setGateInfo(2:0, 8:46, 2:0, 8:48)
+00004AA8  2516BD00:setGateInfo(2:0, 8:46, 2:1, 2:0)
+00004ACC  2516BD00:setGateInfo(2:0, 8:46, 2:2, 1:24C)
+00004AF0  25000C00:cmd_inc(8:46)
+00004AFC  25000100:cmd_end()
+</code></pre>
+<h3 id="for-dungeon">For dungeon</h3>
 <ol>
 <li>Use <a href="../setupstartdungeonwall.html">setupStartDungeonWall</a>.</li>
 <li>Call <a href="../setupadddungeonwall.html">setupAddDungeonWall</a>.</li>
@@ -202,10 +270,17 @@
 <ol start="4">
 <li>Finish with <a href="../setupenddungeonwall.html">setupEndDungeonWall</a></li>
 </ol>
+<h2 id="grass--obstacle">Grass / Obstacle</h2>
+<p>Same as creating unit entities. They also have <code>generatorparam</code> entities, and can use them. Those are main differences from the unit creation:</p>
+<ul>
+<li><strong>For grass, use hitbox layer 3 in <a href="../settrooptype.html">setTroopType</a></strong>.</li>
+<li>Use <a href="../setadventradius.html">setAdventRadius</a> or <a href="../setreqactoradventradius.html">setReqActorAdventRadius</a> for setting distance between grasses.</li>
+</ul>
 <h2 id="spawning-units-from-a-structure">Spawning units from a structure</h2>
+<h3 id="constgimmick-method">ConstGimmick Method</h3>
 <ol>
-<li><a href="how-to-create-an-enemy-target.html#for-structure">Create the tower</a> using <a href="../registconstgimmick.html">registConstGimmick</a>.</li>
-<li>Use generator and connect with <a href="../setmodeex.html">SetModeEx</a> last parameter  (to <code>registeConstGimmick</code> last parameter).</li>
+<li><a href="how-to-create-an-enemy-target.html#for-const-structure">Create the tower</a> using <a href="../registconstgimmick.html">registConstGimmick</a>.</li>
+<li>Use generator and connect with <a href="../setmodeex.html">SetModeEx</a> last parameter  (to <code>registeConstGimmick</code> last parameter), and set <code>mode_type</code> to 3.</li>
 <li><strong>Set the <a href="../setreqactordelaytime.html">time between respawn</a> and <a href="../setreqactortotal.html">total respawn count</a></strong>.</li>
 <li>Use <a href="../spawn.html">spawn</a> to spawn units.</li>
 </ol>
@@ -223,6 +298,36 @@
 /* 3. limit the spawn amount and spawn time */
 0005EF0C  251F1200:setReqActorDelayTime(8:1A, 2:1, 2.0)
 0005EF28  251F0B00:setReqActorTotal(8:1A, 2:1, 2:3)
+</code></pre>
+<h3 id="reqactor-method">ReqActor Method</h3>
+<ol>
+<li>Use generator and set <code>mode_type</code> (2nd parameter) in <a href="../setmodeex.html">SetModeEx</a> to <strong>4</strong>.</li>
+<li>Define a structure in the generator, as reqActor gimmick, as index 0.</li>
+<li>Put the units together to the <strong>same generator as the structure</strong>.</li>
+<li>Set the <a href="../setreqactordelaytime.html">time between respawn</a> and <a href="../setreqactortotal.html">total respawn count</a>.</li>
+<li>Use <a href="../spawn.html">spawn</a> to spawn units.</li>
+</ol>
+<pre><code class="lang-c">
+0005B7D4  251F0200:create(8:1A, 2:44C)
+0005B7E8  251F1900:setTroopType(8:1A, 2:1)
+0005B7FC  251F0400:setLevel(8:1A, 8:32)
+/* NOTE THE SECOND PARAM IS 4 */
+0005B810  251F1B00:setModeEx(8:1A, 2:4, 2:FFFFFFFF, 2:FFFFFFFF)
+...
+/* Make the spawn point structure in index 0 */
+0005B870  251F0900:setReqActorType(8:1A, 2:0, 118)
+...
+0005B974  251F0900:setReqActorType(8:1A, 2:1, 4F)
+0005B990  251F0A00:setReqActorCount(8:1A, 2:1, 2:1)
+...
+/* Add other units */
+0005BAB0  251F1200:setReqActorDelayTime(8:1A, 2:1, 4.0)
+0005BACC  251F0B00:setReqActorTotal(8:1A, 2:1, 2:9)
+0005BAE8  251F0900:setReqActorType(8:1A, 2:4, 15)
+0005BB04  251F0A00:setReqActorCount(8:1A, 2:4, 2:3)
+...
+0005BC90  251F1200:setReqActorDelayTime(8:1A, 2:4, 4.0)
+0005BCAC  251F0B00:setReqActorTotal(8:1A, 2:4, 2:9)
 </code></pre>
 <h2 id="next-step">Next step</h2>
 <ul>

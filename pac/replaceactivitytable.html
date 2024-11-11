@@ -89,7 +89,7 @@
         <article data-uid="">
 <h1 id="replaceactivitytable">replaceActivityTable</h1>
 
-<p>Overwrites <code>squadline</code> action.</p>
+<p>Overwrites <code>squadactivityparam</code> ID in <code>squadlineparam</code>.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>replaceActivityTable</code></li>
@@ -99,9 +99,9 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int)squad_handle</code> <em>(8 bytes)</em> : The squad handle to get the class ID.</li>
-<li><code>(int)from_id</code> <em>(8 bytes)</em> : The target <code>squadline</code> ID that will be changed.</li>
-<li><code>(int)to_id</code> <em>(8 bytes)</em> : The desired <code>squadline</code> ID.</li>
+<li><code>(int *)squad_handle</code> <em>(8 bytes)</em> : The squad handle to change the action.</li>
+<li><code>(int)from_id</code> <em>(8 bytes)</em> : The target <a href="guide/reference-table.html#squadactivityparam-ids"><code>squadactivityparam</code> ID</a> that will be changed.</li>
+<li><code>(int)to_id</code> <em>(8 bytes)</em> : The desired <code>squadactivityparam</code> ID.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

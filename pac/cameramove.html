@@ -102,9 +102,9 @@
 <li><code>(float)pos_x</code> <em>(8 bytes)</em> : X Position to move the camera in the world, as <em>PSP pixels</em>.</li>
 <li><code>(float)pos_y</code> <em>(8 bytes)</em> : Y Position to move the camera in the world, as <em>PSP pixels</em>. 0 is normal position.</li>
 <li><code>(float)pos_z</code> <em>(8 bytes)</em> : Z Position (Camera distance) in the world. For refrence, around 150~200 looks natural.</li>
-<li><code>(bool)enable_anim_x</code> <em>(8 bytes)</em> : Decides if the camera animates in X direction or not. 0 moves to the position immediately, otherwise it will be animated in X direction.</li>
-<li><code>(bool)enable_anim_y</code> <em>(8 bytes)</em> : Decides if the camera animates in Y direction or not. 0 moves to the position immediately, otherwise it will be animated in Y direction.</li>
-<li><code>(bool)enable_anim_z</code> <em>(8 bytes)</em> : Decides if the camera animates in Z direction or not. 0 moves to the position immediately, otherwise it will be animated in Z direction.</li>
+<li><code>(bool)enable_x</code> <em>(8 bytes)</em> : Decides if the camera moves in X direction or not. In speed based, 0 does not move.</li>
+<li><code>(bool)enable_y</code> <em>(8 bytes)</em> : Decides if the camera moves in Y direction or not. In speed based, 0 does not move.</li>
+<li><code>(bool)enable_z</code> <em>(8 bytes)</em> : Decides if the camera moves in Z direction or not. In speed based, 0 does not move.</li>
 </ul>
 <h2 id="remarks">Remarks</h2>
 <p>For determining the speed of the camera, see description in <a href="cameramovetype.html">camerMoveType</a>.</p>

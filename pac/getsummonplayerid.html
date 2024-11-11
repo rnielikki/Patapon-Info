@@ -89,8 +89,7 @@
         <article data-uid="">
 <h1 id="getsummonplayerid">getSummonPlayerId</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Gets the player ID who is currently summoning.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>getSummonPlayerId</code></li>
@@ -100,8 +99,8 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(undefined4)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(undefined4)Var1</code> <em>(8 bytes)</em></li>
+<li><code>(int)summon_side</code> <em>(8 bytes)</em> : Summoning side. 0 is blue, 1 is red side.</li>
+<li><code>(int *)summon_player_id</code> <em>(8 bytes)</em> : -1 if nobody is summoning.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

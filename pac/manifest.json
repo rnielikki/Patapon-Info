@@ -4543,6 +4543,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "md/guide/how-to-add-a-turret.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/how-to-add-a-turret.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "md/guide/how-to-control-a-squad.md",
       "output": {
         ".html": {
@@ -4737,6 +4747,26 @@
       "output": {
         "resource": {
           "relative_path": "guide/resources/mission_map.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "md/guide/resources/squadactivity.csv",
+      "output": {
+        "resource": {
+          "relative_path": "guide/resources/squadactivity.csv"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "md/guide/resources/squadactivity.html",
+      "output": {
+        "resource": {
+          "relative_path": "guide/resources/squadactivity.html"
         }
       },
       "version": ""

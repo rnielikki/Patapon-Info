@@ -89,7 +89,7 @@
         <article data-uid="">
 <h1 id="setunitctrlmode">setUnitCtrlMode</h1>
 
-<p>Decides controlling type specifically for non-boss enemies.</p>
+<p>Decides controlling type.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>setUnitCtrlMode</code></li>
@@ -99,7 +99,7 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int* )generator_index</code> <em>(8 bytes)</em> : Generator Index, obtained from <a href="create.html">create</a>.</li>
+<li><code>(int* )generator_handle</code> <em>(8 bytes)</em> : Handle of the generator, obtained from <a href="create.html">create</a> or <a href="gethandle.html">getHandle</a>.</li>
 <li><code>(int)in_generator_id</code> <em>(8 bytes)</em> : <em>ID in the generator</em>.</li>
 <li><code>(int)mode_id</code> <em>(8 bytes)</em> : Expected <em>0~7</em>. Other values crash.</li>
 </ul>
@@ -109,7 +109,7 @@
 <th><code>mode_id</code></th>
 <th>Spawned from far away</th>
 <th>March (or <a href="setunitctrlstartacttype.html">initial acttype</a>)</th>
-<th>Attack</th>
+<th>Auto Attack</th>
 </tr>
 </thead>
 <tbody>
@@ -141,7 +141,7 @@
 <td>6</td>
 <td>Yes</td>
 <td>Yes</td>
-<td>No</td>
+<td>If in <a href="setunitctrlwatcharea.html">watchArea</a></td>
 </tr>
 <tr>
 <td>7</td>

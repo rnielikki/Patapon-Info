@@ -90,6 +90,7 @@
 <h1 id="setmodelinfo">setModelInfo</h1>
 
 <p>Sets position and movement information of the given handle.</p>
+<p>Before performing this, wait until the model is fully loaded.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>setModelInfo</code></li>
@@ -102,8 +103,8 @@
 <li><code>(int *)handle_id</code> <em>(8 bytes)</em> : <a href="guide/category.html#getting-handle">Handle</a> to set the model info.</li>
 <li><code>(float)position_x</code> <em>(8 bytes)</em> : X Position of the model, as <em>PSP pixels in the world</em>.</li>
 <li><code>(float)position_y</code> <em>(8 bytes)</em> : Y position of the model, as <em>PSP pixels in the world</em>. 0 is the center.</li>
-<li><code>(float)velocity_x</code> <em>(8 bytes)</em> : How much (and in which direction as + or -) it will move in X direction during lifetime.</li>
-<li><code>(float)velocity_y</code> <em>(8 bytes)</em> : How much (and in which direction as + or -) it will move in Y direction during lifetime.</li>
+<li><code>(float)dest_x</code> <em>(8 bytes)</em> : To where it will move, as X position.</li>
+<li><code>(float)dest_y</code> <em>(8 bytes)</em> : To where it will move, as Y position.</li>
 <li><code>(float)random_start_offset</code> <em>(8 bytes)</em> : Random offset from the position to be started. <strong>Works only when velocity value exists</strong>.</li>
 </ul>
 <p>Note that <strong>PSP screen size is 480 x 272</strong>.</p>

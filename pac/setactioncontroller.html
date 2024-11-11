@@ -89,8 +89,8 @@
         <article data-uid="">
 <h1 id="setactioncontroller">setActionController</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Sets an action (e.g. cannon attack) to a gimmick. Used in VS turrets.</p>
+<p>For actual effect to the turret, check <a href="guide/how-to-add-a-turret.html">How To: Add A Turret</a>.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>setActionController</code></li>
@@ -100,22 +100,46 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int)gimmick_handle</code> <em>(8 bytes)</em> : Gimmick handle, other kinds of handle won't work.</li>
+<li><code>(int *)gimmick_handle</code> <em>(8 bytes)</em> : Gimmick handle, other kinds of handle won't work.</li>
 <li><code>(int)type</code> <em>(8 bytes)</em> : Control Type, expected 0~4.</li>
 <li><code>(float)time</code> <em>(8 bytes)</em> : Delay time (cooltime) between actions, as seconds.</li>
-<li><code>(float)Var3</code> <em>(8 bytes)</em> : Can keep zero. Works only <code>type</code> is 3 or 4.</li>
-<li><code>(float)Var4</code> <em>(8 bytes)</em> : Can keep zero. Works only <code>type</code> is 3 or 4.</li>
+<li><code>(float)Var3</code> <em>(8 bytes)</em> : Can keep zero. Works only when <code>type</code> is 3 or 4.</li>
+<li><code>(float)Var4</code> <em>(8 bytes)</em> : Can keep zero. Works only when <code>type</code> is 3 or 4.</li>
 <li><code>(Undefined)Var5</code> <em>(8 bytes)</em> : Unused, can keep zero.</li>
 <li><code>(Undefined)Var6</code> <em>(8 bytes)</em> : Unused, can keep zero.</li>
 <li><code>(Undefined)Var7</code> <em>(8 bytes)</em> : Unused, can keep zero.</li>
 </ul>
 <p>To properly use this, do not use 'In sync' (thus avoid 4).</p>
-<p>|<code>type</code>|In sync|
-|0x0|No|
-|0x1|No|
-|0x2|No|
-|0x3|No|
-|0x4|Yes (Does not work well)|</p>
+<table>
+<thead>
+<tr>
+<th><code>type</code></th>
+<th>In sync</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0</td>
+<td>No</td>
+</tr>
+<tr>
+<td>0x1</td>
+<td>No</td>
+</tr>
+<tr>
+<td>0x2</td>
+<td>No</td>
+</tr>
+<tr>
+<td>0x3</td>
+<td>No</td>
+</tr>
+<tr>
+<td>0x4</td>
+<td>Yes (Does not work well)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>
 <p><code>25 19 02 00 / 04 00 00 00 / 0a 00 00 00 / 02 00 00 00 / 01 00 00 00 / 10 00 00 00 / 00 00 a0 40 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00 / 10 00 00 00 / 00 00 00 00</code></p>

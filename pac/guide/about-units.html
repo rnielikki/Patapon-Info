@@ -89,6 +89,10 @@
         <article data-uid="">
 <h1 id="about-units">About Units</h1>
 
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>NOT ALL reqActors are unit squads. ReqActors/Actors can be gimmick, as been observed in <a href="reference-table.html#generatorparam"><code>generatorparam</code></a>.</p>
+</div>
 <p><img src="images/unit.png" alt="A diagram about reqActor unit creation. create() makes a generator, setTroopType() moves it to troop, generator has reqActors, the reqActors become squad by calling spawn(), and the squads contain one or more units for each. Each troop, squad, and unit has their own &quot;handle&quot;."></p>
 <ul>
 <li><strong>An unit</strong> is an <em>individual</em> target that has run-time information, like stamina percentage or status effect.</li>
@@ -96,6 +100,7 @@
 <li><strong>A reqActor</strong> is <em>object definitions</em> in scope of <em>squad</em>, but not spawned yet.</li>
 <li><strong>A generator</strong> is an <strong><a href="https://en.wikipedia.org/wiki/Object_pool_pattern">object pool</a></strong> that contains definition of the <em>reqActors</em>.</li>
 </ul>
+<p>One generator can contain <strong>max 8 types of reqActors</strong>, so reqActor index in generator is expected 0~7.</p>
 <p>Next Article: <a href="how-to-create-an-enemy-target.html">How To: Create an Enemy Target</a></p>
 </article>
 

@@ -12,7 +12,7 @@ Sets the troop type for the interaction.
 ## Parameters
 
 - `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
-- `(int)troop_type` *(8 bytes)* : The [troop type](./guide/reference-table.md#hitbox-layers) to set.
+- `(int)troop_type` *(8 bytes)* : The [troop type](./guide/reference-table.md#troop-types) to set.
 
 ## Example
 

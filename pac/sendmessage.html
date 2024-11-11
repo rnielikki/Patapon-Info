@@ -89,8 +89,8 @@
         <article data-uid="">
 <h1 id="sendmessage">sendMessage</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Sends a system message to the <strong>chat window</strong>.</p>
+<p>Used for showing current VS status to the chat window.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>sendMessage</code></li>
@@ -100,12 +100,20 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(int)Var1</code> <em>(8 bytes)</em></li>
-<li><code>(int)Var2</code> <em>(8 bytes)</em></li>
-<li><code>(int)Var3</code> <em>(8 bytes)</em></li>
-<li><code>(int)Var4</code> <em>(8 bytes)</em></li>
-<li><code>(int)Var5</code> <em>(8 bytes)</em></li>
+<li><code>(int)player_id</code> <em>(8 bytes)</em> : Sender player ID to set, expected -1~3. -1 means nobody.
+<ul>
+<li>Please describe if this does actually something.</li>
+</ul>
+</li>
+<li><code>(int)quip_colour</code> <em>(8 bytes)</em> : System quip colour in system settings, expected -1~3. -1 uses default colour.
+<ul>
+<li>The colour cannot be adjusted normally in options page.</li>
+</ul>
+</li>
+<li><code>(bool)Var2</code> <em>(8 bytes)</em> : 1 always sends the message regardless of the target validity or multi status.</li>
+<li><code>(bool)Var3</code> <em>(8 bytes)</em> : Quip rendring related, but unused.</li>
+<li><code>(Address)sender_name</code> <em>(8 bytes)</em> : Address of the sender name messag in the PAC file. Keep -1 to hide this.</li>
+<li><code>(Address)message_address</code> <em>(8 bytes)</em> : Address of the display message in the PAC file.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

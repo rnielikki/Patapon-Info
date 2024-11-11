@@ -103,14 +103,14 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int* )generator_index</code> <em>(8 bytes)</em> : Generator Index, obtained from <a href="create.html">create</a>.</li>
+<li><code>(int* )generator_handle</code> <em>(8 bytes)</em> : Handle of the generator, obtained from <a href="create.html">create</a> or <a href="gethandle.html">getHandle</a>.</li>
 <li><code>(int)in_generator_id</code> <em>(8 bytes)</em> : <em>ID in the generator</em>.</li>
 <li><code>(int)command_id</code> <em>(8 bytes)</em> : <a href="guide/reference-table.html#command-ids">Command ID</a> of it, but <strong>range of 0~2 (march, defend, attack)</strong> or nothing (-1).</li>
 <li><code>(int)sqaudactivity_id</code> <em>(8 bytes)</em> : ID from <code>squadActivityParam</code>.</li>
 </ul>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>The AI dark heroes squadactivityparam ID is different from player dark heroes. Check <a href="guide/reference-table.html#squadactivityparam-ids-pve-only">SquadActivityParam ID table</a> to assign the proper ID.</p>
+<p>The AI dark heroes squadactivityparam ID is different from player dark heroes. Check <a href="guide/reference-table.html#squadactivityparam-ids">SquadActivityParam ID table</a> to assign the proper ID.</p>
 </div>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

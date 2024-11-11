@@ -89,8 +89,10 @@
         <article data-uid="">
 <h1 id="setunitctrltimingscript_int">setUnitCtrlTimingScript_Int</h1>
 
-<p>Calls an script when an unit is killed. Though, <a href="setdeathcall.html">setDeathCall</a> is preferred for most cases.</p>
+<p>Calls a script when an unit is in certain condition (e.g. enemy on sight or being killed).</p>
+<p>If things must be happened after object is completely deleted, use <a href="setdeathcall.html">setDeathCall</a>.</p>
 <p>The address tends to start with <a href="getethnicid.html">getEthnicID</a> and compare the values.</p>
+<p>Used for small enemy units' bubble speech (bo-bo-bone, karmen great pataponponpon etc.).</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>setUnitCtrlTimingScript_Int</code></li>
@@ -100,7 +102,7 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int* )generator_index</code> <em>(8 bytes)</em> : Generator Index, obtained from <a href="create.html">create</a>.</li>
+<li><code>(int* )generator_handle</code> <em>(8 bytes)</em> : Handle of the generator, obtained from <a href="create.html">create</a> or <a href="gethandle.html">getHandle</a>.</li>
 <li><code>(int)in_generator_id</code> <em>(8 bytes)</em> : <em>ID in the generator</em>.</li>
 <li><code>(MemoryAddress)pac_address</code> <em>(8 bytes)</em> : Memory address that contains start of the PAC, obtained from <a href="getpack_25100600.html">getPack</a>.</li>
 <li><code>(Address)address</code> <em>(8 bytes)</em>: Address to call when the unit is dead.</li>

@@ -109,7 +109,7 @@
 <li>If this is smaller than zero, this functions like <a href="keyclosemessagewindow.html">keyCloseMessageWindow</a>, except the window can't be closed without <a href="closemessagewindow.html">closeMessageWindow</a>.</li>
 </ul>
 </li>
-<li><code>(int)Var5</code> <em>(8 bytes)</em> : <strong>Keep -1</strong>. Wrong parameter might cause wrong positioning.</li>
+<li><code>(int)node_id</code> <em>(8 bytes)</em> : <a href="guide/about-nodes.html">Node ID</a> to put the speech bubble, <strong>keep -1 for root (default) node</strong>.</li>
 <li><code>(int)Var6</code> <em>(8 bytes)</em> : Seems like it does not do anything, but <em>keep this as 0</em>.</li>
 <li><code>(Address)message_address</code> <em>(4 bytes)</em> : Message ID from <strong>message address table in the PAC file</strong>. Details on: <a href="guide/about-message.html#message-table">about message table</a>.</li>
 <li><code>(int)hide_long_message</code> <em>(8 bytes)</em> : The value is <strong>is 1 or not</strong>. If this is 1, <em>Long message will be invisible</em>.</li>

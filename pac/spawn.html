@@ -89,8 +89,7 @@
         <article data-uid="">
 <h1 id="spawn">spawn</h1>
 
-<p>Creates all enemies from the certain generator.</p>
-<p>Can be used after <a href="gethandle.html">getHandle</a>, or just after creating and setting up actors.</p>
+<p>Creates all enemies from the certain generator. Used after <a href="gethandle.html">getHandle</a>.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>spawn</code></li>
@@ -100,7 +99,7 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int *)generator_index</code> <em>(8 bytes)</em> : The <a href="create.html">generator index</a> to instantiate.</li>
+<li><code>(int *)handle</code> <em>(8 bytes)</em> : The <a href="gethandle.html">handle of the generator</a> to instantiate.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

@@ -89,7 +89,8 @@
         <article data-uid="">
 <h1 id="addvector">addVector</h1>
 
-<p>Adds vector direction to the model, please describe what this vector actually does.</p>
+<p>Adds <strong>force</strong> to the model.</p>
+<p>For consistent velocity, consider using another method.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>addVector</code></li>
@@ -99,10 +100,10 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(float)handle_id</code> <em>(8 bytes)</em> : Handle</li>
-<li><code>(float)Var1</code> <em>(8 bytes)</em> : Scale</li>
-<li><code>(float)direction_x</code> <em>(8 bytes)</em> : Vector direction X</li>
-<li><code>(float)direction_y</code> <em>(8 bytes)</em> : Vector direction Y</li>
+<li><code>(int *)handle_id</code> <em>(8 bytes)</em> : The target handle to give the force.</li>
+<li><code>(float)scale</code> <em>(8 bytes)</em> : The power, how much force will give to the target.</li>
+<li><code>(float)direction_x</code> <em>(8 bytes)</em> : X direction of the force.</li>
+<li><code>(float)direction_y</code> <em>(8 bytes)</em> : Y Direction of the force.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

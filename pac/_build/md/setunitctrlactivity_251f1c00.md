@@ -21,7 +21,7 @@ Unit attack works with [actual action type](./setunitctrlcurrentacttype_251f2700
 - `(int)sqaudactivity_id` *(8 bytes)* : ID from `squadActivityParam`.
 
 > [!WARNING]
-> The AI dark heroes squadactivityparam ID is different from player dark heroes. Check [SquadActivityParam ID table](./guide/reference-table.md#squadactivityparam-ids-pve-only) to assign the proper ID.
+> The AI dark heroes squadactivityparam ID is different from player dark heroes. Check [SquadActivityParam ID table](./guide/reference-table.md#squadactivityparam-ids) to assign the proper ID.
 
 ## Example
 

@@ -103,14 +103,44 @@
 <li><code>(int)point</code> <em>(8 bytes)</em> : Points to give to the side who killed the squad/gimmick.</li>
 <li><code>(int)break_type</code> <em>(8 bytes)</em> : Expected 0~6. <strong>Does nothing with fort occupation</strong>.</li>
 </ul>
-<p>|<code>break_type</code>|Action with <strong>killing</strong> enemy|
-|0|Gives score to blue team troop|
-|1|Gives score to red team troop|
-|2|Nothing|
-|3|Nothing|
-|4|(<strong>Normal</strong>) Gives score to the opposite side when being killed|
-|5|When Missile is ready (missile VS only)|
-|6|<em>unused</em>, Score based on troop side flag|</p>
+<table>
+<thead>
+<tr>
+<th><code>break_type</code></th>
+<th>Action with <strong>killing</strong> enemy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Gives score to blue team troop</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Gives score to red team troop</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Nothing</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Nothing</td>
+</tr>
+<tr>
+<td>4</td>
+<td>(<strong>Normal</strong>) Gives score to the opposite side when being killed</td>
+</tr>
+<tr>
+<td>5</td>
+<td>When Missile is ready (missile VS only)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><em>unused</em>, Score based on troop side flag</td>
+</tr>
+</tbody>
+</table>
 <h2 id="remarks">Remarks</h2>
 <p>For settling the <em>fort occupation</em> score, set <code>break_type</code> 2 or 3, and then <strong>settle the score with PAC instructions</strong>.</p>
 <p>This is checked every time during mission.</p>

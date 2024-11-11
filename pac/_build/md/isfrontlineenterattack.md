@@ -12,7 +12,7 @@ Check if the front of the squad is in the attack distance.
 ## Parameters
 
 - `(int *)squad_handle` *(8 bytes)* : The target squad handle.
-- `(int)squadactivityparam_id` *(8 bytes)* : `squadActivityParam` id that contains the *attack distance*, -1 for default.
+- `(int)squadactivityparam_id` *(8 bytes)* : [`squadActivityParam` id](./guide/reference-table.md#squadactivityparam-ids) that contains the *attack distance*, -1 for default.
 - `(int *)result` *(8 bytes)* : 1 if the enemy entered the attack sight, otherwise 0.
 
 ## Example

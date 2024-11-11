@@ -29,7 +29,7 @@ The "auto control" here means simple march and attack, like regular bonedeth uni
 
 1. Set [setUnitCtrlMode](../setunitctrlmode.md) with *zero `mode_id`* so can perform regular march-attack.
 2. Set [setUnitCtrlStartActType](../setunitctrlstartacttype.md) with *zero `command_id`* so march by default.
-3. Use [setUnitCtrlActivity](../setunitctrlactivity_251f1c00.md) to connect [the squadparam ID](./reference-table.md#squadactivityparam-ids-pve-only).
+3. Use [setUnitCtrlActivity](../setunitctrlactivity_251f1c00.md) to connect [the squadparam ID](./reference-table.md#squadactivityparam-ids).
 4. Set [setReqActorFixPosFlag](../setreqactorfixposflag.md) with *zero `can_float`*.
 
 Note the units can do only march, attack and defend.
@@ -88,7 +88,7 @@ This is Ragewolf action in his first encounter (Ragewolf and the Mysterious Birc
 
 For bonedeth dying with their tower:
 
-1. [Create the tower](./how-to-create-an-enemy-target.md#for-structure) using [registConstGimmick](../registconstgimmick.md).
+1. [Create the tower](./how-to-create-an-enemy-target.md#for-const-structure) using [registConstGimmick](../registconstgimmick.md).
 2. Use [generator](../create.md) and connect with [SetModeEx](../setmodeex.md) last parameter  (to `registeConstGimmick` last parameter).
 3. Use [setDeathCall](../setdeathcall.md) to call *specific instructions*.
 4. Apply [position](../setreqactorpos.md), [unit activity](../setunitctrlactivity_251f1c00.md), [fix position](../setreqactorfixposflag.md) etc to the unit.

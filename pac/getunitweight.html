@@ -89,8 +89,7 @@
         <article data-uid="">
 <h1 id="getunitweight">getUnitWeight</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Gets weight of the unit by given handle. Works on unit only.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>getUnitWeight</code></li>
@@ -100,8 +99,8 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(undefined4)Var1</code> <em>(8 bytes)</em></li>
+<li><code>(int *)unit_handle</code> <em>(8 bytes)</em> : Handle of an unit.</li>
+<li><code>(float *)destination</code> <em>(8 bytes)</em> : Varible to <em>store</em> the weight of the unit.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>
@@ -126,7 +125,7 @@
        (iVar3 = Find_Target_By_HandleID(*(undefined4 *)(*(int *)(param_1 + 0x10) + 0xe8),*piVar1,1), iVar3 != 0
        )) &amp;&amp; (iVar4 = (**(code **)(*(int *)(iVar3 + 4) + 0x34))(iVar3), iVar4 == 9)) &amp;&amp;
      (*(int *)(iVar3 + 0xcc) != 0)) {
-    *puVar2 = *(undefined4 *)(*(int *)(*(int *)(iVar3 + 0xcc) + 0x1c) + 0xb0);
+    *puVar2 = *(undefined4 *)(*(int *)(*(int *)(iVar3 + 0xcc) + 0x1c) + 0xb0); // 0xb0 is weight
   }
   PAC::PAC_setCmdId(param_2,0);
   return;

@@ -1,6 +1,6 @@
 # getCollisionType
 
-Gets [troop type](./guide/reference-table.md#hitbox-layers) of the collider.
+Gets [troop type](./guide/reference-table.md#troop-types) of the collider.
 
 ## Code Information
 
@@ -12,7 +12,7 @@ Gets [troop type](./guide/reference-table.md#hitbox-layers) of the collider.
 ## Parameters
 
 - `(int *)handle_id` *(8 bytes)* : The target [handle](./guide/how-to-get-a-handle.md).
-- `(int)troop_type` *(8 bytes)* : [Troop type](./guide/reference-table.md#hitbox-layers) of the collider.
+- `(int)troop_type` *(8 bytes)* : [Troop type](./guide/reference-table.md#troop-types) of the collider.
 
 ## Example
 

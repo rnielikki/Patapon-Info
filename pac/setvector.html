@@ -89,8 +89,8 @@
         <article data-uid="">
 <h1 id="setvector">setVector</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Sets <strong>force direction</strong> to the model. This <em>does not</em> change the force.</p>
+<p>For consistent velocity, consider using another method.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>setVector</code></li>
@@ -100,9 +100,9 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(undefined4)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(undefined4)Var1</code> <em>(8 bytes)</em></li>
-<li><code>(undefined4)Var2</code> <em>(8 bytes)</em></li>
+<li><code>(int *)handle_id</code> <em>(8 bytes)</em> : The target handle to give the force.</li>
+<li><code>(float)direction_x</code> <em>(8 bytes)</em> : X direction of the force.</li>
+<li><code>(float)direction_y</code> <em>(8 bytes)</em> : Y Direction of the force.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

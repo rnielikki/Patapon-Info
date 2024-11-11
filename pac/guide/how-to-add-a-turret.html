@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>How To: Add A Turret </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="How To: Add A Turret ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="how-to-add-a-turret">How To: Add A Turret</h1>
+
+<p>The sequence below shoots one bullet.</p>
+<h2 id="1-add-a-turret-as-a-gimmick">1. Add a turret as a gimmick.</h2>
+<p><a href="../registconstgimmick.html">registConstGimmick</a> is good option.</p>
+<p>However, it doesn't need to be constGimmick if the turret can be dynamic object.</p>
+<p>It is named <code>BATTERY_000</code> (<code>gimc1210</code>), and <code>BATTERY_VS</code> for VS Mission.</p>
+<h2 id="2-get-timing">2. Get timing.</h2>
+<p>Simple and rough method to find cannon timing is comparing 3rd and 4th parameter of <a href="../getmotioninfo.html">getMotionInfo</a> during animation.</p>
+<p>(The animation can be set easily with <a href="../setactioncontroller.html">setActionController</a>).</p>
+<p>The problem of this approach is, the turret shoots too many bullets with pons. This can be fixed with checking action type (do not shoot if it is less than 2).</p>
+<p>In this case, if the both value are same, go to the next phase.</p>
+<h2 id="3-get-a-handle-and-node-index">3. Get a handle and node index.</h2>
+<p>Get the handle of the turret gimmick with <a href="../gimmick_gethandle.html">gimmick_getHandle</a>.</p>
+<p>Then use <a href="../getnodeindex.html">getNodeIndex</a> and <a href="../getnodepos.html">getNodePos</a> to get the node position.</p>
+<p>For turret, the node name is <code>eff_shot_01</code>.</p>
+<h2 id="4-add-the-shooting-effect-to-the-handle">4. Add the shooting effect to the handle.</h2>
+<p>Both the shooting effect <strong>and</strong> cannonball effect must be added.</p>
+<p>The shooting effect is ID <code>0x336</code> (<code>efm_225.bnd</code>). The shooting effect <a href="../readarcfile.html">must be preloaded</a>.</p>
+<p>The cannonball effect itself is <code>EFF_CANNONBALL_001x</code>~<code>EFF_CANNONBALL_004x</code>, which is <code>0x319</code>, <code>0x31A</code>, <code>0x31D</code>, <code>0x31E</code>.</p>
+<h2 id="5-set-the-stat">5. Set the stat.</h2>
+<p>Use <a href="../setdamageparam.html">setDamageParam</a> to apply damage to the cannonball.</p>
+<h2 id="example">Example</h2>
+<pre><code class="lang-c">0005FEA4  25170C00:getMotionInfo(8:5B, 8:1FF, 8:1FF, 20:C)
+/* check the motion status */
+00060250  25170C00:getMotionInfo(8:5B, 4:A, 8:1FF, 40:1FF)
+00060274  25001700:cmd_ifEQ(4:A, 1.0, 1:602C0)
+0006028C  25001700:cmd_ifEQ(4:A, 2.0, 1:602C4)
+000602A4  25001700:cmd_ifEQ(4:A, 3.0, 1:602C8) //shooting animation
+//preheating condition.
+000602C8  25000700:cmd_mov(20:1, 20:C)
+000602DC  25000700:cmd_mov(20:2, 3.0)
+000602F0  25004E00:cmd_getElapsedTime(20:3)
+000602FC  25000A00:cmd_mul(20:3, 0.5)
+00060310  25000800:cmd_add(20:3, 3.0)
+/* Check the timing */
+00060324  25000300:cmd_call(1:5FAB4)
+    0005FAB4  25001B00:cmd_ifLS(20:1, 20:2, 1:260)
+        00000250  25000400:cmd_result(2:1)
+        0000025C  25000100:cmd_end()
+    0005FACC  25001A00:cmd_ifLBE(20:1, 20:3, 1:260)
+        00000260  25000400:cmd_result(2:0)
+        0000026C  25000100:cmd_end()
+    0005FAE4  25000200:cmd_jmp(1:250)
+0006032C  25000600:cmd_resCall(2:1, 1:60340)
+/* get handle and node */
+00060340  25190100:gimmick_getHandle(4:B, 8:5B)
+00060354  25172000:getNodeIndex(8:5B, 8:1FF, &quot;eff_shot_01&quot;)
+00060374  25172100:getNodePos(8:5B, 8:1FF, 20:0, 20:1)
+00060398  25000300:cmd_call(1:607E4) //just flip related
+000603A0  2516D000:getTroopType_GimmickUID(4:B, 4:0)
+/* decides which kind of cannonball, can give fixed value instead of this */
+000603B4  25000300:cmd_call(1:6074C)
+000603BC  25002C00:cmd_flgAND(1:60508, E94)
+/* adding cannonball */
+000603CC  25160800:addEffect(8:1FF, 4:1, 4:0, 1.0, 2:0)
+000603F8  25170B00:setModelInfo(8:1FF, 20:0, 20:1, 20:2, 20:3, 20:4) //position set
+/* registering damage and wait time */
+0006042C  25190100:gimmick_getHandle(4:B, 8:5B)
+00060440  25174400:setDamageParam(8:1FF, 8:5B)
+00060454  25190500:effectSetWaitTime(8:1FF, 0.0)
+/* adding cannon shooting effect */
+00060468  25160800:addEffect(8:1FF, 2:336, 4:0, 1.0, 2:0)
+00060494  25170B00:setModelInfo(8:1FF, 20:0, 20:1, 0.0, 0.009999999776482582, 0.0) //position set
+/* registering damage and wait time */
+000604C8  25190100:gimmick_getHandle(4:B, 8:5B)
+000604DC  25174400:setDamageParam(8:1FF, 8:5B)
+000604F0  25190500:effectSetWaitTime(8:1FF, 0.0)
+00060504  25000100:cmd_end()
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

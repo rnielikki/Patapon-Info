@@ -21,7 +21,7 @@ For actual unit attack status, use [getUnitCtrlCurrentActType](./getunitctrlacti
 - `(int* )generator_handle` *(8 bytes)* : Handle of the generator, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(int)command_id` *(8 bytes)* : [Command ID](./guide/reference-table.md#command-ids) of it, but **range of 0~2 (march, defend, attack)** or nothing (-1).
-- `(int *)sqaudactivity_id` *(8 bytes)* : Variable to *store* the ID from `squadActivityParam`.
+- `(int *)sqaudactivity_id` *(8 bytes)* : Variable to *store* the [ID from `squadActivityParam`](./guide/reference-table.md#squadactivityparam-ids).
 
 ## Example
 

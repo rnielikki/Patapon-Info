@@ -89,7 +89,7 @@
         <article data-uid="">
 <h1 id="addabnormalstatus">addAbnormalStatus</h1>
 
-<p>Sets status effect as <strong>status ID</strong>.</p>
+<p>Sets status effect as <strong>status ID</strong>. Works with unit, squad or troop.</p>
 <p>Check <a href="guide/reference-table.html#as-non-flag">status ID table</a> for the status effect.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
@@ -100,7 +100,7 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int *)handle_id</code> <em>(8 bytes)</em> : Unit or squad handle, obtained from <a href="getunithandle.html">getUnitHandle</a> or <a href="getsquadhandle.html">getSquadHandle</a>.
+<li><code>(int *)handle_id</code> <em>(8 bytes)</em> : Unit or squad handle, obtained from <a href="getunithandle.html">getUnitHandle</a> or <a href="getunitsquadhandle.html">getUnitSquadHandle</a>.
 <ul>
 <li>If the handle is squad, this is applied to the whole squad.</li>
 </ul>
@@ -123,7 +123,6 @@
 <h2 id="code">Code</h2>
 <p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>
 <pre><code class="lang-c">void FUN_08916778(int param_1,undefined4 param_2)
-
 {
   int *piVar1;
   undefined4 *puVar2;

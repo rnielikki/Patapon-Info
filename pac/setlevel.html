@@ -100,9 +100,11 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int *)generator_index</code> <em>(8 bytes)</em> : The generator to set level, obtained from <a href="create.html">create</a>.</li>
+<li><code>(int *)generator_handle</code> <em>(8 bytes)</em> : Handle of the generator to set level, obtained from <a href="create.html">create</a> or <a href="gethandle.html">getHandle</a>.</li>
 <li><code>(int)level</code> <em>(8 bytes)</em> : Individual level to assign to the unit(s). More information in <a href="guide/about-levels.html">here</a>.</li>
 </ul>
+<h2 id="remarks">Remarks</h2>
+<p>If the level is not set, it will use the level from <a href="setquestlevel.html">setQuestLevel</a>.</p>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>
 <p><code>25 1f 04 00 / 08 00 00 00 / 1a 00 00 00 / 08 00 00 00 / 32 00 00 00</code></p>

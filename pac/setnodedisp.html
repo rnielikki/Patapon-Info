@@ -89,8 +89,7 @@
         <article data-uid="">
 <h1 id="setnodedisp">setNodeDisp</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Shows or hides the node in the object.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>setNodeDisp</code></li>
@@ -100,9 +99,9 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(undefined4)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(undefined4)Var1</code> <em>(8 bytes)</em></li>
-<li><code>(int)Var2</code> <em>(8 bytes)</em></li>
+<li><code>(int *)handle_id</code> <em>(8 bytes)</em> : The target <a href="guide/how-to-get-a-handle.html">handle</a>.</li>
+<li><code>(int *)node_index</code> <em>(8 bytes)</em> : Node index, obtained from <a href="getnodeindex.html">getNodeIndex</a>.</li>
+<li><code>(bool)display_node</code> <em>(8 bytes)</em> : 1 shows the object in the node, 0 hides the node objects.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

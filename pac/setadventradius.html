@@ -89,7 +89,7 @@
         <article data-uid="">
 <h1 id="setadventradius">setAdventRadius</h1>
 
-<p>Decides the enemies approach speed, as <a href="create.html">generator</a> level.</p>
+<p>Decides the distance of the units in same squad, as <a href="create.html">generator</a> level. <strong>The spreading distance is random</strong>.</p>
 <p>See also: <a href="setreqactoradventradius.html">setReqActorAdventRadius</a></p>
 <h2 id="code-information">Code Information</h2>
 <ul>
@@ -100,8 +100,8 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int *)generator_index</code> <em>(8 bytes)</em> : Generator Index, obtained from <a href="create.html">create</a>.</li>
-<li><code>(float)advent_radius</code> <em>(8 bytes)</em> : The speed to approach, bigger is slower.</li>
+<li><code>(int *)generator_handle</code> <em>(8 bytes)</em> : Handle of the generator, obtained from <a href="create.html">create</a> or <a href="gethandle.html">getHandle</a>.</li>
+<li><code>(float)max_x_spread</code> <em>(8 bytes)</em> : The amount to spread in x direction.</li>
 </ul>
 <p>About 2nd parameters, the cyclopses appeared around 1:36 when the value is 1800.0 and appeared around 00:42 with default value (0).</p>
 <p>(The 1800 is big value though, around 500 can be found on usage.)</p>

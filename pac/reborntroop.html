@@ -89,7 +89,7 @@
         <article data-uid="">
 <h1 id="reborntroop">rebornTroop</h1>
 
-<p>Make the player team reborn. This <em>does not</em> recover the stamina for the alive units.</p>
+<p>Makes the player team reborn. This recovers only dead units and <em>does not</em> recover the stamina for the alive units.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>rebornTroop</code></li>
@@ -99,7 +99,7 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int)unit_handle</code> <em>(8 bytes)</em> : Unit handle of the target to reborn. <strong>-1 reborns all player troops</strong>.</li>
+<li><code>(int *)troop_handle</code> <em>(8 bytes)</em> : Troop handle of the target to reborn. <strong>-1 reborns all player troops</strong>.</li>
 <li><code>(float)stamina_amount</code> <em>(8 bytes)</em> : % amount of stamina to set when the unit is reborn. Expected <em>0~1</em>. 0 will give 1 stamina.</li>
 <li><code>(bool)always_reborn</code> <em>(8 bytes)</em> : Reborn even if the player is blocked from performing any command. Since the &quot;block command&quot; happens rarely, this can be kept 0.
 <ul>

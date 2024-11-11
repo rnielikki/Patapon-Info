@@ -89,8 +89,7 @@
         <article data-uid="">
 <h1 id="getmultieventunithandle">getMultiEventUnitHandle</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Gets handle of the other players in the hideout for event. In normal hideout unit placing, <strong><a href="getmultiherohandle.html">getMultiHeroHandle</a></strong> is preferred.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>getMultiEventUnitHandle</code></li>
@@ -100,9 +99,9 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(int)Var1</code> <em>(8 bytes)</em></li>
-<li><code>(uint)Var2</code> <em>(8 bytes)</em></li>
+<li><code>(int *)destination</code> <em>(8 bytes)</em> : Destination to save the unit handle.</li>
+<li><code>(int)Var1</code> <em>(8 bytes)</em> : Player index in multi.</li>
+<li><code>(uint *)destination2</code> *(8 bytes)</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

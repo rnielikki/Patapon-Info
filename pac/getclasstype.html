@@ -89,7 +89,8 @@
         <article data-uid="">
 <h1 id="getclasstype">getClassType</h1>
 
-<p>Gets the class ID of given unit handle.</p>
+<p>Gets handle type of the given handle.</p>
+<p>This is <strong>not</strong> for obtaining unit class.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>getClassType</code></li>
@@ -99,9 +100,39 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int *)handle_id</code> <em>(8 bytes)</em> : Unit handle, obtained from <a href="getunithandle.html">getUnitHandle</a>.</li>
-<li><code>(int *)destination</code> <em>(8 bytes)</em> : Variable to <em>store</em> the <strong><a href="guide/reference-table.html#class-ids">class ID</a></strong>. If it is invalid unit, the value is -1.</li>
+<li><code>(int *)handle</code> <em>(8 bytes)</em> : Handle from various places.</li>
+<li><code>(int *)handle_type</code> <em>(8 bytes)</em> : Variable to <em>store</em> the handle. If it is invalid unit, the value is -1.</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th><code>handle_type</code></th>
+<th>handle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x2</code></td>
+<td>Troop</td>
+</tr>
+<tr>
+<td><code>0x3</code></td>
+<td>Squad</td>
+</tr>
+<tr>
+<td><code>0x9</code></td>
+<td>Unit/Character (or bubble speech handle is also 0x9, just why)</td>
+</tr>
+<tr>
+<td><code>0xA</code></td>
+<td>Gimmick</td>
+</tr>
+<tr>
+<td><code>0xB</code></td>
+<td>Effect</td>
+</tr>
+</tbody>
+</table>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>
 <p><code>25 17 53 00 / 04 00 00 00 / 41 00 00 00 / 04 00 00 00 / 00 00 00 00</code></p>

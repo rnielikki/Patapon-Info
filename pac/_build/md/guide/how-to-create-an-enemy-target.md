@@ -187,7 +187,7 @@ Same as creating unit entities. They also have `generatorparam` entities, and ca
 
 ### ConstGimmick Method
 
-1. [Create the tower](./how-to-create-an-enemy-target.md#for-structure) using [registConstGimmick](../registconstgimmick.md).
+1. [Create the tower](./how-to-create-an-enemy-target.md#for-const-structure) using [registConstGimmick](../registconstgimmick.md).
 2. Use generator and connect with [SetModeEx](../setmodeex.md) last parameter  (to `registeConstGimmick` last parameter), and set `mode_type` to 3.
 3. **Set the [time between respawn](../setreqactordelaytime.md) and [total respawn count](../setreqactortotal.md)**.
 4. Use [spawn](../spawn.md) to spawn units.

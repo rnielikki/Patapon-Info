@@ -100,35 +100,39 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(bool)bind_type</code> <em>(8 bytes)</em> : 0 has many types of binds, 1 will be connected to only with the ID (<code>param_idex</code> 2)</li>
+<li><code>(bool)bind_type</code> <em>(8 bytes)</em> : 0 has many types of binds, 1 will be connected to only <code>param_index</code> 2</li>
 <li><code>(int)bind_identifier</code> <em>(8 bytes)</em> : <code>bind_identifier</code> from <a href="setupadddungeonwall.html">setupAddDungeonWall</a>, if it's non-dungeon, set it manually.</li>
 <li><code>(int)param_index</code> <em>(8 bytes)</em> : Index of the parameter, see below for the detail.</li>
-<li><code>(int/index)param</code> <em>(8 bytes)</em> : If 1st parameter is 0, this is ID related. otherwise it is address.</li>
+<li><code>(int/index)param</code> <em>(8 bytes)</em> : The value depends on the <code>param_index</code>, see below.</li>
 </ul>
 <p>If <code>bind_type</code> is 0, setup only 2 of <code>param_index</code> (in this case, the <code>param</code> is address).</p>
 <h3 id="about-param_index">About <code>param_index</code></h3>
 <ul>
-<li>If <code>param_index</code> is 0, <code>param</code> is identifier of the object, obtained from <a href="setupadddungeonwall.html">setupAddDungeonWall</a>, less than 0 for non-dungeon object.</li>
+<li>If <code>param_index</code> is 0, <code>param</code> is identifier of the object, obtained from <a href="setupadddungeonwall.html">setupAddDungeonWall</a>
+<ul>
+<li>For non-dungeon object, it's <code>gimmick_identifier</code> from <a href="registconstgimmick.html">registConstGimmick</a>.</li>
+</ul>
+</li>
 <li>If <code>param_index</code> is 1, <code>param</code> decides action type.
 <ul>
 <li>0 does nothing, 1 blocks camera sight</li>
-<li>door moving direction with lever: <code>4</code> is from up to down, <code>8</code> is from up to down. <code>0</code> does not move.</li>
+<li>door moving direction with lever: <code>4</code> is from up to down, <code>8</code> is from down to up. <code>0</code> does not move.</li>
 </ul>
 </li>
-<li>If <code>param_index</code> is 2, <code>param</code> is address (offset from PAC file) to call (when being opened). The address can be address of <a href="cmd_end.html">cmd_end</a>.</li>
-<li>If <code>param_index</code> is 3, <code>param</code> can be 0, 1, 2 - 1 opens door from very start.</li>
-<li>if <code>param_index</code> is 4, <code>param</code> is <a href="setreqactoruniqueid.html">&quot;reqActor ID&quot;</a> 3rd parameter of the lever gimmick.
+<li>If <code>param_index</code> is 2, <code>param</code> is address (offset from PAC file) to call (when being opened or destroyed). The address can be address of <a href="cmd_end.html">cmd_end</a>.</li>
+<li>If <code>param_index</code> is 3, <code>param</code> can be 0, 1, 2. 1 opens door from very start.</li>
+<li>if <code>param_index</code> is 4, <code>param</code> is <a href="setreqactoruniqueid.html">&quot;reqActor ID&quot;</a> 3rd parameter of the <strong>lever</strong> gimmick.
 <ul>
 <li>The reqActor can be created later.</li>
 </ul>
 </li>
-<li>if <code>param_index</code> is 5, <code>param</code> is <em>another</em> <a href="setreqactoruniqueid.html">&quot;reqActor ID&quot;</a> 3rd parameter of the lever gimmick.
+<li>if <code>param_index</code> is 5, <code>param</code> is <em>another</em> <a href="setreqactoruniqueid.html">&quot;reqActor ID&quot;</a> 3rd parameter of the <strong>lever</strong> gimmick.
 <ul>
 <li>The reqActor can be created later.</li>
 <li>If there is no 2nd lever, <strong>keep -1</strong>. Multi dungeon has this because the door is activated with two levers.</li>
 </ul>
 </li>
-<li>if <code>param_index</code> is 6, <code>param</code> decides will the door closed <em>after</em> activating the lever. 0 does not close after once opened, 1 closes after few turns.</li>
+<li>if <code>param_index</code> is 6, <code>param</code> decides whether the door closed <em>after</em> activating the lever. 0 does not close after once opened, 1 closes after few turns.</li>
 </ul>
 <p>Please describe other <code>param</code> data following with <code>param_index</code>.</p>
 <h2 id="example">Example</h2>

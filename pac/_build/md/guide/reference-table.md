@@ -162,7 +162,12 @@ This varies depending on the model. For detali, see [Tayo's table](./resources/C
 
 (Credit to *Tayo Fox* for documenting this)
 
-### SquadActivityParam IDs (PvE Only)
+### SquadActivityParam IDs
+
+The squadactivity Id must be applied to the correct class/unit, otherwise it won't work.
+
+- [SquadActivityparam IDs (html)](./resources/squadactivity.html)
+- [SquadActivityparam IDs (CSV)](./resources/squadactivity.csv)
 
 ## Mission
 

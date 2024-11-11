@@ -90,7 +90,7 @@
 <h1 id="addsquad">addSquad</h1>
 
 <p>Adds squad to a troop. Shouldn't be used much except adding player team.</p>
-<p>For adding enemy units, consider <a href="guide/how-to-create-an-enemy-target.html">reqActor</a> with <a href="getsquadhandle.html">getSquadHandle</a>.</p>
+<p>For adding enemy units, consider <a href="guide/how-to-create-an-enemy-target.html">reqActor</a> with <a href="getunitsquadhandle.html">getUnitSquadHandle</a>.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>addSquad</code></li>
@@ -101,7 +101,7 @@
 <h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>(int *)destination</code> <em>(8 bytes)</em> : Variable to <em>store</em> the squad handle.</li>
-<li><code>(int)troop_handle</code> <em>(8 bytes)</em> : The <a href="addtroop.html">troop handle</a>.</li>
+<li><code>(int *)troop_handle</code> <em>(8 bytes)</em> : The <a href="addtroop.html">troop handle</a>.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

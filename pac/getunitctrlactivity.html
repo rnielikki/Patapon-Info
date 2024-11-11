@@ -108,13 +108,13 @@
 </li>
 <li><p><code>(undefined4)Var3</code> <em>(8 bytes)</em></p>
 </li>
-<li><p><code>(int* )generator_index</code> <em>(8 bytes)</em> : Generator Index, obtained from <a href="create.html">create</a>.</p>
+<li><p><code>(int* )generator_handle</code> <em>(8 bytes)</em> : Handle of the generator, obtained from <a href="create.html">create</a> or <a href="gethandle.html">getHandle</a>.</p>
 </li>
 <li><p><code>(int)in_generator_id</code> <em>(8 bytes)</em> : <em>ID in the generator</em>.</p>
 </li>
 <li><p><code>(int)command_id</code> <em>(8 bytes)</em> : <a href="guide/reference-table.html#command-ids">Command ID</a> of it, but <strong>range of 0~2 (march, defend, attack)</strong> or nothing (-1).</p>
 </li>
-<li><p><code>(int *)sqaudactivity_id</code> <em>(8 bytes)</em> : Variable to <em>store</em> the ID from <code>squadActivityParam</code>.</p>
+<li><p><code>(int *)sqaudactivity_id</code> <em>(8 bytes)</em> : Variable to <em>store</em> the <a href="guide/reference-table.html#squadactivityparam-ids">ID from <code>squadActivityParam</code></a>.</p>
 </li>
 </ul>
 <h2 id="example">Example</h2>

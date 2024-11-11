@@ -99,10 +99,10 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(bool)bind_type</code> <em>(8 bytes)</em> : 0 has many types of binds, 1 will be connected to only with the ID (<code>param_idex</code> 2)</li>
+<li><code>(bool)bind_type</code> <em>(8 bytes)</em> : 0 has many types of binds, 1 will be connected to only <code>param_index</code> 2</li>
 <li><code>(int)bind_identifier</code> <em>(8 bytes)</em> : <code>bind_identifier</code> from <a href="setupadddungeonwall.html">setupAddDungeonWall</a>.</li>
 <li><code>(int)param_index</code> <em>(8 bytes)</em> : Index of the parameter, see below for the detail.</li>
-<li><code>(int *)destination</code> <em>(8 bytes)</em> : <em>Variable to store</em> the result. If 1st parameter is 0, this is ID related.</li>
+<li><code>(int *)destination</code> <em>(8 bytes)</em> : <em>Variable to store</em> the result. The result depends on <code>param_index</code>, see below.</li>
 </ul>
 <p>For detail of each parameter, see <a href="setgateinfo.html">setGateInfo</a>.</p>
 <h2 id="example">Example</h2>

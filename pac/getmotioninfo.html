@@ -89,8 +89,7 @@
         <article data-uid="">
 <h1 id="getmotioninfo">getMotionInfo</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Gets current <a href="guide/reference-table.html#action-ids">action ID</a> and animation status of the motion.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>getMotionInfo</code></li>
@@ -100,10 +99,10 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(undefined4)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(uint)Var1</code> <em>(8 bytes)</em></li>
-<li><code>(uint)Var2</code> <em>(8 bytes)</em></li>
-<li><code>(undefined4)Var3</code> <em>(8 bytes)</em></li>
+<li><code>(int *)handle</code> <em>(8 bytes)</em> : Handle to get the motion.</li>
+<li><code>(int *)motion_id</code> <em>(8 bytes)</em> : Variable to <em>store</em> the <a href="guide/reference-table.html#action-ids">current ID</a> of the motion.</li>
+<li><code>(int *)is_anim_ended</code> <em>(8 bytes)</em> : 1 if animation has been ended, 0 if it is still animating.</li>
+<li><code>(int *)anim_time_offset</code> <em>(8 bytes)</em></li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

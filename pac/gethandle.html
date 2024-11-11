@@ -100,7 +100,7 @@
 <h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>(int)generator_identifier</code> <em>(8 bytes)</em> : Identifier of the generator, 2nd parameter of <a href="create.html">create</a>.</li>
-<li><code>(int *)destination</code> <em>(8 bytes)</em> : Variable to <em>store</em> the handle.</li>
+<li><code>(int *)destination</code> <em>(8 bytes)</em> : Variable to <em>store</em> the generator handle.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>
@@ -137,7 +137,7 @@
     *puVar2 = 0xffffffff;
   }
   else {
-    uVar4 = FUN_Mission__08b5ac20(iVar3,*puVar1);
+    uVar4 = Get_Generator_HandleID(iVar3,*puVar1);
     *puVar2 = uVar4;
   }
   PAC::PAC_setCmdId(param_2,0);

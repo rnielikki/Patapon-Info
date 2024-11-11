@@ -100,7 +100,7 @@
 <h2 id="parameters">Parameters</h2>
 <ul>
 <li><code>(int *)handle_id</code> <em>(8 bytes)</em> : The target <a href="guide/how-to-get-a-handle.html">handle</a>.</li>
-<li><code>(int *)destination</code> <em>(8 bytes)</em> : Variable to <em>store</em> the hitbox ID. Stores 0 if the target to add is invalid.</li>
+<li><code>(int *)destination</code> <em>(8 bytes)</em> : Variable to <em>store</em> the hitbox ID. -1 if failed to add the hitbox. If the handle is invalid, this is zero.</li>
 <li><code>(float)x_offset</code> <em>(8 bytes)</em> : X Offset from the node.</li>
 <li><code>(float)y_offset</code> <em>(8 bytes)</em> : Y Offset from the node.</li>
 <li><code>(float)x_size</code> <em>(8 bytes)</em> : X Size of the hitbox.</li>

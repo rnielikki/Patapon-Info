@@ -101,8 +101,8 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int *)generator_index</code> <em>(8 bytes)</em> : Variable to <em>store</em> the generator index.</li>
-<li><code>(int)generator_identifier</code> <em>(8 bytes)</em> : Identifier of the generator. Not used much, but e.g. <a href="gethandle.html">getHandle</a> uses this.</li>
+<li><code>(int *)generator_handle</code> <em>(8 bytes)</em> : Variable to <em>store</em> the generator handle.</li>
+<li><code>(int)generator_identifier</code> <em>(8 bytes)</em> : Identifier of the generator, to <a href="gethandle.html">obtain the handle</a> later.</li>
 </ul>
 <p>The <code>generator_size</code> can be 1 or 1000, depends on the action.</p>
 <h2 id="remarks">Remarks</h2>

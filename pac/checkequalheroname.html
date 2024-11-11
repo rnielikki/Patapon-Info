@@ -89,8 +89,7 @@
         <article data-uid="">
 <h1 id="checkequalheroname">checkEqualHeroName</h1>
 
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Checks if the hero name is same as certain name. This is used for special hairstyle.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>checkEqualHeroName</code></li>
@@ -100,14 +99,18 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(undefined4)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(String)Var1</code></li>
+<li><code>(int *)result</code> <em>(8 bytes)</em> : Variable to <em>store</em> if the hero name is identical to the given value. 1 if the hero name is same as <code>hero_name</code>, otherwise 0.</li>
+<li><code>(String)hero_name</code> : Name of the hero to compare.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>
 <p><code>25 0a 15 00 / 04 00 00 00 / 01 00 00 00 / 52 6f 6c 69 / 74 6f 00 00</code></p>
 <p>Which is interpreted as:</p>
 <pre><code class="lang-c">checkEqualHeroName((int *)iVar1, &quot;Rolito&quot;)
+</code></pre>
+<pre><code class="lang-c">00000514  250A1500:checkEqualHeroName(4:1, &quot;AAA&quot;)
+00000524  25001700:cmd_ifEQ(4:1, 1.0, 1:56C)
+  0000056C  250A1400:setAccessoryIdFileIndex(2:3, 4:0)
 </code></pre>
 <h2 id="code">Code</h2>
 <p>Ths PAC instruction calls this function (Decompiled by Ghidra):</p>

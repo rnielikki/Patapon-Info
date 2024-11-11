@@ -92,8 +92,7 @@
 <blockquote>
 <p><em>Other functions have the same name. Check the <a href="getPack.html">Disambiguation page</a> to find them.</em></p>
 </blockquote>
-<p><strong>Description</strong> goes here.</p>
-<p>This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.</p>
+<p>Gets <em>address of (start of) the PAC instructions in memory</em>, but from <strong>external pac file</strong>. e.g. <code>09 xx xx xx</code>.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>getPack</code></li>
@@ -103,8 +102,8 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(undefined4)Var0</code> <em>(8 bytes)</em></li>
-<li><code>(String)Var1</code></li>
+<li><code>(MemoryAddress)pac_address_in_memory</code> <em>(8 bytes)</em> : The memory address where the whole PAC instructions start.</li>
+<li><code>(String)pac_file_name</code> : The PAC file name to get the address.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>

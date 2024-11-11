@@ -89,7 +89,7 @@
         <article data-uid="">
 <h1 id="setdamageparam">setDamageParam</h1>
 
-<p>Applies damageparam to a handle, results granting damage inflicting.</p>
+<p>Matches stat of an object to the another one. Used for connecting parent stat to the child.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>setDamageParam</code></li>
@@ -99,8 +99,8 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int *)handle_id</code> <em>(8 bytes)</em> : <a href="guide/category.html#getting-handle">Handle</a> to apply the damageparam.</li>
-<li><code>(int)damageparam_id</code> <em>(8 bytes)</em> : Damage ID in the <code>damageparam</code> <em>2nd section</em>.</li>
+<li><code>(int *)dest_handle_id</code> <em>(8 bytes)</em> : The <a href="guide/category.html#getting-handle">handle</a> of the destination stat.</li>
+<li><code>(int *)source_handle_id</code> <em>(8 bytes)</em> : The <a href="guide/category.html#getting-handle">handle</a> of the source stat.</li>
 </ul>
 <h2 id="example">Example</h2>
 <p>Here is one example in hex:</p>
