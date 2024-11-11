@@ -2,10 +2,11 @@ export default {
 
 }
 makeContentCollapsible(document.getElementById("code-information"));
-makeContentCollapsible(document.getElementById("code").nextElementSibling);
+makeContentCollapsible(document.getElementById("code")?.nextElementSibling);
 
 function makeContentCollapsible(header)
 {
+    if(!header) return;
     const content = header.nextElementSibling;
     header.tabIndex = 0;
     content.setAttribute("hidden", "");
