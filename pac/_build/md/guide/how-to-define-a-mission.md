@@ -53,6 +53,33 @@ In non-dlc mission, there can be more than one `8:1C` [comparison jump](../cmd_i
 000000B4  25000100:cmd_end()
 ```
 
+### Sets the mission level to scale with the player level
+
+This is how Kacchindonga mission level scales.
+
+```c
+00000084  25001700:cmd_ifEQ(8:1C, 56.0, 1:690C4) //Kacchindonga mission ID is 56
+    000690C4  25000300:cmd_call(1:46E4)
+       000046E4  250A0500:getLaboInfo(2:1, 4:0) //singleplayer or multiplayer
+       000046F8  25001700:cmd_ifEQ(4:0, 1.0, 1:4748)
+       /* Singleplayer */
+       00004710  25165300:getPlayerClassLevel(2:0, 2:FFFFFFFF, 4:0)
+       0000472C  25000B00:cmd_div(4:0, 2.0)
+       00004740  25000200:cmd_jmp(1:4754)
+       /* Multiplayer */
+       00004748  25162A01:getMultiPlayerLevelMax(4:0)
+       /* If player level is smaller or equal than pre-defined quest level goest to cmd_end */
+       00004754  25001A00:cmd_ifLBE(8:33, 4:0, 1:24C) //cmd_end
+       /* Sets quest level */
+       0000476C  25000700:cmd_mov(8:33, 4:0)
+       00004780  2516A600:setQuestLevelRevise(8:33)
+       0000478C  25000100:cmd_end()
+    /* sets 2x value of the level that was defined before */
+    000690CC  25000A00:cmd_mul(8:33, 2.0)
+    000690E0  2516A600:setQuestLevelRevise(8:33)
+    000690EC  25100600:getPack(4:0)
+```
+
 ## 2. Set MissionTimmingScript
 
 Use [setMissionTimmingScript](../setmissiontimmingscript.md) to call instructions when mission is loaded.
