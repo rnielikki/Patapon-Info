@@ -1,6 +1,6 @@
 # createChangeModel
 
-Adds a model to character. [changeModel](./changemodel.md) is required after this for applying the model.
+Adds a model to a unit. [changeModel](./changemodel.md) is required after this for applying the model.
 
 ## Code Information
 

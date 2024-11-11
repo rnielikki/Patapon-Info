@@ -4,6 +4,8 @@
 
 This page is automatically generated and not reviewed yet.<br>Remove this text if this page is fully reviewed.
 
+Effect only.
+
 ## Code Information
 
 - **Name**: `resetCollisionShapeBox`

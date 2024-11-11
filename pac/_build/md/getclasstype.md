@@ -1,6 +1,8 @@
 # getClassType
 
-Gets the class ID of given unit handle.
+Gets handle type of the given handle.
+
+This is **not** for obtaining unit class.
 
 ## Code Information
 
@@ -11,8 +13,16 @@ Gets the class ID of given unit handle.
 
 ## Parameters
 
-- `(int *)handle_id` *(8 bytes)* : Unit handle, obtained from [getUnitHandle](./getunithandle.md).
-- `(int *)destination` *(8 bytes)* : Variable to *store* the **[class ID](./guide/reference-table.md#class-ids)**. If it is invalid unit, the value is -1.
+- `(int *)handle` *(8 bytes)* : Handle from various places.
+- `(int *)handle_type` *(8 bytes)* : Variable to *store* the handle. If it is invalid unit, the value is -1.
+
+|`handle_type`|handle|
+|---|---|
+|`0x2`|Troop|
+|`0x3`|Squad|
+|`0x9`|Unit/Character (or bubble speech handle is also 0x9, just why)|
+|`0xA`|Gimmick|
+|`0xB`|Effect|
 
 ## Example
 

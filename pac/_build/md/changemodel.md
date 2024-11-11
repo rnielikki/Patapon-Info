@@ -1,6 +1,6 @@
 # changeModel
 
-Changes the model of the given unit/gimmick.
+Changes the model of the given unit. Works only with unit.
 
 ## Code Information
 

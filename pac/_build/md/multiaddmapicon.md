@@ -11,8 +11,8 @@ Adds an icon to the VS map.
 
 ## Parameters
 
-- `(undefined4)Var0` *(8 bytes)*
-- `(undefined4)Var1` *(8 bytes)*
+- `(int *)handle` *(8 bytes)* : Gimmick handle.
+- `(undefined4)Var1` *(8 bytes)* : Please describe. 0 deletes the icon. Incorrect value might crash the game.
 
 ## Example
 

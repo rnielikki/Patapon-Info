@@ -1,6 +1,6 @@
 # addChara
 
-Adds a character to a squad. Used for adding hatapon. Requires [readArcFile](./readarcfile.md) **and** [requestActor](./requestactor.md) to load the character.
+Adds a character (unit) to a squad. Used for adding hatapon. Requires [readArcFile](./readarcfile.md) **and** [requestActor](./requestactor.md) to load the character.
 
 ## Code Information
 

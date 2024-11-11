@@ -138,7 +138,7 @@ For hideout exclusive handle, check [hideout](#hideout) section.
 ### Class
 
 - [setClassData](../setclassdata.md)
-- [getClassType](../getclasstype.md), [setSuperHero](../setsuperhero.md)
+- [setSuperHero](../setsuperhero.md)
 - [addSkill](../addskill.md), [isRegisterSkill](../isregisterskill.md)
 - [setClassData](../setclassdata.md)
 - [getUnitParam](../getunitparam_25161b00.md)
