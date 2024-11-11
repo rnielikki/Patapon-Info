@@ -13,7 +13,7 @@ Sets the gimmick occupier **as float**.
 
 - `(int *)gimmick_handle` *(8 bytes)* : Handle of the target gimmick.
 - `(int)model_index` *(8 bytes)* : Model index in the gimmick handle.
-- `(int)value` *(8 bytes)* : Value to set the user ID.
+- `(float)value` *(8 bytes)* : Value to set the user ID.
 
 ## Example
 

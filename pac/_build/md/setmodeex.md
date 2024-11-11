@@ -21,7 +21,7 @@ Connects the generator to e.g. [death call](./setdeathcall.md) to the other gene
 |0|None|
 |1|Constgimmick Destroying stops spawning|
 |2|???|
-|3|Manually sets Constgimmick destroyable (e.g. fifty cyclopses)|
+|3|Constgimmick can be destroyed after all spawned enemies are killed (e.g. Fifty Cyclopses)|
 |4|Spawned from [index 0 of same generator entity](./guide/how-to-create-an-enemy-target.md#reqactor-method)|
 
 ## Example
