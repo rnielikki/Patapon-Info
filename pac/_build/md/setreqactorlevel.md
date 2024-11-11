@@ -17,6 +17,10 @@ See also: [setLevel](./setlevel.md)
 - `(int)in_generator_id` *(8 bytes)* : *ID in the generator*.
 - `(int)level` *(8 bytes)*: Level of the actor.
 
+## Remarks
+
+If the level is not set, it will use the level from [setQuestLevel](./setquestlevel.md).
+
 ## Example
 
 Here is one example in hex:

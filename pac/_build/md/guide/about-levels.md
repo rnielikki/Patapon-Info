@@ -21,6 +21,8 @@ Offensive/Defensive level bonus calculation uses this (More information: ["Level
 Final_Level = Quest_Level + Individual_Level - 1
 ```
 
+If quest level and/or individual level is not defined, it uses level from [setQuestLevel](../setquestlevel.md).
+
 This **is used for stat calculation** (Wiht the "level incremental" values in `originstatparam`).
 
 ### Stat scale

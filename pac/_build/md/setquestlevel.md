@@ -1,6 +1,8 @@
 # setQuestLevel
 
-Use [setQuestLevelRevise](./setquestlevelrevise.md) instead. Works only when the "revise level" is zero.
+Defines the default level value the whole mission.
+
+Use [setQuestLevelRevise](./setquestlevelrevise.md) for quest scope level.
 
 ## Code Information
 

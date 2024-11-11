@@ -16,6 +16,10 @@ See also: [About Levels](./guide/about-levels.md).
 - `(int *)generator_handle` *(8 bytes)* : Handle of the generator to set level, obtained from [create](./create.md) or [getHandle](./gethandle.md).
 - `(int)level` *(8 bytes)* : Individual level to assign to the unit(s). More information in [here](./guide/about-levels.md).
 
+## Remarks
+
+If the level is not set, it will use the level from [setQuestLevel](./setquestlevel.md).
+
 ## Example
 
 Here is one example in hex:
