@@ -1,6 +1,6 @@
 # cameraSetOffsetY
 
-Defines Y offset of the camera position immediately.
+Sets the Y offset of the camera position.
 
 ## Code Information
 

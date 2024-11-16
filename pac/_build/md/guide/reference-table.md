@@ -169,6 +169,18 @@ The squadactivity Id must be applied to the correct class/unit, otherwise it won
 - [SquadActivityparam IDs (html)](./resources/squadactivity.html)
 - [SquadActivityparam IDs (CSV)](./resources/squadactivity.csv)
 
+## Other Entities
+
+### Effectparam IDs
+
+- [Effectparam IDs (html)](./resources/effectparam.html)
+- [Effectparam IDs (CSV)](./resources/effectparam.csv)
+
+### Gimmickparam IDs
+
+- [Gimmickparam IDs (html)](./resources/gimmickparam.html)
+- [Gimmickparam IDs (CSV)](./resources/gimmickparam.csv)
+
 ## Mission
 
 ### Mission IDs
@@ -236,6 +248,11 @@ The squadactivity Id must be applied to the correct class/unit, otherwise it won
 
 ## Item indexes
 
+### Item ID + Weaponparam ID Indexes
+
+- [Itemparam table, with weaponparam ID (html)](./resources/itemparam.html)
+- [Itemparam table, with weaponparam ID (CSV)](./resources/itemparam.csv)
+
 ### Equipment Group ID indexes
 
 |ID|Equipment|
@@ -297,11 +314,6 @@ The squadactivity Id must be applied to the correct class/unit, otherwise it won
 |13|Ic|
 |14|Cu
 
-### Item ID + Weaponparam ID Indexes
-
-- [Itemparam table, with weaponparam ID (html)](./resources/itemparam.html)
-- [Itemparam table, with weaponparam ID (CSV)](./resources/itemparam.csv)
-
 ## Music
 
 ### Theme IDs
@@ -351,8 +363,6 @@ The ID has **same order as selist.slt** (in `DATA_CMN\loadinggroup\systemdata\so
 3. Find the `data_addr` from 2. In example, search by `38 33` (And the value can be found in `0x3F8`)
 4. Subtract `0x20` from the result of 3. In the example, it is `0x3f8 - 0x20` = 0x3d8`.
 5. Divide to 4 from the result of 4. So `0x3d8/4` is `0xf6`, which proves it is the ID of `azito.sgd`.
-
-## Data
 
 ## Magic word list
 

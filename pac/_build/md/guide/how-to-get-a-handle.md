@@ -57,7 +57,7 @@ For Hatapon, [getHataPonHandle](../gethataponhandle.md) gives **unit handle** wi
 
 ### Gimmick
 
-1. First, get gimmick ID
+1. First, get the gimmick identifier.
    - For [getGateInfo](../getgateinfo.md) or [setGateInfo](../setgateinfo.md), it is `destination` or `param` *with* `param_index` 0.
    - For [registConstGimmick](../registconstgimmick.md), it is last parameter of the instruction (user-defined ID).
    - For *reqActor* gimmick, [getActorHandle](../getactorhandle.md) does the job.

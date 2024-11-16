@@ -12,7 +12,7 @@ Adds a gimmick and gets handle of it.
 ## Parameters
 
 - `(int *)gimmick_handle` *(8 bytes)* : Variable to *store* the gimmick handle.
-- `(int)gimmick_id` *(8 bytes)* : ID of the gimmick in `gimmickparam`.
+- `(int)gimmick_id` *(8 bytes)* : [Gimmick ID](./guide/reference-table.md#gimmickparam-ids) of the gimmick in `gimmickparam`.
 - `(int)troop_type` *(8 bytes)* : [Troop type](./guide/reference-table.md#troop-types) of the gimmick.
 - `(int)gimmick_identifier` *(8 bytes)* : User defined any gimmick identifier. Keep 0 if this will not used. Can be used in [gimmick_getHandle](./gimmick_gethandle.md).
 

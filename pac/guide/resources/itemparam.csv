@@ -1,1052 +1,1052 @@
-ID	weaponparam ID	Internal name	Name
-0x0	#N/A		
-0x1	#N/A	itm00_004	PON Drum
-0x2	#N/A	itm00_005	PATA Drum
-0x3	#N/A	itm00_006	CHAKA Drum
-0x4	#N/A	itm00_007	DON Drum
-0x5	#N/A	itm13_001	PATA PATA Song
-0x6	#N/A	itm13_002	PON PON Song
-0x7	#N/A	itm13_003	CHAKA CHAKA Song
-0x8	#N/A	itm13_005	PON PATA Song
-0x9	#N/A	itm13_004	PON CHAKA Song
-0xA	#N/A	itm13_006	DON DON Song
-0xB	#N/A	itm13_007	DON CHAKA Song
-0xC	#N/A	item011	Yarigami's Sutra
-0xD	#N/A	item012	Tategami's Sutra
-0xE	#N/A	item013	Soragami's Sutra
-0xF	#N/A	item014	Yamagami's Sutra
-0x10	#N/A	item015	Moegami's Sutra
-0x11	#N/A	item016	Super Yarigami's Sutra
-0x12	#N/A	item017	Super Tategami's Sutra
-0x13	#N/A	item018	Super Soragami's Sutra
-0x14	#N/A	item019	Super Yamagami's Sutra
-0x15	#N/A	itm12_006	
-0x16	#N/A	itm12_006	
-0x17	#N/A	itm12_006	
-0x18	#N/A	itm12_006	
-0x19	#N/A	itm12_006	
-0x1A	#N/A	itm12_006	
-0x1B	#N/A	itm12_006	
-0x1C	#N/A	itm12_006	
-0x1D	#N/A	itm00_008	
-0x1E	#N/A	itm00_008	
-0x1F	#N/A	itm00_008	
-0x20	#N/A	itm00_008	
-0x21	#N/A	itm00_009	
-0x22	#N/A	itm00_009	
-0x23	#N/A	itm00_009	
-0x24	#N/A	itm00_009	
-0x25	#N/A	itm00_010	
-0x26	#N/A	itm00_010	
-0x27	#N/A	itm00_010	
-0x28	#N/A	itm00_010	
-0x29	#N/A	itm00_019	
-0x2A	#N/A	itm00_019	
-0x2B	#N/A	itm00_019	
-0x2C	#N/A	itm00_019	
-0x2D	#N/A	itm00_012	
-0x2E	#N/A	itm00_012	
-0x2F	#N/A	itm00_012	
-0x30	#N/A	itm00_012	
-0x31	#N/A	itm12_010	Key
-0x32	#N/A		Ka-ching
-0x33	#N/A	itm09_000	Potion
-0x34	#N/A	itm103	Potion
-0x35	#N/A	efm_140	Potion
-0x36	#N/A	efm_141	Potion
-0x37	#N/A	efm_142	Potion
-0x38	#N/A	itm01_003	Tough Meat
-0x39	#N/A	itm01_004	Tender Meat
-0x3A	#N/A	itm01_005	Dream Meat
-0x3B	#N/A	itm01_006	Mystery Meat
-0x3C	#N/A	itm01_007	Demon Steak
-0x3D	#N/A	itm15_000	Berara Hide
-0x3E	#N/A	itm15_001	Gotsutsu Hide
-0x3F	#N/A	itm15_002	Subebe Hide
-0x40	#N/A	itm15_003	Mezura Hide
-0x41	#N/A	itm15_004	Demon Hide
-0x42	#N/A	itm16_000	Kuneri Fang
-0x43	#N/A	itm16_001	Itete Fang
-0x44	#N/A	itm16_002	Gizaza Fang
-0x45	#N/A	itm16_003	Nazozo Fang
-0x46	#N/A	itm16_004	Demon Fang
-0x47	#N/A	itm17_000	Mudada Bone
-0x48	#N/A	itm17_001	Gashirin Bone
-0x49	#N/A	itm17_002	Dodeka Bone
-0x4A	#N/A	itm17_003	Ottama Bone
-0x4B	#N/A	itm17_004	Demon Bone
-0x4C	#N/A	itm11_000	Stone
-0x4D	#N/A	itm11_001	Hard Iron
-0x4E	#N/A	itm11_002	Titanium Ore
-0x4F	#N/A	itm11_003	Mytheerial
-0x50	#N/A	itm11_004	Adamanman
-0x51	#N/A	itm03_004	Leaf
-0x52	#N/A	itm03_001	Banal Branch
-0x53	#N/A	itm03_002	Cherry Tree
-0x54	#N/A	itm03_003	Hinoki
-0x55	#N/A	itm03_000	Super Cedar
-0x56	#N/A	itm03_005	Bowtie Tree
-0x57	#N/A	itm14_000	Eyeball Cabbage
-0x58	#N/A	itm14_001	Crying Carrot
-0x59	#N/A	itm14_002	Predator Pumpkin
-0x5A	#N/A	itm14_003	Hazy Shroom
-0x5B	#N/A	itm14_004	Guddorian
-0x5C	#N/A	itm19_000	Kasu Seed
-0x5D	#N/A	itm19_001	Yoka Seed
-0x5E	#N/A	itm19_002	Deka Seed
-0x5F	#N/A	itm19_003	Bibi Seed
-0x60	#N/A	itm19_004	Mater Sprout
-0x61	#N/A	itm06_000	Sloppy Alloy
-0x62	#N/A	itm06_001	Hard Alloy
-0x63	#N/A	itm06_002	Awesome Alloy
-0x64	#N/A	itm06_003	Magic Alloy
-0x65	#N/A	itm06_004	Demon's Ore
-0x66	#N/A	itm18_000	Familiar Liquid
-0x67	#N/A	itm18_001	Hot Liquid
-0x68	#N/A	itm18_002	Cold Liquid
-0x69	#N/A	itm18_003	Rainbow Liquid
-0x6A	#N/A	itm18_004	Demon Liquid
-0x6B	0x0	hlm007_0_1000	
-0x6C	0x1	hlm007_0_1001	
-0x6D	0x2	hlm007_0_1002	
-0x6E	0x3	hlm008_0_1000	
-0x6F	0x4	hlm008_0_1001	
-0x70	0x5	hlm008_0_1002	
-0x71	0x6	hlm009_0_1000	
-0x72	0x7	hlm009_0_1001	
-0x73	0x8	hlm009_0_1002	
-0x74	0x39	equip000_000_10	Sword
-0x75	0x3A	equip000_100_10	Flame Sword
-0x76	0x3A	equip000_100_10	Flame Sword [St]
-0x77	0x3A	equip000_100_10	Flame Sword [G]
-0x78	0x3A	equip000_100_10	Flame Sword [De]
-0x79	0x3A	equip000_100_10	Flame Sword [H]
-0x7A	0x3A	equip000_100_10	Flame Sword [Sl]
-0x7B	0x3A	equip000_100_10	Flame Sword [Fl]
-0x7C	0x3A	equip000_100_10	Flame Sword [Po]
-0x7D	0x3B	equip000_101_10	Ice Sword
-0x7E	0x3B	equip000_101_10	Ice Sword [St]
-0x7F	0x3B	equip000_101_10	Ice Sword [G]
-0x80	0x3B	equip000_101_10	Ice Sword [De]
-0x81	0x3B	equip000_101_10	Ice Sword [H]
-0x82	0x3B	equip000_101_10	Ice Sword [Sl]
-0x83	0x3B	equip000_101_10	Ice Sword [Fl]
-0x84	0x3B	equip000_101_10	Ice Sword [Po]
-0x85	0x3C	equip000_102_10	Sleepi Sword
-0x86	0x3C	equip000_102_10	Sleepi Sword [St]
-0x87	0x3C	equip000_102_10	Sleepi Sword [G]
-0x88	0x3C	equip000_102_10	Sleepi Sword [De]
-0x89	0x3C	equip000_102_10	Sleepi Sword [H]
-0x8A	0x3C	equip000_102_10	Sleepi Sword [Sl]
-0x8B	0x3C	equip000_102_10	Sleepi Sword [Fl]
-0x8C	0x3C	equip000_102_10	Sleepi Sword [Po]
-0x8D	0x3D	equip000_200_10	Flangil
-0x8E	0x3E	equip000_201_10	Drigonlay
-0x8F	0x3F	equip000_202_10	Fendus
-0x90	0x40	equip000_203_10	Castram
-0x91	0x41	equip000_204_10	The Butcher
-0x92	0x42	equip000_300_10	Tatepon Sword
-0x93	0x43	equip001_000_10	Blade
-0x94	0x44	equip001_100_10	Critical Blade
-0x95	0x44	equip001_100_10	Critical Blade [St]
-0x96	0x44	equip001_100_10	Critical Blade [G]
-0x97	0x44	equip001_100_10	Critical Blade [De]
-0x98	0x44	equip001_100_10	Critical Blade [H]
-0x99	0x44	equip001_100_10	Critical Blade [Sl]
-0x9A	0x44	equip001_100_10	Critical Blade [Fl]
-0x9B	0x44	equip001_100_10	Critical Blade [Po]
-0x9C	0x45	equip001_101_10	Lightning Blade
-0x9D	0x45	equip001_101_10	Lightning Blade [St]
-0x9E	0x45	equip001_101_10	Lightning Blade [G]
-0x9F	0x45	equip001_101_10	Lightning Blade [De]
-0xA0	0x45	equip001_101_10	Lightning Blade [H]
-0xA1	0x45	equip001_101_10	Lightning Blade [Sl]
-0xA2	0x45	equip001_101_10	Lightning Blade [Fl]
-0xA3	0x45	equip001_101_10	Lightning Blade [Po]
-0xA4	0x46	equip001_200_10	Tsuyugiri
-0xA5	0x47	equip001_201_10	Murapata
-0xA6	0x48	equip001_202_10	Blade of Astria
-0xA7	0x49	equip001_300_10	Tsukigiri
-0xA8	0x4A	equip002_000_10	Spear
-0xA9	0x4B	equip002_100_10	Critical Spear
-0xAA	0x4B	equip002_100_10	Critical Spear [St]
-0xAB	0x4B	equip002_100_10	Critical Spear [G]
-0xAC	0x4B	equip002_100_10	Critical Spear [De]
-0xAD	0x4B	equip002_100_10	Critical Spear [H]
-0xAE	0x4B	equip002_100_10	Critical Spear [Sl]
-0xAF	0x4B	equip002_100_10	Critical Spear [Fl]
-0xB0	0x4B	equip002_100_10	Critical Spear [Po]
-0xB1	0x4C	equip002_101_10	Repel Spear
-0xB2	0x4C	equip002_101_10	Repel Spear [St]
-0xB3	0x4C	equip002_101_10	Repel Spear [G]
-0xB4	0x4C	equip002_101_10	Repel Spear [De]
-0xB5	0x4C	equip002_101_10	Repel Spear [H]
-0xB6	0x4C	equip002_101_10	Repel Spear [Sl]
-0xB7	0x4C	equip002_101_10	Repel Spear [Fl]
-0xB8	0x4C	equip002_101_10	Repel Spear [Po]
-0xB9	0x4D	equip002_102_10	Flame Spear
-0xBA	0x4D	equip002_102_10	Flame Spear [St]
-0xBB	0x4D	equip002_102_10	Flame Spear [G]
-0xBC	0x4D	equip002_102_10	Flame Spear [De]
-0xBD	0x4D	equip002_102_10	Flame Spear [H]
-0xBE	0x4D	equip002_102_10	Flame Spear [Sl]
-0xBF	0x4D	equip002_102_10	Flame Spear [Fl]
-0xC0	0x4D	equip002_102_10	Flame Spear [Po]
-0xC1	0x4E	equip002_200_10	Gesundbeit
-0xC2	0x4F	equip002_201_10	Yumspar
-0xC3	0x50	equip002_202_10	Palkyria's Flight
-0xC4	0x51	equip002_203_10	Dokaknel's Fang
-0xC5	0x52	equip002_204_10	Poseipon's Trident
-0xC6	0x53	equip002_300_10	Yaripon's Spear
-0xC7	0x54	equip003_000_10	Lance
-0xC8	0x55	equip003_100_10	Ice Pike
-0xC9	0x55	equip003_100_10	Ice Pike [St]
-0xCA	0x55	equip003_100_10	Ice Pike [G]
-0xCB	0x55	equip003_100_10	Ice Pike [De]
-0xCC	0x55	equip003_100_10	Ice Pike [H]
-0xCD	0x55	equip003_100_10	Ice Pike [Sl]
-0xCE	0x55	equip003_100_10	Ice Pike [Fl]
-0xCF	0x55	equip003_100_10	Ice Pike [Po]
-0xD0	0x56	equip003_101_10	Stagger Pike
-0xD1	0x56	equip003_101_10	Stagger Pike [St]
-0xD2	0x56	equip003_101_10	Stagger Pike [G]
-0xD3	0x56	equip003_101_10	Stagger Pike [De]
-0xD4	0x56	equip003_101_10	Stagger Pike [H]
-0xD5	0x56	equip003_101_10	Stagger Pike [Sl]
-0xD6	0x56	equip003_101_10	Stagger Pike [Fl]
-0xD7	0x56	equip003_101_10	Stagger Pike [Po]
-0xD8	0x57	equip003_200_10	Goldora
-0xD9	0x58	equip003_201_10	Pointidon
-0xDA	0x59	equip003_202_10	Super Cedar Log
-0xDB	0x5A	equip003_300_10	Lance of Asuwish
-0xDC	0x5B	equip004_000_10	Halberd
-0xDD	0x5C	equip004_100_10	Fire Lance
-0xDE	0x5C	equip004_100_10	Fire Lance [St]
-0xDF	0x5C	equip004_100_10	Fire Lance [G]
-0xE0	0x5C	equip004_100_10	Fire Lance [De]
-0xE1	0x5C	equip004_100_10	Fire Lance [H]
-0xE2	0x5C	equip004_100_10	Fire Lance [Sl]
-0xE3	0x5C	equip004_100_10	Fire Lance [Fl]
-0xE4	0x5C	equip004_100_10	Fire Lance [Po]
-0xE5	0x5D	equip004_101_10	Ice Lance
-0xE6	0x5D	equip004_101_10	Ice Lance [St]
-0xE7	0x5D	equip004_101_10	Ice Lance [G]
-0xE8	0x5D	equip004_101_10	Ice Lance [De]
-0xE9	0x5D	equip004_101_10	Ice Lance [H]
-0xEA	0x5D	equip004_101_10	Ice Lance [Sl]
-0xEB	0x5D	equip004_101_10	Ice Lance [Fl]
-0xEC	0x5D	equip004_101_10	Ice Lance [Po]
-0xED	0x5E	equip004_102_10	Stagger Lance
-0xEE	0x5E	equip004_102_10	Stagger Lance [St]
-0xEF	0x5E	equip004_102_10	Stagger Lance [G]
-0xF0	0x5E	equip004_102_10	Stagger Lance [De]
-0xF1	0x5E	equip004_102_10	Stagger Lance [H]
-0xF2	0x5E	equip004_102_10	Stagger Lance [Sl]
-0xF3	0x5E	equip004_102_10	Stagger Lance [Fl]
-0xF4	0x5E	equip004_102_10	Stagger Lance [Po]
-0xF5	0x5F	equip004_200_10	Romulus' Halberd
-0xF6	0x60	equip004_201_10	Incensar
-0xF7	0x61	equip004_202_10	Gugnir
-0xF8	0x62	equip004_203_10	Battachin
-0xF9	0x63	equip004_204_10	Murakumon
-0xFA	0x64	equip004_300_10	Hotenpon's Halberd
-0xFB	0x65	equip005_000_10	Arm
-0xFC	0x66	equip005_100_10	Repel Arm
-0xFD	0x66	equip005_100_10	Repel Arm [St]
-0xFE	0x66	equip005_100_10	Repel Arm [G]
-0xFF	0x66	equip005_100_10	Repel Arm [De]
-0x100	0x66	equip005_100_10	Repel Arm [H]
-0x101	0x66	equip005_100_10	Repel Arm [Sl]
-0x102	0x66	equip005_100_10	Repel Arm [Fl]
-0x103	0x66	equip005_100_10	Repel Arm [Po]
-0x104	0x67	equip005_101_10	Ice Arm
-0x105	0x67	equip005_101_10	Ice Arm [St]
-0x106	0x67	equip005_101_10	Ice Arm [G]
-0x107	0x67	equip005_101_10	Ice Arm [De]
-0x108	0x67	equip005_101_10	Ice Arm [H]
-0x109	0x67	equip005_101_10	Ice Arm [Sl]
-0x10A	0x67	equip005_101_10	Ice Arm [Fl]
-0x10B	0x67	equip005_101_10	Ice Arm [Po]
-0x10C	0x68	equip005_102_10	Sleepi Arm
-0x10D	0x68	equip005_102_10	Sleepi Arm [St]
-0x10E	0x68	equip005_102_10	Sleepi Arm [G]
-0x10F	0x68	equip005_102_10	Sleepi Arm [De]
-0x110	0x68	equip005_102_10	Sleepi Arm [H]
-0x111	0x68	equip005_102_10	Sleepi Arm [Sl]
-0x112	0x68	equip005_102_10	Sleepi Arm [Fl]
-0x113	0x68	equip005_102_10	Sleepi Arm [Po]
-0x114	0x69	equip005_200_10	Deathwringer
-0x115	0x6A	equip005_201_10	Great Golem Arm
-0x116	0x6B	equip005_202_10	Piringar Zingar
-0x117	0x6C	equip005_203_10	Chosan's Arm
-0x118	0x6D	equip005_204_10	Natura's Touch
-0x119	0x6E	equip005_300_10	Super Megadogu Arm
-0x11A	0x6F	equip006_000_10	Dagger
-0x11B	0x70	equip006_100_10	Critical Dagger
-0x11C	0x70	equip006_100_10	Critical Dagger [St]
-0x11D	0x70	equip006_100_10	Critical Dagger [G]
-0x11E	0x70	equip006_100_10	Critical Dagger [De]
-0x11F	0x70	equip006_100_10	Critical Dagger [H]
-0x120	0x70	equip006_100_10	Critical Dagger [Sl]
-0x121	0x70	equip006_100_10	Critical Dagger [Fl]
-0x122	0x70	equip006_100_10	Critical Dagger [Po]
-0x123	0x71	equip006_101_10	Sleepi Dagger
-0x124	0x71	equip006_101_10	Sleepi Dagger [St]
-0x125	0x71	equip006_101_10	Sleepi Dagger [G]
-0x126	0x71	equip006_101_10	Sleepi Dagger [De]
-0x127	0x71	equip006_101_10	Sleepi Dagger [H]
-0x128	0x71	equip006_101_10	Sleepi Dagger [Sl]
-0x129	0x71	equip006_101_10	Sleepi Dagger [Fl]
-0x12A	0x71	equip006_101_10	Sleepi Dagger [Po]
-0x12B	0x72	equip006_200_10	Crablessa
-0x12C	0x73	equip006_201_10	Feisho
-0x12D	0x74	equip006_300_10	Krauser
-0x12E	0x75	equip007_000_10	Shiv
-0x12F	0x76	equip007_100_10	Poison Shiv
-0x130	0x76	equip007_100_10	Poison Shiv [St]
-0x131	0x76	equip007_100_10	Poison Shiv [G]
-0x132	0x76	equip007_100_10	Poison Shiv [De]
-0x133	0x76	equip007_100_10	Poison Shiv [H]
-0x134	0x76	equip007_100_10	Poison Shiv [Sl]
-0x135	0x76	equip007_100_10	Poison Shiv [Fl]
-0x136	0x76	equip007_100_10	Poison Shiv [Po]
-0x137	0x77	equip007_200_10	Heltopay's Kiss
-0x138	0x78	equip007_201_10	Goliamon's Shiv
-0x139	0x79	equip007_202_10	Holymadda Shiv
-0x13A	0x7A	equip007_300_10	Pain of Pentavus
-0x13B	0x7B	equip008_000_10	Greatsword
-0x13C	0x7C	equip008_100_10	Critical Greatsword
-0x13D	0x7C	equip008_100_10	Critical Greatsword [St]
-0x13E	0x7C	equip008_100_10	Critical Greatsword [G]
-0x13F	0x7C	equip008_100_10	Critical Greatsword [De]
-0x140	0x7C	equip008_100_10	Critical Greatsword [H]
-0x141	0x7C	equip008_100_10	Critical Greatsword [Sl]
-0x142	0x7C	equip008_100_10	Critical Greatsword [Fl]
-0x143	0x7C	equip008_100_10	Critical Greatsword [Po]
-0x144	0x7D	equip008_101_10	Ice Greatsword
-0x145	0x7D	equip008_101_10	Ice Greatsword [St]
-0x146	0x7D	equip008_101_10	Ice Greatsword [G]
-0x147	0x7D	equip008_101_10	Ice Greatsword [De]
-0x148	0x7D	equip008_101_10	Ice Greatsword [H]
-0x149	0x7D	equip008_101_10	Ice Greatsword [Sl]
-0x14A	0x7D	equip008_101_10	Ice Greatsword [Fl]
-0x14B	0x7D	equip008_101_10	Ice Greatsword [Po]
-0x14C	0x7E	equip008_200_10	Excalipon
-0x14D	0x7F	equip008_201_10	Quagar
-0x14E	0x80	equip008_202_10	Serberker
-0x14F	0x81	equip008_300_10	Caladbong
-0x150	0x82	equip009_000_10	Greatblade
-0x151	0x83	equip009_100_10	Flame Greatblade
-0x152	0x83	equip009_100_10	Flame Greatblade [St]
-0x153	0x83	equip009_100_10	Flame Greatblade [G]
-0x154	0x83	equip009_100_10	Flame Greatblade [De]
-0x155	0x83	equip009_100_10	Flame Greatblade [H]
-0x156	0x83	equip009_100_10	Flame Greatblade [Sl]
-0x157	0x83	equip009_100_10	Flame Greatblade [Fl]
-0x158	0x83	equip009_100_10	Flame Greatblade [Po]
-0x159	0x84	equip009_101_10	Sleepi Greatblade
-0x15A	0x84	equip009_101_10	Sleepi Greatblade [St]
-0x15B	0x84	equip009_101_10	Sleepi Greatblade [G]
-0x15C	0x84	equip009_101_10	Sleepi Greatblade [De]
-0x15D	0x84	equip009_101_10	Sleepi Greatblade [H]
-0x15E	0x84	equip009_101_10	Sleepi Greatblade [Sl]
-0x15F	0x84	equip009_101_10	Sleepi Greatblade [Fl]
-0x160	0x84	equip009_101_10	Sleepi Greatblade [Po]
-0x161	0x85	equip009_200_10	Mono Hoshibo
-0x162	0x86	equip009_201_10	Onigiri's Greatblade
-0x163	0x87	equip009_202_10	Murasamune
-0x164	0x88	equip009_300_10	Kusanakin
-0x165	0x89	equip010_000_10	Axe
-0x166	0x8A	equip010_100_10	Stagger Axe
-0x167	0x8A	equip010_100_10	Stagger Axe [St]
-0x168	0x8A	equip010_100_10	Stagger Axe [G]
-0x169	0x8A	equip010_100_10	Stagger Axe [De]
-0x16A	0x8A	equip010_100_10	Stagger Axe [H]
-0x16B	0x8A	equip010_100_10	Stagger Axe [Sl]
-0x16C	0x8A	equip010_100_10	Stagger Axe [Fl]
-0x16D	0x8A	equip010_100_10	Stagger Axe [Po]
-0x16E	0x8B	equip010_101_10	Poison Axe
-0x16F	0x8B	equip010_101_10	Poison Axe [St]
-0x170	0x8B	equip010_101_10	Poison Axe [G]
-0x171	0x8B	equip010_101_10	Poison Axe [De]
-0x172	0x8B	equip010_101_10	Poison Axe [H]
-0x173	0x8B	equip010_101_10	Poison Axe [Sl]
-0x174	0x8B	equip010_101_10	Poison Axe [Fl]
-0x175	0x8B	equip010_101_10	Poison Axe [Po]
-0x176	0x8C	equip010_200_10	Hilkinga's Chillaxe
-0x177	0x8D	equip010_201_10	Susurapon
-0x178	0x8E	equip010_202_10	Axe of Hanboon
-0x179	0x8F	equip010_300_10	Bumpalion Axe
-0x17A	0x90	equip011_000_10	Club
-0x17B	0x91	equip011_100_10	Lightning Club
-0x17C	0x91	equip011_100_10	Lightning Club [St]
-0x17D	0x91	equip011_100_10	Lightning Club [G]
-0x17E	0x91	equip011_100_10	Lightning Club [De]
-0x17F	0x91	equip011_100_10	Lightning Club [H]
-0x180	0x91	equip011_100_10	Lightning Club [Sl]
-0x181	0x91	equip011_100_10	Lightning Club [Fl]
-0x182	0x91	equip011_100_10	Lightning Club [Po]
-0x183	0x92	equip011_101_10	Dreamweaver
-0x184	0x92	equip011_101_10	Dreamweaver [St]
-0x185	0x92	equip011_101_10	Dreamweaver [G]
-0x186	0x92	equip011_101_10	Dreamweaver [De]
-0x187	0x92	equip011_101_10	Dreamweaver [H]
-0x188	0x92	equip011_101_10	Dreamweaver [Sl]
-0x189	0x92	equip011_101_10	Dreamweaver [Fl]
-0x18A	0x92	equip011_101_10	Dreamweaver [Po]
-0x18B	0x93	equip011_200_10	Genmaru
-0x18C	0x94	equip011_201_10	Mjollnir
-0x18D	0x95	equip011_202_10	Thor
-0x18E	0x96	equip011_300_10	Humthor's Harm
-0x18F	0x97	equip012_000_10	Bow
-0x190	0x98	equip012_100_10	Flame Bow
-0x191	0x98	equip012_100_10	Flame Bow [St]
-0x192	0x98	equip012_100_10	Flame Bow [G]
-0x193	0x98	equip012_100_10	Flame Bow [De]
-0x194	0x98	equip012_100_10	Flame Bow [H]
-0x195	0x98	equip012_100_10	Flame Bow [Sl]
-0x196	0x98	equip012_100_10	Flame Bow [Fl]
-0x197	0x98	equip012_100_10	Flame Bow [Po]
-0x198	0x99	equip012_101_10	Sleepi Bow
-0x199	0x99	equip012_101_10	Sleepi Bow [St]
-0x19A	0x99	equip012_101_10	Sleepi Bow [G]
-0x19B	0x99	equip012_101_10	Sleepi Bow [De]
-0x19C	0x99	equip012_101_10	Sleepi Bow [H]
-0x19D	0x99	equip012_101_10	Sleepi Bow [Sl]
-0x19E	0x99	equip012_101_10	Sleepi Bow [Fl]
-0x19F	0x99	equip012_101_10	Sleepi Bow [Po]
-0x1A0	0x9A	equip012_200_10	Bow of Apollopon
-0x1A1	0x9B	equip012_201_10	Yamibashiri
-0x1A2	0x9C	equip012_202_10	Raijinpon's Bow
-0x1A3	0x9D	equip012_300_10	Yumipon's Bow
-0x1A4	0x9E	equip013_000_10	Longbow
-0x1A5	0x9F	equip013_100_10	Poison Longbow
-0x1A6	0x9F	equip013_100_10	Poison Longbow [St]
-0x1A7	0x9F	equip013_100_10	Poison Longbow [G]
-0x1A8	0x9F	equip013_100_10	Poison Longbow [De]
-0x1A9	0x9F	equip013_100_10	Poison Longbow [H]
-0x1AA	0x9F	equip013_100_10	Poison Longbow [Sl]
-0x1AB	0x9F	equip013_100_10	Poison Longbow [Fl]
-0x1AC	0x9F	equip013_100_10	Poison Longbow [Po]
-0x1AD	0xA0	equip013_101_10	Stagger Longbow
-0x1AE	0xA0	equip013_101_10	Stagger Longbow [St]
-0x1AF	0xA0	equip013_101_10	Stagger Longbow [G]
-0x1B0	0xA0	equip013_101_10	Stagger Longbow [De]
-0x1B1	0xA0	equip013_101_10	Stagger Longbow [H]
-0x1B2	0xA0	equip013_101_10	Stagger Longbow [Sl]
-0x1B3	0xA0	equip013_101_10	Stagger Longbow [Fl]
-0x1B4	0xA0	equip013_101_10	Stagger Longbow [Po]
-0x1B5	0xA1	equip013_200_10	Crossbow of Faible
-0x1B6	0xA2	equip013_201_10	Krakabom Crossbow
-0x1B7	0xA3	equip013_202_10	Yoichiro
-0x1B8	0xA4	equip013_300_10	Dekiramos's Crossbow
-0x1B9	0xA5	equip014_000_10	Crossbow
-0x1BA	0xA6	equip014_100_10	Ice Crossbow
-0x1BB	0xA6	equip014_100_10	Ice Crossbow [St]
-0x1BC	0xA6	equip014_100_10	Ice Crossbow [G]
-0x1BD	0xA6	equip014_100_10	Ice Crossbow [De]
-0x1BE	0xA6	equip014_100_10	Ice Crossbow [H]
-0x1BF	0xA6	equip014_100_10	Ice Crossbow [Sl]
-0x1C0	0xA6	equip014_100_10	Ice Crossbow [Fl]
-0x1C1	0xA6	equip014_100_10	Ice Crossbow [Po]
-0x1C2	0xA7	equip014_101_10	Repel Crossbow
-0x1C3	0xA7	equip014_101_10	Repel Crossbow [St]
-0x1C4	0xA7	equip014_101_10	Repel Crossbow [G]
-0x1C5	0xA7	equip014_101_10	Repel Crossbow [De]
-0x1C6	0xA7	equip014_101_10	Repel Crossbow [H]
-0x1C7	0xA7	equip014_101_10	Repel Crossbow [Sl]
-0x1C8	0xA7	equip014_101_10	Repel Crossbow [Fl]
-0x1C9	0xA7	equip014_101_10	Repel Crossbow [Po]
-0x1CA	0xA8	equip014_200_10	The Machinator
-0x1CB	0xA9	equip014_201_10	Illiamtel's Overture
-0x1CC	0xAA	equip014_202_10	Teskatori Shooter
-0x1CD	0xAB	equip014_300_10	Goweecha Gun
-0x1CE	0xAC	equip016_000_10	Horn
-0x1CF	0xAD	equip016_100_10	Flame Horn
-0x1D0	0xAD	equip016_100_10	Flame Horn [St]
-0x1D1	0xAD	equip016_100_10	Flame Horn [G]
-0x1D2	0xAD	equip016_100_10	Flame Horn [De]
-0x1D3	0xAD	equip016_100_10	Flame Horn [H]
-0x1D4	0xAD	equip016_100_10	Flame Horn [Sl]
-0x1D5	0xAD	equip016_100_10	Flame Horn [Fl]
-0x1D6	0xAD	equip016_100_10	Flame Horn [Po]
-0x1D7	0xAE	equip016_101_10	Ice Horn
-0x1D8	0xAE	equip016_101_10	Ice Horn [St]
-0x1D9	0xAE	equip016_101_10	Ice Horn [G]
-0x1DA	0xAE	equip016_101_10	Ice Horn [De]
-0x1DB	0xAE	equip016_101_10	Ice Horn [H]
-0x1DC	0xAE	equip016_101_10	Ice Horn [Sl]
-0x1DD	0xAE	equip016_101_10	Ice Horn [Fl]
-0x1DE	0xAE	equip016_101_10	Ice Horn [Po]
-0x1DF	0xAF	equip016_200_10	Healixir Horn
-0x1E0	0xB0	equip016_201_10	Dragonap Horn
-0x1E1	0xB1	equip016_202_10	Sonic Demonslayer
-0x1E2	0xB2	equip016_300_10	Horn of Panchunan
-0x1E3	0xB3	equip017_000_10	Long Horn
-0x1E4	0xB4	equip017_100_10	Sleepi Longhorn
-0x1E5	0xB4	equip017_100_10	Sleepi Longhorn [St]
-0x1E6	0xB4	equip017_100_10	Sleepi Longhorn [G]
-0x1E7	0xB4	equip017_100_10	Sleepi Longhorn [De]
-0x1E8	0xB4	equip017_100_10	Sleepi Longhorn [H]
-0x1E9	0xB4	equip017_100_10	Sleepi Longhorn [Sl]
-0x1EA	0xB4	equip017_100_10	Sleepi Longhorn [Fl]
-0x1EB	0xB4	equip017_100_10	Sleepi Longhorn [Po]
-0x1EC	0xB5	equip017_101_10	Stagger Longhorn
-0x1ED	0xB5	equip017_101_10	Stagger Longhorn [St]
-0x1EE	0xB5	equip017_101_10	Stagger Longhorn [G]
-0x1EF	0xB5	equip017_101_10	Stagger Longhorn [De]
-0x1F0	0xB5	equip017_101_10	Stagger Longhorn [H]
-0x1F1	0xB5	equip017_101_10	Stagger Longhorn [Sl]
-0x1F2	0xB5	equip017_101_10	Stagger Longhorn [Fl]
-0x1F3	0xB5	equip017_101_10	Stagger Longhorn [Po]
-0x1F4	0xB6	equip017_200_10	Horn of Homugai
-0x1F5	0xB7	equip017_201_10	Megaslayer
-0x1F6	0xB8	equip017_202_10	Great Howl
-0x1F7	0xB9	equip017_300_10	Bellophone
-0x1F8	0xBA	equip018_000_10	Twinhorn
-0x1F9	0xBB	equip018_100_10	Lightning Twinhorn
-0x1FA	0xBB	equip018_100_10	Lightning Twinhorn [St]
-0x1FB	0xBB	equip018_100_10	Lightning Twinhorn [G]
-0x1FC	0xBB	equip018_100_10	Lightning Twinhorn [De]
-0x1FD	0xBB	equip018_100_10	Lightning Twinhorn [H]
-0x1FE	0xBB	equip018_100_10	Lightning Twinhorn [Sl]
-0x1FF	0xBB	equip018_100_10	Lightning Twinhorn [Fl]
-0x200	0xBB	equip018_100_10	Lightning Twinhorn [Po]
-0x201	0xBC	equip018_101_10	Poison Twinhorn
-0x202	0xBC	equip018_101_10	Poison Twinhorn [St]
-0x203	0xBC	equip018_101_10	Poison Twinhorn [G]
-0x204	0xBC	equip018_101_10	Poison Twinhorn [De]
-0x205	0xBC	equip018_101_10	Poison Twinhorn [H]
-0x206	0xBC	equip018_101_10	Poison Twinhorn [Sl]
-0x207	0xBC	equip018_101_10	Poison Twinhorn [Fl]
-0x208	0xBC	equip018_101_10	Poison Twinhorn [Po]
-0x209	0xBD	equip018_200_10	Horns of Hamlin
-0x20A	0xBE	equip018_201_10	Siren's Song
-0x20B	0xBF	equip018_202_10	Spriggan's Song
-0x20C	0xC0	equip018_300_10	Gjallarborn
-0x20D	0xC1	equip019_000_10	Staff
-0x20E	0xC2	equip019_100_10	Fireball Staff
-0x20F	0xC2	equip019_100_10	Fireball Staff [St]
-0x210	0xC2	equip019_100_10	Fireball Staff [G]
-0x211	0xC2	equip019_100_10	Fireball Staff [De]
-0x212	0xC2	equip019_100_10	Fireball Staff [H]
-0x213	0xC2	equip019_100_10	Fireball Staff [Sl]
-0x214	0xC2	equip019_100_10	Fireball Staff [Fl]
-0x215	0xC2	equip019_100_10	Fireball Staff [Po]
-0x216	0xC3	equip019_101_10	Firewall Staff
-0x217	0xC3	equip019_101_10	Firewall Staff [St]
-0x218	0xC3	equip019_101_10	Firewall Staff [G]
-0x219	0xC3	equip019_101_10	Firewall Staff [De]
-0x21A	0xC3	equip019_101_10	Firewall Staff [H]
-0x21B	0xC3	equip019_101_10	Firewall Staff [Sl]
-0x21C	0xC3	equip019_101_10	Firewall Staff [Fl]
-0x21D	0xC3	equip019_101_10	Firewall Staff [Po]
-0x21E	0xC4	equip019_102_10	Lightning Staff
-0x21F	0xC4	equip019_102_10	Lightning Staff [St]
-0x220	0xC4	equip019_102_10	Lightning Staff [G]
-0x221	0xC4	equip019_102_10	Lightning Staff [De]
-0x222	0xC4	equip019_102_10	Lightning Staff [H]
-0x223	0xC4	equip019_102_10	Lightning Staff [Sl]
-0x224	0xC4	equip019_102_10	Lightning Staff [Fl]
-0x225	0xC4	equip019_102_10	Lightning Staff [Po]
-0x226	0xC5	equip019_200_10	Thunderstorm Staff
-0x227	0xC6	equip019_201_10	Flamesea Staff
-0x228	0xC7	equip019_202_10	Holymist Staff
-0x229	0xC8	equip019_203_10	Darkvenom Staff
-0x22A	0xC9	equip019_204_10	Jewelsword Staff
-0x22B	0xCA	equip019_300_10	Phoenix Ultimate Staff
-0x22C	0xCB	equip020_000_10	Sceptre
-0x22D	0xCC	equip020_100_10	Defence Sceptre
-0x22E	0xCC	equip020_100_10	Defence Sceptre [St]
-0x22F	0xCC	equip020_100_10	Defence Sceptre [G]
-0x230	0xCC	equip020_100_10	Defence Sceptre [De]
-0x231	0xCC	equip020_100_10	Defence Sceptre [H]
-0x232	0xCC	equip020_100_10	Defence Sceptre [Sl]
-0x233	0xCC	equip020_100_10	Defence Sceptre [Fl]
-0x234	0xCC	equip020_100_10	Defence Sceptre [Po]
-0x235	0xCD	equip020_101_10	Purity Sceptre
-0x236	0xCD	equip020_101_10	Purity Sceptre [St]
-0x237	0xCD	equip020_101_10	Purity Sceptre [G]
-0x238	0xCD	equip020_101_10	Purity Sceptre [De]
-0x239	0xCD	equip020_101_10	Purity Sceptre [H]
-0x23A	0xCD	equip020_101_10	Purity Sceptre [Sl]
-0x23B	0xCD	equip020_101_10	Purity Sceptre [Fl]
-0x23C	0xCD	equip020_101_10	Purity Sceptre [Po]
-0x23D	0xCE	equip020_102_10	Healing Sceptre
-0x23E	0xCE	equip020_102_10	Healing Sceptre [St]
-0x23F	0xCE	equip020_102_10	Healing Sceptre [G]
-0x240	0xCE	equip020_102_10	Healing Sceptre [De]
-0x241	0xCE	equip020_102_10	Healing Sceptre [H]
-0x242	0xCE	equip020_102_10	Healing Sceptre [Sl]
-0x243	0xCE	equip020_102_10	Healing Sceptre [Fl]
-0x244	0xCE	equip020_102_10	Healing Sceptre [Po]
-0x245	0xCF	equip020_200_10	Firefighter Sceptre
-0x246	0xD0	equip020_201_10	Defrost Sceptre
-0x247	0xD1	equip020_202_10	Antivenom Sceptre
-0x248	0xD2	equip020_203_10	Sleepless Sceptre
-0x249	0xD3	equip020_204_10	Maelstrom Sceptre
-0x24A	0xD4	equip020_300_10	Sceptre of Rahmon
-0x24B	0xD5	equip021_000_10	Cannon
-0x24C	0xD6	equip021_100_10	Flame Cannon
-0x24D	0xD6	equip021_100_10	Flame Cannon [St]
-0x24E	0xD6	equip021_100_10	Flame Cannon [G]
-0x24F	0xD6	equip021_100_10	Flame Cannon [De]
-0x250	0xD6	equip021_100_10	Flame Cannon [H]
-0x251	0xD6	equip021_100_10	Flame Cannon [Sl]
-0x252	0xD6	equip021_100_10	Flame Cannon [Fl]
-0x253	0xD6	equip021_100_10	Flame Cannon [Po]
-0x254	0xD7	equip021_200_10	Bonkadonk Cannon
-0x255	0xD8	equip021_201_10	Lullablight
-0x256	0xD9	equip021_300_10	Universatile Cannon
-0x257	0xDA	equip022_000_10	Blunderbuss
-0x258	0xDB	equip022_100_10	Ice Blunderbuss
-0x259	0xDB	equip022_100_10	Ice Blunderbuss [St]
-0x25A	0xDB	equip022_100_10	Ice Blunderbuss [G]
-0x25B	0xDB	equip022_100_10	Ice Blunderbuss [De]
-0x25C	0xDB	equip022_100_10	Ice Blunderbuss [H]
-0x25D	0xDB	equip022_100_10	Ice Blunderbuss [Sl]
-0x25E	0xDB	equip022_100_10	Ice Blunderbuss [Fl]
-0x25F	0xDB	equip022_100_10	Ice Blunderbuss [Po]
-0x260	0xDC	equip022_200_10	Euryalus
-0x261	0xDD	equip022_201_10	Dreadmare
-0x262	0xDE	equip022_300_10	Eisaiho
-0x263	0xDF	equip023_000_10	Laser
-0x264	0xE0	equip023_100_10	Critical Laser
-0x265	0xE0	equip023_100_10	Critical Laser [St]
-0x266	0xE0	equip023_100_10	Critical Laser [G]
-0x267	0xE0	equip023_100_10	Critical Laser [De]
-0x268	0xE0	equip023_100_10	Critical Laser [H]
-0x269	0xE0	equip023_100_10	Critical Laser [Sl]
-0x26A	0xE0	equip023_100_10	Critical Laser [Fl]
-0x26B	0xE0	equip023_100_10	Critical Laser [Po]
-0x26C	0xE1	equip023_200_10	Hoirenho
-0x26D	0xE2	equip023_201_10	Ichigeki
-0x26E	0xE3	equip023_300_10	Sunflare Laser
-0x26F	0xE4	equip024_000_10	Helm
-0x270	0xE5	equip024_100_10	Lightning Helm
-0x271	0xE5	equip024_100_10	Lightning Helm [Hp]
-0x272	0xE5	equip024_100_10	Lightning Helm [Me]
-0x273	0xE5	equip024_100_10	Lightning Helm [Ar]
-0x274	0xE5	equip024_100_10	Lightning Helm [W]
-0x275	0xE5	equip024_100_10	Lightning Helm [En]
-0x276	0xE5	equip024_100_10	Lightning Helm [Ic]
-0x277	0xE5	equip024_100_10	Lightning Helm [Cu]
-0x278	0xE6	equip024_101_10	Flame Helm
-0x279	0xE6	equip024_101_10	Flame Helm [Hp]
-0x27A	0xE6	equip024_101_10	Flame Helm [Me]
-0x27B	0xE6	equip024_101_10	Flame Helm [Ar]
-0x27C	0xE6	equip024_101_10	Flame Helm [W]
-0x27D	0xE6	equip024_101_10	Flame Helm [En]
-0x27E	0xE6	equip024_101_10	Flame Helm [Ic]
-0x27F	0xE6	equip024_101_10	Flame Helm [Cu]
-0x280	0xE7	equip024_102_10	Ice Helm
-0x281	0xE7	equip024_102_10	Ice Helm [Hp]
-0x282	0xE7	equip024_102_10	Ice Helm [Me]
-0x283	0xE7	equip024_102_10	Ice Helm [Ar]
-0x284	0xE7	equip024_102_10	Ice Helm [W]
-0x285	0xE7	equip024_102_10	Ice Helm [En]
-0x286	0xE7	equip024_102_10	Ice Helm [Ic]
-0x287	0xE7	equip024_102_10	Ice Helm [Cu]
-0x288	0xE8	equip024_200_10	Tahla Helm
-0x289	0xE9	equip024_201_10	Bunny Head
-0x28A	0xEA	equip024_202_10	Tebenos Helm
-0x28B	0xEB	equip024_203_10	Samurai Head
-0x28C	0xEC	equip024_204_10	Marumenko Helm
-0x28D	0xED	equip024_300_10	Dolmorn Helm
-0x28E	0xEE	equip025_000_10	Shield
-0x28F	0xEF	equip025_100_10	Flame Shield
-0x290	0xEF	equip025_100_10	Flame Shield [Hp]
-0x291	0xEF	equip025_100_10	Flame Shield [Me]
-0x292	0xEF	equip025_100_10	Flame Shield [Ar]
-0x293	0xEF	equip025_100_10	Flame Shield [W]
-0x294	0xEF	equip025_100_10	Flame Shield [En]
-0x295	0xEF	equip025_100_10	Flame Shield [Ic]
-0x296	0xEF	equip025_100_10	Flame Shield [Cu]
-0x297	0xF0	equip025_101_10	Ice Shield
-0x298	0xF0	equip025_101_10	Ice Shield [Hp]
-0x299	0xF0	equip025_101_10	Ice Shield [Me]
-0x29A	0xF0	equip025_101_10	Ice Shield [Ar]
-0x29B	0xF0	equip025_101_10	Ice Shield [W]
-0x29C	0xF0	equip025_101_10	Ice Shield [En]
-0x29D	0xF0	equip025_101_10	Ice Shield [Ic]
-0x29E	0xF0	equip025_101_10	Ice Shield [Cu]
-0x29F	0xF1	equip025_102_10	Eyeball Shield
-0x2A0	0xF1	equip025_102_10	Eyeball Shield [Hp]
-0x2A1	0xF1	equip025_102_10	Eyeball Shield [Me]
-0x2A2	0xF1	equip025_102_10	Eyeball Shield [Ar]
-0x2A3	0xF1	equip025_102_10	Eyeball Shield [W]
-0x2A4	0xF1	equip025_102_10	Eyeball Shield [En]
-0x2A5	0xF1	equip025_102_10	Eyeball Shield [Ic]
-0x2A6	0xF1	equip025_102_10	Eyeball Shield [Cu]
-0x2A7	0xF2	equip025_200_10	Stinger Shield
-0x2A8	0xF3	equip025_201_10	Galapagoth Shield
-0x2A9	0xF4	equip025_202_10	Octagon Shield
-0x2AA	0xF5	equip025_203_10	Alldemonium Shield
-0x2AB	0xF6	equip025_204_10	Fireblessed Shield
-0x2AC	0xF7	equip025_300_10	Oharan Shield
-0x2AD	0xF8	equip026_000_10	Greatshield
-0x2AE	0xF9	equip026_100_10	Poison Greatshield
-0x2AF	0xF9	equip026_100_10	Poison Greatshield [Hp]
-0x2B0	0xF9	equip026_100_10	Poison Greatshield [Me]
-0x2B1	0xF9	equip026_100_10	Poison Greatshield [Ar]
-0x2B2	0xF9	equip026_100_10	Poison Greatshield [W]
-0x2B3	0xF9	equip026_100_10	Poison Greatshield [En]
-0x2B4	0xF9	equip026_100_10	Poison Greatshield [Ic]
-0x2B5	0xF9	equip026_100_10	Poison Greatshield [Cu]
-0x2B6	0xFA	equip026_101_10	Grond Greatshield
-0x2B7	0xFA	equip026_101_10	Grond Greatshield [Hp]
-0x2B8	0xFA	equip026_101_10	Grond Greatshield [Me]
-0x2B9	0xFA	equip026_101_10	Grond Greatshield [Ar]
-0x2BA	0xFA	equip026_101_10	Grond Greatshield [W]
-0x2BB	0xFA	equip026_101_10	Grond Greatshield [En]
-0x2BC	0xFA	equip026_101_10	Grond Greatshield [Ic]
-0x2BD	0xFA	equip026_101_10	Grond Greatshield [Cu]
-0x2BE	0xFB	equip026_200_10	Aegis
-0x2BF	0xFC	equip026_201_10	Tokoyomamori
-0x2C0	0xFD	equip026_202_10	Bacteon Greatshield
-0x2C1	0xFE	equip026_300_10	Greatshield of Ironimo
-0x2C2	0xFF	equip027_000_10	Shoulderguard
-0x2C3	0x100	equip027_100_10	Flame Shoulders
-0x2C4	0x100	equip027_100_10	Flame Shoulders [Hp]
-0x2C5	0x100	equip027_100_10	Flame Shoulders [Me]
-0x2C6	0x100	equip027_100_10	Flame Shoulders [Ar]
-0x2C7	0x100	equip027_100_10	Flame Shoulders [W]
-0x2C8	0x100	equip027_100_10	Flame Shoulders [En]
-0x2C9	0x100	equip027_100_10	Flame Shoulders [Ic]
-0x2CA	0x100	equip027_100_10	Flame Shoulders [Cu]
-0x2CB	0x101	equip027_101_10	Ice Shoulders
-0x2CC	0x101	equip027_101_10	Ice Shoulders [Hp]
-0x2CD	0x101	equip027_101_10	Ice Shoulders [Me]
-0x2CE	0x101	equip027_101_10	Ice Shoulders [Ar]
-0x2CF	0x101	equip027_101_10	Ice Shoulders [W]
-0x2D0	0x101	equip027_101_10	Ice Shoulders [En]
-0x2D1	0x101	equip027_101_10	Ice Shoulders [Ic]
-0x2D2	0x101	equip027_101_10	Ice Shoulders [Cu]
-0x2D3	0x102	equip027_200_10	Frayola's Spaulders
-0x2D4	0x103	equip027_201_10	Lonestars
-0x2D5	0x104	equip027_202_10	Crono Riggers
-0x2D6	0x105	equip027_300_10	Gydeen's Shoulders
-0x2D7	0x106	equip028_000_10	Cape
-0x2D8	0x107	equip028_100_10	Fire Cape
-0x2D9	0x107	equip028_100_10	Fire Cape [Hp]
-0x2DA	0x107	equip028_100_10	Fire Cape [Me]
-0x2DB	0x107	equip028_100_10	Fire Cape [Ar]
-0x2DC	0x107	equip028_100_10	Fire Cape [W]
-0x2DD	0x107	equip028_100_10	Fire Cape [En]
-0x2DE	0x107	equip028_100_10	Fire Cape [Ic]
-0x2DF	0x107	equip028_100_10	Fire Cape [Cu]
-0x2E0	0x108	equip028_101_10	Ice Cape
-0x2E1	0x108	equip028_101_10	Ice Cape [Hp]
-0x2E2	0x108	equip028_101_10	Ice Cape [Me]
-0x2E3	0x108	equip028_101_10	Ice Cape [Ar]
-0x2E4	0x108	equip028_101_10	Ice Cape [W]
-0x2E5	0x108	equip028_101_10	Ice Cape [En]
-0x2E6	0x108	equip028_101_10	Ice Cape [Ic]
-0x2E7	0x108	equip028_101_10	Ice Cape [Cu]
-0x2E8	0x109	equip028_200_10	Cape of Ulysses
-0x2E9	0x10A	equip028_201_10	Freja's Cape
-0x2EA	0x10B	equip028_202_10	Vamp Cloak
-0x2EB	0x10C	equip028_300_10	Nemean Cloak
-0x2EC	0x10D	equip029_000_10	Sandals
-0x2ED	0x10E	equip029_100_10	Wide Awake Boots
-0x2EE	0x10E	equip029_100_10	Wide Awake Boots [Hp]
-0x2EF	0x10E	equip029_100_10	Wide Awake Boots [Me]
-0x2F0	0x10E	equip029_100_10	Wide Awake Boots [Ar]
-0x2F1	0x10E	equip029_100_10	Wide Awake Boots [W]
-0x2F2	0x10E	equip029_100_10	Wide Awake Boots [En]
-0x2F3	0x10E	equip029_100_10	Wide Awake Boots [Ic]
-0x2F4	0x10E	equip029_100_10	Wide Awake Boots [Cu]
-0x2F5	0x10F	equip029_101_10	Flame Boots
-0x2F6	0x10F	equip029_101_10	Flame Boots [Hp]
-0x2F7	0x10F	equip029_101_10	Flame Boots [Me]
-0x2F8	0x10F	equip029_101_10	Flame Boots [Ar]
-0x2F9	0x10F	equip029_101_10	Flame Boots [W]
-0x2FA	0x10F	equip029_101_10	Flame Boots [En]
-0x2FB	0x10F	equip029_101_10	Flame Boots [Ic]
-0x2FC	0x10F	equip029_101_10	Flame Boots [Cu]
-0x2FD	0x110	equip029_200_10	Alarium Stompers
-0x2FE	0x111	equip029_201_10	Moonwalkers
-0x2FF	0x112	equip029_202_10	Lilith Shoes
-0x300	0x113	equip029_300_10	Hermerossa's Sandals
-0x301	0x114	equip030_000_10	Horse
-0x302	0x115	equip030_100_10	Wide Awake Horse
-0x303	0x115	equip030_100_10	Wide Awake Horse [Hp]
-0x304	0x115	equip030_100_10	Wide Awake Horse [Me]
-0x305	0x115	equip030_100_10	Wide Awake Horse [Ar]
-0x306	0x115	equip030_100_10	Wide Awake Horse [W]
-0x307	0x115	equip030_100_10	Wide Awake Horse [En]
-0x308	0x115	equip030_100_10	Wide Awake Horse [Ic]
-0x309	0x115	equip030_100_10	Wide Awake Horse [Cu]
-0x30A	0x116	equip030_101_10	Flame Horse
-0x30B	0x116	equip030_101_10	Flame Horse [Hp]
-0x30C	0x116	equip030_101_10	Flame Horse [Me]
-0x30D	0x116	equip030_101_10	Flame Horse [Ar]
-0x30E	0x116	equip030_101_10	Flame Horse [W]
-0x30F	0x116	equip030_101_10	Flame Horse [En]
-0x310	0x116	equip030_101_10	Flame Horse [Ic]
-0x311	0x116	equip030_101_10	Flame Horse [Cu]
-0x312	0x117	equip030_200_10	Sibericus the Frosty
-0x313	0x118	equip030_201_10	Bullgam the Bully
-0x314	0x119	equip030_202_10	Ponbiscuit
-0x315	0x11A	equip030_300_10	Halcypon
-0x316	0x11B	equip031_000_10	Warhorse
-0x317	0x11C	equip031_100_10	Ice Warhorse
-0x318	0x11C	equip031_100_10	Ice Warhorse [Hp]
-0x319	0x11C	equip031_100_10	Ice Warhorse [Me]
-0x31A	0x11C	equip031_100_10	Ice Warhorse [Ar]
-0x31B	0x11C	equip031_100_10	Ice Warhorse [W]
-0x31C	0x11C	equip031_100_10	Ice Warhorse [En]
-0x31D	0x11C	equip031_100_10	Ice Warhorse [Ic]
-0x31E	0x11C	equip031_100_10	Ice Warhorse [Cu]
-0x31F	0x11D	equip031_101_10	Poison Warhorse
-0x320	0x11D	equip031_101_10	Poison Warhorse [Hp]
-0x321	0x11D	equip031_101_10	Poison Warhorse [Me]
-0x322	0x11D	equip031_101_10	Poison Warhorse [Ar]
-0x323	0x11D	equip031_101_10	Poison Warhorse [W]
-0x324	0x11D	equip031_101_10	Poison Warhorse [En]
-0x325	0x11D	equip031_101_10	Poison Warhorse [Ic]
-0x326	0x11D	equip031_101_10	Poison Warhorse [Cu]
-0x327	0x11E	equip031_200_10	Deep Impact
-0x328	0x11F	equip031_201_10	Kotenho the King
-0x329	0x120	equip031_202_10	Ponteo the Victorious
-0x32A	0x121	equip031_300_10	Apabao the Absolute
-0x32B	0x122	equip032_000_10	Chariot
-0x32C	0x123	equip032_100_10	Ice Chariot
-0x32D	0x123	equip032_100_10	Ice Chariot [Hp]
-0x32E	0x123	equip032_100_10	Ice Chariot [Me]
-0x32F	0x123	equip032_100_10	Ice Chariot [Ar]
-0x330	0x123	equip032_100_10	Ice Chariot [W]
-0x331	0x123	equip032_100_10	Ice Chariot [En]
-0x332	0x123	equip032_100_10	Ice Chariot [Ic]
-0x333	0x123	equip032_100_10	Ice Chariot [Cu]
-0x334	0x124	equip032_101_10	Flame Chariot
-0x335	0x124	equip032_101_10	Flame Chariot [Hp]
-0x336	0x124	equip032_101_10	Flame Chariot [Me]
-0x337	0x124	equip032_101_10	Flame Chariot [Ar]
-0x338	0x124	equip032_101_10	Flame Chariot [W]
-0x339	0x124	equip032_101_10	Flame Chariot [En]
-0x33A	0x124	equip032_101_10	Flame Chariot [Ic]
-0x33B	0x124	equip032_101_10	Flame Chariot [Cu]
-0x33C	0x125	equip032_102_10	Critical Chariot
-0x33D	0x125	equip032_102_10	Critical Chariot [Hp]
-0x33E	0x125	equip032_102_10	Critical Chariot [Me]
-0x33F	0x125	equip032_102_10	Critical Chariot [Ar]
-0x340	0x125	equip032_102_10	Critical Chariot [W]
-0x341	0x125	equip032_102_10	Critical Chariot [En]
-0x342	0x125	equip032_102_10	Critical Chariot [Ic]
-0x343	0x125	equip032_102_10	Critical Chariot [Cu]
-0x344	0x126	equip032_200_10	The Silencer
-0x345	0x127	equip032_201_10	Ruemelter
-0x346	0x128	equip032_202_10	Silver Murzephone
-0x347	0x129	equip032_203_10	Chariot of Light
-0x348	0x12A	equip032_204_10	Deedsarus Helltank
-0x349	0x12B	equip032_300_10	Gargan War Machine
-0x34A	0x12C	equip033_002_10	Yumipon Mask
-0x34B	0x12D	equip033_003_10	Tatepon Mask
-0x34C	0x12E	equip033_004_10	Yaripon Mask
-0x34D	0x12F	equip033_006_10	Kibapon Mask
-0x34E	0x130	equip033_010_10	Robopon Mask
-0x34F	0x131	equip033_013_10	Nyontama Mask
-0x350	0x132	equip033_014_10	Chigyobi Mask
-0x351	0x133	equip033_015_10	Pyopyo Mask
-0x352	0x134	equip033_016_10	Kanokko Mask
-0x353	0x135	equip033_017_10	Sabara Mask
-0x354	0x136	equip033_018_10	Mofu Mask
-0x355	0x137	equip033_019_10	Buhyokko Mask
-0x356	0x138	equip033_020_10	Fumya Mask
-0x357	0x139	equip033_021_10	Menyokki Mask
-0x358	0x13A	equip033_022_10	Mogyu Mask
-0x359	0x13B	equip033_023_10	Chiku Mask
-0x35A	0x13C	equip033_024_10	Wanda Mask
-0x35B	0x13D	equip033_025_10	Mashu Mask
-0x35C	0x13E	equip033_026_10	Uhoho Mask
-0x35D	0x13F	equip033_027_10	Koppen Mask
-0x35E	0x140	equip033_028_10	Gyaba Mask
-0x35F	0x141	equip033_029_10	Feisu Mask
-0x360	0x142	equip033_030_10	Jasti Mask
-0x361	0x143	equip033_031_10	Valo Mask
-0x362	0x144	equip033_032_10	Inosen Mask
-0x363	0x145	equip033_033_10	Forudo Mask
-0x364	0x146	equip033_034_10	Libera Mask
-0x365	0x147	equip033_035_10	Hyumitto Mask
-0x366	0x151	equip035_000_10	Claw
-0x367	0x152	equip035_100_10	Flaming Claw
-0x368	0x152	equip035_100_10	Flaming Claw [St]
-0x369	0x152	equip035_100_10	Flaming Claw [G]
-0x36A	0x152	equip035_100_10	Flaming Claw [De]
-0x36B	0x152	equip035_100_10	Flaming Claw [H]
-0x36C	0x152	equip035_100_10	Flaming Claw [Sl]
-0x36D	0x152	equip035_100_10	Flaming Claw [Fl]
-0x36E	0x152	equip035_100_10	Flaming Claw [Po]
-0x36F	0x153	equip035_101_10	Poison Claw
-0x370	0x153	equip035_101_10	Poison Claw [St]
-0x371	0x153	equip035_101_10	Poison Claw [G]
-0x372	0x153	equip035_101_10	Poison Claw [De]
-0x373	0x153	equip035_101_10	Poison Claw [H]
-0x374	0x153	equip035_101_10	Poison Claw [Sl]
-0x375	0x153	equip035_101_10	Poison Claw [Fl]
-0x376	0x153	equip035_101_10	Poison Claw [Po]
-0x377	0x154	equip035_200_10	Demonic Dark Claw
-0x378	0x155	equip035_201_10	Gardsormr Ice Claw
-0x379	0x156	equip035_202_10	Bengal Tiger Claw
-0x37A	0x157	equip035_300_10	Kaisak Ultimate Claw
-0x37B	0x158	equip036_000_10	Scythe
-0x37C	0x159	equip036_100_10	Flaming Scythe
-0x37D	0x159	equip036_100_10	Flaming Scythe [St]
-0x37E	0x159	equip036_100_10	Flaming Scythe [G]
-0x37F	0x159	equip036_100_10	Flaming Scythe [De]
-0x380	0x159	equip036_100_10	Flaming Scythe [H]
-0x381	0x159	equip036_100_10	Flaming Scythe [Sl]
-0x382	0x159	equip036_100_10	Flaming Scythe [Fl]
-0x383	0x159	equip036_100_10	Flaming Scythe [Po]
-0x384	0x15A	equip036_101_10	Deflecting Scythe
-0x385	0x15A	equip036_101_10	Deflecting Scythe [St]
-0x386	0x15A	equip036_101_10	Deflecting Scythe [G]
-0x387	0x15A	equip036_101_10	Deflecting Scythe [De]
-0x388	0x15A	equip036_101_10	Deflecting Scythe [H]
-0x389	0x15A	equip036_101_10	Deflecting Scythe [Sl]
-0x38A	0x15A	equip036_101_10	Deflecting Scythe [Fl]
-0x38B	0x15A	equip036_101_10	Deflecting Scythe [Po]
-0x38C	0x15B	equip036_200_10	Quickflash Scythe
-0x38D	0x15C	equip036_201_10	Deathsoul Scythe
-0x38E	0x15D	equip036_202_10	Great God Scythe
-0x38F	0x15E	equip036_300_10	Deathmoon Ultimate Scythe
-0x390	#N/A	gimc2020	Wooden Treasure Chest
-0x391	#N/A	gimc2030	Iron Treasure Chest
-0x392	#N/A	gimc2040	Golden Treasure Chest
-0x393	#N/A	gimc2050	Jewelled Treasure Chest
-0x394	#N/A	item109	Flamethrower
-0x395	#N/A	item109	Flamethrower
-0x396	#N/A	item109	Giant Saw
-0x397	#N/A	item109	Turret
-0x398	#N/A	item109	Snoworb Cannon
-0x399	#N/A	item110	Wind-up Cart
-0x39A	#N/A	item110	CHAKA CHAKA Interceptor
-0x39B	#N/A	item110	Iron Barricade
-0x39C	#N/A	item111	Flamethrower and Fort
-0x39D	#N/A	item111	Giant Saw and Fort
-0x39E	#N/A	item111	Snoworb Cannon and Fort
-0x39F	#N/A	item111	Turret and Fort
-0x3A0	#N/A	item112	
-0x3A1	#N/A	AzitoAccessory_001	
-0x3A2	#N/A	AzitoAccessory_001	Fantastic Eggs
-0x3A3	#N/A	AzitoAccessory_002	Easter Egg
-0x3A4	#N/A	AzitoAccessory_003	Donchaka Wallpaper
-0x3A5	#N/A	AzitoAccessory_004	Patapon Prisoners
-0x3A6	#N/A	AzitoAccessory_005	Gate Ghoul Baban
-0x3A7	#N/A	AzitoAccessory_006	Magic Hill Zozozo
-0x3A8	#N/A	AzitoAccessory_007	Hanging Planets
-0x3A9	#N/A	AzitoAccessory_008	Eyeball Rocket
-0x3AA	#N/A	AzitoAccessory_009	Space Wallpaper
-0x3AB	#N/A	AzitoAccessory_010	Cupids
-0x3AC	#N/A	AzitoAccessory_011	Princess
-0x3AD	#N/A	AzitoAccessory_012	Lovestruck Patapon Wallpaper
-0x3AE	#N/A	AzitoAccessory_013	Morning Glories and Wind Chimes
-0x3AF	#N/A	AzitoAccessory_014	Sunflower and Watermelon
-0x3B0	#N/A	AzitoAccessory_015	Bon Odori Wallpaper
-0x3B1	#N/A	AzitoAccessory_016	Puffy Clouds
-0x3B2	#N/A	AzitoAccessory_017	Parasol Set
-0x3B3	#N/A	AzitoAccessory_018	Summer Seas Wallpaper
-0x3B4	#N/A	AzitoAccessory_019	Ghosts and Wizards
-0x3B5	#N/A	AzitoAccessory_020	Jack O' Lantern
-0x3B6	#N/A	AzitoAccessory_021	Moonlit Night Wallpaper
-0x3B7	#N/A	AzitoAccessory_022	Christmas Wreath
-0x3B8	#N/A	AzitoAccessory_023	Christmas Tree
-0x3B9	#N/A	AzitoAccessory_024	Christmas Eve Wallpaper
-0x3BA	#N/A	AzitoAccessory_025	Earthend
-0x3BB	#N/A	AzitoAccessory_026	Giant Beast
-0x3BC	#N/A	AzitoAccessory_027	Earthend Wallpaper
-0x3BD	#N/A	AzitoAccessory_028	Dodonga Statue
-0x3BE	#N/A	AzitoAccessory_029	Majidonga Statue
-0x3BF	#N/A	AzitoAccessory_030	Ciokina Statue
-0x3C0	#N/A	AzitoAccessory_031	Cioking Statue
-0x3C1	#N/A	AzitoAccessory_032	Shookle Statue
-0x3C2	#N/A	AzitoAccessory_033	Shooshookle Statue
-0x3C3	#N/A	AzitoAccessory_034	Dogaeen Statue
-0x3C4	#N/A	AzitoAccessory_035	Gaeen Statue
-0x3C5	#N/A	AzitoAccessory_036	Zaknel Statue
-0x3C6	#N/A	AzitoAccessory_037	Dokaknel Statue
-0x3C7	#N/A	AzitoAccessory_038	Goruru Statue
-0x3C8	#N/A	AzitoAccessory_039	Garuru Statue
-0x3C9	#N/A	AzitoAccessory_040	Mochicchichi Statue
-0x3CA	#N/A	AzitoAccessory_041	Fenicchi Statue
-0x3CB	#N/A	AzitoAccessory_042	Manboth Statue
-0x3CC	#N/A	AzitoAccessory_043	Manboroth Statue
-0x3CD	#N/A	AzitoAccessory_044	Centura Statue
-0x3CE	#N/A	AzitoAccessory_045	Darantula Statue
-0x3CF	#N/A	AzitoAccessory_046	Kanogias Statue
-0x3D0	#N/A	AzitoAccessory_047	Ganodias Statue
-0x3D1	#N/A	AzitoAccessory_048	Ormen Karmen Statue
-0x3D2	#N/A	AzitoAccessory_049	Dettankarmen Statue
-0x3D3	#N/A	AzitoAccessory_050	Humanoid Dettankarmen Statue
-0x3D4	#N/A	AzitoAccessory_051	Zuttankarmen Statue
-0x3D5	#N/A	AzitoAccessory_052	Gong Statue
-0x3D6	#N/A	AzitoAccessory_053	Gong and Kharma Statue
-0x3D7	#N/A	itm104_000	Star Shard
-0x3D8	#N/A	itm104_001	
-0x3D9	#N/A	TeamCardThum%04d	Heroes Card 1
-0x3DA	#N/A	TeamFlag%04d	Spear Emblem
-0x3DB	#N/A	itm13_008	CHAKA PATA Song
-0x3DC	#N/A	itm13_009	Patapon Song
-0x3DD	#N/A	item106	Cool Ticket
-0x3DE	#N/A	item107	Moody Ticket
-0x3DF	#N/A	item108	Wacky Ticket
-0x3E0	0x15F	equip024_700_00	Otherworld Jupiter Head
-0x3E1	0x160	equip024_701_00	Gero Helm of Valour
-0x3E2	0x161	equip024_702_00	Straw Boing Helm
-0x3E3	0x162	equip024_703_00	Thief Jirokichi Helm
-0x3E4	0x163	equip024_704_00	Masamune Helm
-0x3E5	0x164	equip024_705_00	Clown Helm
-0x3E6	0x165	equip024_706_00	Karib Rampage Helm
-0x3E7	0x166	equip024_707_00	Malevolent Uramus Helm
-0x3E8	0x167	equip024_708_00	Bald Cap
-0x3E9	0x168	equip024_709_00	Marina Sea Helm
-0x3EA	0x169	equip024_710_00	Shubaba Gale Kabuto
-0x3EB	#N/A	item105	
-0x3EC	#N/A	gimc4400	Pink Jeweled Chest
-0x3ED	#N/A		
-0x3EE	#N/A		
-0x3EF	#N/A		
-0x3F0	#N/A		
-0x3F1	0x25	msk200_0_001	
-0x3F2	0x26	msk200_0_002	
-0x3F3	0x27	msk200_0_003	
-0x3F4	0x28	msk200_0_004	
-0x3F5	0x29	msk200_0_005	
-0x3F6	0x2A	msk200_0_006	
-0x3F7	0x2B	msk200_0_007	
-0x3F8	0x2C	msk200_0_008	
-0x3F9	0x2D	msk207_0_001	
-0x3FA	0x2E	msk207_0_002	
-0x3FB	0x2F	msk207_0_003	
-0x3FC	0x148	equip033_100_00	
-0x3FD	0x149	equip033_101_00	
-0x3FE	0x14A	equip033_102_00	
-0x3FF	0x14B	equip033_103_00	
-0x400	0x14C	equip033_104_00	
-0x401	0x14D	equip033_105_00	
-0x402	0x14E	equip033_106_00	
-0x403	0x14F	equip033_107_00	
-0x404	0x0	hlm007_0_1000	Helm
-0x405	0x1	hlm007_0_1001	Helm
-0x406	0x2	hlm007_0_1002	Helm
-0x407	0x3	hlm008_0_1000	Helm
-0x408	0x4	hlm008_0_1001	Helm
-0x409	0x5	hlm008_0_1002	Helm
-0x40A	0x6	hlm009_0_1000	Helm
-0x40B	0x7	hlm009_0_1001	Helm
-0x40C	0x8	hlm009_0_1002	Helm
-0x40D	0x13	hlm000_0_101	Helm
-0x40E	0x14	hlm000_0_102	Helm
-0x40F	0x15	hlm000_0_103	Helm
-0x410	0x16	hlm000_0_104	Helm
-0x411	0x17	hlm000_0_105	Helm
-0x412	0x18	hlm000_0_106	Helm
-0x413	0x19	hlm000_0_107	Helm
-0x414	0x1A	hlm000_0_108	Helm
-0x415	0x1B	hlm000_0_109	Helm
-0x416	0x1C	hlm007_0_101	Helm
-0x417	0x1D	hlm007_0_102	Helm
-0x418	0x1E	hlm008_0_101	Helm
-0x419	0x1F	hlm000_0_201	Helm
-0x41A	0x12F	unequip	Clear Sky Card
+"ID"	"weaponparam ID"	"Internal name"	"Image"	"Name"
+"0x0"	"#N/A"			
+"0x1"	"#N/A"	"itm00_004"	"item000"	"PON Drum"
+"0x2"	"#N/A"	"itm00_005"	"item001"	"PATA Drum"
+"0x3"	"#N/A"	"itm00_006"	"item002"	"CHAKA Drum"
+"0x4"	"#N/A"	"itm00_007"	"item003"	"DON Drum"
+"0x5"	"#N/A"	"itm13_001"	"item004"	"PATA PATA Song"
+"0x6"	"#N/A"	"itm13_002"	"item004"	"PON PON Song"
+"0x7"	"#N/A"	"itm13_003"	"item004"	"CHAKA CHAKA Song"
+"0x8"	"#N/A"	"itm13_005"	"item004"	"PON PATA Song"
+"0x9"	"#N/A"	"itm13_004"	"item004"	"PON CHAKA Song"
+"0xA"	"#N/A"	"itm13_006"	"item004"	"DON DON Song"
+"0xB"	"#N/A"	"itm13_007"	"item004"	"DON CHAKA Song"
+"0xC"	"#N/A"	"item011"	"item011"	"Yarigami's Sutra"
+"0xD"	"#N/A"	"item012"	"item012"	"Tategami's Sutra"
+"0xE"	"#N/A"	"item013"	"item013"	"Soragami's Sutra"
+"0xF"	"#N/A"	"item014"	"item014"	"Yamagami's Sutra"
+"0x10"	"#N/A"	"item015"	"item015"	"Moegami's Sutra"
+"0x11"	"#N/A"	"item016"	"item016"	"Super Yarigami's Sutra"
+"0x12"	"#N/A"	"item017"	"item017"	"Super Tategami's Sutra"
+"0x13"	"#N/A"	"item018"	"item018"	"Super Soragami's Sutra"
+"0x14"	"#N/A"	"item019"	"item019"	"Super Yamagami's Sutra"
+"0x15"	"#N/A"	"itm12_006"	"item027"	
+"0x16"	"#N/A"	"itm12_006"	"item027"	
+"0x17"	"#N/A"	"itm12_006"	"item027"	
+"0x18"	"#N/A"	"itm12_006"	"item027"	
+"0x19"	"#N/A"	"itm12_006"	"item027"	
+"0x1A"	"#N/A"	"itm12_006"	"item027"	
+"0x1B"	"#N/A"	"itm12_006"	"item027"	
+"0x1C"	"#N/A"	"itm12_006"	"item027"	
+"0x1D"	"#N/A"	"itm00_008"	"item031"	
+"0x1E"	"#N/A"	"itm00_008"	"item031"	
+"0x1F"	"#N/A"	"itm00_008"	"item031"	
+"0x20"	"#N/A"	"itm00_008"	"item031"	
+"0x21"	"#N/A"	"itm00_009"	"item035"	
+"0x22"	"#N/A"	"itm00_009"	"item035"	
+"0x23"	"#N/A"	"itm00_009"	"item035"	
+"0x24"	"#N/A"	"itm00_009"	"item035"	
+"0x25"	"#N/A"	"itm00_010"	"item039"	
+"0x26"	"#N/A"	"itm00_010"	"item039"	
+"0x27"	"#N/A"	"itm00_010"	"item039"	
+"0x28"	"#N/A"	"itm00_010"	"item039"	
+"0x29"	"#N/A"	"itm00_019"	"item043"	
+"0x2A"	"#N/A"	"itm00_019"	"item043"	
+"0x2B"	"#N/A"	"itm00_019"	"item043"	
+"0x2C"	"#N/A"	"itm00_019"	"item043"	
+"0x2D"	"#N/A"	"itm00_012"	"item047"	
+"0x2E"	"#N/A"	"itm00_012"	"item047"	
+"0x2F"	"#N/A"	"itm00_012"	"item047"	
+"0x30"	"#N/A"	"itm00_012"	"item047"	
+"0x31"	"#N/A"	"itm12_010"	"item048"	"Key"
+"0x32"	"#N/A"			"Ka-ching"
+"0x33"	"#N/A"	"itm09_000"	"item050"	"Potion"
+"0x34"	"#N/A"	"itm103"	"item103"	"Potion"
+"0x35"	"#N/A"	"efm_140"	"efm_140"	"Potion"
+"0x36"	"#N/A"	"efm_141"	"efm_141"	"Potion"
+"0x37"	"#N/A"	"efm_142"	"efm_142"	"Potion"
+"0x38"	"#N/A"	"itm01_003"	"itm01_003"	"Tough Meat"
+"0x39"	"#N/A"	"itm01_004"	"itm01_004"	"Tender Meat"
+"0x3A"	"#N/A"	"itm01_005"	"itm01_005"	"Dream Meat"
+"0x3B"	"#N/A"	"itm01_006"	"itm01_005"	"Mystery Meat"
+"0x3C"	"#N/A"	"itm01_007"	"itm01_005"	"Demon Steak"
+"0x3D"	"#N/A"	"itm15_000"	"itm15_000"	"Berara Hide"
+"0x3E"	"#N/A"	"itm15_001"	"itm15_000"	"Gotsutsu Hide"
+"0x3F"	"#N/A"	"itm15_002"	"itm15_000"	"Subebe Hide"
+"0x40"	"#N/A"	"itm15_003"	"itm15_000"	"Mezura Hide"
+"0x41"	"#N/A"	"itm15_004"	"itm15_000"	"Demon Hide"
+"0x42"	"#N/A"	"itm16_000"	"itm16_000"	"Kuneri Fang"
+"0x43"	"#N/A"	"itm16_001"	"itm16_000"	"Itete Fang"
+"0x44"	"#N/A"	"itm16_002"	"itm16_000"	"Gizaza Fang"
+"0x45"	"#N/A"	"itm16_003"	"itm16_000"	"Nazozo Fang"
+"0x46"	"#N/A"	"itm16_004"	"itm16_000"	"Demon Fang"
+"0x47"	"#N/A"	"itm17_000"	"itm17_000"	"Mudada Bone"
+"0x48"	"#N/A"	"itm17_001"	"itm17_000"	"Gashirin Bone"
+"0x49"	"#N/A"	"itm17_002"	"itm17_000"	"Dodeka Bone"
+"0x4A"	"#N/A"	"itm17_003"	"itm17_000"	"Ottama Bone"
+"0x4B"	"#N/A"	"itm17_004"	"itm17_000"	"Demon Bone"
+"0x4C"	"#N/A"	"itm11_000"	"itm11_000"	"Stone"
+"0x4D"	"#N/A"	"itm11_001"	"itm11_001"	"Hard Iron"
+"0x4E"	"#N/A"	"itm11_002"	"itm11_001"	"Titanium Ore"
+"0x4F"	"#N/A"	"itm11_003"	"itm11_003"	"Mytheerial"
+"0x50"	"#N/A"	"itm11_004"	"itm11_003"	"Adamanman"
+"0x51"	"#N/A"	"itm03_004"	"itm03_004"	"Leaf"
+"0x52"	"#N/A"	"itm03_001"	"itm03_001"	"Banal Branch"
+"0x53"	"#N/A"	"itm03_002"	"itm03_002"	"Cherry Tree"
+"0x54"	"#N/A"	"itm03_003"	"itm03_003"	"Hinoki"
+"0x55"	"#N/A"	"itm03_000"	"itm03_000"	"Super Cedar"
+"0x56"	"#N/A"	"itm03_005"	"itm03_005"	"Bowtie Tree"
+"0x57"	"#N/A"	"itm14_000"	"itm14_000"	"Eyeball Cabbage"
+"0x58"	"#N/A"	"itm14_001"	"itm14_001"	"Crying Carrot"
+"0x59"	"#N/A"	"itm14_002"	"itm14_002"	"Predator Pumpkin"
+"0x5A"	"#N/A"	"itm14_003"	"itm14_003"	"Hazy Shroom"
+"0x5B"	"#N/A"	"itm14_004"	"itm14_004"	"Guddorian"
+"0x5C"	"#N/A"	"itm19_000"	"itm19_000"	"Kasu Seed"
+"0x5D"	"#N/A"	"itm19_001"	"itm19_000"	"Yoka Seed"
+"0x5E"	"#N/A"	"itm19_002"	"itm19_000"	"Deka Seed"
+"0x5F"	"#N/A"	"itm19_003"	"itm19_000"	"Bibi Seed"
+"0x60"	"#N/A"	"itm19_004"	"itm19_004"	"Mater Sprout"
+"0x61"	"#N/A"	"itm06_000"	"itm06_000"	"Sloppy Alloy"
+"0x62"	"#N/A"	"itm06_001"	"itm06_000"	"Hard Alloy"
+"0x63"	"#N/A"	"itm06_002"	"itm06_000"	"Awesome Alloy"
+"0x64"	"#N/A"	"itm06_003"	"itm06_003"	"Magic Alloy"
+"0x65"	"#N/A"	"itm06_004"	"itm06_003"	"Demon's Ore"
+"0x66"	"#N/A"	"itm18_000"	"itm18_000"	"Familiar Liquid"
+"0x67"	"#N/A"	"itm18_001"	"itm18_000"	"Hot Liquid"
+"0x68"	"#N/A"	"itm18_002"	"itm18_000"	"Cold Liquid"
+"0x69"	"#N/A"	"itm18_003"	"itm18_000"	"Rainbow Liquid"
+"0x6A"	"#N/A"	"itm18_004"	"itm18_000"	"Demon Liquid"
+"0x6B"	"0x0"	"hlm007_0_1000"	"hlm007_0_1000"	
+"0x6C"	"0x1"	"hlm007_0_1001"	"hlm007_0_1001"	
+"0x6D"	"0x2"	"hlm007_0_1002"	"hlm007_0_1002"	
+"0x6E"	"0x3"	"hlm008_0_1000"	"hlm008_0_1000"	
+"0x6F"	"0x4"	"hlm008_0_1001"	"hlm008_0_1001"	
+"0x70"	"0x5"	"hlm008_0_1002"	"hlm008_0_1002"	
+"0x71"	"0x6"	"hlm009_0_1000"	"hlm009_0_1000"	
+"0x72"	"0x7"	"hlm009_0_1001"	"hlm009_0_1001"	
+"0x73"	"0x8"	"hlm009_0_1002"	"hlm009_0_1002"	
+"0x74"	"0x39"	"equip000_000_10"	"equip000_000_10"	"Sword"
+"0x75"	"0x3A"	"equip000_100_10"	"equip000_100_10"	"Flame Sword"
+"0x76"	"0x3A"	"equip000_100_10"	"equip000_100_10"	"Flame Sword [St]"
+"0x77"	"0x3A"	"equip000_100_10"	"equip000_100_10"	"Flame Sword [G]"
+"0x78"	"0x3A"	"equip000_100_10"	"equip000_100_10"	"Flame Sword [De]"
+"0x79"	"0x3A"	"equip000_100_10"	"equip000_100_10"	"Flame Sword [H]"
+"0x7A"	"0x3A"	"equip000_100_10"	"equip000_100_10"	"Flame Sword [Sl]"
+"0x7B"	"0x3A"	"equip000_100_10"	"equip000_100_10"	"Flame Sword [Fl]"
+"0x7C"	"0x3A"	"equip000_100_10"	"equip000_100_10"	"Flame Sword [Po]"
+"0x7D"	"0x3B"	"equip000_101_10"	"equip000_101_10"	"Ice Sword"
+"0x7E"	"0x3B"	"equip000_101_10"	"equip000_101_10"	"Ice Sword [St]"
+"0x7F"	"0x3B"	"equip000_101_10"	"equip000_101_10"	"Ice Sword [G]"
+"0x80"	"0x3B"	"equip000_101_10"	"equip000_101_10"	"Ice Sword [De]"
+"0x81"	"0x3B"	"equip000_101_10"	"equip000_101_10"	"Ice Sword [H]"
+"0x82"	"0x3B"	"equip000_101_10"	"equip000_101_10"	"Ice Sword [Sl]"
+"0x83"	"0x3B"	"equip000_101_10"	"equip000_101_10"	"Ice Sword [Fl]"
+"0x84"	"0x3B"	"equip000_101_10"	"equip000_101_10"	"Ice Sword [Po]"
+"0x85"	"0x3C"	"equip000_102_10"	"equip000_102_10"	"Sleepi Sword"
+"0x86"	"0x3C"	"equip000_102_10"	"equip000_102_10"	"Sleepi Sword [St]"
+"0x87"	"0x3C"	"equip000_102_10"	"equip000_102_10"	"Sleepi Sword [G]"
+"0x88"	"0x3C"	"equip000_102_10"	"equip000_102_10"	"Sleepi Sword [De]"
+"0x89"	"0x3C"	"equip000_102_10"	"equip000_102_10"	"Sleepi Sword [H]"
+"0x8A"	"0x3C"	"equip000_102_10"	"equip000_102_10"	"Sleepi Sword [Sl]"
+"0x8B"	"0x3C"	"equip000_102_10"	"equip000_102_10"	"Sleepi Sword [Fl]"
+"0x8C"	"0x3C"	"equip000_102_10"	"equip000_102_10"	"Sleepi Sword [Po]"
+"0x8D"	"0x3D"	"equip000_200_10"	"equip000_200_10"	"Flangil"
+"0x8E"	"0x3E"	"equip000_201_10"	"equip000_201_10"	"Drigonlay"
+"0x8F"	"0x3F"	"equip000_202_10"	"equip000_202_10"	"Fendus"
+"0x90"	"0x40"	"equip000_203_10"	"equip000_203_10"	"Castram"
+"0x91"	"0x41"	"equip000_204_10"	"equip000_204_10"	"The Butcher"
+"0x92"	"0x42"	"equip000_300_10"	"equip000_300_10"	"Tatepon Sword"
+"0x93"	"0x43"	"equip001_000_10"	"equip001_000_10"	"Blade"
+"0x94"	"0x44"	"equip001_100_10"	"equip001_100_10"	"Critical Blade"
+"0x95"	"0x44"	"equip001_100_10"	"equip001_100_10"	"Critical Blade [St]"
+"0x96"	"0x44"	"equip001_100_10"	"equip001_100_10"	"Critical Blade [G]"
+"0x97"	"0x44"	"equip001_100_10"	"equip001_100_10"	"Critical Blade [De]"
+"0x98"	"0x44"	"equip001_100_10"	"equip001_100_10"	"Critical Blade [H]"
+"0x99"	"0x44"	"equip001_100_10"	"equip001_100_10"	"Critical Blade [Sl]"
+"0x9A"	"0x44"	"equip001_100_10"	"equip001_100_10"	"Critical Blade [Fl]"
+"0x9B"	"0x44"	"equip001_100_10"	"equip001_100_10"	"Critical Blade [Po]"
+"0x9C"	"0x45"	"equip001_101_10"	"equip001_101_10"	"Lightning Blade"
+"0x9D"	"0x45"	"equip001_101_10"	"equip001_101_10"	"Lightning Blade [St]"
+"0x9E"	"0x45"	"equip001_101_10"	"equip001_101_10"	"Lightning Blade [G]"
+"0x9F"	"0x45"	"equip001_101_10"	"equip001_101_10"	"Lightning Blade [De]"
+"0xA0"	"0x45"	"equip001_101_10"	"equip001_101_10"	"Lightning Blade [H]"
+"0xA1"	"0x45"	"equip001_101_10"	"equip001_101_10"	"Lightning Blade [Sl]"
+"0xA2"	"0x45"	"equip001_101_10"	"equip001_101_10"	"Lightning Blade [Fl]"
+"0xA3"	"0x45"	"equip001_101_10"	"equip001_101_10"	"Lightning Blade [Po]"
+"0xA4"	"0x46"	"equip001_200_10"	"equip001_200_10"	"Tsuyugiri"
+"0xA5"	"0x47"	"equip001_201_10"	"equip001_201_10"	"Murapata"
+"0xA6"	"0x48"	"equip001_202_10"	"equip001_202_10"	"Blade of Astria"
+"0xA7"	"0x49"	"equip001_300_10"	"equip001_300_10"	"Tsukigiri"
+"0xA8"	"0x4A"	"equip002_000_10"	"equip002_000_10"	"Spear"
+"0xA9"	"0x4B"	"equip002_100_10"	"equip002_100_10"	"Critical Spear"
+"0xAA"	"0x4B"	"equip002_100_10"	"equip002_100_10"	"Critical Spear [St]"
+"0xAB"	"0x4B"	"equip002_100_10"	"equip002_100_10"	"Critical Spear [G]"
+"0xAC"	"0x4B"	"equip002_100_10"	"equip002_100_10"	"Critical Spear [De]"
+"0xAD"	"0x4B"	"equip002_100_10"	"equip002_100_10"	"Critical Spear [H]"
+"0xAE"	"0x4B"	"equip002_100_10"	"equip002_100_10"	"Critical Spear [Sl]"
+"0xAF"	"0x4B"	"equip002_100_10"	"equip002_100_10"	"Critical Spear [Fl]"
+"0xB0"	"0x4B"	"equip002_100_10"	"equip002_100_10"	"Critical Spear [Po]"
+"0xB1"	"0x4C"	"equip002_101_10"	"equip002_101_10"	"Repel Spear"
+"0xB2"	"0x4C"	"equip002_101_10"	"equip002_101_10"	"Repel Spear [St]"
+"0xB3"	"0x4C"	"equip002_101_10"	"equip002_101_10"	"Repel Spear [G]"
+"0xB4"	"0x4C"	"equip002_101_10"	"equip002_101_10"	"Repel Spear [De]"
+"0xB5"	"0x4C"	"equip002_101_10"	"equip002_101_10"	"Repel Spear [H]"
+"0xB6"	"0x4C"	"equip002_101_10"	"equip002_101_10"	"Repel Spear [Sl]"
+"0xB7"	"0x4C"	"equip002_101_10"	"equip002_101_10"	"Repel Spear [Fl]"
+"0xB8"	"0x4C"	"equip002_101_10"	"equip002_101_10"	"Repel Spear [Po]"
+"0xB9"	"0x4D"	"equip002_102_10"	"equip002_102_10"	"Flame Spear"
+"0xBA"	"0x4D"	"equip002_102_10"	"equip002_102_10"	"Flame Spear [St]"
+"0xBB"	"0x4D"	"equip002_102_10"	"equip002_102_10"	"Flame Spear [G]"
+"0xBC"	"0x4D"	"equip002_102_10"	"equip002_102_10"	"Flame Spear [De]"
+"0xBD"	"0x4D"	"equip002_102_10"	"equip002_102_10"	"Flame Spear [H]"
+"0xBE"	"0x4D"	"equip002_102_10"	"equip002_102_10"	"Flame Spear [Sl]"
+"0xBF"	"0x4D"	"equip002_102_10"	"equip002_102_10"	"Flame Spear [Fl]"
+"0xC0"	"0x4D"	"equip002_102_10"	"equip002_102_10"	"Flame Spear [Po]"
+"0xC1"	"0x4E"	"equip002_200_10"	"equip002_200_10"	"Gesundbeit"
+"0xC2"	"0x4F"	"equip002_201_10"	"equip002_201_10"	"Yumspar"
+"0xC3"	"0x50"	"equip002_202_10"	"equip002_202_10"	"Palkyria's Flight"
+"0xC4"	"0x51"	"equip002_203_10"	"equip002_203_10"	"Dokaknel's Fang"
+"0xC5"	"0x52"	"equip002_204_10"	"equip002_204_10"	"Poseipon's Trident"
+"0xC6"	"0x53"	"equip002_300_10"	"equip002_300_10"	"Yaripon's Spear"
+"0xC7"	"0x54"	"equip003_000_10"	"equip003_000_10"	"Lance"
+"0xC8"	"0x55"	"equip003_100_10"	"equip003_100_10"	"Ice Pike"
+"0xC9"	"0x55"	"equip003_100_10"	"equip003_100_10"	"Ice Pike [St]"
+"0xCA"	"0x55"	"equip003_100_10"	"equip003_100_10"	"Ice Pike [G]"
+"0xCB"	"0x55"	"equip003_100_10"	"equip003_100_10"	"Ice Pike [De]"
+"0xCC"	"0x55"	"equip003_100_10"	"equip003_100_10"	"Ice Pike [H]"
+"0xCD"	"0x55"	"equip003_100_10"	"equip003_100_10"	"Ice Pike [Sl]"
+"0xCE"	"0x55"	"equip003_100_10"	"equip003_100_10"	"Ice Pike [Fl]"
+"0xCF"	"0x55"	"equip003_100_10"	"equip003_100_10"	"Ice Pike [Po]"
+"0xD0"	"0x56"	"equip003_101_10"	"equip003_101_10"	"Stagger Pike"
+"0xD1"	"0x56"	"equip003_101_10"	"equip003_101_10"	"Stagger Pike [St]"
+"0xD2"	"0x56"	"equip003_101_10"	"equip003_101_10"	"Stagger Pike [G]"
+"0xD3"	"0x56"	"equip003_101_10"	"equip003_101_10"	"Stagger Pike [De]"
+"0xD4"	"0x56"	"equip003_101_10"	"equip003_101_10"	"Stagger Pike [H]"
+"0xD5"	"0x56"	"equip003_101_10"	"equip003_101_10"	"Stagger Pike [Sl]"
+"0xD6"	"0x56"	"equip003_101_10"	"equip003_101_10"	"Stagger Pike [Fl]"
+"0xD7"	"0x56"	"equip003_101_10"	"equip003_101_10"	"Stagger Pike [Po]"
+"0xD8"	"0x57"	"equip003_200_10"	"equip003_200_10"	"Goldora"
+"0xD9"	"0x58"	"equip003_201_10"	"equip003_201_10"	"Pointidon"
+"0xDA"	"0x59"	"equip003_202_10"	"equip003_202_10"	"Super Cedar Log"
+"0xDB"	"0x5A"	"equip003_300_10"	"equip003_300_10"	"Lance of Asuwish"
+"0xDC"	"0x5B"	"equip004_000_10"	"equip004_000_10"	"Halberd"
+"0xDD"	"0x5C"	"equip004_100_10"	"equip004_100_10"	"Fire Lance"
+"0xDE"	"0x5C"	"equip004_100_10"	"equip004_100_10"	"Fire Lance [St]"
+"0xDF"	"0x5C"	"equip004_100_10"	"equip004_100_10"	"Fire Lance [G]"
+"0xE0"	"0x5C"	"equip004_100_10"	"equip004_100_10"	"Fire Lance [De]"
+"0xE1"	"0x5C"	"equip004_100_10"	"equip004_100_10"	"Fire Lance [H]"
+"0xE2"	"0x5C"	"equip004_100_10"	"equip004_100_10"	"Fire Lance [Sl]"
+"0xE3"	"0x5C"	"equip004_100_10"	"equip004_100_10"	"Fire Lance [Fl]"
+"0xE4"	"0x5C"	"equip004_100_10"	"equip004_100_10"	"Fire Lance [Po]"
+"0xE5"	"0x5D"	"equip004_101_10"	"equip004_101_10"	"Ice Lance"
+"0xE6"	"0x5D"	"equip004_101_10"	"equip004_101_10"	"Ice Lance [St]"
+"0xE7"	"0x5D"	"equip004_101_10"	"equip004_101_10"	"Ice Lance [G]"
+"0xE8"	"0x5D"	"equip004_101_10"	"equip004_101_10"	"Ice Lance [De]"
+"0xE9"	"0x5D"	"equip004_101_10"	"equip004_101_10"	"Ice Lance [H]"
+"0xEA"	"0x5D"	"equip004_101_10"	"equip004_101_10"	"Ice Lance [Sl]"
+"0xEB"	"0x5D"	"equip004_101_10"	"equip004_101_10"	"Ice Lance [Fl]"
+"0xEC"	"0x5D"	"equip004_101_10"	"equip004_101_10"	"Ice Lance [Po]"
+"0xED"	"0x5E"	"equip004_102_10"	"equip004_102_10"	"Stagger Lance"
+"0xEE"	"0x5E"	"equip004_102_10"	"equip004_102_10"	"Stagger Lance [St]"
+"0xEF"	"0x5E"	"equip004_102_10"	"equip004_102_10"	"Stagger Lance [G]"
+"0xF0"	"0x5E"	"equip004_102_10"	"equip004_102_10"	"Stagger Lance [De]"
+"0xF1"	"0x5E"	"equip004_102_10"	"equip004_102_10"	"Stagger Lance [H]"
+"0xF2"	"0x5E"	"equip004_102_10"	"equip004_102_10"	"Stagger Lance [Sl]"
+"0xF3"	"0x5E"	"equip004_102_10"	"equip004_102_10"	"Stagger Lance [Fl]"
+"0xF4"	"0x5E"	"equip004_102_10"	"equip004_102_10"	"Stagger Lance [Po]"
+"0xF5"	"0x5F"	"equip004_200_10"	"equip004_200_10"	"Romulus' Halberd"
+"0xF6"	"0x60"	"equip004_201_10"	"equip004_201_10"	"Incensar"
+"0xF7"	"0x61"	"equip004_202_10"	"equip004_202_10"	"Gugnir"
+"0xF8"	"0x62"	"equip004_203_10"	"equip004_203_10"	"Battachin"
+"0xF9"	"0x63"	"equip004_204_10"	"equip004_204_10"	"Murakumon"
+"0xFA"	"0x64"	"equip004_300_10"	"equip004_300_10"	"Hotenpon's Halberd"
+"0xFB"	"0x65"	"equip005_000_10"	"equip005_000_10"	"Arm"
+"0xFC"	"0x66"	"equip005_100_10"	"equip005_100_10"	"Repel Arm"
+"0xFD"	"0x66"	"equip005_100_10"	"equip005_100_10"	"Repel Arm [St]"
+"0xFE"	"0x66"	"equip005_100_10"	"equip005_100_10"	"Repel Arm [G]"
+"0xFF"	"0x66"	"equip005_100_10"	"equip005_100_10"	"Repel Arm [De]"
+"0x100"	"0x66"	"equip005_100_10"	"equip005_100_10"	"Repel Arm [H]"
+"0x101"	"0x66"	"equip005_100_10"	"equip005_100_10"	"Repel Arm [Sl]"
+"0x102"	"0x66"	"equip005_100_10"	"equip005_100_10"	"Repel Arm [Fl]"
+"0x103"	"0x66"	"equip005_100_10"	"equip005_100_10"	"Repel Arm [Po]"
+"0x104"	"0x67"	"equip005_101_10"	"equip005_101_10"	"Ice Arm"
+"0x105"	"0x67"	"equip005_101_10"	"equip005_101_10"	"Ice Arm [St]"
+"0x106"	"0x67"	"equip005_101_10"	"equip005_101_10"	"Ice Arm [G]"
+"0x107"	"0x67"	"equip005_101_10"	"equip005_101_10"	"Ice Arm [De]"
+"0x108"	"0x67"	"equip005_101_10"	"equip005_101_10"	"Ice Arm [H]"
+"0x109"	"0x67"	"equip005_101_10"	"equip005_101_10"	"Ice Arm [Sl]"
+"0x10A"	"0x67"	"equip005_101_10"	"equip005_101_10"	"Ice Arm [Fl]"
+"0x10B"	"0x67"	"equip005_101_10"	"equip005_101_10"	"Ice Arm [Po]"
+"0x10C"	"0x68"	"equip005_102_10"	"equip005_102_10"	"Sleepi Arm"
+"0x10D"	"0x68"	"equip005_102_10"	"equip005_102_10"	"Sleepi Arm [St]"
+"0x10E"	"0x68"	"equip005_102_10"	"equip005_102_10"	"Sleepi Arm [G]"
+"0x10F"	"0x68"	"equip005_102_10"	"equip005_102_10"	"Sleepi Arm [De]"
+"0x110"	"0x68"	"equip005_102_10"	"equip005_102_10"	"Sleepi Arm [H]"
+"0x111"	"0x68"	"equip005_102_10"	"equip005_102_10"	"Sleepi Arm [Sl]"
+"0x112"	"0x68"	"equip005_102_10"	"equip005_102_10"	"Sleepi Arm [Fl]"
+"0x113"	"0x68"	"equip005_102_10"	"equip005_102_10"	"Sleepi Arm [Po]"
+"0x114"	"0x69"	"equip005_200_10"	"equip005_200_10"	"Deathwringer"
+"0x115"	"0x6A"	"equip005_201_10"	"equip005_201_10"	"Great Golem Arm"
+"0x116"	"0x6B"	"equip005_202_10"	"equip005_202_10"	"Piringar Zingar"
+"0x117"	"0x6C"	"equip005_203_10"	"equip005_203_10"	"Chosan's Arm"
+"0x118"	"0x6D"	"equip005_204_10"	"equip005_204_10"	"Natura's Touch"
+"0x119"	"0x6E"	"equip005_300_10"	"equip005_300_10"	"Super Megadogu Arm"
+"0x11A"	"0x6F"	"equip006_000_10"	"equip006_000_10"	"Dagger"
+"0x11B"	"0x70"	"equip006_100_10"	"equip006_100_10"	"Critical Dagger"
+"0x11C"	"0x70"	"equip006_100_10"	"equip006_100_10"	"Critical Dagger [St]"
+"0x11D"	"0x70"	"equip006_100_10"	"equip006_100_10"	"Critical Dagger [G]"
+"0x11E"	"0x70"	"equip006_100_10"	"equip006_100_10"	"Critical Dagger [De]"
+"0x11F"	"0x70"	"equip006_100_10"	"equip006_100_10"	"Critical Dagger [H]"
+"0x120"	"0x70"	"equip006_100_10"	"equip006_100_10"	"Critical Dagger [Sl]"
+"0x121"	"0x70"	"equip006_100_10"	"equip006_100_10"	"Critical Dagger [Fl]"
+"0x122"	"0x70"	"equip006_100_10"	"equip006_100_10"	"Critical Dagger [Po]"
+"0x123"	"0x71"	"equip006_101_10"	"equip006_101_10"	"Sleepi Dagger"
+"0x124"	"0x71"	"equip006_101_10"	"equip006_101_10"	"Sleepi Dagger [St]"
+"0x125"	"0x71"	"equip006_101_10"	"equip006_101_10"	"Sleepi Dagger [G]"
+"0x126"	"0x71"	"equip006_101_10"	"equip006_101_10"	"Sleepi Dagger [De]"
+"0x127"	"0x71"	"equip006_101_10"	"equip006_101_10"	"Sleepi Dagger [H]"
+"0x128"	"0x71"	"equip006_101_10"	"equip006_101_10"	"Sleepi Dagger [Sl]"
+"0x129"	"0x71"	"equip006_101_10"	"equip006_101_10"	"Sleepi Dagger [Fl]"
+"0x12A"	"0x71"	"equip006_101_10"	"equip006_101_10"	"Sleepi Dagger [Po]"
+"0x12B"	"0x72"	"equip006_200_10"	"equip006_200_10"	"Crablessa"
+"0x12C"	"0x73"	"equip006_201_10"	"equip006_201_10"	"Feisho"
+"0x12D"	"0x74"	"equip006_300_10"	"equip006_300_10"	"Krauser"
+"0x12E"	"0x75"	"equip007_000_10"	"equip007_000_10"	"Shiv"
+"0x12F"	"0x76"	"equip007_100_10"	"equip007_100_10"	"Poison Shiv"
+"0x130"	"0x76"	"equip007_100_10"	"equip007_100_10"	"Poison Shiv [St]"
+"0x131"	"0x76"	"equip007_100_10"	"equip007_100_10"	"Poison Shiv [G]"
+"0x132"	"0x76"	"equip007_100_10"	"equip007_100_10"	"Poison Shiv [De]"
+"0x133"	"0x76"	"equip007_100_10"	"equip007_100_10"	"Poison Shiv [H]"
+"0x134"	"0x76"	"equip007_100_10"	"equip007_100_10"	"Poison Shiv [Sl]"
+"0x135"	"0x76"	"equip007_100_10"	"equip007_100_10"	"Poison Shiv [Fl]"
+"0x136"	"0x76"	"equip007_100_10"	"equip007_100_10"	"Poison Shiv [Po]"
+"0x137"	"0x77"	"equip007_200_10"	"equip007_200_10"	"Heltopay's Kiss"
+"0x138"	"0x78"	"equip007_201_10"	"equip007_201_10"	"Goliamon's Shiv"
+"0x139"	"0x79"	"equip007_202_10"	"equip007_202_10"	"Holymadda Shiv"
+"0x13A"	"0x7A"	"equip007_300_10"	"equip007_300_10"	"Pain of Pentavus"
+"0x13B"	"0x7B"	"equip008_000_10"	"equip008_000_10"	"Greatsword"
+"0x13C"	"0x7C"	"equip008_100_10"	"equip008_100_10"	"Critical Greatsword"
+"0x13D"	"0x7C"	"equip008_100_10"	"equip008_100_10"	"Critical Greatsword [St]"
+"0x13E"	"0x7C"	"equip008_100_10"	"equip008_100_10"	"Critical Greatsword [G]"
+"0x13F"	"0x7C"	"equip008_100_10"	"equip008_100_10"	"Critical Greatsword [De]"
+"0x140"	"0x7C"	"equip008_100_10"	"equip008_100_10"	"Critical Greatsword [H]"
+"0x141"	"0x7C"	"equip008_100_10"	"equip008_100_10"	"Critical Greatsword [Sl]"
+"0x142"	"0x7C"	"equip008_100_10"	"equip008_100_10"	"Critical Greatsword [Fl]"
+"0x143"	"0x7C"	"equip008_100_10"	"equip008_100_10"	"Critical Greatsword [Po]"
+"0x144"	"0x7D"	"equip008_101_10"	"equip008_101_10"	"Ice Greatsword"
+"0x145"	"0x7D"	"equip008_101_10"	"equip008_101_10"	"Ice Greatsword [St]"
+"0x146"	"0x7D"	"equip008_101_10"	"equip008_101_10"	"Ice Greatsword [G]"
+"0x147"	"0x7D"	"equip008_101_10"	"equip008_101_10"	"Ice Greatsword [De]"
+"0x148"	"0x7D"	"equip008_101_10"	"equip008_101_10"	"Ice Greatsword [H]"
+"0x149"	"0x7D"	"equip008_101_10"	"equip008_101_10"	"Ice Greatsword [Sl]"
+"0x14A"	"0x7D"	"equip008_101_10"	"equip008_101_10"	"Ice Greatsword [Fl]"
+"0x14B"	"0x7D"	"equip008_101_10"	"equip008_101_10"	"Ice Greatsword [Po]"
+"0x14C"	"0x7E"	"equip008_200_10"	"equip008_200_10"	"Excalipon"
+"0x14D"	"0x7F"	"equip008_201_10"	"equip008_201_10"	"Quagar"
+"0x14E"	"0x80"	"equip008_202_10"	"equip008_202_10"	"Serberker"
+"0x14F"	"0x81"	"equip008_300_10"	"equip008_300_10"	"Caladbong"
+"0x150"	"0x82"	"equip009_000_10"	"equip009_000_10"	"Greatblade"
+"0x151"	"0x83"	"equip009_100_10"	"equip009_100_10"	"Flame Greatblade"
+"0x152"	"0x83"	"equip009_100_10"	"equip009_100_10"	"Flame Greatblade [St]"
+"0x153"	"0x83"	"equip009_100_10"	"equip009_100_10"	"Flame Greatblade [G]"
+"0x154"	"0x83"	"equip009_100_10"	"equip009_100_10"	"Flame Greatblade [De]"
+"0x155"	"0x83"	"equip009_100_10"	"equip009_100_10"	"Flame Greatblade [H]"
+"0x156"	"0x83"	"equip009_100_10"	"equip009_100_10"	"Flame Greatblade [Sl]"
+"0x157"	"0x83"	"equip009_100_10"	"equip009_100_10"	"Flame Greatblade [Fl]"
+"0x158"	"0x83"	"equip009_100_10"	"equip009_100_10"	"Flame Greatblade [Po]"
+"0x159"	"0x84"	"equip009_101_10"	"equip009_101_10"	"Sleepi Greatblade"
+"0x15A"	"0x84"	"equip009_101_10"	"equip009_101_10"	"Sleepi Greatblade [St]"
+"0x15B"	"0x84"	"equip009_101_10"	"equip009_101_10"	"Sleepi Greatblade [G]"
+"0x15C"	"0x84"	"equip009_101_10"	"equip009_101_10"	"Sleepi Greatblade [De]"
+"0x15D"	"0x84"	"equip009_101_10"	"equip009_101_10"	"Sleepi Greatblade [H]"
+"0x15E"	"0x84"	"equip009_101_10"	"equip009_101_10"	"Sleepi Greatblade [Sl]"
+"0x15F"	"0x84"	"equip009_101_10"	"equip009_101_10"	"Sleepi Greatblade [Fl]"
+"0x160"	"0x84"	"equip009_101_10"	"equip009_101_10"	"Sleepi Greatblade [Po]"
+"0x161"	"0x85"	"equip009_200_10"	"equip009_200_10"	"Mono Hoshibo"
+"0x162"	"0x86"	"equip009_201_10"	"equip009_201_10"	"Onigiri's Greatblade"
+"0x163"	"0x87"	"equip009_202_10"	"equip009_202_10"	"Murasamune"
+"0x164"	"0x88"	"equip009_300_10"	"equip009_300_10"	"Kusanakin"
+"0x165"	"0x89"	"equip010_000_10"	"equip010_000_10"	"Axe"
+"0x166"	"0x8A"	"equip010_100_10"	"equip010_100_10"	"Stagger Axe"
+"0x167"	"0x8A"	"equip010_100_10"	"equip010_100_10"	"Stagger Axe [St]"
+"0x168"	"0x8A"	"equip010_100_10"	"equip010_100_10"	"Stagger Axe [G]"
+"0x169"	"0x8A"	"equip010_100_10"	"equip010_100_10"	"Stagger Axe [De]"
+"0x16A"	"0x8A"	"equip010_100_10"	"equip010_100_10"	"Stagger Axe [H]"
+"0x16B"	"0x8A"	"equip010_100_10"	"equip010_100_10"	"Stagger Axe [Sl]"
+"0x16C"	"0x8A"	"equip010_100_10"	"equip010_100_10"	"Stagger Axe [Fl]"
+"0x16D"	"0x8A"	"equip010_100_10"	"equip010_100_10"	"Stagger Axe [Po]"
+"0x16E"	"0x8B"	"equip010_101_10"	"equip010_101_10"	"Poison Axe"
+"0x16F"	"0x8B"	"equip010_101_10"	"equip010_101_10"	"Poison Axe [St]"
+"0x170"	"0x8B"	"equip010_101_10"	"equip010_101_10"	"Poison Axe [G]"
+"0x171"	"0x8B"	"equip010_101_10"	"equip010_101_10"	"Poison Axe [De]"
+"0x172"	"0x8B"	"equip010_101_10"	"equip010_101_10"	"Poison Axe [H]"
+"0x173"	"0x8B"	"equip010_101_10"	"equip010_101_10"	"Poison Axe [Sl]"
+"0x174"	"0x8B"	"equip010_101_10"	"equip010_101_10"	"Poison Axe [Fl]"
+"0x175"	"0x8B"	"equip010_101_10"	"equip010_101_10"	"Poison Axe [Po]"
+"0x176"	"0x8C"	"equip010_200_10"	"equip010_200_10"	"Hilkinga's Chillaxe"
+"0x177"	"0x8D"	"equip010_201_10"	"equip010_201_10"	"Susurapon"
+"0x178"	"0x8E"	"equip010_202_10"	"equip010_202_10"	"Axe of Hanboon"
+"0x179"	"0x8F"	"equip010_300_10"	"equip010_300_10"	"Bumpalion Axe"
+"0x17A"	"0x90"	"equip011_000_10"	"equip011_000_10"	"Club"
+"0x17B"	"0x91"	"equip011_100_10"	"equip011_100_10"	"Lightning Club"
+"0x17C"	"0x91"	"equip011_100_10"	"equip011_100_10"	"Lightning Club [St]"
+"0x17D"	"0x91"	"equip011_100_10"	"equip011_100_10"	"Lightning Club [G]"
+"0x17E"	"0x91"	"equip011_100_10"	"equip011_100_10"	"Lightning Club [De]"
+"0x17F"	"0x91"	"equip011_100_10"	"equip011_100_10"	"Lightning Club [H]"
+"0x180"	"0x91"	"equip011_100_10"	"equip011_100_10"	"Lightning Club [Sl]"
+"0x181"	"0x91"	"equip011_100_10"	"equip011_100_10"	"Lightning Club [Fl]"
+"0x182"	"0x91"	"equip011_100_10"	"equip011_100_10"	"Lightning Club [Po]"
+"0x183"	"0x92"	"equip011_101_10"	"equip011_101_10"	"Dreamweaver"
+"0x184"	"0x92"	"equip011_101_10"	"equip011_101_10"	"Dreamweaver [St]"
+"0x185"	"0x92"	"equip011_101_10"	"equip011_101_10"	"Dreamweaver [G]"
+"0x186"	"0x92"	"equip011_101_10"	"equip011_101_10"	"Dreamweaver [De]"
+"0x187"	"0x92"	"equip011_101_10"	"equip011_101_10"	"Dreamweaver [H]"
+"0x188"	"0x92"	"equip011_101_10"	"equip011_101_10"	"Dreamweaver [Sl]"
+"0x189"	"0x92"	"equip011_101_10"	"equip011_101_10"	"Dreamweaver [Fl]"
+"0x18A"	"0x92"	"equip011_101_10"	"equip011_101_10"	"Dreamweaver [Po]"
+"0x18B"	"0x93"	"equip011_200_10"	"equip011_200_10"	"Genmaru"
+"0x18C"	"0x94"	"equip011_201_10"	"equip011_201_10"	"Mjollnir"
+"0x18D"	"0x95"	"equip011_202_10"	"equip011_202_10"	"Thor"
+"0x18E"	"0x96"	"equip011_300_10"	"equip011_300_10"	"Humthor's Harm"
+"0x18F"	"0x97"	"equip012_000_10"	"equip012_000_10"	"Bow"
+"0x190"	"0x98"	"equip012_100_10"	"equip012_100_10"	"Flame Bow"
+"0x191"	"0x98"	"equip012_100_10"	"equip012_100_10"	"Flame Bow [St]"
+"0x192"	"0x98"	"equip012_100_10"	"equip012_100_10"	"Flame Bow [G]"
+"0x193"	"0x98"	"equip012_100_10"	"equip012_100_10"	"Flame Bow [De]"
+"0x194"	"0x98"	"equip012_100_10"	"equip012_100_10"	"Flame Bow [H]"
+"0x195"	"0x98"	"equip012_100_10"	"equip012_100_10"	"Flame Bow [Sl]"
+"0x196"	"0x98"	"equip012_100_10"	"equip012_100_10"	"Flame Bow [Fl]"
+"0x197"	"0x98"	"equip012_100_10"	"equip012_100_10"	"Flame Bow [Po]"
+"0x198"	"0x99"	"equip012_101_10"	"equip012_101_10"	"Sleepi Bow"
+"0x199"	"0x99"	"equip012_101_10"	"equip012_101_10"	"Sleepi Bow [St]"
+"0x19A"	"0x99"	"equip012_101_10"	"equip012_101_10"	"Sleepi Bow [G]"
+"0x19B"	"0x99"	"equip012_101_10"	"equip012_101_10"	"Sleepi Bow [De]"
+"0x19C"	"0x99"	"equip012_101_10"	"equip012_101_10"	"Sleepi Bow [H]"
+"0x19D"	"0x99"	"equip012_101_10"	"equip012_101_10"	"Sleepi Bow [Sl]"
+"0x19E"	"0x99"	"equip012_101_10"	"equip012_101_10"	"Sleepi Bow [Fl]"
+"0x19F"	"0x99"	"equip012_101_10"	"equip012_101_10"	"Sleepi Bow [Po]"
+"0x1A0"	"0x9A"	"equip012_200_10"	"equip012_200_10"	"Bow of Apollopon"
+"0x1A1"	"0x9B"	"equip012_201_10"	"equip012_201_10"	"Yamibashiri"
+"0x1A2"	"0x9C"	"equip012_202_10"	"equip012_202_10"	"Raijinpon's Bow"
+"0x1A3"	"0x9D"	"equip012_300_10"	"equip012_300_10"	"Yumipon's Bow"
+"0x1A4"	"0x9E"	"equip013_000_10"	"equip013_000_10"	"Longbow"
+"0x1A5"	"0x9F"	"equip013_100_10"	"equip013_100_10"	"Poison Longbow"
+"0x1A6"	"0x9F"	"equip013_100_10"	"equip013_100_10"	"Poison Longbow [St]"
+"0x1A7"	"0x9F"	"equip013_100_10"	"equip013_100_10"	"Poison Longbow [G]"
+"0x1A8"	"0x9F"	"equip013_100_10"	"equip013_100_10"	"Poison Longbow [De]"
+"0x1A9"	"0x9F"	"equip013_100_10"	"equip013_100_10"	"Poison Longbow [H]"
+"0x1AA"	"0x9F"	"equip013_100_10"	"equip013_100_10"	"Poison Longbow [Sl]"
+"0x1AB"	"0x9F"	"equip013_100_10"	"equip013_100_10"	"Poison Longbow [Fl]"
+"0x1AC"	"0x9F"	"equip013_100_10"	"equip013_100_10"	"Poison Longbow [Po]"
+"0x1AD"	"0xA0"	"equip013_101_10"	"equip013_101_10"	"Stagger Longbow"
+"0x1AE"	"0xA0"	"equip013_101_10"	"equip013_101_10"	"Stagger Longbow [St]"
+"0x1AF"	"0xA0"	"equip013_101_10"	"equip013_101_10"	"Stagger Longbow [G]"
+"0x1B0"	"0xA0"	"equip013_101_10"	"equip013_101_10"	"Stagger Longbow [De]"
+"0x1B1"	"0xA0"	"equip013_101_10"	"equip013_101_10"	"Stagger Longbow [H]"
+"0x1B2"	"0xA0"	"equip013_101_10"	"equip013_101_10"	"Stagger Longbow [Sl]"
+"0x1B3"	"0xA0"	"equip013_101_10"	"equip013_101_10"	"Stagger Longbow [Fl]"
+"0x1B4"	"0xA0"	"equip013_101_10"	"equip013_101_10"	"Stagger Longbow [Po]"
+"0x1B5"	"0xA1"	"equip013_200_10"	"equip013_200_10"	"Crossbow of Faible"
+"0x1B6"	"0xA2"	"equip013_201_10"	"equip013_201_10"	"Krakabom Crossbow"
+"0x1B7"	"0xA3"	"equip013_202_10"	"equip013_202_10"	"Yoichiro"
+"0x1B8"	"0xA4"	"equip013_300_10"	"equip013_300_10"	"Dekiramos's Crossbow"
+"0x1B9"	"0xA5"	"equip014_000_10"	"equip014_000_10"	"Crossbow"
+"0x1BA"	"0xA6"	"equip014_100_10"	"equip014_100_10"	"Ice Crossbow"
+"0x1BB"	"0xA6"	"equip014_100_10"	"equip014_100_10"	"Ice Crossbow [St]"
+"0x1BC"	"0xA6"	"equip014_100_10"	"equip014_100_10"	"Ice Crossbow [G]"
+"0x1BD"	"0xA6"	"equip014_100_10"	"equip014_100_10"	"Ice Crossbow [De]"
+"0x1BE"	"0xA6"	"equip014_100_10"	"equip014_100_10"	"Ice Crossbow [H]"
+"0x1BF"	"0xA6"	"equip014_100_10"	"equip014_100_10"	"Ice Crossbow [Sl]"
+"0x1C0"	"0xA6"	"equip014_100_10"	"equip014_100_10"	"Ice Crossbow [Fl]"
+"0x1C1"	"0xA6"	"equip014_100_10"	"equip014_100_10"	"Ice Crossbow [Po]"
+"0x1C2"	"0xA7"	"equip014_101_10"	"equip014_101_10"	"Repel Crossbow"
+"0x1C3"	"0xA7"	"equip014_101_10"	"equip014_101_10"	"Repel Crossbow [St]"
+"0x1C4"	"0xA7"	"equip014_101_10"	"equip014_101_10"	"Repel Crossbow [G]"
+"0x1C5"	"0xA7"	"equip014_101_10"	"equip014_101_10"	"Repel Crossbow [De]"
+"0x1C6"	"0xA7"	"equip014_101_10"	"equip014_101_10"	"Repel Crossbow [H]"
+"0x1C7"	"0xA7"	"equip014_101_10"	"equip014_101_10"	"Repel Crossbow [Sl]"
+"0x1C8"	"0xA7"	"equip014_101_10"	"equip014_101_10"	"Repel Crossbow [Fl]"
+"0x1C9"	"0xA7"	"equip014_101_10"	"equip014_101_10"	"Repel Crossbow [Po]"
+"0x1CA"	"0xA8"	"equip014_200_10"	"equip014_200_10"	"The Machinator"
+"0x1CB"	"0xA9"	"equip014_201_10"	"equip014_201_10"	"Illiamtel's Overture"
+"0x1CC"	"0xAA"	"equip014_202_10"	"equip014_202_10"	"Teskatori Shooter"
+"0x1CD"	"0xAB"	"equip014_300_10"	"equip014_300_10"	"Goweecha Gun"
+"0x1CE"	"0xAC"	"equip016_000_10"	"equip016_000_10"	"Horn"
+"0x1CF"	"0xAD"	"equip016_100_10"	"equip016_100_10"	"Flame Horn"
+"0x1D0"	"0xAD"	"equip016_100_10"	"equip016_100_10"	"Flame Horn [St]"
+"0x1D1"	"0xAD"	"equip016_100_10"	"equip016_100_10"	"Flame Horn [G]"
+"0x1D2"	"0xAD"	"equip016_100_10"	"equip016_100_10"	"Flame Horn [De]"
+"0x1D3"	"0xAD"	"equip016_100_10"	"equip016_100_10"	"Flame Horn [H]"
+"0x1D4"	"0xAD"	"equip016_100_10"	"equip016_100_10"	"Flame Horn [Sl]"
+"0x1D5"	"0xAD"	"equip016_100_10"	"equip016_100_10"	"Flame Horn [Fl]"
+"0x1D6"	"0xAD"	"equip016_100_10"	"equip016_100_10"	"Flame Horn [Po]"
+"0x1D7"	"0xAE"	"equip016_101_10"	"equip016_101_10"	"Ice Horn"
+"0x1D8"	"0xAE"	"equip016_101_10"	"equip016_101_10"	"Ice Horn [St]"
+"0x1D9"	"0xAE"	"equip016_101_10"	"equip016_101_10"	"Ice Horn [G]"
+"0x1DA"	"0xAE"	"equip016_101_10"	"equip016_101_10"	"Ice Horn [De]"
+"0x1DB"	"0xAE"	"equip016_101_10"	"equip016_101_10"	"Ice Horn [H]"
+"0x1DC"	"0xAE"	"equip016_101_10"	"equip016_101_10"	"Ice Horn [Sl]"
+"0x1DD"	"0xAE"	"equip016_101_10"	"equip016_101_10"	"Ice Horn [Fl]"
+"0x1DE"	"0xAE"	"equip016_101_10"	"equip016_101_10"	"Ice Horn [Po]"
+"0x1DF"	"0xAF"	"equip016_200_10"	"equip016_200_10"	"Healixir Horn"
+"0x1E0"	"0xB0"	"equip016_201_10"	"equip016_201_10"	"Dragonap Horn"
+"0x1E1"	"0xB1"	"equip016_202_10"	"equip016_202_10"	"Sonic Demonslayer"
+"0x1E2"	"0xB2"	"equip016_300_10"	"equip016_300_10"	"Horn of Panchunan"
+"0x1E3"	"0xB3"	"equip017_000_10"	"equip017_000_10"	"Long Horn"
+"0x1E4"	"0xB4"	"equip017_100_10"	"equip017_100_10"	"Sleepi Longhorn"
+"0x1E5"	"0xB4"	"equip017_100_10"	"equip017_100_10"	"Sleepi Longhorn [St]"
+"0x1E6"	"0xB4"	"equip017_100_10"	"equip017_100_10"	"Sleepi Longhorn [G]"
+"0x1E7"	"0xB4"	"equip017_100_10"	"equip017_100_10"	"Sleepi Longhorn [De]"
+"0x1E8"	"0xB4"	"equip017_100_10"	"equip017_100_10"	"Sleepi Longhorn [H]"
+"0x1E9"	"0xB4"	"equip017_100_10"	"equip017_100_10"	"Sleepi Longhorn [Sl]"
+"0x1EA"	"0xB4"	"equip017_100_10"	"equip017_100_10"	"Sleepi Longhorn [Fl]"
+"0x1EB"	"0xB4"	"equip017_100_10"	"equip017_100_10"	"Sleepi Longhorn [Po]"
+"0x1EC"	"0xB5"	"equip017_101_10"	"equip017_101_10"	"Stagger Longhorn"
+"0x1ED"	"0xB5"	"equip017_101_10"	"equip017_101_10"	"Stagger Longhorn [St]"
+"0x1EE"	"0xB5"	"equip017_101_10"	"equip017_101_10"	"Stagger Longhorn [G]"
+"0x1EF"	"0xB5"	"equip017_101_10"	"equip017_101_10"	"Stagger Longhorn [De]"
+"0x1F0"	"0xB5"	"equip017_101_10"	"equip017_101_10"	"Stagger Longhorn [H]"
+"0x1F1"	"0xB5"	"equip017_101_10"	"equip017_101_10"	"Stagger Longhorn [Sl]"
+"0x1F2"	"0xB5"	"equip017_101_10"	"equip017_101_10"	"Stagger Longhorn [Fl]"
+"0x1F3"	"0xB5"	"equip017_101_10"	"equip017_101_10"	"Stagger Longhorn [Po]"
+"0x1F4"	"0xB6"	"equip017_200_10"	"equip017_200_10"	"Horn of Homugai"
+"0x1F5"	"0xB7"	"equip017_201_10"	"equip017_201_10"	"Megaslayer"
+"0x1F6"	"0xB8"	"equip017_202_10"	"equip017_202_10"	"Great Howl"
+"0x1F7"	"0xB9"	"equip017_300_10"	"equip017_300_10"	"Bellophone"
+"0x1F8"	"0xBA"	"equip018_000_10"	"equip018_000_10"	"Twinhorn"
+"0x1F9"	"0xBB"	"equip018_100_10"	"equip018_100_10"	"Lightning Twinhorn"
+"0x1FA"	"0xBB"	"equip018_100_10"	"equip018_100_10"	"Lightning Twinhorn [St]"
+"0x1FB"	"0xBB"	"equip018_100_10"	"equip018_100_10"	"Lightning Twinhorn [G]"
+"0x1FC"	"0xBB"	"equip018_100_10"	"equip018_100_10"	"Lightning Twinhorn [De]"
+"0x1FD"	"0xBB"	"equip018_100_10"	"equip018_100_10"	"Lightning Twinhorn [H]"
+"0x1FE"	"0xBB"	"equip018_100_10"	"equip018_100_10"	"Lightning Twinhorn [Sl]"
+"0x1FF"	"0xBB"	"equip018_100_10"	"equip018_100_10"	"Lightning Twinhorn [Fl]"
+"0x200"	"0xBB"	"equip018_100_10"	"equip018_100_10"	"Lightning Twinhorn [Po]"
+"0x201"	"0xBC"	"equip018_101_10"	"equip018_101_10"	"Poison Twinhorn"
+"0x202"	"0xBC"	"equip018_101_10"	"equip018_101_10"	"Poison Twinhorn [St]"
+"0x203"	"0xBC"	"equip018_101_10"	"equip018_101_10"	"Poison Twinhorn [G]"
+"0x204"	"0xBC"	"equip018_101_10"	"equip018_101_10"	"Poison Twinhorn [De]"
+"0x205"	"0xBC"	"equip018_101_10"	"equip018_101_10"	"Poison Twinhorn [H]"
+"0x206"	"0xBC"	"equip018_101_10"	"equip018_101_10"	"Poison Twinhorn [Sl]"
+"0x207"	"0xBC"	"equip018_101_10"	"equip018_101_10"	"Poison Twinhorn [Fl]"
+"0x208"	"0xBC"	"equip018_101_10"	"equip018_101_10"	"Poison Twinhorn [Po]"
+"0x209"	"0xBD"	"equip018_200_10"	"equip018_200_10"	"Horns of Hamlin"
+"0x20A"	"0xBE"	"equip018_201_10"	"equip018_201_10"	"Siren's Song"
+"0x20B"	"0xBF"	"equip018_202_10"	"equip018_202_10"	"Spriggan's Song"
+"0x20C"	"0xC0"	"equip018_300_10"	"equip018_300_10"	"Gjallarborn"
+"0x20D"	"0xC1"	"equip019_000_10"	"equip019_000_10"	"Staff"
+"0x20E"	"0xC2"	"equip019_100_10"	"equip019_100_10"	"Fireball Staff"
+"0x20F"	"0xC2"	"equip019_100_10"	"equip019_100_10"	"Fireball Staff [St]"
+"0x210"	"0xC2"	"equip019_100_10"	"equip019_100_10"	"Fireball Staff [G]"
+"0x211"	"0xC2"	"equip019_100_10"	"equip019_100_10"	"Fireball Staff [De]"
+"0x212"	"0xC2"	"equip019_100_10"	"equip019_100_10"	"Fireball Staff [H]"
+"0x213"	"0xC2"	"equip019_100_10"	"equip019_100_10"	"Fireball Staff [Sl]"
+"0x214"	"0xC2"	"equip019_100_10"	"equip019_100_10"	"Fireball Staff [Fl]"
+"0x215"	"0xC2"	"equip019_100_10"	"equip019_100_10"	"Fireball Staff [Po]"
+"0x216"	"0xC3"	"equip019_101_10"	"equip019_101_10"	"Firewall Staff"
+"0x217"	"0xC3"	"equip019_101_10"	"equip019_101_10"	"Firewall Staff [St]"
+"0x218"	"0xC3"	"equip019_101_10"	"equip019_101_10"	"Firewall Staff [G]"
+"0x219"	"0xC3"	"equip019_101_10"	"equip019_101_10"	"Firewall Staff [De]"
+"0x21A"	"0xC3"	"equip019_101_10"	"equip019_101_10"	"Firewall Staff [H]"
+"0x21B"	"0xC3"	"equip019_101_10"	"equip019_101_10"	"Firewall Staff [Sl]"
+"0x21C"	"0xC3"	"equip019_101_10"	"equip019_101_10"	"Firewall Staff [Fl]"
+"0x21D"	"0xC3"	"equip019_101_10"	"equip019_101_10"	"Firewall Staff [Po]"
+"0x21E"	"0xC4"	"equip019_102_10"	"equip019_102_10"	"Lightning Staff"
+"0x21F"	"0xC4"	"equip019_102_10"	"equip019_102_10"	"Lightning Staff [St]"
+"0x220"	"0xC4"	"equip019_102_10"	"equip019_102_10"	"Lightning Staff [G]"
+"0x221"	"0xC4"	"equip019_102_10"	"equip019_102_10"	"Lightning Staff [De]"
+"0x222"	"0xC4"	"equip019_102_10"	"equip019_102_10"	"Lightning Staff [H]"
+"0x223"	"0xC4"	"equip019_102_10"	"equip019_102_10"	"Lightning Staff [Sl]"
+"0x224"	"0xC4"	"equip019_102_10"	"equip019_102_10"	"Lightning Staff [Fl]"
+"0x225"	"0xC4"	"equip019_102_10"	"equip019_102_10"	"Lightning Staff [Po]"
+"0x226"	"0xC5"	"equip019_200_10"	"equip019_200_10"	"Thunderstorm Staff"
+"0x227"	"0xC6"	"equip019_201_10"	"equip019_201_10"	"Flamesea Staff"
+"0x228"	"0xC7"	"equip019_202_10"	"equip019_202_10"	"Holymist Staff"
+"0x229"	"0xC8"	"equip019_203_10"	"equip019_203_10"	"Darkvenom Staff"
+"0x22A"	"0xC9"	"equip019_204_10"	"equip019_204_10"	"Jewelsword Staff"
+"0x22B"	"0xCA"	"equip019_300_10"	"equip019_300_10"	"Phoenix Ultimate Staff"
+"0x22C"	"0xCB"	"equip020_000_10"	"equip020_000_10"	"Sceptre"
+"0x22D"	"0xCC"	"equip020_100_10"	"equip020_100_10"	"Defence Sceptre"
+"0x22E"	"0xCC"	"equip020_100_10"	"equip020_100_10"	"Defence Sceptre [St]"
+"0x22F"	"0xCC"	"equip020_100_10"	"equip020_100_10"	"Defence Sceptre [G]"
+"0x230"	"0xCC"	"equip020_100_10"	"equip020_100_10"	"Defence Sceptre [De]"
+"0x231"	"0xCC"	"equip020_100_10"	"equip020_100_10"	"Defence Sceptre [H]"
+"0x232"	"0xCC"	"equip020_100_10"	"equip020_100_10"	"Defence Sceptre [Sl]"
+"0x233"	"0xCC"	"equip020_100_10"	"equip020_100_10"	"Defence Sceptre [Fl]"
+"0x234"	"0xCC"	"equip020_100_10"	"equip020_100_10"	"Defence Sceptre [Po]"
+"0x235"	"0xCD"	"equip020_101_10"	"equip020_101_10"	"Purity Sceptre"
+"0x236"	"0xCD"	"equip020_101_10"	"equip020_101_10"	"Purity Sceptre [St]"
+"0x237"	"0xCD"	"equip020_101_10"	"equip020_101_10"	"Purity Sceptre [G]"
+"0x238"	"0xCD"	"equip020_101_10"	"equip020_101_10"	"Purity Sceptre [De]"
+"0x239"	"0xCD"	"equip020_101_10"	"equip020_101_10"	"Purity Sceptre [H]"
+"0x23A"	"0xCD"	"equip020_101_10"	"equip020_101_10"	"Purity Sceptre [Sl]"
+"0x23B"	"0xCD"	"equip020_101_10"	"equip020_101_10"	"Purity Sceptre [Fl]"
+"0x23C"	"0xCD"	"equip020_101_10"	"equip020_101_10"	"Purity Sceptre [Po]"
+"0x23D"	"0xCE"	"equip020_102_10"	"equip020_102_10"	"Healing Sceptre"
+"0x23E"	"0xCE"	"equip020_102_10"	"equip020_102_10"	"Healing Sceptre [St]"
+"0x23F"	"0xCE"	"equip020_102_10"	"equip020_102_10"	"Healing Sceptre [G]"
+"0x240"	"0xCE"	"equip020_102_10"	"equip020_102_10"	"Healing Sceptre [De]"
+"0x241"	"0xCE"	"equip020_102_10"	"equip020_102_10"	"Healing Sceptre [H]"
+"0x242"	"0xCE"	"equip020_102_10"	"equip020_102_10"	"Healing Sceptre [Sl]"
+"0x243"	"0xCE"	"equip020_102_10"	"equip020_102_10"	"Healing Sceptre [Fl]"
+"0x244"	"0xCE"	"equip020_102_10"	"equip020_102_10"	"Healing Sceptre [Po]"
+"0x245"	"0xCF"	"equip020_200_10"	"equip020_200_10"	"Firefighter Sceptre"
+"0x246"	"0xD0"	"equip020_201_10"	"equip020_201_10"	"Defrost Sceptre"
+"0x247"	"0xD1"	"equip020_202_10"	"equip020_202_10"	"Antivenom Sceptre"
+"0x248"	"0xD2"	"equip020_203_10"	"equip020_203_10"	"Sleepless Sceptre"
+"0x249"	"0xD3"	"equip020_204_10"	"equip020_204_10"	"Maelstrom Sceptre"
+"0x24A"	"0xD4"	"equip020_300_10"	"equip020_300_10"	"Sceptre of Rahmon"
+"0x24B"	"0xD5"	"equip021_000_10"	"equip021_000_10"	"Cannon"
+"0x24C"	"0xD6"	"equip021_100_10"	"equip021_100_10"	"Flame Cannon"
+"0x24D"	"0xD6"	"equip021_100_10"	"equip021_100_10"	"Flame Cannon [St]"
+"0x24E"	"0xD6"	"equip021_100_10"	"equip021_100_10"	"Flame Cannon [G]"
+"0x24F"	"0xD6"	"equip021_100_10"	"equip021_100_10"	"Flame Cannon [De]"
+"0x250"	"0xD6"	"equip021_100_10"	"equip021_100_10"	"Flame Cannon [H]"
+"0x251"	"0xD6"	"equip021_100_10"	"equip021_100_10"	"Flame Cannon [Sl]"
+"0x252"	"0xD6"	"equip021_100_10"	"equip021_100_10"	"Flame Cannon [Fl]"
+"0x253"	"0xD6"	"equip021_100_10"	"equip021_100_10"	"Flame Cannon [Po]"
+"0x254"	"0xD7"	"equip021_200_10"	"equip021_200_10"	"Bonkadonk Cannon"
+"0x255"	"0xD8"	"equip021_201_10"	"equip021_201_10"	"Lullablight"
+"0x256"	"0xD9"	"equip021_300_10"	"equip021_300_10"	"Universatile Cannon"
+"0x257"	"0xDA"	"equip022_000_10"	"equip022_000_10"	"Blunderbuss"
+"0x258"	"0xDB"	"equip022_100_10"	"equip022_100_10"	"Ice Blunderbuss"
+"0x259"	"0xDB"	"equip022_100_10"	"equip022_100_10"	"Ice Blunderbuss [St]"
+"0x25A"	"0xDB"	"equip022_100_10"	"equip022_100_10"	"Ice Blunderbuss [G]"
+"0x25B"	"0xDB"	"equip022_100_10"	"equip022_100_10"	"Ice Blunderbuss [De]"
+"0x25C"	"0xDB"	"equip022_100_10"	"equip022_100_10"	"Ice Blunderbuss [H]"
+"0x25D"	"0xDB"	"equip022_100_10"	"equip022_100_10"	"Ice Blunderbuss [Sl]"
+"0x25E"	"0xDB"	"equip022_100_10"	"equip022_100_10"	"Ice Blunderbuss [Fl]"
+"0x25F"	"0xDB"	"equip022_100_10"	"equip022_100_10"	"Ice Blunderbuss [Po]"
+"0x260"	"0xDC"	"equip022_200_10"	"equip022_200_10"	"Euryalus"
+"0x261"	"0xDD"	"equip022_201_10"	"equip022_201_10"	"Dreadmare"
+"0x262"	"0xDE"	"equip022_300_10"	"equip022_300_10"	"Eisaiho"
+"0x263"	"0xDF"	"equip023_000_10"	"equip023_000_10"	"Laser"
+"0x264"	"0xE0"	"equip023_100_10"	"equip023_100_10"	"Critical Laser"
+"0x265"	"0xE0"	"equip023_100_10"	"equip023_100_10"	"Critical Laser [St]"
+"0x266"	"0xE0"	"equip023_100_10"	"equip023_100_10"	"Critical Laser [G]"
+"0x267"	"0xE0"	"equip023_100_10"	"equip023_100_10"	"Critical Laser [De]"
+"0x268"	"0xE0"	"equip023_100_10"	"equip023_100_10"	"Critical Laser [H]"
+"0x269"	"0xE0"	"equip023_100_10"	"equip023_100_10"	"Critical Laser [Sl]"
+"0x26A"	"0xE0"	"equip023_100_10"	"equip023_100_10"	"Critical Laser [Fl]"
+"0x26B"	"0xE0"	"equip023_100_10"	"equip023_100_10"	"Critical Laser [Po]"
+"0x26C"	"0xE1"	"equip023_200_10"	"equip023_200_10"	"Hoirenho"
+"0x26D"	"0xE2"	"equip023_201_10"	"equip023_201_10"	"Ichigeki"
+"0x26E"	"0xE3"	"equip023_300_10"	"equip023_300_10"	"Sunflare Laser"
+"0x26F"	"0xE4"	"equip024_000_10"	"equip024_000_10"	"Helm"
+"0x270"	"0xE5"	"equip024_100_10"	"equip024_100_10"	"Lightning Helm"
+"0x271"	"0xE5"	"equip024_100_10"	"equip024_100_10"	"Lightning Helm [Hp]"
+"0x272"	"0xE5"	"equip024_100_10"	"equip024_100_10"	"Lightning Helm [Me]"
+"0x273"	"0xE5"	"equip024_100_10"	"equip024_100_10"	"Lightning Helm [Ar]"
+"0x274"	"0xE5"	"equip024_100_10"	"equip024_100_10"	"Lightning Helm [W]"
+"0x275"	"0xE5"	"equip024_100_10"	"equip024_100_10"	"Lightning Helm [En]"
+"0x276"	"0xE5"	"equip024_100_10"	"equip024_100_10"	"Lightning Helm [Ic]"
+"0x277"	"0xE5"	"equip024_100_10"	"equip024_100_10"	"Lightning Helm [Cu]"
+"0x278"	"0xE6"	"equip024_101_10"	"equip024_101_10"	"Flame Helm"
+"0x279"	"0xE6"	"equip024_101_10"	"equip024_101_10"	"Flame Helm [Hp]"
+"0x27A"	"0xE6"	"equip024_101_10"	"equip024_101_10"	"Flame Helm [Me]"
+"0x27B"	"0xE6"	"equip024_101_10"	"equip024_101_10"	"Flame Helm [Ar]"
+"0x27C"	"0xE6"	"equip024_101_10"	"equip024_101_10"	"Flame Helm [W]"
+"0x27D"	"0xE6"	"equip024_101_10"	"equip024_101_10"	"Flame Helm [En]"
+"0x27E"	"0xE6"	"equip024_101_10"	"equip024_101_10"	"Flame Helm [Ic]"
+"0x27F"	"0xE6"	"equip024_101_10"	"equip024_101_10"	"Flame Helm [Cu]"
+"0x280"	"0xE7"	"equip024_102_10"	"equip024_102_10"	"Ice Helm"
+"0x281"	"0xE7"	"equip024_102_10"	"equip024_102_10"	"Ice Helm [Hp]"
+"0x282"	"0xE7"	"equip024_102_10"	"equip024_102_10"	"Ice Helm [Me]"
+"0x283"	"0xE7"	"equip024_102_10"	"equip024_102_10"	"Ice Helm [Ar]"
+"0x284"	"0xE7"	"equip024_102_10"	"equip024_102_10"	"Ice Helm [W]"
+"0x285"	"0xE7"	"equip024_102_10"	"equip024_102_10"	"Ice Helm [En]"
+"0x286"	"0xE7"	"equip024_102_10"	"equip024_102_10"	"Ice Helm [Ic]"
+"0x287"	"0xE7"	"equip024_102_10"	"equip024_102_10"	"Ice Helm [Cu]"
+"0x288"	"0xE8"	"equip024_200_10"	"equip024_200_10"	"Tahla Helm"
+"0x289"	"0xE9"	"equip024_201_10"	"equip024_201_10"	"Bunny Head"
+"0x28A"	"0xEA"	"equip024_202_10"	"equip024_202_10"	"Tebenos Helm"
+"0x28B"	"0xEB"	"equip024_203_10"	"equip024_203_10"	"Samurai Head"
+"0x28C"	"0xEC"	"equip024_204_10"	"equip024_204_10"	"Marumenko Helm"
+"0x28D"	"0xED"	"equip024_300_10"	"equip024_300_10"	"Dolmorn Helm"
+"0x28E"	"0xEE"	"equip025_000_10"	"equip025_000_10"	"Shield"
+"0x28F"	"0xEF"	"equip025_100_10"	"equip025_100_10"	"Flame Shield"
+"0x290"	"0xEF"	"equip025_100_10"	"equip025_100_10"	"Flame Shield [Hp]"
+"0x291"	"0xEF"	"equip025_100_10"	"equip025_100_10"	"Flame Shield [Me]"
+"0x292"	"0xEF"	"equip025_100_10"	"equip025_100_10"	"Flame Shield [Ar]"
+"0x293"	"0xEF"	"equip025_100_10"	"equip025_100_10"	"Flame Shield [W]"
+"0x294"	"0xEF"	"equip025_100_10"	"equip025_100_10"	"Flame Shield [En]"
+"0x295"	"0xEF"	"equip025_100_10"	"equip025_100_10"	"Flame Shield [Ic]"
+"0x296"	"0xEF"	"equip025_100_10"	"equip025_100_10"	"Flame Shield [Cu]"
+"0x297"	"0xF0"	"equip025_101_10"	"equip025_101_10"	"Ice Shield"
+"0x298"	"0xF0"	"equip025_101_10"	"equip025_101_10"	"Ice Shield [Hp]"
+"0x299"	"0xF0"	"equip025_101_10"	"equip025_101_10"	"Ice Shield [Me]"
+"0x29A"	"0xF0"	"equip025_101_10"	"equip025_101_10"	"Ice Shield [Ar]"
+"0x29B"	"0xF0"	"equip025_101_10"	"equip025_101_10"	"Ice Shield [W]"
+"0x29C"	"0xF0"	"equip025_101_10"	"equip025_101_10"	"Ice Shield [En]"
+"0x29D"	"0xF0"	"equip025_101_10"	"equip025_101_10"	"Ice Shield [Ic]"
+"0x29E"	"0xF0"	"equip025_101_10"	"equip025_101_10"	"Ice Shield [Cu]"
+"0x29F"	"0xF1"	"equip025_102_10"	"equip025_102_10"	"Eyeball Shield"
+"0x2A0"	"0xF1"	"equip025_102_10"	"equip025_102_10"	"Eyeball Shield [Hp]"
+"0x2A1"	"0xF1"	"equip025_102_10"	"equip025_102_10"	"Eyeball Shield [Me]"
+"0x2A2"	"0xF1"	"equip025_102_10"	"equip025_102_10"	"Eyeball Shield [Ar]"
+"0x2A3"	"0xF1"	"equip025_102_10"	"equip025_102_10"	"Eyeball Shield [W]"
+"0x2A4"	"0xF1"	"equip025_102_10"	"equip025_102_10"	"Eyeball Shield [En]"
+"0x2A5"	"0xF1"	"equip025_102_10"	"equip025_102_10"	"Eyeball Shield [Ic]"
+"0x2A6"	"0xF1"	"equip025_102_10"	"equip025_102_10"	"Eyeball Shield [Cu]"
+"0x2A7"	"0xF2"	"equip025_200_10"	"equip025_200_10"	"Stinger Shield"
+"0x2A8"	"0xF3"	"equip025_201_10"	"equip025_201_10"	"Galapagoth Shield"
+"0x2A9"	"0xF4"	"equip025_202_10"	"equip025_202_10"	"Octagon Shield"
+"0x2AA"	"0xF5"	"equip025_203_10"	"equip025_203_10"	"Alldemonium Shield"
+"0x2AB"	"0xF6"	"equip025_204_10"	"equip025_204_10"	"Fireblessed Shield"
+"0x2AC"	"0xF7"	"equip025_300_10"	"equip025_300_10"	"Oharan Shield"
+"0x2AD"	"0xF8"	"equip026_000_10"	"equip026_000_10"	"Greatshield"
+"0x2AE"	"0xF9"	"equip026_100_10"	"equip026_100_10"	"Poison Greatshield"
+"0x2AF"	"0xF9"	"equip026_100_10"	"equip026_100_10"	"Poison Greatshield [Hp]"
+"0x2B0"	"0xF9"	"equip026_100_10"	"equip026_100_10"	"Poison Greatshield [Me]"
+"0x2B1"	"0xF9"	"equip026_100_10"	"equip026_100_10"	"Poison Greatshield [Ar]"
+"0x2B2"	"0xF9"	"equip026_100_10"	"equip026_100_10"	"Poison Greatshield [W]"
+"0x2B3"	"0xF9"	"equip026_100_10"	"equip026_100_10"	"Poison Greatshield [En]"
+"0x2B4"	"0xF9"	"equip026_100_10"	"equip026_100_10"	"Poison Greatshield [Ic]"
+"0x2B5"	"0xF9"	"equip026_100_10"	"equip026_100_10"	"Poison Greatshield [Cu]"
+"0x2B6"	"0xFA"	"equip026_101_10"	"equip026_101_10"	"Grond Greatshield"
+"0x2B7"	"0xFA"	"equip026_101_10"	"equip026_101_10"	"Grond Greatshield [Hp]"
+"0x2B8"	"0xFA"	"equip026_101_10"	"equip026_101_10"	"Grond Greatshield [Me]"
+"0x2B9"	"0xFA"	"equip026_101_10"	"equip026_101_10"	"Grond Greatshield [Ar]"
+"0x2BA"	"0xFA"	"equip026_101_10"	"equip026_101_10"	"Grond Greatshield [W]"
+"0x2BB"	"0xFA"	"equip026_101_10"	"equip026_101_10"	"Grond Greatshield [En]"
+"0x2BC"	"0xFA"	"equip026_101_10"	"equip026_101_10"	"Grond Greatshield [Ic]"
+"0x2BD"	"0xFA"	"equip026_101_10"	"equip026_101_10"	"Grond Greatshield [Cu]"
+"0x2BE"	"0xFB"	"equip026_200_10"	"equip026_200_10"	"Aegis"
+"0x2BF"	"0xFC"	"equip026_201_10"	"equip026_201_10"	"Tokoyomamori"
+"0x2C0"	"0xFD"	"equip026_202_10"	"equip026_202_10"	"Bacteon Greatshield"
+"0x2C1"	"0xFE"	"equip026_300_10"	"equip026_300_10"	"Greatshield of Ironimo"
+"0x2C2"	"0xFF"	"equip027_000_10"	"equip027_000_10"	"Shoulderguard"
+"0x2C3"	"0x100"	"equip027_100_10"	"equip027_100_10"	"Flame Shoulders"
+"0x2C4"	"0x100"	"equip027_100_10"	"equip027_100_10"	"Flame Shoulders [Hp]"
+"0x2C5"	"0x100"	"equip027_100_10"	"equip027_100_10"	"Flame Shoulders [Me]"
+"0x2C6"	"0x100"	"equip027_100_10"	"equip027_100_10"	"Flame Shoulders [Ar]"
+"0x2C7"	"0x100"	"equip027_100_10"	"equip027_100_10"	"Flame Shoulders [W]"
+"0x2C8"	"0x100"	"equip027_100_10"	"equip027_100_10"	"Flame Shoulders [En]"
+"0x2C9"	"0x100"	"equip027_100_10"	"equip027_100_10"	"Flame Shoulders [Ic]"
+"0x2CA"	"0x100"	"equip027_100_10"	"equip027_100_10"	"Flame Shoulders [Cu]"
+"0x2CB"	"0x101"	"equip027_101_10"	"equip027_101_10"	"Ice Shoulders"
+"0x2CC"	"0x101"	"equip027_101_10"	"equip027_101_10"	"Ice Shoulders [Hp]"
+"0x2CD"	"0x101"	"equip027_101_10"	"equip027_101_10"	"Ice Shoulders [Me]"
+"0x2CE"	"0x101"	"equip027_101_10"	"equip027_101_10"	"Ice Shoulders [Ar]"
+"0x2CF"	"0x101"	"equip027_101_10"	"equip027_101_10"	"Ice Shoulders [W]"
+"0x2D0"	"0x101"	"equip027_101_10"	"equip027_101_10"	"Ice Shoulders [En]"
+"0x2D1"	"0x101"	"equip027_101_10"	"equip027_101_10"	"Ice Shoulders [Ic]"
+"0x2D2"	"0x101"	"equip027_101_10"	"equip027_101_10"	"Ice Shoulders [Cu]"
+"0x2D3"	"0x102"	"equip027_200_10"	"equip027_200_10"	"Frayola's Spaulders"
+"0x2D4"	"0x103"	"equip027_201_10"	"equip027_201_10"	"Lonestars"
+"0x2D5"	"0x104"	"equip027_202_10"	"equip027_202_10"	"Crono Riggers"
+"0x2D6"	"0x105"	"equip027_300_10"	"equip027_300_10"	"Gydeen's Shoulders"
+"0x2D7"	"0x106"	"equip028_000_10"	"equip028_000_10"	"Cape"
+"0x2D8"	"0x107"	"equip028_100_10"	"equip028_100_10"	"Fire Cape"
+"0x2D9"	"0x107"	"equip028_100_10"	"equip028_100_10"	"Fire Cape [Hp]"
+"0x2DA"	"0x107"	"equip028_100_10"	"equip028_100_10"	"Fire Cape [Me]"
+"0x2DB"	"0x107"	"equip028_100_10"	"equip028_100_10"	"Fire Cape [Ar]"
+"0x2DC"	"0x107"	"equip028_100_10"	"equip028_100_10"	"Fire Cape [W]"
+"0x2DD"	"0x107"	"equip028_100_10"	"equip028_100_10"	"Fire Cape [En]"
+"0x2DE"	"0x107"	"equip028_100_10"	"equip028_100_10"	"Fire Cape [Ic]"
+"0x2DF"	"0x107"	"equip028_100_10"	"equip028_100_10"	"Fire Cape [Cu]"
+"0x2E0"	"0x108"	"equip028_101_10"	"equip028_101_10"	"Ice Cape"
+"0x2E1"	"0x108"	"equip028_101_10"	"equip028_101_10"	"Ice Cape [Hp]"
+"0x2E2"	"0x108"	"equip028_101_10"	"equip028_101_10"	"Ice Cape [Me]"
+"0x2E3"	"0x108"	"equip028_101_10"	"equip028_101_10"	"Ice Cape [Ar]"
+"0x2E4"	"0x108"	"equip028_101_10"	"equip028_101_10"	"Ice Cape [W]"
+"0x2E5"	"0x108"	"equip028_101_10"	"equip028_101_10"	"Ice Cape [En]"
+"0x2E6"	"0x108"	"equip028_101_10"	"equip028_101_10"	"Ice Cape [Ic]"
+"0x2E7"	"0x108"	"equip028_101_10"	"equip028_101_10"	"Ice Cape [Cu]"
+"0x2E8"	"0x109"	"equip028_200_10"	"equip028_200_10"	"Cape of Ulysses"
+"0x2E9"	"0x10A"	"equip028_201_10"	"equip028_201_10"	"Freja's Cape"
+"0x2EA"	"0x10B"	"equip028_202_10"	"equip028_202_10"	"Vamp Cloak"
+"0x2EB"	"0x10C"	"equip028_300_10"	"equip028_300_10"	"Nemean Cloak"
+"0x2EC"	"0x10D"	"equip029_000_10"	"equip029_000_10"	"Sandals"
+"0x2ED"	"0x10E"	"equip029_100_10"	"equip029_100_10"	"Wide Awake Boots"
+"0x2EE"	"0x10E"	"equip029_100_10"	"equip029_100_10"	"Wide Awake Boots [Hp]"
+"0x2EF"	"0x10E"	"equip029_100_10"	"equip029_100_10"	"Wide Awake Boots [Me]"
+"0x2F0"	"0x10E"	"equip029_100_10"	"equip029_100_10"	"Wide Awake Boots [Ar]"
+"0x2F1"	"0x10E"	"equip029_100_10"	"equip029_100_10"	"Wide Awake Boots [W]"
+"0x2F2"	"0x10E"	"equip029_100_10"	"equip029_100_10"	"Wide Awake Boots [En]"
+"0x2F3"	"0x10E"	"equip029_100_10"	"equip029_100_10"	"Wide Awake Boots [Ic]"
+"0x2F4"	"0x10E"	"equip029_100_10"	"equip029_100_10"	"Wide Awake Boots [Cu]"
+"0x2F5"	"0x10F"	"equip029_101_10"	"equip029_101_10"	"Flame Boots"
+"0x2F6"	"0x10F"	"equip029_101_10"	"equip029_101_10"	"Flame Boots [Hp]"
+"0x2F7"	"0x10F"	"equip029_101_10"	"equip029_101_10"	"Flame Boots [Me]"
+"0x2F8"	"0x10F"	"equip029_101_10"	"equip029_101_10"	"Flame Boots [Ar]"
+"0x2F9"	"0x10F"	"equip029_101_10"	"equip029_101_10"	"Flame Boots [W]"
+"0x2FA"	"0x10F"	"equip029_101_10"	"equip029_101_10"	"Flame Boots [En]"
+"0x2FB"	"0x10F"	"equip029_101_10"	"equip029_101_10"	"Flame Boots [Ic]"
+"0x2FC"	"0x10F"	"equip029_101_10"	"equip029_101_10"	"Flame Boots [Cu]"
+"0x2FD"	"0x110"	"equip029_200_10"	"equip029_200_10"	"Alarium Stompers"
+"0x2FE"	"0x111"	"equip029_201_10"	"equip029_201_10"	"Moonwalkers"
+"0x2FF"	"0x112"	"equip029_202_10"	"equip029_202_10"	"Lilith Shoes"
+"0x300"	"0x113"	"equip029_300_10"	"equip029_300_10"	"Hermerossa's Sandals"
+"0x301"	"0x114"	"equip030_000_10"	"equip030_000_10"	"Horse"
+"0x302"	"0x115"	"equip030_100_10"	"equip030_100_10"	"Wide Awake Horse"
+"0x303"	"0x115"	"equip030_100_10"	"equip030_100_10"	"Wide Awake Horse [Hp]"
+"0x304"	"0x115"	"equip030_100_10"	"equip030_100_10"	"Wide Awake Horse [Me]"
+"0x305"	"0x115"	"equip030_100_10"	"equip030_100_10"	"Wide Awake Horse [Ar]"
+"0x306"	"0x115"	"equip030_100_10"	"equip030_100_10"	"Wide Awake Horse [W]"
+"0x307"	"0x115"	"equip030_100_10"	"equip030_100_10"	"Wide Awake Horse [En]"
+"0x308"	"0x115"	"equip030_100_10"	"equip030_100_10"	"Wide Awake Horse [Ic]"
+"0x309"	"0x115"	"equip030_100_10"	"equip030_100_10"	"Wide Awake Horse [Cu]"
+"0x30A"	"0x116"	"equip030_101_10"	"equip030_101_10"	"Flame Horse"
+"0x30B"	"0x116"	"equip030_101_10"	"equip030_101_10"	"Flame Horse [Hp]"
+"0x30C"	"0x116"	"equip030_101_10"	"equip030_101_10"	"Flame Horse [Me]"
+"0x30D"	"0x116"	"equip030_101_10"	"equip030_101_10"	"Flame Horse [Ar]"
+"0x30E"	"0x116"	"equip030_101_10"	"equip030_101_10"	"Flame Horse [W]"
+"0x30F"	"0x116"	"equip030_101_10"	"equip030_101_10"	"Flame Horse [En]"
+"0x310"	"0x116"	"equip030_101_10"	"equip030_101_10"	"Flame Horse [Ic]"
+"0x311"	"0x116"	"equip030_101_10"	"equip030_101_10"	"Flame Horse [Cu]"
+"0x312"	"0x117"	"equip030_200_10"	"equip030_200_10"	"Sibericus the Frosty"
+"0x313"	"0x118"	"equip030_201_10"	"equip030_201_10"	"Bullgam the Bully"
+"0x314"	"0x119"	"equip030_202_10"	"equip030_202_10"	"Ponbiscuit"
+"0x315"	"0x11A"	"equip030_300_10"	"equip030_300_10"	"Halcypon"
+"0x316"	"0x11B"	"equip031_000_10"	"equip031_000_10"	"Warhorse"
+"0x317"	"0x11C"	"equip031_100_10"	"equip031_100_10"	"Ice Warhorse"
+"0x318"	"0x11C"	"equip031_100_10"	"equip031_100_10"	"Ice Warhorse [Hp]"
+"0x319"	"0x11C"	"equip031_100_10"	"equip031_100_10"	"Ice Warhorse [Me]"
+"0x31A"	"0x11C"	"equip031_100_10"	"equip031_100_10"	"Ice Warhorse [Ar]"
+"0x31B"	"0x11C"	"equip031_100_10"	"equip031_100_10"	"Ice Warhorse [W]"
+"0x31C"	"0x11C"	"equip031_100_10"	"equip031_100_10"	"Ice Warhorse [En]"
+"0x31D"	"0x11C"	"equip031_100_10"	"equip031_100_10"	"Ice Warhorse [Ic]"
+"0x31E"	"0x11C"	"equip031_100_10"	"equip031_100_10"	"Ice Warhorse [Cu]"
+"0x31F"	"0x11D"	"equip031_101_10"	"equip031_101_10"	"Poison Warhorse"
+"0x320"	"0x11D"	"equip031_101_10"	"equip031_101_10"	"Poison Warhorse [Hp]"
+"0x321"	"0x11D"	"equip031_101_10"	"equip031_101_10"	"Poison Warhorse [Me]"
+"0x322"	"0x11D"	"equip031_101_10"	"equip031_101_10"	"Poison Warhorse [Ar]"
+"0x323"	"0x11D"	"equip031_101_10"	"equip031_101_10"	"Poison Warhorse [W]"
+"0x324"	"0x11D"	"equip031_101_10"	"equip031_101_10"	"Poison Warhorse [En]"
+"0x325"	"0x11D"	"equip031_101_10"	"equip031_101_10"	"Poison Warhorse [Ic]"
+"0x326"	"0x11D"	"equip031_101_10"	"equip031_101_10"	"Poison Warhorse [Cu]"
+"0x327"	"0x11E"	"equip031_200_10"	"equip031_200_10"	"Deep Impact"
+"0x328"	"0x11F"	"equip031_201_10"	"equip031_201_10"	"Kotenho the King"
+"0x329"	"0x120"	"equip031_202_10"	"equip031_202_10"	"Ponteo the Victorious"
+"0x32A"	"0x121"	"equip031_300_10"	"equip031_300_10"	"Apabao the Absolute"
+"0x32B"	"0x122"	"equip032_000_10"	"equip032_000_10"	"Chariot"
+"0x32C"	"0x123"	"equip032_100_10"	"equip032_100_10"	"Ice Chariot"
+"0x32D"	"0x123"	"equip032_100_10"	"equip032_100_10"	"Ice Chariot [Hp]"
+"0x32E"	"0x123"	"equip032_100_10"	"equip032_100_10"	"Ice Chariot [Me]"
+"0x32F"	"0x123"	"equip032_100_10"	"equip032_100_10"	"Ice Chariot [Ar]"
+"0x330"	"0x123"	"equip032_100_10"	"equip032_100_10"	"Ice Chariot [W]"
+"0x331"	"0x123"	"equip032_100_10"	"equip032_100_10"	"Ice Chariot [En]"
+"0x332"	"0x123"	"equip032_100_10"	"equip032_100_10"	"Ice Chariot [Ic]"
+"0x333"	"0x123"	"equip032_100_10"	"equip032_100_10"	"Ice Chariot [Cu]"
+"0x334"	"0x124"	"equip032_101_10"	"equip032_101_10"	"Flame Chariot"
+"0x335"	"0x124"	"equip032_101_10"	"equip032_101_10"	"Flame Chariot [Hp]"
+"0x336"	"0x124"	"equip032_101_10"	"equip032_101_10"	"Flame Chariot [Me]"
+"0x337"	"0x124"	"equip032_101_10"	"equip032_101_10"	"Flame Chariot [Ar]"
+"0x338"	"0x124"	"equip032_101_10"	"equip032_101_10"	"Flame Chariot [W]"
+"0x339"	"0x124"	"equip032_101_10"	"equip032_101_10"	"Flame Chariot [En]"
+"0x33A"	"0x124"	"equip032_101_10"	"equip032_101_10"	"Flame Chariot [Ic]"
+"0x33B"	"0x124"	"equip032_101_10"	"equip032_101_10"	"Flame Chariot [Cu]"
+"0x33C"	"0x125"	"equip032_102_10"	"equip032_102_10"	"Critical Chariot"
+"0x33D"	"0x125"	"equip032_102_10"	"equip032_102_10"	"Critical Chariot [Hp]"
+"0x33E"	"0x125"	"equip032_102_10"	"equip032_102_10"	"Critical Chariot [Me]"
+"0x33F"	"0x125"	"equip032_102_10"	"equip032_102_10"	"Critical Chariot [Ar]"
+"0x340"	"0x125"	"equip032_102_10"	"equip032_102_10"	"Critical Chariot [W]"
+"0x341"	"0x125"	"equip032_102_10"	"equip032_102_10"	"Critical Chariot [En]"
+"0x342"	"0x125"	"equip032_102_10"	"equip032_102_10"	"Critical Chariot [Ic]"
+"0x343"	"0x125"	"equip032_102_10"	"equip032_102_10"	"Critical Chariot [Cu]"
+"0x344"	"0x126"	"equip032_200_10"	"equip032_200_10"	"The Silencer"
+"0x345"	"0x127"	"equip032_201_10"	"equip032_201_10"	"Ruemelter"
+"0x346"	"0x128"	"equip032_202_10"	"equip032_202_10"	"Silver Murzephone"
+"0x347"	"0x129"	"equip032_203_10"	"equip032_203_10"	"Chariot of Light"
+"0x348"	"0x12A"	"equip032_204_10"	"equip032_204_10"	"Deedsarus Helltank"
+"0x349"	"0x12B"	"equip032_300_10"	"equip032_300_10"	"Gargan War Machine"
+"0x34A"	"0x12C"	"equip033_002_10"	"equip033_002_10"	"Yumipon Mask"
+"0x34B"	"0x12D"	"equip033_003_10"	"equip033_003_10"	"Tatepon Mask"
+"0x34C"	"0x12E"	"equip033_004_10"	"equip033_004_10"	"Yaripon Mask"
+"0x34D"	"0x12F"	"equip033_006_10"	"equip033_006_10"	"Kibapon Mask"
+"0x34E"	"0x130"	"equip033_010_10"	"equip033_010_10"	"Robopon Mask"
+"0x34F"	"0x131"	"equip033_013_10"	"equip033_013_10"	"Nyontama Mask"
+"0x350"	"0x132"	"equip033_014_10"	"equip033_014_10"	"Chigyobi Mask"
+"0x351"	"0x133"	"equip033_015_10"	"equip033_015_10"	"Pyopyo Mask"
+"0x352"	"0x134"	"equip033_016_10"	"equip033_016_10"	"Kanokko Mask"
+"0x353"	"0x135"	"equip033_017_10"	"equip033_017_10"	"Sabara Mask"
+"0x354"	"0x136"	"equip033_018_10"	"equip033_018_10"	"Mofu Mask"
+"0x355"	"0x137"	"equip033_019_10"	"equip033_019_10"	"Buhyokko Mask"
+"0x356"	"0x138"	"equip033_020_10"	"equip033_020_10"	"Fumya Mask"
+"0x357"	"0x139"	"equip033_021_10"	"equip033_021_10"	"Menyokki Mask"
+"0x358"	"0x13A"	"equip033_022_10"	"equip033_022_10"	"Mogyu Mask"
+"0x359"	"0x13B"	"equip033_023_10"	"equip033_023_10"	"Chiku Mask"
+"0x35A"	"0x13C"	"equip033_024_10"	"equip033_024_10"	"Wanda Mask"
+"0x35B"	"0x13D"	"equip033_025_10"	"equip033_025_10"	"Mashu Mask"
+"0x35C"	"0x13E"	"equip033_026_10"	"equip033_026_10"	"Uhoho Mask"
+"0x35D"	"0x13F"	"equip033_027_10"	"equip033_027_10"	"Koppen Mask"
+"0x35E"	"0x140"	"equip033_028_10"	"equip033_028_10"	"Gyaba Mask"
+"0x35F"	"0x141"	"equip033_029_10"	"equip033_029_10"	"Feisu Mask"
+"0x360"	"0x142"	"equip033_030_10"	"equip033_030_10"	"Jasti Mask"
+"0x361"	"0x143"	"equip033_031_10"	"equip033_031_10"	"Valo Mask"
+"0x362"	"0x144"	"equip033_032_10"	"equip033_032_10"	"Inosen Mask"
+"0x363"	"0x145"	"equip033_033_10"	"equip033_033_10"	"Forudo Mask"
+"0x364"	"0x146"	"equip033_034_10"	"equip033_034_10"	"Libera Mask"
+"0x365"	"0x147"	"equip033_035_10"	"equip033_035_10"	"Hyumitto Mask"
+"0x366"	"0x151"	"equip035_000_10"	"equip035_000_10"	"Claw"
+"0x367"	"0x152"	"equip035_100_10"	"equip035_100_10"	"Flaming Claw"
+"0x368"	"0x152"	"equip035_100_10"	"equip035_100_10"	"Flaming Claw [St]"
+"0x369"	"0x152"	"equip035_100_10"	"equip035_100_10"	"Flaming Claw [G]"
+"0x36A"	"0x152"	"equip035_100_10"	"equip035_100_10"	"Flaming Claw [De]"
+"0x36B"	"0x152"	"equip035_100_10"	"equip035_100_10"	"Flaming Claw [H]"
+"0x36C"	"0x152"	"equip035_100_10"	"equip035_100_10"	"Flaming Claw [Sl]"
+"0x36D"	"0x152"	"equip035_100_10"	"equip035_100_10"	"Flaming Claw [Fl]"
+"0x36E"	"0x152"	"equip035_100_10"	"equip035_100_10"	"Flaming Claw [Po]"
+"0x36F"	"0x153"	"equip035_101_10"	"equip035_101_10"	"Poison Claw"
+"0x370"	"0x153"	"equip035_101_10"	"equip035_101_10"	"Poison Claw [St]"
+"0x371"	"0x153"	"equip035_101_10"	"equip035_101_10"	"Poison Claw [G]"
+"0x372"	"0x153"	"equip035_101_10"	"equip035_101_10"	"Poison Claw [De]"
+"0x373"	"0x153"	"equip035_101_10"	"equip035_101_10"	"Poison Claw [H]"
+"0x374"	"0x153"	"equip035_101_10"	"equip035_101_10"	"Poison Claw [Sl]"
+"0x375"	"0x153"	"equip035_101_10"	"equip035_101_10"	"Poison Claw [Fl]"
+"0x376"	"0x153"	"equip035_101_10"	"equip035_101_10"	"Poison Claw [Po]"
+"0x377"	"0x154"	"equip035_200_10"	"equip035_200_10"	"Demonic Dark Claw"
+"0x378"	"0x155"	"equip035_201_10"	"equip035_201_10"	"Gardsormr Ice Claw"
+"0x379"	"0x156"	"equip035_202_10"	"equip035_202_10"	"Bengal Tiger Claw"
+"0x37A"	"0x157"	"equip035_300_10"	"equip035_300_10"	"Kaisak Ultimate Claw"
+"0x37B"	"0x158"	"equip036_000_10"	"equip036_000_10"	"Scythe"
+"0x37C"	"0x159"	"equip036_100_10"	"equip036_100_10"	"Flaming Scythe"
+"0x37D"	"0x159"	"equip036_100_10"	"equip036_100_10"	"Flaming Scythe [St]"
+"0x37E"	"0x159"	"equip036_100_10"	"equip036_100_10"	"Flaming Scythe [G]"
+"0x37F"	"0x159"	"equip036_100_10"	"equip036_100_10"	"Flaming Scythe [De]"
+"0x380"	"0x159"	"equip036_100_10"	"equip036_100_10"	"Flaming Scythe [H]"
+"0x381"	"0x159"	"equip036_100_10"	"equip036_100_10"	"Flaming Scythe [Sl]"
+"0x382"	"0x159"	"equip036_100_10"	"equip036_100_10"	"Flaming Scythe [Fl]"
+"0x383"	"0x159"	"equip036_100_10"	"equip036_100_10"	"Flaming Scythe [Po]"
+"0x384"	"0x15A"	"equip036_101_10"	"equip036_101_10"	"Deflecting Scythe"
+"0x385"	"0x15A"	"equip036_101_10"	"equip036_101_10"	"Deflecting Scythe [St]"
+"0x386"	"0x15A"	"equip036_101_10"	"equip036_101_10"	"Deflecting Scythe [G]"
+"0x387"	"0x15A"	"equip036_101_10"	"equip036_101_10"	"Deflecting Scythe [De]"
+"0x388"	"0x15A"	"equip036_101_10"	"equip036_101_10"	"Deflecting Scythe [H]"
+"0x389"	"0x15A"	"equip036_101_10"	"equip036_101_10"	"Deflecting Scythe [Sl]"
+"0x38A"	"0x15A"	"equip036_101_10"	"equip036_101_10"	"Deflecting Scythe [Fl]"
+"0x38B"	"0x15A"	"equip036_101_10"	"equip036_101_10"	"Deflecting Scythe [Po]"
+"0x38C"	"0x15B"	"equip036_200_10"	"equip036_200_10"	"Quickflash Scythe"
+"0x38D"	"0x15C"	"equip036_201_10"	"equip036_201_10"	"Deathsoul Scythe"
+"0x38E"	"0x15D"	"equip036_202_10"	"equip036_202_10"	"Great God Scythe"
+"0x38F"	"0x15E"	"equip036_300_10"	"equip036_300_10"	"Deathmoon Ultimate Scythe"
+"0x390"	"#N/A"	"gimc2020"	"gimc2020"	"Wooden Treasure Chest"
+"0x391"	"#N/A"	"gimc2030"	"gimc2030"	"Iron Treasure Chest"
+"0x392"	"#N/A"	"gimc2040"	"gimc2040"	"Golden Treasure Chest"
+"0x393"	"#N/A"	"gimc2050"	"gimc2050"	"Jewelled Treasure Chest"
+"0x394"	"#N/A"	"item109"	"item109"	"Flamethrower"
+"0x395"	"#N/A"	"item109"	"item109"	"Flamethrower"
+"0x396"	"#N/A"	"item109"	"item109"	"Giant Saw"
+"0x397"	"#N/A"	"item109"	"item109"	"Turret"
+"0x398"	"#N/A"	"item109"	"item109"	"Snoworb Cannon"
+"0x399"	"#N/A"	"item110"	"item110"	"Wind-up Cart"
+"0x39A"	"#N/A"	"item110"	"item110"	"CHAKA CHAKA Interceptor"
+"0x39B"	"#N/A"	"item110"	"item110"	"Iron Barricade"
+"0x39C"	"#N/A"	"item111"	"item111"	"Flamethrower and Fort"
+"0x39D"	"#N/A"	"item111"	"item111"	"Giant Saw and Fort"
+"0x39E"	"#N/A"	"item111"	"item111"	"Snoworb Cannon and Fort"
+"0x39F"	"#N/A"	"item111"	"item111"	"Turret and Fort"
+"0x3A0"	"#N/A"	"item112"	"item112"	
+"0x3A1"	"#N/A"	"AzitoAccessory_001"	"AzitoAccessory_001"	
+"0x3A2"	"#N/A"	"AzitoAccessory_001"	"AzitoAccessory_001"	"Fantastic Eggs"
+"0x3A3"	"#N/A"	"AzitoAccessory_002"	"AzitoAccessory_002"	"Easter Egg"
+"0x3A4"	"#N/A"	"AzitoAccessory_003"	"AzitoAccessory_003"	"Donchaka Wallpaper"
+"0x3A5"	"#N/A"	"AzitoAccessory_004"	"AzitoAccessory_004"	"Patapon Prisoners"
+"0x3A6"	"#N/A"	"AzitoAccessory_005"	"AzitoAccessory_005"	"Gate Ghoul Baban"
+"0x3A7"	"#N/A"	"AzitoAccessory_006"	"AzitoAccessory_006"	"Magic Hill Zozozo"
+"0x3A8"	"#N/A"	"AzitoAccessory_007"	"AzitoAccessory_007"	"Hanging Planets"
+"0x3A9"	"#N/A"	"AzitoAccessory_008"	"AzitoAccessory_008"	"Eyeball Rocket"
+"0x3AA"	"#N/A"	"AzitoAccessory_009"	"AzitoAccessory_009"	"Space Wallpaper"
+"0x3AB"	"#N/A"	"AzitoAccessory_010"	"AzitoAccessory_010"	"Cupids"
+"0x3AC"	"#N/A"	"AzitoAccessory_011"	"AzitoAccessory_011"	"Princess"
+"0x3AD"	"#N/A"	"AzitoAccessory_012"	"AzitoAccessory_012"	"Lovestruck Patapon Wallpaper"
+"0x3AE"	"#N/A"	"AzitoAccessory_013"	"AzitoAccessory_013"	"Morning Glories and Wind Chimes"
+"0x3AF"	"#N/A"	"AzitoAccessory_014"	"AzitoAccessory_014"	"Sunflower and Watermelon"
+"0x3B0"	"#N/A"	"AzitoAccessory_015"	"AzitoAccessory_015"	"Bon Odori Wallpaper"
+"0x3B1"	"#N/A"	"AzitoAccessory_016"	"AzitoAccessory_016"	"Puffy Clouds"
+"0x3B2"	"#N/A"	"AzitoAccessory_017"	"AzitoAccessory_017"	"Parasol Set"
+"0x3B3"	"#N/A"	"AzitoAccessory_018"	"AzitoAccessory_018"	"Summer Seas Wallpaper"
+"0x3B4"	"#N/A"	"AzitoAccessory_019"	"AzitoAccessory_019"	"Ghosts and Wizards"
+"0x3B5"	"#N/A"	"AzitoAccessory_020"	"AzitoAccessory_020"	"Jack O' Lantern"
+"0x3B6"	"#N/A"	"AzitoAccessory_021"	"AzitoAccessory_021"	"Moonlit Night Wallpaper"
+"0x3B7"	"#N/A"	"AzitoAccessory_022"	"AzitoAccessory_022"	"Christmas Wreath"
+"0x3B8"	"#N/A"	"AzitoAccessory_023"	"AzitoAccessory_023"	"Christmas Tree"
+"0x3B9"	"#N/A"	"AzitoAccessory_024"	"AzitoAccessory_024"	"Christmas Eve Wallpaper"
+"0x3BA"	"#N/A"	"AzitoAccessory_025"	"AzitoAccessory_025"	"Earthend"
+"0x3BB"	"#N/A"	"AzitoAccessory_026"	"AzitoAccessory_026"	"Giant Beast"
+"0x3BC"	"#N/A"	"AzitoAccessory_027"	"AzitoAccessory_027"	"Earthend Wallpaper"
+"0x3BD"	"#N/A"	"AzitoAccessory_028"	"AzitoAccessory_028"	"Dodonga Statue"
+"0x3BE"	"#N/A"	"AzitoAccessory_029"	"AzitoAccessory_029"	"Majidonga Statue"
+"0x3BF"	"#N/A"	"AzitoAccessory_030"	"AzitoAccessory_030"	"Ciokina Statue"
+"0x3C0"	"#N/A"	"AzitoAccessory_031"	"AzitoAccessory_031"	"Cioking Statue"
+"0x3C1"	"#N/A"	"AzitoAccessory_032"	"AzitoAccessory_032"	"Shookle Statue"
+"0x3C2"	"#N/A"	"AzitoAccessory_033"	"AzitoAccessory_033"	"Shooshookle Statue"
+"0x3C3"	"#N/A"	"AzitoAccessory_034"	"AzitoAccessory_034"	"Dogaeen Statue"
+"0x3C4"	"#N/A"	"AzitoAccessory_035"	"AzitoAccessory_035"	"Gaeen Statue"
+"0x3C5"	"#N/A"	"AzitoAccessory_036"	"AzitoAccessory_036"	"Zaknel Statue"
+"0x3C6"	"#N/A"	"AzitoAccessory_037"	"AzitoAccessory_037"	"Dokaknel Statue"
+"0x3C7"	"#N/A"	"AzitoAccessory_038"	"AzitoAccessory_038"	"Goruru Statue"
+"0x3C8"	"#N/A"	"AzitoAccessory_039"	"AzitoAccessory_039"	"Garuru Statue"
+"0x3C9"	"#N/A"	"AzitoAccessory_040"	"AzitoAccessory_040"	"Mochicchichi Statue"
+"0x3CA"	"#N/A"	"AzitoAccessory_041"	"AzitoAccessory_041"	"Fenicchi Statue"
+"0x3CB"	"#N/A"	"AzitoAccessory_042"	"AzitoAccessory_042"	"Manboth Statue"
+"0x3CC"	"#N/A"	"AzitoAccessory_043"	"AzitoAccessory_043"	"Manboroth Statue"
+"0x3CD"	"#N/A"	"AzitoAccessory_044"	"AzitoAccessory_044"	"Centura Statue"
+"0x3CE"	"#N/A"	"AzitoAccessory_045"	"AzitoAccessory_045"	"Darantula Statue"
+"0x3CF"	"#N/A"	"AzitoAccessory_046"	"AzitoAccessory_046"	"Kanogias Statue"
+"0x3D0"	"#N/A"	"AzitoAccessory_047"	"AzitoAccessory_047"	"Ganodias Statue"
+"0x3D1"	"#N/A"	"AzitoAccessory_048"	"AzitoAccessory_048"	"Ormen Karmen Statue"
+"0x3D2"	"#N/A"	"AzitoAccessory_049"	"AzitoAccessory_049"	"Dettankarmen Statue"
+"0x3D3"	"#N/A"	"AzitoAccessory_050"	"AzitoAccessory_050"	"Humanoid Dettankarmen Statue"
+"0x3D4"	"#N/A"	"AzitoAccessory_051"	"AzitoAccessory_051"	"Zuttankarmen Statue"
+"0x3D5"	"#N/A"	"AzitoAccessory_052"	"AzitoAccessory_052"	"Gong Statue"
+"0x3D6"	"#N/A"	"AzitoAccessory_053"	"AzitoAccessory_053"	"Gong and Kharma Statue"
+"0x3D7"	"#N/A"	"itm104_000"	"item104_000"	"Star Shard"
+"0x3D8"	"#N/A"	"itm104_001"	"item104_001"	
+"0x3D9"	"#N/A"	"TeamCardThum%04d"	"TeamCardThum%04d"	"Team Cards"
+"0x3DA"	"#N/A"	"TeamFlag%04d"	"TeamFlag%04d"	"Team Emblems"
+"0x3DB"	"#N/A"	"itm13_008"	"item004"	"CHAKA PATA Song"
+"0x3DC"	"#N/A"	"itm13_009"	"item004"	"Patapon Song"
+"0x3DD"	"#N/A"	"item106"	"item106"	"Cool Ticket"
+"0x3DE"	"#N/A"	"item107"	"item107"	"Moody Ticket"
+"0x3DF"	"#N/A"	"item108"	"item108"	"Wacky Ticket"
+"0x3E0"	"0x15F"	"equip024_700_00"	"equip024_700_00"	"Otherworld Jupiter Head"
+"0x3E1"	"0x160"	"equip024_701_00"	"equip024_701_00"	"Gero Helm of Valour"
+"0x3E2"	"0x161"	"equip024_702_00"	"equip024_702_00"	"Straw Boing Helm"
+"0x3E3"	"0x162"	"equip024_703_00"	"equip024_703_00"	"Thief Jirokichi Helm"
+"0x3E4"	"0x163"	"equip024_704_00"	"equip024_704_00"	"Masamune Helm"
+"0x3E5"	"0x164"	"equip024_705_00"	"equip024_705_00"	"Clown Helm"
+"0x3E6"	"0x165"	"equip024_706_00"	"equip024_706_00"	"Karib Rampage Helm"
+"0x3E7"	"0x166"	"equip024_707_00"	"equip024_707_00"	"Malevolent Uramus Helm"
+"0x3E8"	"0x167"	"equip024_708_00"	"equip024_708_00"	"Bald Cap"
+"0x3E9"	"0x168"	"equip024_709_00"	"equip024_709_00"	"Marina Sea Helm"
+"0x3EA"	"0x169"	"equip024_710_00"	"equip024_710_00"	"Shubaba Gale Kabuto"
+"0x3EB"	"#N/A"	"item105"	"item105"	
+"0x3EC"	"#N/A"	"gimc4400"	"gimc4400"	"Pink Jeweled Chest"
+"0x3ED"	"#N/A"			
+"0x3EE"	"#N/A"			
+"0x3EF"	"#N/A"			
+"0x3F0"	"#N/A"			
+"0x3F1"	"0x25"	"msk200_0_001"	"msk200_0_001"	
+"0x3F2"	"0x26"	"msk200_0_002"	"msk200_0_002"	
+"0x3F3"	"0x27"	"msk200_0_003"	"msk200_0_003"	
+"0x3F4"	"0x28"	"msk200_0_004"	"msk200_0_004"	
+"0x3F5"	"0x29"	"msk200_0_005"	"msk200_0_005"	
+"0x3F6"	"0x2A"	"msk200_0_006"	"msk200_0_006"	
+"0x3F7"	"0x2B"	"msk200_0_007"	"msk200_0_007"	
+"0x3F8"	"0x2C"	"msk200_0_008"	"msk200_0_008"	
+"0x3F9"	"0x2D"	"msk207_0_001"	"msk207_0_001"	
+"0x3FA"	"0x2E"	"msk207_0_002"	"msk207_0_002"	
+"0x3FB"	"0x2F"	"msk207_0_003"	"msk207_0_003"	
+"0x3FC"	"0x148"	"equip033_100_00"	"equip033_100_00"	
+"0x3FD"	"0x149"	"equip033_101_00"	"equip033_101_00"	
+"0x3FE"	"0x14A"	"equip033_102_00"	"equip033_102_00"	
+"0x3FF"	"0x14B"	"equip033_103_00"	"equip033_103_00"	
+"0x400"	"0x14C"	"equip033_104_00"	"equip033_104_00"	
+"0x401"	"0x14D"	"equip033_105_00"	"equip033_105_00"	
+"0x402"	"0x14E"	"equip033_106_00"	"equip033_106_00"	
+"0x403"	"0x14F"	"equip033_107_00"	"equip033_107_00"	
+"0x404"	"0x0"	"hlm007_0_1000"	"hlm007_0_1000"	"Helm"
+"0x405"	"0x1"	"hlm007_0_1001"	"hlm007_0_1001"	"Helm"
+"0x406"	"0x2"	"hlm007_0_1002"	"hlm007_0_1002"	"Helm"
+"0x407"	"0x3"	"hlm008_0_1000"	"hlm008_0_1000"	"Helm"
+"0x408"	"0x4"	"hlm008_0_1001"	"hlm008_0_1001"	"Helm"
+"0x409"	"0x5"	"hlm008_0_1002"	"hlm008_0_1002"	"Helm"
+"0x40A"	"0x6"	"hlm009_0_1000"	"hlm009_0_1000"	"Helm"
+"0x40B"	"0x7"	"hlm009_0_1001"	"hlm009_0_1001"	"Helm"
+"0x40C"	"0x8"	"hlm009_0_1002"	"hlm009_0_1002"	"Helm"
+"0x40D"	"0x13"	"hlm000_0_101"	"hlm000_0_101"	"Helm"
+"0x40E"	"0x14"	"hlm000_0_102"	"hlm000_0_102"	"Helm"
+"0x40F"	"0x15"	"hlm000_0_103"	"hlm000_0_103"	"Helm"
+"0x410"	"0x16"	"hlm000_0_104"	"hlm000_0_104"	"Helm"
+"0x411"	"0x17"	"hlm000_0_105"	"hlm000_0_105"	"Helm"
+"0x412"	"0x18"	"hlm000_0_106"	"hlm000_0_106"	"Helm"
+"0x413"	"0x19"	"hlm000_0_107"	"hlm000_0_107"	"Helm"
+"0x414"	"0x1A"	"hlm000_0_108"	"hlm000_0_108"	"Helm"
+"0x415"	"0x1B"	"hlm000_0_109"	"hlm000_0_109"	"Helm"
+"0x416"	"0x1C"	"hlm007_0_101"	"hlm007_0_101"	"Helm"
+"0x417"	"0x1D"	"hlm007_0_102"	"hlm007_0_102"	"Helm"
+"0x418"	"0x1E"	"hlm008_0_101"	"hlm008_0_101"	"Helm"
+"0x419"	"0x1F"	"hlm000_0_201"	"hlm000_0_201"	"Helm"
+"0x41A"	"0x12F"	"unequip"		"Clear Sky Card"

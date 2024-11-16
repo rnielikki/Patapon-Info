@@ -1,6 +1,6 @@
 # effectgetEffectId
 
-Gets Effect ID in `effectparam` by given handle.
+Gets [effect ID](./guide/reference-table.md#effectparam-ids) in `effectparam` by given handle.
 
 ## Code Information
 
@@ -12,7 +12,7 @@ Gets Effect ID in `effectparam` by given handle.
 ## Parameters
 
 - `(int *)handle_id` *(8 bytes)* : Handle of the effect, from [addEffect](./addeffect.md).
-- `(int *)effect_id` *(8 bytes)* : Variable to *store* the effect ID in `effectparam`.
+- `(int *)effect_id` *(8 bytes)* : Variable to *store* the [effect ID](./guide/reference-table.md#effectparam-ids) in `effectparam`.
 
 ## Example
 

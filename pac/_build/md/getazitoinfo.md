@@ -25,7 +25,7 @@ Gets certain hideout related information. The information depends on `info_type`
 - `0x5` : (Unused) Related to savedata internal value.
 - `0x6` : (Unused) Related to savedata internal value.
 
-- `0x7` : The selected [facility gimmick ID](./guide/reference-table.md#facility-ids).
+- `0x7` : The selected [facility ID](./guide/reference-table.md#facility-ids).
 
 - `0x8`, `0x9` : (Unused) Unimplemented. Does nothing.
 

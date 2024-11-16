@@ -12,7 +12,7 @@ Connects a new gimmick to an existing object. The [resource](./readarcfile.md) o
 ## Parameters
 
 - `(int *)handle_id` *(8 bytes)* : Variable to *store* the attached object handle.
-- `(int)gimmickparam_id` *(8 bytes)* : The `gimmickparam` id of the new gimmick to create.
+- `(int)gimmickparam_id` *(8 bytes)* : The [`gimmickparam` ID](./guide/reference-table.md#gimmickparam-ids) of the new gimmick to create.
 - `(int *)parent_handle` *(8 bytes)* : The parent handle.
 - `(int)unique_id` *(8 bytes)* : Unique ID of the new gimmick to give.
 - `(String)node` : The parent handle node name to attach the object.

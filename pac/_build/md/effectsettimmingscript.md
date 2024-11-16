@@ -12,7 +12,7 @@ When the effect is activated, *call*s the specific address. Does same thing as [
 ## Parameters
 
 - `(undefined4)Var0` *(8 bytes)* : Expected 0~4.
-- `(int)effectID` *(8 bytes)* : Effect ID from `effectparam`.
+- `(int)effectID` *(8 bytes)* : [Effect ID](./guide/reference-table.md#effectparam-ids) from `effectparam`.
 - `(MemoryAddress)pac_address` *(8 bytes)* : Memory address that contains start of the PAC, obtained from [getPack](./getpack_25100600.md).
 - `(Address)address` *(8 bytes)* : Address to move when effect is performed.
 

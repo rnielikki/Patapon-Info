@@ -12,7 +12,7 @@ Gets a child gimmick handle by parent handle and child gimmick ID.
 ## Parameters
 
 - `(int *)handle_parent` *(8 bytes)* : [Handle](./gimmick_gethandle.md) of the **parent** gimmick.
-- `(int)gimmick_id` *(8 bytes)* : **Child** Gimmick ID from various place, e.g. [addGimmick](./addgimmick.md), [getGateInfo](./getgateinfo.md) or [registConstGimmick](./registconstgimmick.md).
+- `(int)gimmick_id` *(8 bytes)* : **Child** Gimmick identifier from various place, e.g. [addGimmick](./addgimmick.md), [getGateInfo](./getgateinfo.md) or [registConstGimmick](./registconstgimmick.md).
 - `(int *)destination` *(8 bytes)* : Variable to *store* the **child gimmick handle**.
 
 ## Example

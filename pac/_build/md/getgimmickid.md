@@ -1,6 +1,6 @@
 # getGimmickId
 
-Gets Gimmick ID in `gimmickparam` by given handle.
+Gets [Gimmick ID](./guide/reference-table.md#gimmickparam-ids) in `gimmickparam` by given handle.
 
 ## Code Information
 
@@ -12,7 +12,7 @@ Gets Gimmick ID in `gimmickparam` by given handle.
 ## Parameters
 
 - `(int *)handle_id` *(8 bytes)* : Handle of the gimmick, from e.g. [gimmick_getHandle](./gimmick_gethandle.md).
-- `(int *)gimmick_id` *(8 bytes)* : Variable to *store* the Gimmick ID.
+- `(int *)gimmick_id` *(8 bytes)* : Variable to *store* the [Gimmick ID](./guide/reference-table.md#gimmickparam-ids).
 
 ## Example
 

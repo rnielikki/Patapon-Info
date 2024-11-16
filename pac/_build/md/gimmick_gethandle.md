@@ -1,6 +1,6 @@
 # gimmick_getHandle
 
-Gets handle with the given gimmick ID.
+Gets handle with the given gimmick identifier.
 
 ## Code Information
 
