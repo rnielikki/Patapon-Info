@@ -11,7 +11,8 @@ Enable or disable reborn of specific hero or all heroes. Dungeon disables reborn
 
 ## Parameters
 
-- `(int *)handle_id` *(8 bytes)* : Handle of the *squad*. **-1 applies to every single hero**.
+- `(int *)handle_id` *(8 bytes)* : Handle of the *squad*. **-1 applies to every hero unit** (not enemy DH unit).
+   - Handle ID is required for enemy DH unit.
 - `(bool)enable_reborn` *(8 bytes)* : 0 to disable hero reborn, otherwise hero can be reborn after certain time.
 
 ## Example

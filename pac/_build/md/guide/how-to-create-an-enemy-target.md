@@ -30,6 +30,12 @@ Use 1st parameter from `create` to define the detail of the generator.
   - If the target is not in the list, another method like [addGimmick](../addgimmick.md) etc are required.
 - [setReqActorCount](../setreqactorcount.md): Sets the spawn limit.
 - [setReqActorDelayTime](../setreqactordelaytime.md): Spawn delay between next spawn.
+- [setReqActorTotal](../setreqactortotal.md) : Spawn limit (max spawn amount).
+
+> [!WARNING]
+> For Dark Hero spawn (like DoI), disabling reborn to dark hero is mandatory, otherwise the Dark Hero constantly will reborn and block the path.
+> For this, disable reborn with [setSuperHeroRebornEnable](../setsuperherorebornenable.md) with **Enemy DH squad handle**.
+> Other than that, Dark Hero spawn from structure works normally as others.
 
 ### Example result as visualised table
 
