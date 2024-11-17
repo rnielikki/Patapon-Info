@@ -18,6 +18,10 @@ Plays certain motion of a given character or any object. Please describe differe
    - Usual hero animation offset length seems like around 6~10. Please tell more about this parameter.
 - `(float)delay` *(8 bytes)* : Delay before starting the animation. This can be -1.
 
+## Remarks
+
+Somehow playing motion is not immediate and has delay. Please describe if this issue is for gimmick only.
+
 ## Example
 
 Here is one example in hex:

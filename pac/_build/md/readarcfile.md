@@ -1,9 +1,11 @@
 # readArcFile
 
 > [!WARNING]
-> Always call [requestActor](./requestactor.md) after this, after loading **equipment, character, gimmick or effect**
+> Call [requestActor](./requestactor.md) after this, after loading **equipment, character, gimmick or effect**.
 
 Reads a resource file in a given file path. The path is relative to `DATA_CMN` or `DATAMS`, in DLC Mission, it can be relative to DLC Mission BND.
+
+For an actor, this loads model only, so [requestActor](./requestactor.md) might be required.
 
 Note that resource is loaded **asynchrnously** because reading them takes time, resulting bottleneck of the performance.
 

@@ -2,6 +2,10 @@
 
 Gets *actor* of the certain *resources*, after loading **equipment, character, gimmick or effect** with [readArcFile](./readarcfile.md).
 
+This instruction connects to the actual param, while `readArcFile` loads models without the param information.
+
+If the resource is not an actor (e.g. item like pink jewelled chest, stage, sound etc), this is not necesary.
+
 ## Code Information
 
 - **Name**: `requestActor`
@@ -17,6 +21,7 @@ Gets *actor* of the certain *resources*, after loading **equipment, character, g
    - `actor_type` 0x9: `charaparam`
    - `actor_type`0xA: `gimmickparam`
    - `actor_type`0xB: `effectparam`
+   - If the actor type is none of the above, it probably does not require this instruction.
 - `(undefined4)Var2` *(8 bytes)* : Keep as -1 if it is not a weapon. Otherwise keep 0.
 - `(undefined4)Var3` *(8 bytes)* : Keep as -1 if it is not a weapon. Otherwise keep 0.
 

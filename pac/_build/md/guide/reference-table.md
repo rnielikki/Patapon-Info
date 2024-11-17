@@ -91,7 +91,7 @@ This are used e.g. [getAbnormalStatus](../getabnormalstatus.md).
 |1|Enemy|Yes|No|All bosses, minibosses, deths etc.|
 |2|Unused|Yes|Yes|Unused|
 |3|Both|Yes|Yes|Grass, Firewall|
-|4|None|No|No|Talking sigh|
+|4|None|No|No|Talking sign|
 
 ### Summon IDs
 

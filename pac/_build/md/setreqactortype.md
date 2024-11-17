@@ -2,7 +2,7 @@
 
 Places PVE enemy *or* gimmick (anything in `generatorparam`) to a [generator](./create.md).
 
-This does *not* require resource preloading.
+This does *not* require [resource preloading](./readarcfile.md).
 
 ## Code Information
 
