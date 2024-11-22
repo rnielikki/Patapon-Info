@@ -90,6 +90,8 @@
 <h1 id="requestactor">requestActor</h1>
 
 <p>Gets <em>actor</em> of the certain <em>resources</em>, after loading <strong>equipment, character, gimmick or effect</strong> with <a href="readarcfile.html">readArcFile</a>.</p>
+<p>This instruction connects to the actual param, while <code>readArcFile</code> loads models without the param information.</p>
+<p>If the resource is not an actor (e.g. item like pink jewelled chest, stage, sound etc), this is not necesary.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>
 <li><strong>Name</strong>: <code>requestActor</code></li>
@@ -106,6 +108,7 @@
 <li><code>actor_type</code> 0x9: <code>charaparam</code></li>
 <li><code>actor_type</code>0xA: <code>gimmickparam</code></li>
 <li><code>actor_type</code>0xB: <code>effectparam</code></li>
+<li>If the actor type is none of the above, it probably does not require this instruction.</li>
 </ul>
 </li>
 <li><code>(undefined4)Var2</code> <em>(8 bytes)</em> : Keep as -1 if it is not a weapon. Otherwise keep 0.</li>

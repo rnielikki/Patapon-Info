@@ -99,7 +99,11 @@
 </ul>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><code>(int *)handle_id</code> <em>(8 bytes)</em> : Unit handle, obtained from <a href="getunithandle.html">getUnitHandle</a>. <strong>-1 applies to every single hero</strong>.</li>
+<li><code>(int *)handle_id</code> <em>(8 bytes)</em> : Handle of the <em>squad</em>. <strong>-1 applies to every hero unit</strong> (not enemy DH unit).
+<ul>
+<li>Handle ID is required for enemy DH unit.</li>
+</ul>
+</li>
 <li><code>(bool)enable_reborn</code> <em>(8 bytes)</em> : 0 to disable hero reborn, otherwise hero can be reborn after certain time.</li>
 </ul>
 <h2 id="example">Example</h2>

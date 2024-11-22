@@ -91,9 +91,10 @@
 
 <div class="WARNING">
 <h5>Warning</h5>
-<p>Always call <a href="requestactor.html">requestActor</a> after this, after loading <strong>equipment, character, gimmick or effect</strong></p>
+<p>Call <a href="requestactor.html">requestActor</a> after this, after loading <strong>equipment, character, gimmick or effect</strong>.</p>
 </div>
 <p>Reads a resource file in a given file path. The path is relative to <code>DATA_CMN</code> or <code>DATAMS</code>, in DLC Mission, it can be relative to DLC Mission BND.</p>
+<p>For an actor, this loads model only, so <a href="requestactor.html">requestActor</a> might be required.</p>
 <p>Note that resource is loaded <strong>asynchrnously</strong> because reading them takes time, resulting bottleneck of the performance.</p>
 <h2 id="code-information">Code Information</h2>
 <ul>

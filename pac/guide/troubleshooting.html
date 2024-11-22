@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Troubleshooting </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Troubleshooting ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../nav/toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="troubleshooting">Troubleshooting</h1>
+
+<h2 id="how-to-debug">How to Debug</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Debug tool works only in Windows.</p>
+</div>
+<h3 id="checking-parameter-values">Checking parameter values</h3>
+<p><code>0x0883ce54</code> (EU ver) returns address that contains parameter value.</p>
+<p>If you want to know the parameter value at certain point, in certain address:</p>
+<ol>
+<li>Make sure the <a href="#the-instruction-is-not-called">PAC instruction will be called</a>. If not sure, <a href="#editing-the-pac-instruction-in-ppsspp">it can be started from the first</a>.</li>
+<li>Read breakpoint the value part (<em>not</em> type part) of the parameter (<code>Ctrl+D</code> and press &quot;Breakpoint&quot; on the top).
+<ul>
+<li>For example <code>04 00 00 00 08 01 00 00</code>, set breakpoint to the <code>08 01 00 00</code>.</li>
+</ul>
+</li>
+<li>Press <em>Step Out</em> button <strong>once</strong>.</li>
+<li>type <code>v0</code> in memory viewer <em>Goto</em> field, and it will lead to the actual parameter value.</li>
+</ol>
+<h3 id="editing-the-pac-instruction-in-ppsspp">Editing the PAC instruction in PPSSPP</h3>
+<p><strong>Savestate</strong> is great for the troubleshooting.</p>
+<p>This is how to debug the mission.</p>
+<ol>
+<li>Savestate the game just before deploying.</li>
+<li>Deploy, but stay on tip screen.</li>
+<li>Find the address where the mission PAC instructions are (anywhere), and set write breakpoint to there.</li>
+<li>Load the savestate from 1 and deploy again.</li>
+<li>When the PAC instruction is written, and the breakpoint is activated, savestate it (in same or different place).</li>
+<li>Edit the desired place and press Go (F8).</li>
+</ol>
+<p>In this way, you can press F8 to pause at any time, and load the savestate from 5, edit, and continue.</p>
+<p>This method is good for e.g. positioning entities.</p>
+<h2 id="troubleshoot">Troubleshoot</h2>
+<h3 id="the-instruction-is-not-called">The instruction is not called?</h3>
+<ol>
+<li>Find the instruction from the memory.</li>
+<li>Read breakpoint it (<code>Ctrl+D</code> and press &quot;Breakpoint&quot; on the top).</li>
+<li>If it is not read, check if you forgot to call the instruction. If it is read, it is another issue.</li>
+<li>If you didn't forget but it's not called, check other condition like <a href="../cmd_ifeq.html">cmd_ifEQ</a>.
+<ul>
+<li>Check the parameter and typo.</li>
+</ul>
+</li>
+</ol>
+<p>Unfortunately, there is no way to debug like modern debugging tool, so be patient.</p>
+<h3 id="why-the-model-is-not-loaded">Why the model is not loaded?</h3>
+<p>Check if the handle is greater than zero. If it does, maybe it can be one of them:</p>
+<ul>
+<li>Make sure <a href="../readarcfile.html">readArcFile</a> and <a href="../requestactor.html">requestActor</a> is <a href="how-to-define-a-mission.html">missionTimming 0</a>.
+<ul>
+<li><code>requestActor</code> does not need in some case like <a href="../setreqactortype.html">setReqActorType</a> by the way.</li>
+</ul>
+</li>
+<li>Make sure the position is correct and not out of the bound.</li>
+<li>If still does not work, check if <a href="../setreqactorcount.html">the entity amount is set to 1</a> (default is 0 and it won't work).</li>
+</ul>
+<p>If the handle is negative, check out:</p>
+<ul>
+<li>Check if it is <a href="../create.html">created</a> with <a href="../setreqactortype.html">reqActorType</a> <em>in missionTimming 1</em>
+<ul>
+<li>If it did, check if it is <a href="../spawn.html">spawned</a> <em>in missionTimming 2</em>.</li>
+</ul>
+</li>
+</ul>
+<p>Last but not least, <strong>check the typo</strong>, and <a href="how-to-define-a-mission.html"><strong>check the order</strong></a>.</p>
+<h3 id="it-crashes-or-does-infinite-loading">It crashes or does infinite loading.</h3>
+<ul>
+<li><a href="writing-pac.html"><strong>Do not resize the PAC instruction from middle</strong></a>.</li>
+<li>Check if the function calls or jumps to invalid address.</li>
+<li>Check if you forgot <a href="../cmd_end.html">cmd_end</a>.</li>
+<li>Some resources (probably from Patapon 1 or 2) don't exist, or will refuse to load normally (e.g. Gargoyle chest).
+<ul>
+<li>Try deleting (filling the instruction to 0) them and try again, and if the game is loaded, it's probably the resource issue.</li>
+</ul>
+</li>
+<li><strong>Check the typo</strong>.</li>
+<li>Check if the instruction has invalid parameter (enum out of bounds).
+<ul>
+<li>This applies to only few instructions.</li>
+</ul>
+</li>
+</ul>
+<h3 id="still-it-doesnt-work">Still it doesn't work!</h3>
+<p>Maybe the instruction might not work as your expectation.</p>
+<p>Make sure you understood the instruction correctly, and ask experienced people for help.</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/rnielikki/Patapon-Info/blob/pac-contribution/pac/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

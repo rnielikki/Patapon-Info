@@ -34556,6 +34556,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "md/guide/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "guide/troubleshooting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "md/guide/what-is-pac.md",
       "output": {
         ".html": {
